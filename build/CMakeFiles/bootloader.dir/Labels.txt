@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/CMakeFiles/bootloader
+/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/CMakeFiles/bootloader.rule
+/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/CMakeFiles/bootloader-complete.rule
+/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

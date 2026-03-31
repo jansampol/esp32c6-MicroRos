@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamri Robot Dual Visualizer</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #1a1a1a; font-family: sans-serif; }
+        
+        /* Collapsible Panel Styles */
+        .panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            user-select: none;
+            pointer-events: auto;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #555;
+        }
+        .collapse-btn {
+            background: none;
+            border: none;
+            color: #aaa;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 0;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s, color 0.2s;
+        }
+        .collapse-btn:hover {
+            color: #fff;
+        }
+        .collapse-btn.collapsed {
+            transform: rotate(-90deg);
+        }
+        .panel-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            overflow: hidden;
+        }
+        .panel-content.collapsed {
+            max-height: 0 !important;
+            opacity: 0;
+        }
+        
+        /* Info Panel */
+        #info {
+            position: absolute; top: 10px; left: 10px; color: #eee;
+            background: rgba(0, 0, 0, 0.8); padding: 15px; border-radius: 8px;
+            pointer-events: none; box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            min-width: 200px;
+        }
+        #status-dot {
+            height: 12px; width: 12px; background-color: #bbb;
+            border-radius: 50%; display: inline-block; margin-right: 8px;
+        }
+        h3 { margin: 0; }
+        p { margin: 5px 0; font-size: 14px; }
+
+        /* Robot State Panel */
+        #robot-state-panel {
+            position: absolute; bottom: 10px; left: 10px;
+            background: rgba(0, 0, 0, 0.9); padding: 15px; border-radius: 8px;
+            color: #eee; max-height: 60vh; overflow-y: auto;
+            pointer-events: auto; box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            min-width: 300px; max-width: 450px;
+        }
+        .state-section {
+            margin: 10px 0; padding: 8px; border-left: 3px solid #0088ff;
+            background: rgba(255, 255, 255, 0.05); border-radius: 4px;
+        }
+        .state-section.hidden {
+            display: none;
+        }
+        .state-title {
+            font-weight: bold; color: #4af; font-size: 13px;
+            margin-bottom: 5px; cursor: pointer;
+            user-select: none;
+        }
+        .state-values {
+            font-family: 'Courier New', monospace; font-size: 11px;
+            color: #ccc; line-height: 1.6;
+        }
+        .state-controls {
+            display: flex; flex-wrap: wrap; gap: 8px;
+            margin-bottom: 10px; padding-bottom: 10px;
+            border-bottom: 1px solid #555;
+        }
+        .state-toggle {
+            display: flex; align-items: center; gap: 5px;
+            font-size: 11px; cursor: pointer; user-select: none;
+        }
+        .state-toggle input[type="checkbox"] {
+            cursor: pointer; width: 14px; height: 14px;
+        }
+
+        /* Controls UI */
+        #controls-ui {
+            position: absolute; top: 10px; right: 10px;
+            pointer-events: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .button-group {
+            display: flex;
+            gap: 8px;
+        }
+        .checkbox-group {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: white;
+        }
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+        .checkbox-label input[type="checkbox"] {
+            margin-right: 8px;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+        button {
+            background-color: #0088ff; color: white; border: none;
+            padding: 10px 20px; border-radius: 5px; cursor: pointer;
+            font-size: 14px; font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            transition: background 0.2s;
+        }
+        button:hover { background-color: #0066cc; }
+        button:active { transform: translateY(1px); }
+        .tare-btn { background-color: #ff9900; }
+        .tare-btn:hover { background-color: #ff7700; }
+        .reset-btn { background-color: #cc4444; }
+        .reset-btn:hover { background-color: #aa3333; }
+        .panel-title {
+            font-size: 13px;
+            font-weight: bold;
+            color: #ddd;
+            margin: 2px 0 6px 0;
+        }
+        .ik-panel {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 12px;
+            border-radius: 6px;
+            color: #eee;
+        }
+        .ik-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 8px;
+            margin-bottom: 8px;
+        }
+        .ik-grid label {
+            display: flex;
+            flex-direction: column;
+            font-size: 11px;
+            color: #bbb;
+            gap: 4px;
+        }
+        .ik-grid input {
+            background: #111;
+            color: #eee;
+            border: 1px solid #333;
+            border-radius: 4px;
+            padding: 6px 8px;
+            font-size: 12px;
+        }
+        .ik-grid input:focus {
+            outline: none;
+            border-color: #0088ff;
+            box-shadow: 0 0 0 2px rgba(0, 136, 255, 0.2);
+        }
+    </style>
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="info">
+        <div class="panel-header" onclick="togglePanel('info')">
+            <h3>Robot Status</h3>
+            <button class="collapse-btn" id="info-collapse-btn">▼</button>
+        </div>
+        <div class="panel-content" id="info-content">
+        <p><span id="status-dot"></span><span id="status-text">Connecting...</span></p>
+        <p>Robot: <span id="robot-name" style="font-weight: bold; color: #4af;">--</span></p>
+        <p>Steppers: <span id="num-steppers" style="font-weight: bold; color: cyan;">0</span></p>
+        <p>Ferris Wheels: <span id="num-ferris" style="font-weight: bold; color: cyan;">0</span></p>
+        <p>Ferris Ready: <span id="ferris-ready" style="font-weight: bold; color: #ff9900;">--</span></p>
+        <p>Motor Freq: <span id="motor-freq" style="font-weight: bold; color: cyan;">--</span> Hz</p>
+        <p style="font-size: 12px; color: #aaa; margin-top: 10px;">
+            Mode: <span id="mode-display" style="color: #fff;">STL Model</span>
+        </p>
+        </div>
+    </div>
+
+    <div id="robot-state-panel">
+        <div class="panel-header" onclick="togglePanel('robot-state')">
+            <h3 style="margin-top: 0;">Robot State Variables</h3>
+            <button class="collapse-btn" id="robot-state-collapse-btn">▼</button>
+        </div>
+        <div class="panel-content" id="robot-state-content">
+        <div class="state-controls">
+            <label class="state-toggle">
+                <input type="checkbox" id="toggle-jointSteps" checked onchange="toggleStateSection('jointSteps')">
+                <span>Joint Steps</span>
+            </label>
+            <label class="state-toggle">
+                <input type="checkbox" id="toggle-targetJointSteps" checked onchange="toggleStateSection('targetJointSteps')">
+                <span>Target Steps</span>
+            </label>
+            <label class="state-toggle">
+                <input type="checkbox" id="toggle-currentPosition" checked onchange="toggleStateSection('currentPosition')">
+                <span>Current Pos</span>
+            </label>
+            <label class="state-toggle">
+                <input type="checkbox" id="toggle-targetPosition" checked onchange="toggleStateSection('targetPosition')">
+                <span>Target Pos</span>
+            </label>
+            <label class="state-toggle">
+                <input type="checkbox" id="toggle-rawFerrisWheelValues" onchange="toggleStateSection('rawFerrisWheelValues')">
+                <span>Raw Ferris</span>
+            </label>
+            <label class="state-toggle">
+                <input type="checkbox" id="toggle-sensorJointSteps" checked onchange="toggleStateSection('sensorJointSteps')">
+                <span>Sensor Steps</span>
+            </label>
+            <label class="state-toggle">
+                <input type="checkbox" id="toggle-sensorJointAngles" onchange="toggleStateSection('sensorJointAngles')">
+                <span>Sensor Angles</span>
+            </label>
+        </div>
+        <div id="state-jointSteps" class="state-section">
+            <div class="state-title">Joint Steps</div>
+            <div class="state-values" id="val-jointSteps">--</div>
+        </div>
+        <div id="state-targetJointSteps" class="state-section">
+            <div class="state-title">Target Joint Steps</div>
+            <div class="state-values" id="val-targetJointSteps">--</div>
+        </div>
+        <div id="state-currentPosition" class="state-section">
+            <div class="state-title">Current Position [x, y, z, pitch, yaw, roll]</div>
+            <div class="state-values" id="val-currentPosition">--</div>
+        </div>
+        <div id="state-targetPosition" class="state-section">
+            <div class="state-title">Target Position [x, y, z, pitch, yaw, roll]</div>
+            <div class="state-values" id="val-targetPosition">--</div>
+        </div>
+        <div id="state-rawFerrisWheelValues" class="state-section hidden">
+            <div class="state-title">Raw Ferris Wheel Values</div>
+            <div class="state-values" id="val-rawFerrisWheelValues">--</div>
+        </div>
+        <div id="state-sensorJointSteps" class="state-section">
+            <div class="state-title">Sensor Joint Steps</div>
+            <div class="state-values" id="val-sensorJointSteps">--</div>
+        </div>
+        <div id="state-sensorJointAngles" class="state-section hidden">
+            <div class="state-title">Sensor Joint Angles (rad)</div>
+            <div class="state-values" id="val-sensorJointAngles">--</div>
+        </div>
+        </div>
+    </div>
+
+    <div id="controls-ui">
+        <div class="panel-header" onclick="togglePanel('controls')" style="background: rgba(0, 0, 0, 0.8); padding: 10px 15px; border-radius: 5px; margin-bottom: 8px;">
+            <h3 style="margin: 0; color: #eee; font-size: 14px;">Controls</h3>
+            <button class="collapse-btn" id="controls-collapse-btn">▼</button>
+        </div>
+        <div class="panel-content" id="controls-content">
+        <button id="toggle-btn" onclick="toggleMode()">Switch to Frames View</button>
+        <div class="checkbox-group">
+            <div class="checkbox-label">
+                <input type="checkbox" id="show-normal-frames" checked onchange="onVisualizationCheckboxChange()">
+                <span>Show Normal Frames</span>
+            </div>
+            <div class="checkbox-label">
+                <input type="checkbox" id="show-sensor-frames" onchange="onVisualizationCheckboxChange()">
+                <span>Show Sensor Frames</span>
+            </div>
+            <div class="checkbox-label">
+                <input type="checkbox" id="show-ik-frames" onchange="onVisualizationCheckboxChange()">
+                <span>Show IK Solution</span>
+            </div>
+        </div>
+        <div class="button-group">
+            <button class="tare-btn" onclick="tareSensors()">Tare Sensors</button>
+            <button class="reset-btn" onclick="resetTare()">Reset Tare</button>
+        </div>
+        <div class="ik-panel">
+            <div class="panel-title">IK Targets</div>
+            <div class="ik-grid">
+            <label>X (mm)
+                <input type="number" id="ik-x" step="0.1" placeholder="0.0" onchange="onIKInputChange()">
+            </label>
+            <label>Y (mm)
+                <input type="number" id="ik-y" step="0.1" placeholder="0.0" onchange="onIKInputChange()">
+            </label>
+            <label>Z (mm)
+                <input type="number" id="ik-z" step="0.1" placeholder="0.0" onchange="onIKInputChange()">
+            </label>
+            <label>Roll (rad)
+                <input type="number" id="ik-roll" step="0.001" placeholder="0.0" onchange="onIKInputChange()">
+            </label>
+            <label>Pitch (rad)
+                <input type="number" id="ik-pitch" step="0.001" placeholder="0.0" onchange="onIKInputChange()">
+            </label>
+            <label>Yaw (rad)
+                <input type="number" id="ik-yaw" step="0.001" placeholder="0.0" onchange="onIKInputChange()">
+            </label>
+            <label>Solution number
+                <input type="number" id="ik-solution" step="1" min="-1" placeholder="-1 for closest solution" onchange="onIKInputChange()">
+            </label>
+            </div>
+            <button onclick="postIKTargets()">Send IK Targets</button>
+            <button onclick="moveToIKTargets()">Move to IK targets</button>
+            <div style="margin-top: 12px; padding: 8px; background: rgba(0, 255, 0, 0.1); border: 1px solid rgba(0, 255, 0, 0.3); border-radius: 4px;">
+                <div style="font-size: 11px; font-weight: bold; color: #0f0; margin-bottom: 4px;">IK Solution Position</div>
+                <div style="font-family: 'Courier New', monospace; font-size: 11px; color: #ccc;">
+                    <div>X: <span id="ik-returned-x" style="color: #0f0;">--</span> mm</div>
+                    <div>Y: <span id="ik-returned-y" style="color: #0f0;">--</span> mm</div>
+                    <div>Z: <span id="ik-returned-z" style="color: #0f0;">--</span> mm</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import { STLLoader } from 'three/addons/loaders/STLLoader.js';
+
+        // --- Configuration ---
+        const STATE_POLLING_RATE_MS = 100;
+        const CONFIG_POLLING_RATE_MS = 1000;
+        const ROBOT_SCALE = 1.0;
+
+        // Frame View Settings
+        const ARROW_LEN = 60 * ROBOT_SCALE;
+        const HEAD_LEN = ARROW_LEN * 0.3;
+        const HEAD_WIDTH = HEAD_LEN * 0.5;
+
+        // STL Settings
+        // REPLACE THESE LINKS WITH YOUR RAW GITHUB LINKS
+        const STL_FILES = [
+            'https://raw.githubusercontent.com/troossink/MamriSTL/master/Base.STL',
+            'https://raw.githubusercontent.com/troossink/MamriSTL/master/Link1.STL',
+            'https://raw.githubusercontent.com/troossink/MamriSTL/master/Link2.STL',
+            'https://raw.githubusercontent.com/troossink/MamriSTL/master/Link3.STL',
+            'https://raw.githubusercontent.com/troossink/MamriSTL/master/Flange.STL',
+            'https://raw.githubusercontent.com/troossink/MamriSTL/master/EndEffector.STL'
+        ];
+
+        const STL_COLORS = [
+            0x888888, // Base (Gray)
+            0xffbb00, // Link 1 (Orange)
+            0x0088ff, // Link 2 (Blue)
+            0x22cc33, // Link 3 (Green)
+            0xff3300, // Flange (Red)
+        ]
+
+        // --- Globals ---
+        let scene, camera, renderer, controls;
+        let stlGroup, framesGroup; // Two separate groups
+        let normalFramesGroup, sensorFramesGroup, ikFramesGroup; // Subgroups for different data sources
+        let normalSTLGroup, sensorSTLGroup, ikSTLGroup; // STL subgroups
+        let robotMeshes = [];
+        let sensorRobotMeshes = [];
+        let ikRobotMeshes = [];
+        let normalEndEffectorAxes, sensorEndEffectorAxes, ikEndEffectorAxes;
+        let ikFramesData = null; // Store IK solution frames
+        let isFetching = false;
+        let isFetchingSensor = false;
+        let isSTLMode = true; // Default start mode
+        let showNormalFrames = true;
+        let showSensorFrames = false;
+        let showIKFrames = false;
+        let ikTargetsSent = false; // Track if IK targets have been successfully sent
+
+        // UI Elements
+        const statusDot = document.getElementById('status-dot');
+        const statusText = document.getElementById('status-text');
+        const modeDisplay = document.getElementById('mode-display');
+        const toggleBtn = document.getElementById('toggle-btn');
+
+        // Panel collapse/expand functionality
+        window.togglePanel = function(panelName) {
+            const content = document.getElementById(panelName + '-content');
+            const btn = document.getElementById(panelName + '-collapse-btn');
+            
+            if (content && btn) {
+                const isCollapsed = content.classList.contains('collapsed');
+                
+                if (isCollapsed) {
+                    // Expand
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    content.classList.remove('collapsed');
+                    btn.classList.remove('collapsed');
+                } else {
+                    // Collapse
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    // Force reflow
+                    content.offsetHeight;
+                    content.style.maxHeight = '0';
+                    content.classList.add('collapsed');
+                    btn.classList.add('collapsed');
+                }
+            }
+        };
+
+        // Expose button functions to window so HTML onclick works
+        window.toggleStateSection = function(sectionName) {
+            const checkbox = document.getElementById('toggle-' + sectionName);
+            const section = document.getElementById('state-' + sectionName);
+            if (checkbox && section) {
+                section.classList.toggle('hidden', !checkbox.checked);
+            }
+        };
+
+        window.toggleMode = function() {
+            isSTLMode = !isSTLMode;
+            updateVisibility();
+            // Re-render IK if data exists
+            if (ikFramesData) {
+                updateIKVisualization();
+            }
+        };
+
+        window.onVisualizationCheckboxChange = function() {
+            showNormalFrames = document.getElementById('show-normal-frames').checked;
+            showSensorFrames = document.getElementById('show-sensor-frames').checked;
+            showIKFrames = document.getElementById('show-ik-frames').checked;
+            updateVisibility();
+        };
+
+        function updateMoveButtonState() {
+            const moveBtn = Array.from(document.querySelectorAll('button')).find(btn => btn.innerText === 'Move to IK targets');
+            if (moveBtn) {
+                moveBtn.disabled = !ikTargetsSent;
+                moveBtn.style.opacity = ikTargetsSent ? '1' : '0.5';
+                moveBtn.style.cursor = ikTargetsSent ? 'pointer' : 'not-allowed';
+            }
+        }
+
+        window.onIKInputChange = function() {
+            ikTargetsSent = false;
+            updateMoveButtonState();
+        };
+
+        window.tareSensors = async function() {
+            try {
+                const response = await fetch('/ferristare', { method: 'POST' });
+                if (response.ok) {
+                    console.log('Sensors tared');
+                } else {
+                    console.error('Failed to tare sensors');
+                }
+            } catch (error) {
+                console.error('Tare error:', error);
+            }
+        };
+
+        window.resetTare = async function() {
+            try {
+                const response = await fetch('/ferrisresettare', { method: 'POST' });
+                if (response.ok) {
+                    console.log('Tare reset');
+                } else {
+                    console.error('Failed to reset tare');
+                }
+            } catch (error) {
+                console.error('Reset tare error:', error);
+            }
+        };
+
+        window.postIKTargets = async function() {
+            let data = new URLSearchParams();
+            data.append('x', parseFloat(document.getElementById('ik-x').value) || 0);
+            data.append('y', parseFloat(document.getElementById('ik-y').value) || 0);
+            data.append('z', parseFloat(document.getElementById('ik-z').value) || 0);
+            data.append('roll', parseFloat(document.getElementById('ik-roll').value) || 0);
+            data.append('pitch', parseFloat(document.getElementById('ik-pitch').value) || 0);
+            data.append('yaw', parseFloat(document.getElementById('ik-yaw').value) || 0);
+            data.append('solutionNumber', parseInt(document.getElementById('ik-solution').value) || -1);
+
+            try {
+                const response = await fetch('/iktargets', {
+                    method: 'POST',
+                    body: data
+                });
+
+                if (response.ok) {
+                    const responseData = await response.json();
+                    console.log('IK solution received:', responseData.ikSolution);
+                    console.log('Robot frames:', responseData.robotFrames);
+                    
+                    // Mark that targets have been successfully sent
+                    ikTargetsSent = true;
+                    updateMoveButtonState();
+                    
+                    // Store and update IK visualization
+                    if (responseData.robotFrames) {
+                        ikFramesData = responseData.robotFrames;
+                        updateIKVisualization();
+                    }
+                    
+                    // Display end-effector position from the last H-matrix in robotFrames
+                    if (responseData.robotFrames && responseData.robotFrames.length > 0) {
+                        const endEffectorFrame = responseData.robotFrames[responseData.robotFrames.length - 1];
+                        const x = Number(endEffectorFrame[0][3]);
+                        const y = Number(endEffectorFrame[1][3]);
+                        const z = Number(endEffectorFrame[2][3]);
+                        document.getElementById('ik-returned-x').textContent = Number.isFinite(x) ? x.toFixed(2) : '--';
+                        document.getElementById('ik-returned-y').textContent = Number.isFinite(y) ? y.toFixed(2) : '--';
+                        document.getElementById('ik-returned-z').textContent = Number.isFinite(z) ? z.toFixed(2) : '--';
+
+                    }
+                } else {
+                    const error = await response.json();
+                    console.error('IK failed:', error.error || 'Unknown error');
+                    alert('IK Solution Failed: ' + (error.error || 'No solution found'));
+                    ikTargetsSent = false;
+                    updateMoveButtonState();
+                }
+            } catch (error) {
+                console.error('IK targets error:', error);
+                alert('Error sending IK targets: ' + error.message);
+                ikTargetsSent = false;
+                updateMoveButtonState();
+            }
+        };
+
+        window.moveToIKTargets = async function() {
+            let data = new URLSearchParams();
+            data.append('x', parseFloat(document.getElementById('ik-x').value) || 0);
+            data.append('y', parseFloat(document.getElementById('ik-y').value) || 0);
+            data.append('z', parseFloat(document.getElementById('ik-z').value) || 0);
+            data.append('roll', parseFloat(document.getElementById('ik-roll').value) || 0);
+            data.append('pitch', parseFloat(document.getElementById('ik-pitch').value) || 0);
+            data.append('yaw', parseFloat(document.getElementById('ik-yaw').value) || 0);
+            data.append('solutionNumber', parseInt(document.getElementById('ik-solution').value) || -1);
+
+            try {
+                const response = await fetch('/movetotargets', {
+                    method: 'POST',
+                    body: data
+                });
+            } catch (error) {
+                console.error('IK targets error:', error);
+                alert('Error sending IK targets: ' + error.message);
+            }
+        };
+
+        init();
+        loadSTLs(); // Load meshes immediately
+        updateMoveButtonState(); // Initialize button state
+        animate();
+        
+        // Start Polling
+        // Change URL to http://YOUR_ESP_IP/robotframes if running locally
+        setInterval(() => {
+            if (showNormalFrames) fetchRobotData('/robotframes', false);
+            if (showSensorFrames) fetchRobotData('/robotframessensor', true);
+        }, STATE_POLLING_RATE_MS);
+        setInterval(() => fetchRobotState('/robotstate'), STATE_POLLING_RATE_MS);
+        setInterval(() => fetchRobotConfig('/robotconfig'), CONFIG_POLLING_RATE_MS);
+
+
+        function init() {
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x222222);
+
+            camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 1, 5000);
+            camera.up.set(0, 0, 1); 
+            camera.position.set(400, 400, 400); 
+
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.shadowMap.enabled = true;
+            document.body.appendChild(renderer.domElement);
+
+            controls = new OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.1;
+
+            setupEnvironment();
+
+            // Create two groups: one for STLs, one for Frames/Lines
+            stlGroup = new THREE.Group();
+            framesGroup = new THREE.Group();
+            
+            // Create subgroups for normal, sensor, and IK data
+            normalSTLGroup = new THREE.Group();
+            sensorSTLGroup = new THREE.Group();
+            ikSTLGroup = new THREE.Group();
+            normalFramesGroup = new THREE.Group();
+            sensorFramesGroup = new THREE.Group();
+            ikFramesGroup = new THREE.Group();
+            
+            stlGroup.add(normalSTLGroup);
+            stlGroup.add(sensorSTLGroup);
+            stlGroup.add(ikSTLGroup);
+            framesGroup.add(normalFramesGroup);
+            framesGroup.add(sensorFramesGroup);
+            framesGroup.add(ikFramesGroup);
+            
+            // Add axes helpers for end-effector frames
+            normalEndEffectorAxes = new THREE.AxesHelper(100);
+            normalEndEffectorAxes.matrixAutoUpdate = false;
+            normalSTLGroup.add(normalEndEffectorAxes);
+            
+            sensorEndEffectorAxes = new THREE.AxesHelper(100);
+            sensorEndEffectorAxes.matrixAutoUpdate = false;
+            sensorSTLGroup.add(sensorEndEffectorAxes);
+            
+            ikEndEffectorAxes = new THREE.AxesHelper(100);
+            ikEndEffectorAxes.matrixAutoUpdate = false;
+            ikSTLGroup.add(ikEndEffectorAxes);
+            
+            scene.add(stlGroup);
+            scene.add(framesGroup);
+
+            // Set initial visibility
+            updateVisibility();
+
+            window.addEventListener('resize', onWindowResize);
+        }
+
+        function updateVisibility() {
+            if (isSTLMode) {
+                stlGroup.visible = true;
+                framesGroup.visible = false;
+                toggleBtn.innerText = "Switch to Frames View";
+                modeDisplay.innerText = "STL Model";
+            } else {
+                stlGroup.visible = false;
+                framesGroup.visible = true;
+                toggleBtn.innerText = "Switch to STL View";
+                modeDisplay.innerText = "Frames & Lines";
+            }
+            
+            // Update subgroup visibility based on checkboxes
+            normalSTLGroup.visible = showNormalFrames;
+            sensorSTLGroup.visible = showSensorFrames;
+            ikSTLGroup.visible = showIKFrames;
+            normalFramesGroup.visible = showNormalFrames;
+            sensorFramesGroup.visible = showSensorFrames;
+            ikFramesGroup.visible = showIKFrames;
+        }
+
+        function loadSTLs() {
+            const loader = new STLLoader();
+            
+            STL_FILES.forEach((url, index) => {
+                // Load for normal frames (solid)
+                loader.load(url, (geometry) => {
+                    const material = new THREE.MeshStandardMaterial({
+                        color: STL_COLORS[index] || 0xffffff,
+                        roughness: 0.4,
+                        metalness: 0.6
+                    });
+                    const mesh = new THREE.Mesh(geometry, material);
+                    mesh.add(new THREE.AxesHelper(100));
+                    mesh.castShadow = true;
+                    mesh.receiveShadow = true;
+                    mesh.matrixAutoUpdate = false;
+                    
+                    robotMeshes[index] = mesh;
+                    normalSTLGroup.add(mesh);
+                }, undefined, (err) => {
+                    console.warn(`Could not load normal STL at index ${index}:`, err);
+                });
+                
+                // Load for sensor frames (semi-transparent with different tone)
+                loader.load(url, (geometry) => {
+                    const baseColor = STL_COLORS[index] || 0xffffff;
+                    const material = new THREE.MeshStandardMaterial({
+                        color: baseColor,
+                        roughness: 0.4,
+                        metalness: 0.6,
+                        transparent: true,
+                        opacity: 0.5
+                    });
+                    const mesh = new THREE.Mesh(geometry, material);
+                    mesh.add(new THREE.AxesHelper(100));
+                    mesh.castShadow = true;
+                    mesh.receiveShadow = true;
+                    mesh.matrixAutoUpdate = false;
+                    
+                    sensorRobotMeshes[index] = mesh;
+                    sensorSTLGroup.add(mesh);
+                }, undefined, (err) => {
+                    console.warn(`Could not load sensor STL at index ${index}:`, err);
+                });
+                
+                // Load for IK solution (wireframe style)
+                loader.load(url, (geometry) => {
+                    const baseColor = STL_COLORS[index] || 0xffffff;
+                    const material = new THREE.MeshStandardMaterial({
+                        color: 0x00ff00,
+                        roughness: 0.3,
+                        metalness: 0.7,
+                        transparent: true,
+                        opacity: 0.6,
+                        wireframe: false,
+                        emissive: 0x00ff00,
+                        emissiveIntensity: 0.3
+                    });
+                    const mesh = new THREE.Mesh(geometry, material);
+                    mesh.add(new THREE.AxesHelper(100));
+                    mesh.castShadow = true;
+                    mesh.receiveShadow = true;
+                    mesh.matrixAutoUpdate = false;
+                    
+                    ikRobotMeshes[index] = mesh;
+                    ikSTLGroup.add(mesh);
+                }, undefined, (err) => {
+                    console.warn(`Could not load IK STL at index ${index}:`, err);
+                });
+            });
+        }
+
+        function setupEnvironment() {
+            const gridHelper = new THREE.GridHelper(2000, 40, 0x444444, 0x333333);
+            gridHelper.geometry.rotateX(Math.PI / 2);
+            scene.add(gridHelper);
+            scene.add(new THREE.AxesHelper(150));
+            scene.add(new THREE.AmbientLight(0xffffff, 0.6));
+            
+            const dirLight = new THREE.DirectionalLight(0xffffff, 1.0);
+            dirLight.position.set(300, -300, 500);
+            dirLight.castShadow = true;
+            scene.add(dirLight);
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            renderer.render(scene, camera);
+        }
+
+        // --- Data Handling ---
+
+        async function fetchRobotData(url, isSensorData = false) {
+            if (isSensorData && isFetchingSensor) return;
+            if (!isSensorData && isFetching) return;
+            
+            if (isSensorData) isFetchingSensor = true;
+            else isFetching = true;
+            
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(response.status);
+                const data = await response.json();
+                
+                // Determine the key name in the JSON response
+                const frameKey = isSensorData ? 'robotFramesSensor' : 'robotFrames';
+                const frames = data[frameKey];
+                
+                if (!frames) {
+                    console.warn(`No ${frameKey} in response`);
+                    return;
+                }
+                
+                // Update visual based on current mode
+                if (isSTLMode) {
+                    updateSTLPose(frames, isSensorData);
+                } else {
+                    updateFrameVisuals(frames, isSensorData);
+                }
+
+            } catch (error) {
+                console.error("Fetch error:", error);
+            } finally {
+                if (isSensorData) isFetchingSensor = false;
+                else isFetching = false;
+            }
+        }
+
+        async function fetchRobotState(url) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(response.status);
+                const data = await response.json();
+                
+                setStatus(true);
+                
+                // Update all state displays
+                updateStateDisplay('jointSteps', data.jointSteps);
+                updateStateDisplay('targetJointSteps', data.targetJointSteps);
+                updateStateDisplay('currentPosition', data.currentPosition, 4);
+                updateStateDisplay('targetPosition', data.targetPosition, 4);
+                updateStateDisplay('rawFerrisWheelValues', data.rawFerrisWheelValues, 4);
+                updateStateDisplay('sensorJointSteps', data.sensorJointSteps);
+                updateStateDisplay('sensorJointAngles', data.sensorJointAngles, 4);
+                
+            } catch (error) {
+                console.error("Fetch robot state error:", error);
+                setStatus(false);
+            }
+        }
+
+        async function fetchRobotConfig(url) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Network response was not ok');
+                
+                const data = await response.json();
+                
+                setStatus(true);
+                
+                // Update robot config display
+                document.getElementById('robot-name').textContent = data.robotName || '--';
+                document.getElementById('num-steppers').textContent = data.numOfSteppers || '--';
+                document.getElementById('num-ferris').textContent = data.numOfFerrisWheels || '--';
+                
+                const ferrisReadySpan = document.getElementById('ferris-ready');
+                ferrisReadySpan.textContent = data.ferrisWheelsReady ? 'Yes' : 'No';
+                ferrisReadySpan.style.color = data.ferrisWheelsReady ? '#0f0' : '#ff9900';
+                
+                document.getElementById('motor-freq').textContent = data.motorFrequency 
+                    ? data.motorFrequency.toFixed(2) 
+                    : '--';
+                    
+            } catch (error) {
+                console.error('Error fetching robot config:', error);
+                setStatus(false);
+            }
+        }
+
+        function updateStateDisplay(name, data, precision = 0) {
+            const element = document.getElementById('val-' + name);
+            if (!element) return;
+            
+            if (!data || !Array.isArray(data) || data.length === 0) {
+                element.innerText = '--';
+                return;
+            }
+            
+            let displayText;
+            if (precision > 0) {
+                // Display with precision
+                displayText = '[' + data.map(v => typeof v === 'number' ? v.toFixed(precision) : v).join(', ') + ']';
+            } else {
+                // Display integers
+                displayText = '[' + data.join(', ') + ']';
+            }
+            element.innerText = displayText;
+        }
+
+        function setStatus(connected) {
+            statusDot.style.backgroundColor = connected ? '#0f0' : '#f00';
+            statusText.innerText = connected ? 'Connected' : 'Disconnected';
+            statusText.style.color = connected ? '#cfc' : '#fcc';
+        }
+
+        // --- Logic: STL Mode ---
+        function updateSTLPose(framesData, isSensorData = false) {
+            const meshArray = isSensorData ? sensorRobotMeshes : robotMeshes;
+            const endEffectorAxes = isSensorData ? sensorEndEffectorAxes : normalEndEffectorAxes;
+            
+            framesData.forEach((matrixArray, i) => {
+                if (meshArray[i]) {
+                    const m = new THREE.Matrix4().set(...matrixArray.flat());
+                    meshArray[i].matrix.copy(m);
+                    meshArray[i].updateMatrixWorld(true);
+                }
+            });
+            
+            // Update end-effector frame (last frame)
+            if (framesData.length > 0) {
+                const lastMatrix = framesData[framesData.length - 1];
+                const m = new THREE.Matrix4().set(...lastMatrix.flat());
+                endEffectorAxes.matrix.copy(m);
+                endEffectorAxes.updateMatrixWorld(true);
+                endEffectorAxes.visible = true;
+            }
+        }
+
+        // --- Logic: Frames Mode (Original) ---
+        function updateFrameVisuals(framesData, isSensorData = false) {
+            const targetGroup = isSensorData ? sensorFramesGroup : normalFramesGroup;
+            
+            // Clear previous frames
+            while(targetGroup.children.length > 0){ 
+                const obj = targetGroup.children[0];
+                if(obj.geometry) obj.geometry.dispose();
+                if(obj.material) obj.material.dispose();
+                targetGroup.remove(obj); 
+            }
+
+            const positions = [];
+            const jointGeo = new THREE.SphereGeometry(10 * ROBOT_SCALE, 16, 16);
+            
+            // Use different colors for sensor vs normal frames
+            const jointColor = isSensorData ? 0xff00ff : 0x888888; // Magenta for sensor
+            const linkColor = isSensorData ? 0x00ffff : 0xffdd00;  // Cyan for sensor
+            const xColor = isSensorData ? 0xff88aa : 0xff0000;
+            const yColor = isSensorData ? 0x88ffaa : 0x00ff00;
+            const zColor = isSensorData ? 0x88aaff : 0x0088ff;
+            
+            const jointMat = new THREE.MeshStandardMaterial({ color: jointColor });
+            const linkMat = new THREE.MeshStandardMaterial({ color: linkColor });
+
+            framesData.forEach((matrixArray) => {
+                const m = new THREE.Matrix4().set(...matrixArray.flat());
+                const origin = new THREE.Vector3().setFromMatrixPosition(m);
+                positions.push(origin);
+
+                // Draw Axes
+                const xAxis = new THREE.Vector3().setFromMatrixColumn(m, 0).normalize();
+                const yAxis = new THREE.Vector3().setFromMatrixColumn(m, 1).normalize();
+                const zAxis = new THREE.Vector3().setFromMatrixColumn(m, 2).normalize();
+
+                targetGroup.add(new THREE.ArrowHelper(xAxis, origin, ARROW_LEN, xColor, HEAD_LEN, HEAD_WIDTH));
+                targetGroup.add(new THREE.ArrowHelper(yAxis, origin, ARROW_LEN, yColor, HEAD_LEN, HEAD_WIDTH));
+                targetGroup.add(new THREE.ArrowHelper(zAxis, origin, ARROW_LEN, zColor, HEAD_LEN, HEAD_WIDTH));
+
+                // Draw Joint Sphere
+                const sphere = new THREE.Mesh(jointGeo, jointMat);
+                sphere.position.copy(origin);
+                targetGroup.add(sphere);
+            });
+
+            // Draw Links (Cylinders)
+            if (positions.length > 1) {
+                const up = new THREE.Vector3(0, 1, 0);
+                for (let i = 0; i < positions.length - 1; i++) {
+                    const start = positions[i];
+                    const end = positions[i+1];
+                    const dist = start.distanceTo(end);
+                    if(dist < 0.001) continue;
+
+                    const geo = new THREE.CylinderGeometry(5 * ROBOT_SCALE, 5 * ROBOT_SCALE, dist, 8);
+                    const link = new THREE.Mesh(geo, linkMat);
+                    
+                    const mid = new THREE.Vector3().addVectors(start, end).multiplyScalar(0.5);
+                    link.position.copy(mid);
+                    link.quaternion.setFromUnitVectors(up, new THREE.Vector3().subVectors(end, start).normalize());
+                    
+                    targetGroup.add(link);
+                }
+            }
+            jointGeo.dispose();
+            jointMat.dispose();
+            linkMat.dispose();
+        }
+
+        // --- IK Visualization Update ---
+        function updateIKVisualization() {
+            if (!ikFramesData) return;
+            
+            if (isSTLMode) {
+                // Update STL poses for IK
+                ikFramesData.forEach((matrixArray, i) => {
+                    if (ikRobotMeshes[i]) {
+                        const m = new THREE.Matrix4().set(...matrixArray.flat());
+                        ikRobotMeshes[i].matrix.copy(m);
+                        ikRobotMeshes[i].updateMatrixWorld(true);
+                    }
+                });
+                
+                // Update end-effector frame (last frame)
+                if (ikFramesData.length > 0) {
+                    const lastMatrix = ikFramesData[ikFramesData.length - 1];
+                    const m = new THREE.Matrix4().set(...lastMatrix.flat());
+                    ikEndEffectorAxes.matrix.copy(m);
+                    ikEndEffectorAxes.updateMatrixWorld(true);
+                    ikEndEffectorAxes.visible = true;
+                }
+            } else {
+                // Update frame visuals for IK
+                updateIKFrameVisuals(ikFramesData);
+            }
+        }
+
+        function updateIKFrameVisuals(framesData) {
+            // Clear previous IK frames
+            while(ikFramesGroup.children.length > 0){ 
+                const obj = ikFramesGroup.children[0];
+                if(obj.geometry) obj.geometry.dispose();
+                if(obj.material) obj.material.dispose();
+                ikFramesGroup.remove(obj); 
+            }
+
+            const positions = [];
+            const jointGeo = new THREE.SphereGeometry(10 * ROBOT_SCALE, 16, 16);
+            
+            // Green theme for IK solution
+            const jointColor = 0x00ff00;
+            const linkColor = 0x88ff88;
+            const xColor = 0xff0000;
+            const yColor = 0x00ff00;
+            const zColor = 0x0000ff;
+            
+            const jointMat = new THREE.MeshStandardMaterial({ color: jointColor, emissive: 0x00ff00, emissiveIntensity: 0.2 });
+            const linkMat = new THREE.MeshStandardMaterial({ color: linkColor });
+
+            framesData.forEach((matrixArray) => {
+                const m = new THREE.Matrix4().set(...matrixArray.flat());
+                const origin = new THREE.Vector3().setFromMatrixPosition(m);
+                positions.push(origin);
+
+                // Draw Axes
+                const xAxis = new THREE.Vector3().setFromMatrixColumn(m, 0).normalize();
+                const yAxis = new THREE.Vector3().setFromMatrixColumn(m, 1).normalize();
+                const zAxis = new THREE.Vector3().setFromMatrixColumn(m, 2).normalize();
+
+                ikFramesGroup.add(new THREE.ArrowHelper(xAxis, origin, ARROW_LEN, xColor, HEAD_LEN, HEAD_WIDTH));
+                ikFramesGroup.add(new THREE.ArrowHelper(yAxis, origin, ARROW_LEN, yColor, HEAD_LEN, HEAD_WIDTH));
+                ikFramesGroup.add(new THREE.ArrowHelper(zAxis, origin, ARROW_LEN, zColor, HEAD_LEN, HEAD_WIDTH));
+
+                // Draw Joint Sphere
+                const sphere = new THREE.Mesh(jointGeo, jointMat);
+                sphere.position.copy(origin);
+                ikFramesGroup.add(sphere);
+            });
+
+            // Draw Links (Cylinders)
+            if (positions.length > 1) {
+                const up = new THREE.Vector3(0, 1, 0);
+                for (let i = 0; i < positions.length - 1; i++) {
+                    const start = positions[i];
+                    const end = positions[i+1];
+                    const dist = start.distanceTo(end);
+                    if(dist < 0.001) continue;
+
+                    const geo = new THREE.CylinderGeometry(5 * ROBOT_SCALE, 5 * ROBOT_SCALE, dist, 8);
+                    const link = new THREE.Mesh(geo, linkMat);
+                    
+                    const mid = new THREE.Vector3().addVectors(start, end).multiplyScalar(0.5);
+                    link.position.copy(mid);
+                    link.quaternion.setFromUnitVectors(up, new THREE.Vector3().subVectors(end, start).normalize());
+                    
+                    ikFramesGroup.add(link);
+                }
+            }
+            jointGeo.dispose();
+            jointMat.dispose();
+            linkMat.dispose();
+        }
+    </script>
+</body>
+</html>

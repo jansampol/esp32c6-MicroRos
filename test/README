@@ -1,0 +1,31 @@
+# Testing controller
+
+## Things to test
+
+Emergency switch
+
+### I2C bus
+
+- Pressure sensors (2x)
+- External I2C for Ferris wheels (14x)
+- External I2C device (2x)
+
+### SPI0 bus
+
+- Main valve (1x): Needs 12V plugged in, and either at least one valve connected or a multimeter to measure 12V
+- Horizontal buttons (16x)
+
+- Switches (8x) and LEDs (6x) 
+    At boot, cycle through all LEDs
+- Vertical buttons (16x)
+
+- Potentiometers (2x)
+
+- TFT screen (1x)
+
+- External GPIO expander (1x)
+
+### SPI1 bus
+Motor valves (16x): Needs 12V plugged in, and either at least one valve connected or a multimeter to measure 12V
+
+

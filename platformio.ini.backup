@@ -1,0 +1,38 @@
+[platformio]
+default_envs = esp32c6-espidf-test
+src_dir = main
+
+[env:inputcontroller-test]
+platform = espressif32
+board = esp32dev
+framework = arduino
+
+monitor_speed = 115200
+upload_speed = 460800
+upload_port = /dev/cu.usbserial-10
+monitor_port = /dev/cu.usbserial-10
+
+board_microros_distro = jazzy
+board_microros_transport = wifi
+
+lib_deps =
+    robtillaart/TCA9548@^0.3.0
+    vgroenhuis/PneumaticStepper@^2.2.0
+    robtillaart/AS5600@^0.6.6
+    adafruit/Adafruit GFX Library@^1.12.1
+    adafruit/Adafruit ST7735 and ST7789 Library@^1.11.0
+    ESP32Async/AsyncTCP
+    ESP32Async/ESPAsyncWebServer
+    bakercp/MCP3XXX
+    robtillaart/MCP23S17
+    https://github.com/micro-ROS/micro_ros_platformio
+
+[env:esp32c6-espidf-test]
+platform = platformio/espressif32
+board = esp32-c6-devkitc-1
+framework = espidf
+
+monitor_speed = 115200
+upload_speed = 460800
+upload_port = /dev/cu.usbserial-140
+monitor_port = /dev/cu.usbserial-140

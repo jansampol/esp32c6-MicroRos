@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mamri Robot 3D</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e1e2e 0%, #2a2a3e 100%);
+    }
+    #container { width: 100vw; height: 100vh; }
+
+    #overlay {
+      position: absolute; top: 20px; left: 20px; right: 20px; z-index: 101;
+      display: flex; flex-direction: row; gap: 12px; align-items: flex-start;
+      pointer-events: none;
+    }
+    .overlay-card {
+      background: rgba(28, 28, 44, 0.95);
+      backdrop-filter: blur(12px);
+      color: #e0e0ff;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(100, 100, 255, 0.3);
+      font-family: 'SF Mono', Monaco, monospace;
+      font-size: 13px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      min-width: 280px; transition: all 0.3s ease;
+    }
+    .overlay-card:hover {
+      background: rgba(40, 40, 64, 0.98);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    }
+    .card-title {
+      font-weight: 600; font-size: 14px; margin: 0 0 12px 0;
+      color: #a0a0ff; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .data-row { display: flex; justify-content: space-between; margin: 4px 0; }
+    .data-label { opacity: 0.8; min-width: 140px; }
+    .data-value { font-family: monospace; color: #fff; text-align: right; }
+
+    #controlForm {
+      background: rgba(28, 28, 44, 0.95);
+      backdrop-filter: blur(12px);
+      color: #e0e0ff; padding: 20px; border-radius: 12px;
+      border: 1px solid rgba(100, 100, 255, 0.3); font-size: 13px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    .control-header {
+      font-weight: 600; margin: 0 0 16px 0; color: #a0a0ff;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .control-mode {
+      background: rgba(100, 100, 255, 0.2); padding: 4px 12px;
+      border-radius: 20px; font-size: 12px; font-weight: 500;
+    }
+    #sliders { display: flex; flex-direction: column; gap: 8px; max-width: 360px; pointer-events: auto; }
+    .slider-row {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .slider-label { width: 40px; opacity: 0.9; font-weight: 500; }
+    .slider-value { width: 48px; text-align: right; font-family: monospace; font-weight: 600; }
+
+    #cameraControl {
+      position: fixed; right: 16px; bottom: 16px; z-index: 205;
+      display: flex; align-items: center; gap: 12px;
+      background: rgba(18,18,32,0.85); padding: 6px 10px; border-radius: 10px;
+      border: 1px solid rgba(100,100,255,0.08); color: #e0e0ff; 
+      backdrop-filter: blur(4px);
+    }
+    /* Right-hand debug column pinned to the viewport's right edge */
+    #rightColumn {
+      position: absolute; right: 20px; top: 20px; bottom: 20px; width: 360px; z-index: 150;
+      display: flex; flex-direction: column; gap: 12px; pointer-events: auto;
+    }
+    /* Left control column pinned to the viewport's left edge */
+    #controlColumn {
+      position: absolute; left: 20px; top: 20px; bottom: 20px; width: 380px; z-index: 150;
+      display: flex; flex-direction: column; gap: 12px; pointer-events: auto;
+    }
+    #cameraControl input[type=range] { width: 520px; }
+    .axisWidget { position: absolute; right: 16px; top: 16px; width: 120px; height: 120px; pointer-events: none; z-index: 305; border-radius: 8px; overflow: hidden; }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+
+  <div id="overlay">
+    <div id="controlColumn" style="display:flex;flex-direction:column;gap:12px;width:380px;">
+      <div id="controlForm" class="overlay-card">
+        <div class="control-header">
+          <span>6DOF Control</span>
+          <span id="controlType" class="control-mode">Joint</span>
+        </div>
+        <div id="sliders"></div>
+      </div>
+    </div>
+
+    <div id="rightColumn" style="display:flex;flex-direction:column;gap:12px;width:360px;">
+      <div id="dataColumn">
+        <div id="robotstate" class="overlay-card">
+          <div class="card-title">Robot State</div>
+          <div class="data-row"><span class="data-label">Loading...</span><span>-</span></div>
+        </div>
+        <div id="robotconfig" class="overlay-card">
+          <div class="card-title">Robot Config</div>
+          <div class="data-row"><span class="data-label">Loading...</span><span>-</span></div>
+        </div>
+        <div id="inputmode" class="overlay-card">
+          <div class="card-title">Input Mode</div>
+          <div class="data-row"><span class="data-label">Loading...</span><span>-</span></div>
+        </div>
+      </div>
+      <div id="cameraControl">
+        <div style="font-weight:600;color:#a0a0ff">Cam</div>
+        <input id="camSlider" type="range" min="-180" max="180" value="90" step="1">
+        <div id="camAngle" style="width:48px;text-align:right;font-family:monospace">90°</div>
+      </div>
+    </div>
+  </div>
+
+<!-- =========================================================
+     KINEMATICS (REWORKED – NO DH FOR PURPLE_MAMRI)
+     ========================================================= -->
+<script type="module">
+
+window.MAMRI_CONFIGS = {
+
+  PINK_MAMRI:{
+    stepsPerRadian: [200, 200, 200, 200, 200, 200, 200],
+    // RIGHT-HANDED ROBOT FRAME
+    // X = left
+    // Y = backward
+    // Z = up
+    // Zero pose = vertical arm
+
+    joints: [
+      { axis: 'z', length: 0.05, zeroOffset: 0 }, // base yaw
+      { axis: 'x', length: 0.05, zeroOffset: 0 }, // shoulder
+      { axis: 'x', length: 0.30, zeroOffset: 0 }, // elbow
+      { axis: 'z', length: 0.05, zeroOffset: 0 },  // wrist
+      { axis: 'x', length: 0.30, zeroOffset: 0 },  // wrist pitch
+      { axis: 'z', length: 0.05, zeroOffset: 0 },   // wrist roll
+      { axis: 'x', length: 0.05, zeroOffset: 0 }   // EE
+    ]
+
+  },
+  PURPLE_MAMRI: {
+    stepsPerRadian: [400, 200, 200, 200],
+
+    // RIGHT-HANDED ROBOT FRAME
+    // X = left
+    // Y = backward
+    // Z = up
+    // Zero pose = vertical arm
+
+    joints: [
+      { axis: 'z', length: 0.05, zeroOffset: 0 }, // base yaw
+      { axis: 'x', length: 0.20, zeroOffset: 0 }, // shoulder
+      { axis: 'x', length: 0.20, zeroOffset: 0 }, // elbow
+      { axis: 'x', length: 0.10, zeroOffset: 0 }  // wrist
+    ]
+  }
+
+};
+
+window.RobotKinematics = class {
+
+  constructor(config) {
+    this.config = config;
+    this.currentJointOrigins = [];
+  }
+
+  convertStepsToAngles(steps) {
+    return steps.map((s, i) => s / this.config.stepsPerRadian[i]);
+  }
+
+  updateRobotPose(angles) {
+    this.currentJointOrigins = [];
+
+    let T = this._identity();
+    this.currentJointOrigins.push(this._origin(T));
+
+    for (let i = 0; i < this.config.joints.length; i++) {
+      const j = this.config.joints[i];
+      const theta = angles[i] + j.zeroOffset;
+
+      T = this._mul(T, this._rot(j.axis, theta));
+      T = this._mul(T, this._trans(0, 0, j.length));
+
+      this.currentJointOrigins.push(this._origin(T));
+    }
+  }
+
+  getJointOrigins() {
+    return this.currentJointOrigins;
+  }
+
+  /* ===== Matrix helpers ===== */
+
+  _identity() {
+    return new Float32Array([
+      1,0,0,0,
+      0,1,0,0,
+      0,0,1,0,
+      0,0,0,1
+    ]);
+  }
+
+  _rot(axis, a) {
+    const c = Math.cos(a), s = Math.sin(a);
+
+    if (axis === 'x') return new Float32Array([
+      1,0,0,0,
+      0,c,-s,0,
+      0,s,c,0,
+      0,0,0,1
+    ]);
+
+    if (axis === 'y') return new Float32Array([
+      c,0,s,0,
+      0,1,0,0,
+      -s,0,c,0,
+      0,0,0,1
+    ]);
+
+    return new Float32Array([
+      c,-s,0,0,
+      s,c,0,0,
+      0,0,1,0,
+      0,0,0,1
+    ]);
+  }
+
+  _trans(x,y,z) {
+    return new Float32Array([
+      1,0,0,x,
+      0,1,0,y,
+      0,0,1,z,
+      0,0,0,1
+    ]);
+  }
+
+  _mul(A,B) {
+    const C = new Float32Array(16);
+    for (let i=0;i<4;i++)
+      for (let j=0;j<4;j++)
+        C[i*4+j] =
+          A[i*4+0]*B[0*4+j] +
+          A[i*4+1]*B[1*4+j] +
+          A[i*4+2]*B[2*4+j] +
+          A[i*4+3]*B[3*4+j];
+    return C;
+  }
+
+  _origin(T) {
+    return { x: T[3], y: T[7], z: T[11] };
+  }
+};
+
+</script>
+
+<script type="module">
+// =============================================================================
+// MAMRI ROBOT 3D RENDERER (module)
+// Three.js visualization for axis-based forward kinematics (Z-up)
+// =============================================================================
+
+import * as THREE from 'https://unpkg.com/three@0.153.0/build/three.module.js';
+
+class RobotRenderer {
+  constructor(container, kinematics) {
+    this.kinematics = kinematics;
+
+    this.scene = null;
+    this.camera = null;
+    this.renderer = null;
+
+    this.sceneRoot = null;
+    this.robotGroup = null;
+
+    this.jointMeshes = [];
+    this.links = [];
+    this.baseMesh = null;
+
+    this.cameraAngle = 90 * Math.PI / 180;
+
+    this.initThreeJS(container);
+    this.buildRobot();
+    this.animate();
+  }
+
+  // ---------------------------------------------------------------------------
+  // Scene / Camera / Lighting
+  // ---------------------------------------------------------------------------
+  initThreeJS(container) {
+    this.scene = new THREE.Scene();
+    this.scene.background = new THREE.Color(0x1a1a2e);
+
+    // Root for world-aligned helpers
+    this.sceneRoot = new THREE.Object3D();
+    this.scene.add(this.sceneRoot);
+
+    // Robot group (no implicit rotation)
+    this.robotGroup = new THREE.Object3D();
+    this.sceneRoot.add(this.robotGroup);
+
+    // Camera (Z-up)
+    this.camera = new THREE.PerspectiveCamera(
+      60,
+      window.innerWidth / window.innerHeight,
+      0.01,
+      20
+    );
+    this.camera.up.set(0, 0, 1);
+    this.updateCameraPosition();
+
+    // Renderer
+    this.renderer = new THREE.WebGLRenderer({ antialias: true });
+    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.shadowMap.enabled = true;
+    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    container.appendChild(this.renderer.domElement);
+
+    // Lighting
+    this.scene.add(new THREE.AmbientLight(0x606080, 0.35));
+    this.scene.add(new THREE.HemisphereLight(0x8899ff, 0x332211, 0.25));
+
+    const dirLight = new THREE.DirectionalLight(0xffffff, 0.9);
+    dirLight.position.set(2, -2, 3);
+    dirLight.castShadow = true;
+    this.scene.add(dirLight);
+
+    // -------------------------------------------------------------------------
+    // Ground grid (XY plane, Z up)
+    // -------------------------------------------------------------------------
+    const grid = new THREE.GridHelper(2, 20, 0x444444, 0x222222);
+    grid.rotation.x = Math.PI / 2;
+    grid.position.z = 0;
+    this.sceneRoot.add(grid);
+
+    // -------------------------------------------------------------------------
+    // World axes (Z up)
+    // -------------------------------------------------------------------------
+    const axisLen = 0.6;
+    const axisRad = 0.001;
+    const cyl = new THREE.CylinderGeometry(axisRad, axisRad, axisLen, 8);
+
+    // X (red)
+    const x = new THREE.Mesh(cyl, new THREE.MeshBasicMaterial({ color: 0xff0000 }));
+    x.rotation.z = -Math.PI / 2;
+    x.position.x = axisLen / 2;
+    this.sceneRoot.add(x);
+
+    // Y (green)
+    const y = new THREE.Mesh(cyl, new THREE.MeshBasicMaterial({ color: 0x00ff00 }));
+    y.position.y = axisLen / 2;
+    this.sceneRoot.add(y);
+
+    // Z (blue)
+    const z = new THREE.Mesh(cyl, new THREE.MeshBasicMaterial({ color: 0x0000ff }));
+    z.rotation.x = Math.PI / 2;
+    z.position.z = axisLen / 2;
+    this.sceneRoot.add(z);
+
+    window.addEventListener('resize', () => this.resize());
+
+    this.initAxisWidget(container);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Robot geometry
+  // ---------------------------------------------------------------------------
+  buildRobot() {
+    this.jointMeshes.forEach(m => this.robotGroup.remove(m));
+    this.links.forEach(l => this.robotGroup.remove(l));
+    if (this.baseMesh) this.robotGroup.remove(this.baseMesh);
+
+    this.jointMeshes = [];
+    this.links = [];
+
+    // Base
+    const baseGeo = new THREE.CylinderGeometry(0.15, 0.18, 0.04, 24);
+    const baseMat = new THREE.MeshStandardMaterial({
+      color: 0x33334a,
+      metalness: 0.6,
+      roughness: 0.4
+    });
+    this.baseMesh = new THREE.Mesh(baseGeo, baseMat);
+    this.baseMesh.rotation.x = Math.PI / 2;
+    this.baseMesh.position.z = -0.04;
+    this.baseMesh.castShadow = true;
+    this.baseMesh.receiveShadow = true;
+    this.robotGroup.add(this.baseMesh);
+
+    this.updateRobotVisuals();
+  }
+
+  // ---------------------------------------------------------------------------
+  // Update visuals from kinematics
+  // ---------------------------------------------------------------------------
+updateRobotVisuals() {
+  if (!this.kinematics?.getJointOrigins) return;
+
+  const origins = this.kinematics.getJointOrigins();
+  if (!origins || origins.length === 0) return;
+
+  // Robot frame == Three.js frame (Z up)
+  const pts = origins.map(o => new THREE.Vector3(o.x, o.y, o.z));
+
+  // Base follows joint 0
+  if (this.baseMesh) {
+    this.baseMesh.position.copy(pts[0]);
+  }
+
+  for (let i = 0; i < pts.length - 1; i++) {
+    const p0 = pts[i];
+    const p1 = pts[i + 1];
+
+    // -----------------------------------------------------------------------
+    // Joint visualization: short cylinder aligned with rotation axis
+    // -----------------------------------------------------------------------
+    let joint = this.jointMeshes[i];
+    if (!joint) {
+      const height = 0.06;
+
+      let radius = 0.02;
+      if(i === 0) {
+        // Base joint is larger
+        radius = 0.05;
+      }
+
+      // const geo = new THREE.CylinderGeometry(radius, radius, height, 16);
+      const geo = new THREE.SphereGeometry(radius);
+
+      const axis = this.kinematics.config?.joints?.[i]?.axis ?? 'y';
+
+      const axisColors = {
+        x: 0xff6666,
+        y: 0x66ff66,
+        z: 0x6666ff
+      };
+
+      const mat = new THREE.MeshStandardMaterial({
+        color: axisColors[axis] ?? 0xffffff,
+        metalness: 0.7,
+        roughness: 0.5
+      });
+
+      joint = new THREE.Mesh(geo, mat);
+      joint.castShadow = true;
+
+      // CylinderGeometry is aligned along local +Y by default.
+      // Rotate so the cylinder's axis matches the joint rotation axis.
+      switch (axis) {
+        case 'x':
+          // Y → X
+          joint.rotation.z = Math.PI / 2;
+          break;
+        case 'z':
+          // Y → Z
+          joint.rotation.x = Math.PI / 2;
+          break;
+        case 'y':
+        default:
+          // Y is default
+          break;
+      }
+
+      this.jointMeshes[i] = joint;
+      this.robotGroup.add(joint);
+    }
+
+    joint.position.copy(p0);
+
+    // -----------------------------------------------------------------------
+    // Link visualization: cylinder between joint origins
+    // -----------------------------------------------------------------------
+    let link = this.links[i];
+    if (!link) {
+      const geo = new THREE.CylinderGeometry(0.012, 0.008, 1, 12);
+      const mat = new THREE.MeshStandardMaterial({
+        color: 0x44ccff,
+        metalness: 0.1,
+        roughness: 0.7
+      });
+
+      link = new THREE.Mesh(geo, mat);
+      link.castShadow = true;
+      link.receiveShadow = true;
+
+      this.links[i] = link;
+      this.robotGroup.add(link);
+    }
+
+    const dir = new THREE.Vector3().subVectors(p1, p0);
+    const len = dir.length();
+
+    if (len < 1e-6) {
+      link.visible = false;
+      continue;
+    }
+
+    link.visible = true;
+
+    // CylinderGeometry height is along local +Y
+    link.scale.set(1, len, 1);
+    link.position.copy(p0).addScaledVector(dir, 0.5);
+
+    const q = new THREE.Quaternion().setFromUnitVectors(
+      new THREE.Vector3(0, 1, 0),
+      dir.normalize()
+    );
+    link.setRotationFromQuaternion(q);
+  }
+}
+
+  // ---------------------------------------------------------------------------
+  // Camera
+  // ---------------------------------------------------------------------------
+  setCameraAngle(deg) {
+    this.cameraAngle = deg * Math.PI / 180;
+    this.updateCameraPosition();
+  }
+
+  updateCameraPosition() {
+    const r = 0.8;
+    const h = 0.4;
+    const target = new THREE.Vector3(0, 0, 0.2);
+
+    this.camera.position.set(
+      Math.cos(this.cameraAngle) * r,
+      Math.sin(this.cameraAngle) * r,
+      target.z + h
+    );
+    this.camera.lookAt(target);
+  }
+
+  resize() {
+    this.camera.aspect = window.innerWidth / window.innerHeight;
+    this.camera.updateProjectionMatrix();
+    this.renderer.setSize(window.innerWidth, window.innerHeight);
+  }
+
+  animate() {
+    requestAnimationFrame(() => this.animate());
+    this.renderer.render(this.scene, this.camera);
+
+    if (this.axisRenderer) {
+      this.axisCamera.quaternion.copy(this.camera.quaternion);
+      this.axisRenderer.render(this.axisScene, this.axisCamera);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Axis widget
+  // ---------------------------------------------------------------------------
+  initAxisWidget(container) {
+    this.axisScene = new THREE.Scene();
+    this.axisCamera = new THREE.PerspectiveCamera(50, 1, 0.01, 10);
+    this.axisCamera.position.set(0, 0, 4);
+    this.axisCamera.lookAt(0, 0, 0);
+
+    const axes = new THREE.AxesHelper(0.6);
+    axes.rotation.x = Math.PI / 2;
+    this.axisScene.add(axes);
+
+    this.axisRenderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    this.axisRenderer.setSize(120, 120);
+    container.appendChild(this.axisRenderer.domElement);
+  }
+}
+
+window.RobotRenderer = RobotRenderer;
+</script>
+
+  <script type="module">
+    // Use only in-page globals — do not import any local module files.
+    let RobotKinematics = window.RobotKinematics;
+    let MAMRI_CONFIGS = window.MAMRI_CONFIGS;
+    if (!RobotKinematics || !MAMRI_CONFIGS) {
+      console.error('Required in-page globals `window.RobotKinematics` or `window.MAMRI_CONFIGS` are missing. Please include them before this script.');
+      // Graceful degradation: avoid throwing — keep variables null so rest of UI still runs.
+    }
+
+    // Global app state
+    window.appState = {
+      sliderEls: [],
+      isDragging: false,
+      currentMode: 'Joint',
+      numSteppers: 6,
+      kinematics: null,
+      renderer: null
+    };
+
+    // Initialize
+    async function init() {
+      const container = document.getElementById('container');
+      
+      // Fetch robot type first → init correct kinematics
+      try {
+        const configResp = await fetch('/robotconfig');
+        const configData = await configResp.json();
+        const robotType = configData.robotId || 'PURPLE_MAMRI'; // fallback
+        
+        // Initialize kinematics for detected robot
+        // Normalize robot id/name into a key string for MAMRI_CONFIGS
+        let robotKey = 'PURPLE_MAMRI';
+        if (typeof configData.robotId === 'string' && MAMRI_CONFIGS[configData.robotId]) {
+          robotKey = configData.robotId;
+        } else if (typeof configData.robotId === 'number') {
+          robotKey = ['PINK_MAMRI','PURPLE_MAMRI'][configData.robotId] || 'PURPLE_MAMRI';
+        }
+
+        window.appState.kinematics = new RobotKinematics(MAMRI_CONFIGS[robotKey] || MAMRI_CONFIGS.PURPLE_MAMRI);
+
+        // Initialize pose to home (zeros) so renderer has something to display
+        try { window.appState.kinematics.updateRobotPose(new Array(window.appState.kinematics.config.dhParameters.length).fill(0)); } catch(e) {}
+
+        // Initialize renderer: use only the in-page global `window.RobotRenderer`.
+        if (window.RobotRenderer) {
+          try {
+            window.appState.renderer = new window.RobotRenderer(container, window.appState.kinematics);
+            console.log('RobotRenderer initialized', window.appState.renderer);
+            // Sync camera slider and displayed value to renderer's angle on startup
+            try {
+              const camSliderEl = document.getElementById('camSlider');
+              const camAngleEl = document.getElementById('camAngle');
+              if (camSliderEl) {
+                camSliderEl.value = String(-90);
+                if (camAngleEl) camAngleEl.textContent = '-90°';
+                window.appState.renderer.setCameraAngle(-90);
+              }
+            } catch(e) { console.warn('Failed to sync camera slider:', e); }
+          } catch (err) {
+            console.warn('Failed to initialize global RobotRenderer:', err);
+            window.appState.renderer = null;
+            // Show visible UI hint
+            const cfgEl = document.getElementById('robotconfig');
+            if (cfgEl) cfgEl.insertAdjacentHTML('beforeend', '<div class="data-row"><span class="data-label">Renderer</span><span style="color:#ff6b6b">Init failed (see console)</span></div>');
+          }
+        } else {
+          console.error('window.RobotRenderer is not available — rendering disabled.');
+          window.appState.renderer = null;
+          const cfgEl = document.getElementById('robotconfig');
+          if (cfgEl) cfgEl.insertAdjacentHTML('beforeend', '<div class="data-row"><span class="data-label">Renderer</span><span style="color:#ff6b6b">Missing (include renderer script)</span></div>');
+        }
+        
+        // Setup UI
+        createSliders();
+        setupEventListeners();
+
+        // Initial fetches: start separate intervals for fast state and slower config/input
+        fetchRobotState();
+        fetchRobotConfig();
+        fetchInputMode();
+        // robot state fast (200ms), config & input slower (~1s)
+        setInterval(fetchRobotState, 200);
+        setInterval(fetchRobotConfig, 1000);
+        setInterval(fetchInputMode, 1000);
+        
+      } catch (e) {
+        console.error('Init failed:', e);
+        document.getElementById('robotconfig').innerHTML = 
+          '<div class="card-title">Robot Config</div><div class="data-row"><span class="data-label">Error</span><span style="color:#ff6b6b">Server unreachable</span></div>';
+      }
+    }
+
+    function createSliders() {
+      const slidersContainer = document.getElementById('sliders');
+      slidersContainer.innerHTML = '';
+      window.appState.sliderEls = [];
+
+      const isJointMode = window.appState.currentMode === 'Joint';
+      const numControls = (() => {
+        if (!isJointMode) return 6;
+        // Prefer explicit robot-reported stepper count (from /robotconfig) when available
+        if (Number.isFinite(window.appState.numSteppers) && window.appState.numSteppers > 0) {
+          return window.appState.numSteppers;
+        }
+        // Fallback to kinematics DH parameter count if present
+        if (window.appState.kinematics && Array.isArray(window.appState.kinematics.config.dhParameters) && window.appState.kinematics.config.dhParameters.length > 0) {
+          return window.appState.kinematics.config.dhParameters.length;
+        }
+        // Default to 6 for safety
+        return 6;
+      })();
+      const labels = isJointMode ? 
+        Array.from({length: numControls}, (_,i) => `J${i+1}`) : 
+        ['X', 'Y', 'Z', 'rotX', 'rotY', 'rotZ'];
+
+      for (let i = 0; i < numControls; i++) {
+        const row = document.createElement('div');
+        row.className = 'slider-row';
+
+        const label = document.createElement('div');
+        label.className = 'slider-label';
+        label.textContent = labels[i];
+
+        const slider = document.createElement('input');
+        slider.type = 'range';
+        slider.style.flex = '1';
+        
+        if (isJointMode) {
+          slider.min = -800; // ~1 full rev
+          slider.max = 800;
+          slider.step = 1;
+        } else {
+          slider.min = -1.0;
+          slider.max = 1.0;
+          slider.step = 0.01;
+        }
+        slider.value = 0;
+
+        const valueDisplay = document.createElement('div');
+        valueDisplay.className = 'slider-value';
+        valueDisplay.textContent = '0';
+
+        slider.oninput = () => {
+          valueDisplay.textContent = slider.value;
+          window.appState.isDragging = true;
+          sendCurrentControls();
+        };
+
+        // When the user releases the slider, stop dragging and send final values
+        const releaseHandler = () => {
+          window.appState.isDragging = false;
+          sendCurrentControls();
+        };
+        slider.addEventListener('change', releaseHandler);
+        slider.addEventListener('pointerup', releaseHandler);
+        slider.addEventListener('touchend', releaseHandler);
+
+        row.append(label, slider, valueDisplay);
+        slidersContainer.appendChild(row);
+        window.appState.sliderEls.push(slider);
+      }
+    }
+
+    function sendCurrentControls() {
+  if (!window.appState.sliderEls.length) return;
+  
+  const values = window.appState.sliderEls.map(s => parseFloat(s.value));
+  const endpoint = window.appState.currentMode === 'Joint' ? '/controljoints' : '/controlposition';
+  
+  // EXACT POST format: joint0=123&joint1=456 OR position0=0.1&position1=...
+  const params = new URLSearchParams();
+  // send only the controls that exist
+  values.slice(0, window.appState.sliderEls.length).forEach((v, i) => {
+    const key = window.appState.currentMode === 'Joint' ? `joint${i}` : `position${i}`;
+    params.append(key, v);
+  });
+
+  fetch(endpoint, { 
+    method: 'POST', 
+    body: params 
+  }).catch(e => console.warn('Send failed:', e));
+}
+
+
+
+// EXACT MATCH TO YOUR ESP32 ENDPOINTS
+async function fetchRobotState() {
+  try {
+    const resp = await fetch('/robotstate');
+    const data = await resp.json();
+    
+    // Parse your exact JSON: jointSteps, targetJointSteps, currentPosition, targetPosition
+    if (Array.isArray(data.jointSteps) && window.appState.kinematics) {
+      const angles = window.appState.kinematics.convertStepsToAngles(data.jointSteps);
+      window.appState.kinematics.updateRobotPose(angles);
+      if (window.appState.renderer && typeof window.appState.renderer.updateRobotVisuals === 'function') {
+        window.appState.renderer.updateRobotVisuals(); // Trigger render update
+      }
+    }
+    
+    // Update sliders (only if not dragging)
+    if (!window.appState.isDragging) {
+      const targets = data.targetJointSteps || data.targetPosition || [];
+      if (window.appState.sliderEls.length && targets.length) {
+        window.appState.sliderEls.forEach((slider, i) => {
+          if (targets[i] !== undefined) {
+            slider.value = targets[i];
+            slider.parentNode.querySelector('.slider-value').textContent = targets[i];
+          }
+        });
+      }
+    }
+
+    // EXACT robotstate card format
+    const stateEl = document.getElementById('robotstate');
+    if (stateEl) {
+      let html = '<div class="card-title">Robot State</div>';
+      if (data.jointSteps) html += `<div class="data-row"><span class="data-label">Joint Steps</span><span>${data.jointSteps.join(', ')}</span></div>`;
+      if (data.targetJointSteps) html += `<div class="data-row"><span class="data-label">Target Steps</span><span>${data.targetJointSteps.join(', ')}</span></div>`;
+      if (data.currentPosition) html += `<div class="data-row"><span class="data-label">Current Pos</span><span>${data.currentPosition.map(v=>v.toFixed(3)).join(', ')}</span></div>`;
+      if (data.targetPosition) html += `<div class="data-row"><span class="data-label">Target Pos</span><span>${data.targetPosition.map(v=>v.toFixed(3)).join(', ')}</span></div>`;
+      if(data.rawFerrisWheelValues) html += `<div class="data-row"><span class="data-label">Raw Ferris Values</span><span>${data.rawFerrisWheelValues.map(v=>v.toFixed(3)).join(', ')}</span></div>`;
+      stateEl.innerHTML = html;
+    }
+  } catch (e) {
+    console.warn('/robotstate:', e);
+  }
+}
+
+async function fetchRobotConfig() {
+  try {
+    const resp = await fetch('/robotconfig');
+    const data = await resp.json();
+    
+    // EXACT robotconfig parsing: robotId, robotName, numOfSteppers
+    const configEl = document.getElementById('robotconfig');
+    if (configEl) {
+      configEl.innerHTML = `
+        <div class="card-title">Robot Config</div>
+        <div class="data-row"><span class="data-label">ID</span><span>${data.robotId || '-'}</span></div>
+        <div class="data-row"><span class="data-label">Name</span><span>${data.robotName || '-'}</span></div>
+        <div class="data-row"><span class="data-label">Steppers</span><span>${data.numOfSteppers || '-'}</span></div>
+        <div class="data-row"><span class="data-label">Ferris Wheels</span><span>${data.numOfFerrisWheels || '0'}</span></div>
+        <div class="data-row"><span class="data-label">Ferris Ready</span><span>${data.ferrisWheelsReady ? 'Yes' : 'No'}</span></div>
+        <div class="data-row"><span class="data-label">Motor Freq</span><span>${data.motorFrequency ? data.motorFrequency + ' Hz' : '-'}</span></div>
+      `;
+      
+      // Update stepper count immediately so UI can reflect correct DOF
+      if (Number.isFinite(data.numOfSteppers) && data.numOfSteppers > 0) {
+        // Only update and recreate sliders if count actually changed
+        if (window.appState.numSteppers !== data.numOfSteppers) {
+          window.appState.numSteppers = data.numOfSteppers;
+        }
+      }
+
+      // Auto-init kinematics from robotId (PINK_MAMRI=0, PURPLE_MAMRI=1, etc.)
+      if (data.robotId !== undefined && !window.appState.kinematics) {
+        const robotType = ['PINK_MAMRI', 'PURPLE_MAMRI'][data.robotId] || 'PINK_MAMRI';
+        if (window.RobotKinematics && window.MAMRI_CONFIGS) {
+          window.appState.kinematics = new window.RobotKinematics(window.MAMRI_CONFIGS[robotType] || window.MAMRI_CONFIGS.PINK_MAMRI);
+        } else {
+          console.error('Cannot initialize kinematics: window.RobotKinematics or window.MAMRI_CONFIGS missing.');
+        }
+
+        // Initialize renderer using in-page global only
+        if (window.RobotRenderer && window.appState.kinematics) {
+          try { window.appState.renderer = new window.RobotRenderer(document.getElementById('container'), window.appState.kinematics); } catch(e){ console.warn('Renderer init failed:', e); window.appState.renderer = null; }
+        } else if (!window.RobotRenderer) {
+          console.error('window.RobotRenderer not found; rendering disabled.');
+        }
+        // Make sliders after we've set `numOfSteppers` and/or kinematics
+        createSliders();
+        // If renderer created here, sync camera slider/display to the renderer default
+        try {
+          if (window.appState.renderer) {
+            const camSliderEl = document.getElementById('camSlider');
+            const camAngleEl = document.getElementById('camAngle');
+            if (camSliderEl) {
+              camSliderEl.value = String(-90);
+              if (camAngleEl) camAngleEl.textContent = '-90°';
+              window.appState.renderer.setCameraAngle(-90);
+            }
+          }
+        } catch(e) { console.warn('Failed to sync camera slider in config path:', e); }
+      } else if (data.robotId !== undefined && window.appState.kinematics && !window.appState.renderer) {
+        // kinematics exists but renderer not created yet — initialize using global only
+        if (window.RobotRenderer) {
+          try { window.appState.renderer = new window.RobotRenderer(document.getElementById('container'), window.appState.kinematics); } catch(e){ console.warn('Renderer still not available:', e); }
+        } else {
+          console.error('window.RobotRenderer not found; rendering disabled.');
+        }
+      }
+      
+      // Ensure slider UI updates if stepper count changed
+      if (Number.isFinite(data.numOfSteppers) && data.numOfSteppers > 0 && window.appState.sliderEls.length !== data.numOfSteppers) {
+        window.appState.numSteppers = data.numOfSteppers;
+        createSliders();
+      }
+    }
+  } catch (e) {
+    console.warn('/robotconfig:', e);
+  }
+}
+
+async function fetchInputMode() {
+  try {
+    const resp = await fetch('/inputmode');
+    const data = await resp.json();
+    
+    // EXACT inputmode parsing: "BUTTONS CONTROL JOINTS" vs "BUTTONS CONTROL POSITION"
+    const modeText = data.inputMode || '';
+    const isPosMode = modeText.includes('POSITION') || modeText.includes('POS_MODE');
+    const newMode = isPosMode ? 'Position' : 'Joint';
+    
+    if (newMode !== window.appState.currentMode) {
+      window.appState.currentMode = newMode;
+      document.getElementById('controlType').textContent = newMode;
+      createSliders();
+    }
+    
+    document.getElementById('inputmode').innerHTML = 
+      `<div class="card-title">Input Mode</div><div class="data-row"><span class="data-label">Mode</span><span>${modeText}</span></div>`;
+  } catch (e) {
+    console.warn('/inputmode:', e);
+  }
+}
+
+  function setupEventListeners() {
+    // Camera slider
+    const camSlider = document.getElementById('camSlider');
+    // Inverted mapping: slider moves right → camera angle decreases (negated).
+    camSlider.oninput = (e) => {
+      document.getElementById('camAngle').textContent = e.target.value + '°';
+      if (window.appState.renderer) {
+        window.appState.renderer.setCameraAngle(-Number(e.target.value));
+      }
+    };
+          // Resize
+    window.addEventListener('resize', () => {
+      if (window.appState.renderer) window.appState.renderer.resize();
+    });
+  }
+
+      
+  async function updateAllData() {
+    await Promise.all([
+      fetchRobotState(),
+      fetchRobotConfig(), 
+      fetchInputMode()
+    ]);
+  }
+
+
+
+  // Start
+  init();
+  </script>
+</body>
+</html>
