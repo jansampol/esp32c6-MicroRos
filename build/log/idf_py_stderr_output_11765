@@ -1,0 +1,2 @@
+Command: ninja monitor~
+ninja: error: unknown target 'monitor~', did you mean 'monitor'?

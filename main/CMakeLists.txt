@@ -2,6 +2,13 @@ idf_component_register(
     SRCS
         "app_main.cpp"
         "MicroRosManager.cpp"
+        "RobotController.cpp"
+        "KinematicsController.cpp"
+        "PurpleMamriController.cpp"
+        "arduino_compat.cpp"
+        "PneumaticStepper.cpp"
+        "ServoValve.cpp"
     INCLUDE_DIRS
         "."
+        "../include"
 )

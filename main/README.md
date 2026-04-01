@@ -149,6 +149,13 @@ cd ~/esp/esp-idf-v5.5
 cd ~/mamri_build/Mamri_v6_PlatformIO
 idf.py build
 idf.py -p /dev/cu.usbserial-140 flash monitor
+
+
+cd ~/esp/esp-idf-v5.5
+. ./export.sh
+cd ~/mamri_build/Mamri_v6_PlatformIO
+idf.py build
+idf.py -p /dev/cu.usbserial-130 flash monitor
 ```
 
 ---

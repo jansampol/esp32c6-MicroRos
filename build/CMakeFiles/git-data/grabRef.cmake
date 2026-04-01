@@ -18,7 +18,7 @@ set(HEAD_HASH)
 file(READ "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/CMakeFiles/git-data/HEAD" HEAD_CONTENTS LIMIT 1024)
 
 string(STRIP "${HEAD_CONTENTS}" HEAD_CONTENTS)
-set(GIT_DIR "/Users/jansampolramirez/esp/esp-idf-v5.5/.git")
+set(GIT_DIR "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/.git")
 # handle git-worktree
 if(EXISTS "${GIT_DIR}/commondir")
 	file(READ "${GIT_DIR}/commondir" GIT_DIR_NEW LIMIT 1024)

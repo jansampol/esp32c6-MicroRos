@@ -4,6 +4,7 @@
 # include_folders at components/micro_ros_espidf_component/CMakeLists.txt:101 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/*")
 set(OLD_GLOB
+  "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/.DS_Store"
   "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/action_msgs"
   "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/actionlib_msgs"
   "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/builtin_interfaces"

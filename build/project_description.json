@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32c6_microros_test",
-    "project_version":    "1",
+    "project_version":    "ccc1900-dirty",
     "project_path":       "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO",
     "idf_path":           "/Users/jansampolramirez/esp/esp-idf-v5.5",
     "build_dir":          "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build",
@@ -1240,8 +1240,8 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp-idf/main/libmain.a",
-            "sources": [ "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/MicroRosManager.cpp" ],
-            "include_dirs": [ "." ]
+            "sources": [ "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/MicroRosManager.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/RobotController.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/KinematicsController.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/PurpleMamriController.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/arduino_compat.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/PneumaticStepper.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/ServoValve.cpp" ],
+            "include_dirs": [ ".", "../include" ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -2926,7 +2926,7 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "." ]
+            "include_dirs": [ ".", "../include" ]
         },
         "micro_ros_espidf_component": {
             "alias": "idf::micro_ros_espidf_component",

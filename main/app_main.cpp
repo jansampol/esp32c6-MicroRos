@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <vector>
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -8,6 +9,9 @@
 #include "esp_log.h"
 
 #include "MicroRosManager.h"
+#include "RobotController.h"
+
+static const char *TAG = "app_main";
 
 extern "C" void app_main(void) {
     printf("app_main started\n");
@@ -20,9 +24,12 @@ extern "C" void app_main(void) {
     ESP_ERROR_CHECK(ret);
 
     MicroRosManager micro_ros;
+    RobotController robot_controller;
+
+    robot_controller.begin();
 
     if (!micro_ros.begin()) {
-        ESP_LOGE("app_main", "MicroRosManager begin() failed");
+        ESP_LOGE(TAG, "MicroRosManager begin() failed");
         while (true) {
             vTaskDelay(pdMS_TO_TICKS(1000));
         }
@@ -34,14 +41,22 @@ extern "C" void app_main(void) {
         if (micro_ros.hasNewJointCommand()) {
             double joints[MicroRosManager::MAX_JOINTS];
             size_t size = 0;
+
             micro_ros.consumeJointCommand(joints, size);
 
-            printf("Consumed command: ");
+            std::vector<float> joint_angles;
+            joint_angles.reserve(size);
+
             for (size_t i = 0; i < size; ++i) {
-                printf("%.6f ", joints[i]);
+                joint_angles.push_back(static_cast<float>(joints[i]));
             }
-            printf("\n");
+
+            ESP_LOGI(TAG, "Passing joint command to RobotController");
+            robot_controller.setJointTargetRad(joint_angles);
         }
+
+        robot_controller.update();
+        robot_controller.service();
 
         vTaskDelay(pdMS_TO_TICKS(10));
     }
