@@ -8,10 +8,40 @@
 #include "esp_err.h"
 #include "esp_log.h"
 
-#include "MicroRosManager.h"
-#include "RobotController.h"
+#include "MicroRosController/MicroRosManager.h"
+#include "RobotController/RobotController.h"
 
 static const char *TAG = "app_main";
+
+// extern "C" void app_main(void) {
+//     esp_err_t ret = nvs_flash_init();
+//     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
+//         ESP_ERROR_CHECK(nvs_flash_erase());
+//         ret = nvs_flash_init();
+//     }
+//     ESP_ERROR_CHECK(ret);
+
+//     SPI1Manager spi1;
+
+//     if (!spi1.begin()) {
+//         ESP_LOGE("TEST", "SPI begin failed");
+//         while (true) {
+//             vTaskDelay(pdMS_TO_TICKS(1000));
+//         }
+//     }
+
+//     while (true) {
+//         for (int i = 0; i < 16; ++i) {
+//             uint16_t pattern = (1u << i);
+//             ESP_LOGI("TEST", "Sending 0x%04x", pattern);
+//             spi1.writeValves(pattern);
+//             vTaskDelay(pdMS_TO_TICKS(500));
+//         }
+
+//         spi1.writeValves(0x0000);
+//         vTaskDelay(pdMS_TO_TICKS(1000));
+//     }
+// }
 
 extern "C" void app_main(void) {
     printf("app_main started\n");

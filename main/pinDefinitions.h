@@ -6,10 +6,15 @@
 // =====================================================
 
 // SPI for motor valves
-#define SPI1_MISO_PIN 19
-#define SPI1_MOSI_PIN 23
-#define SPI1_CLK_PIN  18
-#define SPI1_CS_MOTOR 5
+// #define SPI1_MISO_PIN 19
+// #define SPI1_MOSI_PIN 23
+// #define SPI1_CLK_PIN  18
+// #define SPI1_CS_MOTOR 5
+
+#define SPI1_MISO_PIN 20
+#define SPI1_MOSI_PIN 19
+#define SPI1_CLK_PIN  15
+#define SPI1_CS_MOTOR 23
 
 // Second SPI / generic external SPI devices
 #define SPI0_MISO_PIN 16

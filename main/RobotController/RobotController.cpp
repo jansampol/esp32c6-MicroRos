@@ -17,17 +17,12 @@ void RobotController::begin() {
     // =============================
     // ORIGINAL
     // =============================
-    // _spi1Manager.begin();
-    // turnOffValves();
+    _spi1Manager.begin();
+    turnOffValves();
 
     setupPurpleMamri();
     resetSteppers();
     resetPositions();
-
-    // =============================
-    // ORIGINAL
-    // =============================
-    // Serial.println("- Switch to PURPLE_MAMRI");
 
     ESP_LOGI(TAG, "Switched to PURPLE_MAMRI");
 }
@@ -45,12 +40,6 @@ void RobotController::changeRobot(RobotName robotName, int numOfSteppersAndFerri
     (void)numOfSteppersAndFerris;
 
     setupPurpleMamri();
-
-    // =============================
-    // ORIGINAL
-    // =============================
-    // Serial.println("- Switch to PURPLE_MAMRI");
-
     ESP_LOGI(TAG, "Switched to PURPLE_MAMRI");
 }
 
@@ -150,10 +139,6 @@ void RobotController::setStepperPositions(StepperPositions &stepperPos) {
 // -------------------------------------------------------------------------------------------------
 
 void RobotController::setupPinkMamri() {
-    // =============================
-    // ORIGINAL
-    // =============================
-    // Serial.println("setupPinkMamri() disabled, using Purple instead.");
 
     ESP_LOGI(TAG, "setupPinkMamri() disabled, using Purple instead.");
     setupPurpleMamri();
@@ -204,11 +189,6 @@ void RobotController::setupPurpleMamri() {
 void RobotController::setupOnlySteppers(int numOfSteppers, int numOfFerrisWheels) {
     (void)numOfSteppers;
     (void)numOfFerrisWheels;
-
-    // =============================
-    // ORIGINAL
-    // =============================
-    // Serial.println("setupOnlySteppers() disabled, using Purple instead.");
 
     ESP_LOGI(TAG, "setupOnlySteppers() disabled, using Purple instead.");
     setupPurpleMamri();
@@ -302,14 +282,14 @@ void RobotController::testValves() {
     // =============================
     // ORIGINAL
     // =============================
-    // for (int i = 0; i < 8; i++) {
-    //     _spi1Manager.writeValves(1 << (i + 8));
-    //     delay(5);
-    // }
-    // for (int i = 0; i < 8; i++) {
-    //     _spi1Manager.writeValves(1 << i);
-    //     delay(5);
-    // }
+    for (int i = 0; i < 8; i++) {
+        _spi1Manager.writeValves(1 << (i + 8));
+        vTaskDelay(pdMS_TO_TICKS(5));
+    }
+    for (int i = 0; i < 8; i++) {
+        _spi1Manager.writeValves(1 << i);
+        vTaskDelay(pdMS_TO_TICKS(5));
+    }
 
     ESP_LOGI(TAG, "testValves() disabled in current version");
 }
@@ -326,13 +306,13 @@ void RobotController::turnOnValves() {
     }
     
     uint16_t valveBitPattern = ((_valveState & 0x00ff) << 8) | ((_valveState & 0xff00) >> 8);
-    // _spi1Manager.writeValves(valveBitPattern);
+    _spi1Manager.writeValves(valveBitPattern);
     ESP_LOGD(TAG, "Valve state: 0x%04x (bit pattern sent: 0x%04x)", _valveState, valveBitPattern); 
 }
 
 void RobotController::turnOffValves() {
     _valveState = 0x0000;
-    // _spi1Manager.writeValves(0x0000);
+    _spi1Manager.writeValves(0x0000);
 
     _valveState = 0x0000;
 }

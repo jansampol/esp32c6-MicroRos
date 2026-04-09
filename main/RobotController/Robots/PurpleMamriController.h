@@ -1,6 +1,6 @@
 #pragma once
 
-#include "KinematicsController.h"
+#include "../KinematicsController.h"
 
 class PurpleMamriController : public KinematicsController {
 public:

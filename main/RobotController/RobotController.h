@@ -16,19 +16,19 @@
 // =============================
 // REAL STEPPER LIBRARY
 // =============================
-#include "PneumaticStepper.h"
+#include "../PneumaticStepper/PneumaticStepper.h"
 
 // =============================
 // PROJECT HEADERS
 // =============================
-#include "RobotStructs.h"
+#include "../RobotStructs.h"
 #include "KinematicsController.h"
-#include "PurpleMamriController.h"
+#include "Robots/PurpleMamriController.h"
 
 // =============================
 // ORIGINAL
 // =============================
-// #include "InputController/SPI/SPI1Manager.h"
+#include "InputController/SPI/SPI1Manager.h"
 
 class RobotController {
 public:
@@ -130,7 +130,7 @@ private:
     // =============================
     // ORIGINAL
     // =============================
-    // SPI1Manager _spi1Manager;
+    SPI1Manager _spi1Manager;
 
     uint16_t _valveState = 0x0000;
 

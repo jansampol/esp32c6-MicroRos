@@ -19,8 +19,7 @@
 // =============================
 // NOW ENABLED
 // =============================
-#include "PneumaticStepper.h"
-
+#include "PneumaticStepper/PneumaticStepper.h"
 
 // =============================
 // TEMP REPLACEMENT (kept commented for rollback)
