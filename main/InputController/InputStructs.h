@@ -1,0 +1,11 @@
+#pragma once
+
+enum InputModes {
+    BUTTON_JOINT_MODE,
+    BUTTON_EE_CONTROL_MODE,
+    JOINT_TARGET_MODE,
+    WEBPAGE_MODE,
+    TOUCHSCREEN_MODE,
+    HANDTOOL_MODE,
+    SPACEMOUSE_MODE,
+};

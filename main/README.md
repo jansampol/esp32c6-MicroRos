@@ -165,6 +165,7 @@ idf.py build
 ✔ micro-ROS working
 ✔ Publisher confirmed
 
+```bash
 ls /dev/cu.* 
 
 cd ~/esp/esp-idf-v5.5
@@ -172,3 +173,4 @@ cd ~/esp/esp-idf-v5.5
 cd ~/mamri_build/Mamri_v6_PlatformIO
 idf.py build
 idf.py -p /dev/cu.usbmodem1401 flash monitor
+```

@@ -21,14 +21,11 @@ SPI1Manager::SPI1Manager() {
 }
 
 bool SPI1Manager::begin() {
-    ESP_LOGI(TAG, "SPI1Manager begin()");
-    ESP_LOGI(TAG, "Using pins MOSI=%d MISO=%d CLK=%d CS=%d",
-             SPI1_MOSI_PIN, SPI1_MISO_PIN, SPI1_CLK_PIN, SPI1_CS_MOTOR);
-
     if (_initialized) {
-        ESP_LOGI(TAG, "Already initialized");
         return true;
     }
+
+    ESP_LOGI(TAG, "SPI1Manager begin()");
 
     spi_bus_config_t buscfg = {};
     buscfg.mosi_io_num = SPI1_MOSI_PIN;
@@ -38,32 +35,33 @@ bool SPI1Manager::begin() {
     buscfg.quadhd_io_num = -1;
     buscfg.max_transfer_sz = 16;
 
+    ESP_LOGI(TAG, "Using pins MOSI=%d MISO=%d CLK=%d CS=%d",
+             SPI1_MOSI_PIN, SPI1_MISO_PIN, SPI1_CLK_PIN, SPI1_CS_MOTOR);
+
     esp_err_t err = spi_bus_initialize(SPI2_HOST, &buscfg, SPI_DMA_CH_AUTO);
-    ESP_LOGI(TAG, "spi_bus_initialize -> %s", esp_err_to_name(err));
     if (err != ESP_OK) {
+        ESP_LOGE(TAG, "spi_bus_initialize failed: %s", esp_err_to_name(err));
         return false;
     }
 
     spi_device_interface_config_t devcfg = {};
-    devcfg.clock_speed_hz = 1 * 1000 * 1000;
+    devcfg.clock_speed_hz = 1 * 1000 * 1000;   // safe starting point
     devcfg.mode = 0;
     devcfg.spics_io_num = SPI1_CS_MOTOR;
     devcfg.queue_size = 4;
 
     err = spi_bus_add_device(SPI2_HOST, &devcfg, &_spi_dev);
-    ESP_LOGI(TAG, "spi_bus_add_device -> %s", esp_err_to_name(err));
     if (err != ESP_OK) {
+        ESP_LOGE(TAG, "spi_bus_add_device failed: %s", esp_err_to_name(err));
         return false;
     }
 
-    err = mcpInit();
-    ESP_LOGI(TAG, "mcpInit -> %s", esp_err_to_name(err));
-    if (err != ESP_OK) {
+    if (mcpInit() != ESP_OK) {
+        ESP_LOGE(TAG, "MCP23S17 init failed");
         return false;
     }
 
     _initialized = true;
-    ESP_LOGI(TAG, "SPI1Manager initialized OK");
     return true;
 }
 
@@ -87,42 +85,33 @@ esp_err_t SPI1Manager::mcpWrite8(uint8_t reg, uint8_t value) {
 
 esp_err_t SPI1Manager::mcpWrite16(uint8_t regA, uint16_t value) {
     if (_spi_dev == nullptr) {
-        ESP_LOGE(TAG, "mcpWrite16: _spi_dev is null");
         return ESP_ERR_INVALID_STATE;
     }
 
     uint8_t tx[4] = {
         MCP23S17_OPCODE_WRITE,
         regA,
-        static_cast<uint8_t>(value & 0xFF),
-        static_cast<uint8_t>((value >> 8) & 0xFF)
+        static_cast<uint8_t>(value & 0xFF),         // GPIOA
+        static_cast<uint8_t>((value >> 8) & 0xFF)   // GPIOB
     };
-
-    ESP_LOGI(TAG,
-             "mcpWrite16 reg=0x%02X value=0x%04X tx=[0x%02X 0x%02X 0x%02X 0x%02X]",
-             regA, value, tx[0], tx[1], tx[2], tx[3]);
 
     spi_transaction_t t = {};
     t.length = 32;
     t.tx_buffer = tx;
 
-    esp_err_t err = spi_device_transmit(_spi_dev, &t);
-    ESP_LOGI(TAG, "spi_device_transmit -> %s", esp_err_to_name(err));
-    return err;
+    return spi_device_transmit(_spi_dev, &t);
 }
 
 esp_err_t SPI1Manager::mcpInit() {
-    ESP_LOGI(TAG, "mcpInit: configuring IODIR");
+    // all 16 pins as outputs
     esp_err_t err = mcpWrite16(MCP23S17_IODIRA, 0x0000);
     if (err != ESP_OK) {
-        ESP_LOGE(TAG, "mcpInit: IODIR write failed");
         return err;
     }
 
-    ESP_LOGI(TAG, "mcpInit: clearing GPIO");
+    // set all outputs low
     err = mcpWrite16(MCP23S17_GPIOA, 0x0000);
     if (err != ESP_OK) {
-        ESP_LOGE(TAG, "mcpInit: GPIO clear failed");
         return err;
     }
 
@@ -132,14 +121,9 @@ esp_err_t SPI1Manager::mcpInit() {
 
 void SPI1Manager::writeValves(uint16_t valveStates) {
     _valveStates = valveStates;
-
     if (!_initialized || _spi_dev == nullptr) {
-        ESP_LOGE(TAG, "writeValves ignored: initialized=%d spi_dev=%p",
-                 _initialized, _spi_dev);
         return;
     }
-
-    ESP_LOGI(TAG, "writeValves 0x%04X", valveStates);
 
     esp_err_t err = mcpWrite16(MCP23S17_GPIOA, valveStates);
     if (err != ESP_OK) {

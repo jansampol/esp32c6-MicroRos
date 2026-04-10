@@ -295,19 +295,17 @@ void RobotController::testValves() {
 }
 
 void RobotController::turnOnValves() {
+    _valveState = 0x0000;
 
-     _valveState = 0x0000;
-    
     for (size_t i = 0; i < _steppers.size(); ++i) {
         for (int c = 0; c < 2; c++) {
             bool newState = _steppers[i].getCylinderState(c) ^ _robotConfig.valveInverted[i][c];
             _valveState |= (static_cast<uint16_t>(newState) << (2 * i + c));
         }
     }
-    
-    uint16_t valveBitPattern = ((_valveState & 0x00ff) << 8) | ((_valveState & 0xff00) >> 8);
-    _spi1Manager.writeValves(valveBitPattern);
-    ESP_LOGD(TAG, "Valve state: 0x%04x (bit pattern sent: 0x%04x)", _valveState, valveBitPattern); 
+
+    _spi1Manager.writeValves(_valveState);
+    ESP_LOGD(TAG, "Valve state: 0x%04x", _valveState);
 }
 
 void RobotController::turnOffValves() {

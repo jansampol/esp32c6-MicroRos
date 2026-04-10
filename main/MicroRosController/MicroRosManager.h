@@ -10,7 +10,7 @@
 
 class MicroRosManager {
 public:
-    static constexpr size_t MAX_JOINTS = 10;
+    static constexpr size_t MAX_JOINTS = 5;
 
     MicroRosManager();
 
