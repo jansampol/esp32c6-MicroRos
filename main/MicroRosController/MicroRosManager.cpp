@@ -31,9 +31,14 @@ MicroRosManager::MicroRosManager()
 {
     zeroInitRosObjects();
 
-    for (size_t i = 0; i < MAX_JOINTS; ++i) {
+    for (size_t i = 0; i < MAX_PATH_MSG_VALUES; ++i) {
         msg_buffer_[i] = 0.0;
-        latest_joint_command_[i] = 0.0;
+    }
+
+    for (size_t wp = 0; wp < MAX_WAYPOINTS; ++wp) {
+        for (size_t j = 0; j < MAX_JOINTS; ++j) {
+            latest_path_[wp][j] = 0.0;
+        }
     }
 }
 
@@ -113,7 +118,7 @@ bool MicroRosManager::createEntities()
         return false;
     }
 
-    rc = rclc_node_init_default(&node_, "esp32_joint_subscriber", "", &support_);
+    rc = rclc_node_init_default(&node_, "esp32_path_subscriber", "", &support_);
     if (rc != RCL_RET_OK) {
         ESP_LOGE(TAG, "rclc_node_init_default failed: %d", (int)rc);
         rcl_ret_t rc2 = rclc_support_fini(&support_);
@@ -126,13 +131,13 @@ bool MicroRosManager::createEntities()
 
     msg_.data.data = msg_buffer_;
     msg_.data.size = 0;
-    msg_.data.capacity = MAX_JOINTS;
+    msg_.data.capacity = MAX_PATH_MSG_VALUES;
 
     rc = rclc_subscription_init_default(
         &subscriber_,
         &node_,
         ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Float64MultiArray),
-        "/mamri/planning/joint_angles"
+        "/mamri/planning/joint_path_execute"
     );
     if (rc != RCL_RET_OK) {
         ESP_LOGE(TAG, "rclc_subscription_init_default failed: %d", (int)rc);
@@ -158,7 +163,7 @@ bool MicroRosManager::createEntities()
         &executor_,
         &subscriber_,
         &msg_,
-        &MicroRosManager::jointAnglesCallback,
+        &MicroRosManager::jointPathCallback,
         ON_NEW_DATA
     );
     if (rc != RCL_RET_OK) {
@@ -191,31 +196,53 @@ void MicroRosManager::destroyEntities()
     zeroInitRosObjects();
 }
 
-void MicroRosManager::jointAnglesCallback(const void *msgin)
+void MicroRosManager::jointPathCallback(const void *msgin)
 {
+
+    printf("jointPathCallback called\n");
     if (instance_ == nullptr || msgin == nullptr) {
         return;
     }
 
     const auto *in = static_cast<const std_msgs__msg__Float64MultiArray *>(msgin);
 
-    size_t n = in->data.size;
-    if (n > MAX_JOINTS) {
-        n = MAX_JOINTS;
+    if (in->data.size < 2) {
+        printf("Received invalid path message: too short\n");
+        return;
     }
 
-    for (size_t i = 0; i < n; ++i) {
-        instance_->latest_joint_command_[i] = in->data.data[i];
+    size_t n_waypoints = static_cast<size_t>(in->data.data[0]);
+    size_t dof = static_cast<size_t>(in->data.data[1]);
+
+    if (dof != MAX_JOINTS) {
+        printf("Received invalid path message: DOF=%zu expected=%zu\n", dof, MAX_JOINTS);
+        return;
     }
 
-    instance_->latest_joint_command_size_ = n;
-    instance_->new_joint_command_available_ = true;
-
-    printf("Received joint angles: ");
-    for (size_t i = 0; i < n; ++i) {
-        printf("%.6f ", instance_->latest_joint_command_[i]);
+    if (n_waypoints > MAX_WAYPOINTS) {
+        printf("Received path truncated from %zu to %zu waypoints\n", n_waypoints, MAX_WAYPOINTS);
+        n_waypoints = MAX_WAYPOINTS;
     }
-    printf("\n");
+
+    size_t expected_size = 2 + n_waypoints * dof;
+    if (in->data.size < expected_size) {
+        printf("Received invalid path message: expected at least %zu values, got %zu\n",
+               expected_size, in->data.size);
+        return;
+    }
+
+    size_t idx = 2;
+    for (size_t wp = 0; wp < n_waypoints; ++wp) {
+        for (size_t j = 0; j < dof; ++j) {
+            instance_->latest_path_[wp][j] = in->data.data[idx++];
+        }
+    }
+
+    instance_->latest_path_waypoints_ = n_waypoints;
+    instance_->latest_path_dof_ = dof;
+    instance_->new_path_available_ = true;
+
+    printf("Received joint path: %zu waypoints, %zu dof\n", n_waypoints, dof);
 }
 
 void MicroRosManager::update()
@@ -230,18 +257,22 @@ void MicroRosManager::update()
     }
 }
 
-bool MicroRosManager::hasNewJointCommand() const
+bool MicroRosManager::hasNewPath() const
 {
-    return new_joint_command_available_;
+    return new_path_available_;
 }
 
-void MicroRosManager::consumeJointCommand(double *out, size_t &size)
+void MicroRosManager::consumePath(double out[][MAX_JOINTS], size_t &waypoints, size_t &dof)
 {
-    size = latest_joint_command_size_;
+    printf("Consuming path with %zu waypoints and %zu dof\n", latest_path_waypoints_, latest_path_dof_);
+    waypoints = latest_path_waypoints_;
+    dof = latest_path_dof_;
 
-    for (size_t i = 0; i < size; ++i) {
-        out[i] = latest_joint_command_[i];
+    for (size_t wp = 0; wp < waypoints; ++wp) {
+        for (size_t j = 0; j < dof; ++j) {
+            out[wp][j] = latest_path_[wp][j];
+        }
     }
 
-    new_joint_command_available_ = false;
+    new_path_available_ = false;
 }

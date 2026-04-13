@@ -429,6 +429,16 @@ uint8_t SPI0Manager::invertByte(uint8_t b)
     return outp;
 }
 
+// uint8_t SPI0Manager::readSwitches()
+// {
+//     uint8_t value = 0;
+//     esp_err_t err = mcpRead8(UI_2_LEDS_AND_SWITCHES, MCP23S17_GPIOA, value);
+//     if (err != ESP_OK) {
+//         ESP_LOGE(TAG, "readSwitches failed: %s", esp_err_to_name(err));
+//         return 0;
+//     }
+//     return invertByte(value);
+// }
 uint8_t SPI0Manager::readSwitches()
 {
     uint8_t value = 0;
@@ -437,7 +447,11 @@ uint8_t SPI0Manager::readSwitches()
         ESP_LOGE(TAG, "readSwitches failed: %s", esp_err_to_name(err));
         return 0;
     }
-    return invertByte(value);
+
+    // Keep only A6 and A7
+    uint8_t switches = (value >> 6) & 0x03;
+
+    return switches;
 }
 
 void SPI0Manager::writeGreen(bool on)  { setLedBit(0, on); }
@@ -561,20 +575,40 @@ void SPI0Manager::debugReadMcpRegisters(deviceNameSPI0 device)
 
 void SPI0Manager::debugWriteAndReadLeds(uint8_t value)
 {
-    value &= 0x3F;
+    value &= 0x3F; // only LED bits
 
-    esp_err_t err = mcpWrite8(UI_2_LEDS_AND_SWITCHES, MCP23S17_GPIOA, value);
+    uint8_t current = 0;
+    esp_err_t err = mcpRead8(UI_2_LEDS_AND_SWITCHES, MCP23S17_GPIOA, current);
     if (err != ESP_OK) {
-        ESP_LOGE(TAG, "LED write failed: %s", esp_err_to_name(err));
+        ESP_LOGE(TAG, "Read before write failed");
+        return;
+    }
+
+    // Preserve switch bits (A6, A7)
+    uint8_t newValue = (current & 0xC0) | value;
+
+    err = mcpWrite8(UI_2_LEDS_AND_SWITCHES, MCP23S17_GPIOA, newValue);
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "Write failed");
         return;
     }
 
     uint8_t readback = 0;
-    err = mcpRead8(UI_2_LEDS_AND_SWITCHES, MCP23S17_GPIOA, readback);
-    if (err != ESP_OK) {
-        ESP_LOGE(TAG, "LED readback failed: %s", esp_err_to_name(err));
-        return;
+    mcpRead8(UI_2_LEDS_AND_SWITCHES, MCP23S17_GPIOA, readback);
+
+    ESP_LOGI(TAG, "GPIOA write=0x%02X read=0x%02X", newValue, readback);
+}
+
+void SPI0Manager::debugReadRawDevice2(uint8_t& gpioA, uint8_t& gpioB)
+{
+    gpioA = 0;
+    gpioB = 0;
+
+    if (mcpRead8(UI_2_LEDS_AND_SWITCHES, MCP23S17_GPIOA, gpioA) != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to read device 2 GPIOA");
     }
 
-    ESP_LOGI(TAG, "Wrote GPIOA = 0x%02X, read back GPIOA = 0x%02X", value, readback);
+    if (mcpRead8(UI_2_LEDS_AND_SWITCHES, MCP23S17_GPIOB, gpioB) != ESP_OK) {
+        ESP_LOGE(TAG, "Failed to read device 2 GPIOB");
+    }
 }

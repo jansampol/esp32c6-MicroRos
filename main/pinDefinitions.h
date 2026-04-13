@@ -5,13 +5,13 @@
 // IMPORTANT: still verify against your exact board wiring
 // =====================================================
 
-// SPI for motor valves
+// SPI for motor valves (checked)
 #define SPI1_MISO_PIN 20
 #define SPI1_MOSI_PIN 19
 #define SPI1_CLK_PIN  15
 #define SPI1_CS_MOTOR 23
 
-// SPI0 (other spi devices, internal and external)
+// SPI0 (other spi devices, internal and external) (checked)
 #ifdef JULIAN_GRACE_CONFIG
 #define SPI0_MISO_PIN 0   // C5 GPIO6 position -> C6 GPIO0
 #else
@@ -21,18 +21,18 @@
 #define SPI0_CLK_PIN 1    // C5 GPIO7 position -> C6 GPIO1
 #define SPI0_MOSI_PIN 8   // C5 GPIO8 position -> C6 GPIO8
 
-// CS demuxer pins
+// CS demuxer pins (checked)
 #define CS_1_PIN 3
 #define CS_2_PIN 2
 #define CS_3_PIN 21
 #define CS_4_PIN 9
 
-// I2C
+// I2C (checked)
 #define I2C_SDA_PIN 4
 #define I2C_SCL_PIN 5
 
 // Changed from invalid ESP32-C5/ESP32 mappings
-#define EMERGENCY_PIN 2
+#define EMERGENCY_PIN 11
 #define SCREEN_DC_PIN 3
 
 #define FAKE_CS_PIN 13

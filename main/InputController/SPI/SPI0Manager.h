@@ -63,6 +63,7 @@ public:
 
     void debugReadMcpRegisters(deviceNameSPI0 device);
     void debugWriteAndReadLeds(uint8_t value);
+    void debugReadRawDevice2(uint8_t& gpioA, uint8_t& gpioB);
 
     // Screen support intentionally disabled for now
     // Adafruit_ST7789& getScreen() { return _screen; }
