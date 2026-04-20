@@ -15,8 +15,10 @@ RobotController::RobotController() :
 
 void RobotController::begin() {
 
-    _spi1Manager.begin();
-    turnOffValves();
+    // SPI1 DISABLED FOR SPI0-ONLY TESTING:
+    // _spi1Manager.begin();
+    // turnOffValves();
+    _valveState = 0x0000;
 
     setupPurpleMamri();
     resetSteppers();
@@ -280,16 +282,17 @@ void RobotController::testValves() {
     // =============================
     // ORIGINAL
     // =============================
-    for (int i = 0; i < 8; i++) {
-        _spi1Manager.writeValves(1 << (i + 8));
-        vTaskDelay(pdMS_TO_TICKS(5));
-    }
-    for (int i = 0; i < 8; i++) {
-        _spi1Manager.writeValves(1 << i);
-        vTaskDelay(pdMS_TO_TICKS(5));
-    }
+    // SPI1 DISABLED FOR SPI0-ONLY TESTING:
+    // for (int i = 0; i < 8; i++) {
+    //     _spi1Manager.writeValves(1 << (i + 8));
+    //     vTaskDelay(pdMS_TO_TICKS(5));
+    // }
+    // for (int i = 0; i < 8; i++) {
+    //     _spi1Manager.writeValves(1 << i);
+    //     vTaskDelay(pdMS_TO_TICKS(5));
+    // }
 
-    ESP_LOGI(TAG, "testValves() disabled in current version");
+    ESP_LOGI(TAG, "testValves() skipped (SPI1 disabled for SPI0-only test)");
 }
 
 void RobotController::turnOnValves() {
@@ -302,13 +305,15 @@ void RobotController::turnOnValves() {
         }
     }
 
-    _spi1Manager.writeValves(_valveState);
+    // SPI1 DISABLED FOR SPI0-ONLY TESTING:
+    // _spi1Manager.writeValves(_valveState);
     ESP_LOGD(TAG, "Valve state: 0x%04x", _valveState);
 }
 
 void RobotController::turnOffValves() {
     _valveState = 0x0000;
-    _spi1Manager.writeValves(0x0000);
+    // SPI1 DISABLED FOR SPI0-ONLY TESTING:
+    // _spi1Manager.writeValves(0x0000);
 
     _valveState = 0x0000;
 }

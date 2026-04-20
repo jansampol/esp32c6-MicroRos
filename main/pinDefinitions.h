@@ -33,7 +33,7 @@
 
 // Changed from invalid ESP32-C5/ESP32 mappings
 #define EMERGENCY_PIN 11
-#define SCREEN_DC_PIN 3
+#define SCREEN_DC_PIN 10
 
 #define FAKE_CS_PIN 13
 

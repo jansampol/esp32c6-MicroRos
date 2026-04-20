@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cstddef>
 #include <cstdint>
 
 #include "pinDefinitions.h"
@@ -43,6 +44,9 @@ public:
     void setScreenRES(bool on);
     void setScreenBLK(bool on);
     void writeMainValve(uint16_t state);
+    bool initScreen();
+    void fillScreen(uint16_t color);
+    esp_err_t drawScreenRGB565(int x, int y, int w, int h, const uint16_t* pixels);
 
     uint16_t readHorizontalButtons();
     uint16_t readVerticalButtons();
@@ -77,6 +81,9 @@ private:
     esp_err_t mcpRead8(deviceNameSPI0 device, uint8_t reg, uint8_t& value);
     esp_err_t mcpRead16(deviceNameSPI0 device, uint8_t regA, uint16_t& value);
     esp_err_t adcReadMcp3004(uint8_t channel, uint16_t& value);
+    esp_err_t screenWriteCommand(uint8_t cmd);
+    esp_err_t screenWriteData(const uint8_t* data, size_t len);
+    esp_err_t screenSetAddrWindow(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1);
 
     esp_err_t mcpInitMCP23S17(deviceNameSPI0 device,
                               uint16_t iodir,
@@ -96,5 +103,6 @@ private:
     deviceNameSPI0 _selectedDevice0 = NO_DEVICE;
 
     bool _initialized = false;
+    bool _screenInitialized = false;
     spi_device_handle_t _spi_dev = nullptr;
 };

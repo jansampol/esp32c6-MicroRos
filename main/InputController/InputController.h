@@ -48,7 +48,7 @@ public:
     std::vector<float> readFerrisWheelValues();
     void updateNumOfFerrisWheels(uint8_t numOfFerrisWheels);
 
-    // Page mapPagePotmeter();
+    Page mapPagePotmeter();
     float getMaxVelocityFromPotmeter();
 
     void handleHorizontalButtons(RobotController& robotController, bool jointMode);
@@ -58,9 +58,8 @@ public:
     void setInputMode(InputModes newMode);
     InputModes getInputMode();
 
-    // SPI LED call removed -> temporary no-op
     void setLedEmergency(bool on) {
-        (void)on;
+        _spi0Manager.writeRed3(on);
     }
 
     bool getFerrisWheelsReady() {

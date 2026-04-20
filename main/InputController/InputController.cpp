@@ -4,6 +4,9 @@
 // ESP-IDF
 // ============================================================
 #include "esp_log.h"
+#include "esp_err.h"
+#include "driver/gpio.h"
+#include "pinDefinitions.h"
 
 #include <cstdio>
 
@@ -41,6 +44,25 @@ void InputController::begin() {
 
     // Screen / font/display init currently stubbed in CanvasManager
     _canvasManager.initScreen();
+
+    // Emergency button input (active-low by default for current wiring).
+    gpio_config_t emergencyConf = {};
+    emergencyConf.pin_bit_mask = (1ULL << EMERGENCY_PIN);
+    emergencyConf.mode = GPIO_MODE_INPUT;
+    emergencyConf.pull_up_en = GPIO_PULLUP_ENABLE;
+    emergencyConf.pull_down_en = GPIO_PULLDOWN_DISABLE;
+    emergencyConf.intr_type = GPIO_INTR_DISABLE;
+    gpio_config(&emergencyConf);
+
+    // LED policy:
+    // Green  = system on
+    // Red1   = ferris wheels not ready
+    // Red2   = no pressure
+    // Red3   = emergency pressed
+    _spi0Manager.writeGreen(true);
+    _spi0Manager.writeRed1(false);
+    _spi0Manager.writeRed2(false);
+    _spi0Manager.writeRed3(false);
 
     // ============================================================
     // I2C
@@ -157,15 +179,20 @@ void InputController::update(RobotController& robotController) {
     _mamriWebServer.updateInputMode(_currentInputMode);
     _mamriWebServer.updateFerrisWheelsReady(_ferrisWheelsReady);
 
-    // ============================================================
-    // Canvas / screen / font-related output disabled for now
-    // ============================================================
-    // _canvasManager.selectPage(mapPagePotmeter());
-    // _canvasManager.updateDirect(_canvasManager.getCanvas(), _currentInputMode, robotController);
-    // _spi0Manager.selectDevice(SCREEN);
-    // uint16_t* buf = (uint16_t*)_canvasManager.getCanvas().getBuffer();
-    // _spi0Manager.getScreen().drawRGBBitmap(0, 0, buf, _canvasManager.WIDTH, _canvasManager.HEIGHT);
-    // _spi0Manager.deselectDevice();
+    // Display-only restore: draw UI into framebuffer and flush via SPI0 screen backend.
+    if (_canvasManager.hasCanvas()) {
+        _canvasManager.selectPage(mapPagePotmeter());
+        _canvasManager.updateDirect(_canvasManager.getCanvas(), _currentInputMode, robotController);
+        esp_err_t drawErr = _spi0Manager.drawScreenRGB565(0, 0,
+                                                          CanvasManager::WIDTH,
+                                                          CanvasManager::HEIGHT,
+                                                          _canvasManager.getCanvas().getBuffer());
+        if (drawErr != ESP_OK) {
+            ESP_LOGW(TAG, "drawScreenRGB565 failed: %s", esp_err_to_name(drawErr));
+        }
+    } else {
+        ESP_LOGW(TAG, "Canvas unavailable, skipping display update.");
+    }
 
     // ============================================================
     // Pressure sensors enabled
@@ -176,15 +203,11 @@ void InputController::update(RobotController& robotController) {
 
         ESP_LOGI(TAG, "Pressure sensor 1: %.4f bar", pressure);
 
-        // Old LED logic kept commented until SPI0 is re-enabled
-        /*
-        if(pressure0 < 2.0f){
-            _spi0Manager.writeRed2(true);
-        } else {
-            _spi0Manager.writeRed2(false);
-        }
-        */
+        const bool noPressure = (pressure < 2.0f);
+        _spi0Manager.writeRed2(noPressure);
     }
+    #else
+    _spi0Manager.writeRed2(false);
     #endif
 
     handleVerticalButtons(robotController);
@@ -193,18 +216,38 @@ void InputController::update(RobotController& robotController) {
     robotController.setFrequency(maxVelocity);
 
     // Ferris warning LED disabled for now
-    
+    _spi0Manager.writeGreen(true);
+
     if(!_ferrisWheelsReady && robotController.getNumOfFerrisWheels() > 0){
         _spi0Manager.writeRed1(true);
     } else {
         _spi0Manager.writeRed1(false);
     }
 
+    // Emergency LED (red3): button pressed -> ON.
+    // Current board uses active-high wiring.
+    const int emergencyLevel = gpio_get_level(static_cast<gpio_num_t>(EMERGENCY_PIN));
+    const bool emergencyPressed = (emergencyLevel == 1);
+    _spi0Manager.writeRed3(emergencyPressed);
+
 }
 
 float InputController::getMaxVelocityFromPotmeter() {
     // Fixed fallback while SPI potmeter is disabled
     return 20.0f;
+}
+
+Page InputController::mapPagePotmeter()
+{
+    int potValue = static_cast<int>(_spi0Manager.readPotmeters(false));
+    if (potValue < 171) {
+        return Page::HOME;
+    } else if (potValue < 400) {
+        return Page::ROBOTINFO;
+    } else if (potValue < 682) {
+        return Page::STEPPER_POSITIONS;
+    }
+    return Page::END_EFFECTOR_POSITION;
 }
 
 void InputController::handleHorizontalButtons(RobotController& robotController, bool jointMode) {
@@ -225,18 +268,15 @@ void InputController::handleSwitches(RobotController& robotController) {
 }
 
 void InputController::setMainValve(bool on) {
-    (void)on;
-    // Disabled for now: depends on SPI0
+    _spi0Manager.setMainValve(on);
 }
 
 void InputController::setScreenRES(bool on) {
-    (void)on;
-    // Disabled for now: depends on SPI0
+    _spi0Manager.setScreenRES(on);
 }
 
 void InputController::setScreenBLK(bool on) {
-    (void)on;
-    // Disabled for now: depends on SPI0
+    _spi0Manager.setScreenBLK(on);
 }
 
 void InputController::setInputMode(InputModes newInputMode) {

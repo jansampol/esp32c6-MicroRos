@@ -1,25 +1,13 @@
-#define ENABLE_ADAFRUIT_DISPLAY 0
 #include "CanvasManager.h"
 
 #include <cstdio>
 
-// =============================
-// ESP-IDF
-// =============================
 #include "esp_log.h"
 #include "esp_heap_caps.h"
 
-// =============================
-// FUTURE / NOT CURRENTLY USED
-// =============================
 #include "InputController/InputController.h"
 
 static const char* TAG = "CanvasManager";
-
-// ============================================================
-// Toggle display backend
-// ============================================================
-#define ENABLE_ADAFRUIT_DISPLAY 0
 
 CanvasManager::CanvasManager(InputController& inputController)
     : _inputController(inputController)
@@ -29,55 +17,47 @@ CanvasManager::CanvasManager(InputController& inputController)
 void CanvasManager::initCanvas() {
     ESP_LOGI(TAG, "Initializing CanvasManager...");
 
-#if ENABLE_ADAFRUIT_DISPLAY
-    // =========================================================================
-    // ORIGINAL CODE (Adafruit / Arduino)
-    // =========================================================================
     _canvasBuffer = static_cast<uint16_t*>(
         heap_caps_malloc(WIDTH * HEIGHT * sizeof(uint16_t), MALLOC_CAP_SPIRAM)
     );
+    if (!_canvasBuffer) {
+        ESP_LOGW(TAG, "PSRAM allocation failed, falling back to internal RAM.");
+        _canvasBuffer = static_cast<uint16_t*>(
+            heap_caps_malloc(WIDTH * HEIGHT * sizeof(uint16_t), MALLOC_CAP_8BIT)
+        );
+    }
 
     if (!_canvasBuffer) {
-        ESP_LOGE(TAG, "PSRAM allocation failed!");
+        ESP_LOGE(TAG, "Canvas buffer allocation failed!");
         return;
     }
 
-    _canvas = new PsGFXcanvas16(WIDTH, HEIGHT, _canvasBuffer);
+    _canvas = new DisplayCanvas(WIDTH, HEIGHT, _canvasBuffer);
 
     if (!_canvas) {
         ESP_LOGE(TAG, "Canvas allocation failed!");
         return;
     }
 
+    _canvas->fillScreen(0x0000);
+    _canvas->setTextColor(0xFFFF);
+    _canvas->setTextSize(2);
     ESP_LOGI(TAG, "Canvas buffer initialized successfully.");
-#else
-    _canvasBuffer = nullptr;
-    ESP_LOGI(TAG, "Canvas disabled (no display backend).");
-#endif
 }
 
 void CanvasManager::initScreen() {
-
-#if ENABLE_ADAFRUIT_DISPLAY
     if (!_canvas) {
         ESP_LOGW(TAG, "initScreen() called before initCanvas()");
         return;
     }
 
-    _canvas->setFont(&FreeSans12pt7b);
-    _canvas->setRotation(0);
     _canvas->fillScreen(0x0000);
-    _canvas->setTextColor(ST77XX_WHITE);
-
+    _canvas->setTextColor(0xFFFF);
+    _canvas->setTextSize(2);
     ESP_LOGI(TAG, "Finished screen initialization.");
-#else
-    ESP_LOGI(TAG, "initScreen skipped (display disabled).");
-#endif
 }
 
-#if ENABLE_ADAFRUIT_DISPLAY
-
-void CanvasManager::updateDirect(Adafruit_GFX& display, InputModes mode, const RobotController& robotController) {
+void CanvasManager::updateDirect(DisplayCanvas& display, InputModes mode, const RobotController& robotController) {
     display.fillScreen(0x0000);
     drawPageHeader(display, robotController.getRobotConfig().name);
 
@@ -103,10 +83,11 @@ void CanvasManager::updateDirect(Adafruit_GFX& display, InputModes mode, const R
     }
 }
 
-void CanvasManager::drawHome(Adafruit_GFX& display, InputModes mode, const RobotState& robotState) {
+void CanvasManager::drawHome(DisplayCanvas& display, InputModes mode, const RobotState& robotState) {
     (void)robotState;
 
     display.setTextColor(0xFFFF);
+    display.setTextSize(2);
     display.setCursor(10, 45);
     display.print("MAMRI CONTROLLER");
 
@@ -133,8 +114,10 @@ void CanvasManager::drawHome(Adafruit_GFX& display, InputModes mode, const Robot
     display.print("WiFi: N/A");
 }
 
-void CanvasManager::drawRobotInfoScreen(Adafruit_GFX& display, const RobotState& robotState, const RobotController& robotController) {
+void CanvasManager::drawRobotInfoScreen(DisplayCanvas& display, const RobotState& robotState, const RobotController& robotController) {
+    (void)robotState;
     display.setTextColor(0xFFFF);
+    display.setTextSize(2);
     display.setCursor(10, 45);
     display.print("ROBOT INFO");
 
@@ -149,27 +132,32 @@ void CanvasManager::drawRobotInfoScreen(Adafruit_GFX& display, const RobotState&
 
     display.setCursor(10, 130);
     display.print("Ferris Wheels: ");
-    display.print(config.numOfFerrisWheels);
+    display.print(static_cast<unsigned>(config.numOfFerrisWheels));
 
     display.setCursor(10, 155);
     display.print("Has Sensors: ");
     display.print(config.sensorsEnabled ? "Yes" : "No");
 }
 
-void CanvasManager::drawPageHeader(Adafruit_GFX& display, RobotName robotName) {
-    display.fillRect(0, 0, display.width(), 25, rgbColor(255, 200, 210));
+void CanvasManager::drawPageHeader(DisplayCanvas& display, RobotName robotName) {
+    display.fillRect(0, 0, display.width(), 32, rgbColor(255, 200, 210));
     display.setTextColor(0x0000);
-    display.setCursor(5, 20);
+    display.setTextSize(2);
+    display.setCursor(5, 8);
 
     switch (robotName) {
         case PINK_MAMRI: display.print("PINK MAMRI"); break;
         case PURPLE_MAMRI: display.print("PURPLE MAMRI"); break;
+        case STEPPER_TESTER: display.print("STEPPER TESTER"); break;
+        case STEPPER_AND_FERRIS: display.print("STEPPER&FERRIS"); break;
+        case NO_ROBOT: display.print("NO ROBOT"); break;
         default: display.print("UNKNOWN"); break;
     }
 }
 
-void CanvasManager::drawStepperPositions(Adafruit_GFX& display, const RobotState& robotState) {
+void CanvasManager::drawStepperPositions(DisplayCanvas& display, const RobotState& robotState) {
     display.setTextColor(0xFFFF);
+    display.setTextSize(2);
     display.setCursor(10, 45);
     display.print("Current joint steps:");
 
@@ -184,13 +172,24 @@ void CanvasManager::drawStepperPositions(Adafruit_GFX& display, const RobotState
     }
 }
 
-void CanvasManager::drawEndEffectorPosition(Adafruit_GFX& display, const RobotState& robotState) {
+void CanvasManager::drawEndEffectorPosition(DisplayCanvas& display, const RobotState& robotState) {
     display.setTextColor(0xFFFF);
+    display.setTextSize(2);
     display.setCursor(10, 45);
     display.print("CURRENT POS:");
-}
 
-#endif // ENABLE_ADAFRUIT_DISPLAY
+    const auto& pos = robotState.currentPosition;
+    if (pos.size() >= 3) {
+        display.setCursor(10, 70);  display.print("X: ");  display.print(pos[0], 1);
+        display.setCursor(10, 95);  display.print("Y: ");  display.print(pos[1], 1);
+        display.setCursor(10, 120); display.print("Z: ");  display.print(pos[2], 1);
+    }
+    if (pos.size() >= 6) {
+        display.setCursor(10, 145); display.print("RX: "); display.print(pos[3], 2);
+        display.setCursor(10, 170); display.print("RY: "); display.print(pos[4], 2);
+        display.setCursor(10, 195); display.print("RZ: "); display.print(pos[5], 2);
+    }
+}
 
 void CanvasManager::selectPage(Page page) {
     _currentPage = page;

@@ -23,6 +23,21 @@ static constexpr uint8_t MCP23S17_GPPUB  = 0x0D;
 static constexpr uint8_t MCP23S17_GPIOA  = 0x12;
 static constexpr uint8_t MCP23S17_GPIOB  = 0x13;
 
+// ST7789 command set (subset)
+static constexpr uint8_t ST7789_SWRESET = 0x01;
+static constexpr uint8_t ST7789_SLPOUT  = 0x11;
+static constexpr uint8_t ST7789_COLMOD  = 0x3A;
+static constexpr uint8_t ST7789_MADCTL  = 0x36;
+static constexpr uint8_t ST7789_CASET   = 0x2A;
+static constexpr uint8_t ST7789_RASET   = 0x2B;
+static constexpr uint8_t ST7789_RAMWR   = 0x2C;
+static constexpr uint8_t ST7789_INVON   = 0x21;
+static constexpr uint8_t ST7789_NORON   = 0x13;
+static constexpr uint8_t ST7789_DISPON  = 0x29;
+
+static constexpr uint16_t ST7789_WIDTH  = 320;
+static constexpr uint16_t ST7789_HEIGHT = 240;
+
 SPI0Manager::SPI0Manager()
 {
 }
@@ -41,11 +56,11 @@ bool SPI0Manager::begin()
     buscfg.sclk_io_num = SPI0_CLK_PIN;
     buscfg.quadwp_io_num = -1;
     buscfg.quadhd_io_num = -1;
-    buscfg.max_transfer_sz = 16;
+    buscfg.max_transfer_sz = 4096;
 
     ESP_LOGI(TAG, "Using pins MOSI=%d MISO=%d CLK=%d", SPI0_MOSI_PIN, SPI0_MISO_PIN, SPI0_CLK_PIN);
 
-    esp_err_t err = spi_bus_initialize(SPI2_HOST, &buscfg, SPI_DMA_DISABLED);
+    esp_err_t err = spi_bus_initialize(SPI2_HOST, &buscfg, SPI_DMA_CH_AUTO);
     if (err != ESP_OK) {
         ESP_LOGE(TAG, "spi_bus_initialize failed: %s", esp_err_to_name(err));
         return false;
@@ -206,6 +221,9 @@ bool SPI0Manager::begin()
     ESP_LOGI(TAG, "UI_2 readback: IODIRA=0x%02X IODIRB=0x%02X GPIOA=0x%02X GPIOB=0x%02X",
             iodirA, iodirB, gpioA, gpioB);
 
+    if (!initScreen()) {
+        ESP_LOGW(TAG, "Screen init skipped/failed. SPI0 remains available for other devices.");
+    }
 
     _initialized = true;
     ESP_LOGI(TAG, "SPI0Manager initialized.");
@@ -219,7 +237,8 @@ esp_err_t SPI0Manager::initDemuxPins()
         (1ULL << CS_1_PIN) |
         (1ULL << CS_2_PIN) |
         (1ULL << CS_3_PIN) |
-        (1ULL << CS_4_PIN);
+        (1ULL << CS_4_PIN) |
+        (1ULL << SCREEN_DC_PIN);
     io_conf.mode = GPIO_MODE_OUTPUT;
     io_conf.pull_up_en = GPIO_PULLUP_DISABLE;
     io_conf.pull_down_en = GPIO_PULLDOWN_DISABLE;
@@ -231,6 +250,7 @@ esp_err_t SPI0Manager::initDemuxPins()
     }
 
     deselectDevice();
+    gpio_set_level(static_cast<gpio_num_t>(SCREEN_DC_PIN), 0);
     return ESP_OK;
 }
 
@@ -594,6 +614,259 @@ void SPI0Manager::writeMainValve(uint16_t state)
     if (err != ESP_OK) {
         ESP_LOGE(TAG, "writeMainValve failed: %s", esp_err_to_name(err));
     }
+}
+
+esp_err_t SPI0Manager::screenWriteCommand(uint8_t cmd)
+{
+    if (_spi_dev == nullptr) {
+        return ESP_ERR_INVALID_STATE;
+    }
+
+    gpio_set_level(static_cast<gpio_num_t>(SCREEN_DC_PIN), 0);
+
+    spi_transaction_t t = {};
+    t.length = 8;
+    t.tx_buffer = &cmd;
+
+    selectDevice(SCREEN);
+    esp_err_t err = spi_device_transmit(_spi_dev, &t);
+    deselectDevice();
+
+    return err;
+}
+
+esp_err_t SPI0Manager::screenWriteData(const uint8_t* data, size_t len)
+{
+    if (_spi_dev == nullptr) {
+        return ESP_ERR_INVALID_STATE;
+    }
+    if (data == nullptr || len == 0) {
+        return ESP_OK;
+    }
+
+    gpio_set_level(static_cast<gpio_num_t>(SCREEN_DC_PIN), 1);
+
+    spi_transaction_t t = {};
+    t.length = static_cast<uint32_t>(len * 8);
+    t.tx_buffer = data;
+
+    selectDevice(SCREEN);
+    esp_err_t err = spi_device_transmit(_spi_dev, &t);
+    deselectDevice();
+
+    return err;
+}
+
+esp_err_t SPI0Manager::screenSetAddrWindow(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1)
+{
+    uint8_t colData[4] = {
+        static_cast<uint8_t>(x0 >> 8),
+        static_cast<uint8_t>(x0 & 0xFF),
+        static_cast<uint8_t>(x1 >> 8),
+        static_cast<uint8_t>(x1 & 0xFF)
+    };
+    uint8_t rowData[4] = {
+        static_cast<uint8_t>(y0 >> 8),
+        static_cast<uint8_t>(y0 & 0xFF),
+        static_cast<uint8_t>(y1 >> 8),
+        static_cast<uint8_t>(y1 & 0xFF)
+    };
+
+    esp_err_t err = screenWriteCommand(ST7789_CASET);
+    if (err != ESP_OK) return err;
+    err = screenWriteData(colData, sizeof(colData));
+    if (err != ESP_OK) return err;
+
+    err = screenWriteCommand(ST7789_RASET);
+    if (err != ESP_OK) return err;
+    err = screenWriteData(rowData, sizeof(rowData));
+    if (err != ESP_OK) return err;
+
+    err = screenWriteCommand(ST7789_RAMWR);
+    return err;
+}
+
+bool SPI0Manager::initScreen()
+{
+    if (_spi_dev == nullptr) {
+        ESP_LOGE(TAG, "initScreen failed: SPI device not initialized");
+        return false;
+    }
+    if (_screenInitialized) {
+        return true;
+    }
+
+    if (SCREEN_DC_PIN == CS_1_PIN || SCREEN_DC_PIN == CS_2_PIN ||
+        SCREEN_DC_PIN == CS_3_PIN || SCREEN_DC_PIN == CS_4_PIN) {
+        ESP_LOGE(TAG, "SCREEN_DC_PIN (%d) conflicts with CS demux pin. Set a dedicated DC pin.", SCREEN_DC_PIN);
+        return false;
+    }
+
+    // Backlight off while bringing panel up.
+    setScreenBLK(false);
+    setScreenRES(false);
+    vTaskDelay(pdMS_TO_TICKS(10));
+    setScreenRES(true);
+    vTaskDelay(pdMS_TO_TICKS(120));
+
+    esp_err_t err = screenWriteCommand(ST7789_SWRESET);
+    if (err != ESP_OK) return false;
+    vTaskDelay(pdMS_TO_TICKS(150));
+
+    err = screenWriteCommand(ST7789_SLPOUT);
+    if (err != ESP_OK) return false;
+    vTaskDelay(pdMS_TO_TICKS(120));
+
+    const uint8_t colmod = 0x55; // 16bpp
+    err = screenWriteCommand(ST7789_COLMOD);
+    if (err != ESP_OK) return false;
+    err = screenWriteData(&colmod, 1);
+    if (err != ESP_OK) return false;
+
+    const uint8_t madctl = 0xA0; // landscape flipped 180 deg (fix upside-down mounting)
+    err = screenWriteCommand(ST7789_MADCTL);
+    if (err != ESP_OK) return false;
+    err = screenWriteData(&madctl, 1);
+    if (err != ESP_OK) return false;
+
+    err = screenWriteCommand(ST7789_INVON);
+    if (err != ESP_OK) return false;
+
+    err = screenWriteCommand(ST7789_NORON);
+    if (err != ESP_OK) return false;
+    vTaskDelay(pdMS_TO_TICKS(10));
+
+    err = screenWriteCommand(ST7789_DISPON);
+    if (err != ESP_OK) return false;
+    vTaskDelay(pdMS_TO_TICKS(20));
+
+    _screenInitialized = true;
+    fillScreen(0x0000);
+    setScreenBLK(true);
+    ESP_LOGI(TAG, "Screen initialized (ST7789 over SPI0).");
+    return true;
+}
+
+void SPI0Manager::fillScreen(uint16_t color)
+{
+    if (!_screenInitialized) {
+        return;
+    }
+
+    auto txBytes = [&](const uint8_t* data, size_t len, bool isData) -> esp_err_t {
+        gpio_set_level(static_cast<gpio_num_t>(SCREEN_DC_PIN), isData ? 1 : 0);
+        spi_transaction_t t = {};
+        t.length = static_cast<uint32_t>(len * 8);
+        t.tx_buffer = data;
+        return spi_device_transmit(_spi_dev, &t);
+    };
+
+    const uint8_t cmdCASET = ST7789_CASET;
+    const uint8_t cmdRASET = ST7789_RASET;
+    const uint8_t cmdRAMWR = ST7789_RAMWR;
+    const uint16_t x0 = 0;
+    const uint16_t y0 = 0;
+    const uint16_t x1 = static_cast<uint16_t>(ST7789_WIDTH - 1);
+    const uint16_t y1 = static_cast<uint16_t>(ST7789_HEIGHT - 1);
+    const uint8_t colData[4] = {
+        static_cast<uint8_t>(x0 >> 8), static_cast<uint8_t>(x0 & 0xFF),
+        static_cast<uint8_t>(x1 >> 8), static_cast<uint8_t>(x1 & 0xFF)
+    };
+    const uint8_t rowData[4] = {
+        static_cast<uint8_t>(y0 >> 8), static_cast<uint8_t>(y0 & 0xFF),
+        static_cast<uint8_t>(y1 >> 8), static_cast<uint8_t>(y1 & 0xFF)
+    };
+
+    constexpr size_t kChunkPixels = 16;
+    uint8_t px[kChunkPixels * 2];
+    for (size_t i = 0; i < kChunkPixels; ++i) {
+        px[2 * i] = static_cast<uint8_t>(color >> 8);
+        px[2 * i + 1] = static_cast<uint8_t>(color & 0xFF);
+    }
+
+    selectDevice(SCREEN);
+    esp_err_t err = txBytes(&cmdCASET, 1, false);
+    if (err == ESP_OK) err = txBytes(colData, sizeof(colData), true);
+    if (err == ESP_OK) err = txBytes(&cmdRASET, 1, false);
+    if (err == ESP_OK) err = txBytes(rowData, sizeof(rowData), true);
+    if (err == ESP_OK) err = txBytes(&cmdRAMWR, 1, false);
+
+    size_t remaining = static_cast<size_t>(ST7789_WIDTH) * ST7789_HEIGHT;
+    while (err == ESP_OK && remaining > 0) {
+        size_t pixelsThis = (remaining > kChunkPixels) ? kChunkPixels : remaining;
+        err = txBytes(px, pixelsThis * 2, true);
+        remaining -= pixelsThis;
+    }
+    deselectDevice();
+
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "fillScreen write failed: %s", esp_err_to_name(err));
+    }
+}
+
+esp_err_t SPI0Manager::drawScreenRGB565(int x, int y, int w, int h, const uint16_t* pixels)
+{
+    if (!_screenInitialized) {
+        return ESP_ERR_INVALID_STATE;
+    }
+    if (pixels == nullptr || w <= 0 || h <= 0) {
+        return ESP_ERR_INVALID_ARG;
+    }
+    if (x < 0 || y < 0 ||
+        (x + w) > static_cast<int>(ST7789_WIDTH) ||
+        (y + h) > static_cast<int>(ST7789_HEIGHT)) {
+        return ESP_ERR_INVALID_ARG;
+    }
+
+    auto txBytes = [&](const uint8_t* data, size_t len, bool isData) -> esp_err_t {
+        gpio_set_level(static_cast<gpio_num_t>(SCREEN_DC_PIN), isData ? 1 : 0);
+        spi_transaction_t t = {};
+        t.length = static_cast<uint32_t>(len * 8);
+        t.tx_buffer = data;
+        return spi_device_transmit(_spi_dev, &t);
+    };
+
+    const uint8_t cmdCASET = ST7789_CASET;
+    const uint8_t cmdRASET = ST7789_RASET;
+    const uint8_t cmdRAMWR = ST7789_RAMWR;
+    const uint16_t x0 = static_cast<uint16_t>(x);
+    const uint16_t y0 = static_cast<uint16_t>(y);
+    const uint16_t x1 = static_cast<uint16_t>(x + w - 1);
+    const uint16_t y1 = static_cast<uint16_t>(y + h - 1);
+    const uint8_t colData[4] = {
+        static_cast<uint8_t>(x0 >> 8), static_cast<uint8_t>(x0 & 0xFF),
+        static_cast<uint8_t>(x1 >> 8), static_cast<uint8_t>(x1 & 0xFF)
+    };
+    const uint8_t rowData[4] = {
+        static_cast<uint8_t>(y0 >> 8), static_cast<uint8_t>(y0 & 0xFF),
+        static_cast<uint8_t>(y1 >> 8), static_cast<uint8_t>(y1 & 0xFF)
+    };
+
+    constexpr size_t kChunkPixels = 16;
+    uint8_t tx[kChunkPixels * 2];
+
+    selectDevice(SCREEN);
+    esp_err_t err = txBytes(&cmdCASET, 1, false);
+    if (err == ESP_OK) err = txBytes(colData, sizeof(colData), true);
+    if (err == ESP_OK) err = txBytes(&cmdRASET, 1, false);
+    if (err == ESP_OK) err = txBytes(rowData, sizeof(rowData), true);
+    if (err == ESP_OK) err = txBytes(&cmdRAMWR, 1, false);
+
+    size_t total = static_cast<size_t>(w) * h;
+    size_t idx = 0;
+    while (err == ESP_OK && idx < total) {
+        size_t pixelsThis = ((total - idx) > kChunkPixels) ? kChunkPixels : (total - idx);
+        for (size_t i = 0; i < pixelsThis; ++i) {
+            uint16_t p = pixels[idx + i];
+            tx[2 * i] = static_cast<uint8_t>(p >> 8);
+            tx[2 * i + 1] = static_cast<uint8_t>(p & 0xFF);
+        }
+        err = txBytes(tx, pixelsThis * 2, true);
+        idx += pixelsThis;
+    }
+    deselectDevice();
+
+    return err;
 }
 
 uint16_t SPI0Manager::readPotmeters(bool id)
