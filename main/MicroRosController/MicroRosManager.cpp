@@ -9,6 +9,7 @@
 #include "esp_log.h"
 #include "esp_err.h"
 
+#include <rcl/error_handling.h>
 #include <rmw_microros/rmw_microros.h>
 #include <rosidl_runtime_c/message_type_support_struct.h>
 #include <uros_network_interfaces.h>
@@ -25,6 +26,15 @@ namespace
             ESP_LOGW(TAG, "%s failed during cleanup: %d", name, (int)rc);
         }
     }
+
+    void log_rcl_error(const char *where, rcl_ret_t rc)
+    {
+        ESP_LOGE(TAG, "%s failed: rc=%d, msg=%s",
+                 where,
+                 (int)rc,
+                 rcl_get_error_string().str);
+        rcl_reset_error();
+    }
 }
 
 MicroRosManager::MicroRosManager()
@@ -40,6 +50,11 @@ MicroRosManager::MicroRosManager()
             latest_path_[wp][j] = 0.0;
         }
     }
+
+    memset(&msg_, 0, sizeof(msg_));
+    memset(&esp_cmd_msg_, 0, sizeof(esp_cmd_msg_));
+    memset(esp_cmd_buffer_, 0, sizeof(esp_cmd_buffer_));
+    memset(latest_esp_cmd_, 0, sizeof(latest_esp_cmd_));
 }
 
 void MicroRosManager::zeroInitRosObjects()
@@ -47,6 +62,7 @@ void MicroRosManager::zeroInitRosObjects()
     memset(&support_, 0, sizeof(support_));
     node_ = rcl_get_zero_initialized_node();
     subscriber_ = rcl_get_zero_initialized_subscription();
+    esp_cmd_subscriber_ = rcl_get_zero_initialized_subscription();
     executor_ = rclc_executor_get_zero_initialized_executor();
 }
 
@@ -82,7 +98,7 @@ bool MicroRosManager::createEntities()
 
     rcl_ret_t rc = rcl_init_options_init(&init_options, allocator_);
     if (rc != RCL_RET_OK) {
-        ESP_LOGE(TAG, "rcl_init_options_init failed: %d", (int)rc);
+        log_rcl_error("rcl_init_options_init", rc);
         return false;
     }
 
@@ -114,21 +130,27 @@ bool MicroRosManager::createEntities()
     }
 
     if (rc != RCL_RET_OK) {
-        ESP_LOGE(TAG, "rclc_support_init_with_options failed: %d", (int)rc);
+        log_rcl_error("rclc_support_init_with_options", rc);
         return false;
     }
 
     rc = rclc_node_init_default(&node_, "esp32_path_subscriber", "", &support_);
     if (rc != RCL_RET_OK) {
-        ESP_LOGE(TAG, "rclc_node_init_default failed: %d", (int)rc);
+        log_rcl_error("rclc_node_init_default", rc);
+
         rcl_ret_t rc2 = rclc_support_fini(&support_);
         if (rc2 != RCL_RET_OK) {
             ESP_LOGW(TAG, "rclc_support_fini failed: %d", (int)rc2);
         }
+
         zeroInitRosObjects();
         return false;
     }
 
+    // -----------------------------
+    // Path subscriber message setup
+    // -----------------------------
+    memset(&msg_, 0, sizeof(msg_));
     msg_.data.data = msg_buffer_;
     msg_.data.size = 0;
     msg_.data.capacity = MAX_PATH_MSG_VALUES;
@@ -140,12 +162,10 @@ bool MicroRosManager::createEntities()
         "/mamri/planning/joint_path_execute"
     );
     if (rc != RCL_RET_OK) {
-        ESP_LOGE(TAG, "rclc_subscription_init_default failed: %d", (int)rc);
+        log_rcl_error("path subscription init", rc);
 
-        rcl_ret_t a = rcl_subscription_fini(&subscriber_, &node_);
         rcl_ret_t b = rcl_node_fini(&node_);
         rcl_ret_t c = rclc_support_fini(&support_);
-        if (a != RCL_RET_OK) ESP_LOGW(TAG, "rcl_subscription_fini failed: %d", (int)a);
         if (b != RCL_RET_OK) ESP_LOGW(TAG, "rcl_node_fini failed: %d", (int)b);
         if (c != RCL_RET_OK) ESP_LOGW(TAG, "rclc_support_fini failed: %d", (int)c);
 
@@ -153,9 +173,50 @@ bool MicroRosManager::createEntities()
         return false;
     }
 
-    rc = rclc_executor_init(&executor_, &support_.context, 1, &allocator_);
+    // -----------------------------
+    // ESP command subscriber message setup
+    // -----------------------------
+    memset(&esp_cmd_msg_, 0, sizeof(esp_cmd_msg_));
+    memset(esp_cmd_buffer_, 0, sizeof(esp_cmd_buffer_));
+
+    esp_cmd_msg_.data.data = esp_cmd_buffer_;
+    esp_cmd_msg_.data.size = 0;
+    esp_cmd_msg_.data.capacity = MAX_ESP_CMD_LEN;
+
+    rc = rclc_subscription_init_default(
+        &esp_cmd_subscriber_,
+        &node_,
+        ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
+        "/mamri/esp32/cmd"
+    );
     if (rc != RCL_RET_OK) {
-        ESP_LOGE(TAG, "rclc_executor_init failed: %d", (int)rc);
+        log_rcl_error("esp cmd subscription init", rc);
+
+        rcl_ret_t a = rcl_subscription_fini(&subscriber_, &node_);
+        rcl_ret_t b = rcl_node_fini(&node_);
+        rcl_ret_t c = rclc_support_fini(&support_);
+        if (a != RCL_RET_OK) ESP_LOGW(TAG, "rcl_subscription_fini(path) failed: %d", (int)a);
+        if (b != RCL_RET_OK) ESP_LOGW(TAG, "rcl_node_fini failed: %d", (int)b);
+        if (c != RCL_RET_OK) ESP_LOGW(TAG, "rclc_support_fini failed: %d", (int)c);
+
+        zeroInitRosObjects();
+        return false;
+    }
+
+    rc = rclc_executor_init(&executor_, &support_.context, 2, &allocator_);
+    if (rc != RCL_RET_OK) {
+        log_rcl_error("rclc_executor_init", rc);
+
+        rcl_ret_t a = rcl_subscription_fini(&esp_cmd_subscriber_, &node_);
+        rcl_ret_t b = rcl_subscription_fini(&subscriber_, &node_);
+        rcl_ret_t c = rcl_node_fini(&node_);
+        rcl_ret_t d = rclc_support_fini(&support_);
+        log_cleanup_rc("rcl_subscription_fini(esp_cmd)", a);
+        log_cleanup_rc("rcl_subscription_fini(path)", b);
+        log_cleanup_rc("rcl_node_fini", c);
+        log_cleanup_rc("rclc_support_fini", d);
+
+        zeroInitRosObjects();
         return false;
     }
 
@@ -167,7 +228,45 @@ bool MicroRosManager::createEntities()
         ON_NEW_DATA
     );
     if (rc != RCL_RET_OK) {
-        ESP_LOGE(TAG, "rclc_executor_add_subscription failed: %d", (int)rc);
+        log_rcl_error("rclc_executor_add_subscription(path)", rc);
+
+        rcl_ret_t a = rclc_executor_fini(&executor_);
+        rcl_ret_t b = rcl_subscription_fini(&esp_cmd_subscriber_, &node_);
+        rcl_ret_t c = rcl_subscription_fini(&subscriber_, &node_);
+        rcl_ret_t d = rcl_node_fini(&node_);
+        rcl_ret_t e = rclc_support_fini(&support_);
+        log_cleanup_rc("rclc_executor_fini", a);
+        log_cleanup_rc("rcl_subscription_fini(esp_cmd)", b);
+        log_cleanup_rc("rcl_subscription_fini(path)", c);
+        log_cleanup_rc("rcl_node_fini", d);
+        log_cleanup_rc("rclc_support_fini", e);
+
+        zeroInitRosObjects();
+        return false;
+    }
+
+    rc = rclc_executor_add_subscription(
+        &executor_,
+        &esp_cmd_subscriber_,
+        &esp_cmd_msg_,
+        &MicroRosManager::espCmdCallback,
+        ON_NEW_DATA
+    );
+    if (rc != RCL_RET_OK) {
+        log_rcl_error("rclc_executor_add_subscription(esp_cmd)", rc);
+
+        rcl_ret_t a = rclc_executor_fini(&executor_);
+        rcl_ret_t b = rcl_subscription_fini(&esp_cmd_subscriber_, &node_);
+        rcl_ret_t c = rcl_subscription_fini(&subscriber_, &node_);
+        rcl_ret_t d = rcl_node_fini(&node_);
+        rcl_ret_t e = rclc_support_fini(&support_);
+        log_cleanup_rc("rclc_executor_fini", a);
+        log_cleanup_rc("rcl_subscription_fini(esp_cmd)", b);
+        log_cleanup_rc("rcl_subscription_fini(path)", c);
+        log_cleanup_rc("rcl_node_fini", d);
+        log_cleanup_rc("rclc_support_fini", e);
+
+        zeroInitRosObjects();
         return false;
     }
 
@@ -184,13 +283,15 @@ void MicroRosManager::destroyEntities()
 
     rcl_ret_t rc1 = rclc_executor_fini(&executor_);
     rcl_ret_t rc2 = rcl_subscription_fini(&subscriber_, &node_);
-    rcl_ret_t rc3 = rcl_node_fini(&node_);
-    rcl_ret_t rc4 = rclc_support_fini(&support_);
+    rcl_ret_t rc3 = rcl_subscription_fini(&esp_cmd_subscriber_, &node_);
+    rcl_ret_t rc4 = rcl_node_fini(&node_);
+    rcl_ret_t rc5 = rclc_support_fini(&support_);
 
     log_cleanup_rc("rclc_executor_fini", rc1);
-    log_cleanup_rc("rcl_subscription_fini", rc2);
-    log_cleanup_rc("rcl_node_fini", rc3);
-    log_cleanup_rc("rclc_support_fini", rc4);
+    log_cleanup_rc("rcl_subscription_fini(path)", rc2);
+    log_cleanup_rc("rcl_subscription_fini(esp_cmd)", rc3);
+    log_cleanup_rc("rcl_node_fini", rc4);
+    log_cleanup_rc("rclc_support_fini", rc5);
 
     ros_entities_created_ = false;
     zeroInitRosObjects();
@@ -198,7 +299,6 @@ void MicroRosManager::destroyEntities()
 
 void MicroRosManager::jointPathCallback(const void *msgin)
 {
-
     printf("jointPathCallback called\n");
     if (instance_ == nullptr || msgin == nullptr) {
         return;
@@ -245,6 +345,33 @@ void MicroRosManager::jointPathCallback(const void *msgin)
     printf("Received joint path: %zu waypoints, %zu dof\n", n_waypoints, dof);
 }
 
+void MicroRosManager::espCmdCallback(const void *msgin)
+{
+    printf("espCmdCallback called\n");
+    if (instance_ == nullptr || msgin == nullptr) {
+        return;
+    }
+
+    const auto *in = static_cast<const std_msgs__msg__String *>(msgin);
+
+    if (in->data.data == nullptr || in->data.size == 0) {
+        printf("Received empty ESP cmd\n");
+        return;
+    }
+
+    size_t len = in->data.size;
+    if (len >= MAX_ESP_CMD_LEN) {
+        len = MAX_ESP_CMD_LEN - 1;
+        printf("ESP cmd truncated to %zu chars\n", len);
+    }
+
+    memcpy(instance_->latest_esp_cmd_, in->data.data, len);
+    instance_->latest_esp_cmd_[len] = '\0';
+    instance_->new_esp_cmd_available_ = true;
+
+    printf("Received ESP cmd: %s\n", instance_->latest_esp_cmd_);
+}
+
 void MicroRosManager::update()
 {
     if (!started_ || !ros_entities_created_) {
@@ -275,4 +402,20 @@ void MicroRosManager::consumePath(double out[][MAX_JOINTS], size_t &waypoints, s
     }
 
     new_path_available_ = false;
+}
+
+bool MicroRosManager::hasNewEspCmd() const
+{
+    return new_esp_cmd_available_;
+}
+
+void MicroRosManager::consumeEspCmd(char *out, size_t out_size)
+{
+    if (out == nullptr || out_size == 0) {
+        return;
+    }
+
+    strncpy(out, latest_esp_cmd_, out_size - 1);
+    out[out_size - 1] = '\0';
+    new_esp_cmd_available_ = false;
 }

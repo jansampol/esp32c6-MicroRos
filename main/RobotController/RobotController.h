@@ -67,6 +67,12 @@ public:
     void incrementJointStep(uint8_t jointId, bool direction);
     void incrementTargetPosition(uint8_t id, bool direction);
 
+    // Debug / manual homing API
+    void jogJointSteps(size_t jointIdx, int deltaSteps);
+    void tareJointToZero(size_t jointIdx);
+    void sendJointToHome(size_t jointIdx);
+    void sendAllJointsToHome();
+
     RobotState getRobotState() const;
     RobotConfig getRobotConfig() const;
 
@@ -87,6 +93,8 @@ public:
 
     void updateCurrentPosition();
     void updateTargetPosition();
+
+    bool isAtStepTarget() const;
 
     // =============================
     // ORIGINAL

@@ -47,6 +47,7 @@ public:
     uint16_t readHorizontalButtons();
     uint16_t readVerticalButtons();
     uint8_t readSwitches();
+    uint16_t readAllSwitchesRaw();
 
     void writeGreen(bool on);
     void writeRed1(bool on);
@@ -75,6 +76,7 @@ private:
     esp_err_t mcpWrite16(deviceNameSPI0 device, uint8_t regA, uint16_t value);
     esp_err_t mcpRead8(deviceNameSPI0 device, uint8_t reg, uint8_t& value);
     esp_err_t mcpRead16(deviceNameSPI0 device, uint8_t regA, uint16_t& value);
+    esp_err_t adcReadMcp3004(uint8_t channel, uint16_t& value);
 
     esp_err_t mcpInitMCP23S17(deviceNameSPI0 device,
                               uint16_t iodir,

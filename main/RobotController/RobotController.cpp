@@ -14,9 +14,7 @@ RobotController::RobotController() :
 }
 
 void RobotController::begin() {
-    // =============================
-    // ORIGINAL
-    // =============================
+
     _spi1Manager.begin();
     turnOffValves();
 
@@ -413,6 +411,87 @@ void RobotController::setJointTargetRad(const std::vector<float> &angles) {
     }
 }
 
+// Debug / manual homing API
+
+void RobotController::jogJointSteps(size_t jointIdx, int deltaSteps) {
+    if (jointIdx >= _robotState.targetJointSteps.size()) {
+        ESP_LOGW(TAG, "jogJointSteps: invalid joint index %u", (unsigned)jointIdx);
+        return;
+    }
+
+    const int maxJogStep = 10;
+    if (deltaSteps > maxJogStep) {
+        deltaSteps = maxJogStep;
+    } else if (deltaSteps < -maxJogStep) {
+        deltaSteps = -maxJogStep;
+    }
+
+    _robotState.targetJointSteps[jointIdx] += deltaSteps;
+    _jointPosChanged = true;
+
+    ESP_LOGI(
+        TAG,
+        "Jog joint[%u] by %+d -> new target=%d",
+        (unsigned)jointIdx,
+        deltaSteps,
+        _robotState.targetJointSteps[jointIdx]
+    );
+}
+
+void RobotController::tareJointToZero(size_t jointIdx) {
+    if (jointIdx >= _steppers.size() || jointIdx >= _robotState.jointSteps.size() ||
+        jointIdx >= _robotState.targetJointSteps.size()) {
+        ESP_LOGW(TAG, "tareJointToZero: invalid joint index %u", (unsigned)jointIdx);
+        return;
+    }
+
+    // Make current physical position become software zero
+    _steppers[jointIdx].setPosition(0);
+    _steppers[jointIdx].setSetpointPosition(0);
+
+    _robotState.jointSteps[jointIdx] = 0;
+    _robotState.targetJointSteps[jointIdx] = 0;
+
+    _jointPosChanged = true;
+
+    if (_kinematics) {
+        updateCurrentPosition();
+        updateTargetPosition();
+    }
+
+    ESP_LOGI(TAG, "Joint[%u] tared to zero", (unsigned)jointIdx);
+}
+
+void RobotController::sendJointToHome(size_t jointIdx) {
+    if (jointIdx >= _robotState.targetJointSteps.size()) {
+        ESP_LOGW(TAG, "sendJointToHome: invalid joint index %u", (unsigned)jointIdx);
+        return;
+    }
+
+    _robotState.targetJointSteps[jointIdx] = 0;
+    _jointPosChanged = true;
+
+    if (_kinematics) {
+        updateTargetPosition();
+    }
+
+    ESP_LOGI(TAG, "Joint[%u] commanded to home (target=0)", (unsigned)jointIdx);
+}
+
+void RobotController::sendAllJointsToHome() {
+    for (size_t i = 0; i < _robotState.targetJointSteps.size(); ++i) {
+        _robotState.targetJointSteps[i] = 0;
+    }
+
+    _jointPosChanged = true;
+
+    if (_kinematics) {
+        updateTargetPosition();
+    }
+
+    ESP_LOGI(TAG, "All joints commanded to home (target=0)");
+}
+
 // -------------------------------------------------------------------------------------------------
 // Cartesian API kept as minimal stubs/helpers
 // -------------------------------------------------------------------------------------------------
@@ -504,4 +583,14 @@ RobotConfig RobotController::getRobotConfig() const {
 
 void RobotController::setFerrisWheelFeedback(const std::vector<float>& sensorValues) {
     (void)sensorValues;
+}
+
+bool RobotController::isAtStepTarget() const
+{
+    for (size_t i = 0; i < 4; ++i) {
+        if (_robotState.jointSteps[i] != _robotState.targetJointSteps[i]) {
+            return false;
+        }
+    }
+    return true;
 }

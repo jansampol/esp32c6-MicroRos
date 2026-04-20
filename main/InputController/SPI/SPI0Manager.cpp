@@ -150,6 +150,63 @@ bool SPI0Manager::begin()
     // deselectDevice();
     // setScreenBLK(true);
 
+
+    // LEDs and Switches MCP23S17
+    err = mcpWrite8(UI_2_LEDS_AND_SWITCHES, MCP23S17_IODIRA, 0xFF); // inputs
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "UI_2 IODIRA write failed: %s", esp_err_to_name(err));
+        return false;
+    }
+
+    err = mcpWrite8(UI_2_LEDS_AND_SWITCHES, MCP23S17_IODIRB, 0x00); // outputs
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "UI_2 IODIRB write failed: %s", esp_err_to_name(err));
+        return false;
+    }
+
+    err = mcpWrite8(UI_2_LEDS_AND_SWITCHES, MCP23S17_GPPUA, 0xFF); // pullups on A
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "UI_2 GPPUA write failed: %s", esp_err_to_name(err));
+        return false;
+    }
+
+    err = mcpWrite8(UI_2_LEDS_AND_SWITCHES, MCP23S17_GPPUB, 0x00); // no pullups on B
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "UI_2 GPPUB write failed: %s", esp_err_to_name(err));
+        return false;
+    }
+
+    err = mcpWrite8(UI_2_LEDS_AND_SWITCHES, MCP23S17_IPOLA, 0xFF); // invert A inputs
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "UI_2 IPOLA write failed: %s", esp_err_to_name(err));
+        return false;
+    }
+
+    err = mcpWrite8(UI_2_LEDS_AND_SWITCHES, MCP23S17_IPOLB, 0x00); // do not invert B
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "UI_2 IPOLB write failed: %s", esp_err_to_name(err));
+        return false;
+    }
+
+    err = mcpWrite8(UI_2_LEDS_AND_SWITCHES, MCP23S17_GPIOB, 0x00); // LEDs off initially
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "UI_2 GPIOB init write failed: %s", esp_err_to_name(err));
+        return false;
+    }
+
+    // Debug readback
+    uint8_t iodirA = 0, iodirB = 0;
+    uint8_t gpioA = 0, gpioB = 0;
+
+    mcpRead8(UI_2_LEDS_AND_SWITCHES, MCP23S17_IODIRA, iodirA);
+    mcpRead8(UI_2_LEDS_AND_SWITCHES, MCP23S17_IODIRB, iodirB);
+    mcpRead8(UI_2_LEDS_AND_SWITCHES, MCP23S17_GPIOA, gpioA);
+    mcpRead8(UI_2_LEDS_AND_SWITCHES, MCP23S17_GPIOB, gpioB);
+
+    ESP_LOGI(TAG, "UI_2 readback: IODIRA=0x%02X IODIRB=0x%02X GPIOA=0x%02X GPIOB=0x%02X",
+            iodirA, iodirB, gpioA, gpioB);
+
+
     _initialized = true;
     ESP_LOGI(TAG, "SPI0Manager initialized.");
     return true;
@@ -367,6 +424,39 @@ esp_err_t SPI0Manager::mcpRead16(deviceNameSPI0 device, uint8_t regA, uint16_t& 
     return err;
 }
 
+esp_err_t SPI0Manager::adcReadMcp3004(uint8_t channel, uint16_t& value)
+{
+    if (_spi_dev == nullptr) {
+        return ESP_ERR_INVALID_STATE;
+    }
+    if (channel > 3) {
+        return ESP_ERR_INVALID_ARG;
+    }
+
+    // MCP3004 single-ended read:
+    // tx[0] = start bit, tx[1] = SGL/DIFF + channel selection, tx[2] = dummy
+    uint8_t tx[3] = {
+        0x01,
+        static_cast<uint8_t>((0x08U | channel) << 4),
+        0x00
+    };
+    uint8_t rx[3] = {0, 0, 0};
+
+    spi_transaction_t t = {};
+    t.length = 24;
+    t.tx_buffer = tx;
+    t.rx_buffer = rx;
+
+    selectDevice(ADC_POTMETERS);
+    esp_err_t err = spi_device_transmit(_spi_dev, &t);
+    deselectDevice();
+
+    if (err == ESP_OK) {
+        value = static_cast<uint16_t>(((rx[1] & 0x03U) << 8) | rx[2]);
+    }
+    return err;
+}
+
 esp_err_t SPI0Manager::mcpInitMCP23S17(deviceNameSPI0 device,
                                        uint16_t iodir,
                                        uint16_t gppu,
@@ -429,16 +519,6 @@ uint8_t SPI0Manager::invertByte(uint8_t b)
     return outp;
 }
 
-// uint8_t SPI0Manager::readSwitches()
-// {
-//     uint8_t value = 0;
-//     esp_err_t err = mcpRead8(UI_2_LEDS_AND_SWITCHES, MCP23S17_GPIOA, value);
-//     if (err != ESP_OK) {
-//         ESP_LOGE(TAG, "readSwitches failed: %s", esp_err_to_name(err));
-//         return 0;
-//     }
-//     return invertByte(value);
-// }
 uint8_t SPI0Manager::readSwitches()
 {
     uint8_t value = 0;
@@ -447,11 +527,7 @@ uint8_t SPI0Manager::readSwitches()
         ESP_LOGE(TAG, "readSwitches failed: %s", esp_err_to_name(err));
         return 0;
     }
-
-    // Keep only A6 and A7
-    uint8_t switches = (value >> 6) & 0x03;
-
-    return switches;
+    return invertByte(value);
 }
 
 void SPI0Manager::writeGreen(bool on)  { setLedBit(0, on); }
@@ -474,9 +550,9 @@ void SPI0Manager::setLedBit(uint8_t ledIndex, bool on)
 
 void SPI0Manager::writeLeds(uint8_t ledStates)
 {
-    _ledStates = ledStates & 0x3F;  // only 6 LEDs
+    _ledStates = ledStates & 0x3F;  // 6 LEDs
 
-    esp_err_t err = mcpWrite8(UI_2_LEDS_AND_SWITCHES, MCP23S17_GPIOA, _ledStates);
+    esp_err_t err = mcpWrite8(UI_2_LEDS_AND_SWITCHES, MCP23S17_GPIOB, _ledStates);
     if (err != ESP_OK) {
         ESP_LOGE(TAG, "writeLeds failed: %s", esp_err_to_name(err));
     }
@@ -495,6 +571,13 @@ void SPI0Manager::setScreenBLK(bool on)
                          : (_mainValveState & ~MAIN_VALVE_BLK);
     writeMainValve(_mainValveState);
 }
+
+// void SPI0Manager::setMainValve(bool on)
+// {
+//     _mainValveState = on ? (_mainValveState | MAIN_VALVE_VALVE)
+//                          : (_mainValveState & ~MAIN_VALVE_VALVE);
+//     writeMainValve(_mainValveState);
+// }
 
 void SPI0Manager::setMainValve(bool on)
 {
@@ -515,9 +598,16 @@ void SPI0Manager::writeMainValve(uint16_t state)
 
 uint16_t SPI0Manager::readPotmeters(bool id)
 {
-    (void)id;
-    // ADC MCP3004 still Arduino-dependent for now
-    return 0;
+    const uint8_t channel = id ? 1U : 0U;
+    uint16_t raw = 0;
+    esp_err_t err = adcReadMcp3004(channel, raw);
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "readPotmeters(ch=%u) failed: %s", channel, esp_err_to_name(err));
+        return 0;
+    }
+
+    // Keep compatibility with previous behavior from Arduino code.
+    return static_cast<uint16_t>(1023U - raw);
 }
 
 uint16_t SPI0Manager::readExternalDevice(deviceNameSPI0 device)

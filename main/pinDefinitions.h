@@ -37,10 +37,18 @@
 
 #define FAKE_CS_PIN 13
 
-// Main valve GPIO expander
-#define MAIN_VALVE_VALVE 0x01
-#define MAIN_VALVE_RES   0x02
-#define MAIN_VALVE_BLK   0x04
+// Main valve GPIO expander bit mapping for mcpWrite16(..., GPIOA, state):
+// bits 0..7  -> GPIOA0..7
+// bits 8..15 -> GPIOB0..7
+#ifdef JULIAN_GRACE_CONFIG
+#define MAIN_VALVE_VALVE 0x0400 // GPB3
+#define MAIN_VALVE_RES   0x0001 // GPA0
+#define MAIN_VALVE_BLK   0x0002 // GPA1
+#else
+#define MAIN_VALVE_VALVE 0x0100 // GPB0
+#define MAIN_VALVE_RES   0x0200 // GPB1
+#define MAIN_VALVE_BLK   0x0400 // GPB2
+#endif
 
 // // SPI1 (MOTOR VALVES)
 // #define SPI1_MISO_PIN 19
