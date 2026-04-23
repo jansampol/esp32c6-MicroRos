@@ -202,7 +202,7 @@ KinematicsController::matrixExponential(const Matrix4f &tildeTwist, float theta)
     return result;
 }
 
-// === steps ↔ radians conversion helpers =====================================
+// === steps to radians conversion helpers =====================================
 
 std::vector<float>
 KinematicsController::stepsToRad(const std::vector<int> &steps) const

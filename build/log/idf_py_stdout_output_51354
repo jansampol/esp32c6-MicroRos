@@ -1,0 +1,1416 @@
+Command: /Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf_monitor.py -p /dev/cu.usbserial-140 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf -m '/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf.py' '-p' '/dev/cu.usbserial-140'
+ 1 GPIOB = 0x00
+[0;32mI (785) SPI0Manager: Dev�ESP-ROM:esp32c6-20220919[0m
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xfa8
+load:0x4086e610,len:0x31a8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  5 2026 11:04:44[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (71) boot:  3 coredump         Unknown data     01 03 00210000 00010000[0m
+[0;32mI (78) boot:  4 littlefs         Unknown data     01 82 00220000 0007d000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0ae28h ( 44584) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001ae50 vaddr=40800000 size=051c8h ( 20936) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=15a8ch ( 88716) map[0m
+[0;32mI (127) esp_image: segment 3: paddr=00035ab4 vaddr=408051c8 size=09ce0h ( 40160) load[0m
+[0;32mI (139) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (140) boot: Disabling RNG early entropy source...[0m
+[0;32mI (149) cpu_start: Unicore app[0m
+[0;32mI (158) cpu_start: Pro cpu start user code[0m
+[0;32mI (158) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (158) app_init: Application information:[0m
+[0;32mI (158) app_init: Project name:     esp32c6_microros_test[0m
+[0;32mI (163) app_init: App version:      b74d8c5-dirty[0m
+[0;32mI (168) app_init: Compile time:     Apr 20 2026 17:57:17[0m
+[0;32mI (173) app_init: ELF file SHA256:  178ea5c5a...[0m
+[0;32mI (177) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (181) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (184) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (188) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (192) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (198) heap_init: At 4080FE20 len 0006C7F0 (433 KiB): RAM[0m
+[0;32mI (204) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (209) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (215) spi_flash: detected chip: generic[0m
+[0;32mI (218) spi_flash: flash io: dio[0m
+[0;33mW (221) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (233) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (239) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (246) coexist: coex firmware version: 831ec70[0m
+[0;32mI (264) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (265) main_task: Started on CPU0[0m
+[0;32mI (265) main_task: Calling app_main()[0m
+SPI0 FINAL INTEGRATION TEST
+[0;32mI (265) SPI0Manager: SPI0Manager begin()[0m
+[0;32mI (265) SPI0Manager: Using pins MOSI=8 MISO=6 CLK=1[0m
+[0;32mI (305) SPI0Manager: UI_2 readback: IODIRA=0xFF IODIRB=0x00 GPIOA=0x00 GPIOB=0x00[0m
+[1;31mE (735) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (735) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (735) SPI0Manager: Screen initialized (ST7789 over SPI0).[0m
+[0;32mI (735) SPI0Manager: SPI0Manager initialized.[0m
+[0;32mI (745) TEST: Screen init: OK[0m
+[1;31mE (745) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (755) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (755) TEST: SPI pins: MOSI=8 MISO=6 CLK=1[0m
+[0;32mI (765) TEST: Main valve bit mask: 0x0100[0m
+[0;32mI (765) TEST: Emergency pin: GPIO 11[0m
+[0;32mI (765) TEST: === Initial MCP register dump ===[0m
+[0;32mI (775) SPI0Manager: Device 1 IODIRA = 0xFF[0m
+[0;32mI (775) SPI0Manager: Device 1 IODIRB = 0xFF[0m
+[0;32mI (775) SPI0Manager: Device 1 GPIOA = 0x00[0m
+[0;32mI (785) SPI0Manager: Device 1 GPIOB = 0x00[0m
+[0;32mI (785) SPI0Manager: Device 2 IODIRA = 0xFF[0m
+[0;32mI (795) SPI0Manager: Device 2 IODIRB = 0x00[0m
+[0;32mI (795) SPI0Manager: Device 2 GPIOA = 0x00[0m
+[0;32mI (795) SPI0Manager: Device 2 GPIOB = 0x00[0m
+[0;32mI (805) SPI0Manager: Device 3 IODIRA = 0xFF[0m
+[0;32mI (805) SPI0Manager: Device 3 IODIRB = 0xFF[0m
+[0;32mI (815) SPI0Manager: Device 3 GPIOA = 0x00[0m
+[0;32mI (815) SPI0Manager: Device 3 GPIOB = 0x00[0m
+[0;32mI (815) SPI0Manager: Device 4 IODIRA = 0x00[0m
+[0;32mI (825) SPI0Manager: Device 4 IODIRB = 0x00[0m
+[0;32mI (825) SPI0Manager: Device 4 GPIOA = 0x00[0m
+[0;32mI (825) SPI0Manager: Device 4 GPIOB = 0x06[0m
+[0;32mI (835) TEST: === End MCP register dump ===[0m
+[1;31mE (1035) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (1035) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (1035) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (1535) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (2035) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (2535) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (3035) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (3035) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (3035) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (3545) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (4045) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (4545) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (5045) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (5045) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (5045) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (5545) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (6045) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (6545) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (7045) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (7045) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (7045) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (7555) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (8055) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (8555) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (9055) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (9055) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (9055) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (9555) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (10055) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (10555) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (11055) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (11055) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (11055) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (11565) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (12065) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (12565) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (13065) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (13065) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (13065) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (13575) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (14075) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (14575) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (15075) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (15075) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (15075) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (15585) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (16085) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (16585) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (17085) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (17085) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (17085) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (17595) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (18095) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (18595) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (19095) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (19095) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (19095) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (19605) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (20105) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (20605) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (21105) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (21105) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (21105) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (21615) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (22115) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (22615) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (23115) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (23115) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (23115) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (23625) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (24125) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (24625) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (25125) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (25125) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (25125) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (25635) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (26135) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (26635) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (27135) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (27135) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (27135) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (27645) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (28145) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (28645) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (29145) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (29145) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (29145) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (29655) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (30155) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (30655) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (31155) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (31155) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (31155) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (31665) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (32165) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (32665) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (33165) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (33165) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (33165) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (33675) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (34175) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (34675) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (35175) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (35175) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (35175) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (35685) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (36185) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (36685) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (37185) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (37185) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (37185) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (37695) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (38195) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (38695) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (39195) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (39195) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (39195) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (39705) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (40205) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (40705) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (41205) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (41205) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (41205) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (41715) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (42215) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (42715) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (43215) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (43215) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (43215) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (43725) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (44225) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (44725) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (45225) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (45225) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (45225) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (45735) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (46235) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (46735) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (47235) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (47235) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (47235) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (47745) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (48245) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (48745) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (49245) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (49245) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (49245) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (49755) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (50255) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (50755) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (51255) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (51255) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (51255) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (51765) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (52265) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (52765) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (53265) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (53265) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (53265) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (53775) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (54275) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (54775) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (55275) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (55275) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (55275) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (55785) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (56285) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (56785) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (57285) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (57285) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (57285) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (57795) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (58295) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (58795) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (59295) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (59295) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (59295) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (59805) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (60305) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (60805) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (61305) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (61305) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (61305) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (61815) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (62315) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (62815) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (63315) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (63315) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (63315) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (63825) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (64325) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (64825) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (65325) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (65325) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (65325) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (65835) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (66335) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (66835) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (67335) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (67335) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (67335) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (67845) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (68345) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (68845) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (69345) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (69345) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (69345) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (69855) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (70355) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (70855) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (71355) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (71355) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (71355) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (71865) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (72365) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (72865) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (73365) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (73365) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (73365) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (73875) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (74375) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (74875) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (75375) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (75375) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (75375) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (75885) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (76385) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (76885) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (77385) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (77385) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (77385) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (77895) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (78395) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (78895) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (79395) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (79395) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (79395) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (79905) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (80405) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (80905) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (81405) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (81405) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (81405) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (81915) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (82415) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (82915) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (83415) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (83415) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (83415) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (83925) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (84425) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (84925) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (85425) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (85425) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (85425) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (85935) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (86435) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (86935) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (87435) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (87435) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (87435) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (87945) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (88445) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (88945) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (89445) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (89445) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (89445) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (89955) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (90455) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (90955) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (91455) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (91455) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (91455) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (91965) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (92465) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (92965) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (93465) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (93465) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (93465) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (93975) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (94475) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (94975) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (95475) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (95475) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (95475) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (95985) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (96485) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (96985) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (97485) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (97485) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (97485) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (97995) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (98495) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (98995) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (99495) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (99495) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (99495) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (100005) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (100505) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (101005) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (101505) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (101505) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (101505) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (102015) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (102515) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (103015) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (103515) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (103515) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (103515) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (104025) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (104525) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (105025) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (105525) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (105525) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (105525) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (106035) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (106535) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (107035) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (107535) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (107535) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (107535) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (108045) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (108545) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (109045) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (109545) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (109545) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (109545) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (110055) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (110555) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (111055) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (111555) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (111555) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (111555) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (112065) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (112565) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (113065) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (113565) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (113565) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (113565) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (114075) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (114575) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (115075) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (115575) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (115575) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (115575) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (116085) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (116585) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (117085) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (117585) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (117585) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (117585) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (118095) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (118595) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (119095) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (119595) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (119595) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (119595) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (120105) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (120605) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (121105) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (121605) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (121605) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (121605) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (122115) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (122615) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (123115) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (123615) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (123615) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (123615) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (124125) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (124625) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (125125) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (125625) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (125625) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (125625) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (126135) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (126635) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (127135) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (127635) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (127635) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (127635) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (128145) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (128645) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (129145) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (129645) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (129645) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (129645) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (130155) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (130655) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (131155) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (131655) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (131655) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (131655) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (132165) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (132665) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (133165) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (133665) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (133665) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (133665) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (134175) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (134675) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (135175) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (135675) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (135675) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (135675) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (136185) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (136685) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (137185) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (137685) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (137685) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (137685) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (138195) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (138695) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (139195) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (139695) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (139695) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (139695) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (140205) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (140705) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (141205) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (141705) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (141705) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (141705) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (142215) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (142715) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (143215) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (143715) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (143715) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (143715) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (144225) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (144725) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (145225) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (145725) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (145725) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (145725) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (146235) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (146735) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (147235) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (147735) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (147735) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (147735) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (148245) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (148745) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (149245) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (149745) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (149745) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (149745) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (150255) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (150755) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (151255) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (151755) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (151755) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (151755) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (152265) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (152765) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (153265) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (153765) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (153765) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (153765) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (154275) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (154775) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (155275) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (155775) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (155775) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (155775) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (156285) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (156785) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (157285) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (157785) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (157785) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (157785) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (158295) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (158795) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (159295) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (159795) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (159795) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (159795) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (160305) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (160805) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (161305) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (161805) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (161805) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (161805) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (162315) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (162815) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (163315) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (163815) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (163815) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (163815) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (164325) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (164825) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (165325) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (165825) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (165825) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (165825) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (166335) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (166835) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (167335) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (167835) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (167835) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (167835) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (168345) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (168845) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (169345) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (169845) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (169845) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (169845) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (170355) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (170855) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (171355) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (171855) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (171855) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (171855) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (172365) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (172865) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (173365) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (173865) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (173865) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (173865) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (174375) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (174875) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (175375) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (175875) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (175875) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (175875) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (176385) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (176885) TEST: Emergency button changed: 0 -> 1[0m
+[0;32mI (176885) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=1 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (177385) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=1 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (177885) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (177885) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (177885) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=1 LED=0x10 VALVE=OPEN[0m
+[0;32mI (178395) TEST: Emergency button changed: 1 -> 0[0m
+[0;32mI (178395) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (178895) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (179395) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (179895) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (179895) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (179895) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (180405) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (180905) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (181405) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (181905) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (181905) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (181905) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (182415) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (182915) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (183415) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (183915) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (183915) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (183915) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (184425) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (184925) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (185425) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (185925) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (185925) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (185925) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (186435) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (186935) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (187435) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (187935) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (187935) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (187935) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (188445) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (188945) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (189445) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (189945) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (189945) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (189945) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (190455) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (190955) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (191455) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (191955) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (191955) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (191955) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (192465) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (192965) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (193465) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (193965) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (193965) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (193965) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (194475) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (194975) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (195475) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (195975) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (195975) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (195975) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (196485) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (196985) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (197485) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (197985) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (197985) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (197985) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (198495) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (198995) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (199495) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (199995) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (199995) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (199995) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (200505) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (201005) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (201505) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (202005) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (202005) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (202005) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (202515) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (203015) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (203515) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (204015) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (204015) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (204015) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (204525) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (205025) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (205525) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (206025) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (206025) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (206025) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (206535) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (207035) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (207535) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (208035) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (208035) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (208035) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (208545) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (209045) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (209545) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (210045) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (210045) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (210045) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (210555) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (211055) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (211555) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (212055) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (212055) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (212055) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (212565) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (213065) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (213565) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (214065) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (214065) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (214065) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (214575) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (215075) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (215575) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (216075) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (216075) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (216075) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (216585) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (217085) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (217585) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (218085) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (218085) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (218085) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (218595) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (219095) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (219595) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (220095) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (220095) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (220095) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (220605) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (221105) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (221605) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (222105) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (222105) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (222105) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (222615) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (223115) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (223615) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (224115) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (224115) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (224115) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (224625) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (225125) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (225625) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (226125) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (226125) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (226125) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (226635) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (227135) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (227635) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (228135) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (228135) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (228135) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (228645) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (229145) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (229645) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (230145) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (230145) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (230145) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (230655) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (231155) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (231655) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (232155) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (232155) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (232155) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (232665) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (233165) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (233665) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (234165) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (234165) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (234165) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (234675) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (235175) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (235675) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (236175) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (236175) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (236175) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (236685) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (237185) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (237685) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (238185) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (238185) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (238185) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (238695) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (239195) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (239695) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (240195) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (240195) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (240195) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (240705) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (241205) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (241705) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (242205) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (242205) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (242205) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (242715) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (243215) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (243715) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (244215) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (244215) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (244215) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (244725) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (245225) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (245725) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (246225) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (246225) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (246225) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (246735) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (247235) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (247735) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (248235) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (248235) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (248235) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (248745) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (249245) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (249745) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (250245) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (250245) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (250245) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (250755) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (251255) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (251755) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (252255) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (252255) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (252255) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (252765) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (253265) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (253765) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (254265) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (254265) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (254265) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (254775) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (255275) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (255775) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (256275) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (256275) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (256275) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (256785) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (257285) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (257785) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (258285) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (258285) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (258285) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (258795) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (259295) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (259795) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (260295) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (260295) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (260295) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (260805) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (261305) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (261805) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (262305) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (262305) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (262305) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (262815) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (263315) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (263815) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (264315) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (264315) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (264315) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (264825) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (265325) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (265825) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (266325) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (266325) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (266325) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (266835) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (267335) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (267835) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (268335) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (268335) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (268335) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (268845) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (269345) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (269845) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (270345) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (270345) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (270345) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (270855) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (271355) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (271855) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (272355) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (272355) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (272355) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (272865) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (273365) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (273865) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (274365) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (274365) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (274365) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (274875) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (275375) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (275875) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (276375) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (276375) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (276375) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (276885) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (277385) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (277885) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (278385) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (278385) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (278385) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (278895) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (279395) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (279895) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (280395) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (280395) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (280395) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (280905) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (281405) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (281905) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (282405) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (282405) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (282405) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (282915) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (283415) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (283915) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (284415) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (284415) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (284415) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (284925) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (285425) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (285925) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (286425) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (286425) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (286425) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (286935) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (287435) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (287935) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (288435) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (288435) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (288435) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (288945) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (289445) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (289945) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (290445) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (290445) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (290445) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (290955) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (291455) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (291955) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (292455) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (292455) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (292455) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (292965) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (293465) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (293965) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (294465) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (294465) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (294465) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (294975) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (295475) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (295975) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (296475) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (296475) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (296475) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (296985) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (297485) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (297985) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (298485) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (298485) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (298485) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (298995) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (299495) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (299995) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (300495) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (300495) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (300495) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (301005) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (301505) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (302005) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (302505) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (302505) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (302505) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (303015) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (303515) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (304015) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (304515) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (304515) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (304515) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (305025) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (305525) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (306025) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (306525) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (306525) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (306525) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (307035) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (307535) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (308035) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (308535) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (308535) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (308535) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (309045) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (309545) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (310045) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (310545) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (310545) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (310545) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (311055) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (311555) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (312055) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (312555) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (312555) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (312555) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (313065) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (313565) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (314065) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (314565) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (314565) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (314565) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (315075) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (315575) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (316075) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (316575) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (316575) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (316575) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (317085) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (317585) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (318085) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (318585) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (318585) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (318585) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (319095) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (319595) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (320095) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (320595) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (320595) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (320595) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (321105) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (321605) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (322105) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (322605) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (322605) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (322605) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (323115) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (323615) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (324115) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (324615) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (324615) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (324615) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (325125) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (325625) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (326125) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (326625) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (326625) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (326625) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (327135) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (327635) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (328135) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (328635) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (328635) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (328635) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (329145) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (329645) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (330145) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (330645) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (330645) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (330645) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (331155) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (331655) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (332155) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (332655) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (332655) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (332655) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (333165) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (333665) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (334165) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (334665) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (334665) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (334665) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (335175) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (335675) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (336175) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (336675) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (336675) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (336675) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (337185) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (337685) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (338185) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (338685) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (338685) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (338685) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (339195) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (339695) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (340195) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (340695) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (340695) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (340695) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (341205) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (341705) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (342205) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (342705) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (342705) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (342705) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (343215) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (343715) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (344215) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (344715) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (344715) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (344715) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (345225) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (345725) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (346225) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (346725) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (346725) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (346725) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (347235) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (347735) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (348235) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (348735) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (348735) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (348735) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (349245) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (349745) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (350245) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (350745) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (350745) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (350745) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (351255) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (351755) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (352255) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (352755) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (352755) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (352755) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (353265) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (353765) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (354265) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (354765) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (354765) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (354765) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (355275) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (355775) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (356275) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (356775) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (356775) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (356775) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (357285) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (357785) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (358285) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (358785) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (358785) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (358785) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (359295) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (359795) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (360295) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (360795) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (360795) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (360795) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (361305) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (361805) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (362305) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (362805) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (362805) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (362805) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (363315) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (363815) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (364315) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (364815) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (364815) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (364815) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (365325) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (365825) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (366325) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (366825) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (366825) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (366825) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (367335) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (367835) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (368335) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (368835) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (368835) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (368835) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (369345) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (369845) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (370345) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (370845) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (370845) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (370845) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (371355) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (371855) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (372355) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (372855) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (372855) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (372855) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (373365) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (373865) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (374365) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (374865) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (374865) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (374865) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (375375) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (375875) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (376375) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (376875) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (376875) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (376875) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (377385) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (377885) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (378385) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (378885) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (378885) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (378885) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (379395) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (379895) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (380395) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (380895) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (380895) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (380895) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (381405) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (381905) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (382405) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (382905) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (382905) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (382905) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (383415) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (383915) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (384415) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (384915) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (384915) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (384915) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (385425) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (385925) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (386425) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (386925) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (386925) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (386925) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (387435) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (387935) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (388435) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (388935) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (388935) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (388935) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (389445) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (389945) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (390445) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (390945) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (390945) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (390945) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (391455) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (391955) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (392455) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (392955) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (392955) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (392955) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (393465) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (393965) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (394465) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (394965) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (394965) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (394965) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (395475) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (395975) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (396475) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (396975) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (396975) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (396975) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (397485) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (397985) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (398485) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (398985) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (398985) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (398985) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (399495) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (399995) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (400495) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (400995) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (400995) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (400995) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (401505) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (402005) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (402505) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (403005) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (403005) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (403005) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (403515) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (404015) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (404515) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (405015) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (405015) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (405015) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (405525) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (406025) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (406525) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (407025) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (407025) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (407025) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (407535) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (408035) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (408535) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (409035) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (409035) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (409035) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (409545) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (410045) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (410545) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (411045) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (411045) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (411045) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (411555) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (412055) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (412555) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (413055) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (413055) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (413055) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (413565) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (414065) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (414565) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (415065) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (415065) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (415065) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (415575) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (416075) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (416575) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (417075) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (417075) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (417075) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (417585) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (418085) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (418585) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (419085) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (419085) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (419085) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (419595) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (420095) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (420595) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (421095) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (421095) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (421095) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (421605) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (422105) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (422605) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (423105) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (423105) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (423105) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (423615) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (424115) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (424615) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (425115) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (425115) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (425115) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (425625) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (426125) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (426625) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (427125) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (427125) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (427125) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (427635) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (428135) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (428635) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (429135) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (429135) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (429135) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (429645) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (430145) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (430645) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (431145) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (431145) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (431145) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (431655) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[0;32mI (432155) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (432655) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[1;31mE (433155) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (433155) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (433155) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (433665) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[0;32mI (434165) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (434665) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[1;31mE (435165) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (435165) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (435165) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=OPEN[0m
+[0;32mI (435675) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=OPEN[0m
+[0;32mI (436175) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (436675) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[1;31mE (437175) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (437175) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (437175) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=CLOSED[0m
+[0;32mI (437685) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=CLOSED[0m
+[0;32mI (438185) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (438685) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[1;31mE (439185) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (439185) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (439185) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=OPEN[0m
+[0;32mI (439695) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=OPEN[0m
+[0;32mI (440195) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (440695) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x20 VALVE=OPEN[0m
+[1;31mE (441195) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (441195) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (441195) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x01 VALVE=CLOSED[0m
+[0;32mI (441705) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x02 VALVE=CLOSED[0m
+[0;32mI (442205) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x04 VALVE=CLOSED[0m
+[0;32mI (442705) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x08 VALVE=CLOSED[0m
+[1;31mE (443205) spi_master: check_trans_valid(1087): txdata transfer > host maximum[0m
+[1;31mE (443205) SPI0Manager: fillScreen write failed: ESP_ERR_INVALID_ARG[0m
+[0;32mI (443205) TEST: HB=0x0000 VB=0x0000 SW=0x00 P0= 503 P1= 506 EM=0 LED=0x10 VALVE=OPEN[0m
+[0;32mI (443715) TEST: HB=0x0000 VB=0x0000 SW=0x0

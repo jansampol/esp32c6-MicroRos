@@ -21,6 +21,8 @@ public:
 
     bool begin();
     void update();
+    static bool isWifiConnected();
+    static bool getWifiIp(char *out, size_t out_size);
 
     bool hasNewPath() const;
     void consumePath(double out[][MAX_JOINTS], size_t &waypoints, size_t &dof);

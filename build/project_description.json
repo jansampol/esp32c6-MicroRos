@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32c6_microros_test",
-    "project_version":    "ccc1900-dirty",
+    "project_version":    "93b14e3-dirty",
     "project_path":       "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO",
     "idf_path":           "/Users/jansampolramirez/esp/esp-idf-v5.5",
     "build_dir":          "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build",
@@ -1240,7 +1240,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp-idf/main/libmain.a",
-            "sources": [ "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/MicroRosManager.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/RobotController.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/KinematicsController.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/PurpleMamriController.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/arduino_compat.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/PneumaticStepper.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/ServoValve.cpp" ],
+            "sources": [ "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/MicroRosController/MicroRosManager.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/RobotController/RobotController.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/RobotController/KinematicsController.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/RobotController/Robots/PurpleMamriController.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/arduino_compat.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/PneumaticStepper/PneumaticStepper.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/PneumaticStepper/ServoValve.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/SPI/SPI1Manager.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/InputController.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/MamriWebServer.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/I2C/I2CManager.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/AS5600/AS5600.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/TCA9548/TCA9548.cpp", "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/SPI/SPI0Manager.cpp" ],
             "include_dirs": [ ".", "../include" ]
         },
         "mbedtls": {

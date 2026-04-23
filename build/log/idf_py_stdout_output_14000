@@ -1,0 +1,2023 @@
+Command: /Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf_monitor.py -p /dev/cu.usbserial-140 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf -m '/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf.py' '-p' '/dev/cu.usbserial-140'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xfa8
+load:0x4086e610,len:0x31a8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  5 2026 11:04:44[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (71) boot:  3 coredump         Unknown data     01 03 00210000 00010000[0m
+[0;32mI (78) boot:  4 littlefs         Unknown data     01 82 00220000 0007d000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0aa00h ( 43520) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001aa28 vaddr=40800000 size=055f0h ( 22000) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=16fach ( 94124) map[0m
+[0;32mI (128) esp_image: segment 3: paddr=00036fd4 vaddr=408055f0 size=086e4h ( 34532) load[0m
+[0;32mI (136) esp_image: segment 4: paddr=0003f6c0 vaddr=4080dce0 size=01a68h (  6760) load[0m
+[0;32mI (141) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (142) boot: Disabling RNG early entropy source...[0m
+[0;32mI (153) cpu_start: Unicore app[0m
+[0;32mI (162) cpu_start: Pro cpu start user code[0m
+[0;32mI (162) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (162) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     esp32c6_microros_test[0m
+[0;32mI (167) app_init: App version:      0c9753a-dirty[0m
+[0;32mI (172) app_init: Compile time:     Apr  8 2026 17:53:35[0m
+[0;32mI (177) app_init: ELF file SHA256:  d6a9c2c99...[0m
+[0;32mI (181) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (185) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (188) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (192) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (196) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (203) heap_init: At 408106E0 len 0006BF30 (431 KiB): RAM[0m
+[0;32mI (208) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (213) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (219) spi_flash: detected chip: generic[0m
+[0;32mI (222) spi_flash: flash io: dio[0m
+[0;33mW (225) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (237) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (243) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (250) coexist: coex firmware version: 831ec70[0m
+[0;32mI (268) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (269) main_task: Started on CPU0[0m
+[0;32mI (269) main_task: Calling app_main()[0m
+[0;32mI (279) SPI1Manager: SPI1Manager begin()[0m
+[0;32mI (279) SPI1Manager: Using pins MOSI=19 MISO=20 CLK=15 CS=23[0m
+[0;32mI (279) SPI1Manager: spi_bus_initialize -> ESP_OK[0m
+[0;32mI (279) SPI1Manager: spi_bus_add_device -> ESP_OK[0m
+[0;32mI (279) SPI1Manager: mcpInit: configuring IODIR[0m
+[0;32mI (289) SPI1Manager: mcpWrite16 reg=0x00 value=0x0000 tx=[0x40 0x00 0x00 0x00][0m
+[0;32mI (289) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (299) SPI1Manager: mcpInit: clearing GPIO[0m
+[0;32mI (299) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (309) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (309) SPI1Manager: mcpInit -> ESP_OK[0m
+[0;32mI (319) SPI1Manager: SPI1Manager initialized OK[0m
+[0;32mI (319) TEST: Sending 0x0001[0m
+[0;32mI (319) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (329) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (329) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (839) TEST: Sending 0x0002[0m
+[0;32mI (839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (1339) TEST: Sending 0x0004[0m
+[0;32mI (1339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (1339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (1339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (1839) TEST: Sending 0x0008[0m
+[0;32mI (1839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (1839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (1839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (2339) TEST: Sending 0x0010[0m
+[0;32mI (2339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (2339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (2339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (2839) TEST: Sending 0x0020[0m
+[0;32mI (2839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (2839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (2839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (3339) TEST: Sending 0x0040[0m
+[0;32mI (3339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (3339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (3339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (3839) TEST: Sending 0x0080[0m
+[0;32mI (3839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (3839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (3839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (4339) TEST: Sending 0x0100[0m
+[0;32mI (4339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (4339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (4339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (4839) TEST: Sending 0x0200[0m
+[0;32mI (4839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (4839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (4839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (5339) TEST: Sending 0x0400[0m
+[0;32mI (5339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (5339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (5339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (5839) TEST: Sending 0x0800[0m
+[0;32mI (5839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (5839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (5839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (6339) TEST: Sending 0x1000[0m
+[0;32mI (6339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (6339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (6339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (6839) TEST: Sending 0x2000[0m
+[0;32mI (6839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (6839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (6839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (7339) TEST: Sending 0x4000[0m
+[0;32mI (7339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (7339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (7339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (7839) TEST: Sending 0x8000[0m
+[0;32mI (7839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (7839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (7839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (8339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (8339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (8339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (9339) TEST: Sending 0x0001[0m
+[0;32mI (9339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (9339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (9339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (9839) TEST: Sending 0x0002[0m
+[0;32mI (9839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (9839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (9839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (10339) TEST: Sending 0x0004[0m
+[0;32mI (10339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (10339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (10339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (10839) TEST: Sending 0x0008[0m
+[0;32mI (10839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (10839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (10839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (11339) TEST: Sending 0x0010[0m
+[0;32mI (11339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (11339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (11339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (11839) TEST: Sending 0x0020[0m
+[0;32mI (11839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (11839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (11839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (12339) TEST: Sending 0x0040[0m
+[0;32mI (12339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (12339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (12339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (12839) TEST: Sending 0x0080[0m
+[0;32mI (12839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (12839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (12839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (13339) TEST: Sending 0x0100[0m
+[0;32mI (13339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (13339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (13339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (13839) TEST: Sending 0x0200[0m
+[0;32mI (13839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (13839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (13839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (14339) TEST: Sending 0x0400[0m
+[0;32mI (14339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (14339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (14339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (14839) TEST: Sending 0x0800[0m
+[0;32mI (14839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (14839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (14839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (15339) TEST: Sending 0x1000[0m
+[0;32mI (15339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (15339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (15339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (15839) TEST: Sending 0x2000[0m
+[0;32mI (15839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (15839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (15839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (16339) TEST: Sending 0x4000[0m
+[0;32mI (16339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (16339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (16339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (16839) TEST: Sending 0x8000[0m
+[0;32mI (16839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (16839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (16839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (17339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (17339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (17339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (18339) TEST: Sending 0x0001[0m
+[0;32mI (18339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (18339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (18339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (18839) TEST: Sending 0x0002[0m
+[0;32mI (18839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (18839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (18839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (19339) TEST: Sending 0x0004[0m
+[0;32mI (19339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (19339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (19339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (19839) TEST: Sending 0x0008[0m
+[0;32mI (19839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (19839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (19839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (20339) TEST: Sending 0x0010[0m
+[0;32mI (20339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (20339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (20339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (20839) TEST: Sending 0x0020[0m
+[0;32mI (20839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (20839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (20839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (21339) TEST: Sending 0x0040[0m
+[0;32mI (21339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (21339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (21339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (21839) TEST: Sending 0x0080[0m
+[0;32mI (21839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (21839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (21839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (22339) TEST: Sending 0x0100[0m
+[0;32mI (22339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (22339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (22339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (22839) TEST: Sending 0x0200[0m
+[0;32mI (22839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (22839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (22839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (23339) TEST: Sending 0x0400[0m
+[0;32mI (23339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (23339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (23339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (23839) TEST: Sending 0x0800[0m
+[0;32mI (23839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (23839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (23839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (24339) TEST: Sending 0x1000[0m
+[0;32mI (24339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (24339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (24339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (24839) TEST: Sending 0x2000[0m
+[0;32mI (24839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (24839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (24839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (25339) TEST: Sending 0x4000[0m
+[0;32mI (25339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (25339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (25339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (25839) TEST: Sending 0x8000[0m
+[0;32mI (25839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (25839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (25839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (26339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (26339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (26339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (27339) TEST: Sending 0x0001[0m
+[0;32mI (27339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (27339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (27339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (27839) TEST: Sending 0x0002[0m
+[0;32mI (27839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (27839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (27839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (28339) TEST: Sending 0x0004[0m
+[0;32mI (28339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (28339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (28339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (28839) TEST: Sending 0x0008[0m
+[0;32mI (28839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (28839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (28839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (29339) TEST: Sending 0x0010[0m
+[0;32mI (29339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (29339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (29339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (29839) TEST: Sending 0x0020[0m
+[0;32mI (29839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (29839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (29839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (30339) TEST: Sending 0x0040[0m
+[0;32mI (30339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (30339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (30339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (30839) TEST: Sending 0x0080[0m
+[0;32mI (30839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (30839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (30839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (31339) TEST: Sending 0x0100[0m
+[0;32mI (31339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (31339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (31339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (31839) TEST: Sending 0x0200[0m
+[0;32mI (31839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (31839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (31839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (32339) TEST: Sending 0x0400[0m
+[0;32mI (32339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (32339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (32339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (32839) TEST: Sending 0x0800[0m
+[0;32mI (32839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (32839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (32839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (33339) TEST: Sending 0x1000[0m
+[0;32mI (33339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (33339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (33339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (33839) TEST: Sending 0x2000[0m
+[0;32mI (33839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (33839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (33839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (34339) TEST: Sending 0x4000[0m
+[0;32mI (34339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (34339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (34339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (34839) TEST: Sending 0x8000[0m
+[0;32mI (34839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (34839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (34839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (35339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (35339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (35339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (36339) TEST: Sending 0x0001[0m
+[0;32mI (36339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (36339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (36339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (36839) TEST: Sending 0x0002[0m
+[0;32mI (36839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (36839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (36839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (37339) TEST: Sending 0x0004[0m
+[0;32mI (37339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (37339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (37339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (37839) TEST: Sending 0x0008[0m
+[0;32mI (37839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (37839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (37839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (38339) TEST: Sending 0x0010[0m
+[0;32mI (38339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (38339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (38339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (38839) TEST: Sending 0x0020[0m
+[0;32mI (38839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (38839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (38839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (39339) TEST: Sending 0x0040[0m
+[0;32mI (39339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (39339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (39339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (39839) TEST: Sending 0x0080[0m
+[0;32mI (39839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (39839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (39839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (40339) TEST: Sending 0x0100[0m
+[0;32mI (40339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (40339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (40339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (40839) TEST: Sending 0x0200[0m
+[0;32mI (40839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (40839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (40839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (41339) TEST: Sending 0x0400[0m
+[0;32mI (41339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (41339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (41339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (41839) TEST: Sending 0x0800[0m
+[0;32mI (41839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (41839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (41839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (42339) TEST: Sending 0x1000[0m
+[0;32mI (42339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (42339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (42339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (42839) TEST: Sending 0x2000[0m
+[0;32mI (42839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (42839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (42839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (43339) TEST: Sending 0x4000[0m
+[0;32mI (43339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (43339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (43339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (43839) TEST: Sending 0x8000[0m
+[0;32mI (43839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (43839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (43839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (44339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (44339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (44339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (45339) TEST: Sending 0x0001[0m
+[0;32mI (45339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (45339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (45339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (45839) TEST: Sending 0x0002[0m
+[0;32mI (45839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (45839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (45839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (46339) TEST: Sending 0x0004[0m
+[0;32mI (46339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (46339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (46339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (46839) TEST: Sending 0x0008[0m
+[0;32mI (46839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (46839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (46839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (47339) TEST: Sending 0x0010[0m
+[0;32mI (47339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (47339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (47339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (47839) TEST: Sending 0x0020[0m
+[0;32mI (47839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (47839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (47839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (48339) TEST: Sending 0x0040[0m
+[0;32mI (48339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (48339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (48339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (48839) TEST: Sending 0x0080[0m
+[0;32mI (48839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (48839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (48839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (49339) TEST: Sending 0x0100[0m
+[0;32mI (49339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (49339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (49339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (49839) TEST: Sending 0x0200[0m
+[0;32mI (49839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (49839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (49839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (50339) TEST: Sending 0x0400[0m
+[0;32mI (50339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (50339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (50339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (50839) TEST: Sending 0x0800[0m
+[0;32mI (50839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (50839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (50839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (51339) TEST: Sending 0x1000[0m
+[0;32mI (51339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (51339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (51339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (51839) TEST: Sending 0x2000[0m
+[0;32mI (51839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (51839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (51839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (52339) TEST: Sending 0x4000[0m
+[0;32mI (52339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (52339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (52339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (52839) TEST: Sending 0x8000[0m
+[0;32mI (52839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (52839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (52839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (53339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (53339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (53339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (54339) TEST: Sending 0x0001[0m
+[0;32mI (54339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (54339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (54339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (54839) TEST: Sending 0x0002[0m
+[0;32mI (54839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (54839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (54839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (55339) TEST: Sending 0x0004[0m
+[0;32mI (55339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (55339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (55339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (55839) TEST: Sending 0x0008[0m
+[0;32mI (55839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (55839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (55839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (56339) TEST: Sending 0x0010[0m
+[0;32mI (56339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (56339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (56339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (56839) TEST: Sending 0x0020[0m
+[0;32mI (56839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (56839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (56839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (57339) TEST: Sending 0x0040[0m
+[0;32mI (57339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (57339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (57339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (57839) TEST: Sending 0x0080[0m
+[0;32mI (57839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (57839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (57839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (58339) TEST: Sending 0x0100[0m
+[0;32mI (58339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (58339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (58339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (58839) TEST: Sending 0x0200[0m
+[0;32mI (58839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (58839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (58839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (59339) TEST: Sending 0x0400[0m
+[0;32mI (59339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (59339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (59339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (59839) TEST: Sending 0x0800[0m
+[0;32mI (59839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (59839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (59839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (60339) TEST: Sending 0x1000[0m
+[0;32mI (60339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (60339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (60339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (60839) TEST: Sending 0x2000[0m
+[0;32mI (60839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (60839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (60839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (61339) TEST: Sending 0x4000[0m
+[0;32mI (61339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (61339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (61339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (61839) TEST: Sending 0x8000[0m
+[0;32mI (61839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (61839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (61839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (62339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (62339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (62339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (63339) TEST: Sending 0x0001[0m
+[0;32mI (63339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (63339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (63339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (63839) TEST: Sending 0x0002[0m
+[0;32mI (63839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (63839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (63839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (64339) TEST: Sending 0x0004[0m
+[0;32mI (64339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (64339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (64339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (64839) TEST: Sending 0x0008[0m
+[0;32mI (64839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (64839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (64839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (65339) TEST: Sending 0x0010[0m
+[0;32mI (65339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (65339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (65339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (65839) TEST: Sending 0x0020[0m
+[0;32mI (65839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (65839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (65839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (66339) TEST: Sending 0x0040[0m
+[0;32mI (66339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (66339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (66339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (66839) TEST: Sending 0x0080[0m
+[0;32mI (66839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (66839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (66839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (67339) TEST: Sending 0x0100[0m
+[0;32mI (67339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (67339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (67339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (67839) TEST: Sending 0x0200[0m
+[0;32mI (67839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (67839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (67839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (68339) TEST: Sending 0x0400[0m
+[0;32mI (68339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (68339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (68339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (68839) TEST: Sending 0x0800[0m
+[0;32mI (68839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (68839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (68839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (69339) TEST: Sending 0x1000[0m
+[0;32mI (69339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (69339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (69339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (69839) TEST: Sending 0x2000[0m
+[0;32mI (69839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (69839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (69839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (70339) TEST: Sending 0x4000[0m
+[0;32mI (70339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (70339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (70339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (70839) TEST: Sending 0x8000[0m
+[0;32mI (70839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (70839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (70839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (71339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (71339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (71339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (72339) TEST: Sending 0x0001[0m
+[0;32mI (72339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (72339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (72339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (72839) TEST: Sending 0x0002[0m
+[0;32mI (72839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (72839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (72839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (73339) TEST: Sending 0x0004[0m
+[0;32mI (73339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (73339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (73339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (73839) TEST: Sending 0x0008[0m
+[0;32mI (73839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (73839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (73839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (74339) TEST: Sending 0x0010[0m
+[0;32mI (74339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (74339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (74339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (74839) TEST: Sending 0x0020[0m
+[0;32mI (74839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (74839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (74839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (75339) TEST: Sending 0x0040[0m
+[0;32mI (75339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (75339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (75339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (75839) TEST: Sending 0x0080[0m
+[0;32mI (75839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (75839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (75839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (76339) TEST: Sending 0x0100[0m
+[0;32mI (76339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (76339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (76339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (76839) TEST: Sending 0x0200[0m
+[0;32mI (76839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (76839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (76839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (77339) TEST: Sending 0x0400[0m
+[0;32mI (77339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (77339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (77339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (77839) TEST: Sending 0x0800[0m
+[0;32mI (77839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (77839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (77839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (78339) TEST: Sending 0x1000[0m
+[0;32mI (78339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (78339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (78339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (78839) TEST: Sending 0x2000[0m
+[0;32mI (78839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (78839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (78839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (79339) TEST: Sending 0x4000[0m
+[0;32mI (79339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (79339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (79339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (79839) TEST: Sending 0x8000[0m
+[0;32mI (79839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (79839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (79839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (80339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (80339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (80339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (81339) TEST: Sending 0x0001[0m
+[0;32mI (81339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (81339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (81339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (81839) TEST: Sending 0x0002[0m
+[0;32mI (81839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (81839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (81839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (82339) TEST: Sending 0x0004[0m
+[0;32mI (82339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (82339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (82339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (82839) TEST: Sending 0x0008[0m
+[0;32mI (82839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (82839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (82839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (83339) TEST: Sending 0x0010[0m
+[0;32mI (83339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (83339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (83339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (83839) TEST: Sending 0x0020[0m
+[0;32mI (83839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (83839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (83839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (84339) TEST: Sending 0x0040[0m
+[0;32mI (84339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (84339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (84339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (84839) TEST: Sending 0x0080[0m
+[0;32mI (84839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (84839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (84839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (85339) TEST: Sending 0x0100[0m
+[0;32mI (85339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (85339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (85339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (85839) TEST: Sending 0x0200[0m
+[0;32mI (85839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (85839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (85839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (86339) TEST: Sending 0x0400[0m
+[0;32mI (86339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (86339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (86339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (86839) TEST: Sending 0x0800[0m
+[0;32mI (86839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (86839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (86839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (87339) TEST: Sending 0x1000[0m
+[0;32mI (87339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (87339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (87339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (87839) TEST: Sending 0x2000[0m
+[0;32mI (87839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (87839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (87839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (88339) TEST: Sending 0x4000[0m
+[0;32mI (88339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (88339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (88339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (88839) TEST: Sending 0x8000[0m
+[0;32mI (88839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (88839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (88839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (89339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (89339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (89339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (90339) TEST: Sending 0x0001[0m
+[0;32mI (90339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (90339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (90339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (90839) TEST: Sending 0x0002[0m
+[0;32mI (90839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (90839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (90839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (91339) TEST: Sending 0x0004[0m
+[0;32mI (91339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (91339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (91339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (91839) TEST: Sending 0x0008[0m
+[0;32mI (91839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (91839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (91839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (92339) TEST: Sending 0x0010[0m
+[0;32mI (92339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (92339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (92339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (92839) TEST: Sending 0x0020[0m
+[0;32mI (92839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (92839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (92839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (93339) TEST: Sending 0x0040[0m
+[0;32mI (93339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (93339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (93339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (93839) TEST: Sending 0x0080[0m
+[0;32mI (93839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (93839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (93839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (94339) TEST: Sending 0x0100[0m
+[0;32mI (94339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (94339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (94339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (94839) TEST: Sending 0x0200[0m
+[0;32mI (94839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (94839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (94839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (95339) TEST: Sending 0x0400[0m
+[0;32mI (95339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (95339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (95339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (95839) TEST: Sending 0x0800[0m
+[0;32mI (95839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (95839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (95839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (96339) TEST: Sending 0x1000[0m
+[0;32mI (96339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (96339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (96339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (96839) TEST: Sending 0x2000[0m
+[0;32mI (96839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (96839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (96839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (97339) TEST: Sending 0x4000[0m
+[0;32mI (97339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (97339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (97339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (97839) TEST: Sending 0x8000[0m
+[0;32mI (97839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (97839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (97839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (98339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (98339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (98339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (99339) TEST: Sending 0x0001[0m
+[0;32mI (99339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (99339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (99339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (99839) TEST: Sending 0x0002[0m
+[0;32mI (99839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (99839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (99839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (100339) TEST: Sending 0x0004[0m
+[0;32mI (100339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (100339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (100339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (100839) TEST: Sending 0x0008[0m
+[0;32mI (100839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (100839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (100839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (101339) TEST: Sending 0x0010[0m
+[0;32mI (101339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (101339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (101339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (101839) TEST: Sending 0x0020[0m
+[0;32mI (101839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (101839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (101839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (102339) TEST: Sending 0x0040[0m
+[0;32mI (102339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (102339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (102339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (102839) TEST: Sending 0x0080[0m
+[0;32mI (102839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (102839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (102839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (103339) TEST: Sending 0x0100[0m
+[0;32mI (103339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (103339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (103339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (103839) TEST: Sending 0x0200[0m
+[0;32mI (103839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (103839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (103839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (104339) TEST: Sending 0x0400[0m
+[0;32mI (104339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (104339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (104339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (104839) TEST: Sending 0x0800[0m
+[0;32mI (104839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (104839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (104839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (105339) TEST: Sending 0x1000[0m
+[0;32mI (105339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (105339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (105339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (105839) TEST: Sending 0x2000[0m
+[0;32mI (105839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (105839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (105839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (106339) TEST: Sending 0x4000[0m
+[0;32mI (106339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (106339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (106339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (106839) TEST: Sending 0x8000[0m
+[0;32mI (106839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (106839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (106839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (107339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (107339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (107339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (108339) TEST: Sending 0x0001[0m
+[0;32mI (108339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (108339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (108339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (108839) TEST: Sending 0x0002[0m
+[0;32mI (108839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (108839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (108839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (109339) TEST: Sending 0x0004[0m
+[0;32mI (109339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (109339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (109339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (109839) TEST: Sending 0x0008[0m
+[0;32mI (109839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (109839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (109839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (110339) TEST: Sending 0x0010[0m
+[0;32mI (110339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (110339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (110339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (110839) TEST: Sending 0x0020[0m
+[0;32mI (110839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (110839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (110839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (111339) TEST: Sending 0x0040[0m
+[0;32mI (111339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (111339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (111339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (111839) TEST: Sending 0x0080[0m
+[0;32mI (111839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (111839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (111839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (112339) TEST: Sending 0x0100[0m
+[0;32mI (112339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (112339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (112339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (112839) TEST: Sending 0x0200[0m
+[0;32mI (112839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (112839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (112839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (113339) TEST: Sending 0x0400[0m
+[0;32mI (113339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (113339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (113339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (113839) TEST: Sending 0x0800[0m
+[0;32mI (113839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (113839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (113839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (114339) TEST: Sending 0x1000[0m
+[0;32mI (114339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (114339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (114339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (114839) TEST: Sending 0x2000[0m
+[0;32mI (114839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (114839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (114839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (115339) TEST: Sending 0x4000[0m
+[0;32mI (115339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (115339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (115339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (115839) TEST: Sending 0x8000[0m
+[0;32mI (115839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (115839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (115839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (116339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (116339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (116339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (117339) TEST: Sending 0x0001[0m
+[0;32mI (117339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (117339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (117339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (117839) TEST: Sending 0x0002[0m
+[0;32mI (117839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (117839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (117839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (118339) TEST: Sending 0x0004[0m
+[0;32mI (118339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (118339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (118339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (118839) TEST: Sending 0x0008[0m
+[0;32mI (118839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (118839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (118839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (119339) TEST: Sending 0x0010[0m
+[0;32mI (119339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (119339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (119339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (119839) TEST: Sending 0x0020[0m
+[0;32mI (119839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (119839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (119839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (120339) TEST: Sending 0x0040[0m
+[0;32mI (120339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (120339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (120339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (120839) TEST: Sending 0x0080[0m
+[0;32mI (120839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (120839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (120839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (121339) TEST: Sending 0x0100[0m
+[0;32mI (121339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (121339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (121339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (121839) TEST: Sending 0x0200[0m
+[0;32mI (121839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (121839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (121839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (122339) TEST: Sending 0x0400[0m
+[0;32mI (122339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (122339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (122339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (122839) TEST: Sending 0x0800[0m
+[0;32mI (122839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (122839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (122839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (123339) TEST: Sending 0x1000[0m
+[0;32mI (123339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (123339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (123339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (123839) TEST: Sending 0x2000[0m
+[0;32mI (123839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (123839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (123839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (124339) TEST: Sending 0x4000[0m
+[0;32mI (124339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (124339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (124339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (124839) TEST: Sending 0x8000[0m
+[0;32mI (124839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (124839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (124839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (125339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (125339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (125339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (126339) TEST: Sending 0x0001[0m
+[0;32mI (126339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (126339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (126339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (126839) TEST: Sending 0x0002[0m
+[0;32mI (126839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (126839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (126839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (127339) TEST: Sending 0x0004[0m
+[0;32mI (127339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (127339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (127339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (127839) TEST: Sending 0x0008[0m
+[0;32mI (127839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (127839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (127839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (128339) TEST: Sending 0x0010[0m
+[0;32mI (128339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (128339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (128339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (128839) TEST: Sending 0x0020[0m
+[0;32mI (128839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (128839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (128839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (129339) TEST: Sending 0x0040[0m
+[0;32mI (129339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (129339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (129339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (129839) TEST: Sending 0x0080[0m
+[0;32mI (129839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (129839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (129839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (130339) TEST: Sending 0x0100[0m
+[0;32mI (130339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (130339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (130339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (130839) TEST: Sending 0x0200[0m
+[0;32mI (130839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (130839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (130839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (131339) TEST: Sending 0x0400[0m
+[0;32mI (131339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (131339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (131339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (131839) TEST: Sending 0x0800[0m
+[0;32mI (131839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (131839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (131839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (132339) TEST: Sending 0x1000[0m
+[0;32mI (132339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (132339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (132339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (132839) TEST: Sending 0x2000[0m
+[0;32mI (132839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (132839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (132839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (133339) TEST: Sending 0x4000[0m
+[0;32mI (133339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (133339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (133339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (133839) TEST: Sending 0x8000[0m
+[0;32mI (133839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (133839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (133839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (134339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (134339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (134339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (135339) TEST: Sending 0x0001[0m
+[0;32mI (135339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (135339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (135339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (135839) TEST: Sending 0x0002[0m
+[0;32mI (135839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (135839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (135839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (136339) TEST: Sending 0x0004[0m
+[0;32mI (136339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (136339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (136339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (136839) TEST: Sending 0x0008[0m
+[0;32mI (136839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (136839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (136839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (137339) TEST: Sending 0x0010[0m
+[0;32mI (137339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (137339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (137339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (137839) TEST: Sending 0x0020[0m
+[0;32mI (137839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (137839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (137839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (138339) TEST: Sending 0x0040[0m
+[0;32mI (138339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (138339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (138339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (138839) TEST: Sending 0x0080[0m
+[0;32mI (138839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (138839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (138839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (139339) TEST: Sending 0x0100[0m
+[0;32mI (139339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (139339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (139339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (139839) TEST: Sending 0x0200[0m
+[0;32mI (139839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (139839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (139839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (140339) TEST: Sending 0x0400[0m
+[0;32mI (140339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (140339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (140339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (140839) TEST: Sending 0x0800[0m
+[0;32mI (140839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (140839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (140839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (141339) TEST: Sending 0x1000[0m
+[0;32mI (141339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (141339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (141339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (141839) TEST: Sending 0x2000[0m
+[0;32mI (141839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (141839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (141839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (142339) TEST: Sending 0x4000[0m
+[0;32mI (142339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (142339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (142339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (142839) TEST: Sending 0x8000[0m
+[0;32mI (142839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (142839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (142839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (143339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (143339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (143339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (144339) TEST: Sending 0x0001[0m
+[0;32mI (144339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (144339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (144339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (144839) TEST: Sending 0x0002[0m
+[0;32mI (144839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (144839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (144839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (145339) TEST: Sending 0x0004[0m
+[0;32mI (145339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (145339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (145339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (145839) TEST: Sending 0x0008[0m
+[0;32mI (145839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (145839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (145839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (146339) TEST: Sending 0x0010[0m
+[0;32mI (146339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (146339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (146339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (146839) TEST: Sending 0x0020[0m
+[0;32mI (146839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (146839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (146839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (147339) TEST: Sending 0x0040[0m
+[0;32mI (147339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (147339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (147339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (147839) TEST: Sending 0x0080[0m
+[0;32mI (147839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (147839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (147839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (148339) TEST: Sending 0x0100[0m
+[0;32mI (148339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (148339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (148339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (148839) TEST: Sending 0x0200[0m
+[0;32mI (148839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (148839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (148839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (149339) TEST: Sending 0x0400[0m
+[0;32mI (149339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (149339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (149339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (149839) TEST: Sending 0x0800[0m
+[0;32mI (149839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (149839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (149839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (150339) TEST: Sending 0x1000[0m
+[0;32mI (150339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (150339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (150339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (150839) TEST: Sending 0x2000[0m
+[0;32mI (150839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (150839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (150839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (151339) TEST: Sending 0x4000[0m
+[0;32mI (151339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (151339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (151339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (151839) TEST: Sending 0x8000[0m
+[0;32mI (151839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (151839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (151839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (152339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (152339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (152339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (153339) TEST: Sending 0x0001[0m
+[0;32mI (153339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (153339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (153339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (153839) TEST: Sending 0x0002[0m
+[0;32mI (153839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (153839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (153839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (154339) TEST: Sending 0x0004[0m
+[0;32mI (154339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (154339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (154339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (154839) TEST: Sending 0x0008[0m
+[0;32mI (154839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (154839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (154839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (155339) TEST: Sending 0x0010[0m
+[0;32mI (155339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (155339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (155339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (155839) TEST: Sending 0x0020[0m
+[0;32mI (155839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (155839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (155839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (156339) TEST: Sending 0x0040[0m
+[0;32mI (156339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (156339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (156339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (156839) TEST: Sending 0x0080[0m
+[0;32mI (156839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (156839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (156839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (157339) TEST: Sending 0x0100[0m
+[0;32mI (157339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (157339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (157339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (157839) TEST: Sending 0x0200[0m
+[0;32mI (157839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (157839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (157839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (158339) TEST: Sending 0x0400[0m
+[0;32mI (158339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (158339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (158339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (158839) TEST: Sending 0x0800[0m
+[0;32mI (158839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (158839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (158839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (159339) TEST: Sending 0x1000[0m
+[0;32mI (159339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (159339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (159339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (159839) TEST: Sending 0x2000[0m
+[0;32mI (159839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (159839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (159839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (160339) TEST: Sending 0x4000[0m
+[0;32mI (160339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (160339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (160339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (160839) TEST: Sending 0x8000[0m
+[0;32mI (160839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (160839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (160839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (161339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (161339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (161339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (162339) TEST: Sending 0x0001[0m
+[0;32mI (162339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (162339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (162339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (162839) TEST: Sending 0x0002[0m
+[0;32mI (162839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (162839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (162839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (163339) TEST: Sending 0x0004[0m
+[0;32mI (163339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (163339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (163339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (163839) TEST: Sending 0x0008[0m
+[0;32mI (163839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (163839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (163839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (164339) TEST: Sending 0x0010[0m
+[0;32mI (164339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (164339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (164339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (164839) TEST: Sending 0x0020[0m
+[0;32mI (164839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (164839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (164839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (165339) TEST: Sending 0x0040[0m
+[0;32mI (165339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (165339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (165339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (165839) TEST: Sending 0x0080[0m
+[0;32mI (165839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (165839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (165839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (166339) TEST: Sending 0x0100[0m
+[0;32mI (166339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (166339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (166339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (166839) TEST: Sending 0x0200[0m
+[0;32mI (166839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (166839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (166839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (167339) TEST: Sending 0x0400[0m
+[0;32mI (167339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (167339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (167339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (167839) TEST: Sending 0x0800[0m
+[0;32mI (167839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (167839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (167839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (168339) TEST: Sending 0x1000[0m
+[0;32mI (168339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (168339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (168339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (168839) TEST: Sending 0x2000[0m
+[0;32mI (168839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (168839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (168839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (169339) TEST: Sending 0x4000[0m
+[0;32mI (169339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (169339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (169339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (169839) TEST: Sending 0x8000[0m
+[0;32mI (169839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (169839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (169839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (170339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (170339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (170339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (171339) TEST: Sending 0x0001[0m
+[0;32mI (171339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (171339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (171339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (171839) TEST: Sending 0x0002[0m
+[0;32mI (171839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (171839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (171839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (172339) TEST: Sending 0x0004[0m
+[0;32mI (172339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (172339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (172339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (172839) TEST: Sending 0x0008[0m
+[0;32mI (172839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (172839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (172839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (173339) TEST: Sending 0x0010[0m
+[0;32mI (173339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (173339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (173339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (173839) TEST: Sending 0x0020[0m
+[0;32mI (173839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (173839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (173839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (174339) TEST: Sending 0x0040[0m
+[0;32mI (174339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (174339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (174339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (174839) TEST: Sending 0x0080[0m
+[0;32mI (174839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (174839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (174839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (175339) TEST: Sending 0x0100[0m
+[0;32mI (175339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (175339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (175339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (175839) TEST: Sending 0x0200[0m
+[0;32mI (175839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (175839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (175839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (176339) TEST: Sending 0x0400[0m
+[0;32mI (176339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (176339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (176339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (176839) TEST: Sending 0x0800[0m
+[0;32mI (176839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (176839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (176839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (177339) TEST: Sending 0x1000[0m
+[0;32mI (177339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (177339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (177339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (177839) TEST: Sending 0x2000[0m
+[0;32mI (177839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (177839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (177839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (178339) TEST: Sending 0x4000[0m
+[0;32mI (178339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (178339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (178339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (178839) TEST: Sending 0x8000[0m
+[0;32mI (178839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (178839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (178839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (179339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (179339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (179339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (180339) TEST: Sending 0x0001[0m
+[0;32mI (180339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (180339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (180339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (180839) TEST: Sending 0x0002[0m
+[0;32mI (180839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (180839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (180839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (181339) TEST: Sending 0x0004[0m
+[0;32mI (181339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (181339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (181339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (181839) TEST: Sending 0x0008[0m
+[0;32mI (181839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (181839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (181839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (182339) TEST: Sending 0x0010[0m
+[0;32mI (182339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (182339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (182339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (182839) TEST: Sending 0x0020[0m
+[0;32mI (182839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (182839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (182839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (183339) TEST: Sending 0x0040[0m
+[0;32mI (183339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (183339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (183339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (183839) TEST: Sending 0x0080[0m
+[0;32mI (183839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (183839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (183839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (184339) TEST: Sending 0x0100[0m
+[0;32mI (184339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (184339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (184339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (184839) TEST: Sending 0x0200[0m
+[0;32mI (184839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (184839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (184839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (185339) TEST: Sending 0x0400[0m
+[0;32mI (185339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (185339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (185339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (185839) TEST: Sending 0x0800[0m
+[0;32mI (185839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (185839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (185839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (186339) TEST: Sending 0x1000[0m
+[0;32mI (186339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (186339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (186339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (186839) TEST: Sending 0x2000[0m
+[0;32mI (186839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (186839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (186839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (187339) TEST: Sending 0x4000[0m
+[0;32mI (187339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (187339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (187339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (187839) TEST: Sending 0x8000[0m
+[0;32mI (187839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (187839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (187839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (188339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (188339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (188339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (189339) TEST: Sending 0x0001[0m
+[0;32mI (189339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (189339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (189339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (189839) TEST: Sending 0x0002[0m
+[0;32mI (189839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (189839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (189839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (190339) TEST: Sending 0x0004[0m
+[0;32mI (190339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (190339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (190339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (190839) TEST: Sending 0x0008[0m
+[0;32mI (190839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (190839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (190839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (191339) TEST: Sending 0x0010[0m
+[0;32mI (191339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (191339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (191339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (191839) TEST: Sending 0x0020[0m
+[0;32mI (191839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (191839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (191839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (192339) TEST: Sending 0x0040[0m
+[0;32mI (192339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (192339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (192339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (192839) TEST: Sending 0x0080[0m
+[0;32mI (192839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (192839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (192839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (193339) TEST: Sending 0x0100[0m
+[0;32mI (193339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (193339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (193339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (193839) TEST: Sending 0x0200[0m
+[0;32mI (193839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (193839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (193839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (194339) TEST: Sending 0x0400[0m
+[0;32mI (194339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (194339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (194339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (194839) TEST: Sending 0x0800[0m
+[0;32mI (194839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (194839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (194839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (195339) TEST: Sending 0x1000[0m
+[0;32mI (195339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (195339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (195339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (195839) TEST: Sending 0x2000[0m
+[0;32mI (195839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (195839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (195839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (196339) TEST: Sending 0x4000[0m
+[0;32mI (196339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (196339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (196339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (196839) TEST: Sending 0x8000[0m
+[0;32mI (196839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (196839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (196839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (197339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (197339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (197339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (198339) TEST: Sending 0x0001[0m
+[0;32mI (198339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (198339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (198339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (198839) TEST: Sending 0x0002[0m
+[0;32mI (198839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (198839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (198839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (199339) TEST: Sending 0x0004[0m
+[0;32mI (199339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (199339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (199339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (199839) TEST: Sending 0x0008[0m
+[0;32mI (199839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (199839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (199839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (200339) TEST: Sending 0x0010[0m
+[0;32mI (200339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (200339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (200339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (200839) TEST: Sending 0x0020[0m
+[0;32mI (200839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (200839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (200839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (201339) TEST: Sending 0x0040[0m
+[0;32mI (201339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (201339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (201339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (201839) TEST: Sending 0x0080[0m
+[0;32mI (201839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (201839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (201839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (202339) TEST: Sending 0x0100[0m
+[0;32mI (202339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (202339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (202339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (202839) TEST: Sending 0x0200[0m
+[0;32mI (202839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (202839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (202839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (203339) TEST: Sending 0x0400[0m
+[0;32mI (203339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (203339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (203339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (203839) TEST: Sending 0x0800[0m
+[0;32mI (203839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (203839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (203839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (204339) TEST: Sending 0x1000[0m
+[0;32mI (204339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (204339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (204339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (204839) TEST: Sending 0x2000[0m
+[0;32mI (204839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (204839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (204839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (205339) TEST: Sending 0x4000[0m
+[0;32mI (205339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (205339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (205339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (205839) TEST: Sending 0x8000[0m
+[0;32mI (205839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (205839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (205839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (206339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (206339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (206339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (207339) TEST: Sending 0x0001[0m
+[0;32mI (207339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (207339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (207339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (207839) TEST: Sending 0x0002[0m
+[0;32mI (207839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (207839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (207839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (208339) TEST: Sending 0x0004[0m
+[0;32mI (208339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (208339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (208339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (208839) TEST: Sending 0x0008[0m
+[0;32mI (208839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (208839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (208839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (209339) TEST: Sending 0x0010[0m
+[0;32mI (209339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (209339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (209339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (209839) TEST: Sending 0x0020[0m
+[0;32mI (209839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (209839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (209839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (210339) TEST: Sending 0x0040[0m
+[0;32mI (210339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (210339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (210339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (210839) TEST: Sending 0x0080[0m
+[0;32mI (210839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (210839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (210839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (211339) TEST: Sending 0x0100[0m
+[0;32mI (211339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (211339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (211339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (211839) TEST: Sending 0x0200[0m
+[0;32mI (211839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (211839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (211839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (212339) TEST: Sending 0x0400[0m
+[0;32mI (212339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (212339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (212339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (212839) TEST: Sending 0x0800[0m
+[0;32mI (212839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (212839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (212839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (213339) TEST: Sending 0x1000[0m
+[0;32mI (213339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (213339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (213339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (213839) TEST: Sending 0x2000[0m
+[0;32mI (213839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (213839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (213839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (214339) TEST: Sending 0x4000[0m
+[0;32mI (214339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (214339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (214339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (214839) TEST: Sending 0x8000[0m
+[0;32mI (214839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (214839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (214839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (215339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (215339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (215339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (216339) TEST: Sending 0x0001[0m
+[0;32mI (216339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (216339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (216339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (216839) TEST: Sending 0x0002[0m
+[0;32mI (216839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (216839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (216839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (217339) TEST: Sending 0x0004[0m
+[0;32mI (217339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (217339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (217339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (217839) TEST: Sending 0x0008[0m
+[0;32mI (217839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (217839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (217839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (218339) TEST: Sending 0x0010[0m
+[0;32mI (218339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (218339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (218339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (218839) TEST: Sending 0x0020[0m
+[0;32mI (218839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (218839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (218839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (219339) TEST: Sending 0x0040[0m
+[0;32mI (219339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (219339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (219339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (219839) TEST: Sending 0x0080[0m
+[0;32mI (219839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (219839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (219839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (220339) TEST: Sending 0x0100[0m
+[0;32mI (220339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (220339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (220339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (220839) TEST: Sending 0x0200[0m
+[0;32mI (220839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (220839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (220839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (221339) TEST: Sending 0x0400[0m
+[0;32mI (221339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (221339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (221339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (221839) TEST: Sending 0x0800[0m
+[0;32mI (221839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (221839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (221839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (222339) TEST: Sending 0x1000[0m
+[0;32mI (222339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (222339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (222339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (222839) TEST: Sending 0x2000[0m
+[0;32mI (222839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (222839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (222839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (223339) TEST: Sending 0x4000[0m
+[0;32mI (223339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (223339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (223339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (223839) TEST: Sending 0x8000[0m
+[0;32mI (223839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (223839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (223839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (224339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (224339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (224339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (225339) TEST: Sending 0x0001[0m
+[0;32mI (225339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (225339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (225339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (225839) TEST: Sending 0x0002[0m
+[0;32mI (225839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (225839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (225839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (226339) TEST: Sending 0x0004[0m
+[0;32mI (226339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (226339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (226339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (226839) TEST: Sending 0x0008[0m
+[0;32mI (226839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (226839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (226839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (227339) TEST: Sending 0x0010[0m
+[0;32mI (227339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (227339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (227339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (227839) TEST: Sending 0x0020[0m
+[0;32mI (227839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (227839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (227839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (228339) TEST: Sending 0x0040[0m
+[0;32mI (228339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (228339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (228339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (228839) TEST: Sending 0x0080[0m
+[0;32mI (228839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (228839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (228839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (229339) TEST: Sending 0x0100[0m
+[0;32mI (229339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (229339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (229339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (229839) TEST: Sending 0x0200[0m
+[0;32mI (229839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (229839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (229839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (230339) TEST: Sending 0x0400[0m
+[0;32mI (230339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (230339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (230339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (230839) TEST: Sending 0x0800[0m
+[0;32mI (230839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (230839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (230839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (231339) TEST: Sending 0x1000[0m
+[0;32mI (231339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (231339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (231339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (231839) TEST: Sending 0x2000[0m
+[0;32mI (231839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (231839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (231839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (232339) TEST: Sending 0x4000[0m
+[0;32mI (232339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (232339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (232339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (232839) TEST: Sending 0x8000[0m
+[0;32mI (232839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (232839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (232839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (233339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (233339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (233339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (234339) TEST: Sending 0x0001[0m
+[0;32mI (234339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (234339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (234339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (234839) TEST: Sending 0x0002[0m
+[0;32mI (234839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (234839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (234839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (235339) TEST: Sending 0x0004[0m
+[0;32mI (235339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (235339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (235339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (235839) TEST: Sending 0x0008[0m
+[0;32mI (235839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (235839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (235839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (236339) TEST: Sending 0x0010[0m
+[0;32mI (236339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (236339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (236339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (236839) TEST: Sending 0x0020[0m
+[0;32mI (236839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (236839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (236839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (237339) TEST: Sending 0x0040[0m
+[0;32mI (237339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (237339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (237339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (237839) TEST: Sending 0x0080[0m
+[0;32mI (237839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (237839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (237839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (238339) TEST: Sending 0x0100[0m
+[0;32mI (238339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (238339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (238339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (238839) TEST: Sending 0x0200[0m
+[0;32mI (238839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (238839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (238839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (239339) TEST: Sending 0x0400[0m
+[0;32mI (239339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (239339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (239339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (239839) TEST: Sending 0x0800[0m
+[0;32mI (239839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (239839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (239839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (240339) TEST: Sending 0x1000[0m
+[0;32mI (240339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (240339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (240339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (240839) TEST: Sending 0x2000[0m
+[0;32mI (240839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (240839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (240839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (241339) TEST: Sending 0x4000[0m
+[0;32mI (241339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (241339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (241339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (241839) TEST: Sending 0x8000[0m
+[0;32mI (241839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (241839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (241839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (242339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (242339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (242339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (243339) TEST: Sending 0x0001[0m
+[0;32mI (243339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (243339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (243339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (243839) TEST: Sending 0x0002[0m
+[0;32mI (243839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (243839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (243839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (244339) TEST: Sending 0x0004[0m
+[0;32mI (244339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (244339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (244339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (244839) TEST: Sending 0x0008[0m
+[0;32mI (244839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (244839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (244839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (245339) TEST: Sending 0x0010[0m
+[0;32mI (245339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (245339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (245339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (245839) TEST: Sending 0x0020[0m
+[0;32mI (245839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (245839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (245839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (246339) TEST: Sending 0x0040[0m
+[0;32mI (246339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (246339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (246339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (246839) TEST: Sending 0x0080[0m
+[0;32mI (246839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (246839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (246839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (247339) TEST: Sending 0x0100[0m
+[0;32mI (247339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (247339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (247339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (247839) TEST: Sending 0x0200[0m
+[0;32mI (247839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (247839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (247839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (248339) TEST: Sending 0x0400[0m
+[0;32mI (248339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (248339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (248339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (248839) TEST: Sending 0x0800[0m
+[0;32mI (248839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (248839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (248839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (249339) TEST: Sending 0x1000[0m
+[0;32mI (249339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (249339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (249339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (249839) TEST: Sending 0x2000[0m
+[0;32mI (249839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (249839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (249839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (250339) TEST: Sending 0x4000[0m
+[0;32mI (250339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (250339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (250339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (250839) TEST: Sending 0x8000[0m
+[0;32mI (250839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (250839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (250839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (251339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (251339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (251339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (252339) TEST: Sending 0x0001[0m
+[0;32mI (252339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (252339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (252339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (252839) TEST: Sending 0x0002[0m
+[0;32mI (252839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (252839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (252839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (253339) TEST: Sending 0x0004[0m
+[0;32mI (253339) SPI1Manager: writeValves 0x0004[0m
+[0;32mI (253339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0004 tx=[0x40 0x12 0x04 0x00][0m
+[0;32mI (253339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (253839) TEST: Sending 0x0008[0m
+[0;32mI (253839) SPI1Manager: writeValves 0x0008[0m
+[0;32mI (253839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0008 tx=[0x40 0x12 0x08 0x00][0m
+[0;32mI (253839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (254339) TEST: Sending 0x0010[0m
+[0;32mI (254339) SPI1Manager: writeValves 0x0010[0m
+[0;32mI (254339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0010 tx=[0x40 0x12 0x10 0x00][0m
+[0;32mI (254339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (254839) TEST: Sending 0x0020[0m
+[0;32mI (254839) SPI1Manager: writeValves 0x0020[0m
+[0;32mI (254839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0020 tx=[0x40 0x12 0x20 0x00][0m
+[0;32mI (254839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (255339) TEST: Sending 0x0040[0m
+[0;32mI (255339) SPI1Manager: writeValves 0x0040[0m
+[0;32mI (255339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0040 tx=[0x40 0x12 0x40 0x00][0m
+[0;32mI (255339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (255839) TEST: Sending 0x0080[0m
+[0;32mI (255839) SPI1Manager: writeValves 0x0080[0m
+[0;32mI (255839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0080 tx=[0x40 0x12 0x80 0x00][0m
+[0;32mI (255839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (256339) TEST: Sending 0x0100[0m
+[0;32mI (256339) SPI1Manager: writeValves 0x0100[0m
+[0;32mI (256339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0100 tx=[0x40 0x12 0x00 0x01][0m
+[0;32mI (256339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (256839) TEST: Sending 0x0200[0m
+[0;32mI (256839) SPI1Manager: writeValves 0x0200[0m
+[0;32mI (256839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0200 tx=[0x40 0x12 0x00 0x02][0m
+[0;32mI (256839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (257339) TEST: Sending 0x0400[0m
+[0;32mI (257339) SPI1Manager: writeValves 0x0400[0m
+[0;32mI (257339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0400 tx=[0x40 0x12 0x00 0x04][0m
+[0;32mI (257339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (257839) TEST: Sending 0x0800[0m
+[0;32mI (257839) SPI1Manager: writeValves 0x0800[0m
+[0;32mI (257839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0800 tx=[0x40 0x12 0x00 0x08][0m
+[0;32mI (257839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (258339) TEST: Sending 0x1000[0m
+[0;32mI (258339) SPI1Manager: writeValves 0x1000[0m
+[0;32mI (258339) SPI1Manager: mcpWrite16 reg=0x12 value=0x1000 tx=[0x40 0x12 0x00 0x10][0m
+[0;32mI (258339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (258839) TEST: Sending 0x2000[0m
+[0;32mI (258839) SPI1Manager: writeValves 0x2000[0m
+[0;32mI (258839) SPI1Manager: mcpWrite16 reg=0x12 value=0x2000 tx=[0x40 0x12 0x00 0x20][0m
+[0;32mI (258839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (259339) TEST: Sending 0x4000[0m
+[0;32mI (259339) SPI1Manager: writeValves 0x4000[0m
+[0;32mI (259339) SPI1Manager: mcpWrite16 reg=0x12 value=0x4000 tx=[0x40 0x12 0x00 0x40][0m
+[0;32mI (259339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (259839) TEST: Sending 0x8000[0m
+[0;32mI (259839) SPI1Manager: writeValves 0x8000[0m
+[0;32mI (259839) SPI1Manager: mcpWrite16 reg=0x12 value=0x8000 tx=[0x40 0x12 0x00 0x80][0m
+[0;32mI (259839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (260339) SPI1Manager: writeValves 0x0000[0m
+[0;32mI (260339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0000 tx=[0x40 0x12 0x00 0x00][0m
+[0;32mI (260339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (261339) TEST: Sending 0x0001[0m
+[0;32mI (261339) SPI1Manager: writeValves 0x0001[0m
+[0;32mI (261339) SPI1Manager: mcpWrite16 reg=0x12 value=0x0001 tx=[0x40 0x12 0x01 0x00][0m
+[0;32mI (261339) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (261839) TEST: Sending 0x0002[0m
+[0;32mI (261839) SPI1Manager: writeValves 0x0002[0m
+[0;32mI (261839) SPI1Manager: mcpWrite16 reg=0x12 value=0x0002 tx=[0x40 0x12 0x02 0x00][0m
+[0;32mI (261839) SPI1Manager: spi_device_transmit -> ESP_OK[0m
+[0;32mI (262339) TEST: Sending 0x0004[0m
+[0;32mI (262

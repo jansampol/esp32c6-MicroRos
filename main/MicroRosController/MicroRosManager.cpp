@@ -8,6 +8,7 @@
 
 #include "esp_log.h"
 #include "esp_err.h"
+#include "esp_netif.h"
 
 #include <rcl/error_handling.h>
 #include <rmw_microros/rmw_microros.h>
@@ -382,6 +383,47 @@ void MicroRosManager::update()
     if (rc != RCL_RET_OK && rc != RCL_RET_TIMEOUT) {
         ESP_LOGW(TAG, "rclc_executor_spin_some failed: %d", (int)rc);
     }
+}
+
+bool MicroRosManager::isWifiConnected()
+{
+    esp_netif_t *sta_netif = esp_netif_get_handle_from_ifkey("WIFI_STA_DEF");
+    if (sta_netif == nullptr) {
+        return false;
+    }
+
+    esp_netif_ip_info_t ip_info = {};
+    if (esp_netif_get_ip_info(sta_netif, &ip_info) != ESP_OK) {
+        return false;
+    }
+
+    return (ip_info.ip.addr != 0);
+}
+
+bool MicroRosManager::getWifiIp(char *out, size_t out_size)
+{
+    if (out == nullptr || out_size == 0) {
+        return false;
+    }
+
+    out[0] = '\0';
+
+    esp_netif_t *sta_netif = esp_netif_get_handle_from_ifkey("WIFI_STA_DEF");
+    if (sta_netif == nullptr) {
+        return false;
+    }
+
+    esp_netif_ip_info_t ip_info = {};
+    if (esp_netif_get_ip_info(sta_netif, &ip_info) != ESP_OK) {
+        return false;
+    }
+
+    if (ip_info.ip.addr == 0) {
+        return false;
+    }
+
+    snprintf(out, out_size, IPSTR, IP2STR(&ip_info.ip));
+    return true;
 }
 
 bool MicroRosManager::hasNewPath() const

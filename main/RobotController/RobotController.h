@@ -91,6 +91,8 @@ public:
     void setTargetVelocity(size_t idx, float velocity);
     void setTargetVelocities(const std::vector<float> &velocities);
 
+    void setSynchronizedJointTargetSteps(const std::vector<int>& steps, float baseMaxVelocity);
+
     void updateCurrentPosition();
     void updateTargetPosition();
 

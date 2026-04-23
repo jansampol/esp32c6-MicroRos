@@ -1,0 +1,1723 @@
+Command: /Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf_monitor.py -p /dev/cu.usbserial-140 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf -m '/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf.py' '-p' '/dev/cu.usbserial-140'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xfa8
+load:0x4086e610,len:0x31a8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  5 2026 11:04:44[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (71) boot:  3 coredump         Unknown data     01 03 00210000 00010000[0m
+[0;32mI (78) boot:  4 littlefs         Unknown data     01 82 00220000 0007d000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42100020 size=28890h (166032) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=000388b8 vaddr=40800000 size=07760h ( 30560) load[0m
+[0;32mI (134) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=f11c0h (987584) map[0m
+[0;32mI (319) esp_image: segment 3: paddr=001311e8 vaddr=40807760 size=1492ch ( 84268) load[0m
+[0;32mI (338) esp_image: segment 4: paddr=00145b1c vaddr=4081c090 size=047d8h ( 18392) load[0m
+[0;32mI (350) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (350) boot: Disabling RNG early entropy source...[0m
+[0;32mI (360) cpu_start: Unicore app[0m
+[0;32mI (368) cpu_start: Pro cpu start user code[0m
+[0;32mI (369) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (369) app_init: Application information:[0m
+[0;32mI (369) app_init: Project name:     esp32c6_microros_test[0m
+[0;32mI (374) app_init: App version:      69ba50f-dirty[0m
+[0;32mI (378) app_init: Compile time:     Apr 13 2026 13:22:00[0m
+[0;32mI (383) app_init: ELF file SHA256:  b9a349b88...[0m
+[0;32mI (387) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (391) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (395) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (399) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (403) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (409) heap_init: At 4082B2F0 len 00051320 (324 KiB): RAM[0m
+[0;32mI (414) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (419) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (426) spi_flash: detected chip: generic[0m
+[0;32mI (428) spi_flash: flash io: dio[0m
+[0;33mW (431) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (446) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (450) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (456) coexist: coex firmware version: 831ec70[0m
+[0;32mI (475) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (475) main_task: Started on CPU0[0m
+[0;32mI (475) main_task: Calling app_main()[0m
+app_main started
+[0;32mI (485) SPI1Manager: SPI1Manager begin()[0m
+[0;32mI (485) SPI1Manager: Using pins MOSI=19 MISO=20 CLK=15 CS=23[0m
+[0;32mI (485) RobotController: Switched to PURPLE_MAMRI[0m
+[0;32mI (485) MicroRosManager: Initializing WiFi transport...[0m
+[0;32mI (485) wifi_station_netif: ESP_WIFI_MODE_STA[0m
+[0;32mI (495) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (495) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (515) wifi:wifi driver task: 40832694, prio:23, stack:6656, core=0[0m
+[0;32mI (515) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (515) wifi:wifi certification version: v7.0[0m
+[0;32mI (515) wifi:config NVS flash: enabled[0m
+[0;32mI (515) wifi:config nano formatting: disabled[0m
+[0;32mI (525) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (525) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (535) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (535) wifi:Init management short buffer num: 32[0m
+[0;32mI (545) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (545) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (555) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (555) wifi:Init static rx buffer num: 10[0m
+[0;32mI (555) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (565) wifi_init: rx ba win: 6[0m
+[0;32mI (565) wifi_init: accept mbox: 6[0m
+[0;32mI (565) wifi_init: tcpip mbox: 32[0m
+[0;32mI (575) wifi_init: udp mbox: 6[0m
+[0;32mI (575) wifi_init: tcp mbox: 6[0m
+[0;32mI (575) wifi_init: tcp tx win: 5760[0m
+[0;32mI (585) wifi_init: tcp rx win: 5760[0m
+[0;32mI (585) wifi_init: tcp mss: 1440[0m
+[0;32mI (585) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (595) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (595) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;33mW (595) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (605) phy_init: phy_version 331,5b89037,Mar  3 2025,16:01:12[0m
+[0;33mW (675) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (675) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (685) wifi:(agc)0x600a7128:0xd2185a6a, min.avgNF:0xce->0xd2(dB), RCalCount:0x185, min.RRssi:0xa6a(-89.38)[0m
+[0;32mI (695) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (705) wifi:mode : sta (20:6e:f1:18:8c:28)[0m
+[0;32mI (705) wifi:enable tsf[0m
+[0;32mI (705) wifi_station_netif: wifi_init_sta finished.[0m
+[0;32mI (715) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (715) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (725) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (755) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (805) wifi:(assoc)RESP, Extended Capabilities length:1, operating_mode_notification:0[0m
+[0;32mI (805) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (805) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (815) wifi:(trc)phytype:CBW20-SGI, snr:57, maxRate:144, highestRateIdx:0[0m
+[0;33mW (815) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (825) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:57, ampduState:wait operational[0m
+[0;32mI (835) wifi:ifidx:0, rssi:-39, nf:-96, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (845) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:4(2 us)[0m
+[0;32mI (885) wifi:connected with MyNewHotspot, aid = 6, channel 1, BW20, bssid = c2:de:de:da:8c:bb[0m
+[0;32mI (885) wifi:security: WPA2-PSK, phy:bgn, rssi:-39, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (895) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (895) wifi:pm start, type:1, aid:0x6, trans-BSSID:c2:de:de:da:8c:bb, BSSID[5]:0xbb, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (905) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (915) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (925) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (935) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (945) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (955) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (965) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (965) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (1025) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100bb8c, TALO:0xdadedec2, (ssn:0, win:64, cur_ssn:0), CONF:0xc0000005[0m
+[0;32mI (1035) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1055) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (2145) esp_netif_handlers: sta ip: 192.168.223.75, mask: 255.255.255.0, gw: 192.168.223.197[0m
+[0;32mI (2145) wifi_station_netif: got ip:192.168.223.75[0m
+[0;32mI (2145) wifi_station_netif: connected to ap SSID:MyNewHotspot password:12345678[0m
+[0;32mI (2145) MicroRosManager: Waiting before micro-ROS init...[0m
+[0;33mW (5265) wifi:<ba-add>idx:1, ifx:0, tid:6, TAHI:0x100bb8c, TALO:0xdadedec2, (ssn:2, win:64, cur_ssn:2), CONF:0xc0006005[0m
+[0;32mI (5525) MicroRosManager: micro-ROS entities created[0m
+[0;32mI (5525) MicroRosManager: micro-ROS base ready[0m
+[0;32mI (5525) app_main: Application initialized successfully[0m
+[0;32mI (7025) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (7025) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (7025) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (7025) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (7035) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (7045) RobotController: valve_state=0x0000[0m
+[0;32mI (8545) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (8545) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (8545) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (8545) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (8555) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (8565) RobotController: valve_state=0x0000[0m
+[0;32mI (10065) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (10065) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (10065) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (10065) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (10075) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (10085) RobotController: valve_state=0x0000[0m
+[0;32mI (11585) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (11585) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (11585) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (11585) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (11595) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (11605) RobotController: valve_state=0x0000[0m
+[0;32mI (13105) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (13105) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (13105) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (13105) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (13115) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (13125) RobotController: valve_state=0x0000[0m
+[0;32mI (14625) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (14625) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (14625) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (14625) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (14635) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (14645) RobotController: valve_state=0x0000[0m
+[0;32mI (16145) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (16145) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (16145) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (16145) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (16155) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (16165) RobotController: valve_state=0x0000[0m
+[0;32mI (17665) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (17665) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (17665) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (17665) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (17675) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (17685) RobotController: valve_state=0x0000[0m
+[0;32mI (19185) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (19185) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (19185) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (19185) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (19195) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (19205) RobotController: valve_state=0x0000[0m
+[0;32mI (20705) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (20705) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (20705) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (20705) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (20715) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (20725) RobotController: valve_state=0x0000[0m
+[0;32mI (22225) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (22225) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (22225) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (22225) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (22235) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (22245) RobotController: valve_state=0x0000[0m
+[0;32mI (23745) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (23745) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (23745) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (23745) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (23755) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (23765) RobotController: valve_state=0x0000[0m
+[0;32mI (25265) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (25265) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (25265) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (25265) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (25275) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (25285) RobotController: valve_state=0x0000[0m
+[0;32mI (26785) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (26785) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (26785) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (26785) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (26795) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (26805) RobotController: valve_state=0x0000[0m
+[0;32mI (28305) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (28305) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (28305) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (28305) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (28315) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (28325) RobotController: valve_state=0x0000[0m
+[0;32mI (29825) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (29825) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (29825) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (29825) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (29835) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (29845) RobotController: valve_state=0x0000[0m
+[0;32mI (31345) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (31345) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (31345) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (31355) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (31355) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (31365) RobotController: valve_state=0x0000[0m
+[0;32mI (32865) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (32865) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (32865) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (32865) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (32875) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (32885) RobotController: valve_state=0x0000[0m
+[0;32mI (34385) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (34385) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (34385) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (34385) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (34395) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (34405) RobotController: valve_state=0x0000[0m
+[0;32mI (35905) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (35905) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (35905) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (35905) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (35915) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (35925) RobotController: valve_state=0x0000[0m
+[0;32mI (37425) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (37425) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (37425) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (37425) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (37435) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (37445) RobotController: valve_state=0x0000[0m
+[0;32mI (38945) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (38945) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (38945) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (38945) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (38955) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (38965) RobotController: valve_state=0x0000[0m
+[0;32mI (40465) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (40465) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (40465) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (40465) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (40475) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (40485) RobotController: valve_state=0x0000[0m
+[0;32mI (41985) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (41985) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (41985) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (41985) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (41995) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (42005) RobotController: valve_state=0x0000[0m
+[0;32mI (43505) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (43505) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (43505) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (43505) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (43515) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (43525) RobotController: valve_state=0x0000[0m
+[0;32mI (45025) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (45025) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (45025) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (45025) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (45035) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (45045) RobotController: valve_state=0x0000[0m
+[0;32mI (46545) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (46545) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (46545) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (46545) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (46555) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (46565) RobotController: valve_state=0x0000[0m
+[0;32mI (48065) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (48065) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (48065) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (48065) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (48075) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (48085) RobotController: valve_state=0x0000[0m
+[0;32mI (49585) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (49585) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (49585) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (49585) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (49595) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (49605) RobotController: valve_state=0x0000[0m
+[0;32mI (51105) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (51105) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (51105) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (51105) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (51115) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (51125) RobotController: valve_state=0x0000[0m
+[0;32mI (52625) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (52625) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (52625) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (52625) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (52635) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (52645) RobotController: valve_state=0x0000[0m
+[0;32mI (54145) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (54145) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (54145) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (54145) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (54155) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (54165) RobotController: valve_state=0x0000[0m
+[0;32mI (55665) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (55665) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (55665) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (55665) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (55675) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (55685) RobotController: valve_state=0x0000[0m
+[0;32mI (57185) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (57185) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (57185) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (57185) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (57195) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (57205) RobotController: valve_state=0x0000[0m
+[0;32mI (58705) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (58705) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (58705) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (58705) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (58715) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (58725) RobotController: valve_state=0x0000[0m
+[0;32mI (60225) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (60225) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (60225) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (60235) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (60235) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (60245) RobotController: valve_state=0x0000[0m
+[0;32mI (61745) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (61745) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (61745) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (61745) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (61755) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (61765) RobotController: valve_state=0x0000[0m
+[0;32mI (63265) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (63265) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (63265) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (63265) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (63275) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (63285) RobotController: valve_state=0x0000[0m
+[0;32mI (64785) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (64785) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (64785) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (64785) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (64795) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (64805) RobotController: valve_state=0x0000[0m
+[0;32mI (66305) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (66305) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (66305) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (66305) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (66315) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (66325) RobotController: valve_state=0x0000[0m
+[0;32mI (67825) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (67825) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (67825) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (67835) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (67835) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (67845) RobotController: valve_state=0x0000[0m
+[0;32mI (69345) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (69345) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (69345) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (69345) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (69355) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (69365) RobotController: valve_state=0x0000[0m
+[0;32mI (70865) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (70865) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (70865) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (70865) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (70875) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (70885) RobotController: valve_state=0x0000[0m
+[0;32mI (72385) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (72385) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (72385) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (72385) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (72395) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (72405) RobotController: valve_state=0x0000[0m
+[0;32mI (73905) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (73905) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (73905) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (73905) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (73915) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (73925) RobotController: valve_state=0x0000[0m
+[0;32mI (75425) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (75425) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (75425) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (75425) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (75435) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (75445) RobotController: valve_state=0x0000[0m
+[0;32mI (76945) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (76945) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (76945) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (76945) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (76955) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (76965) RobotController: valve_state=0x0000[0m
+[0;32mI (78465) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (78465) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (78465) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (78465) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (78475) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (78485) RobotController: valve_state=0x0000[0m
+[0;32mI (79985) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (79985) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (79985) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (79995) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (79995) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (80005) RobotController: valve_state=0x0000[0m
+[0;32mI (81505) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (81505) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (81505) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (81505) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (81515) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (81525) RobotController: valve_state=0x0000[0m
+[0;32mI (83025) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (83025) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (83025) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (83025) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (83035) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (83045) RobotController: valve_state=0x0000[0m
+[0;32mI (84545) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (84545) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (84545) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (84545) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (84555) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (84565) RobotController: valve_state=0x0000[0m
+[0;32mI (86065) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (86065) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (86065) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (86065) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (86075) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (86085) RobotController: valve_state=0x0000[0m
+[0;32mI (87585) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (87585) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (87585) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (87585) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (87595) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (87605) RobotController: valve_state=0x0000[0m
+[0;32mI (89105) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (89105) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (89105) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (89105) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (89115) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (89125) RobotController: valve_state=0x0000[0m
+[0;32mI (90625) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (90625) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (90625) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (90625) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (90635) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (90645) RobotController: valve_state=0x0000[0m
+[0;32mI (92145) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (92145) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (92145) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (92145) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (92155) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (92165) RobotController: valve_state=0x0000[0m
+[0;32mI (93665) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (93665) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (93665) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (93665) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (93675) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (93685) RobotController: valve_state=0x0000[0m
+[0;32mI (95185) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (95185) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (95185) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (95185) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (95195) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (95205) RobotController: valve_state=0x0000[0m
+[0;32mI (96705) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (96705) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (96705) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (96705) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (96715) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (96725) RobotController: valve_state=0x0000[0m
+[0;32mI (98225) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (98225) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (98225) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (98225) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (98235) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (98245) RobotController: valve_state=0x0000[0m
+[0;32mI (99745) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (99745) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (99745) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (99745) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (99755) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (99765) RobotController: valve_state=0x0000[0m
+[0;32mI (101265) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (101265) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (101265) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (101265) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (101275) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (101285) RobotController: valve_state=0x0000[0m
+[0;32mI (102785) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (102785) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (102785) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (102785) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (102795) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (102805) RobotController: valve_state=0x0000[0m
+[0;32mI (104305) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (104305) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (104305) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (104305) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (104315) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (104325) RobotController: valve_state=0x0000[0m
+[0;32mI (105825) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (105825) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (105825) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (105835) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (105835) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (105845) RobotController: valve_state=0x0000[0m
+[0;32mI (107345) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (107345) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (107345) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (107345) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (107355) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (107365) RobotController: valve_state=0x0000[0m
+[0;32mI (108865) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (108865) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (108865) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (108875) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (108875) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (108885) RobotController: valve_state=0x0000[0m
+[0;32mI (110385) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (110385) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (110385) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (110385) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (110395) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (110405) RobotController: valve_state=0x0000[0m
+[0;32mI (111905) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (111905) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (111905) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (111905) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (111915) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (111925) RobotController: valve_state=0x0000[0m
+[0;32mI (113425) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (113425) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (113425) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (113425) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (113435) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (113445) RobotController: valve_state=0x0000[0m
+[0;32mI (114945) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (114945) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (114945) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (114945) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (114955) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (114965) RobotController: valve_state=0x0000[0m
+[0;32mI (116465) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (116465) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (116465) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (116465) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (116475) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (116485) RobotController: valve_state=0x0000[0m
+[0;32mI (117985) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (117985) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (117985) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (117995) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (117995) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (118005) RobotController: valve_state=0x0000[0m
+[0;32mI (119505) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (119505) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (119505) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (119505) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (119515) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (119525) RobotController: valve_state=0x0000[0m
+[0;32mI (121025) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (121025) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (121025) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (121025) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (121035) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (121045) RobotController: valve_state=0x0000[0m
+[0;32mI (122545) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (122545) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (122545) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (122545) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (122555) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (122565) RobotController: valve_state=0x0000[0m
+[0;32mI (124065) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (124065) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (124065) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (124065) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (124075) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (124085) RobotController: valve_state=0x0000[0m
+[0;32mI (125585) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (125585) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (125585) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (125585) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (125595) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (125605) RobotController: valve_state=0x0000[0m
+[0;32mI (127105) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (127105) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (127105) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (127105) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (127115) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (127125) RobotController: valve_state=0x0000[0m
+[0;32mI (128625) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (128625) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (128625) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (128625) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (128635) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (128645) RobotController: valve_state=0x0000[0m
+[0;32mI (130145) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (130145) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (130145) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (130145) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (130155) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (130165) RobotController: valve_state=0x0000[0m
+[0;32mI (131665) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (131665) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (131665) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (131665) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (131675) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (131685) RobotController: valve_state=0x0000[0m
+[0;32mI (133185) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (133185) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (133185) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (133185) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (133195) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (133205) RobotController: valve_state=0x0000[0m
+[0;32mI (134705) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (134705) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (134705) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (134715) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (134715) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (134725) RobotController: valve_state=0x0000[0m
+[0;32mI (136225) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (136225) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (136225) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (136225) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (136235) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (136245) RobotController: valve_state=0x0000[0m
+[0;32mI (137745) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (137745) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (137745) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (137755) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (137755) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (137765) RobotController: valve_state=0x0000[0m
+[0;32mI (139265) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (139265) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (139265) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (139265) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (139275) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (139285) RobotController: valve_state=0x0000[0m
+[0;32mI (140785) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (140785) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (140785) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (140785) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (140795) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (140805) RobotController: valve_state=0x0000[0m
+[0;32mI (142305) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (142305) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (142305) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (142305) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (142315) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (142325) RobotController: valve_state=0x0000[0m
+[0;32mI (143825) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (143825) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (143825) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (143825) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (143835) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (143845) RobotController: valve_state=0x0000[0m
+[0;32mI (145345) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (145345) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (145345) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (145355) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (145355) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (145365) RobotController: valve_state=0x0000[0m
+[0;32mI (146865) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (146865) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (146865) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (146875) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (146875) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (146885) RobotController: valve_state=0x0000[0m
+[0;32mI (148385) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (148385) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (148385) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (148385) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (148395) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (148405) RobotController: valve_state=0x0000[0m
+[0;32mI (149905) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (149905) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (149905) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (149905) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (149915) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (149925) RobotController: valve_state=0x0000[0m
+[0;32mI (151425) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (151425) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (151425) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (151425) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (151435) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (151445) RobotController: valve_state=0x0000[0m
+[0;32mI (152945) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (152945) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (152945) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (152955) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (152955) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (152965) RobotController: valve_state=0x0000[0m
+[0;32mI (154465) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (154465) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (154465) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (154475) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (154475) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (154485) RobotController: valve_state=0x0000[0m
+[0;32mI (155985) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (155985) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (155985) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (155995) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (155995) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (156005) RobotController: valve_state=0x0000[0m
+[0;32mI (157505) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (157505) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (157505) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (157505) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (157515) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (157525) RobotController: valve_state=0x0000[0m
+[0;32mI (159025) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (159025) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (159025) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (159025) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (159035) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (159045) RobotController: valve_state=0x0000[0m
+[0;32mI (160545) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (160545) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (160545) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (160545) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (160555) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (160565) RobotController: valve_state=0x0000[0m
+[0;32mI (162065) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (162065) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (162065) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (162065) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (162075) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (162085) RobotController: valve_state=0x0000[0m
+[0;32mI (163585) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (163585) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (163585) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (163585) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (163595) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (163605) RobotController: valve_state=0x0000[0m
+[0;32mI (165105) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (165105) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (165105) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (165105) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (165115) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (165125) RobotController: valve_state=0x0000[0m
+[0;32mI (166625) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (166625) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (166625) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (166635) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (166635) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (166645) RobotController: valve_state=0x0000[0m
+[0;32mI (168145) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (168145) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (168145) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (168145) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (168155) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (168165) RobotController: valve_state=0x0000[0m
+[0;32mI (169665) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (169665) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (169665) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (169665) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (169675) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (169685) RobotController: valve_state=0x0000[0m
+[0;32mI (171185) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (171185) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (171185) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (171185) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (171195) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (171205) RobotController: valve_state=0x0000[0m
+[0;32mI (172705) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (172705) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (172705) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (172715) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (172715) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (172725) RobotController: valve_state=0x0000[0m
+[0;32mI (174225) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (174225) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (174225) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (174225) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (174235) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (174245) RobotController: valve_state=0x0000[0m
+[0;32mI (175745) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (175745) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (175745) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (175755) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (175755) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (175765) RobotController: valve_state=0x0000[0m
+[0;32mI (177265) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (177265) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (177265) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (177265) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (177275) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (177285) RobotController: valve_state=0x0000[0m
+[0;32mI (178785) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (178785) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (178785) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (178785) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (178795) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (178805) RobotController: valve_state=0x0000[0m
+[0;32mI (180305) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (180305) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (180305) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (180305) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (180315) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (180325) RobotController: valve_state=0x0000[0m
+[0;32mI (181825) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (181825) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (181825) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (181825) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (181835) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (181845) RobotController: valve_state=0x0000[0m
+[0;32mI (183345) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (183345) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (183345) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (183345) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (183355) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (183365) RobotController: valve_state=0x0000[0m
+[0;32mI (184865) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (184865) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (184865) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (184875) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (184875) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (184885) RobotController: valve_state=0x0000[0m
+[0;32mI (186385) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (186385) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (186385) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (186385) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (186395) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (186405) RobotController: valve_state=0x0000[0m
+[0;32mI (187905) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (187905) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (187905) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (187905) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (187915) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (187925) RobotController: valve_state=0x0000[0m
+[0;32mI (189425) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (189425) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (189425) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (189425) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (189435) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (189445) RobotController: valve_state=0x0000[0m
+[0;32mI (190945) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (190945) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (190945) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (190945) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (190955) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (190965) RobotController: valve_state=0x0000[0m
+[0;32mI (192465) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (192465) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (192465) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (192475) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (192475) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (192485) RobotController: valve_state=0x0000[0m
+[0;32mI (193985) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (193985) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (193985) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (193985) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (193995) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (194005) RobotController: valve_state=0x0000[0m
+[0;32mI (195505) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (195505) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (195505) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (195515) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (195515) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (195525) RobotController: valve_state=0x0000[0m
+[0;32mI (197025) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (197025) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (197025) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (197025) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (197035) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (197045) RobotController: valve_state=0x0000[0m
+[0;32mI (198545) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (198545) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (198545) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (198545) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (198555) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (198565) RobotController: valve_state=0x0000[0m
+[0;32mI (200065) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (200065) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (200065) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (200065) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (200075) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (200085) RobotController: valve_state=0x0000[0m
+[0;32mI (201585) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (201585) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (201585) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (201595) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (201595) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (201605) RobotController: valve_state=0x0000[0m
+[0;32mI (203105) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (203105) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (203105) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (203105) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (203115) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (203125) RobotController: valve_state=0x0000[0m
+[0;32mI (204625) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (204625) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (204625) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (204635) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (204635) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (204645) RobotController: valve_state=0x0000[0m
+[0;32mI (206145) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (206145) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (206145) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (206145) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (206155) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (206165) RobotController: valve_state=0x0000[0m
+[0;32mI (207665) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (207665) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (207665) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (207665) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (207675) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (207685) RobotController: valve_state=0x0000[0m
+[0;32mI (209185) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (209185) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (209185) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (209185) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (209195) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (209205) RobotController: valve_state=0x0000[0m
+[0;32mI (210705) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (210705) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (210705) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (210705) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (210715) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (210725) RobotController: valve_state=0x0000[0m
+[0;32mI (212225) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (212225) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (212225) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (212235) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (212235) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (212245) RobotController: valve_state=0x0000[0m
+[0;32mI (213745) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (213745) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (213745) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (213755) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (213755) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (213765) RobotController: valve_state=0x0000[0m
+[0;32mI (215265) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (215265) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (215265) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (215275) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (215275) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (215285) RobotController: valve_state=0x0000[0m
+[0;32mI (216785) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (216785) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (216785) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (216785) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (216795) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (216805) RobotController: valve_state=0x0000[0m
+[0;32mI (218305) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (218305) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (218305) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (218305) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (218315) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (218325) RobotController: valve_state=0x0000[0m
+[0;32mI (219825) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (219825) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (219825) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (219825) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (219835) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (219845) RobotController: valve_state=0x0000[0m
+[0;32mI (221345) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (221345) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (221345) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (221355) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (221355) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (221365) RobotController: valve_state=0x0000[0m
+[0;32mI (222865) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (222865) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (222865) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (222865) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (222875) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (222885) RobotController: valve_state=0x0000[0m
+[0;32mI (224385) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (224385) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (224385) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (224395) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (224395) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (224405) RobotController: valve_state=0x0000[0m
+[0;32mI (225905) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (225905) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (225905) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (225905) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (225915) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (225925) RobotController: valve_state=0x0000[0m
+[0;32mI (227425) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (227425) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (227425) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (227425) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (227435) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (227445) RobotController: valve_state=0x0000[0m
+[0;32mI (228945) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (228945) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (228945) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (228945) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (228955) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (228965) RobotController: valve_state=0x0000[0m
+[0;32mI (230465) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (230465) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (230465) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (230465) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (230475) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (230485) RobotController: valve_state=0x0000[0m
+[0;32mI (231985) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (231985) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (231985) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (231985) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (231995) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (232005) RobotController: valve_state=0x0000[0m
+[0;32mI (233505) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (233505) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (233505) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (233515) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (233515) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (233525) RobotController: valve_state=0x0000[0m
+[0;32mI (235025) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (235025) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (235025) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (235035) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (235035) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (235045) RobotController: valve_state=0x0000[0m
+[0;32mI (236545) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (236545) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (236545) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (236545) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (236555) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (236565) RobotController: valve_state=0x0000[0m
+[0;32mI (238065) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (238065) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (238065) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (238065) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (238075) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (238085) RobotController: valve_state=0x0000[0m
+[0;32mI (239585) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (239585) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (239585) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (239585) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (239595) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (239605) RobotController: valve_state=0x0000[0m
+[0;32mI (241105) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (241105) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (241105) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (241105) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (241115) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (241125) RobotController: valve_state=0x0000[0m
+[0;32mI (242625) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (242625) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (242625) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (242635) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (242635) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (242645) RobotController: valve_state=0x0000[0m
+[0;32mI (244145) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (244145) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (244145) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (244145) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (244155) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (244165) RobotController: valve_state=0x0000[0m
+[0;32mI (245665) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (245665) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (245665) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (245665) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (245675) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (245685) RobotController: valve_state=0x0000[0m
+[0;32mI (247185) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (247185) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (247185) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (247185) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (247195) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (247205) RobotController: valve_state=0x0000[0m
+[0;32mI (248705) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (248705) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (248705) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (248705) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (248715) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (248725) RobotController: valve_state=0x0000[0m
+[0;32mI (250225) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (250225) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (250225) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (250225) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (250235) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (250245) RobotController: valve_state=0x0000[0m
+[0;32mI (251745) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (251745) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (251745) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (251745) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (251755) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (251765) RobotController: valve_state=0x0000[0m
+[0;32mI (253265) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (253265) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (253265) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (253265) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (253275) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (253285) RobotController: valve_state=0x0000[0m
+[0;32mI (254785) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (254785) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (254785) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (254785) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (254795) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (254805) RobotController: valve_state=0x0000[0m
+[0;32mI (256305) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (256305) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (256305) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (256305) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (256315) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (256325) RobotController: valve_state=0x0000[0m
+[0;32mI (257825) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (257825) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (257825) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (257825) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (257835) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (257845) RobotController: valve_state=0x0000[0m
+[0;32mI (259345) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (259345) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (259345) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (259345) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (259355) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (259365) RobotController: valve_state=0x0000[0m
+[0;32mI (260865) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (260865) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (260865) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (260875) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (260875) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (260885) RobotController: valve_state=0x0000[0m
+[0;32mI (262385) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (262385) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (262385) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (262395) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (262395) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (262405) RobotController: valve_state=0x0000[0m
+[0;32mI (263905) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (263905) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (263905) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (263915) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (263915) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (263925) RobotController: valve_state=0x0000[0m
+[0;32mI (265425) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (265425) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (265425) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (265425) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (265435) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (265445) RobotController: valve_state=0x0000[0m
+[0;32mI (266945) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (266945) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (266945) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (266945) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (266955) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (266965) RobotController: valve_state=0x0000[0m
+[0;32mI (268465) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (268465) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (268465) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (268465) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (268475) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (268485) RobotController: valve_state=0x0000[0m
+[0;32mI (269985) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (269985) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (269985) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (269985) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (269995) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (270005) RobotController: valve_state=0x0000[0m
+[0;32mI (271505) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (271505) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (271505) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (271515) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (271515) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (271525) RobotController: valve_state=0x0000[0m
+[0;32mI (273025) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (273025) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (273025) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (273025) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (273035) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (273045) RobotController: valve_state=0x0000[0m
+[0;32mI (274545) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (274545) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (274545) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (274555) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (274555) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (274565) RobotController: valve_state=0x0000[0m
+[0;32mI (276065) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (276065) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (276065) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (276065) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (276075) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (276085) RobotController: valve_state=0x0000[0m
+[0;32mI (277585) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (277585) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (277585) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (277585) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (277595) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (277605) RobotController: valve_state=0x0000[0m
+[0;32mI (279105) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (279105) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (279105) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (279105) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (279115) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (279125) RobotController: valve_state=0x0000[0m
+[0;32mI (280625) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (280625) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (280625) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (280635) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (280635) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (280645) RobotController: valve_state=0x0000[0m
+[0;32mI (282145) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (282145) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (282145) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (282145) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (282155) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (282165) RobotController: valve_state=0x0000[0m
+[0;32mI (283665) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (283665) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (283665) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (283675) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (283675) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (283685) RobotController: valve_state=0x0000[0m
+[0;32mI (285185) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (285185) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (285185) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (285185) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (285195) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (285205) RobotController: valve_state=0x0000[0m
+[0;32mI (286705) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (286705) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (286705) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (286705) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (286715) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (286725) RobotController: valve_state=0x0000[0m
+[0;32mI (288225) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (288225) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (288225) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (288225) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (288235) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (288245) RobotController: valve_state=0x0000[0m
+[0;32mI (289745) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (289745) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (289745) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (289745) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (289755) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (289765) RobotController: valve_state=0x0000[0m
+[0;32mI (291265) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (291265) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (291265) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (291275) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (291275) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (291285) RobotController: valve_state=0x0000[0m
+[0;32mI (292785) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (292785) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (292785) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (292785) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (292795) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (292805) RobotController: valve_state=0x0000[0m
+[0;32mI (294305) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (294305) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (294305) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (294305) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (294315) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (294325) RobotController: valve_state=0x0000[0m
+[0;32mI (295825) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (295825) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (295825) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (295825) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (295835) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (295845) RobotController: valve_state=0x0000[0m
+[0;32mI (297345) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (297345) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (297345) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (297345) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (297355) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (297365) RobotController: valve_state=0x0000[0m
+[0;32mI (298865) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (298865) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (298865) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (298865) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (298875) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (298885) RobotController: valve_state=0x0000[0m
+[0;32mI (300385) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (300385) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (300385) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (300395) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (300395) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (300405) RobotController: valve_state=0x0000[0m
+[0;32mI (301905) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (301905) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (301905) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (301905) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (301915) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (301925) RobotController: valve_state=0x0000[0m
+[0;32mI (303425) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (303425) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (303425) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (303435) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (303435) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (303445) RobotController: valve_state=0x0000[0m
+[0;32mI (304945) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (304945) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (304945) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (304945) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (304955) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (304965) RobotController: valve_state=0x0000[0m
+[0;32mI (306465) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (306465) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (306465) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (306465) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (306475) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (306485) RobotController: valve_state=0x0000[0m
+[0;32mI (307985) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (307985) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (307985) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (307985) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (307995) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (308005) RobotController: valve_state=0x0000[0m
+[0;32mI (309505) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (309505) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (309505) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (309505) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (309515) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (309525) RobotController: valve_state=0x0000[0m
+[0;32mI (311025) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (311025) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (311025) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (311035) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (311035) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (311045) RobotController: valve_state=0x0000[0m
+[0;32mI (312545) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (312545) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (312545) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (312545) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (312555) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (312565) RobotController: valve_state=0x0000[0m
+[0;32mI (314065) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (314065) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (314065) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (314065) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (314075) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (314085) RobotController: valve_state=0x0000[0m
+[0;32mI (315585) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (315585) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (315585) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (315585) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (315595) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (315605) RobotController: valve_state=0x0000[0m
+[0;32mI (317105) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (317105) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (317105) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (317105) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (317115) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (317125) RobotController: valve_state=0x0000[0m
+[0;32mI (318625) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (318625) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (318625) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (318635) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (318635) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (318645) RobotController: valve_state=0x0000[0m
+[0;32mI (320145) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (320145) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (320145) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (320155) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (320155) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (320165) RobotController: valve_state=0x0000[0m
+[0;32mI (321665) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (321665) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (321665) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (321675) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (321675) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (321685) RobotController: valve_state=0x0000[0m
+[0;32mI (323185) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (323185) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (323185) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (323185) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (323195) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (323205) RobotController: valve_state=0x0000[0m
+[0;32mI (324705) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (324705) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (324705) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (324705) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (324715) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (324725) RobotController: valve_state=0x0000[0m
+[0;32mI (326225) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (326225) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (326225) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (326225) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (326235) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (326245) RobotController: valve_state=0x0000[0m
+[0;32mI (327745) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (327745) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (327745) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (327745) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (327755) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (327765) RobotController: valve_state=0x0000[0m
+[0;32mI (329265) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (329265) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (329265) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (329275) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (329275) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (329285) RobotController: valve_state=0x0000[0m
+[0;32mI (330785) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (330785) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (330785) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (330785) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (330795) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (330805) RobotController: valve_state=0x0000[0m
+[0;32mI (332305) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (332305) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (332305) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (332315) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (332315) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (332325) RobotController: valve_state=0x0000[0m
+[0;32mI (333825) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (333825) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (333825) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (333825) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (333835) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (333845) RobotController: valve_state=0x0000[0m
+[0;32mI (335345) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (335345) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (335345) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (335345) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (335355) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (335365) RobotController: valve_state=0x0000[0m
+[0;32mI (336865) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (336865) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (336865) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (336865) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (336875) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (336885) RobotController: valve_state=0x0000[0m
+[0;32mI (338385) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (338385) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (338385) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (338395) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (338395) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (338405) RobotController: valve_state=0x0000[0m
+[0;32mI (339905) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (339905) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (339905) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (339905) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (339915) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (339925) RobotController: valve_state=0x0000[0m
+[0;32mI (341425) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (341425) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (341425) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (341435) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (341435) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (341445) RobotController: valve_state=0x0000[0m
+[0;32mI (342945) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (342945) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (342945) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (342945) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (342955) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (342965) RobotController: valve_state=0x0000[0m
+[0;32mI (344465) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (344465) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (344465) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (344465) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (344475) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (344485) RobotController: valve_state=0x0000[0m
+[0;32mI (345985) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (345985) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (345985) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (345985) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (345995) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (346005) RobotController: valve_state=0x0000[0m
+[0;32mI (347505) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (347505) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (347505) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (347505) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (347515) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (347525) RobotController: valve_state=0x0000[0m
+[0;32mI (349025) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (349025) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (349025) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (349035) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (349035) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (349045) RobotController: valve_state=0x0000[0m
+[0;32mI (350545) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (350545) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (350545) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (350545) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (350555) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (350565) RobotController: valve_state=0x0000[0m
+[0;32mI (352065) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (352065) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (352065) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (352075) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (352075) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (352085) RobotController: valve_state=0x0000[0m
+[0;32mI (353585) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (353585) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (353585) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (353585) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (353595) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (353605) RobotController: valve_state=0x0000[0m
+[0;32mI (355105) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (355105) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (355105) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (355105) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (355115) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (355125) RobotController: valve_state=0x0000[0m
+[0;32mI (356625) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (356625) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (356625) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (356625) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (356635) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (356645) RobotController: valve_state=0x0000[0m
+[0;32mI (358145) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (358145) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (358145) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (358145) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (358155) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (358165) RobotController: valve_state=0x0000[0m
+[0;32mI (359665) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (359665) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (359665) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (359675) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (359675) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (359685) RobotController: valve_state=0x0000[0m
+[0;32mI (361185) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (361185) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (361185) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (361185) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (361195) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (361205) RobotController: valve_state=0x0000[0m
+[0;32mI (362705) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (362705) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (362705) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (362705) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (362715) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (362725) RobotController: valve_state=0x0000[0m
+[0;32mI (364225) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (364225) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (364225) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (364225) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (364235) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (364245) RobotController: valve_state=0x0000[0m
+[0;32mI (365745) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (365745) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (365745) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (365745) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (365755) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (365765) RobotController: valve_state=0x0000[0m
+[0;32mI (367265) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (367265) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (367265) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (367275) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (367275) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (367285) RobotController: valve_state=0x0000[0m
+[0;32mI (368785) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (368785) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (368785) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (368785) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (368795) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (368805) RobotController: valve_state=0x0000[0m
+[0;32mI (370305) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (370305) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (370305) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (370315) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (370315) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (370325) RobotController: valve_state=0x0000[0m
+[0;32mI (371825) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (371825) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (371825) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (371825) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (371835) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (371845) RobotController: valve_state=0x0000[0m
+[0;32mI (373345) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (373345) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (373345) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (373345) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (373355) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (373365) RobotController: valve_state=0x0000[0m
+[0;32mI (374865) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (374865) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (374865) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (374865) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (374875) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (374885) RobotController: valve_state=0x0000[0m
+[0;32mI (376385) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (376385) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (376385) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (376385) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (376395) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (376405) RobotController: valve_state=0x0000[0m
+[0;32mI (377905) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (377905) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (377905) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (377915) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (377915) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (377925) RobotController: valve_state=0x0000[0m
+[0;32mI (379425) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (379425) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (379425) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (379425) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (379435) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (379445) RobotController: valve_state=0x0000[0m
+[0;32mI (380945) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (380945) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (380945) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (380955) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (380955) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (380965) RobotController: valve_state=0x0000[0m
+[0;32mI (382465) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (382465) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (382465) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (382465) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (382475) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (382485) RobotController: valve_state=0x0000[0m
+[0;32mI (383985) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (383985) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (383985) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (383985) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (383995) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (384005) RobotController: valve_state=0x0000[0m
+[0;32mI (385505) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (385505) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (385505) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (385505) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (385515) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (385525) RobotController: valve_state=0x0000[0m
+[0;32mI (387025) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (387025) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (387025) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (387025) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (387035) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (387045) RobotController: valve_state=0x0000[0m
+[0;32mI (388545) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (388545) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (388545) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (388555) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (388555) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (388565) RobotController: valve_state=0x0000[0m
+[0;32mI (390065) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (390065) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (390065) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (390065) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (390075) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (390085) RobotController: valve_state=0x0000[0m
+[0;32mI (391585) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (391585) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (391585) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (391585) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (391595) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (391605) RobotController: valve_state=0x0000[0m
+[0;32mI (393105) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (393105) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (393105) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (393115) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (393115) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (393125) RobotController: valve_state=0x0000[0m
+[0;32mI (394625) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (394625) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (394625) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (394625) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (394635) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (394645) RobotController: valve_state=0x0000[0m
+[0;32mI (396145) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (396145) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (396145) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (396145) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (396155) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (396165) RobotController: valve_state=0x0000[0m
+[0;32mI (397665) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (397665) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (397665) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (397665) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (397675) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (397685) RobotController: valve_state=0x0000[0m
+[0;32mI (399185) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (399185) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (399185) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (399195) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (399195) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (399205) RobotController: valve_state=0x0000[0m
+[0;32mI (400705) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (400705) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (400705) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (400705) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (400715) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (400725) RobotController: valve_state=0x0000[0m
+[0;32mI (402225) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (402225) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (402225) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (402225) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (402235) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (402245) RobotController: valve_state=0x0000[0m
+[0;32mI (403745) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (403745) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (403745) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (403745) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (403755) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (403765) RobotController: valve_state=0x0000[0m
+[0;32mI (405265) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (405265) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (405265) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (405265) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (405275) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (405285) RobotController: valve_state=0x0000[0m
+[0;32mI (406785) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (406785) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (406785) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (406795) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (406795) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (406805) RobotController: valve_state=0x0000[0m
+[0;32mI (408305) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI 

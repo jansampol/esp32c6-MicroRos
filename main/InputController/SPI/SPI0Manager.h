@@ -51,7 +51,7 @@ public:
     uint16_t readHorizontalButtons();
     uint16_t readVerticalButtons();
     uint8_t readSwitches();
-    uint16_t readAllSwitchesRaw();
+    //uint16_t readAllSwitchesRaw();
 
     void writeGreen(bool on);
     void writeRed1(bool on);

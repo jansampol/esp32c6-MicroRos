@@ -1,0 +1,1789 @@
+Command: /Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf_monitor.py -p /dev/cu.usbserial-140 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf -m '/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf.py' '-p' '/dev/cu.usbserial-140'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xfa8
+load:0x4086e610,len:0x31a8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  5 2026 11:04:44[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (71) boot:  3 coredump         Unknown data     01 03 00210000 00010000[0m
+[0;32mI (78) boot:  4 littlefs         Unknown data     01 82 00220000 0007d000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0b16ch ( 45420) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b194 vaddr=40800000 size=04e84h ( 20100) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=1a5c8h (107976) map[0m
+[0;32mI (130) esp_image: segment 3: paddr=0003a5f0 vaddr=40804e84 size=07344h ( 29508) load[0m
+[0;32mI (137) esp_image: segment 4: paddr=0004193c vaddr=4080c1d0 size=01990h (  6544) load[0m
+[0;32mI (143) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (143) boot: Disabling RNG early entropy source...[0m
+[0;32mI (156) cpu_start: Unicore app[0m
+[0;32mI (164) cpu_start: Pro cpu start user code[0m
+[0;32mI (164) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (164) app_init: Application information:[0m
+[0;32mI (165) app_init: Project name:     esp32c6_microros_test[0m
+[0;32mI (169) app_init: App version:      eb8ceaf-dirty[0m
+[0;32mI (174) app_init: Compile time:     Apr 16 2026 12:55:16[0m
+[0;32mI (179) app_init: ELF file SHA256:  b8b7cb575...[0m
+[0;32mI (183) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (187) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (191) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (195) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (198) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (205) heap_init: At 4080EDE0 len 0006D830 (438 KiB): RAM[0m
+[0;32mI (210) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (215) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (221) spi_flash: detected chip: generic[0m
+[0;32mI (224) spi_flash: flash io: dio[0m
+[0;33mW (227) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (239) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (246) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (252) coexist: coex firmware version: 831ec70[0m
+[0;32mI (271) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (271) main_task: Started on CPU0[0m
+[0;32mI (271) main_task: Calling app_main()[0m
+FERRIS + PRESSURE TEST START
+[0;32mI (281) I2CManager: Starting I2C Manager with 5 Ferris wheels and 0 other sensors...[0m
+[0;32mI (281) I2CManager: I2C bus started[0m
+[0;32mI (281) I2CManager: I2C multiplexers initialized. Initializing Ferris wheels...[0m
+[0;32mI (281) I2CManager: Initializing Ferris wheel sensors...[0m
+[0;32mI (291) I2CManager: Ferris wheel sensor 0: 1[0m
+[0;32mI (301) I2CManager: Ferris wheel sensor 1: 1[0m
+[0;32mI (311) I2CManager: Ferris wheel sensor 2: 1[0m
+[0;32mI (321) I2CManager: Ferris wheel sensor 3: 1[0m
+[0;32mI (331) I2CManager: Ferris wheel sensor 4: 1[0m
+[0;32mI (341) I2CManager: Ferris wheels successfully initialized[0m
+[0;32mI (341) app_main: I2C initialized. Starting Ferris + pressure test...[0m
+[0;32mI (341) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (341) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (351) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (351) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (361) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (361) PRESSURE_TEST: pressure sensor 0 = 0.0101 bar[0m
+[0;32mI (371) app_main: --------------------------------------[0m
+[0;32mI (871) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (871) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (871) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (871) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (881) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (881) PRESSURE_TEST: pressure sensor 0 = 0.0100 bar[0m
+[0;32mI (891) app_main: --------------------------------------[0m
+[0;32mI (1391) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (1391) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (1391) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (1391) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (1401) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (1401) PRESSURE_TEST: pressure sensor 0 = 0.0099 bar[0m
+[0;32mI (1411) app_main: --------------------------------------[0m
+[0;32mI (1911) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (1911) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (1911) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (1911) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (1921) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (1921) PRESSURE_TEST: pressure sensor 0 = 0.0099 bar[0m
+[0;32mI (1931) app_main: --------------------------------------[0m
+[0;32mI (2431) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (2431) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (2431) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (2431) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (2441) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (2441) PRESSURE_TEST: pressure sensor 0 = 0.0100 bar[0m
+[0;32mI (2451) app_main: --------------------------------------[0m
+[0;32mI (2951) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (2951) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (2951) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (2951) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (2961) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (2961) PRESSURE_TEST: pressure sensor 0 = 0.0102 bar[0m
+[0;32mI (2971) app_main: --------------------------------------[0m
+[0;32mI (3471) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (3471) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (3471) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (3471) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (3481) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (3481) PRESSURE_TEST: pressure sensor 0 = 0.0100 bar[0m
+[0;32mI (3491) app_main: --------------------------------------[0m
+[0;32mI (3991) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (3991) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (3991) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (3991) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (4001) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (4001) PRESSURE_TEST: pressure sensor 0 = 0.0102 bar[0m
+[0;32mI (4011) app_main: --------------------------------------[0m
+[0;32mI (4511) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (4511) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (4511) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (4511) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (4521) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (4521) PRESSURE_TEST: pressure sensor 0 = 0.0098 bar[0m
+[0;32mI (4531) app_main: --------------------------------------[0m
+[0;32mI (5031) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (5031) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (5031) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (5031) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (5041) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (5041) PRESSURE_TEST: pressure sensor 0 = 0.0103 bar[0m
+[0;32mI (5051) app_main: --------------------------------------[0m
+[0;32mI (5551) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (5551) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (5551) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (5551) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (5561) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (5561) PRESSURE_TEST: pressure sensor 0 = 0.0110 bar[0m
+[0;32mI (5571) app_main: --------------------------------------[0m
+[0;32mI (6071) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (6071) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (6071) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (6071) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (6081) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (6081) PRESSURE_TEST: pressure sensor 0 = 0.0108 bar[0m
+[0;32mI (6091) app_main: --------------------------------------[0m
+[0;32mI (6591) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (6591) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (6591) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (6591) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (6601) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (6601) PRESSURE_TEST: pressure sensor 0 = 0.0107 bar[0m
+[0;32mI (6611) app_main: --------------------------------------[0m
+[0;32mI (7111) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (7111) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (7111) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (7111) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (7121) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (7121) PRESSURE_TEST: pressure sensor 0 = 0.0110 bar[0m
+[0;32mI (7131) app_main: --------------------------------------[0m
+[0;32mI (7631) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (7631) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (7631) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (7631) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (7641) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (7641) PRESSURE_TEST: pressure sensor 0 = 0.0108 bar[0m
+[0;32mI (7651) app_main: --------------------------------------[0m
+[0;32mI (8151) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (8151) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (8151) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (8151) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (8161) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (8161) PRESSURE_TEST: pressure sensor 0 = 0.0101 bar[0m
+[0;32mI (8171) app_main: --------------------------------------[0m
+[0;32mI (8671) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (8671) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (8671) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (8671) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (8681) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (8681) PRESSURE_TEST: pressure sensor 0 = 0.0108 bar[0m
+[0;32mI (8691) app_main: --------------------------------------[0m
+[0;32mI (9191) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (9191) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (9191) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (9191) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (9201) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (9201) PRESSURE_TEST: pressure sensor 0 = 0.0103 bar[0m
+[0;32mI (9211) app_main: --------------------------------------[0m
+[0;32mI (9711) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (9711) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (9711) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (9711) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (9721) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (9721) PRESSURE_TEST: pressure sensor 0 = 0.0097 bar[0m
+[0;32mI (9731) app_main: --------------------------------------[0m
+[0;32mI (10231) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (10231) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (10231) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (10231) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (10241) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (10241) PRESSURE_TEST: pressure sensor 0 = 0.0107 bar[0m
+[0;32mI (10251) app_main: --------------------------------------[0m
+[0;32mI (10751) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (10751) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (10751) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (10751) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (10761) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (10761) PRESSURE_TEST: pressure sensor 0 = 0.0096 bar[0m
+[0;32mI (10771) app_main: --------------------------------------[0m
+[0;32mI (11271) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (11271) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (11271) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (11271) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (11281) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (11281) PRESSURE_TEST: pressure sensor 0 = 0.0098 bar[0m
+[0;32mI (11291) app_main: --------------------------------------[0m
+[0;32mI (11791) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (11791) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (11791) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (11791) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (11801) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (11801) PRESSURE_TEST: pressure sensor 0 = 0.0099 bar[0m
+[0;32mI (11811) app_main: --------------------------------------[0m
+[0;32mI (12311) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (12311) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (12311) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (12311) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (12321) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (12321) PRESSURE_TEST: pressure sensor 0 = 0.0100 bar[0m
+[0;32mI (12331) app_main: --------------------------------------[0m
+[0;32mI (12831) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (12831) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (12831) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (12831) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (12841) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (12841) PRESSURE_TEST: pressure sensor 0 = 0.0108 bar[0m
+[0;32mI (12851) app_main: --------------------------------------[0m
+[0;32mI (13351) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (13351) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (13351) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (13351) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (13361) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (13361) PRESSURE_TEST: pressure sensor 0 = 0.0101 bar[0m
+[0;32mI (13371) app_main: --------------------------------------[0m
+[0;32mI (13871) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (13871) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (13871) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (13871) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.73 deg[0m
+[0;32mI (13881) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (13881) PRESSURE_TEST: pressure sensor 0 = 0.0101 bar[0m
+[0;32mI (13891) app_main: --------------------------------------[0m
+[0;32mI (14391) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (14391) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (14391) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (14391) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (14401) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (14401) PRESSURE_TEST: pressure sensor 0 = 0.0108 bar[0m
+[0;32mI (14411) app_main: --------------------------------------[0m
+[0;32mI (14911) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (14911) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (14911) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (14911) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (14921) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (14921) PRESSURE_TEST: pressure sensor 0 = 0.0107 bar[0m
+[0;32mI (14931) app_main: --------------------------------------[0m
+[0;32mI (15431) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (15431) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (15431) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (15431) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (15441) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (15441) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (15451) app_main: --------------------------------------[0m
+[0;32mI (15951) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (15951) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (15951) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (15951) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (15961) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (15961) PRESSURE_TEST: pressure sensor 0 = 0.0107 bar[0m
+[0;32mI (15971) app_main: --------------------------------------[0m
+[0;32mI (16471) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (16471) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (16471) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (16471) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (16481) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (16481) PRESSURE_TEST: pressure sensor 0 = 0.0109 bar[0m
+[0;32mI (16491) app_main: --------------------------------------[0m
+[0;32mI (16991) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (16991) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (16991) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (16991) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (17001) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (17001) PRESSURE_TEST: pressure sensor 0 = 0.0110 bar[0m
+[0;32mI (17011) app_main: --------------------------------------[0m
+[0;32mI (17511) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (17511) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (17511) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (17511) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (17521) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (17521) PRESSURE_TEST: pressure sensor 0 = 0.0110 bar[0m
+[0;32mI (17531) app_main: --------------------------------------[0m
+[0;32mI (18031) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (18031) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (18031) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (18031) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (18041) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (18041) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (18051) app_main: --------------------------------------[0m
+[0;32mI (18551) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (18551) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (18551) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (18551) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (18561) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (18561) PRESSURE_TEST: pressure sensor 0 = 0.0112 bar[0m
+[0;32mI (18571) app_main: --------------------------------------[0m
+[0;32mI (19071) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (19071) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (19071) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (19071) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (19081) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (19081) PRESSURE_TEST: pressure sensor 0 = 0.0107 bar[0m
+[0;32mI (19091) app_main: --------------------------------------[0m
+[0;32mI (19591) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (19591) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (19591) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (19591) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (19601) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (19601) PRESSURE_TEST: pressure sensor 0 = 0.0109 bar[0m
+[0;32mI (19611) app_main: --------------------------------------[0m
+[0;32mI (20111) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (20111) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (20111) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (20111) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (20121) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (20121) PRESSURE_TEST: pressure sensor 0 = 0.0105 bar[0m
+[0;32mI (20131) app_main: --------------------------------------[0m
+[0;32mI (20631) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (20631) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (20631) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (20631) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (20641) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (20641) PRESSURE_TEST: pressure sensor 0 = 0.0107 bar[0m
+[0;32mI (20651) app_main: --------------------------------------[0m
+[0;32mI (21151) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (21151) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (21151) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (21151) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (21161) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (21161) PRESSURE_TEST: pressure sensor 0 = 0.0113 bar[0m
+[0;32mI (21171) app_main: --------------------------------------[0m
+[0;32mI (21671) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (21671) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (21671) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (21671) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (21681) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (21681) PRESSURE_TEST: pressure sensor 0 = 0.0105 bar[0m
+[0;32mI (21691) app_main: --------------------------------------[0m
+[0;32mI (22191) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (22191) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (22191) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (22191) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (22201) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (22201) PRESSURE_TEST: pressure sensor 0 = 0.0111 bar[0m
+[0;32mI (22211) app_main: --------------------------------------[0m
+[0;32mI (22711) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (22711) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (22711) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (22711) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (22721) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (22721) PRESSURE_TEST: pressure sensor 0 = 0.0119 bar[0m
+[0;32mI (22731) app_main: --------------------------------------[0m
+[0;32mI (23231) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (23231) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (23231) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (23231) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (23241) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (23241) PRESSURE_TEST: pressure sensor 0 = 0.0112 bar[0m
+[0;32mI (23251) app_main: --------------------------------------[0m
+[0;32mI (23751) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (23751) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (23751) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (23751) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (23761) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (23761) PRESSURE_TEST: pressure sensor 0 = 0.0117 bar[0m
+[0;32mI (23771) app_main: --------------------------------------[0m
+[0;32mI (24271) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (24271) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (24271) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (24271) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (24281) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (24281) PRESSURE_TEST: pressure sensor 0 = 0.0115 bar[0m
+[0;32mI (24291) app_main: --------------------------------------[0m
+[0;32mI (24791) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (24791) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (24791) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (24791) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (24801) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (24801) PRESSURE_TEST: pressure sensor 0 = 0.0114 bar[0m
+[0;32mI (24811) app_main: --------------------------------------[0m
+[0;32mI (25311) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (25311) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (25311) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (25311) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (25321) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (25321) PRESSURE_TEST: pressure sensor 0 = 0.0112 bar[0m
+[0;32mI (25331) app_main: --------------------------------------[0m
+[0;32mI (25831) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (25831) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (25831) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (25831) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (25841) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (25841) PRESSURE_TEST: pressure sensor 0 = 0.0120 bar[0m
+[0;32mI (25851) app_main: --------------------------------------[0m
+[0;32mI (26351) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (26351) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (26351) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (26351) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (26361) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (26361) PRESSURE_TEST: pressure sensor 0 = 0.0115 bar[0m
+[0;32mI (26371) app_main: --------------------------------------[0m
+[0;32mI (26871) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (26871) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (26871) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (26871) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (26881) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (26881) PRESSURE_TEST: pressure sensor 0 = 0.0114 bar[0m
+[0;32mI (26891) app_main: --------------------------------------[0m
+[0;32mI (27391) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (27391) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (27391) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (27391) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (27401) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (27401) PRESSURE_TEST: pressure sensor 0 = 0.0118 bar[0m
+[0;32mI (27411) app_main: --------------------------------------[0m
+[0;32mI (27911) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (27911) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (27911) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (27911) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (27921) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (27921) PRESSURE_TEST: pressure sensor 0 = 0.0115 bar[0m
+[0;32mI (27931) app_main: --------------------------------------[0m
+[0;32mI (28431) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (28431) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (28431) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (28431) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (28441) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (28441) PRESSURE_TEST: pressure sensor 0 = 0.0113 bar[0m
+[0;32mI (28451) app_main: --------------------------------------[0m
+[0;32mI (28951) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (28951) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (28951) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (28951) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (28961) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (28961) PRESSURE_TEST: pressure sensor 0 = 0.0113 bar[0m
+[0;32mI (28971) app_main: --------------------------------------[0m
+[0;32mI (29471) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (29471) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (29471) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (29471) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (29481) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (29481) PRESSURE_TEST: pressure sensor 0 = 0.0112 bar[0m
+[0;32mI (29491) app_main: --------------------------------------[0m
+[0;32mI (29991) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (29991) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (29991) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (29991) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (30001) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (30001) PRESSURE_TEST: pressure sensor 0 = 0.0114 bar[0m
+[0;32mI (30011) app_main: --------------------------------------[0m
+[0;32mI (30511) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (30511) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (30511) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (30511) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (30521) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (30521) PRESSURE_TEST: pressure sensor 0 = 0.0114 bar[0m
+[0;32mI (30531) app_main: --------------------------------------[0m
+[0;32mI (31031) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (31031) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (31031) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (31031) FERRIS_TEST: wheel=3 | raw=1476.00 | angle=129.73 deg[0m
+[0;32mI (31041) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (31041) PRESSURE_TEST: pressure sensor 0 = 0.0116 bar[0m
+[0;32mI (31051) app_main: --------------------------------------[0m
+[0;32mI (31551) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (31551) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (31551) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (31551) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (31561) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (31561) PRESSURE_TEST: pressure sensor 0 = 0.0112 bar[0m
+[0;32mI (31571) app_main: --------------------------------------[0m
+[0;32mI (32071) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (32071) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (32071) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (32071) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (32081) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (32081) PRESSURE_TEST: pressure sensor 0 = 0.0117 bar[0m
+[0;32mI (32091) app_main: --------------------------------------[0m
+[0;32mI (32591) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (32591) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (32591) FERRIS_TEST: wheel=2 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (32591) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (32601) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (32601) PRESSURE_TEST: pressure sensor 0 = 0.0117 bar[0m
+[0;32mI (32611) app_main: --------------------------------------[0m
+[0;32mI (33111) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (33111) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (33111) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (33111) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (33121) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (33121) PRESSURE_TEST: pressure sensor 0 = 0.0116 bar[0m
+[0;32mI (33131) app_main: --------------------------------------[0m
+[0;32mI (33631) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (33631) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (33631) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (33631) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (33641) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (33641) PRESSURE_TEST: pressure sensor 0 = 0.0117 bar[0m
+[0;32mI (33651) app_main: --------------------------------------[0m
+[0;32mI (34151) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (34151) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (34151) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (34151) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (34161) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (34161) PRESSURE_TEST: pressure sensor 0 = 0.0114 bar[0m
+[0;32mI (34171) app_main: --------------------------------------[0m
+[0;32mI (34671) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (34671) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (34671) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (34671) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (34681) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (34681) PRESSURE_TEST: pressure sensor 0 = 0.0116 bar[0m
+[0;32mI (34691) app_main: --------------------------------------[0m
+[0;32mI (35191) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (35191) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (35191) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (35191) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (35201) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (35201) PRESSURE_TEST: pressure sensor 0 = 0.0112 bar[0m
+[0;32mI (35211) app_main: --------------------------------------[0m
+[0;32mI (35711) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (35711) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (35711) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (35711) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (35721) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (35721) PRESSURE_TEST: pressure sensor 0 = 0.0115 bar[0m
+[0;32mI (35731) app_main: --------------------------------------[0m
+[0;32mI (36231) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (36231) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (36231) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (36231) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (36241) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (36241) PRESSURE_TEST: pressure sensor 0 = 0.0110 bar[0m
+[0;32mI (36251) app_main: --------------------------------------[0m
+[0;32mI (36751) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (36751) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (36751) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (36751) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (36761) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (36761) PRESSURE_TEST: pressure sensor 0 = 0.0112 bar[0m
+[0;32mI (36771) app_main: --------------------------------------[0m
+[0;32mI (37271) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (37271) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (37271) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (37271) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (37281) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (37281) PRESSURE_TEST: pressure sensor 0 = 0.0107 bar[0m
+[0;32mI (37291) app_main: --------------------------------------[0m
+[0;32mI (37791) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (37791) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (37791) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (37791) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (37801) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (37801) PRESSURE_TEST: pressure sensor 0 = 0.0114 bar[0m
+[0;32mI (37811) app_main: --------------------------------------[0m
+[0;32mI (38311) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (38311) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (38311) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (38311) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (38321) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (38321) PRESSURE_TEST: pressure sensor 0 = 0.0107 bar[0m
+[0;32mI (38331) app_main: --------------------------------------[0m
+[0;32mI (38831) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (38831) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (38831) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (38831) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (38841) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (38841) PRESSURE_TEST: pressure sensor 0 = 0.0108 bar[0m
+[0;32mI (38851) app_main: --------------------------------------[0m
+[0;32mI (39351) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (39351) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (39351) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (39351) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (39361) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (39361) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (39371) app_main: --------------------------------------[0m
+[0;32mI (39871) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (39871) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (39871) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (39871) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (39881) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (39881) PRESSURE_TEST: pressure sensor 0 = 0.0105 bar[0m
+[0;32mI (39891) app_main: --------------------------------------[0m
+[0;32mI (40391) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (40391) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (40391) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (40391) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (40401) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (40401) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (40411) app_main: --------------------------------------[0m
+[0;32mI (40911) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (40911) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (40911) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (40911) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (40921) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (40921) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (40931) app_main: --------------------------------------[0m
+[0;32mI (41431) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (41431) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (41431) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (41431) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (41441) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (41441) PRESSURE_TEST: pressure sensor 0 = 0.0109 bar[0m
+[0;32mI (41451) app_main: --------------------------------------[0m
+[0;32mI (41951) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (41951) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (41951) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (41951) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (41961) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (41961) PRESSURE_TEST: pressure sensor 0 = 0.0107 bar[0m
+[0;32mI (41971) app_main: --------------------------------------[0m
+[0;32mI (42471) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (42471) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (42471) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (42471) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (42481) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (42481) PRESSURE_TEST: pressure sensor 0 = 0.0103 bar[0m
+[0;32mI (42491) app_main: --------------------------------------[0m
+[0;32mI (42991) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (42991) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (42991) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (42991) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (43001) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (43001) PRESSURE_TEST: pressure sensor 0 = 0.0111 bar[0m
+[0;32mI (43011) app_main: --------------------------------------[0m
+[0;32mI (43511) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (43511) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (43511) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (43511) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (43521) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (43521) PRESSURE_TEST: pressure sensor 0 = 0.0115 bar[0m
+[0;32mI (43531) app_main: --------------------------------------[0m
+[0;32mI (44031) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (44031) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (44031) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (44031) FERRIS_TEST: wheel=3 | raw=1476.00 | angle=129.73 deg[0m
+[0;32mI (44041) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (44041) PRESSURE_TEST: pressure sensor 0 = 0.0104 bar[0m
+[0;32mI (44051) app_main: --------------------------------------[0m
+[0;32mI (44551) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (44551) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (44551) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (44551) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (44561) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (44561) PRESSURE_TEST: pressure sensor 0 = 0.0105 bar[0m
+[0;32mI (44571) app_main: --------------------------------------[0m
+[0;32mI (45071) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (45071) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (45071) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (45071) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (45081) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (45081) PRESSURE_TEST: pressure sensor 0 = 0.0105 bar[0m
+[0;32mI (45091) app_main: --------------------------------------[0m
+[0;32mI (45591) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (45591) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (45591) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (45591) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (45601) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (45601) PRESSURE_TEST: pressure sensor 0 = 0.0111 bar[0m
+[0;32mI (45611) app_main: --------------------------------------[0m
+[0;32mI (46111) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (46111) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (46111) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (46111) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (46121) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (46121) PRESSURE_TEST: pressure sensor 0 = 0.0107 bar[0m
+[0;32mI (46131) app_main: --------------------------------------[0m
+[0;32mI (46631) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (46631) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (46631) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (46631) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (46641) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (46641) PRESSURE_TEST: pressure sensor 0 = 0.0110 bar[0m
+[0;32mI (46651) app_main: --------------------------------------[0m
+[0;32mI (47151) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (47151) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (47151) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (47151) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (47161) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (47161) PRESSURE_TEST: pressure sensor 0 = 0.0112 bar[0m
+[0;32mI (47171) app_main: --------------------------------------[0m
+[0;32mI (47671) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (47671) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (47671) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (47671) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (47681) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (47681) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (47691) app_main: --------------------------------------[0m
+[0;32mI (48191) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (48191) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (48191) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (48191) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (48201) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (48201) PRESSURE_TEST: pressure sensor 0 = 0.0114 bar[0m
+[0;32mI (48211) app_main: --------------------------------------[0m
+[0;32mI (48711) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (48711) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (48711) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (48711) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (48721) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (48721) PRESSURE_TEST: pressure sensor 0 = 0.0110 bar[0m
+[0;32mI (48731) app_main: --------------------------------------[0m
+[0;32mI (49231) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (49231) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (49231) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (49231) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (49241) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (49241) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (49251) app_main: --------------------------------------[0m
+[0;32mI (49751) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (49751) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (49751) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (49751) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (49761) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (49761) PRESSURE_TEST: pressure sensor 0 = 0.0118 bar[0m
+[0;32mI (49771) app_main: --------------------------------------[0m
+[0;32mI (50271) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (50271) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (50271) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (50271) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (50281) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (50281) PRESSURE_TEST: pressure sensor 0 = 0.0114 bar[0m
+[0;32mI (50291) app_main: --------------------------------------[0m
+[0;32mI (50791) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (50791) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (50791) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (50791) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (50801) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (50801) PRESSURE_TEST: pressure sensor 0 = 0.0115 bar[0m
+[0;32mI (50811) app_main: --------------------------------------[0m
+[0;32mI (51311) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (51311) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (51311) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (51311) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (51321) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (51321) PRESSURE_TEST: pressure sensor 0 = 0.0115 bar[0m
+[0;32mI (51331) app_main: --------------------------------------[0m
+[0;32mI (51831) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (51831) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (51831) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (51831) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (51841) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (51841) PRESSURE_TEST: pressure sensor 0 = 0.0110 bar[0m
+[0;32mI (51851) app_main: --------------------------------------[0m
+[0;32mI (52351) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (52351) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (52351) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (52351) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (52361) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (52361) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (52371) app_main: --------------------------------------[0m
+[0;32mI (52871) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (52871) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (52871) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (52871) FERRIS_TEST: wheel=3 | raw=1476.00 | angle=129.73 deg[0m
+[0;32mI (52881) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (52881) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (52891) app_main: --------------------------------------[0m
+[0;32mI (53391) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (53391) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (53391) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (53391) FERRIS_TEST: wheel=3 | raw=1476.00 | angle=129.73 deg[0m
+[0;32mI (53401) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (53401) PRESSURE_TEST: pressure sensor 0 = 0.0111 bar[0m
+[0;32mI (53411) app_main: --------------------------------------[0m
+[0;32mI (53911) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (53911) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (53911) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (53911) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (53921) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (53921) PRESSURE_TEST: pressure sensor 0 = 0.0105 bar[0m
+[0;32mI (53931) app_main: --------------------------------------[0m
+[0;32mI (54431) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (54431) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (54431) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (54431) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (54441) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (54441) PRESSURE_TEST: pressure sensor 0 = 0.0104 bar[0m
+[0;32mI (54451) app_main: --------------------------------------[0m
+[0;32mI (54951) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (54951) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (54951) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (54951) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (54961) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (54961) PRESSURE_TEST: pressure sensor 0 = 0.0110 bar[0m
+[0;32mI (54971) app_main: --------------------------------------[0m
+[0;32mI (55471) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (55471) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (55471) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (55471) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (55481) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (55481) PRESSURE_TEST: pressure sensor 0 = 0.0107 bar[0m
+[0;32mI (55491) app_main: --------------------------------------[0m
+[0;32mI (55991) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (55991) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (55991) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (55991) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (56001) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (56001) PRESSURE_TEST: pressure sensor 0 = 0.0108 bar[0m
+[0;32mI (56011) app_main: --------------------------------------[0m
+[0;32mI (56511) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (56511) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (56511) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (56511) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (56521) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (56521) PRESSURE_TEST: pressure sensor 0 = 0.0110 bar[0m
+[0;32mI (56531) app_main: --------------------------------------[0m
+[0;32mI (57031) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (57031) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (57031) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (57031) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (57041) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (57041) PRESSURE_TEST: pressure sensor 0 = 0.0115 bar[0m
+[0;32mI (57051) app_main: --------------------------------------[0m
+[0;32mI (57551) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (57551) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (57551) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (57551) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (57561) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (57561) PRESSURE_TEST: pressure sensor 0 = 0.0103 bar[0m
+[0;32mI (57571) app_main: --------------------------------------[0m
+[0;32mI (58071) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (58071) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (58071) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (58071) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (58081) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (58081) PRESSURE_TEST: pressure sensor 0 = 0.0110 bar[0m
+[0;32mI (58091) app_main: --------------------------------------[0m
+[0;32mI (58591) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (58591) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (58591) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (58591) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (58601) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (58601) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (58611) app_main: --------------------------------------[0m
+[0;32mI (59111) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (59111) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (59111) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (59111) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (59121) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (59121) PRESSURE_TEST: pressure sensor 0 = 0.0108 bar[0m
+[0;32mI (59131) app_main: --------------------------------------[0m
+[0;32mI (59631) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (59631) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (59631) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (59631) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (59641) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (59641) PRESSURE_TEST: pressure sensor 0 = 0.0107 bar[0m
+[0;32mI (59651) app_main: --------------------------------------[0m
+[0;32mI (60151) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (60151) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (60151) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (60151) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (60161) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (60161) PRESSURE_TEST: pressure sensor 0 = 0.0107 bar[0m
+[0;32mI (60171) app_main: --------------------------------------[0m
+[0;32mI (60671) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (60671) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (60671) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (60671) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (60681) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (60681) PRESSURE_TEST: pressure sensor 0 = 0.0107 bar[0m
+[0;32mI (60691) app_main: --------------------------------------[0m
+[0;32mI (61191) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (61191) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (61191) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (61191) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (61201) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (61201) PRESSURE_TEST: pressure sensor 0 = 0.0109 bar[0m
+[0;32mI (61211) app_main: --------------------------------------[0m
+[0;32mI (61711) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (61711) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (61711) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (61711) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (61721) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (61721) PRESSURE_TEST: pressure sensor 0 = 0.0109 bar[0m
+[0;32mI (61731) app_main: --------------------------------------[0m
+[0;32mI (62231) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (62231) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (62231) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (62231) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (62241) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (62241) PRESSURE_TEST: pressure sensor 0 = 0.0105 bar[0m
+[0;32mI (62251) app_main: --------------------------------------[0m
+[0;32mI (62751) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (62751) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (62751) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (62751) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (62761) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (62761) PRESSURE_TEST: pressure sensor 0 = 0.0107 bar[0m
+[0;32mI (62771) app_main: --------------------------------------[0m
+[0;32mI (63271) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (63271) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (63271) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (63271) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (63281) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (63281) PRESSURE_TEST: pressure sensor 0 = 0.0099 bar[0m
+[0;32mI (63291) app_main: --------------------------------------[0m
+[0;32mI (63791) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (63791) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (63791) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (63791) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (63801) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (63801) PRESSURE_TEST: pressure sensor 0 = 0.0099 bar[0m
+[0;32mI (63811) app_main: --------------------------------------[0m
+[0;32mI (64311) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (64311) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (64311) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (64311) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (64321) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (64321) PRESSURE_TEST: pressure sensor 0 = 0.0097 bar[0m
+[0;32mI (64331) app_main: --------------------------------------[0m
+[0;32mI (64831) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (64831) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (64831) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (64831) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (64841) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (64841) PRESSURE_TEST: pressure sensor 0 = 0.0097 bar[0m
+[0;32mI (64851) app_main: --------------------------------------[0m
+[0;32mI (65351) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (65351) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (65351) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (65351) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (65361) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (65361) PRESSURE_TEST: pressure sensor 0 = 0.0105 bar[0m
+[0;32mI (65371) app_main: --------------------------------------[0m
+[0;32mI (65871) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (65871) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (65871) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (65871) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (65881) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (65881) PRESSURE_TEST: pressure sensor 0 = 0.0098 bar[0m
+[0;32mI (65891) app_main: --------------------------------------[0m
+[0;32mI (66391) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (66391) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (66391) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (66391) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (66401) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (66401) PRESSURE_TEST: pressure sensor 0 = 0.0105 bar[0m
+[0;32mI (66411) app_main: --------------------------------------[0m
+[0;32mI (66911) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (66911) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (66911) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (66911) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (66921) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (66921) PRESSURE_TEST: pressure sensor 0 = 0.0098 bar[0m
+[0;32mI (66931) app_main: --------------------------------------[0m
+[0;32mI (67431) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (67431) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (67431) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (67431) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (67441) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (67441) PRESSURE_TEST: pressure sensor 0 = 0.0095 bar[0m
+[0;32mI (67451) app_main: --------------------------------------[0m
+[0;32mI (67951) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (67951) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (67951) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (67951) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (67961) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (67961) PRESSURE_TEST: pressure sensor 0 = 0.0096 bar[0m
+[0;32mI (67971) app_main: --------------------------------------[0m
+[0;32mI (68471) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (68471) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (68471) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (68471) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (68481) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (68481) PRESSURE_TEST: pressure sensor 0 = 0.0101 bar[0m
+[0;32mI (68491) app_main: --------------------------------------[0m
+[0;32mI (68991) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (68991) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (68991) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (68991) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (69001) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (69001) PRESSURE_TEST: pressure sensor 0 = 0.0098 bar[0m
+[0;32mI (69011) app_main: --------------------------------------[0m
+[0;32mI (69511) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (69511) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (69511) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (69511) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (69521) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (69521) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (69531) app_main: --------------------------------------[0m
+[0;32mI (70031) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (70031) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (70031) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (70031) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (70041) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (70041) PRESSURE_TEST: pressure sensor 0 = 0.0108 bar[0m
+[0;32mI (70051) app_main: --------------------------------------[0m
+[0;32mI (70551) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (70551) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (70551) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (70551) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (70561) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (70561) PRESSURE_TEST: pressure sensor 0 = 0.0100 bar[0m
+[0;32mI (70571) app_main: --------------------------------------[0m
+[0;32mI (71071) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (71071) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (71071) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (71071) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (71081) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (71081) PRESSURE_TEST: pressure sensor 0 = 0.0104 bar[0m
+[0;32mI (71091) app_main: --------------------------------------[0m
+[0;32mI (71591) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (71591) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (71591) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (71591) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (71601) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (71601) PRESSURE_TEST: pressure sensor 0 = 0.0104 bar[0m
+[0;32mI (71611) app_main: --------------------------------------[0m
+[0;32mI (72111) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (72111) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (72111) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (72111) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (72121) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (72121) PRESSURE_TEST: pressure sensor 0 = 0.0111 bar[0m
+[0;32mI (72131) app_main: --------------------------------------[0m
+[0;32mI (72631) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (72631) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (72631) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (72631) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (72641) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (72641) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (72651) app_main: --------------------------------------[0m
+[0;32mI (73151) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (73151) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (73151) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (73151) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (73161) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (73161) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (73171) app_main: --------------------------------------[0m
+[0;32mI (73671) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (73671) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (73671) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (73671) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (73681) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (73681) PRESSURE_TEST: pressure sensor 0 = 0.0105 bar[0m
+[0;32mI (73691) app_main: --------------------------------------[0m
+[0;32mI (74191) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (74191) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (74191) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (74191) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (74201) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (74201) PRESSURE_TEST: pressure sensor 0 = 0.0102 bar[0m
+[0;32mI (74211) app_main: --------------------------------------[0m
+[0;32mI (74711) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (74711) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (74711) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (74711) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (74721) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (74721) PRESSURE_TEST: pressure sensor 0 = 0.0105 bar[0m
+[0;32mI (74731) app_main: --------------------------------------[0m
+[0;32mI (75231) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (75231) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (75231) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (75231) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (75241) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (75241) PRESSURE_TEST: pressure sensor 0 = 0.0101 bar[0m
+[0;32mI (75251) app_main: --------------------------------------[0m
+[0;32mI (75751) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (75751) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (75751) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (75751) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (75761) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (75761) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (75771) app_main: --------------------------------------[0m
+[0;32mI (76271) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (76271) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (76271) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (76271) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (76281) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (76281) PRESSURE_TEST: pressure sensor 0 = 0.0105 bar[0m
+[0;32mI (76291) app_main: --------------------------------------[0m
+[0;32mI (76791) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (76791) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (76791) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (76791) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (76801) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (76801) PRESSURE_TEST: pressure sensor 0 = 0.0103 bar[0m
+[0;32mI (76811) app_main: --------------------------------------[0m
+[0;32mI (77311) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (77311) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (77311) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (77311) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (77321) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (77321) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (77331) app_main: --------------------------------------[0m
+[0;32mI (77831) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (77831) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (77831) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (77831) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (77841) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (77841) PRESSURE_TEST: pressure sensor 0 = 0.0109 bar[0m
+[0;32mI (77851) app_main: --------------------------------------[0m
+[0;32mI (78351) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (78351) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (78351) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (78351) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (78361) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (78361) PRESSURE_TEST: pressure sensor 0 = 0.0107 bar[0m
+[0;32mI (78371) app_main: --------------------------------------[0m
+[0;32mI (78871) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (78871) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (78871) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (78871) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (78881) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (78881) PRESSURE_TEST: pressure sensor 0 = 0.0109 bar[0m
+[0;32mI (78891) app_main: --------------------------------------[0m
+[0;32mI (79391) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (79391) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (79391) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (79391) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (79401) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (79401) PRESSURE_TEST: pressure sensor 0 = 0.0105 bar[0m
+[0;32mI (79411) app_main: --------------------------------------[0m
+[0;32mI (79911) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (79911) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (79911) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (79911) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (79921) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (79921) PRESSURE_TEST: pressure sensor 0 = 0.0107 bar[0m
+[0;32mI (79931) app_main: --------------------------------------[0m
+[0;32mI (80431) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (80431) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (80431) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (80431) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (80441) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (80441) PRESSURE_TEST: pressure sensor 0 = 0.0108 bar[0m
+[0;32mI (80451) app_main: --------------------------------------[0m
+_TEST: wheel=4 | raw=0.00 | angle=0.00 deg
+[0;32mI (81481) PRESSURE_TEST: pressure sensor 0 = 0.0098 bar[0m
+[0;32mI (81491) app_main: --------------------------------------[0m
+[0;32mI (81991) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (81991) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (81991) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (81991) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (82001) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (82001) PRESSURE_TEST: pressure sensor 0 = 0.0100 bar[0m
+[0;32mI (82011) app_main: --------------------------------------[0m
+[0;32mI (82511) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (82511) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (82511) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (82511) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (82521) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (82521) PRESSURE_TEST: pressure sensor 0 = 0.0104 bar[0m
+[0;32mI (82531) app_main: --------------------------------------[0m
+[0;32mI (83031) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (83031) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (83031) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (83031) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (83041) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (83041) PRESSURE_TEST: pressure sensor 0 = 0.0100 bar[0m
+[0;32mI (83051) app_main: --------------------------------------[0m
+[0;32mI (83551) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (83551) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (83551) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (83551) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (83561) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (83561) PRESSURE_TEST: pressure sensor 0 = 0.0097 bar[0m
+[0;32mI (83571) app_main: --------------------------------------[0m
+[0;32mI (84071) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (84071) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (84071) FERRIS_TEST: wheel=2 | raw=1295.00 | angle=113.82 deg[0m
+[0;32mI (84071) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (84081) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (84081) PRESSURE_TEST: pressure sensor 0 = 0.0098 bar[0m
+[0;32mI (84091) app_main: --------------------------------------[0m
+[0;32mI (87711) FERRIS_TEST: wheel=0 | raw=1223.00 | angle=107.49 deg[0m
+[0;32mI (87711) FERRIS_TEST: wheel=1 | raw=577.00 | angle=50.71 deg[0m
+[0;32mI (87711) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (87711) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (87721) FERRIS_TEST: wheel=4 | raw=2.00 | angle=0.18 deg[0m
+[0;32mI (87721) PRESSURE_TEST: pressure sensor 0 = 0.0099 bar[0m
+[0;32mI (87731) app_main: --------------------------------------[0m
+[0;32mI (88231) FERRIS_TEST: wheel=0 | raw=1223.00 | angle=107.49 deg[0m
+[0;32mI (88231) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (88231) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (88231) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (88241) FERRIS_TEST: wheel=4 | raw=2.00 | angle=0.18 deg[0m
+[0;32mI (88241) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (88251) app_main: --------------------------------------[0m
+[0;32mI (88751) FERRIS_TEST: wheel=0 | raw=1223.00 | angle=107.49 deg[0m
+[0;32mI (88751) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (88751) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (88751) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (88761) FERRIS_TEST: wheel=4 | raw=2.00 | angle=0.18 deg[0m
+[0;32mI (88761) PRESSURE_TEST: pressure sensor 0 = 0.0103 bar[0m
+[0;32mI (88771) app_main: --------------------------------------[0m
+[0;32mI (89271) FERRIS_TEST: wheel=0 | raw=1223.00 | angle=107.49 deg[0m
+[0;32mI (89271) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (89271) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (89271) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (89281) FERRIS_TEST: wheel=4 | raw=2.00 | angle=0.18 deg[0m
+[0;32mI (89281) PRESSURE_TEST: pressure sensor 0 = 0.0108 bar[0m
+[0;32mI (89291) app_main: --------------------------------------[0m
+T: wheel=0 | raw=1223.00 | angle=107.49 deg
+[0;32mI (90311) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (90311) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (90311) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (90321) FERRIS_TEST: wheel=4 | raw=2.00 | angle=0.18 deg[0m
+[0;32mI (90321) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (90331) app_main: --------------------------------------[0m
+[0;32mI (90831) FERRIS_TEST: wheel=0 | raw=1223.00 | angle=107.49 deg[0m
+[0;32mI (90831) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (90831) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (90831) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (90841) FERRIS_TEST: wheel=4 | raw=2.00 | angle=0.18 deg[0m
+[0;32mI (90841) PRESSURE_TEST: pressure sensor 0 = 0.0108 bar[0m
+[0;32mI (90851) app_main: --------------------------------------[0m
+[0;32mI (91351) FERRIS_TEST: wheel=0 | raw=1223.00 | angle=107.49 deg[0m
+[0;32mI (91351) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (91351) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (91351) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (91361) FERRIS_TEST: wheel=4 | raw=2.00 | angle=0.18 deg[0m
+[0;32mI (91361) PRESSURE_TEST: pressure sensor 0 = 0.0099 bar[0m
+[0;32mI (91371) app_main: --------------------------------------[0m
+[0;32mI (91871) FERRIS_TEST: wheel=0 | raw=1223.00 | angle=107.49 deg[0m
+[0;32mI (91871) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (91871) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (91871) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (91881) FERRIS_TEST: wheel=4 | raw=2.00 | angle=0.18 deg[0m
+[0;32mI (91881) PRESSURE_TEST: pressure sensor 0 = 0.0108 bar[0m
+[0;32mI (91891) app_main: --------------------------------------[0m
+[0;32mI (92391) FERRIS_TEST: wheel=0 | raw=1223.00 | angle=107.49 deg[0m
+[0;32mI (92391) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (92391) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (92391) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (92401) FERRIS_TEST: wheel=4 | raw=2.00 | angle=0.18 deg[0m
+[0;32mI (92401) PRESSURE_TEST: pressure sensor 0 = 0.0104 bar[0m
+[0;32mI (92411) app_main: --------------------------------------[0m
+[0;32mI (92911) FERRIS_TEST: wheel=0 | raw=1223.00 | angle=107.49 deg[0m
+[0;32mI (92911) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (92911) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (92911) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (92921) FERRIS_TEST: wheel=4 | raw=2.00 | angle=0.18 deg[0m
+[0;32mI (92921) PRESSURE_TEST: pressure sensor 0 = 0.0110 bar[0m
+[0;32mI (92931) app_main: --------------------------------------[0m
+[0;32mI (93431) FERRIS_TEST: wheel=0 | raw=1223.00 | angle=107.49 deg[0m
+[0;32mI (93431) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (93431) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (93431) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.90 deg[0m
+[0;32mI (93441) FERRIS_TEST: wheel=4 | raw=3.00 | angle=0.26 deg[0m
+[0;32mI (93441) PRESSURE_TEST: pressure sensor 0 = 0.0105 bar[0m
+[0;32mI (93451) app_main: --------------------------------------[0m
+[0;32mI (93951) FERRIS_TEST: wheel=0 | raw=1223.00 | angle=107.49 deg[0m
+[0;32mI (93951) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (93951) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (93951) FERRIS_TEST: wheel=3 | raw=1477.00 | angle=129.81 deg[0m
+[0;32mI (93961) FERRIS_TEST: wheel=4 | raw=2.00 | angle=0.18 deg[0m
+[0;32mI (93961) PRESSURE_TEST: pressure sensor 0 = 0.0105 bar[0m
+[0;32mI (93971) app_main: --------------------------------------[0m
+[0;32mI (94471) FERRIS_TEST: wheel=0 | raw=1224.00 | angle=107.58 deg[0m
+[0;32mI (94471) FERRIS_TEST: wheel=1 | raw=576.00 | angle=50.62 deg[0m
+[0;32mI (94471) FERRIS_TEST: wheel=2 | raw=1297.00 | angle=113.99 deg[0m
+[0;32mI (94471) FERRIS_TEST: wheel=3 | raw=1479.00 | angle=129.99 deg[0m
+[0;32mI (94481) FERRIS_TEST: wheel=4 | raw=5.00 | angle=0.44 deg[0m
+[0;32mI (94481) PRESSURE_TEST: pressure sensor 0 = 0.0108 bar[0m
+[0;32mI (94491) app_main: --------------------------------------[0m
+[0;32mI (96551) FERRIS_TEST: wheel=0 | raw=1298.00 | angle=114.08 deg[0m
+[0;32mI (96551) FERRIS_TEST: wheel=1 | raw=624.00 | angle=54.84 deg[0m
+[0;32mI (96551) FERRIS_TEST: wheel=2 | raw=1300.00 | angle=114.26 deg[0m
+[0;32mI (96551) FERRIS_TEST: wheel=3 | raw=1502.00 | angle=132.01 deg[0m
+[0;32mI (96561) FERRIS_TEST: wheel=4 | raw=-15.00 | angle=-1.32 deg[0m
+[0;32mI (96561) PRESSURE_TEST: pressure sensor 0 = 0.0114 bar[0m
+[0;32mI (96571) app_main: --------------------------------------[0m
+[0;32mI (97071) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (97071) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (97071) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (97071) FERRIS_TEST: wheel=3 | raw=1499.00 | angle=131.75 deg[0m
+[0;32mI (97081) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (97081) PRESSURE_TEST: pressure sensor 0 = 0.0103 bar[0m
+[0;32mI (97091) app_main: --------------------------------------[0m
+[0;32mI (97591) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (97591) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (97591) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (97591) FERRIS_TEST: wheel=3 | raw=1499.00 | angle=131.75 deg[0m
+[0;32mI (97601) FERRIS_TEST: wheel=4 | raw=-19.00 | angle=-1.67 deg[0m
+[0;32mI (97601) PRESSURE_TEST: pressure sensor 0 = 0.0109 bar[0m
+[0;32mI (97611) app_main: --------------------------------------[0m
+[0;32mI (98111) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (98111) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (98111) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (98111) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (98121) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (98121) PRESSURE_TEST: pressure sensor 0 = 0.0108 bar[0m
+[0;32mI (98131) app_main: --------------------------------------[0m
+[0;32mI (98631) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (98631) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (98631) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (98631) FERRIS_TEST: wheel=3 | raw=1499.00 | angle=131.75 deg[0m
+[0;32mI (98641) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (98641) PRESSURE_TEST: pressure sensor 0 = 0.0105 bar[0m
+[0;32mI (98651) app_main: --------------------------------------[0m
+[0;32mI (99151) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (99151) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (99151) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (99151) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (99161) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (99161) PRESSURE_TEST: pressure sensor 0 = 0.0106 bar[0m
+[0;32mI (99171) app_main: --------------------------------------[0m
+[0;32mI (99671) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (99671) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (99671) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (99671) FERRIS_TEST: wheel=3 | raw=1499.00 | angle=131.75 deg[0m
+[0;32mI (99681) FERRIS_TEST: wheel=4 | raw=-19.00 | angle=-1.67 deg[0m
+[0;32mI (99681) PRESSURE_TEST: pressure sensor 0 = 0.0115 bar[0m
+[0;32mI (99691) app_main: --------------------------------------[0m
+[0;32mI (100191) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (100191) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (100191) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (100191) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (100201) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (100201) PRESSURE_TEST: pressure sensor 0 = 0.0113 bar[0m
+[0;32mI (100211) app_main: --------------------------------------[0m
+[0;32mI (100711) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (100711) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (100711) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (100711) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (100721) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (100721) PRESSURE_TEST: pressure sensor 0 = 0.0110 bar[0m
+[0;32mI (100731) app_main: --------------------------------------[0m
+[0;32mI (101231) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (101231) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (101231) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (101231) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (101241) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (101241) PRESSURE_TEST: pressure sensor 0 = 0.0114 bar[0m
+[0;32mI (101251) app_main: --------------------------------------[0m
+[0;32mI (101751) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (101751) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (101751) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (101751) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (101761) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.67 deg[0m
+[0;32mI (101761) PRESSURE_TEST: pressure sensor 0 = 0.0116 bar[0m
+[0;32mI (101771) app_main: --------------------------------------[0m
+[0;32mI (102271) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (102271) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (102271) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (102271) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (102281) FERRIS_TEST: wheel=4 | raw=-19.00 | angle=-1.67 deg[0m
+[0;32mI (102281) PRESSURE_TEST: pressure sensor 0 = 0.0115 bar[0m
+[0;32mI (102291) app_main: --------------------------------------[0m
+[0;32mI (102791) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (102791) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (102791) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (102791) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (102801) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (102801) PRESSURE_TEST: pressure sensor 0 = 0.0114 bar[0m
+[0;32mI (102811) app_main: --------------------------------------[0m
+[0;32mI (103311) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (103311) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (103311) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (103311) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (103321) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (103321) PRESSURE_TEST: pressure sensor 0 = 0.0115 bar[0m
+[0;32mI (103331) app_main: --------------------------------------[0m
+[0;32mI (103831) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (103831) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (103831) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (103831) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (103841) FERRIS_TEST: wheel=4 | raw=-19.00 | angle=-1.67 deg[0m
+[0;32mI (103841) PRESSURE_TEST: pressure sensor 0 = 0.0112 bar[0m
+[0;32mI (103851) app_main: --------------------------------------[0m
+[0;32mI (104351) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (104351) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (104351) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (104351) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (104361) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (104361) PRESSURE_TEST: pressure sensor 0 = 0.0114 bar[0m
+[0;32mI (104371) app_main: --------------------------------------[0m
+[0;32mI (104871) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (104871) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (104871) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (104871) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (104881) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (104881) PRESSURE_TEST: pressure sensor 0 = 0.0120 bar[0m
+[0;32mI (104891) app_main: --------------------------------------[0m
+[0;32mI (105391) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (105391) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (105391) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (105391) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (105401) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (105401) PRESSURE_TEST: pressure sensor 0 = 0.0111 bar[0m
+[0;32mI (105411) app_main: --------------------------------------[0m
+[0;32mI (105911) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (105911) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (105911) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (105911) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (105921) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (105921) PRESSURE_TEST: pressure sensor 0 = 0.0115 bar[0m
+[0;32mI (105931) app_main: --------------------------------------[0m
+[0;32mI (106431) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (106431) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (106431) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (106431) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (106441) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (106441) PRESSURE_TEST: pressure sensor 0 = 0.0112 bar[0m
+[0;32mI (106451) app_main: --------------------------------------[0m
+[0;32mI (106951) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (106951) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (106951) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (106951) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (106961) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (106961) PRESSURE_TEST: pressure sensor 0 = 0.0118 bar[0m
+[0;32mI (106971) app_main: --------------------------------------[0m
+[0;32mI (107471) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (107471) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (107471) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (107471) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (107481) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.67 deg[0m
+[0;32mI (107481) PRESSURE_TEST: pressure sensor 0 = 0.0115 bar[0m
+[0;32mI (107491) app_main: --------------------------------------[0m
+[0;32mI (107991) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (107991) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (107991) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (107991) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (108001) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (108001) PRESSURE_TEST: pressure sensor 0 = 0.0124 bar[0m
+[0;32mI (108011) app_main: --------------------------------------[0m
+[0;32mI (108511) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (108511) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (108511) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (108511) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (108521) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (108521) PRESSURE_TEST: pressure sensor 0 = 0.0120 bar[0m
+[0;32mI (108531) app_main: --------------------------------------[0m
+[0;32mI (109031) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (109031) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (109031) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (109031) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (109041) FERRIS_TEST: wheel=4 | raw=-19.00 | angle=-1.67 deg[0m
+[0;32mI (109041) PRESSURE_TEST: pressure sensor 0 = 0.0120 bar[0m
+[0;32mI (109051) app_main: --------------------------------------[0m
+[0;32mI (109551) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (109551) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (109551) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (109551) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (109561) FERRIS_TEST: wheel=4 | raw=-19.00 | angle=-1.67 deg[0m
+[0;32mI (109561) PRESSURE_TEST: pressure sensor 0 = 0.0120 bar[0m
+[0;32mI (109571) app_main: --------------------------------------[0m
+[0;32mI (110071) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (110071) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (110071) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (110071) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (110081) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (110081) PRESSURE_TEST: pressure sensor 0 = 0.0128 bar[0m
+[0;32mI (110091) app_main: --------------------------------------[0m
+[0;32mI (110591) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (110591) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (110591) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (110591) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (110601) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.67 deg[0m
+[0;32mI (110601) PRESSURE_TEST: pressure sensor 0 = 0.0127 bar[0m
+[0;32mI (110611) app_main: --------------------------------------[0m
+[0;32mI (111111) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (111111) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (111111) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (111111) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (111121) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (111121) PRESSURE_TEST: pressure sensor 0 = 0.0132 bar[0m
+[0;32mI (111131) app_main: --------------------------------------[0m
+[0;32mI (111631) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (111631) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (111631) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (111631) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (111641) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (111641) PRESSURE_TEST: pressure sensor 0 = 0.0125 bar[0m
+[0;32mI (111651) app_main: --------------------------------------[0m
+[0;32mI (112151) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (112151) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (112151) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (112151) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (112161) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (112161) PRESSURE_TEST: pressure sensor 0 = 0.0129 bar[0m
+[0;32mI (112171) app_main: --------------------------------------[0m
+[0;32mI (112671) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (112671) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (112671) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (112671) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (112681) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (112681) PRESSURE_TEST: pressure sensor 0 = 0.0132 bar[0m
+[0;32mI (112691) app_main: --------------------------------------[0m
+[0;32mI (113191) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (113191) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (113191) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (113191) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (113201) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (113201) PRESSURE_TEST: pressure sensor 0 = 0.0127 bar[0m
+[0;32mI (113211) app_main: --------------------------------------[0m
+[0;32mI (113711) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (113711) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (113711) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (113711) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (113721) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.67 deg[0m
+[0;32mI (113721) PRESSURE_TEST: pressure sensor 0 = 0.0129 bar[0m
+[0;32mI (113731) app_main: --------------------------------------[0m
+[0;32mI (114231) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (114231) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (114231) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (114231) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (114241) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (114241) PRESSURE_TEST: pressure sensor 0 = 0.0132 bar[0m
+[0;32mI (114251) app_main: --------------------------------------[0m
+[0;32mI (114751) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (114751) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (114751) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (114751) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (114761) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (114761) PRESSURE_TEST: pressure sensor 0 = 0.0127 bar[0m
+[0;32mI (114771) app_main: --------------------------------------[0m
+[0;32mI (115271) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (115271) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (115271) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (115271) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (115281) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (115281) PRESSURE_TEST: pressure sensor 0 = 0.0129 bar[0m
+[0;32mI (115291) app_main: --------------------------------------[0m
+[0;32mI (115791) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (115791) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (115791) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (115791) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (115801) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (115801) PRESSURE_TEST: pressure sensor 0 = 0.0128 bar[0m
+[0;32mI (115811) app_main: --------------------------------------[0m
+[0;32mI (116311) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (116311) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (116311) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (116311) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (116321) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (116321) PRESSURE_TEST: pressure sensor 0 = 0.0127 bar[0m
+[0;32mI (116331) app_main: --------------------------------------[0m
+[0;32mI (116831) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (116831) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (116831) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (116831) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (116841) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (116841) PRESSURE_TEST: pressure sensor 0 = 0.0127 bar[0m
+[0;32mI (116851) app_main: --------------------------------------[0m
+[0;32mI (117351) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (117351) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (117351) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (117351) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (117361) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (117361) PRESSURE_TEST: pressure sensor 0 = 0.0130 bar[0m
+[0;32mI (117371) app_main: --------------------------------------[0m
+[0;32mI (117871) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (117871) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (117871) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (117871) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (117881) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (117881) PRESSURE_TEST: pressure sensor 0 = 0.0132 bar[0m
+[0;32mI (117891) app_main: --------------------------------------[0m
+[0;32mI (118391) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (118391) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (118391) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (118391) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (118401) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (118401) PRESSURE_TEST: pressure sensor 0 = 0.0129 bar[0m
+[0;32mI (118411) app_main: --------------------------------------[0m
+[0;32mI (118911) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (118911) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (118911) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (118911) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (118921) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (118921) PRESSURE_TEST: pressure sensor 0 = 0.0124 bar[0m
+[0;32mI (118931) app_main: --------------------------------------[0m
+[0;32mI (119431) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (119431) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (119431) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (119431) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (119441) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (119441) PRESSURE_TEST: pressure sensor 0 = 0.0129 bar[0m
+[0;32mI (119451) app_main: --------------------------------------[0m
+[0;32mI (119951) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (119951) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (119951) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (119951) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (119961) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.67 deg[0m
+[0;32mI (119961) PRESSURE_TEST: pressure sensor 0 = 0.0130 bar[0m
+[0;32mI (119971) app_main: --------------------------------------[0m
+[0;32mI (120471) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (120471) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (120471) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (120471) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (120481) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (120481) PRESSURE_TEST: pressure sensor 0 = 0.0131 bar[0m
+[0;32mI (120491) app_main: --------------------------------------[0m
+[0;32mI (120991) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (120991) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (120991) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (120991) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (121001) FERRIS_TEST: wheel=4 | raw=-19.00 | angle=-1.58 deg[0m
+[0;32mI (121001) PRESSURE_TEST: pressure sensor 0 = 0.0134 bar[0m
+[0;32mI (121011) app_main: --------------------------------------[0m
+[0;32mI (121511) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (121511) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (121511) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (121511) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (121521) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (121521) PRESSURE_TEST: pressure sensor 0 = 0.0128 bar[0m
+[0;32mI (121531) app_main: --------------------------------------[0m
+[0;32mI (122031) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (122031) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (122031) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (122031) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (122041) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.67 deg[0m
+[0;32mI (122041) PRESSURE_TEST: pressure sensor 0 = 0.0132 bar[0m
+[0;32mI (122051) app_main: --------------------------------------[0m
+[0;32mI (122551) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (122551) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (122551) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (122551) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (122561) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (122561) PRESSURE_TEST: pressure sensor 0 = 0.0129 bar[0m
+[0;32mI (122571) app_main: --------------------------------------[0m
+[0;32mI (123071) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (123071) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (123071) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (123071) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (123081) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (123081) PRESSURE_TEST: pressure sensor 0 = 0.0132 bar[0m
+[0;32mI (123091) app_main: --------------------------------------[0m
+[0;32mI (123591) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (123591) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (123591) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (123591) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (123601) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (123601) PRESSURE_TEST: pressure sensor 0 = 0.0135 bar[0m
+[0;32mI (123611) app_main: --------------------------------------[0m
+[0;32mI (124111) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (124111) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (124111) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (124111) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (124121) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (124121) PRESSURE_TEST: pressure sensor 0 = 0.0127 bar[0m
+[0;32mI (124131) app_main: --------------------------------------[0m
+[0;32mI (124631) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (124631) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (124631) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (124631) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (124641) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (124641) PRESSURE_TEST: pressure sensor 0 = 0.0138 bar[0m
+[0;32mI (124651) app_main: --------------------------------------[0m
+[0;32mI (125151) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (125151) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (125151) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (125151) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (125161) FERRIS_TEST: wheel=4 | raw=-19.00 | angle=-1.58 deg[0m
+[0;32mI (125161) PRESSURE_TEST: pressure sensor 0 = 0.0136 bar[0m
+[0;32mI (125171) app_main: --------------------------------------[0m
+[0;32mI (125671) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (125671) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (125671) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (125671) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (125681) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (125681) PRESSURE_TEST: pressure sensor 0 = 0.0140 bar[0m
+[0;32mI (125691) app_main: --------------------------------------[0m
+[0;32mI (126191) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (126191) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (126191) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (126191) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (126201) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (126201) PRESSURE_TEST: pressure sensor 0 = 0.0135 bar[0m
+[0;32mI (126211) app_main: --------------------------------------[0m
+[0;32mI (126711) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (126711) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (126711) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (126711) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (126721) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (126721) PRESSURE_TEST: pressure sensor 0 = 0.0136 bar[0m
+[0;32mI (126731) app_main: --------------------------------------[0m
+[0;32mI (127231) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (127231) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (127231) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (127231) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (127241) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (127241) PRESSURE_TEST: pressure sensor 0 = 0.0090 bar[0m
+[0;32mI (127251) app_main: --------------------------------------[0m
+[0;32mI (127751) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (127751) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (127751) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (127751) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (127761) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (127761) PRESSURE_TEST: pressure sensor 0 = 0.0134 bar[0m
+[0;32mI (127771) app_main: --------------------------------------[0m
+[0;32mI (128271) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (128271) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (128271) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (128271) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (128281) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (128281) PRESSURE_TEST: pressure sensor 0 = 0.0090 bar[0m
+[0;32mI (128291) app_main: --------------------------------------[0m
+[0;32mI (128791) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (128791) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (128791) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (128791) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (128801) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.67 deg[0m
+[0;32mI (128801) PRESSURE_TEST: pressure sensor 0 = 0.0087 bar[0m
+[0;32mI (128811) app_main: --------------------------------------[0m
+[0;32mI (129311) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (129311) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (129311) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (129311) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (129321) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (129321) PRESSURE_TEST: pressure sensor 0 = 0.0090 bar[0m
+[0;32mI (129331) app_main: --------------------------------------[0m
+[0;32mI (129831) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (129831) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (129831) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (129831) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (129841) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (129841) PRESSURE_TEST: pressure sensor 0 = 0.0091 bar[0m
+[0;32mI (129851) app_main: --------------------------------------[0m
+[0;32mI (130351) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (130351) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (130351) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (130351) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (130361) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (130361) PRESSURE_TEST: pressure sensor 0 = 0.0089 bar[0m
+[0;32mI (130371) app_main: --------------------------------------[0m
+[0;32mI (130871) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (130871) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (130871) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (130871) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (130881) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (130881) PRESSURE_TEST: pressure sensor 0 = 0.0089 bar[0m
+[0;32mI (130891) app_main: --------------------------------------[0m
+[0;32mI (131391) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (131391) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (131391) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (131391) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (131401) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (131401) PRESSURE_TEST: pressure sensor 0 = 0.0098 bar[0m
+[0;32mI (131411) app_main: --------------------------------------[0m
+[0;32mI (131911) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (131911) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (131911) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (131911) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (131921) FERRIS_TEST: wheel=4 | raw=-19.00 | angle=-1.67 deg[0m
+[0;32mI (131921) PRESSURE_TEST: pressure sensor 0 = 0.0091 bar[0m
+[0;32mI (131931) app_main: --------------------------------------[0m
+[0;32mI (132431) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (132431) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (132431) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (132431) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (132441) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (132441) PRESSURE_TEST: pressure sensor 0 = 0.0096 bar[0m
+[0;32mI (132451) app_main: --------------------------------------[0m
+[0;32mI (132951) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (132951) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (132951) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (132951) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (132961) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (132961) PRESSURE_TEST: pressure sensor 0 = 0.0096 bar[0m
+[0;32mI (132971) app_main: --------------------------------------[0m
+[0;32mI (133471) FERRIS_TEST: wheel=0 | raw=1294.00 | angle=113.73 deg[0m
+[0;32mI (133471) FERRIS_TEST: wheel=1 | raw=620.00 | angle=54.49 deg[0m
+[0;32mI (133471) FERRIS_TEST: wheel=2 | raw=1296.00 | angle=113.91 deg[0m
+[0;32mI (133471) FERRIS_TEST: wheel=3 | raw=1498.00 | angle=131.66 deg[0m
+[0;32mI (133481) FERRIS_TEST: wheel=4 | raw=-18.00 | angle=-1.58 deg[0m
+[0;32mI (133481) PRESSURE_TEST: pressure sensor 0 = 0.0099 bar[0m
+[0;32mI (133491) app_main: --------------------------------------[0m
+[0;32mI (133991) FERRIS_TEST: wheel=0 | raw=1294.00

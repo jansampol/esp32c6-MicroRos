@@ -1,0 +1,2200 @@
+Command: /Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf_monitor.py -p /dev/cu.usbserial-140 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf -m '/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf.py' '-p' '/dev/cu.usbserial-140'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xfa8
+load:0x4086e610,len:0x31a8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  5 2026 11:04:44[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (71) boot:  3 coredump         Unknown data     01 03 00210000 00010000[0m
+[0;32mI (78) boot:  4 littlefs         Unknown data     01 82 00220000 0007d000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0aa4ch ( 43596) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001aa74 vaddr=40800000 size=055a4h ( 21924) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=15040h ( 86080) map[0m
+[0;32mI (126) esp_image: segment 3: paddr=00035068 vaddr=408055a4 size=09904h ( 39172) load[0m
+[0;32mI (138) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (139) boot: Disabling RNG early entropy source...[0m
+[0;32mI (149) cpu_start: Unicore app[0m
+[0;32mI (157) cpu_start: Pro cpu start user code[0m
+[0;32mI (157) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (157) app_init: Application information:[0m
+[0;32mI (158) app_init: Project name:     esp32c6_microros_test[0m
+[0;32mI (162) app_init: App version:      eb8ceaf-dirty[0m
+[0;32mI (167) app_init: Compile time:     Apr 16 2026 12:55:16[0m
+[0;32mI (172) app_init: ELF file SHA256:  7d582c657...[0m
+[0;32mI (176) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (180) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (184) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (188) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (192) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (198) heap_init: At 4080FE20 len 0006C7F0 (433 KiB): RAM[0m
+[0;32mI (203) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (208) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (214) spi_flash: detected chip: generic[0m
+[0;32mI (217) spi_flash: flash io: dio[0m
+[0;33mW (220) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (232) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (239) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (245) coexist: coex firmware version: 831ec70[0m
+[0;32mI (264) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (264) main_task: Started on CPU0[0m
+[0;32mI (264) main_task: Calling app_main()[0m
+SPI0 TEST START
+[0;32mI (264) SPI0Manager: SPI0Manager begin()[0m
+[0;32mI (264) SPI0Manager: Using pins MOSI=8 MISO=6 CLK=1[0m
+[0;32mI (294) SPI0Manager: SPI0Manager initialized.[0m
+SPI0 initialized
+=== MCP DEBUG ===
+[0;32mI (294) SPI0Manager: Device 1 IODIRA = 0xFF[0m
+[0;32mI (294) SPI0Manager: Device 1 IODIRB = 0xFF[0m
+[0;32mI (294) SPI0Manager: Device 1 GPIOA = 0x00[0m
+[0;32mI (294) SPI0Manager: Device 1 GPIOB = 0x00[0m
+[0;32mI (304) SPI0Manager: Device 2 IODIRA = 0xC0[0m
+[0;32mI (304) SPI0Manager: Device 2 IODIRB = 0xFF[0m
+[0;32mI (304) SPI0Manager: Device 2 GPIOA = 0x00[0m
+[0;32mI (314) SPI0Manager: Device 2 GPIOB = 0x07[0m
+[0;32mI (314) SPI0Manager: Device 3 IODIRA = 0xFF[0m
+[0;32mI (324) SPI0Manager: Device 3 IODIRB = 0xFF[0m
+[0;32mI (324) SPI0Manager: Device 3 GPIOA = 0x00[0m
+[0;32mI (324) SPI0Manager: Device 3 GPIOB = 0x00[0m
+[0;32mI (334) SPI0Manager: Device 4 IODIRA = 0x00[0m
+[0;32mI (334) SPI0Manager: Device 4 IODIRB = 0x00[0m
+[0;32mI (344) SPI0Manager: Device 4 GPIOA = 0x00[0m
+[0;32mI (344) SPI0Manager: Device 4 GPIOB = 0x00[0m
+=== END MCP DEBUG ===
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (854) SPI0Manager: GPIOA write=0x00 read=0x00[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (1354) SPI0Manager: GPIOA write=0x01 read=0x01[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (1854) SPI0Manager: GPIOA write=0x02 read=0x02[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (2354) SPI0Manager: GPIOA write=0x03 read=0x03[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (2854) SPI0Manager: GPIOA write=0x04 read=0x04[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (3354) SPI0Manager: GPIOA write=0x05 read=0x05[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (3854) SPI0Manager: GPIOA write=0x06 read=0x06[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (4354) SPI0Manager: GPIOA write=0x07 read=0x07[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (4854) SPI0Manager: GPIOA write=0x08 read=0x08[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (5354) SPI0Manager: GPIOA write=0x09 read=0x09[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (5854) SPI0Manager: GPIOA write=0x0A read=0x0A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (6354) SPI0Manager: GPIOA write=0x0B read=0x0B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (6854) SPI0Manager: GPIOA write=0x0C read=0x0C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (7354) SPI0Manager: GPIOA write=0x0D read=0x0D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (7854) SPI0Manager: GPIOA write=0x0E read=0x0E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (8354) SPI0Manager: GPIOA write=0x0F read=0x0F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (8854) SPI0Manager: GPIOA write=0x10 read=0x10[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (9354) SPI0Manager: GPIOA write=0x11 read=0x11[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (9854) SPI0Manager: GPIOA write=0x12 read=0x12[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (10354) SPI0Manager: GPIOA write=0x13 read=0x13[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (10854) SPI0Manager: GPIOA write=0x14 read=0x14[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (11354) SPI0Manager: GPIOA write=0x15 read=0x15[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (11854) SPI0Manager: GPIOA write=0x16 read=0x16[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (12354) SPI0Manager: GPIOA write=0x17 read=0x17[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (12854) SPI0Manager: GPIOA write=0x18 read=0x18[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (13354) SPI0Manager: GPIOA write=0x19 read=0x19[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (13854) SPI0Manager: GPIOA write=0x1A read=0x1A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (14354) SPI0Manager: GPIOA write=0x1B read=0x1B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (14854) SPI0Manager: GPIOA write=0x1C read=0x1C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (15354) SPI0Manager: GPIOA write=0x1D read=0x1D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (15854) SPI0Manager: GPIOA write=0x1E read=0x1E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (16354) SPI0Manager: GPIOA write=0x1F read=0x1F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (16854) SPI0Manager: GPIOA write=0x20 read=0x20[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (17354) SPI0Manager: GPIOA write=0x21 read=0x21[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (17854) SPI0Manager: GPIOA write=0x22 read=0x22[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (18354) SPI0Manager: GPIOA write=0x23 read=0x23[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (18854) SPI0Manager: GPIOA write=0x24 read=0x24[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (19354) SPI0Manager: GPIOA write=0x25 read=0x25[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (19854) SPI0Manager: GPIOA write=0x26 read=0x26[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (20354) SPI0Manager: GPIOA write=0x27 read=0x27[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (20854) SPI0Manager: GPIOA write=0x28 read=0x28[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (21354) SPI0Manager: GPIOA write=0x29 read=0x29[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (21854) SPI0Manager: GPIOA write=0x2A read=0x2A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (22354) SPI0Manager: GPIOA write=0x2B read=0x2B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (22854) SPI0Manager: GPIOA write=0x2C read=0x2C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (23354) SPI0Manager: GPIOA write=0x2D read=0x2D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (23854) SPI0Manager: GPIOA write=0x2E read=0x2E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (24354) SPI0Manager: GPIOA write=0x2F read=0x2F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (24854) SPI0Manager: GPIOA write=0x30 read=0x30[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (25354) SPI0Manager: GPIOA write=0x31 read=0x31[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (25854) SPI0Manager: GPIOA write=0x32 read=0x32[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (26354) SPI0Manager: GPIOA write=0x33 read=0x33[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (26854) SPI0Manager: GPIOA write=0x34 read=0x34[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (27354) SPI0Manager: GPIOA write=0x35 read=0x35[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (27854) SPI0Manager: GPIOA write=0x36 read=0x36[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (28354) SPI0Manager: GPIOA write=0x37 read=0x37[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (28854) SPI0Manager: GPIOA write=0x38 read=0x38[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (29354) SPI0Manager: GPIOA write=0x39 read=0x39[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (29854) SPI0Manager: GPIOA write=0x3A read=0x3A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (30354) SPI0Manager: GPIOA write=0x3B read=0x3B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (30854) SPI0Manager: GPIOA write=0x3C read=0x3C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (31354) SPI0Manager: GPIOA write=0x3D read=0x3D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (31854) SPI0Manager: GPIOA write=0x3E read=0x3E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (32354) SPI0Manager: GPIOA write=0x3F read=0x3F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (32854) SPI0Manager: GPIOA write=0x00 read=0x00[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (33354) SPI0Manager: GPIOA write=0x01 read=0x01[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (33854) SPI0Manager: GPIOA write=0x02 read=0x02[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (34354) SPI0Manager: GPIOA write=0x03 read=0x03[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (34854) SPI0Manager: GPIOA write=0x04 read=0x04[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (35354) SPI0Manager: GPIOA write=0x05 read=0x05[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (35854) SPI0Manager: GPIOA write=0x06 read=0x06[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (36354) SPI0Manager: GPIOA write=0x07 read=0x07[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (36854) SPI0Manager: GPIOA write=0x08 read=0x08[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (37354) SPI0Manager: GPIOA write=0x09 read=0x09[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (37854) SPI0Manager: GPIOA write=0x0A read=0x0A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (38354) SPI0Manager: GPIOA write=0x0B read=0x0B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (38854) SPI0Manager: GPIOA write=0x0C read=0x0C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (39354) SPI0Manager: GPIOA write=0x0D read=0x0D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (39854) SPI0Manager: GPIOA write=0x0E read=0x0E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (40354) SPI0Manager: GPIOA write=0x0F read=0x0F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (40854) SPI0Manager: GPIOA write=0x10 read=0x10[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (41354) SPI0Manager: GPIOA write=0x11 read=0x11[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (41854) SPI0Manager: GPIOA write=0x12 read=0x12[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (42354) SPI0Manager: GPIOA write=0x13 read=0x13[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (42854) SPI0Manager: GPIOA write=0x14 read=0x14[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (43354) SPI0Manager: GPIOA write=0x15 read=0x15[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (43854) SPI0Manager: GPIOA write=0x16 read=0x16[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (44354) SPI0Manager: GPIOA write=0x17 read=0x17[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (44854) SPI0Manager: GPIOA write=0x18 read=0x18[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (45354) SPI0Manager: GPIOA write=0x19 read=0x19[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (45854) SPI0Manager: GPIOA write=0x1A read=0x1A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (46354) SPI0Manager: GPIOA write=0x1B read=0x1B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (46854) SPI0Manager: GPIOA write=0x1C read=0x1C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (47354) SPI0Manager: GPIOA write=0x1D read=0x1D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (47854) SPI0Manager: GPIOA write=0x1E read=0x1E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (48354) SPI0Manager: GPIOA write=0x1F read=0x1F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (48854) SPI0Manager: GPIOA write=0x20 read=0x20[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (49354) SPI0Manager: GPIOA write=0x21 read=0x21[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (49854) SPI0Manager: GPIOA write=0x22 read=0x22[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (50354) SPI0Manager: GPIOA write=0x23 read=0x23[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (50854) SPI0Manager: GPIOA write=0x24 read=0x24[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (51354) SPI0Manager: GPIOA write=0x25 read=0x25[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (51854) SPI0Manager: GPIOA write=0x26 read=0x26[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (52354) SPI0Manager: GPIOA write=0x27 read=0x27[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (52854) SPI0Manager: GPIOA write=0x28 read=0x28[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (53354) SPI0Manager: GPIOA write=0x29 read=0x29[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (53854) SPI0Manager: GPIOA write=0x2A read=0x2A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (54354) SPI0Manager: GPIOA write=0x2B read=0x2B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (54854) SPI0Manager: GPIOA write=0x2C read=0x2C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (55354) SPI0Manager: GPIOA write=0x2D read=0x2D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (55854) SPI0Manager: GPIOA write=0x2E read=0x2E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (56354) SPI0Manager: GPIOA write=0x2F read=0x2F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (56854) SPI0Manager: GPIOA write=0x30 read=0x30[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (57354) SPI0Manager: GPIOA write=0x31 read=0x31[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (57854) SPI0Manager: GPIOA write=0x32 read=0x32[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (58354) SPI0Manager: GPIOA write=0x33 read=0x33[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (58854) SPI0Manager: GPIOA write=0x34 read=0x34[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (59354) SPI0Manager: GPIOA write=0x35 read=0x35[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (59854) SPI0Manager: GPIOA write=0x36 read=0x36[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (60354) SPI0Manager: GPIOA write=0x37 read=0x37[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (60854) SPI0Manager: GPIOA write=0x38 read=0x38[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (61354) SPI0Manager: GPIOA write=0x39 read=0x39[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (61854) SPI0Manager: GPIOA write=0x3A read=0x3A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (62354) SPI0Manager: GPIOA write=0x3B read=0x3B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (62854) SPI0Manager: GPIOA write=0x3C read=0x3C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (63354) SPI0Manager: GPIOA write=0x3D read=0x3D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (63854) SPI0Manager: GPIOA write=0x3E read=0x3E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (64354) SPI0Manager: GPIOA write=0x3F read=0x3F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (64854) SPI0Manager: GPIOA write=0x00 read=0x00[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (65354) SPI0Manager: GPIOA write=0x01 read=0x01[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (65854) SPI0Manager: GPIOA write=0x02 read=0x02[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (66354) SPI0Manager: GPIOA write=0x03 read=0x03[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (66854) SPI0Manager: GPIOA write=0x04 read=0x04[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (67354) SPI0Manager: GPIOA write=0x05 read=0x05[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (67854) SPI0Manager: GPIOA write=0x06 read=0x06[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (68354) SPI0Manager: GPIOA write=0x07 read=0x07[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (68854) SPI0Manager: GPIOA write=0x08 read=0x08[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (69354) SPI0Manager: GPIOA write=0x09 read=0x09[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (69854) SPI0Manager: GPIOA write=0x0A read=0x0A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (70354) SPI0Manager: GPIOA write=0x0B read=0x0B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (70854) SPI0Manager: GPIOA write=0x0C read=0x0C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (71354) SPI0Manager: GPIOA write=0x0D read=0x0D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (71854) SPI0Manager: GPIOA write=0x0E read=0x0E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (72354) SPI0Manager: GPIOA write=0x0F read=0x0F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (72854) SPI0Manager: GPIOA write=0x10 read=0x10[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (73354) SPI0Manager: GPIOA write=0x11 read=0x11[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (73854) SPI0Manager: GPIOA write=0x12 read=0x12[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (74354) SPI0Manager: GPIOA write=0x13 read=0x13[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (74854) SPI0Manager: GPIOA write=0x14 read=0x14[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (75354) SPI0Manager: GPIOA write=0x15 read=0x15[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (75854) SPI0Manager: GPIOA write=0x16 read=0x16[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (76354) SPI0Manager: GPIOA write=0x17 read=0x17[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (76854) SPI0Manager: GPIOA write=0x18 read=0x18[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (77354) SPI0Manager: GPIOA write=0x19 read=0x19[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (77854) SPI0Manager: GPIOA write=0x1A read=0x1A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (78354) SPI0Manager: GPIOA write=0x1B read=0x1B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (78854) SPI0Manager: GPIOA write=0x1C read=0x1C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (79354) SPI0Manager: GPIOA write=0x1D read=0x1D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (79854) SPI0Manager: GPIOA write=0x1E read=0x1E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (80354) SPI0Manager: GPIOA write=0x1F read=0x1F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (80854) SPI0Manager: GPIOA write=0x20 read=0x20[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (81354) SPI0Manager: GPIOA write=0x21 read=0x21[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (81854) SPI0Manager: GPIOA write=0x22 read=0x22[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (82354) SPI0Manager: GPIOA write=0x23 read=0x23[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (82854) SPI0Manager: GPIOA write=0x24 read=0x24[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (83354) SPI0Manager: GPIOA write=0x25 read=0x25[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (83854) SPI0Manager: GPIOA write=0x26 read=0x26[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (84354) SPI0Manager: GPIOA write=0x27 read=0x27[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (84854) SPI0Manager: GPIOA write=0x28 read=0x28[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (85354) SPI0Manager: GPIOA write=0x29 read=0x29[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (85854) SPI0Manager: GPIOA write=0x2A read=0x2A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (86354) SPI0Manager: GPIOA write=0x2B read=0x2B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (86854) SPI0Manager: GPIOA write=0x2C read=0x2C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (87354) SPI0Manager: GPIOA write=0x2D read=0x2D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (87854) SPI0Manager: GPIOA write=0x2E read=0x2E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (88354) SPI0Manager: GPIOA write=0x2F read=0x2F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (88854) SPI0Manager: GPIOA write=0x30 read=0x30[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (89354) SPI0Manager: GPIOA write=0x31 read=0x31[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (89854) SPI0Manager: GPIOA write=0x32 read=0x32[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (90354) SPI0Manager: GPIOA write=0x33 read=0x33[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (90854) SPI0Manager: GPIOA write=0x34 read=0x34[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (91354) SPI0Manager: GPIOA write=0x35 read=0x35[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (91854) SPI0Manager: GPIOA write=0x36 read=0x36[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (92354) SPI0Manager: GPIOA write=0x37 read=0x37[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (92854) SPI0Manager: GPIOA write=0x38 read=0x38[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (93354) SPI0Manager: GPIOA write=0x39 read=0x39[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (93854) SPI0Manager: GPIOA write=0x3A read=0x3A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (94354) SPI0Manager: GPIOA write=0x3B read=0x3B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (94854) SPI0Manager: GPIOA write=0x3C read=0x3C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (95354) SPI0Manager: GPIOA write=0x3D read=0x3D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (95854) SPI0Manager: GPIOA write=0x3E read=0x3E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (96354) SPI0Manager: GPIOA write=0x3F read=0x3F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (96854) SPI0Manager: GPIOA write=0x00 read=0x00[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (97354) SPI0Manager: GPIOA write=0x01 read=0x01[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (97854) SPI0Manager: GPIOA write=0x02 read=0x02[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (98354) SPI0Manager: GPIOA write=0x03 read=0x03[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (98854) SPI0Manager: GPIOA write=0x04 read=0x04[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (99354) SPI0Manager: GPIOA write=0x05 read=0x05[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (99854) SPI0Manager: GPIOA write=0x06 read=0x06[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (100354) SPI0Manager: GPIOA write=0x07 read=0x07[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (100854) SPI0Manager: GPIOA write=0x08 read=0x08[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (102354) SPI0Manager: GPIOA write=0x0B read=0x0B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (102854) SPI0Manager: GPIOA write=0x0C read=0x0C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (103354) SPI0Manager: GPIOA write=0x0D read=0x0D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (103854) SPI0Manager: GPIOA write=0x0E read=0x0E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (104354) SPI0Manager: GPIOA write=0x0F read=0x0F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (104854) SPI0Manager: GPIOA write=0x10 read=0x10[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (105354) SPI0Manager: GPIOA write=0x11 read=0x11[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (105854) SPI0Manager: GPIOA write=0x12 read=0x12[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (106354) SPI0Manager: GPIOA write=0x13 read=0x13[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (106854) SPI0Manager: GPIOA write=0x14 read=0x14[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (107354) SPI0Manager: GPIOA write=0x15 read=0x15[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (107854) SPI0Manager: GPIOA write=0x16 read=0x16[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (108354) SPI0Manager: GPIOA write=0x17 read=0x17[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (108854) SPI0Manager: GPIOA write=0x18 read=0x18[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (109354) SPI0Manager: GPIOA write=0x19 read=0x19[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (109854) SPI0Manager: GPIOA write=0x1A read=0x1A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (110354) SPI0Manager: GPIOA write=0x1B read=0x1B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (110854) SPI0Manager: GPIOA write=0x1C read=0x1C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (111354) SPI0Manager: GPIOA write=0x1D read=0x1D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (111854) SPI0Manager: GPIOA write=0x1E read=0x1E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (112354) SPI0Manager: GPIOA write=0x1F read=0x1F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (112854) SPI0Manager: GPIOA write=0x20 read=0x20[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (113354) SPI0Manager: GPIOA write=0x21 read=0x21[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (113854) SPI0Manager: GPIOA write=0x22 read=0x22[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (114354) SPI0Manager: GPIOA write=0x23 read=0x23[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (114854) SPI0Manager: GPIOA write=0x24 read=0x24[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (115354) SPI0Manager: GPIOA write=0x25 read=0x25[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (115854) SPI0Manager: GPIOA write=0x26 read=0x26[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (116354) SPI0Manager: GPIOA write=0x27 read=0x27[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (116854) SPI0Manager: GPIOA write=0x28 read=0x28[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (117354) SPI0Manager: GPIOA write=0x29 read=0x29[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (117854) SPI0Manager: GPIOA write=0x2A read=0x2A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (118354) SPI0Manager: GPIOA write=0x2B read=0x2B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (118854) SPI0Manager: GPIOA write=0x2C read=0x2C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (119354) SPI0Manager: GPIOA write=0x2D read=0x2D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (119854) SPI0Manager: GPIOA write=0x2E read=0x2E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (120354) SPI0Manager: GPIOA write=0x2F read=0x2F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (120854) SPI0Manager: GPIOA write=0x30 read=0x30[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (121354) SPI0Manager: GPIOA write=0x31 read=0x31[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (121854) SPI0Manager: GPIOA write=0x32 read=0x32[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (122354) SPI0Manager: GPIOA write=0x33 read=0x33[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (122854) SPI0Manager: GPIOA write=0x34 read=0x34[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (123354) SPI0Manager: GPIOA write=0x35 read=0x35[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (123854) SPI0Manager: GPIOA write=0x36 read=0x36[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (124354) SPI0Manager: GPIOA write=0x37 read=0x37[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (124854) SPI0Manager: GPIOA write=0x38 read=0x38[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (125354) SPI0Manager: GPIOA write=0x39 read=0x39[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (125854) SPI0Manager: GPIOA write=0x3A read=0x3A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (126354) SPI0Manager: GPIOA write=0x3B read=0x3B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (126854) SPI0Manager: GPIOA write=0x3C read=0x3C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (127354) SPI0Manager: GPIOA write=0x3D read=0x3D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (127854) SPI0Manager: GPIOA write=0x3E read=0x3E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (128354) SPI0Manager: GPIOA write=0x3F read=0x3F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (128854) SPI0Manager: GPIOA write=0x00 read=0x00[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (129354) SPI0Manager: GPIOA write=0x01 read=0x01[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (129854) SPI0Manager: GPIOA write=0x02 read=0x02[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (130354) SPI0Manager: GPIOA write=0x03 read=0x03[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (130854) SPI0Manager: GPIOA write=0x04 read=0x04[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (131354) SPI0Manager: GPIOA write=0x05 read=0x05[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (131854) SPI0Manager: GPIOA write=0x06 read=0x06[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (132354) SPI0Manager: GPIOA write=0x07 read=0x07[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (132854) SPI0Manager: GPIOA write=0x08 read=0x08[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (133354) SPI0Manager: GPIOA write=0x09 read=0x09[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (133854) SPI0Manager: GPIOA write=0x0A read=0x0A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (134354) SPI0Manager: GPIOA write=0x0B read=0x0B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (134854) SPI0Manager: GPIOA write=0x0C read=0x0C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (135354) SPI0Manager: GPIOA write=0x0D read=0x0D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (135854) SPI0Manager: GPIOA write=0x0E read=0x0E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (136354) SPI0Manager: GPIOA write=0x0F read=0x0F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (136854) SPI0Manager: GPIOA write=0x10 read=0x10[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (137354) SPI0Manager: GPIOA write=0x11 read=0x11[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (137854) SPI0Manager: GPIOA write=0x12 read=0x12[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (138354) SPI0Manager: GPIOA write=0x13 read=0x13[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (138854) SPI0Manager: GPIOA write=0x14 read=0x14[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (139354) SPI0Manager: GPIOA write=0x15 read=0x15[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (139854) SPI0Manager: GPIOA write=0x16 read=0x16[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (140354) SPI0Manager: GPIOA write=0x17 read=0x17[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (140854) SPI0Manager: GPIOA write=0x18 read=0x18[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (141354) SPI0Manager: GPIOA write=0x19 read=0x19[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (141854) SPI0Manager: GPIOA write=0x1A read=0x1A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (142354) SPI0Manager: GPIOA write=0x1B read=0x1B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (142854) SPI0Manager: GPIOA write=0x1C read=0x1C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (143354) SPI0Manager: GPIOA write=0x1D read=0x1D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (143854) SPI0Manager: GPIOA write=0x1E read=0x1E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (144354) SPI0Manager: GPIOA write=0x1F read=0x1F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (144854) SPI0Manager: GPIOA write=0x20 read=0x20[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (145354) SPI0Manager: GPIOA write=0x21 read=0x21[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (145854) SPI0Manager: GPIOA write=0x22 read=0x22[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (146354) SPI0Manager: GPIOA write=0x23 read=0x23[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (146854) SPI0Manager: GPIOA write=0x24 read=0x24[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (147354) SPI0Manager: GPIOA write=0x25 read=0x25[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (147854) SPI0Manager: GPIOA write=0x26 read=0x26[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (148354) SPI0Manager: GPIOA write=0x27 read=0x27[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (148854) SPI0Manager: GPIOA write=0x28 read=0x28[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (149354) SPI0Manager: GPIOA write=0x29 read=0x29[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (149854) SPI0Manager: GPIOA write=0x2A read=0x2A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (150354) SPI0Manager: GPIOA write=0x2B read=0x2B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (150854) SPI0Manager: GPIOA write=0x2C read=0x2C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (151354) SPI0Manager: GPIOA write=0x2D read=0x2D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (151854) SPI0Manager: GPIOA write=0x2E read=0x2E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (152354) SPI0Manager: GPIOA write=0x2F read=0x2F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (152854) SPI0Manager: GPIOA write=0x30 read=0x30[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (153354) SPI0Manager: GPIOA write=0x31 read=0x31[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (153854) SPI0Manager: GPIOA write=0x32 read=0x32[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (154354) SPI0Manager: GPIOA write=0x33 read=0x33[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (154854) SPI0Manager: GPIOA write=0x34 read=0x34[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (155354) SPI0Manager: GPIOA write=0x35 read=0x35[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (155854) SPI0Manager: GPIOA write=0x36 read=0x36[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (156354) SPI0Manager: GPIOA write=0x37 read=0x37[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (156854) SPI0Manager: GPIOA write=0x38 read=0x38[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (157354) SPI0Manager: GPIOA write=0x39 read=0x39[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (157854) SPI0Manager: GPIOA write=0x3A read=0x3A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (158354) SPI0Manager: GPIOA write=0x3B read=0x3B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (158854) SPI0Manager: GPIOA write=0x3C read=0x3C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (159354) SPI0Manager: GPIOA write=0x3D read=0x3D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (159854) SPI0Manager: GPIOA write=0x3E read=0x3E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (160354) SPI0Manager: GPIOA write=0x3F read=0x3F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (160854) SPI0Manager: GPIOA write=0x00 read=0x00[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (161354) SPI0Manager: GPIOA write=0x01 read=0x01[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (161854) SPI0Manager: GPIOA write=0x02 read=0x02[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (162354) SPI0Manager: GPIOA write=0x03 read=0x03[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (162854) SPI0Manager: GPIOA write=0x04 read=0x04[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (163354) SPI0Manager: GPIOA write=0x05 read=0x05[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (163854) SPI0Manager: GPIOA write=0x06 read=0x06[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (164354) SPI0Manager: GPIOA write=0x07 read=0x07[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (164854) SPI0Manager: GPIOA write=0x08 read=0x08[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (165354) SPI0Manager: GPIOA write=0x09 read=0x09[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (165854) SPI0Manager: GPIOA write=0x0A read=0x0A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (166354) SPI0Manager: GPIOA write=0x0B read=0x0B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (166854) SPI0Manager: GPIOA write=0x0C read=0x0C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (167354) SPI0Manager: GPIOA write=0x0D read=0x0D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (167854) SPI0Manager: GPIOA write=0x0E read=0x0E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (168354) SPI0Manager: GPIOA write=0x0F read=0x0F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (168854) SPI0Manager: GPIOA write=0x10 read=0x10[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (171854) SPI0Manager: GPIOA write=0x16 read=0x16[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (172354) SPI0Manager: GPIOA write=0x17 read=0x17[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (172854) SPI0Manager: GPIOA write=0x18 read=0x18[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (173354) SPI0Manager: GPIOA write=0x19 read=0x19[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (173854) SPI0Manager: GPIOA write=0x1A read=0x1A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (174354) SPI0Manager: GPIOA write=0x1B read=0x1B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (174854) SPI0Manager: GPIOA write=0x1C read=0x1C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (178354) SPI0Manager: GPIOA write=0x23 read=0x23[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (178854) SPI0Manager: GPIOA write=0x24 read=0x24[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (179354) SPI0Manager: GPIOA write=0x25 read=0x25[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (179854) SPI0Manager: GPIOA write=0x26 read=0x26[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (180354) SPI0Manager: GPIOA write=0x27 read=0x27[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (180854) SPI0Manager: GPIOA write=0x28 read=0x28[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (181354) SPI0Manager: GPIOA write=0x29 read=0x29[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (181854) SPI0Manager: GPIOA write=0x2A read=0x2A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (182354) SPI0Manager: GPIOA write=0x2B read=0x2B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (183354) SPI0Manager: GPIOA write=0x2D read=0x2D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (183854) SPI0Manager: GPIOA write=0x2E read=0x2E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (184354) SPI0Manager: GPIOA write=0x2F read=0x2F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (184854) SPI0Manager: GPIOA write=0x30 read=0x30[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (185354) SPI0Manager: GPIOA write=0x31 read=0x31[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (185854) SPI0Manager: GPIOA write=0x32 read=0x32[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (186354) SPI0Manager: GPIOA write=0x33 read=0x33[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (186854) SPI0Manager: GPIOA write=0x34 read=0x34[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (187354) SPI0Manager: GPIOA write=0x35 read=0x35[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (187854) SPI0Manager: GPIOA write=0x36 read=0x36[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (188354) SPI0Manager: GPIOA write=0x37 read=0x37[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (189354) SPI0Manager: GPIOA write=0x39 read=0x39[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (189854) SPI0Manager: GPIOA write=0x3A read=0x3A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (190354) SPI0Manager: GPIOA write=0x3B read=0x3B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (190854) SPI0Manager: GPIOA write=0x3C read=0x3C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (191354) SPI0Manager: GPIOA write=0x3D read=0x3D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (191854) SPI0Manager: GPIOA write=0x3E read=0x3E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (192354) SPI0Manager: GPIOA write=0x3F read=0x3F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (192854) SPI0Manager: GPIOA write=0x00 read=0x00[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (193354) SPI0Manager: GPIOA write=0x01 read=0x01[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (193854) SPI0Manager: GPIOA write=0x02 read=0x02[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (194354) SPI0Manager: GPIOA write=0x03 read=0x03[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (194854) SPI0Manager: GPIOA write=0x04 read=0x04[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (195354) SPI0Manager: GPIOA write=0x05 read=0x05[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (195854) SPI0Manager: GPIOA write=0x06 read=0x06[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (196354) SPI0Manager: GPIOA write=0x07 read=0x07[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (196854) SPI0Manager: GPIOA write=0x08 read=0x08[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (197354) SPI0Manager: GPIOA write=0x09 read=0x09[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (197854) SPI0Manager: GPIOA write=0x0A read=0x0A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (198354) SPI0Manager: GPIOA write=0x0B read=0x0B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (198854) SPI0Manager: GPIOA write=0x0C read=0x0C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (199354) SPI0Manager: GPIOA write=0x0D read=0x0D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (199854) SPI0Manager: GPIOA write=0x0E read=0x0E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (200354) SPI0Manager: GPIOA write=0x0F read=0x0F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (200854) SPI0Manager: GPIOA write=0x10 read=0x10[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (201354) SPI0Manager: GPIOA write=0x11 read=0x11[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (201854) SPI0Manager: GPIOA write=0x12 read=0x12[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (202354) SPI0Manager: GPIOA write=0x13 read=0x13[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (202854) SPI0Manager: GPIOA write=0x14 read=0x14[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (203354) SPI0Manager: GPIOA write=0x15 read=0x15[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (203854) SPI0Manager: GPIOA write=0x16 read=0x16[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (204354) SPI0Manager: GPIOA write=0x17 read=0x17[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (204854) SPI0Manager: GPIOA write=0x18 read=0x18[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (205354) SPI0Manager: GPIOA write=0x19 read=0x19[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (205854) SPI0Manager: GPIOA write=0x1A read=0x1A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (206354) SPI0Manager: GPIOA write=0x1B read=0x1B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (206854) SPI0Manager: GPIOA write=0x1C read=0x1C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (207354) SPI0Manager: GPIOA write=0x1D read=0x1D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (207854) SPI0Manager: GPIOA write=0x1E read=0x1E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (208354) SPI0Manager: GPIOA write=0x1F read=0x1F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (208854) SPI0Manager: GPIOA write=0x20 read=0x20[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (209354) SPI0Manager: GPIOA write=0x21 read=0x21[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (209854) SPI0Manager: GPIOA write=0x22 read=0x22[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (210354) SPI0Manager: GPIOA write=0x23 read=0x23[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (210854) SPI0Manager: GPIOA write=0x24 read=0x24[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (211354) SPI0Manager: GPIOA write=0x25 read=0x25[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (211854) SPI0Manager: GPIOA write=0x26 read=0x26[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (212354) SPI0Manager: GPIOA write=0x27 read=0x27[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (212854) SPI0Manager: GPIOA write=0x28 read=0x28[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (213354) SPI0Manager: GPIOA write=0x29 read=0x29[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (213854) SPI0Manager: GPIOA write=0x2A read=0x2A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (214354) SPI0Manager: GPIOA write=0x2B read=0x2B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (214854) SPI0Manager: GPIOA write=0x2C read=0x2C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (215354) SPI0Manager: GPIOA write=0x2D read=0x2D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (215854) SPI0Manager: GPIOA write=0x2E read=0x2E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (216354) SPI0Manager: GPIOA write=0x2F read=0x2F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (216854) SPI0Manager: GPIOA write=0x30 read=0x30[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (217354) SPI0Manager: GPIOA write=0x31 read=0x31[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (217854) SPI0Manager: GPIOA write=0x32 read=0x32[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (218354) SPI0Manager: GPIOA write=0x33 read=0x33[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (218854) SPI0Manager: GPIOA write=0x34 read=0x34[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (219354) SPI0Manager: GPIOA write=0x35 read=0x35[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (219854) SPI0Manager: GPIOA write=0x36 read=0x36[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (220354) SPI0Manager: GPIOA write=0x37 read=0x37[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (220854) SPI0Manager: GPIOA write=0x38 read=0x38[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (221354) SPI0Manager: GPIOA write=0x39 read=0x39[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (221854) SPI0Manager: GPIOA write=0x3A read=0x3A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (222354) SPI0Manager: GPIOA write=0x3B read=0x3B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (222854) SPI0Manager: GPIOA write=0x3C read=0x3C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (223354) SPI0Manager: GPIOA write=0x3D read=0x3D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (223854) SPI0Manager: GPIOA write=0x3E read=0x3E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (224354) SPI0Manager: GPIOA write=0x3F read=0x3F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (224854) SPI0Manager: GPIOA write=0x00 read=0x00[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (225354) SPI0Manager: GPIOA write=0x01 read=0x01[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (225854) SPI0Manager: GPIOA write=0x02 read=0x02[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (226354) SPI0Manager: GPIOA write=0x03 read=0x03[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (226854) SPI0Manager: GPIOA write=0x04 read=0x04[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (227354) SPI0Manager: GPIOA write=0x05 read=0x05[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (227854) SPI0Manager: GPIOA write=0x06 read=0x06[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (228354) SPI0Manager: GPIOA write=0x07 read=0x07[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (228854) SPI0Manager: GPIOA write=0x08 read=0x08[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (229354) SPI0Manager: GPIOA write=0x09 read=0x09[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (229854) SPI0Manager: GPIOA write=0x0A read=0x0A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (230354) SPI0Manager: GPIOA write=0x0B read=0x0B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (230854) SPI0Manager: GPIOA write=0x0C read=0x0C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (231354) SPI0Manager: GPIOA write=0x0D read=0x0D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (231854) SPI0Manager: GPIOA write=0x0E read=0x0E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (232354) SPI0Manager: GPIOA write=0x0F read=0x0F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (232854) SPI0Manager: GPIOA write=0x10 read=0x10[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (233354) SPI0Manager: GPIOA write=0x11 read=0x11[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (233854) SPI0Manager: GPIOA write=0x12 read=0x12[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (234354) SPI0Manager: GPIOA write=0x13 read=0x13[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (234854) SPI0Manager: GPIOA write=0x14 read=0x14[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (235354) SPI0Manager: GPIOA write=0x15 read=0x15[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (235854) SPI0Manager: GPIOA write=0x16 read=0x16[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (236354) SPI0Manager: GPIOA write=0x17 read=0x17[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (236854) SPI0Manager: GPIOA write=0x18 read=0x18[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (237354) SPI0Manager: GPIOA write=0x19 read=0x19[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (237854) SPI0Manager: GPIOA write=0x1A read=0x1A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (238354) SPI0Manager: GPIOA write=0x1B read=0x1B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (238854) SPI0Manager: GPIOA write=0x1C read=0x1C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (239354) SPI0Manager: GPIOA write=0x1D read=0x1D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (239854) SPI0Manager: GPIOA write=0x1E read=0x1E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (240354) SPI0Manager: GPIOA write=0x1F read=0x1F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (240854) SPI0Manager: GPIOA write=0x20 read=0x20[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (241354) SPI0Manager: GPIOA write=0x21 read=0x21[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (241854) SPI0Manager: GPIOA write=0x22 read=0x22[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (242354) SPI0Manager: GPIOA write=0x23 read=0x23[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (242854) SPI0Manager: GPIOA write=0x24 read=0x24[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (243354) SPI0Manager: GPIOA write=0x25 read=0x25[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (243854) SPI0Manager: GPIOA write=0x26 read=0x26[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (244354) SPI0Manager: GPIOA write=0x27 read=0x27[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (244854) SPI0Manager: GPIOA write=0x28 read=0x28[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (245354) SPI0Manager: GPIOA write=0x29 read=0x29[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (245854) SPI0Manager: GPIOA write=0x2A read=0x2A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (246354) SPI0Manager: GPIOA write=0x2B read=0x2B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (246854) SPI0Manager: GPIOA write=0x2C read=0x2C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (247354) SPI0Manager: GPIOA write=0x2D read=0x2D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (247854) SPI0Manager: GPIOA write=0x2E read=0x2E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (248354) SPI0Manager: GPIOA write=0x2F read=0x2F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (248854) SPI0Manager: GPIOA write=0x30 read=0x30[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (249354) SPI0Manager: GPIOA write=0x31 read=0x31[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (249854) SPI0Manager: GPIOA write=0x32 read=0x32[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (250354) SPI0Manager: GPIOA write=0x33 read=0x33[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (250854) SPI0Manager: GPIOA write=0x34 read=0x34[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (251354) SPI0Manager: GPIOA write=0x35 read=0x35[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (251854) SPI0Manager: GPIOA write=0x36 read=0x36[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (252354) SPI0Manager: GPIOA write=0x37 read=0x37[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (252854) SPI0Manager: GPIOA write=0x38 read=0x38[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (253354) SPI0Manager: GPIOA write=0x39 read=0x39[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (253854) SPI0Manager: GPIOA write=0x3A read=0x3A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (254354) SPI0Manager: GPIOA write=0x3B read=0x3B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (254854) SPI0Manager: GPIOA write=0x3C read=0x3C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (255354) SPI0Manager: GPIOA write=0x3D read=0x3D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (255854) SPI0Manager: GPIOA write=0x3E read=0x3E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (256354) SPI0Manager: GPIOA write=0x3F read=0x3F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (256854) SPI0Manager: GPIOA write=0x00 read=0x00[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (257354) SPI0Manager: GPIOA write=0x01 read=0x01[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (257854) SPI0Manager: GPIOA write=0x02 read=0x02[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (258354) SPI0Manager: GPIOA write=0x03 read=0x03[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (258854) SPI0Manager: GPIOA write=0x04 read=0x04[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (259354) SPI0Manager: GPIOA write=0x05 read=0x05[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (259854) SPI0Manager: GPIOA write=0x06 read=0x06[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (260354) SPI0Manager: GPIOA write=0x07 read=0x07[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (260854) SPI0Manager: GPIOA write=0x08 read=0x08[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (261354) SPI0Manager: GPIOA write=0x09 read=0x09[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (261854) SPI0Manager: GPIOA write=0x0A read=0x0A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (262354) SPI0Manager: GPIOA write=0x0B read=0x0B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (262854) SPI0Manager: GPIOA write=0x0C read=0x0C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (263354) SPI0Manager: GPIOA write=0x0D read=0x0D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (263854) SPI0Manager: GPIOA write=0x0E read=0x0E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (264354) SPI0Manager: GPIOA write=0x0F read=0x0F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (264854) SPI0Manager: GPIOA write=0x10 read=0x10[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (265354) SPI0Manager: GPIOA write=0x11 read=0x11[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (265854) SPI0Manager: GPIOA write=0x12 read=0x12[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (266354) SPI0Manager: GPIOA write=0x13 read=0x13[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (266854) SPI0Manager: GPIOA write=0x14 read=0x14[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (267354) SPI0Manager: GPIOA write=0x15 read=0x15[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (267854) SPI0Manager: GPIOA write=0x16 read=0x16[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (268354) SPI0Manager: GPIOA write=0x17 read=0x17[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (268854) SPI0Manager: GPIOA write=0x18 read=0x18[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (269354) SPI0Manager: GPIOA write=0x19 read=0x19[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (269854) SPI0Manager: GPIOA write=0x1A read=0x1A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (270354) SPI0Manager: GPIOA write=0x1B read=0x1B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (270854) SPI0Manager: GPIOA write=0x1C read=0x1C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (271354) SPI0Manager: GPIOA write=0x1D read=0x1D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (271854) SPI0Manager: GPIOA write=0x1E read=0x1E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (272354) SPI0Manager: GPIOA write=0x1F read=0x1F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (272854) SPI0Manager: GPIOA write=0x20 read=0x20[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (273354) SPI0Manager: GPIOA write=0x21 read=0x21[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (273854) SPI0Manager: GPIOA write=0x22 read=0x22[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (274354) SPI0Manager: GPIOA write=0x23 read=0x23[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (274854) SPI0Manager: GPIOA write=0x24 read=0x24[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (275354) SPI0Manager: GPIOA write=0x25 read=0x25[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (275854) SPI0Manager: GPIOA write=0x26 read=0x26[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (276354) SPI0Manager: GPIOA write=0x27 read=0x27[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (276854) SPI0Manager: GPIOA write=0x28 read=0x28[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (277354) SPI0Manager: GPIOA write=0x29 read=0x29[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (277854) SPI0Manager: GPIOA write=0x2A read=0x2A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (278354) SPI0Manager: GPIOA write=0x2B read=0x2B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (278854) SPI0Manager: GPIOA write=0x2C read=0x2C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (279354) SPI0Manager: GPIOA write=0x2D read=0x2D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (279854) SPI0Manager: GPIOA write=0x2E read=0x2E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (280354) SPI0Manager: GPIOA write=0x2F read=0x2F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (280854) SPI0Manager: GPIOA write=0x30 read=0x30[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (281354) SPI0Manager: GPIOA write=0x31 read=0x31[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (281854) SPI0Manager: GPIOA write=0x32 read=0x32[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (282354) SPI0Manager: GPIOA write=0x33 read=0x33[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (282854) SPI0Manager: GPIOA write=0x34 read=0x34[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (283354) SPI0Manager: GPIOA write=0x35 read=0x35[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (283854) SPI0Manager: GPIOA write=0x36 read=0x36[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (284354) SPI0Manager: GPIOA write=0x37 read=0x37[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (284854) SPI0Manager: GPIOA write=0x38 read=0x38[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (285354) SPI0Manager: GPIOA write=0x39 read=0x39[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (285854) SPI0Manager: GPIOA write=0x3A read=0x3A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (286354) SPI0Manager: GPIOA write=0x3B read=0x3B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (286854) SPI0Manager: GPIOA write=0x3C read=0x3C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (287354) SPI0Manager: GPIOA write=0x3D read=0x3D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (287854) SPI0Manager: GPIOA write=0x3E read=0x3E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (288354) SPI0Manager: GPIOA write=0x3F read=0x3F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (288854) SPI0Manager: GPIOA write=0x00 read=0x00[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (289354) SPI0Manager: GPIOA write=0x01 read=0x01[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (289854) SPI0Manager: GPIOA write=0x02 read=0x02[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (290354) SPI0Manager: GPIOA write=0x03 read=0x03[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (290854) SPI0Manager: GPIOA write=0x04 read=0x04[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (291354) SPI0Manager: GPIOA write=0x05 read=0x05[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (291854) SPI0Manager: GPIOA write=0x06 read=0x06[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (292354) SPI0Manager: GPIOA write=0x07 read=0x07[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (292854) SPI0Manager: GPIOA write=0x08 read=0x08[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (293354) SPI0Manager: GPIOA write=0x09 read=0x09[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (293854) SPI0Manager: GPIOA write=0x0A read=0x0A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (294354) SPI0Manager: GPIOA write=0x0B read=0x0B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (294854) SPI0Manager: GPIOA write=0x0C read=0x0C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (295354) SPI0Manager: GPIOA write=0x0D read=0x0D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (295854) SPI0Manager: GPIOA write=0x0E read=0x0E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (296354) SPI0Manager: GPIOA write=0x0F read=0x0F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (296854) SPI0Manager: GPIOA write=0x10 read=0x10[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (297354) SPI0Manager: GPIOA write=0x11 read=0x11[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (297854) SPI0Manager: GPIOA write=0x12 read=0x12[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (298354) SPI0Manager: GPIOA write=0x13 read=0x13[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (298854) SPI0Manager: GPIOA write=0x14 read=0x14[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (299354) SPI0Manager: GPIOA write=0x15 read=0x15[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (299854) SPI0Manager: GPIOA write=0x16 read=0x16[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (300354) SPI0Manager: GPIOA write=0x17 read=0x17[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (300854) SPI0Manager: GPIOA write=0x18 read=0x18[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (301354) SPI0Manager: GPIOA write=0x19 read=0x19[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (301854) SPI0Manager: GPIOA write=0x1A read=0x1A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (302354) SPI0Manager: GPIOA write=0x1B read=0x1B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (302854) SPI0Manager: GPIOA write=0x1C read=0x1C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (303354) SPI0Manager: GPIOA write=0x1D read=0x1D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (303854) SPI0Manager: GPIOA write=0x1E read=0x1E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (304354) SPI0Manager: GPIOA write=0x1F read=0x1F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (304854) SPI0Manager: GPIOA write=0x20 read=0x20[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (305354) SPI0Manager: GPIOA write=0x21 read=0x21[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (305854) SPI0Manager: GPIOA write=0x22 read=0x22[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (306354) SPI0Manager: GPIOA write=0x23 read=0x23[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (306854) SPI0Manager: GPIOA write=0x24 read=0x24[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (307354) SPI0Manager: GPIOA write=0x25 read=0x25[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (307854) SPI0Manager: GPIOA write=0x26 read=0x26[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (308354) SPI0Manager: GPIOA write=0x27 read=0x27[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (308854) SPI0Manager: GPIOA write=0x28 read=0x28[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (309354) SPI0Manager: GPIOA write=0x29 read=0x29[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (309854) SPI0Manager: GPIOA write=0x2A read=0x2A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (310354) SPI0Manager: GPIOA write=0x2B read=0x2B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (310854) SPI0Manager: GPIOA write=0x2C read=0x2C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (311354) SPI0Manager: GPIOA write=0x2D read=0x2D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (311854) SPI0Manager: GPIOA write=0x2E read=0x2E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (312354) SPI0Manager: GPIOA write=0x2F read=0x2F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (312854) SPI0Manager: GPIOA write=0x30 read=0x30[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (313354) SPI0Manager: GPIOA write=0x31 read=0x31[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (313854) SPI0Manager: GPIOA write=0x32 read=0x32[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (314354) SPI0Manager: GPIOA write=0x33 read=0x33[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (314854) SPI0Manager: GPIOA write=0x34 read=0x34[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (315354) SPI0Manager: GPIOA write=0x35 read=0x35[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (315854) SPI0Manager: GPIOA write=0x36 read=0x36[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (316354) SPI0Manager: GPIOA write=0x37 read=0x37[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (316854) SPI0Manager: GPIOA write=0x38 read=0x38[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (317354) SPI0Manager: GPIOA write=0x39 read=0x39[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (317854) SPI0Manager: GPIOA write=0x3A read=0x3A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (318354) SPI0Manager: GPIOA write=0x3B read=0x3B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (318854) SPI0Manager: GPIOA write=0x3C read=0x3C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (319354) SPI0Manager: GPIOA write=0x3D read=0x3D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (319854) SPI0Manager: GPIOA write=0x3E read=0x3E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (320354) SPI0Manager: GPIOA write=0x3F read=0x3F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (320854) SPI0Manager: GPIOA write=0x00 read=0x00[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (321354) SPI0Manager: GPIOA write=0x01 read=0x01[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (321854) SPI0Manager: GPIOA write=0x02 read=0x02[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (322354) SPI0Manager: GPIOA write=0x03 read=0x03[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (322854) SPI0Manager: GPIOA write=0x04 read=0x04[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (323354) SPI0Manager: GPIOA write=0x05 read=0x05[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (323854) SPI0Manager: GPIOA write=0x06 read=0x06[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (324354) SPI0Manager: GPIOA write=0x07 read=0x07[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (324854) SPI0Manager: GPIOA write=0x08 read=0x08[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (325354) SPI0Manager: GPIOA write=0x09 read=0x09[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (325854) SPI0Manager: GPIOA write=0x0A read=0x0A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (326354) SPI0Manager: GPIOA write=0x0B read=0x0B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (326854) SPI0Manager: GPIOA write=0x0C read=0x0C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (327354) SPI0Manager: GPIOA write=0x0D read=0x0D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (327854) SPI0Manager: GPIOA write=0x0E read=0x0E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (328354) SPI0Manager: GPIOA write=0x0F read=0x0F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (328854) SPI0Manager: GPIOA write=0x10 read=0x10[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (329354) SPI0Manager: GPIOA write=0x11 read=0x11[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (329854) SPI0Manager: GPIOA write=0x12 read=0x12[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (330354) SPI0Manager: GPIOA write=0x13 read=0x13[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (330854) SPI0Manager: GPIOA write=0x14 read=0x14[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (331354) SPI0Manager: GPIOA write=0x15 read=0x15[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (331854) SPI0Manager: GPIOA write=0x16 read=0x16[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (332354) SPI0Manager: GPIOA write=0x17 read=0x17[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (332854) SPI0Manager: GPIOA write=0x18 read=0x18[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (333354) SPI0Manager: GPIOA write=0x19 read=0x19[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (333854) SPI0Manager: GPIOA write=0x1A read=0x1A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (334354) SPI0Manager: GPIOA write=0x1B read=0x1B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (334854) SPI0Manager: GPIOA write=0x1C read=0x1C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (335354) SPI0Manager: GPIOA write=0x1D read=0x1D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (335854) SPI0Manager: GPIOA write=0x1E read=0x1E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (336354) SPI0Manager: GPIOA write=0x1F read=0x1F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (336854) SPI0Manager: GPIOA write=0x20 read=0x20[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (337354) SPI0Manager: GPIOA write=0x21 read=0x21[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (337854) SPI0Manager: GPIOA write=0x22 read=0x22[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (338354) SPI0Manager: GPIOA write=0x23 read=0x23[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (338854) SPI0Manager: GPIOA write=0x24 read=0x24[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (339354) SPI0Manager: GPIOA write=0x25 read=0x25[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (339854) SPI0Manager: GPIOA write=0x26 read=0x26[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (340354) SPI0Manager: GPIOA write=0x27 read=0x27[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (340854) SPI0Manager: GPIOA write=0x28 read=0x28[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (341354) SPI0Manager: GPIOA write=0x29 read=0x29[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (341854) SPI0Manager: GPIOA write=0x2A read=0x2A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (342354) SPI0Manager: GPIOA write=0x2B read=0x2B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (342854) SPI0Manager: GPIOA write=0x2C read=0x2C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (343354) SPI0Manager: GPIOA write=0x2D read=0x2D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (343854) SPI0Manager: GPIOA write=0x2E read=0x2E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (344354) SPI0Manager: GPIOA write=0x2F read=0x2F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (344854) SPI0Manager: GPIOA write=0x30 read=0x30[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (345354) SPI0Manager: GPIOA write=0x31 read=0x31[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (345854) SPI0Manager: GPIOA write=0x32 read=0x32[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (346354) SPI0Manager: GPIOA write=0x33 read=0x33[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (346854) SPI0Manager: GPIOA write=0x34 read=0x34[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (347354) SPI0Manager: GPIOA write=0x35 read=0x35[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (347854) SPI0Manager: GPIOA write=0x36 read=0x36[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (348354) SPI0Manager: GPIOA write=0x37 read=0x37[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (348854) SPI0Manager: GPIOA write=0x38 read=0x38[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (349354) SPI0Manager: GPIOA write=0x39 read=0x39[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (349854) SPI0Manager: GPIOA write=0x3A read=0x3A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (350354) SPI0Manager: GPIOA write=0x3B read=0x3B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (350854) SPI0Manager: GPIOA write=0x3C read=0x3C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (351354) SPI0Manager: GPIOA write=0x3D read=0x3D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (351854) SPI0Manager: GPIOA write=0x3E read=0x3E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (352354) SPI0Manager: GPIOA write=0x3F read=0x3F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (352854) SPI0Manager: GPIOA write=0x00 read=0x00[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (353354) SPI0Manager: GPIOA write=0x01 read=0x01[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (353854) SPI0Manager: GPIOA write=0x02 read=0x02[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (354354) SPI0Manager: GPIOA write=0x03 read=0x03[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (354854) SPI0Manager: GPIOA write=0x04 read=0x04[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (355354) SPI0Manager: GPIOA write=0x05 read=0x05[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (355854) SPI0Manager: GPIOA write=0x06 read=0x06[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (356354) SPI0Manager: GPIOA write=0x07 read=0x07[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (356854) SPI0Manager: GPIOA write=0x08 read=0x08[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (357354) SPI0Manager: GPIOA write=0x09 read=0x09[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (357854) SPI0Manager: GPIOA write=0x0A read=0x0A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (358354) SPI0Manager: GPIOA write=0x0B read=0x0B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (358854) SPI0Manager: GPIOA write=0x0C read=0x0C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (359354) SPI0Manager: GPIOA write=0x0D read=0x0D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (359854) SPI0Manager: GPIOA write=0x0E read=0x0E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (360354) SPI0Manager: GPIOA write=0x0F read=0x0F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (360854) SPI0Manager: GPIOA write=0x10 read=0x10[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (361354) SPI0Manager: GPIOA write=0x11 read=0x11[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (361854) SPI0Manager: GPIOA write=0x12 read=0x12[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (362354) SPI0Manager: GPIOA write=0x13 read=0x13[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (362854) SPI0Manager: GPIOA write=0x14 read=0x14[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (363354) SPI0Manager: GPIOA write=0x15 read=0x15[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (363854) SPI0Manager: GPIOA write=0x16 read=0x16[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (364354) SPI0Manager: GPIOA write=0x17 read=0x17[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (364854) SPI0Manager: GPIOA write=0x18 read=0x18[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (365354) SPI0Manager: GPIOA write=0x19 read=0x19[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (365854) SPI0Manager: GPIOA write=0x1A read=0x1A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (366354) SPI0Manager: GPIOA write=0x1B read=0x1B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (366854) SPI0Manager: GPIOA write=0x1C read=0x1C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (367354) SPI0Manager: GPIOA write=0x1D read=0x1D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (367854) SPI0Manager: GPIOA write=0x1E read=0x1E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (368354) SPI0Manager: GPIOA write=0x1F read=0x1F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (368854) SPI0Manager: GPIOA write=0x20 read=0x20[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (369354) SPI0Manager: GPIOA write=0x21 read=0x21[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (369854) SPI0Manager: GPIOA write=0x22 read=0x22[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (370354) SPI0Manager: GPIOA write=0x23 read=0x23[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (370854) SPI0Manager: GPIOA write=0x24 read=0x24[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (371354) SPI0Manager: GPIOA write=0x25 read=0x25[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (371854) SPI0Manager: GPIOA write=0x26 read=0x26[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (372354) SPI0Manager: GPIOA write=0x27 read=0x27[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (372854) SPI0Manager: GPIOA write=0x28 read=0x28[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (373354) SPI0Manager: GPIOA write=0x29 read=0x29[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (373854) SPI0Manager: GPIOA write=0x2A read=0x2A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (374354) SPI0Manager: GPIOA write=0x2B read=0x2B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (374854) SPI0Manager: GPIOA write=0x2C read=0x2C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (375354) SPI0Manager: GPIOA write=0x2D read=0x2D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (375854) SPI0Manager: GPIOA write=0x2E read=0x2E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (376354) SPI0Manager: GPIOA write=0x2F read=0x2F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (376854) SPI0Manager: GPIOA write=0x30 read=0x30[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (377354) SPI0Manager: GPIOA write=0x31 read=0x31[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (377854) SPI0Manager: GPIOA write=0x32 read=0x32[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (378354) SPI0Manager: GPIOA write=0x33 read=0x33[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (378854) SPI0Manager: GPIOA write=0x34 read=0x34[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (379354) SPI0Manager: GPIOA write=0x35 read=0x35[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (379854) SPI0Manager: GPIOA write=0x36 read=0x36[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (380354) SPI0Manager: GPIOA write=0x37 read=0x37[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (380854) SPI0Manager: GPIOA write=0x38 read=0x38[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (381354) SPI0Manager: GPIOA write=0x39 read=0x39[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (381854) SPI0Manager: GPIOA write=0x3A read=0x3A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (382354) SPI0Manager: GPIOA write=0x3B read=0x3B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (382854) SPI0Manager: GPIOA write=0x3C read=0x3C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (383354) SPI0Manager: GPIOA write=0x3D read=0x3D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (383854) SPI0Manager: GPIOA write=0x3E read=0x3E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (384354) SPI0Manager: GPIOA write=0x3F read=0x3F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (384854) SPI0Manager: GPIOA write=0x00 read=0x00[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (385354) SPI0Manager: GPIOA write=0x01 read=0x01[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (385854) SPI0Manager: GPIOA write=0x02 read=0x02[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (386354) SPI0Manager: GPIOA write=0x03 read=0x03[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (386854) SPI0Manager: GPIOA write=0x04 read=0x04[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (387354) SPI0Manager: GPIOA write=0x05 read=0x05[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (387854) SPI0Manager: GPIOA write=0x06 read=0x06[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (388354) SPI0Manager: GPIOA write=0x07 read=0x07[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (388854) SPI0Manager: GPIOA write=0x08 read=0x08[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (389354) SPI0Manager: GPIOA write=0x09 read=0x09[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (389854) SPI0Manager: GPIOA write=0x0A read=0x0A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (390354) SPI0Manager: GPIOA write=0x0B read=0x0B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (390854) SPI0Manager: GPIOA write=0x0C read=0x0C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (391354) SPI0Manager: GPIOA write=0x0D read=0x0D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (391854) SPI0Manager: GPIOA write=0x0E read=0x0E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (392354) SPI0Manager: GPIOA write=0x0F read=0x0F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (392854) SPI0Manager: GPIOA write=0x10 read=0x10[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (393354) SPI0Manager: GPIOA write=0x11 read=0x11[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (393854) SPI0Manager: GPIOA write=0x12 read=0x12[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (394354) SPI0Manager: GPIOA write=0x13 read=0x13[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (394854) SPI0Manager: GPIOA write=0x14 read=0x14[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (395354) SPI0Manager: GPIOA write=0x15 read=0x15[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (395854) SPI0Manager: GPIOA write=0x16 read=0x16[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (396354) SPI0Manager: GPIOA write=0x17 read=0x17[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (396854) SPI0Manager: GPIOA write=0x18 read=0x18[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (397354) SPI0Manager: GPIOA write=0x19 read=0x19[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (397854) SPI0Manager: GPIOA write=0x1A read=0x1A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (398354) SPI0Manager: GPIOA write=0x1B read=0x1B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (398854) SPI0Manager: GPIOA write=0x1C read=0x1C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (399354) SPI0Manager: GPIOA write=0x1D read=0x1D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (399854) SPI0Manager: GPIOA write=0x1E read=0x1E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (400354) SPI0Manager: GPIOA write=0x1F read=0x1F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (400854) SPI0Manager: GPIOA write=0x20 read=0x20[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (401354) SPI0Manager: GPIOA write=0x21 read=0x21[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (401854) SPI0Manager: GPIOA write=0x22 read=0x22[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (402354) SPI0Manager: GPIOA write=0x23 read=0x23[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (402854) SPI0Manager: GPIOA write=0x24 read=0x24[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (403354) SPI0Manager: GPIOA write=0x25 read=0x25[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (403854) SPI0Manager: GPIOA write=0x26 read=0x26[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (404354) SPI0Manager: GPIOA write=0x27 read=0x27[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (404854) SPI0Manager: GPIOA write=0x28 read=0x28[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (405354) SPI0Manager: GPIOA write=0x29 read=0x29[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (405854) SPI0Manager: GPIOA write=0x2A read=0x2A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (406354) SPI0Manager: GPIOA write=0x2B read=0x2B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (406854) SPI0Manager: GPIOA write=0x2C read=0x2C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (407354) SPI0Manager: GPIOA write=0x2D read=0x2D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (407854) SPI0Manager: GPIOA write=0x2E read=0x2E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (408354) SPI0Manager: GPIOA write=0x2F read=0x2F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (408854) SPI0Manager: GPIOA write=0x30 read=0x30[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (409354) SPI0Manager: GPIOA write=0x31 read=0x31[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (409854) SPI0Manager: GPIOA write=0x32 read=0x32[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (410354) SPI0Manager: GPIOA write=0x33 read=0x33[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (410854) SPI0Manager: GPIOA write=0x34 read=0x34[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (411354) SPI0Manager: GPIOA write=0x35 read=0x35[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (411854) SPI0Manager: GPIOA write=0x36 read=0x36[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (412354) SPI0Manager: GPIOA write=0x37 read=0x37[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (412854) SPI0Manager: GPIOA write=0x38 read=0x38[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (413354) SPI0Manager: GPIOA write=0x39 read=0x39[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (413854) SPI0Manager: GPIOA write=0x3A read=0x3A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (414354) SPI0Manager: GPIOA write=0x3B read=0x3B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (414854) SPI0Manager: GPIOA write=0x3C read=0x3C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (415354) SPI0Manager: GPIOA write=0x3D read=0x3D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (415854) SPI0Manager: GPIOA write=0x3E read=0x3E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (416354) SPI0Manager: GPIOA write=0x3F read=0x3F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (416854) SPI0Manager: GPIOA write=0x00 read=0x00[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (417354) SPI0Manager: GPIOA write=0x01 read=0x01[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (417854) SPI0Manager: GPIOA write=0x02 read=0x02[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (418354) SPI0Manager: GPIOA write=0x03 read=0x03[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (418854) SPI0Manager: GPIOA write=0x04 read=0x04[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (419354) SPI0Manager: GPIOA write=0x05 read=0x05[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (419854) SPI0Manager: GPIOA write=0x06 read=0x06[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (420354) SPI0Manager: GPIOA write=0x07 read=0x07[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (420854) SPI0Manager: GPIOA write=0x08 read=0x08[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (421354) SPI0Manager: GPIOA write=0x09 read=0x09[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (421854) SPI0Manager: GPIOA write=0x0A read=0x0A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (422354) SPI0Manager: GPIOA write=0x0B read=0x0B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (422854) SPI0Manager: GPIOA write=0x0C read=0x0C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (423354) SPI0Manager: GPIOA write=0x0D read=0x0D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (423854) SPI0Manager: GPIOA write=0x0E read=0x0E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (424354) SPI0Manager: GPIOA write=0x0F read=0x0F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (424854) SPI0Manager: GPIOA write=0x10 read=0x10[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (425354) SPI0Manager: GPIOA write=0x11 read=0x11[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (425854) SPI0Manager: GPIOA write=0x12 read=0x12[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (426354) SPI0Manager: GPIOA write=0x13 read=0x13[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (426854) SPI0Manager: GPIOA write=0x14 read=0x14[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (427354) SPI0Manager: GPIOA write=0x15 read=0x15[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (427854) SPI0Manager: GPIOA write=0x16 read=0x16[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (428354) SPI0Manager: GPIOA write=0x17 read=0x17[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (428854) SPI0Manager: GPIOA write=0x18 read=0x18[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (429354) SPI0Manager: GPIOA write=0x19 read=0x19[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (429854) SPI0Manager: GPIOA write=0x1A read=0x1A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (430354) SPI0Manager: GPIOA write=0x1B read=0x1B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (430854) SPI0Manager: GPIOA write=0x1C read=0x1C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (431354) SPI0Manager: GPIOA write=0x1D read=0x1D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (431854) SPI0Manager: GPIOA write=0x1E read=0x1E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (432354) SPI0Manager: GPIOA write=0x1F read=0x1F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (432854) SPI0Manager: GPIOA write=0x20 read=0x20[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (433354) SPI0Manager: GPIOA write=0x21 read=0x21[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (433854) SPI0Manager: GPIOA write=0x22 read=0x22[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (434354) SPI0Manager: GPIOA write=0x23 read=0x23[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (434854) SPI0Manager: GPIOA write=0x24 read=0x24[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (435354) SPI0Manager: GPIOA write=0x25 read=0x25[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (435854) SPI0Manager: GPIOA write=0x26 read=0x26[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (436354) SPI0Manager: GPIOA write=0x27 read=0x27[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (436854) SPI0Manager: GPIOA write=0x28 read=0x28[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (437354) SPI0Manager: GPIOA write=0x29 read=0x29[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (437854) SPI0Manager: GPIOA write=0x2A read=0x2A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (438354) SPI0Manager: GPIOA write=0x2B read=0x2B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (438854) SPI0Manager: GPIOA write=0x2C read=0x2C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (439354) SPI0Manager: GPIOA write=0x2D read=0x2D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (439854) SPI0Manager: GPIOA write=0x2E read=0x2E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (440354) SPI0Manager: GPIOA write=0x2F read=0x2F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (440854) SPI0Manager: GPIOA write=0x30 read=0x30[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (441354) SPI0Manager: GPIOA write=0x31 read=0x31[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (441854) SPI0Manager: GPIOA write=0x32 read=0x32[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (442354) SPI0Manager: GPIOA write=0x33 read=0x33[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (442854) SPI0Manager: GPIOA write=0x34 read=0x34[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (443354) SPI0Manager: GPIOA write=0x35 read=0x35[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (443854) SPI0Manager: GPIOA write=0x36 read=0x36[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (444354) SPI0Manager: GPIOA write=0x37 read=0x37[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (444854) SPI0Manager: GPIOA write=0x38 read=0x38[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (445354) SPI0Manager: GPIOA write=0x39 read=0x39[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (445854) SPI0Manager: GPIOA write=0x3A read=0x3A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (446354) SPI0Manager: GPIOA write=0x3B read=0x3B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (446854) SPI0Manager: GPIOA write=0x3C read=0x3C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (447354) SPI0Manager: GPIOA write=0x3D read=0x3D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (447854) SPI0Manager: GPIOA write=0x3E read=0x3E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (448354) SPI0Manager: GPIOA write=0x3F read=0x3F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (448854) SPI0Manager: GPIOA write=0x00 read=0x00[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (449354) SPI0Manager: GPIOA write=0x01 read=0x01[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (449854) SPI0Manager: GPIOA write=0x02 read=0x02[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (450354) SPI0Manager: GPIOA write=0x03 read=0x03[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (450854) SPI0Manager: GPIOA write=0x04 read=0x04[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (451354) SPI0Manager: GPIOA write=0x05 read=0x05[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (451854) SPI0Manager: GPIOA write=0x06 read=0x06[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (452354) SPI0Manager: GPIOA write=0x07 read=0x07[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (452854) SPI0Manager: GPIOA write=0x08 read=0x08[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (453354) SPI0Manager: GPIOA write=0x09 read=0x09[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (453854) SPI0Manager: GPIOA write=0x0A read=0x0A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (454354) SPI0Manager: GPIOA write=0x0B read=0x0B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (454854) SPI0Manager: GPIOA write=0x0C read=0x0C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (455354) SPI0Manager: GPIOA write=0x0D read=0x0D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (455854) SPI0Manager: GPIOA write=0x0E read=0x0E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (456354) SPI0Manager: GPIOA write=0x0F read=0x0F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (456854) SPI0Manager: GPIOA write=0x10 read=0x10[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (457354) SPI0Manager: GPIOA write=0x11 read=0x11[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (457854) SPI0Manager: GPIOA write=0x12 read=0x12[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (458354) SPI0Manager: GPIOA write=0x13 read=0x13[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (458854) SPI0Manager: GPIOA write=0x14 read=0x14[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (459354) SPI0Manager: GPIOA write=0x15 read=0x15[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (459854) SPI0Manager: GPIOA write=0x16 read=0x16[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (460354) SPI0Manager: GPIOA write=0x17 read=0x17[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (460854) SPI0Manager: GPIOA write=0x18 read=0x18[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (461354) SPI0Manager: GPIOA write=0x19 read=0x19[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (461854) SPI0Manager: GPIOA write=0x1A read=0x1A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (462354) SPI0Manager: GPIOA write=0x1B read=0x1B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (462854) SPI0Manager: GPIOA write=0x1C read=0x1C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (463354) SPI0Manager: GPIOA write=0x1D read=0x1D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (463854) SPI0Manager: GPIOA write=0x1E read=0x1E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (464354) SPI0Manager: GPIOA write=0x1F read=0x1F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (464854) SPI0Manager: GPIOA write=0x20 read=0x20[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (465354) SPI0Manager: GPIOA write=0x21 read=0x21[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (465854) SPI0Manager: GPIOA write=0x22 read=0x22[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (466354) SPI0Manager: GPIOA write=0x23 read=0x23[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (466854) SPI0Manager: GPIOA write=0x24 read=0x24[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (467354) SPI0Manager: GPIOA write=0x25 read=0x25[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (467854) SPI0Manager: GPIOA write=0x26 read=0x26[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (468354) SPI0Manager: GPIOA write=0x27 read=0x27[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (468854) SPI0Manager: GPIOA write=0x28 read=0x28[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (469354) SPI0Manager: GPIOA write=0x29 read=0x29[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (469854) SPI0Manager: GPIOA write=0x2A read=0x2A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (470354) SPI0Manager: GPIOA write=0x2B read=0x2B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (470854) SPI0Manager: GPIOA write=0x2C read=0x2C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (471354) SPI0Manager: GPIOA write=0x2D read=0x2D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (471854) SPI0Manager: GPIOA write=0x2E read=0x2E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (472354) SPI0Manager: GPIOA write=0x2F read=0x2F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (472854) SPI0Manager: GPIOA write=0x30 read=0x30[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (473354) SPI0Manager: GPIOA write=0x31 read=0x31[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (473854) SPI0Manager: GPIOA write=0x32 read=0x32[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (474354) SPI0Manager: GPIOA write=0x33 read=0x33[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (474854) SPI0Manager: GPIOA write=0x34 read=0x34[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (475354) SPI0Manager: GPIOA write=0x35 read=0x35[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (475854) SPI0Manager: GPIOA write=0x36 read=0x36[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (476354) SPI0Manager: GPIOA write=0x37 read=0x37[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (476854) SPI0Manager: GPIOA write=0x38 read=0x38[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (477354) SPI0Manager: GPIOA write=0x39 read=0x39[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (477854) SPI0Manager: GPIOA write=0x3A read=0x3A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (478354) SPI0Manager: GPIOA write=0x3B read=0x3B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (478854) SPI0Manager: GPIOA write=0x3C read=0x3C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (479354) SPI0Manager: GPIOA write=0x3D read=0x3D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (479854) SPI0Manager: GPIOA write=0x3E read=0x3E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (480354) SPI0Manager: GPIOA write=0x3F read=0x3F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (480854) SPI0Manager: GPIOA write=0x00 read=0x00[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (481354) SPI0Manager: GPIOA write=0x01 read=0x01[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (481854) SPI0Manager: GPIOA write=0x02 read=0x02[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (482354) SPI0Manager: GPIOA write=0x03 read=0x03[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (482854) SPI0Manager: GPIOA write=0x04 read=0x04[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (483354) SPI0Manager: GPIOA write=0x05 read=0x05[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (483854) SPI0Manager: GPIOA write=0x06 read=0x06[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (484354) SPI0Manager: GPIOA write=0x07 read=0x07[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (484854) SPI0Manager: GPIOA write=0x08 read=0x08[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (485354) SPI0Manager: GPIOA write=0x09 read=0x09[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (485854) SPI0Manager: GPIOA write=0x0A read=0x0A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (486354) SPI0Manager: GPIOA write=0x0B read=0x0B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (486854) SPI0Manager: GPIOA write=0x0C read=0x0C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (487354) SPI0Manager: GPIOA write=0x0D read=0x0D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (487854) SPI0Manager: GPIOA write=0x0E read=0x0E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (488354) SPI0Manager: GPIOA write=0x0F read=0x0F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (488854) SPI0Manager: GPIOA write=0x10 read=0x10[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (489354) SPI0Manager: GPIOA write=0x11 read=0x11[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (489854) SPI0Manager: GPIOA write=0x12 read=0x12[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (490354) SPI0Manager: GPIOA write=0x13 read=0x13[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (490854) SPI0Manager: GPIOA write=0x14 read=0x14[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (491354) SPI0Manager: GPIOA write=0x15 read=0x15[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (491854) SPI0Manager: GPIOA write=0x16 read=0x16[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (492354) SPI0Manager: GPIOA write=0x17 read=0x17[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (492854) SPI0Manager: GPIOA write=0x18 read=0x18[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (493354) SPI0Manager: GPIOA write=0x19 read=0x19[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (493854) SPI0Manager: GPIOA write=0x1A read=0x1A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (494354) SPI0Manager: GPIOA write=0x1B read=0x1B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (494854) SPI0Manager: GPIOA write=0x1C read=0x1C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (495354) SPI0Manager: GPIOA write=0x1D read=0x1D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (495854) SPI0Manager: GPIOA write=0x1E read=0x1E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (496354) SPI0Manager: GPIOA write=0x1F read=0x1F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (496854) SPI0Manager: GPIOA write=0x20 read=0x20[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (497354) SPI0Manager: GPIOA write=0x21 read=0x21[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (497854) SPI0Manager: GPIOA write=0x22 read=0x22[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (498354) SPI0Manager: GPIOA write=0x23 read=0x23[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (498854) SPI0Manager: GPIOA write=0x24 read=0x24[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (499354) SPI0Manager: GPIOA write=0x25 read=0x25[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (499854) SPI0Manager: GPIOA write=0x26 read=0x26[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (500354) SPI0Manager: GPIOA write=0x27 read=0x27[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (500854) SPI0Manager: GPIOA write=0x28 read=0x28[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (501354) SPI0Manager: GPIOA write=0x29 read=0x29[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (501854) SPI0Manager: GPIOA write=0x2A read=0x2A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (502354) SPI0Manager: GPIOA write=0x2B read=0x2B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (502854) SPI0Manager: GPIOA write=0x2C read=0x2C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (503354) SPI0Manager: GPIOA write=0x2D read=0x2D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (503854) SPI0Manager: GPIOA write=0x2E read=0x2E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (504354) SPI0Manager: GPIOA write=0x2F read=0x2F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (504854) SPI0Manager: GPIOA write=0x30 read=0x30[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (505354) SPI0Manager: GPIOA write=0x31 read=0x31[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (505854) SPI0Manager: GPIOA write=0x32 read=0x32[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (506354) SPI0Manager: GPIOA write=0x33 read=0x33[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (506854) SPI0Manager: GPIOA write=0x34 read=0x34[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (507354) SPI0Manager: GPIOA write=0x35 read=0x35[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (507854) SPI0Manager: GPIOA write=0x36 read=0x36[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (508354) SPI0Manager: GPIOA write=0x37 read=0x37[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (508854) SPI0Manager: GPIOA write=0x38 read=0x38[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (509354) SPI0Manager: GPIOA write=0x39 read=0x39[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (509854) SPI0Manager: GPIOA write=0x3A read=0x3A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (510354) SPI0Manager: GPIOA write=0x3B read=0x3B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (510854) SPI0Manager: GPIOA write=0x3C read=0x3C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (511354) SPI0Manager: GPIOA write=0x3D read=0x3D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (511854) SPI0Manager: GPIOA write=0x3E read=0x3E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (512354) SPI0Manager: GPIOA write=0x3F read=0x3F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (512854) SPI0Manager: GPIOA write=0x00 read=0x00[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (513354) SPI0Manager: GPIOA write=0x01 read=0x01[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (513854) SPI0Manager: GPIOA write=0x02 read=0x02[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (514354) SPI0Manager: GPIOA write=0x03 read=0x03[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (514854) SPI0Manager: GPIOA write=0x04 read=0x04[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (515354) SPI0Manager: GPIOA write=0x05 read=0x05[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (515854) SPI0Manager: GPIOA write=0x06 read=0x06[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (516354) SPI0Manager: GPIOA write=0x07 read=0x07[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (516854) SPI0Manager: GPIOA write=0x08 read=0x08[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (517354) SPI0Manager: GPIOA write=0x09 read=0x09[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (517854) SPI0Manager: GPIOA write=0x0A read=0x0A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (518354) SPI0Manager: GPIOA write=0x0B read=0x0B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (518854) SPI0Manager: GPIOA write=0x0C read=0x0C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (519354) SPI0Manager: GPIOA write=0x0D read=0x0D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (519854) SPI0Manager: GPIOA write=0x0E read=0x0E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (520354) SPI0Manager: GPIOA write=0x0F read=0x0F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (520854) SPI0Manager: GPIOA write=0x10 read=0x10[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (521354) SPI0Manager: GPIOA write=0x11 read=0x11[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (521854) SPI0Manager: GPIOA write=0x12 read=0x12[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (522354) SPI0Manager: GPIOA write=0x13 read=0x13[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (522854) SPI0Manager: GPIOA write=0x14 read=0x14[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (523354) SPI0Manager: GPIOA write=0x15 read=0x15[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (523854) SPI0Manager: GPIOA write=0x16 read=0x16[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (524354) SPI0Manager: GPIOA write=0x17 read=0x17[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (524854) SPI0Manager: GPIOA write=0x18 read=0x18[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (525354) SPI0Manager: GPIOA write=0x19 read=0x19[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (525854) SPI0Manager: GPIOA write=0x1A read=0x1A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (526354) SPI0Manager: GPIOA write=0x1B read=0x1B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (526854) SPI0Manager: GPIOA write=0x1C read=0x1C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (527354) SPI0Manager: GPIOA write=0x1D read=0x1D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (527854) SPI0Manager: GPIOA write=0x1E read=0x1E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (528354) SPI0Manager: GPIOA write=0x1F read=0x1F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (528854) SPI0Manager: GPIOA write=0x20 read=0x20[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (529354) SPI0Manager: GPIOA write=0x21 read=0x21[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (529854) SPI0Manager: GPIOA write=0x22 read=0x22[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (530354) SPI0Manager: GPIOA write=0x23 read=0x23[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (530854) SPI0Manager: GPIOA write=0x24 read=0x24[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (531354) SPI0Manager: GPIOA write=0x25 read=0x25[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (531854) SPI0Manager: GPIOA write=0x26 read=0x26[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (532354) SPI0Manager: GPIOA write=0x27 read=0x27[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (532854) SPI0Manager: GPIOA write=0x28 read=0x28[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (533354) SPI0Manager: GPIOA write=0x29 read=0x29[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (533854) SPI0Manager: GPIOA write=0x2A read=0x2A[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (534354) SPI0Manager: GPIOA write=0x2B read=0x2B[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (534854) SPI0Manager: GPIOA write=0x2C read=0x2C[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (535354) SPI0Manager: GPIOA write=0x2D read=0x2D[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (535854) SPI0Manager: GPIOA write=0x2E read=0x2E[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (536354) SPI0Manager: GPIOA write=0x2F read=0x2F[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (536854) SPI0Manager: GPIOA write=0x30 read=0x30[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (537354) SPI0Manager: GPIOA write=0x31 read=0x31[0m
+H Buttons: 0x0000 | V Buttons: 0x0000 | Switches: 0x00
+[0;32mI (537854) SPI0Manager: GPIOA write=

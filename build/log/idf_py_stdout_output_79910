@@ -1,0 +1,2770 @@
+Command: /Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf_monitor.py -p /dev/cu.usbserial-140 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf -m '/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf.py' '-p' '/dev/cu.usbserial-140'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xfa8
+load:0x4086e610,len:0x31a8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  5 2026 11:04:44[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (71) boot:  3 coredump         Unknown data     01 03 00210000 00010000[0m
+[0;32mI (78) boot:  4 littlefs         Unknown data     01 82 00220000 0007d000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0a86ch ( 43116) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=0001a894 vaddr=40800000 size=05784h ( 22404) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=14cech ( 85228) map[0m
+[0;32mI (126) esp_image: segment 3: paddr=00034d14 vaddr=40805784 size=09724h ( 38692) load[0m
+[0;32mI (138) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (139) boot: Disabling RNG early entropy source...[0m
+[0;32mI (148) cpu_start: Unicore app[0m
+[0;32mI (157) cpu_start: Pro cpu start user code[0m
+[0;32mI (157) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (157) app_init: Application information:[0m
+[0;32mI (157) app_init: Project name:     esp32c6_microros_test[0m
+[0;32mI (162) app_init: App version:      eb8ceaf-dirty[0m
+[0;32mI (167) app_init: Compile time:     Apr 17 2026 12:14:40[0m
+[0;32mI (172) app_init: ELF file SHA256:  e0394c491...[0m
+[0;32mI (176) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (180) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (183) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (187) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (191) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (198) heap_init: At 4080FE20 len 0006C7F0 (433 KiB): RAM[0m
+[0;32mI (203) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (208) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (214) spi_flash: detected chip: generic[0m
+[0;32mI (217) spi_flash: flash io: dio[0m
+[0;33mW (220) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (232) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (238) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (245) coexist: coex firmware version: 831ec70[0m
+[0;32mI (263) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (264) main_task: Started on CPU0[0m
+[0;32mI (264) main_task: Calling app_main()[0m
+SPI0 TEST (LED + SWITCHES)
+[0;32mI (264) SPI0Manager: SPI0Manager begin()[0m
+[0;32mI (264) SPI0Manager: Using pins MOSI=8 MISO=6 CLK=1[0m
+[0;32mI (304) SPI0Manager: SPI0Manager initialized.[0m
+SPI0 initialized
+[0;32mI (304) TEST: Switches: 0x0000[0m
+[0;32mI (304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (804) TEST: Switches: 0x0000[0m
+[0;32mI (804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (1304) TEST: Switches: 0x0000[0m
+[0;32mI (1304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (1804) TEST: Switches: 0x0000[0m
+[0;32mI (1804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (2304) TEST: Switches: 0x0000[0m
+[0;32mI (2304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (2804) TEST: Switches: 0x0000[0m
+[0;32mI (2804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (3304) TEST: Switches: 0x0000[0m
+[0;32mI (3304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (3804) TEST: Switches: 0x0000[0m
+[0;32mI (3804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (4304) TEST: Switches: 0x0000[0m
+[0;32mI (4304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (4804) TEST: Switches: 0x0000[0m
+[0;32mI (4804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (5304) TEST: Switches: 0x0000[0m
+[0;32mI (5304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (5804) TEST: Switches: 0x0000[0m
+[0;32mI (5804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (6304) TEST: Switches: 0x0000[0m
+[0;32mI (6304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (6804) TEST: Switches: 0x0000[0m
+[0;32mI (6804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (7304) TEST: Switches: 0x0000[0m
+[0;32mI (7304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (7804) TEST: Switches: 0x0000[0m
+[0;32mI (7804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (8304) TEST: Switches: 0x0000[0m
+[0;32mI (8304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (8804) TEST: Switches: 0x0000[0m
+[0;32mI (8804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (9304) TEST: Switches: 0x0000[0m
+[0;32mI (9304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (9804) TEST: Switches: 0x0000[0m
+[0;32mI (9804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (10304) TEST: Switches: 0x0000[0m
+[0;32mI (10304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (10804) TEST: Switches: 0x0000[0m
+[0;32mI (10804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (11304) TEST: Switches: 0x0000[0m
+[0;32mI (11304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (11804) TEST: Switches: 0x0000[0m
+[0;32mI (11804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (12304) TEST: Switches: 0x0000[0m
+[0;32mI (12304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (12804) TEST: Switches: 0x0000[0m
+[0;32mI (12804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (13304) TEST: Switches: 0x0000[0m
+[0;32mI (13304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (13804) TEST: Switches: 0x0000[0m
+[0;32mI (13804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (14304) TEST: Switches: 0x0000[0m
+[0;32mI (14304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (14804) TEST: Switches: 0x0000[0m
+[0;32mI (14804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (15304) TEST: Switches: 0x0000[0m
+[0;32mI (15304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (15804) TEST: Switches: 0x0000[0m
+[0;32mI (15804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (16304) TEST: Switches: 0x0000[0m
+[0;32mI (16304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (16804) TEST: Switches: 0x0000[0m
+[0;32mI (16804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (17304) TEST: Switches: 0x0000[0m
+[0;32mI (17304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (17804) TEST: Switches: 0x0000[0m
+[0;32mI (17804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (18304) TEST: Switches: 0x0000[0m
+[0;32mI (18304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (18804) TEST: Switches: 0x0000[0m
+[0;32mI (18804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (19304) TEST: Switches: 0x0000[0m
+[0;32mI (19304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (19804) TEST: Switches: 0x0000[0m
+[0;32mI (19804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (20304) TEST: Switches: 0x0000[0m
+[0;32mI (20304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (20804) TEST: Switches: 0x0000[0m
+[0;32mI (20804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (21304) TEST: Switches: 0x0000[0m
+[0;32mI (21304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (21804) TEST: Switches: 0x0000[0m
+[0;32mI (21804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (22304) TEST: Switches: 0x0000[0m
+[0;32mI (22304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (22804) TEST: Switches: 0x0000[0m
+[0;32mI (22804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (23304) TEST: Switches: 0x0000[0m
+[0;32mI (23304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (23804) TEST: Switches: 0x0000[0m
+[0;32mI (23804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (24304) TEST: Switches: 0x0000[0m
+[0;32mI (24304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (24804) TEST: Switches: 0x0000[0m
+[0;32mI (24804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (25304) TEST: Switches: 0x0000[0m
+[0;32mI (25304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (25804) TEST: Switches: 0x0000[0m
+[0;32mI (25804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (26304) TEST: Switches: 0x0000[0m
+[0;32mI (26304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (26804) TEST: Switches: 0x0000[0m
+[0;32mI (26804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (27304) TEST: Switches: 0x0000[0m
+[0;32mI (27304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (27804) TEST: Switches: 0x0000[0m
+[0;32mI (27804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (28304) TEST: Switches: 0x0000[0m
+[0;32mI (28304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (28804) TEST: Switches: 0x0002[0m
+[0;32mI (28804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (29304) TEST: Switches: 0x0002[0m
+[0;32mI (29304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (29804) TEST: Switches: 0x0002[0m
+[0;32mI (29804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (30304) TEST: Switches: 0x0002[0m
+[0;32mI (30304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (30804) TEST: Switches: 0x0000[0m
+[0;32mI (30804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (31304) TEST: Switches: 0x0000[0m
+[0;32mI (31304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (31804) TEST: Switches: 0x0000[0m
+[0;32mI (31804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (32304) TEST: Switches: 0x0000[0m
+[0;32mI (32304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (32804) TEST: Switches: 0x0000[0m
+[0;32mI (32804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (33304) TEST: Switches: 0x0001[0m
+[0;32mI (33304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (33804) TEST: Switches: 0x0001[0m
+[0;32mI (33804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (34304) TEST: Switches: 0x0001[0m
+[0;32mI (34304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (34804) TEST: Switches: 0x0001[0m
+[0;32mI (34804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (35304) TEST: Switches: 0x0001[0m
+[0;32mI (35304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (35804) TEST: Switches: 0x0000[0m
+[0;32mI (35804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (36304) TEST: Switches: 0x0000[0m
+[0;32mI (36304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (36804) TEST: Switches: 0x0000[0m
+[0;32mI (36804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (37304) TEST: Switches: 0x0000[0m
+[0;32mI (37304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (37804) TEST: Switches: 0x0000[0m
+[0;32mI (37804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (38304) TEST: Switches: 0x0000[0m
+[0;32mI (38304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (38804) TEST: Switches: 0x0000[0m
+[0;32mI (38804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (39304) TEST: Switches: 0x0000[0m
+[0;32mI (39304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (39804) TEST: Switches: 0x0000[0m
+[0;32mI (39804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (40304) TEST: Switches: 0x0000[0m
+[0;32mI (40304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (40804) TEST: Switches: 0x0000[0m
+[0;32mI (40804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (41304) TEST: Switches: 0x0000[0m
+[0;32mI (41304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (41804) TEST: Switches: 0x0000[0m
+[0;32mI (41804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (42304) TEST: Switches: 0x0000[0m
+[0;32mI (42304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (42804) TEST: Switches: 0x0000[0m
+[0;32mI (42804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (43304) TEST: Switches: 0x0000[0m
+[0;32mI (43304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (43804) TEST: Switches: 0x0000[0m
+[0;32mI (43804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (44304) TEST: Switches: 0x0000[0m
+[0;32mI (44304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (44804) TEST: Switches: 0x0000[0m
+[0;32mI (44804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (45304) TEST: Switches: 0x0000[0m
+[0;32mI (45304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (45804) TEST: Switches: 0x0000[0m
+[0;32mI (45804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (46304) TEST: Switches: 0x0000[0m
+[0;32mI (46304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (46804) TEST: Switches: 0x0000[0m
+[0;32mI (46804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (47304) TEST: Switches: 0x0000[0m
+[0;32mI (47304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (47804) TEST: Switches: 0x0000[0m
+[0;32mI (47804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (48304) TEST: Switches: 0x0000[0m
+[0;32mI (48304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (48804) TEST: Switches: 0x0000[0m
+[0;32mI (48804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (49304) TEST: Switches: 0x0000[0m
+[0;32mI (49304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (49804) TEST: Switches: 0x0000[0m
+[0;32mI (49804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (50304) TEST: Switches: 0x0000[0m
+[0;32mI (50304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (50804) TEST: Switches: 0x0000[0m
+[0;32mI (50804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (51304) TEST: Switches: 0x0000[0m
+[0;32mI (51304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (51804) TEST: Switches: 0x0000[0m
+[0;32mI (51804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (52304) TEST: Switches: 0x0000[0m
+[0;32mI (52304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (52804) TEST: Switches: 0x0000[0m
+[0;32mI (52804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (53304) TEST: Switches: 0x0000[0m
+[0;32mI (53304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (53804) TEST: Switches: 0x0000[0m
+[0;32mI (53804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (54304) TEST: Switches: 0x0000[0m
+[0;32mI (54304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (54804) TEST: Switches: 0x0000[0m
+[0;32mI (54804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (55304) TEST: Switches: 0x0000[0m
+[0;32mI (55304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (55804) TEST: Switches: 0x0000[0m
+[0;32mI (55804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (56304) TEST: Switches: 0x0000[0m
+[0;32mI (56304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (56804) TEST: Switches: 0x0000[0m
+[0;32mI (56804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (57304) TEST: Switches: 0x0000[0m
+[0;32mI (57304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (57804) TEST: Switches: 0x0000[0m
+[0;32mI (57804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (58304) TEST: Switches: 0x0000[0m
+[0;32mI (58304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (58804) TEST: Switches: 0x0000[0m
+[0;32mI (58804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (59304) TEST: Switches: 0x0000[0m
+[0;32mI (59304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (59804) TEST: Switches: 0x0000[0m
+[0;32mI (59804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (60304) TEST: Switches: 0x0000[0m
+[0;32mI (60304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (60804) TEST: Switches: 0x0000[0m
+[0;32mI (60804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (61304) TEST: Switches: 0x0000[0m
+[0;32mI (61304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (61804) TEST: Switches: 0x0000[0m
+[0;32mI (61804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (62304) TEST: Switches: 0x0000[0m
+[0;32mI (62304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (62804) TEST: Switches: 0x0000[0m
+[0;32mI (62804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (63304) TEST: Switches: 0x0000[0m
+[0;32mI (63304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (63804) TEST: Switches: 0x0000[0m
+[0;32mI (63804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (64304) TEST: Switches: 0x0000[0m
+[0;32mI (64304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (64804) TEST: Switches: 0x0000[0m
+[0;32mI (64804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (65304) TEST: Switches: 0x0000[0m
+[0;32mI (65304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (65804) TEST: Switches: 0x0000[0m
+[0;32mI (65804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (66304) TEST: Switches: 0x0000[0m
+[0;32mI (66304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (66804) TEST: Switches: 0x0000[0m
+[0;32mI (66804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (67304) TEST: Switches: 0x0000[0m
+[0;32mI (67304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (67804) TEST: Switches: 0x0000[0m
+[0;32mI (67804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (68304) TEST: Switches: 0x0000[0m
+[0;32mI (68304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (68804) TEST: Switches: 0x0000[0m
+[0;32mI (68804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (69304) TEST: Switches: 0x0000[0m
+[0;32mI (69304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (69804) TEST: Switches: 0x0000[0m
+[0;32mI (69804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (70304) TEST: Switches: 0x0000[0m
+[0;32mI (70304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (70804) TEST: Switches: 0x0000[0m
+[0;32mI (70804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (71304) TEST: Switches: 0x0000[0m
+[0;32mI (71304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (71804) TEST: Switches: 0x0000[0m
+[0;32mI (71804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (72304) TEST: Switches: 0x0000[0m
+[0;32mI (72304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (72804) TEST: Switches: 0x0000[0m
+[0;32mI (72804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (73304) TEST: Switches: 0x0000[0m
+[0;32mI (73304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (73804) TEST: Switches: 0x0000[0m
+[0;32mI (73804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (74304) TEST: Switches: 0x0000[0m
+[0;32mI (74304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (74804) TEST: Switches: 0x0000[0m
+[0;32mI (74804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (75304) TEST: Switches: 0x0000[0m
+[0;32mI (75304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (75804) TEST: Switches: 0x0000[0m
+[0;32mI (75804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (76304) TEST: Switches: 0x0000[0m
+[0;32mI (76304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (76804) TEST: Switches: 0x0000[0m
+[0;32mI (76804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (77304) TEST: Switches: 0x0000[0m
+[0;32mI (77304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (77804) TEST: Switches: 0x0000[0m
+[0;32mI (77804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (78304) TEST: Switches: 0x0000[0m
+[0;32mI (78304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (78804) TEST: Switches: 0x0000[0m
+[0;32mI (78804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (79304) TEST: Switches: 0x0000[0m
+[0;32mI (79304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (79804) TEST: Switches: 0x0000[0m
+[0;32mI (79804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (80304) TEST: Switches: 0x0000[0m
+[0;32mI (80304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (80804) TEST: Switches: 0x0000[0m
+[0;32mI (80804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (81304) TEST: Switches: 0x0000[0m
+[0;32mI (81304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (81804) TEST: Switches: 0x0000[0m
+[0;32mI (81804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (82304) TEST: Switches: 0x0000[0m
+[0;32mI (82304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (82804) TEST: Switches: 0x0000[0m
+[0;32mI (82804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (83304) TEST: Switches: 0x0000[0m
+[0;32mI (83304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (83804) TEST: Switches: 0x0000[0m
+[0;32mI (83804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (84304) TEST: Switches: 0x0000[0m
+[0;32mI (84304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (84804) TEST: Switches: 0x0000[0m
+[0;32mI (84804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (85304) TEST: Switches: 0x0000[0m
+[0;32mI (85304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (85804) TEST: Switches: 0x0000[0m
+[0;32mI (85804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (86304) TEST: Switches: 0x0000[0m
+[0;32mI (86304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (86804) TEST: Switches: 0x0000[0m
+[0;32mI (86804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (87304) TEST: Switches: 0x0000[0m
+[0;32mI (87304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (87804) TEST: Switches: 0x0000[0m
+[0;32mI (87804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (88304) TEST: Switches: 0x0000[0m
+[0;32mI (88304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (88804) TEST: Switches: 0x0000[0m
+[0;32mI (88804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (89804) TEST: Switches: 0x0000[0m
+[0;32mI (89804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (90304) TEST: Switches: 0x0000[0m
+[0;32mI (90304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (90804) TEST: Switches: 0x0000[0m
+[0;32mI (90804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (91304) TEST: Switches: 0x0000[0m
+[0;32mI (91304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (91804) TEST: Switches: 0x0000[0m
+[0;32mI (91804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (92304) TEST: Switches: 0x0000[0m
+[0;32mI (92304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (92804) TEST: Switches: 0x0000[0m
+[0;32mI (92804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (93304) TEST: Switches: 0x0000[0m
+[0;32mI (93304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (93804) TEST: Switches: 0x0000[0m
+[0;32mI (93804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (94304) TEST: Switches: 0x0000[0m
+[0;32mI (94304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (94804) TEST: Switches: 0x0000[0m
+[0;32mI (94804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (95304) TEST: Switches: 0x0000[0m
+[0;32mI (95304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (95804) TEST: Switches: 0x0000[0m
+[0;32mI (95804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (96304) TEST: Switches: 0x0000[0m
+[0;32mI (96304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (96804) TEST: Switches: 0x0000[0m
+[0;32mI (96804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (97304) TEST: Switches: 0x0000[0m
+[0;32mI (97304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (97804) TEST: Switches: 0x0000[0m
+[0;32mI (97804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (98304) TEST: Switches: 0x0000[0m
+[0;32mI (98304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (98804) TEST: Switches: 0x0000[0m
+[0;32mI (98804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (99304) TEST: Switches: 0x0000[0m
+[0;32mI (99304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (99804) TEST: Switches: 0x0000[0m
+[0;32mI (99804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (100304) TEST: Switches: 0x0000[0m
+[0;32mI (100304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (100804) TEST: Switches: 0x0000[0m
+[0;32mI (100804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (101304) TEST: Switches: 0x0000[0m
+[0;32mI (101304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (101804) TEST: Switches: 0x0000[0m
+[0;32mI (101804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (102304) TEST: Switches: 0x0000[0m
+[0;32mI (102304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (102804) TEST: Switches: 0x0000[0m
+[0;32mI (102804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (103304) TEST: Switches: 0x0000[0m
+[0;32mI (103304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (103804) TEST: Switches: 0x0000[0m
+[0;32mI (103804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (104304) TEST: Switches: 0x0000[0m
+[0;32mI (104304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (104804) TEST: Switches: 0x0000[0m
+[0;32mI (104804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (105304) TEST: Switches: 0x0000[0m
+[0;32mI (105304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (105804) TEST: Switches: 0x0000[0m
+[0;32mI (105804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (106304) TEST: Switches: 0x0000[0m
+[0;32mI (106304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (106804) TEST: Switches: 0x0000[0m
+[0;32mI (106804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (107304) TEST: Switches: 0x0000[0m
+[0;32mI (107304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (107804) TEST: Switches: 0x0000[0m
+[0;32mI (107804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (108304) TEST: Switches: 0x0000[0m
+[0;32mI (108304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (108804) TEST: Switches: 0x0000[0m
+[0;32mI (108804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (109304) TEST: Switches: 0x0000[0m
+[0;32mI (109304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (109804) TEST: Switches: 0x0000[0m
+[0;32mI (109804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (110304) TEST: Switches: 0x0000[0m
+[0;32mI (110304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (110804) TEST: Switches: 0x0000[0m
+[0;32mI (110804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (111304) TEST: Switches: 0x0000[0m
+[0;32mI (111304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (111804) TEST: Switches: 0x0000[0m
+[0;32mI (111804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (112304) TEST: Switches: 0x0000[0m
+[0;32mI (112304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (112804) TEST: Switches: 0x0000[0m
+[0;32mI (112804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (113304) TEST: Switches: 0x0000[0m
+[0;32mI (113304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (113804) TEST: Switches: 0x0000[0m
+[0;32mI (113804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (114304) TEST: Switches: 0x0000[0m
+[0;32mI (114304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (114804) TEST: Switches: 0x0000[0m
+[0;32mI (114804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (115304) TEST: Switches: 0x0000[0m
+[0;32mI (115304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (115804) TEST: Switches: 0x0000[0m
+[0;32mI (115804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (116304) TEST: Switches: 0x0000[0m
+[0;32mI (116304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (116804) TEST: Switches: 0x0000[0m
+[0;32mI (116804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (117304) TEST: Switches: 0x0000[0m
+[0;32mI (117304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (117804) TEST: Switches: 0x0000[0m
+[0;32mI (117804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (118304) TEST: Switches: 0x0000[0m
+[0;32mI (118304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (118804) TEST: Switches: 0x0000[0m
+[0;32mI (118804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (119304) TEST: Switches: 0x0000[0m
+[0;32mI (119304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (119804) TEST: Switches: 0x0000[0m
+[0;32mI (119804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (120304) TEST: Switches: 0x0000[0m
+[0;32mI (120304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (120804) TEST: Switches: 0x0000[0m
+[0;32mI (120804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (121304) TEST: Switches: 0x0000[0m
+[0;32mI (121304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (121804) TEST: Switches: 0x0000[0m
+[0;32mI (121804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (122304) TEST: Switches: 0x0000[0m
+[0;32mI (122304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (122804) TEST: Switches: 0x0000[0m
+[0;32mI (122804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (123304) TEST: Switches: 0x0000[0m
+[0;32mI (123304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (123804) TEST: Switches: 0x0000[0m
+[0;32mI (123804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (124304) TEST: Switches: 0x0000[0m
+[0;32mI (124304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (124804) TEST: Switches: 0x0000[0m
+[0;32mI (124804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (125304) TEST: Switches: 0x0000[0m
+[0;32mI (125304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (125804) TEST: Switches: 0x0000[0m
+[0;32mI (125804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (126304) TEST: Switches: 0x0000[0m
+[0;32mI (126304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (126804) TEST: Switches: 0x0000[0m
+[0;32mI (126804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (127304) TEST: Switches: 0x0000[0m
+[0;32mI (127304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (127804) TEST: Switches: 0x0000[0m
+[0;32mI (127804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (128304) TEST: Switches: 0x0000[0m
+[0;32mI (128304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (128804) TEST: Switches: 0x0000[0m
+[0;32mI (128804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (129304) TEST: Switches: 0x0000[0m
+[0;32mI (129304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (129804) TEST: Switches: 0x0000[0m
+[0;32mI (129804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (130304) TEST: Switches: 0x0000[0m
+[0;32mI (130304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (130804) TEST: Switches: 0x0000[0m
+[0;32mI (130804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (131304) TEST: Switches: 0x0000[0m
+[0;32mI (131304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (131804) TEST: Switches: 0x0000[0m
+[0;32mI (131804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (132304) TEST: Switches: 0x0000[0m
+[0;32mI (132304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (132804) TEST: Switches: 0x0000[0m
+[0;32mI (132804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (133304) TEST: Switches: 0x0000[0m
+[0;32mI (133304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (133804) TEST: Switches: 0x0000[0m
+[0;32mI (133804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (134304) TEST: Switches: 0x0000[0m
+[0;32mI (134304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (134804) TEST: Switches: 0x0000[0m
+[0;32mI (134804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (135304) TEST: Switches: 0x0000[0m
+[0;32mI (135304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (135804) TEST: Switches: 0x0000[0m
+[0;32mI (135804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (136304) TEST: Switches: 0x0000[0m
+[0;32mI (136304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (136804) TEST: Switches: 0x0000[0m
+[0;32mI (136804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (137304) TEST: Switches: 0x0000[0m
+[0;32mI (137304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (137804) TEST: Switches: 0x0000[0m
+[0;32mI (137804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (138304) TEST: Switches: 0x0000[0m
+[0;32mI (138304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (138804) TEST: Switches: 0x0000[0m
+[0;32mI (138804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (139304) TEST: Switches: 0x0000[0m
+[0;32mI (139304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (139804) TEST: Switches: 0x0000[0m
+[0;32mI (139804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (140304) TEST: Switches: 0x0000[0m
+[0;32mI (140304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (140804) TEST: Switches: 0x0000[0m
+[0;32mI (140804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (141304) TEST: Switches: 0x0000[0m
+[0;32mI (141304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (141804) TEST: Switches: 0x0000[0m
+[0;32mI (141804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (142304) TEST: Switches: 0x0000[0m
+[0;32mI (142304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (142804) TEST: Switches: 0x0000[0m
+[0;32mI (142804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (143304) TEST: Switches: 0x0000[0m
+[0;32mI (143304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (143804) TEST: Switches: 0x0000[0m
+[0;32mI (143804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (144304) TEST: Switches: 0x0000[0m
+[0;32mI (144304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (144804) TEST: Switches: 0x0000[0m
+[0;32mI (144804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (145304) TEST: Switches: 0x0000[0m
+[0;32mI (145304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (145804) TEST: Switches: 0x0000[0m
+[0;32mI (145804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (146304) TEST: Switches: 0x0000[0m
+[0;32mI (146304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (146804) TEST: Switches: 0x0000[0m
+[0;32mI (146804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (147304) TEST: Switches: 0x0000[0m
+[0;32mI (147304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (147804) TEST: Switches: 0x0000[0m
+[0;32mI (147804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (148304) TEST: Switches: 0x0000[0m
+[0;32mI (148304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (148804) TEST: Switches: 0x0000[0m
+[0;32mI (148804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (149304) TEST: Switches: 0x0000[0m
+[0;32mI (149304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (149804) TEST: Switches: 0x0000[0m
+[0;32mI (149804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (150304) TEST: Switches: 0x0000[0m
+[0;32mI (150304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (150804) TEST: Switches: 0x0000[0m
+[0;32mI (150804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (151304) TEST: Switches: 0x0000[0m
+[0;32mI (151304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (151804) TEST: Switches: 0x0000[0m
+[0;32mI (151804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (152304) TEST: Switches: 0x0000[0m
+[0;32mI (152304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (152804) TEST: Switches: 0x0000[0m
+[0;32mI (152804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (153304) TEST: Switches: 0x0000[0m
+[0;32mI (153304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (153804) TEST: Switches: 0x0000[0m
+[0;32mI (153804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (154304) TEST: Switches: 0x0000[0m
+[0;32mI (154304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (154804) TEST: Switches: 0x0000[0m
+[0;32mI (154804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (155304) TEST: Switches: 0x0000[0m
+[0;32mI (155304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (155804) TEST: Switches: 0x0000[0m
+[0;32mI (155804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (156304) TEST: Switches: 0x0000[0m
+[0;32mI (156304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (156804) TEST: Switches: 0x0000[0m
+[0;32mI (156804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (157304) TEST: Switches: 0x0000[0m
+[0;32mI (157304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (157804) TEST: Switches: 0x0000[0m
+[0;32mI (157804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (158304) TEST: Switches: 0x0000[0m
+[0;32mI (158304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (158804) TEST: Switches: 0x0000[0m
+[0;32mI (158804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (159304) TEST: Switches: 0x0000[0m
+[0;32mI (159304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (159804) TEST: Switches: 0x0000[0m
+[0;32mI (159804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (160304) TEST: Switches: 0x0000[0m
+[0;32mI (160304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (160804) TEST: Switches: 0x0000[0m
+[0;32mI (160804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (161304) TEST: Switches: 0x0000[0m
+[0;32mI (161304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (161804) TEST: Switches: 0x0000[0m
+[0;32mI (161804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (162304) TEST: Switches: 0x0000[0m
+[0;32mI (162304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (162804) TEST: Switches: 0x0000[0m
+[0;32mI (162804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (163304) TEST: Switches: 0x0000[0m
+[0;32mI (163304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (163804) TEST: Switches: 0x0000[0m
+[0;32mI (163804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (164304) TEST: Switches: 0x0000[0m
+[0;32mI (164304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (164804) TEST: Switches: 0x0000[0m
+[0;32mI (164804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (165304) TEST: Switches: 0x0000[0m
+[0;32mI (165304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (165804) TEST: Switches: 0x0000[0m
+[0;32mI (165804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (166304) TEST: Switches: 0x0000[0m
+[0;32mI (166304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (166804) TEST: Switches: 0x0000[0m
+[0;32mI (166804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (167304) TEST: Switches: 0x0000[0m
+[0;32mI (167304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (167804) TEST: Switches: 0x0000[0m
+[0;32mI (167804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (168304) TEST: Switches: 0x0000[0m
+[0;32mI (168304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (168804) TEST: Switches: 0x0000[0m
+[0;32mI (168804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (169304) TEST: Switches: 0x0000[0m
+[0;32mI (169304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (169804) TEST: Switches: 0x0000[0m
+[0;32mI (169804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (170304) TEST: Switches: 0x0000[0m
+[0;32mI (170304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (170804) TEST: Switches: 0x0000[0m
+[0;32mI (170804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (171304) TEST: Switches: 0x0000[0m
+[0;32mI (171304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (171804) TEST: Switches: 0x0000[0m
+[0;32mI (171804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (172304) TEST: Switches: 0x0000[0m
+[0;32mI (172304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (172804) TEST: Switches: 0x0000[0m
+[0;32mI (172804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (173304) TEST: Switches: 0x0000[0m
+[0;32mI (173304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (173804) TEST: Switches: 0x0000[0m
+[0;32mI (173804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (174304) TEST: Switches: 0x0000[0m
+[0;32mI (174304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (174804) TEST: Switches: 0x0000[0m
+[0;32mI (174804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (175304) TEST: Switches: 0x0000[0m
+[0;32mI (175304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (175804) TEST: Switches: 0x0000[0m
+[0;32mI (175804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (176304) TEST: Switches: 0x0000[0m
+[0;32mI (176304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (176804) TEST: Switches: 0x0000[0m
+[0;32mI (176804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (177304) TEST: Switches: 0x0000[0m
+[0;32mI (177304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (177804) TEST: Switches: 0x0000[0m
+[0;32mI (177804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (178304) TEST: Switches: 0x0000[0m
+[0;32mI (178304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (178804) TEST: Switches: 0x0000[0m
+[0;32mI (178804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (179304) TEST: Switches: 0x0000[0m
+[0;32mI (179304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (179804) TEST: Switches: 0x0000[0m
+[0;32mI (179804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (180304) TEST: Switches: 0x0000[0m
+[0;32mI (180304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (180804) TEST: Switches: 0x0000[0m
+[0;32mI (180804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (181304) TEST: Switches: 0x0000[0m
+[0;32mI (181304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (181804) TEST: Switches: 0x0000[0m
+[0;32mI (181804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (182304) TEST: Switches: 0x0000[0m
+[0;32mI (182304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (182804) TEST: Switches: 0x0000[0m
+[0;32mI (182804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (183304) TEST: Switches: 0x0000[0m
+[0;32mI (183304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (183804) TEST: Switches: 0x0000[0m
+[0;32mI (183804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (184304) TEST: Switches: 0x0000[0m
+[0;32mI (184304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (184804) TEST: Switches: 0x0000[0m
+[0;32mI (184804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (185304) TEST: Switches: 0x0000[0m
+[0;32mI (185304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (185804) TEST: Switches: 0x0000[0m
+[0;32mI (185804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (186304) TEST: Switches: 0x0000[0m
+[0;32mI (186304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (186804) TEST: Switches: 0x0000[0m
+[0;32mI (186804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (187304) TEST: Switches: 0x0000[0m
+[0;32mI (187304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (187804) TEST: Switches: 0x0000[0m
+[0;32mI (187804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (188304) TEST: Switches: 0x0000[0m
+[0;32mI (188304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (188804) TEST: Switches: 0x0000[0m
+[0;32mI (188804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (189304) TEST: Switches: 0x0000[0m
+[0;32mI (189304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (189804) TEST: Switches: 0x0000[0m
+[0;32mI (189804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (190304) TEST: Switches: 0x0000[0m
+[0;32mI (190304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (190804) TEST: Switches: 0x0000[0m
+[0;32mI (190804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (191304) TEST: Switches: 0x0000[0m
+[0;32mI (191304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (191804) TEST: Switches: 0x0000[0m
+[0;32mI (191804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (192304) TEST: Switches: 0x0000[0m
+[0;32mI (192304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (192804) TEST: Switches: 0x0000[0m
+[0;32mI (192804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (193304) TEST: Switches: 0x0000[0m
+[0;32mI (193304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (193804) TEST: Switches: 0x0000[0m
+[0;32mI (193804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (194304) TEST: Switches: 0x0000[0m
+[0;32mI (194304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (194804) TEST: Switches: 0x0000[0m
+[0;32mI (194804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (195304) TEST: Switches: 0x0000[0m
+[0;32mI (195304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (195804) TEST: Switches: 0x0000[0m
+[0;32mI (195804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (196304) TEST: Switches: 0x0000[0m
+[0;32mI (196304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (196804) TEST: Switches: 0x0000[0m
+[0;32mI (196804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (197304) TEST: Switches: 0x0000[0m
+[0;32mI (197304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (197804) TEST: Switches: 0x0000[0m
+[0;32mI (197804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (198304) TEST: Switches: 0x0000[0m
+[0;32mI (198304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (198804) TEST: Switches: 0x0000[0m
+[0;32mI (198804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (199304) TEST: Switches: 0x0000[0m
+[0;32mI (199304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (199804) TEST: Switches: 0x0000[0m
+[0;32mI (199804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (200304) TEST: Switches: 0x0000[0m
+[0;32mI (200304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (200804) TEST: Switches: 0x0000[0m
+[0;32mI (200804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (201304) TEST: Switches: 0x0000[0m
+[0;32mI (201304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (201804) TEST: Switches: 0x0000[0m
+[0;32mI (201804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (202304) TEST: Switches: 0x0000[0m
+[0;32mI (202304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (202804) TEST: Switches: 0x0000[0m
+[0;32mI (202804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (203304) TEST: Switches: 0x0000[0m
+[0;32mI (203304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (203804) TEST: Switches: 0x0000[0m
+[0;32mI (203804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (204304) TEST: Switches: 0x0000[0m
+[0;32mI (204304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (204804) TEST: Switches: 0x0000[0m
+[0;32mI (204804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (205304) TEST: Switches: 0x0000[0m
+[0;32mI (205304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (205804) TEST: Switches: 0x0000[0m
+[0;32mI (205804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (206304) TEST: Switches: 0x0000[0m
+[0;32mI (206304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (206804) TEST: Switches: 0x0000[0m
+[0;32mI (206804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (207304) TEST: Switches: 0x0000[0m
+[0;32mI (207304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (207804) TEST: Switches: 0x0000[0m
+[0;32mI (207804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (208304) TEST: Switches: 0x0000[0m
+[0;32mI (208304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (208804) TEST: Switches: 0x0000[0m
+[0;32mI (208804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (209304) TEST: Switches: 0x0000[0m
+[0;32mI (209304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (209804) TEST: Switches: 0x0000[0m
+[0;32mI (209804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (210304) TEST: Switches: 0x0000[0m
+[0;32mI (210304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (210804) TEST: Switches: 0x0000[0m
+[0;32mI (210804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (211304) TEST: Switches: 0x0000[0m
+[0;32mI (211304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (211804) TEST: Switches: 0x0000[0m
+[0;32mI (211804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (212304) TEST: Switches: 0x0000[0m
+[0;32mI (212304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (212804) TEST: Switches: 0x0000[0m
+[0;32mI (212804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (213304) TEST: Switches: 0x0000[0m
+[0;32mI (213304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (213804) TEST: Switches: 0x0000[0m
+[0;32mI (213804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (214304) TEST: Switches: 0x0000[0m
+[0;32mI (214304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (214804) TEST: Switches: 0x0000[0m
+[0;32mI (214804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (215304) TEST: Switches: 0x0000[0m
+[0;32mI (215304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (215804) TEST: Switches: 0x0000[0m
+[0;32mI (215804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (216304) TEST: Switches: 0x0000[0m
+[0;32mI (216304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (216804) TEST: Switches: 0x0000[0m
+[0;32mI (216804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (217304) TEST: Switches: 0x0000[0m
+[0;32mI (217304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (217804) TEST: Switches: 0x0000[0m
+[0;32mI (217804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (218304) TEST: Switches: 0x0000[0m
+[0;32mI (218304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (218804) TEST: Switches: 0x0000[0m
+[0;32mI (218804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (219304) TEST: Switches: 0x0000[0m
+[0;32mI (219304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (219804) TEST: Switches: 0x0000[0m
+[0;32mI (219804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (220304) TEST: Switches: 0x0000[0m
+[0;32mI (220304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (220804) TEST: Switches: 0x0000[0m
+[0;32mI (220804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (221304) TEST: Switches: 0x0000[0m
+[0;32mI (221304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (221804) TEST: Switches: 0x0000[0m
+[0;32mI (221804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (222304) TEST: Switches: 0x0000[0m
+[0;32mI (222304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (222804) TEST: Switches: 0x0000[0m
+[0;32mI (222804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (223304) TEST: Switches: 0x0000[0m
+[0;32mI (223304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (223804) TEST: Switches: 0x0000[0m
+[0;32mI (223804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (224304) TEST: Switches: 0x0000[0m
+[0;32mI (224304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (224804) TEST: Switches: 0x0000[0m
+[0;32mI (224804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (225304) TEST: Switches: 0x0000[0m
+[0;32mI (225304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (225804) TEST: Switches: 0x0000[0m
+[0;32mI (225804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (226304) TEST: Switches: 0x0000[0m
+[0;32mI (226304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (226804) TEST: Switches: 0x0000[0m
+[0;32mI (226804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (227304) TEST: Switches: 0x0000[0m
+[0;32mI (227304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (227804) TEST: Switches: 0x0000[0m
+[0;32mI (227804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (228304) TEST: Switches: 0x0000[0m
+[0;32mI (228304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (228804) TEST: Switches: 0x0000[0m
+[0;32mI (228804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (229304) TEST: Switches: 0x0000[0m
+[0;32mI (229304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (229804) TEST: Switches: 0x0000[0m
+[0;32mI (229804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (230304) TEST: Switches: 0x0000[0m
+[0;32mI (230304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (230804) TEST: Switches: 0x0000[0m
+[0;32mI (230804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (231304) TEST: Switches: 0x0000[0m
+[0;32mI (231304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (231804) TEST: Switches: 0x0000[0m
+[0;32mI (231804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (232304) TEST: Switches: 0x0000[0m
+[0;32mI (232304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (232804) TEST: Switches: 0x0000[0m
+[0;32mI (232804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (233304) TEST: Switches: 0x0000[0m
+[0;32mI (233304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (233804) TEST: Switches: 0x0000[0m
+[0;32mI (233804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (234304) TEST: Switches: 0x0000[0m
+[0;32mI (234304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (234804) TEST: Switches: 0x0000[0m
+[0;32mI (234804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (235304) TEST: Switches: 0x0000[0m
+[0;32mI (235304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (235804) TEST: Switches: 0x0000[0m
+[0;32mI (235804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (236304) TEST: Switches: 0x0000[0m
+[0;32mI (236304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (236804) TEST: Switches: 0x0000[0m
+[0;32mI (236804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (237304) TEST: Switches: 0x0000[0m
+[0;32mI (237304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (237804) TEST: Switches: 0x0000[0m
+[0;32mI (237804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (238304) TEST: Switches: 0x0000[0m
+[0;32mI (238304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (238804) TEST: Switches: 0x0000[0m
+[0;32mI (238804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (239304) TEST: Switches: 0x0000[0m
+[0;32mI (239304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (239804) TEST: Switches: 0x0000[0m
+[0;32mI (239804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (240304) TEST: Switches: 0x0000[0m
+[0;32mI (240304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (240804) TEST: Switches: 0x0000[0m
+[0;32mI (240804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (241304) TEST: Switches: 0x0000[0m
+[0;32mI (241304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (241804) TEST: Switches: 0x0000[0m
+[0;32mI (241804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (242304) TEST: Switches: 0x0000[0m
+[0;32mI (242304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (242804) TEST: Switches: 0x0000[0m
+[0;32mI (242804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (243304) TEST: Switches: 0x0000[0m
+[0;32mI (243304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (243804) TEST: Switches: 0x0000[0m
+[0;32mI (243804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (244304) TEST: Switches: 0x0000[0m
+[0;32mI (244304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (244804) TEST: Switches: 0x0000[0m
+[0;32mI (244804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (245304) TEST: Switches: 0x0000[0m
+[0;32mI (245304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (245804) TEST: Switches: 0x0000[0m
+[0;32mI (245804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (246304) TEST: Switches: 0x0000[0m
+[0;32mI (246304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (246804) TEST: Switches: 0x0000[0m
+[0;32mI (246804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (247304) TEST: Switches: 0x0000[0m
+[0;32mI (247304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (247804) TEST: Switches: 0x0000[0m
+[0;32mI (247804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (248304) TEST: Switches: 0x0000[0m
+[0;32mI (248304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (248804) TEST: Switches: 0x0000[0m
+[0;32mI (248804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (249304) TEST: Switches: 0x0000[0m
+[0;32mI (249304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (249804) TEST: Switches: 0x0000[0m
+[0;32mI (249804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (250304) TEST: Switches: 0x0000[0m
+[0;32mI (250304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (250804) TEST: Switches: 0x0000[0m
+[0;32mI (250804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (251304) TEST: Switches: 0x0000[0m
+[0;32mI (251304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (251804) TEST: Switches: 0x0000[0m
+[0;32mI (251804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (252304) TEST: Switches: 0x0000[0m
+[0;32mI (252304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (252804) TEST: Switches: 0x0000[0m
+[0;32mI (252804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (253304) TEST: Switches: 0x0000[0m
+[0;32mI (253304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (253804) TEST: Switches: 0x0000[0m
+[0;32mI (253804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (254304) TEST: Switches: 0x0000[0m
+[0;32mI (254304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (254804) TEST: Switches: 0x0000[0m
+[0;32mI (254804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (255304) TEST: Switches: 0x0000[0m
+[0;32mI (255304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (255804) TEST: Switches: 0x0000[0m
+[0;32mI (255804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (256304) TEST: Switches: 0x0000[0m
+[0;32mI (256304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (256804) TEST: Switches: 0x0000[0m
+[0;32mI (256804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (257304) TEST: Switches: 0x0000[0m
+[0;32mI (257304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (257804) TEST: Switches: 0x0000[0m
+[0;32mI (257804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (258304) TEST: Switches: 0x0000[0m
+[0;32mI (258304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (258804) TEST: Switches: 0x0000[0m
+[0;32mI (258804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (259304) TEST: Switches: 0x0000[0m
+[0;32mI (259304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (259804) TEST: Switches: 0x0000[0m
+[0;32mI (259804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (260304) TEST: Switches: 0x0000[0m
+[0;32mI (260304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (260804) TEST: Switches: 0x0000[0m
+[0;32mI (260804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (261304) TEST: Switches: 0x0000[0m
+[0;32mI (261304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (261804) TEST: Switches: 0x0000[0m
+[0;32mI (261804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (262304) TEST: Switches: 0x0000[0m
+[0;32mI (262304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (262804) TEST: Switches: 0x0000[0m
+[0;32mI (262804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (263304) TEST: Switches: 0x0000[0m
+[0;32mI (263304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (263804) TEST: Switches: 0x0000[0m
+[0;32mI (263804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (264304) TEST: Switches: 0x0000[0m
+[0;32mI (264304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (264804) TEST: Switches: 0x0000[0m
+[0;32mI (264804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (265304) TEST: Switches: 0x0000[0m
+[0;32mI (265304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (265804) TEST: Switches: 0x0000[0m
+[0;32mI (265804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (266304) TEST: Switches: 0x0000[0m
+[0;32mI (266304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (266804) TEST: Switches: 0x0000[0m
+[0;32mI (266804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (267304) TEST: Switches: 0x0000[0m
+[0;32mI (267304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (267804) TEST: Switches: 0x0000[0m
+[0;32mI (267804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (268304) TEST: Switches: 0x0000[0m
+[0;32mI (268304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (268804) TEST: Switches: 0x0000[0m
+[0;32mI (268804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (269304) TEST: Switches: 0x0000[0m
+[0;32mI (269304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (269804) TEST: Switches: 0x0000[0m
+[0;32mI (269804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (270304) TEST: Switches: 0x0000[0m
+[0;32mI (270304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (270804) TEST: Switches: 0x0000[0m
+[0;32mI (270804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (271304) TEST: Switches: 0x0000[0m
+[0;32mI (271304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (271804) TEST: Switches: 0x0000[0m
+[0;32mI (271804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (272304) TEST: Switches: 0x0000[0m
+[0;32mI (272304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (272804) TEST: Switches: 0x0000[0m
+[0;32mI (272804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (273304) TEST: Switches: 0x0000[0m
+[0;32mI (273304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (273804) TEST: Switches: 0x0000[0m
+[0;32mI (273804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (274304) TEST: Switches: 0x0000[0m
+[0;32mI (274304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (274804) TEST: Switches: 0x0000[0m
+[0;32mI (274804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (275304) TEST: Switches: 0x0000[0m
+[0;32mI (275304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (275804) TEST: Switches: 0x0000[0m
+[0;32mI (275804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (276304) TEST: Switches: 0x0000[0m
+[0;32mI (276304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (276804) TEST: Switches: 0x0000[0m
+[0;32mI (276804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (277304) TEST: Switches: 0x0000[0m
+[0;32mI (277304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (277804) TEST: Switches: 0x0000[0m
+[0;32mI (277804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (278304) TEST: Switches: 0x0000[0m
+[0;32mI (278304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (278804) TEST: Switches: 0x0000[0m
+[0;32mI (278804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (279304) TEST: Switches: 0x0000[0m
+[0;32mI (279304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (279804) TEST: Switches: 0x0000[0m
+[0;32mI (279804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (280304) TEST: Switches: 0x0000[0m
+[0;32mI (280304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (280804) TEST: Switches: 0x0000[0m
+[0;32mI (280804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (281304) TEST: Switches: 0x0000[0m
+[0;32mI (281304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (281804) TEST: Switches: 0x0000[0m
+[0;32mI (281804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (282304) TEST: Switches: 0x0000[0m
+[0;32mI (282304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (282804) TEST: Switches: 0x0000[0m
+[0;32mI (282804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (283304) TEST: Switches: 0x0000[0m
+[0;32mI (283304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (283804) TEST: Switches: 0x0000[0m
+[0;32mI (283804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (284304) TEST: Switches: 0x0000[0m
+[0;32mI (284304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (284804) TEST: Switches: 0x0000[0m
+[0;32mI (284804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (285304) TEST: Switches: 0x0000[0m
+[0;32mI (285304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (285804) TEST: Switches: 0x0000[0m
+[0;32mI (285804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (286304) TEST: Switches: 0x0000[0m
+[0;32mI (286304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (286804) TEST: Switches: 0x0000[0m
+[0;32mI (286804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (287304) TEST: Switches: 0x0000[0m
+[0;32mI (287304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (287804) TEST: Switches: 0x0000[0m
+[0;32mI (287804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (288304) TEST: Switches: 0x0000[0m
+[0;32mI (288304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (288804) TEST: Switches: 0x0000[0m
+[0;32mI (288804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (289304) TEST: Switches: 0x0000[0m
+[0;32mI (289304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (289804) TEST: Switches: 0x0000[0m
+[0;32mI (289804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (290304) TEST: Switches: 0x0000[0m
+[0;32mI (290304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (290804) TEST: Switches: 0x0000[0m
+[0;32mI (290804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (291304) TEST: Switches: 0x0000[0m
+[0;32mI (291304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (291804) TEST: Switches: 0x0000[0m
+[0;32mI (291804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (292304) TEST: Switches: 0x0000[0m
+[0;32mI (292304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (292804) TEST: Switches: 0x0000[0m
+[0;32mI (292804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (293304) TEST: Switches: 0x0000[0m
+[0;32mI (293304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (293804) TEST: Switches: 0x0000[0m
+[0;32mI (293804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (294304) TEST: Switches: 0x0000[0m
+[0;32mI (294304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (294804) TEST: Switches: 0x0000[0m
+[0;32mI (294804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (295304) TEST: Switches: 0x0000[0m
+[0;32mI (295304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (295804) TEST: Switches: 0x0000[0m
+[0;32mI (295804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (296304) TEST: Switches: 0x0000[0m
+[0;32mI (296304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (296804) TEST: Switches: 0x0000[0m
+[0;32mI (296804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (297304) TEST: Switches: 0x0000[0m
+[0;32mI (297304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (297804) TEST: Switches: 0x0000[0m
+[0;32mI (297804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (298304) TEST: Switches: 0x0000[0m
+[0;32mI (298304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (298804) TEST: Switches: 0x0000[0m
+[0;32mI (298804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (299304) TEST: Switches: 0x0000[0m
+[0;32mI (299304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (299804) TEST: Switches: 0x0000[0m
+[0;32mI (299804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (300304) TEST: Switches: 0x0000[0m
+[0;32mI (300304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (300804) TEST: Switches: 0x0000[0m
+[0;32mI (300804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (301304) TEST: Switches: 0x0000[0m
+[0;32mI (301304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (301804) TEST: Switches: 0x0000[0m
+[0;32mI (301804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (302304) TEST: Switches: 0x0000[0m
+[0;32mI (302304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (302804) TEST: Switches: 0x0000[0m
+[0;32mI (302804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (303304) TEST: Switches: 0x0000[0m
+[0;32mI (303304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (303804) TEST: Switches: 0x0000[0m
+[0;32mI (303804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (304304) TEST: Switches: 0x0000[0m
+[0;32mI (304304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (304804) TEST: Switches: 0x0000[0m
+[0;32mI (304804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (305304) TEST: Switches: 0x0000[0m
+[0;32mI (305304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (305804) TEST: Switches: 0x0000[0m
+[0;32mI (305804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (306304) TEST: Switches: 0x0000[0m
+[0;32mI (306304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (306804) TEST: Switches: 0x0000[0m
+[0;32mI (306804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (307304) TEST: Switches: 0x0000[0m
+[0;32mI (307304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (307804) TEST: Switches: 0x0000[0m
+[0;32mI (307804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (308304) TEST: Switches: 0x0000[0m
+[0;32mI (308304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (308804) TEST: Switches: 0x0000[0m
+[0;32mI (308804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (309304) TEST: Switches: 0x0000[0m
+[0;32mI (309304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (309804) TEST: Switches: 0x0000[0m
+[0;32mI (309804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (310304) TEST: Switches: 0x0000[0m
+[0;32mI (310304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (310804) TEST: Switches: 0x0000[0m
+[0;32mI (310804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (311304) TEST: Switches: 0x0000[0m
+[0;32mI (311304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (311804) TEST: Switches: 0x0000[0m
+[0;32mI (311804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (312304) TEST: Switches: 0x0000[0m
+[0;32mI (312304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (312804) TEST: Switches: 0x0000[0m
+[0;32mI (312804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (313304) TEST: Switches: 0x0000[0m
+[0;32mI (313304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (313804) TEST: Switches: 0x0000[0m
+[0;32mI (313804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (314304) TEST: Switches: 0x0000[0m
+[0;32mI (314304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (314804) TEST: Switches: 0x0000[0m
+[0;32mI (314804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (315304) TEST: Switches: 0x0000[0m
+[0;32mI (315304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (315804) TEST: Switches: 0x0000[0m
+[0;32mI (315804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (316304) TEST: Switches: 0x0000[0m
+[0;32mI (316304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (316804) TEST: Switches: 0x0000[0m
+[0;32mI (316804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (317304) TEST: Switches: 0x0000[0m
+[0;32mI (317304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (317804) TEST: Switches: 0x0000[0m
+[0;32mI (317804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (318304) TEST: Switches: 0x0000[0m
+[0;32mI (318304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (318804) TEST: Switches: 0x0000[0m
+[0;32mI (318804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (319304) TEST: Switches: 0x0000[0m
+[0;32mI (319304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (319804) TEST: Switches: 0x0000[0m
+[0;32mI (319804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (320304) TEST: Switches: 0x0000[0m
+[0;32mI (320304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (320804) TEST: Switches: 0x0000[0m
+[0;32mI (320804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (321304) TEST: Switches: 0x0000[0m
+[0;32mI (321304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (321804) TEST: Switches: 0x0000[0m
+[0;32mI (321804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (322304) TEST: Switches: 0x0000[0m
+[0;32mI (322304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (322804) TEST: Switches: 0x0000[0m
+[0;32mI (322804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (323304) TEST: Switches: 0x0000[0m
+[0;32mI (323304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (323804) TEST: Switches: 0x0000[0m
+[0;32mI (323804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (324304) TEST: Switches: 0x0000[0m
+[0;32mI (324304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (324804) TEST: Switches: 0x0000[0m
+[0;32mI (324804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (325304) TEST: Switches: 0x0000[0m
+[0;32mI (325304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (325804) TEST: Switches: 0x0000[0m
+[0;32mI (325804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (326304) TEST: Switches: 0x0000[0m
+[0;32mI (326304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (326804) TEST: Switches: 0x0000[0m
+[0;32mI (326804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (327304) TEST: Switches: 0x0000[0m
+[0;32mI (327304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (327804) TEST: Switches: 0x0000[0m
+[0;32mI (327804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (328304) TEST: Switches: 0x0000[0m
+[0;32mI (328304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (328804) TEST: Switches: 0x0000[0m
+[0;32mI (328804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (329304) TEST: Switches: 0x0000[0m
+[0;32mI (329304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (329804) TEST: Switches: 0x0000[0m
+[0;32mI (329804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (330304) TEST: Switches: 0x0000[0m
+[0;32mI (330304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (330804) TEST: Switches: 0x0000[0m
+[0;32mI (330804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (331304) TEST: Switches: 0x0000[0m
+[0;32mI (331304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (331804) TEST: Switches: 0x0000[0m
+[0;32mI (331804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (332304) TEST: Switches: 0x0000[0m
+[0;32mI (332304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (332804) TEST: Switches: 0x0000[0m
+[0;32mI (332804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (333304) TEST: Switches: 0x0000[0m
+[0;32mI (333304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (333804) TEST: Switches: 0x0000[0m
+[0;32mI (333804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (334304) TEST: Switches: 0x0000[0m
+[0;32mI (334304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (334804) TEST: Switches: 0x0000[0m
+[0;32mI (334804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (335304) TEST: Switches: 0x0000[0m
+[0;32mI (335304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (335804) TEST: Switches: 0x0000[0m
+[0;32mI (335804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (336304) TEST: Switches: 0x0000[0m
+[0;32mI (336304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (336804) TEST: Switches: 0x0000[0m
+[0;32mI (336804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (337304) TEST: Switches: 0x0000[0m
+[0;32mI (337304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (337804) TEST: Switches: 0x0000[0m
+[0;32mI (337804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (338304) TEST: Switches: 0x0000[0m
+[0;32mI (338304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (338804) TEST: Switches: 0x0000[0m
+[0;32mI (338804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (339304) TEST: Switches: 0x0000[0m
+[0;32mI (339304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (339804) TEST: Switches: 0x0000[0m
+[0;32mI (339804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (340304) TEST: Switches: 0x0000[0m
+[0;32mI (340304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (340804) TEST: Switches: 0x0000[0m
+[0;32mI (340804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (341304) TEST: Switches: 0x0000[0m
+[0;32mI (341304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (341804) TEST: Switches: 0x0000[0m
+[0;32mI (341804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (342304) TEST: Switches: 0x0000[0m
+[0;32mI (342304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (342804) TEST: Switches: 0x0000[0m
+[0;32mI (342804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (343304) TEST: Switches: 0x0000[0m
+[0;32mI (343304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (343804) TEST: Switches: 0x0000[0m
+[0;32mI (343804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (344304) TEST: Switches: 0x0000[0m
+[0;32mI (344304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (344804) TEST: Switches: 0x0000[0m
+[0;32mI (344804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (345304) TEST: Switches: 0x0000[0m
+[0;32mI (345304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (345804) TEST: Switches: 0x0000[0m
+[0;32mI (345804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (346304) TEST: Switches: 0x0000[0m
+[0;32mI (346304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (346804) TEST: Switches: 0x0000[0m
+[0;32mI (346804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (347304) TEST: Switches: 0x0000[0m
+[0;32mI (347304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (347804) TEST: Switches: 0x0000[0m
+[0;32mI (347804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (348304) TEST: Switches: 0x0000[0m
+[0;32mI (348304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (348804) TEST: Switches: 0x0000[0m
+[0;32mI (348804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (349304) TEST: Switches: 0x0000[0m
+[0;32mI (349304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (349804) TEST: Switches: 0x0000[0m
+[0;32mI (349804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (350304) TEST: Switches: 0x0000[0m
+[0;32mI (350304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (350804) TEST: Switches: 0x0000[0m
+[0;32mI (350804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (351304) TEST: Switches: 0x0000[0m
+[0;32mI (351304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (351804) TEST: Switches: 0x0000[0m
+[0;32mI (351804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (352304) TEST: Switches: 0x0000[0m
+[0;32mI (352304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (352804) TEST: Switches: 0x0000[0m
+[0;32mI (352804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (353304) TEST: Switches: 0x0000[0m
+[0;32mI (353304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (353804) TEST: Switches: 0x0000[0m
+[0;32mI (353804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (354304) TEST: Switches: 0x0000[0m
+[0;32mI (354304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (354804) TEST: Switches: 0x0000[0m
+[0;32mI (354804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (355304) TEST: Switches: 0x0000[0m
+[0;32mI (355304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (355804) TEST: Switches: 0x0000[0m
+[0;32mI (355804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (356304) TEST: Switches: 0x0000[0m
+[0;32mI (356304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (356804) TEST: Switches: 0x0000[0m
+[0;32mI (356804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (357304) TEST: Switches: 0x0000[0m
+[0;32mI (357304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (357804) TEST: Switches: 0x0000[0m
+[0;32mI (357804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (358304) TEST: Switches: 0x0000[0m
+[0;32mI (358304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (358804) TEST: Switches: 0x0000[0m
+[0;32mI (358804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (359304) TEST: Switches: 0x0000[0m
+[0;32mI (359304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (359804) TEST: Switches: 0x0000[0m
+[0;32mI (359804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (360304) TEST: Switches: 0x0000[0m
+[0;32mI (360304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (360804) TEST: Switches: 0x0000[0m
+[0;32mI (360804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (361304) TEST: Switches: 0x0000[0m
+[0;32mI (361304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (361804) TEST: Switches: 0x0000[0m
+[0;32mI (361804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (362304) TEST: Switches: 0x0000[0m
+[0;32mI (362304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (362804) TEST: Switches: 0x0000[0m
+[0;32mI (362804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (363304) TEST: Switches: 0x0000[0m
+[0;32mI (363304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (363804) TEST: Switches: 0x0000[0m
+[0;32mI (363804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (364304) TEST: Switches: 0x0000[0m
+[0;32mI (364304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (364804) TEST: Switches: 0x0000[0m
+[0;32mI (364804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (365304) TEST: Switches: 0x0000[0m
+[0;32mI (365304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (365804) TEST: Switches: 0x0000[0m
+[0;32mI (365804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (366304) TEST: Switches: 0x0000[0m
+[0;32mI (366304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (366804) TEST: Switches: 0x0000[0m
+[0;32mI (366804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (367304) TEST: Switches: 0x0000[0m
+[0;32mI (367304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (367804) TEST: Switches: 0x0000[0m
+[0;32mI (367804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (368304) TEST: Switches: 0x0000[0m
+[0;32mI (368304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (368804) TEST: Switches: 0x0000[0m
+[0;32mI (368804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (369304) TEST: Switches: 0x0000[0m
+[0;32mI (369304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (369804) TEST: Switches: 0x0000[0m
+[0;32mI (369804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (370304) TEST: Switches: 0x0000[0m
+[0;32mI (370304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (370804) TEST: Switches: 0x0000[0m
+[0;32mI (370804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (371304) TEST: Switches: 0x0000[0m
+[0;32mI (371304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (371804) TEST: Switches: 0x0000[0m
+[0;32mI (371804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (372304) TEST: Switches: 0x0000[0m
+[0;32mI (372304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (372804) TEST: Switches: 0x0000[0m
+[0;32mI (372804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (373304) TEST: Switches: 0x0000[0m
+[0;32mI (373304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (373804) TEST: Switches: 0x0000[0m
+[0;32mI (373804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (374304) TEST: Switches: 0x0000[0m
+[0;32mI (374304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (374804) TEST: Switches: 0x0000[0m
+[0;32mI (374804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (375304) TEST: Switches: 0x0000[0m
+[0;32mI (375304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (375804) TEST: Switches: 0x0000[0m
+[0;32mI (375804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (376304) TEST: Switches: 0x0000[0m
+[0;32mI (376304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (376804) TEST: Switches: 0x0000[0m
+[0;32mI (376804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (377304) TEST: Switches: 0x0000[0m
+[0;32mI (377304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (377804) TEST: Switches: 0x0000[0m
+[0;32mI (377804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (378304) TEST: Switches: 0x0000[0m
+[0;32mI (378304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (378804) TEST: Switches: 0x0000[0m
+[0;32mI (378804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (379304) TEST: Switches: 0x0000[0m
+[0;32mI (379304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (379804) TEST: Switches: 0x0000[0m
+[0;32mI (379804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (380304) TEST: Switches: 0x0000[0m
+[0;32mI (380304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (380804) TEST: Switches: 0x0000[0m
+[0;32mI (380804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (381304) TEST: Switches: 0x0000[0m
+[0;32mI (381304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (381804) TEST: Switches: 0x0000[0m
+[0;32mI (381804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (382304) TEST: Switches: 0x0000[0m
+[0;32mI (382304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (382804) TEST: Switches: 0x0000[0m
+[0;32mI (382804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (383304) TEST: Switches: 0x0000[0m
+[0;32mI (383304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (383804) TEST: Switches: 0x0000[0m
+[0;32mI (383804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (384304) TEST: Switches: 0x0000[0m
+[0;32mI (384304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (384804) TEST: Switches: 0x0000[0m
+[0;32mI (384804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (385304) TEST: Switches: 0x0000[0m
+[0;32mI (385304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (385804) TEST: Switches: 0x0000[0m
+[0;32mI (385804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (386304) TEST: Switches: 0x0000[0m
+[0;32mI (386304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (386804) TEST: Switches: 0x0000[0m
+[0;32mI (386804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (387304) TEST: Switches: 0x0000[0m
+[0;32mI (387304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (387804) TEST: Switches: 0x0000[0m
+[0;32mI (387804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (388304) TEST: Switches: 0x0000[0m
+[0;32mI (388304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (388804) TEST: Switches: 0x0000[0m
+[0;32mI (388804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (389304) TEST: Switches: 0x0000[0m
+[0;32mI (389304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (389804) TEST: Switches: 0x0000[0m
+[0;32mI (389804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (390304) TEST: Switches: 0x0000[0m
+[0;32mI (390304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (390804) TEST: Switches: 0x0000[0m
+[0;32mI (390804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (391304) TEST: Switches: 0x0000[0m
+[0;32mI (391304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (391804) TEST: Switches: 0x0000[0m
+[0;32mI (391804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (392304) TEST: Switches: 0x0000[0m
+[0;32mI (392304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (392804) TEST: Switches: 0x0000[0m
+[0;32mI (392804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (393304) TEST: Switches: 0x0000[0m
+[0;32mI (393304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (393804) TEST: Switches: 0x0000[0m
+[0;32mI (393804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (394304) TEST: Switches: 0x0000[0m
+[0;32mI (394304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (394804) TEST: Switches: 0x0000[0m
+[0;32mI (394804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (395304) TEST: Switches: 0x0000[0m
+[0;32mI (395304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (395804) TEST: Switches: 0x0000[0m
+[0;32mI (395804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (396304) TEST: Switches: 0x0000[0m
+[0;32mI (396304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (396804) TEST: Switches: 0x0000[0m
+[0;32mI (396804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (397304) TEST: Switches: 0x0000[0m
+[0;32mI (397304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (397804) TEST: Switches: 0x0000[0m
+[0;32mI (397804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (398304) TEST: Switches: 0x0000[0m
+[0;32mI (398304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (398804) TEST: Switches: 0x0000[0m
+[0;32mI (398804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (399304) TEST: Switches: 0x0000[0m
+[0;32mI (399304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (399804) TEST: Switches: 0x0000[0m
+[0;32mI (399804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (400304) TEST: Switches: 0x0000[0m
+[0;32mI (400304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (400804) TEST: Switches: 0x0000[0m
+[0;32mI (400804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (401304) TEST: Switches: 0x0000[0m
+[0;32mI (401304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (401804) TEST: Switches: 0x0000[0m
+[0;32mI (401804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (402304) TEST: Switches: 0x0000[0m
+[0;32mI (402304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (402804) TEST: Switches: 0x0000[0m
+[0;32mI (402804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (403304) TEST: Switches: 0x0000[0m
+[0;32mI (403304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (403804) TEST: Switches: 0x0000[0m
+[0;32mI (403804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (404304) TEST: Switches: 0x0000[0m
+[0;32mI (404304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (404804) TEST: Switches: 0x0000[0m
+[0;32mI (404804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (405304) TEST: Switches: 0x0000[0m
+[0;32mI (405304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (405804) TEST: Switches: 0x0000[0m
+[0;32mI (405804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (406304) TEST: Switches: 0x0000[0m
+[0;32mI (406304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (406804) TEST: Switches: 0x0000[0m
+[0;32mI (406804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (407304) TEST: Switches: 0x0000[0m
+[0;32mI (407304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (407804) TEST: Switches: 0x0000[0m
+[0;32mI (407804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (408304) TEST: Switches: 0x0000[0m
+[0;32mI (408304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (408804) TEST: Switches: 0x0000[0m
+[0;32mI (408804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (409304) TEST: Switches: 0x0000[0m
+[0;32mI (409304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (409804) TEST: Switches: 0x0000[0m
+[0;32mI (409804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (410304) TEST: Switches: 0x0000[0m
+[0;32mI (410304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (410804) TEST: Switches: 0x0000[0m
+[0;32mI (410804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (411304) TEST: Switches: 0x0000[0m
+[0;32mI (411304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (411804) TEST: Switches: 0x0000[0m
+[0;32mI (411804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (412304) TEST: Switches: 0x0000[0m
+[0;32mI (412304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (412804) TEST: Switches: 0x0000[0m
+[0;32mI (412804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (413304) TEST: Switches: 0x0000[0m
+[0;32mI (413304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (413804) TEST: Switches: 0x0000[0m
+[0;32mI (413804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (414304) TEST: Switches: 0x0000[0m
+[0;32mI (414304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (414804) TEST: Switches: 0x0000[0m
+[0;32mI (414804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (415304) TEST: Switches: 0x0000[0m
+[0;32mI (415304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (415804) TEST: Switches: 0x0000[0m
+[0;32mI (415804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (416304) TEST: Switches: 0x0000[0m
+[0;32mI (416304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (416804) TEST: Switches: 0x0000[0m
+[0;32mI (416804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (417304) TEST: Switches: 0x0000[0m
+[0;32mI (417304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (417804) TEST: Switches: 0x0000[0m
+[0;32mI (417804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (418304) TEST: Switches: 0x0000[0m
+[0;32mI (418304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (418804) TEST: Switches: 0x0000[0m
+[0;32mI (418804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (419304) TEST: Switches: 0x0000[0m
+[0;32mI (419304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (419804) TEST: Switches: 0x0000[0m
+[0;32mI (419804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (420304) TEST: Switches: 0x0000[0m
+[0;32mI (420304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (420804) TEST: Switches: 0x0000[0m
+[0;32mI (420804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (421304) TEST: Switches: 0x0000[0m
+[0;32mI (421304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (421804) TEST: Switches: 0x0000[0m
+[0;32mI (421804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (422304) TEST: Switches: 0x0000[0m
+[0;32mI (422304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (422804) TEST: Switches: 0x0000[0m
+[0;32mI (422804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (423304) TEST: Switches: 0x0000[0m
+[0;32mI (423304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (423804) TEST: Switches: 0x0000[0m
+[0;32mI (423804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (424304) TEST: Switches: 0x0000[0m
+[0;32mI (424304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (424804) TEST: Switches: 0x0000[0m
+[0;32mI (424804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (425304) TEST: Switches: 0x0000[0m
+[0;32mI (425304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (425804) TEST: Switches: 0x0000[0m
+[0;32mI (425804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (426304) TEST: Switches: 0x0000[0m
+[0;32mI (426304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (426804) TEST: Switches: 0x0000[0m
+[0;32mI (426804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (427304) TEST: Switches: 0x0000[0m
+[0;32mI (427304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (427804) TEST: Switches: 0x0000[0m
+[0;32mI (427804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (428304) TEST: Switches: 0x0000[0m
+[0;32mI (428304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (428804) TEST: Switches: 0x0000[0m
+[0;32mI (428804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (429304) TEST: Switches: 0x0000[0m
+[0;32mI (429304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (429804) TEST: Switches: 0x0000[0m
+[0;32mI (429804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (430304) TEST: Switches: 0x0000[0m
+[0;32mI (430304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (430804) TEST: Switches: 0x0000[0m
+[0;32mI (430804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (431304) TEST: Switches: 0x0000[0m
+[0;32mI (431304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (431804) TEST: Switches: 0x0000[0m
+[0;32mI (431804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (432304) TEST: Switches: 0x0000[0m
+[0;32mI (432304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (432804) TEST: Switches: 0x0000[0m
+[0;32mI (432804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (433304) TEST: Switches: 0x0000[0m
+[0;32mI (433304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (433804) TEST: Switches: 0x0000[0m
+[0;32mI (433804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (434304) TEST: Switches: 0x0000[0m
+[0;32mI (434304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (434804) TEST: Switches: 0x0000[0m
+[0;32mI (434804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (435304) TEST: Switches: 0x0000[0m
+[0;32mI (435304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (435804) TEST: Switches: 0x0000[0m
+[0;32mI (435804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (436304) TEST: Switches: 0x0000[0m
+[0;32mI (436304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (436804) TEST: Switches: 0x0000[0m
+[0;32mI (436804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (437304) TEST: Switches: 0x0000[0m
+[0;32mI (437304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (437804) TEST: Switches: 0x0000[0m
+[0;32mI (437804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (438304) TEST: Switches: 0x0000[0m
+[0;32mI (438304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (438804) TEST: Switches: 0x0000[0m
+[0;32mI (438804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (439304) TEST: Switches: 0x0000[0m
+[0;32mI (439304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (439804) TEST: Switches: 0x0000[0m
+[0;32mI (439804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (440304) TEST: Switches: 0x0000[0m
+[0;32mI (440304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (440804) TEST: Switches: 0x0000[0m
+[0;32mI (440804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (441304) TEST: Switches: 0x0000[0m
+[0;32mI (441304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (441804) TEST: Switches: 0x0000[0m
+[0;32mI (441804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (442304) TEST: Switches: 0x0000[0m
+[0;32mI (442304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (442804) TEST: Switches: 0x0000[0m
+[0;32mI (442804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (443304) TEST: Switches: 0x0000[0m
+[0;32mI (443304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (443804) TEST: Switches: 0x0000[0m
+[0;32mI (443804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (444304) TEST: Switches: 0x0000[0m
+[0;32mI (444304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (444804) TEST: Switches: 0x0000[0m
+[0;32mI (444804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (445304) TEST: Switches: 0x0000[0m
+[0;32mI (445304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (445804) TEST: Switches: 0x0000[0m
+[0;32mI (445804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (446304) TEST: Switches: 0x0000[0m
+[0;32mI (446304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (446804) TEST: Switches: 0x0000[0m
+[0;32mI (446804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (447304) TEST: Switches: 0x0000[0m
+[0;32mI (447304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (447804) TEST: Switches: 0x0000[0m
+[0;32mI (447804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (448304) TEST: Switches: 0x0000[0m
+[0;32mI (448304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (448804) TEST: Switches: 0x0000[0m
+[0;32mI (448804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (449304) TEST: Switches: 0x0000[0m
+[0;32mI (449304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (449804) TEST: Switches: 0x0000[0m
+[0;32mI (449804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (450304) TEST: Switches: 0x0000[0m
+[0;32mI (450304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (450804) TEST: Switches: 0x0000[0m
+[0;32mI (450804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (451304) TEST: Switches: 0x0000[0m
+[0;32mI (451304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (451804) TEST: Switches: 0x0000[0m
+[0;32mI (451804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (452304) TEST: Switches: 0x0000[0m
+[0;32mI (452304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (452804) TEST: Switches: 0x0000[0m
+[0;32mI (452804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (453304) TEST: Switches: 0x0000[0m
+[0;32mI (453304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (453804) TEST: Switches: 0x0000[0m
+[0;32mI (453804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (454304) TEST: Switches: 0x0000[0m
+[0;32mI (454304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (454804) TEST: Switches: 0x0000[0m
+[0;32mI (454804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (455304) TEST: Switches: 0x0000[0m
+[0;32mI (455304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (455804) TEST: Switches: 0x0000[0m
+[0;32mI (455804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (456304) TEST: Switches: 0x0000[0m
+[0;32mI (456304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (456804) TEST: Switches: 0x0000[0m
+[0;32mI (456804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (457304) TEST: Switches: 0x0000[0m
+[0;32mI (457304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (457804) TEST: Switches: 0x0000[0m
+[0;32mI (457804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (458304) TEST: Switches: 0x0000[0m
+[0;32mI (458304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (458804) TEST: Switches: 0x0000[0m
+[0;32mI (458804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (459304) TEST: Switches: 0x0000[0m
+[0;32mI (459304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (459804) TEST: Switches: 0x0000[0m
+[0;32mI (459804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (460304) TEST: Switches: 0x0000[0m
+[0;32mI (460304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (460804) TEST: Switches: 0x0000[0m
+[0;32mI (460804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (461304) TEST: Switches: 0x0000[0m
+[0;32mI (461304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (461804) TEST: Switches: 0x0000[0m
+[0;32mI (461804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (462304) TEST: Switches: 0x0000[0m
+[0;32mI (462304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (462804) TEST: Switches: 0x0000[0m
+[0;32mI (462804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (463304) TEST: Switches: 0x0000[0m
+[0;32mI (463304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (463804) TEST: Switches: 0x0000[0m
+[0;32mI (463804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (464304) TEST: Switches: 0x0000[0m
+[0;32mI (464304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (464804) TEST: Switches: 0x0000[0m
+[0;32mI (464804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (465304) TEST: Switches: 0x0000[0m
+[0;32mI (465304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (465804) TEST: Switches: 0x0000[0m
+[0;32mI (465804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (466304) TEST: Switches: 0x0000[0m
+[0;32mI (466304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (466804) TEST: Switches: 0x0000[0m
+[0;32mI (466804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (467304) TEST: Switches: 0x0000[0m
+[0;32mI (467304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (467804) TEST: Switches: 0x0000[0m
+[0;32mI (467804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (468304) TEST: Switches: 0x0000[0m
+[0;32mI (468304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (468804) TEST: Switches: 0x0000[0m
+[0;32mI (468804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (469304) TEST: Switches: 0x0000[0m
+[0;32mI (469304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (469804) TEST: Switches: 0x0000[0m
+[0;32mI (469804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (470304) TEST: Switches: 0x0000[0m
+[0;32mI (470304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (470804) TEST: Switches: 0x0000[0m
+[0;32mI (470804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (471304) TEST: Switches: 0x0000[0m
+[0;32mI (471304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (471804) TEST: Switches: 0x0000[0m
+[0;32mI (471804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (472304) TEST: Switches: 0x0000[0m
+[0;32mI (472304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (472804) TEST: Switches: 0x0000[0m
+[0;32mI (472804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (473304) TEST: Switches: 0x0000[0m
+[0;32mI (473304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (473804) TEST: Switches: 0x0000[0m
+[0;32mI (473804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (474304) TEST: Switches: 0x0000[0m
+[0;32mI (474304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (474804) TEST: Switches: 0x0000[0m
+[0;32mI (474804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (475304) TEST: Switches: 0x0000[0m
+[0;32mI (475304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (475804) TEST: Switches: 0x0000[0m
+[0;32mI (475804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (476304) TEST: Switches: 0x0000[0m
+[0;32mI (476304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (476804) TEST: Switches: 0x0000[0m
+[0;32mI (476804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (477304) TEST: Switches: 0x0000[0m
+[0;32mI (477304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (477804) TEST: Switches: 0x0000[0m
+[0;32mI (477804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (478304) TEST: Switches: 0x0000[0m
+[0;32mI (478304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (478804) TEST: Switches: 0x0000[0m
+[0;32mI (478804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (479304) TEST: Switches: 0x0000[0m
+[0;32mI (479304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (479804) TEST: Switches: 0x0000[0m
+[0;32mI (479804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (480304) TEST: Switches: 0x0000[0m
+[0;32mI (480304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (480804) TEST: Switches: 0x0000[0m
+[0;32mI (480804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (481304) TEST: Switches: 0x0000[0m
+[0;32mI (481304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (481804) TEST: Switches: 0x0000[0m
+[0;32mI (481804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (482304) TEST: Switches: 0x0000[0m
+[0;32mI (482304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (482804) TEST: Switches: 0x0000[0m
+[0;32mI (482804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (483304) TEST: Switches: 0x0000[0m
+[0;32mI (483304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (483804) TEST: Switches: 0x0000[0m
+[0;32mI (483804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (484304) TEST: Switches: 0x0000[0m
+[0;32mI (484304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (484804) TEST: Switches: 0x0000[0m
+[0;32mI (484804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (485304) TEST: Switches: 0x0000[0m
+[0;32mI (485304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (485804) TEST: Switches: 0x0000[0m
+[0;32mI (485804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (486304) TEST: Switches: 0x0000[0m
+[0;32mI (486304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (486804) TEST: Switches: 0x0000[0m
+[0;32mI (486804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (487304) TEST: Switches: 0x0000[0m
+[0;32mI (487304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (487804) TEST: Switches: 0x0000[0m
+[0;32mI (487804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (488304) TEST: Switches: 0x0000[0m
+[0;32mI (488304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (488804) TEST: Switches: 0x0000[0m
+[0;32mI (488804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (489304) TEST: Switches: 0x0000[0m
+[0;32mI (489304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (489804) TEST: Switches: 0x0000[0m
+[0;32mI (489804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (490304) TEST: Switches: 0x0000[0m
+[0;32mI (490304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (490804) TEST: Switches: 0x0000[0m
+[0;32mI (490804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (491304) TEST: Switches: 0x0000[0m
+[0;32mI (491304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (491804) TEST: Switches: 0x0000[0m
+[0;32mI (491804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (492304) TEST: Switches: 0x0000[0m
+[0;32mI (492304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (492804) TEST: Switches: 0x0000[0m
+[0;32mI (492804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (493304) TEST: Switches: 0x0000[0m
+[0;32mI (493304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (493804) TEST: Switches: 0x0000[0m
+[0;32mI (493804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (494304) TEST: Switches: 0x0000[0m
+[0;32mI (494304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (494804) TEST: Switches: 0x0000[0m
+[0;32mI (494804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (495304) TEST: Switches: 0x0000[0m
+[0;32mI (495304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (495804) TEST: Switches: 0x0000[0m
+[0;32mI (495804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (496304) TEST: Switches: 0x0000[0m
+[0;32mI (496304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (496804) TEST: Switches: 0x0000[0m
+[0;32mI (496804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (497304) TEST: Switches: 0x0000[0m
+[0;32mI (497304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (497804) TEST: Switches: 0x0000[0m
+[0;32mI (497804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (498304) TEST: Switches: 0x0000[0m
+[0;32mI (498304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (498804) TEST: Switches: 0x0000[0m
+[0;32mI (498804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (499304) TEST: Switches: 0x0000[0m
+[0;32mI (499304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (499804) TEST: Switches: 0x0000[0m
+[0;32mI (499804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (500304) TEST: Switches: 0x0000[0m
+[0;32mI (500304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (500804) TEST: Switches: 0x0000[0m
+[0;32mI (500804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (501304) TEST: Switches: 0x0000[0m
+[0;32mI (501304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (501804) TEST: Switches: 0x0000[0m
+[0;32mI (501804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (502304) TEST: Switches: 0x0000[0m
+[0;32mI (502304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (502804) TEST: Switches: 0x0000[0m
+[0;32mI (502804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (503304) TEST: Switches: 0x0000[0m
+[0;32mI (503304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (503804) TEST: Switches: 0x0000[0m
+[0;32mI (503804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (504304) TEST: Switches: 0x0000[0m
+[0;32mI (504304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (504804) TEST: Switches: 0x0000[0m
+[0;32mI (504804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (505304) TEST: Switches: 0x0000[0m
+[0;32mI (505304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (505804) TEST: Switches: 0x0000[0m
+[0;32mI (505804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (506304) TEST: Switches: 0x0000[0m
+[0;32mI (506304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (506804) TEST: Switches: 0x0000[0m
+[0;32mI (506804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (507304) TEST: Switches: 0x0000[0m
+[0;32mI (507304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (507804) TEST: Switches: 0x0000[0m
+[0;32mI (507804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (508304) TEST: Switches: 0x0000[0m
+[0;32mI (508304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (508804) TEST: Switches: 0x0000[0m
+[0;32mI (508804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (509304) TEST: Switches: 0x0000[0m
+[0;32mI (509304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (509804) TEST: Switches: 0x0000[0m
+[0;32mI (509804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (510304) TEST: Switches: 0x0000[0m
+[0;32mI (510304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (510804) TEST: Switches: 0x0000[0m
+[0;32mI (510804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (511304) TEST: Switches: 0x0000[0m
+[0;32mI (511304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (511804) TEST: Switches: 0x0000[0m
+[0;32mI (511804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (512304) TEST: Switches: 0x0000[0m
+[0;32mI (512304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (512804) TEST: Switches: 0x0000[0m
+[0;32mI (512804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (513304) TEST: Switches: 0x0000[0m
+[0;32mI (513304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (513804) TEST: Switches: 0x0000[0m
+[0;32mI (513804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (514304) TEST: Switches: 0x0000[0m
+[0;32mI (514304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (514804) TEST: Switches: 0x0000[0m
+[0;32mI (514804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (515304) TEST: Switches: 0x0000[0m
+[0;32mI (515304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (515804) TEST: Switches: 0x0000[0m
+[0;32mI (515804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (516304) TEST: Switches: 0x0000[0m
+[0;32mI (516304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (516804) TEST: Switches: 0x0000[0m
+[0;32mI (516804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (517304) TEST: Switches: 0x0000[0m
+[0;32mI (517304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (517804) TEST: Switches: 0x0000[0m
+[0;32mI (517804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (518304) TEST: Switches: 0x0000[0m
+[0;32mI (518304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (518804) TEST: Switches: 0x0000[0m
+[0;32mI (518804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (519304) TEST: Switches: 0x0000[0m
+[0;32mI (519304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (519804) TEST: Switches: 0x0000[0m
+[0;32mI (519804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (520304) TEST: Switches: 0x0000[0m
+[0;32mI (520304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (520804) TEST: Switches: 0x0000[0m
+[0;32mI (520804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (521304) TEST: Switches: 0x0000[0m
+[0;32mI (521304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (521804) TEST: Switches: 0x0000[0m
+[0;32mI (521804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (522304) TEST: Switches: 0x0000[0m
+[0;32mI (522304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (522804) TEST: Switches: 0x0000[0m
+[0;32mI (522804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (523304) TEST: Switches: 0x0000[0m
+[0;32mI (523304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (523804) TEST: Switches: 0x0000[0m
+[0;32mI (523804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (524304) TEST: Switches: 0x0000[0m
+[0;32mI (524304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (524804) TEST: Switches: 0x0000[0m
+[0;32mI (524804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (525304) TEST: Switches: 0x0000[0m
+[0;32mI (525304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (525804) TEST: Switches: 0x0000[0m
+[0;32mI (525804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (526304) TEST: Switches: 0x0000[0m
+[0;32mI (526304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (526804) TEST: Switches: 0x0000[0m
+[0;32mI (526804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (527304) TEST: Switches: 0x0000[0m
+[0;32mI (527304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (527804) TEST: Switches: 0x0000[0m
+[0;32mI (527804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (528304) TEST: Switches: 0x0000[0m
+[0;32mI (528304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (528804) TEST: Switches: 0x0000[0m
+[0;32mI (528804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (529304) TEST: Switches: 0x0000[0m
+[0;32mI (529304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (529804) TEST: Switches: 0x0000[0m
+[0;32mI (529804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (530304) TEST: Switches: 0x0000[0m
+[0;32mI (530304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (530804) TEST: Switches: 0x0000[0m
+[0;32mI (530804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (531304) TEST: Switches: 0x0000[0m
+[0;32mI (531304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (531804) TEST: Switches: 0x0000[0m
+[0;32mI (531804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (532304) TEST: Switches: 0x0000[0m
+[0;32mI (532304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (532804) TEST: Switches: 0x0000[0m
+[0;32mI (532804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (533304) TEST: Switches: 0x0000[0m
+[0;32mI (533304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (533804) TEST: Switches: 0x0000[0m
+[0;32mI (533804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (534304) TEST: Switches: 0x0000[0m
+[0;32mI (534304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (534804) TEST: Switches: 0x0000[0m
+[0;32mI (534804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (535304) TEST: Switches: 0x0000[0m
+[0;32mI (535304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (535804) TEST: Switches: 0x0000[0m
+[0;32mI (535804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (536304) TEST: Switches: 0x0000[0m
+[0;32mI (536304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (536804) TEST: Switches: 0x0000[0m
+[0;32mI (536804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (537304) TEST: Switches: 0x0000[0m
+[0;32mI (537304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (537804) TEST: Switches: 0x0000[0m
+[0;32mI (537804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (538304) TEST: Switches: 0x0000[0m
+[0;32mI (538304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (538804) TEST: Switches: 0x0000[0m
+[0;32mI (538804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (539304) TEST: Switches: 0x0000[0m
+[0;32mI (539304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (539804) TEST: Switches: 0x0000[0m
+[0;32mI (539804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (540304) TEST: Switches: 0x0000[0m
+[0;32mI (540304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (540804) TEST: Switches: 0x0000[0m
+[0;32mI (540804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (541304) TEST: Switches: 0x0000[0m
+[0;32mI (541304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (541804) TEST: Switches: 0x0000[0m
+[0;32mI (541804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (542304) TEST: Switches: 0x0000[0m
+[0;32mI (542304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (542804) TEST: Switches: 0x0000[0m
+[0;32mI (542804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (543304) TEST: Switches: 0x0000[0m
+[0;32mI (543304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (543804) TEST: Switches: 0x0000[0m
+[0;32mI (543804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (544304) TEST: Switches: 0x0000[0m
+[0;32mI (544304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (544804) TEST: Switches: 0x0000[0m
+[0;32mI (544804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (545304) TEST: Switches: 0x0000[0m
+[0;32mI (545304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (545804) TEST: Switches: 0x0000[0m
+[0;32mI (545804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (546304) TEST: Switches: 0x0000[0m
+[0;32mI (546304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (546804) TEST: Switches: 0x0000[0m
+[0;32mI (546804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (547304) TEST: Switches: 0x0000[0m
+[0;32mI (547304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (547804) TEST: Switches: 0x0000[0m
+[0;32mI (547804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (548304) TEST: Switches: 0x0000[0m
+[0;32mI (548304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (548804) TEST: Switches: 0x0000[0m
+[0;32mI (548804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (549304) TEST: Switches: 0x0000[0m
+[0;32mI (549304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (549804) TEST: Switches: 0x0000[0m
+[0;32mI (549804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (550304) TEST: Switches: 0x0000[0m
+[0;32mI (550304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (550804) TEST: Switches: 0x0000[0m
+[0;32mI (550804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (551304) TEST: Switches: 0x0000[0m
+[0;32mI (551304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (551804) TEST: Switches: 0x0000[0m
+[0;32mI (551804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (552304) TEST: Switches: 0x0000[0m
+[0;32mI (552304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (552804) TEST: Switches: 0x0000[0m
+[0;32mI (552804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (553304) TEST: Switches: 0x0000[0m
+[0;32mI (553304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (553804) TEST: Switches: 0x0000[0m
+[0;32mI (553804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (554304) TEST: Switches: 0x0000[0m
+[0;32mI (554304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (554804) TEST: Switches: 0x0000[0m
+[0;32mI (554804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (555304) TEST: Switches: 0x0000[0m
+[0;32mI (555304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (555804) TEST: Switches: 0x0000[0m
+[0;32mI (555804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (556304) TEST: Switches: 0x0000[0m
+[0;32mI (556304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (556804) TEST: Switches: 0x0000[0m
+[0;32mI (556804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (557304) TEST: Switches: 0x0000[0m
+[0;32mI (557304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (557804) TEST: Switches: 0x0000[0m
+[0;32mI (557804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (558304) TEST: Switches: 0x0000[0m
+[0;32mI (558304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (558804) TEST: Switches: 0x0000[0m
+[0;32mI (558804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (559304) TEST: Switches: 0x0000[0m
+[0;32mI (559304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (559804) TEST: Switches: 0x0000[0m
+[0;32mI (559804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (560304) TEST: Switches: 0x0000[0m
+[0;32mI (560304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (560804) TEST: Switches: 0x0000[0m
+[0;32mI (560804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (561304) TEST: Switches: 0x0000[0m
+[0;32mI (561304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (561804) TEST: Switches: 0x0000[0m
+[0;32mI (561804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (562304) TEST: Switches: 0x0000[0m
+[0;32mI (562304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (562804) TEST: Switches: 0x0000[0m
+[0;32mI (562804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (563304) TEST: Switches: 0x0000[0m
+[0;32mI (563304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (563804) TEST: Switches: 0x0000[0m
+[0;32mI (563804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (564304) TEST: Switches: 0x0000[0m
+[0;32mI (564304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (564804) TEST: Switches: 0x0000[0m
+[0;32mI (564804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (565304) TEST: Switches: 0x0000[0m
+[0;32mI (565304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (565804) TEST: Switches: 0x0000[0m
+[0;32mI (565804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (566304) TEST: Switches: 0x0000[0m
+[0;32mI (566304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (566804) TEST: Switches: 0x0000[0m
+[0;32mI (566804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (567304) TEST: Switches: 0x0000[0m
+[0;32mI (567304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (567804) TEST: Switches: 0x0000[0m
+[0;32mI (567804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (568304) TEST: Switches: 0x0000[0m
+[0;32mI (568304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (568804) TEST: Switches: 0x0000[0m
+[0;32mI (568804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (569304) TEST: Switches: 0x0000[0m
+[0;32mI (569304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (569804) TEST: Switches: 0x0000[0m
+[0;32mI (569804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (570304) TEST: Switches: 0x0000[0m
+[0;32mI (570304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (570804) TEST: Switches: 0x0000[0m
+[0;32mI (570804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (571304) TEST: Switches: 0x0000[0m
+[0;32mI (571304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (571804) TEST: Switches: 0x0000[0m
+[0;32mI (571804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (572304) TEST: Switches: 0x0000[0m
+[0;32mI (572304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (572804) TEST: Switches: 0x0000[0m
+[0;32mI (572804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (573304) TEST: Switches: 0x0000[0m
+[0;32mI (573304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (573804) TEST: Switches: 0x0000[0m
+[0;32mI (573804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (574304) TEST: Switches: 0x0000[0m
+[0;32mI (574304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (574804) TEST: Switches: 0x0000[0m
+[0;32mI (574804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (575304) TEST: Switches: 0x0000[0m
+[0;32mI (575304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (575804) TEST: Switches: 0x0000[0m
+[0;32mI (575804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (576304) TEST: Switches: 0x0000[0m
+[0;32mI (576304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (576804) TEST: Switches: 0x0000[0m
+[0;32mI (576804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (577304) TEST: Switches: 0x0000[0m
+[0;32mI (577304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (577804) TEST: Switches: 0x0000[0m
+[0;32mI (577804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (578304) TEST: Switches: 0x0000[0m
+[0;32mI (578304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (578804) TEST: Switches: 0x0000[0m
+[0;32mI (578804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (579304) TEST: Switches: 0x0000[0m
+[0;32mI (579304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (579804) TEST: Switches: 0x0000[0m
+[0;32mI (579804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (580304) TEST: Switches: 0x0000[0m
+[0;32mI (580304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (580804) TEST: Switches: 0x0000[0m
+[0;32mI (580804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (581304) TEST: Switches: 0x0000[0m
+[0;32mI (581304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (581804) TEST: Switches: 0x0000[0m
+[0;32mI (581804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (582304) TEST: Switches: 0x0000[0m
+[0;32mI (582304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (582804) TEST: Switches: 0x0000[0m
+[0;32mI (582804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (583304) TEST: Switches: 0x0000[0m
+[0;32mI (583304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (583804) TEST: Switches: 0x0000[0m
+[0;32mI (583804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (584304) TEST: Switches: 0x0000[0m
+[0;32mI (584304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (584804) TEST: Switches: 0x0000[0m
+[0;32mI (584804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (585304) TEST: Switches: 0x0000[0m
+[0;32mI (585304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (585804) TEST: Switches: 0x0000[0m
+[0;32mI (585804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (586304) TEST: Switches: 0x0000[0m
+[0;32mI (586304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (586804) TEST: Switches: 0x0000[0m
+[0;32mI (586804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (587304) TEST: Switches: 0x0000[0m
+[0;32mI (587304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (587804) TEST: Switches: 0x0000[0m
+[0;32mI (587804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (588304) TEST: Switches: 0x0000[0m
+[0;32mI (588304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (588804) TEST: Switches: 0x0000[0m
+[0;32mI (588804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (589304) TEST: Switches: 0x0000[0m
+[0;32mI (589304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (589804) TEST: Switches: 0x0000[0m
+[0;32mI (589804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (590304) TEST: Switches: 0x0000[0m
+[0;32mI (590304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (590804) TEST: Switches: 0x0000[0m
+[0;32mI (590804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (591304) TEST: Switches: 0x0000[0m
+[0;32mI (591304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (591804) TEST: Switches: 0x0000[0m
+[0;32mI (591804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (592304) TEST: Switches: 0x0000[0m
+[0;32mI (592304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (592804) TEST: Switches: 0x0000[0m
+[0;32mI (592804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (593304) TEST: Switches: 0x0000[0m
+[0;32mI (593304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (593804) TEST: Switches: 0x0000[0m
+[0;32mI (593804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (594304) TEST: Switches: 0x0000[0m
+[0;32mI (594304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (594804) TEST: Switches: 0x0000[0m
+[0;32mI (594804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (595304) TEST: Switches: 0x0000[0m
+[0;32mI (595304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (595804) TEST: Switches: 0x0000[0m
+[0;32mI (595804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (596304) TEST: Switches: 0x0000[0m
+[0;32mI (596304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (596804) TEST: Switches: 0x0000[0m
+[0;32mI (596804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (597304) TEST: Switches: 0x0000[0m
+[0;32mI (597304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (597804) TEST: Switches: 0x0000[0m
+[0;32mI (597804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (598304) TEST: Switches: 0x0000[0m
+[0;32mI (598304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (598804) TEST: Switches: 0x0000[0m
+[0;32mI (598804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (599304) TEST: Switches: 0x0000[0m
+[0;32mI (599304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (599804) TEST: Switches: 0x0000[0m
+[0;32mI (599804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (600304) TEST: Switches: 0x0000[0m
+[0;32mI (600304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (600804) TEST: Switches: 0x0000[0m
+[0;32mI (600804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (601304) TEST: Switches: 0x0000[0m
+[0;32mI (601304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (601804) TEST: Switches: 0x0000[0m
+[0;32mI (601804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (602304) TEST: Switches: 0x0000[0m
+[0;32mI (602304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (602804) TEST: Switches: 0x0000[0m
+[0;32mI (602804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (603304) TEST: Switches: 0x0000[0m
+[0;32mI (603304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (603804) TEST: Switches: 0x0000[0m
+[0;32mI (603804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (604304) TEST: Switches: 0x0000[0m
+[0;32mI (604304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (604804) TEST: Switches: 0x0000[0m
+[0;32mI (604804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (605304) TEST: Switches: 0x0000[0m
+[0;32mI (605304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (605804) TEST: Switches: 0x0000[0m
+[0;32mI (605804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (606304) TEST: Switches: 0x0000[0m
+[0;32mI (606304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (606804) TEST: Switches: 0x0000[0m
+[0;32mI (606804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (607304) TEST: Switches: 0x0000[0m
+[0;32mI (607304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (607804) TEST: Switches: 0x0000[0m
+[0;32mI (607804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (608304) TEST: Switches: 0x0000[0m
+[0;32mI (608304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (608804) TEST: Switches: 0x0000[0m
+[0;32mI (608804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (609304) TEST: Switches: 0x0000[0m
+[0;32mI (609304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (609804) TEST: Switches: 0x0000[0m
+[0;32mI (609804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (610304) TEST: Switches: 0x0000[0m
+[0;32mI (610304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (610804) TEST: Switches: 0x0000[0m
+[0;32mI (610804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (611304) TEST: Switches: 0x0000[0m
+[0;32mI (611304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (611804) TEST: Switches: 0x0000[0m
+[0;32mI (611804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (612304) TEST: Switches: 0x0000[0m
+[0;32mI (612304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (612804) TEST: Switches: 0x0000[0m
+[0;32mI (612804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (613304) TEST: Switches: 0x0000[0m
+[0;32mI (613304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (613804) TEST: Switches: 0x0000[0m
+[0;32mI (613804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (614304) TEST: Switches: 0x0000[0m
+[0;32mI (614304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (614804) TEST: Switches: 0x0000[0m
+[0;32mI (614804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (615304) TEST: Switches: 0x0000[0m
+[0;32mI (615304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (615804) TEST: Switches: 0x0000[0m
+[0;32mI (615804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (616304) TEST: Switches: 0x0000[0m
+[0;32mI (616304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (616804) TEST: Switches: 0x0000[0m
+[0;32mI (616804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (617304) TEST: Switches: 0x0000[0m
+[0;32mI (617304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (617804) TEST: Switches: 0x0000[0m
+[0;32mI (617804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (618304) TEST: Switches: 0x0000[0m
+[0;32mI (618304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (618804) TEST: Switches: 0x0000[0m
+[0;32mI (618804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (619304) TEST: Switches: 0x0000[0m
+[0;32mI (619304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (619804) TEST: Switches: 0x0000[0m
+[0;32mI (619804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (620304) TEST: Switches: 0x0000[0m
+[0;32mI (620304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (620804) TEST: Switches: 0x0000[0m
+[0;32mI (620804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (621304) TEST: Switches: 0x0000[0m
+[0;32mI (621304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (621804) TEST: Switches: 0x0000[0m
+[0;32mI (621804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (622304) TEST: Switches: 0x0000[0m
+[0;32mI (622304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (622804) TEST: Switches: 0x0000[0m
+[0;32mI (622804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (623304) TEST: Switches: 0x0000[0m
+[0;32mI (623304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (623804) TEST: Switches: 0x0000[0m
+[0;32mI (623804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (624304) TEST: Switches: 0x0000[0m
+[0;32mI (624304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (624804) TEST: Switches: 0x0000[0m
+[0;32mI (624804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (625304) TEST: Switches: 0x0000[0m
+[0;32mI (625304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (625804) TEST: Switches: 0x0000[0m
+[0;32mI (625804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (626304) TEST: Switches: 0x0000[0m
+[0;32mI (626304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (626804) TEST: Switches: 0x0000[0m
+[0;32mI (626804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (627304) TEST: Switches: 0x0000[0m
+[0;32mI (627304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (627804) TEST: Switches: 0x0000[0m
+[0;32mI (627804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (628304) TEST: Switches: 0x0000[0m
+[0;32mI (628304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (628804) TEST: Switches: 0x0000[0m
+[0;32mI (628804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (629304) TEST: Switches: 0x0000[0m
+[0;32mI (629304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (629804) TEST: Switches: 0x0000[0m
+[0;32mI (629804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (630304) TEST: Switches: 0x0000[0m
+[0;32mI (630304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (630804) TEST: Switches: 0x0000[0m
+[0;32mI (630804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (631304) TEST: Switches: 0x0000[0m
+[0;32mI (631304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (631804) TEST: Switches: 0x0000[0m
+[0;32mI (631804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (632304) TEST: Switches: 0x0000[0m
+[0;32mI (632304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (632804) TEST: Switches: 0x0000[0m
+[0;32mI (632804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (633304) TEST: Switches: 0x0000[0m
+[0;32mI (633304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (633804) TEST: Switches: 0x0000[0m
+[0;32mI (633804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (634304) TEST: Switches: 0x0000[0m
+[0;32mI (634304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (634804) TEST: Switches: 0x0000[0m
+[0;32mI (634804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (635304) TEST: Switches: 0x0000[0m
+[0;32mI (635304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (635804) TEST: Switches: 0x0000[0m
+[0;32mI (635804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (636304) TEST: Switches: 0x0000[0m
+[0;32mI (636304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (636804) TEST: Switches: 0x0000[0m
+[0;32mI (636804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (637304) TEST: Switches: 0x0000[0m
+[0;32mI (637304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (637804) TEST: Switches: 0x0000[0m
+[0;32mI (637804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (638304) TEST: Switches: 0x0000[0m
+[0;32mI (638304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (638804) TEST: Switches: 0x0000[0m
+[0;32mI (638804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (639304) TEST: Switches: 0x0000[0m
+[0;32mI (639304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (639804) TEST: Switches: 0x0000[0m
+[0;32mI (639804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (640304) TEST: Switches: 0x0000[0m
+[0;32mI (640304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (640804) TEST: Switches: 0x0000[0m
+[0;32mI (640804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (641304) TEST: Switches: 0x0000[0m
+[0;32mI (641304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (641804) TEST: Switches: 0x0000[0m
+[0;32mI (641804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (642304) TEST: Switches: 0x0000[0m
+[0;32mI (642304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (642804) TEST: Switches: 0x0000[0m
+[0;32mI (642804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (643304) TEST: Switches: 0x0000[0m
+[0;32mI (643304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (643804) TEST: Switches: 0x0000[0m
+[0;32mI (643804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (644304) TEST: Switches: 0x0000[0m
+[0;32mI (644304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (644804) TEST: Switches: 0x0000[0m
+[0;32mI (644804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (645304) TEST: Switches: 0x0000[0m
+[0;32mI (645304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (645804) TEST: Switches: 0x0000[0m
+[0;32mI (645804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (646304) TEST: Switches: 0x0000[0m
+[0;32mI (646304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (646804) TEST: Switches: 0x0000[0m
+[0;32mI (646804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (647304) TEST: Switches: 0x0000[0m
+[0;32mI (647304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (647804) TEST: Switches: 0x0000[0m
+[0;32mI (647804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (648304) TEST: Switches: 0x0000[0m
+[0;32mI (648304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (648804) TEST: Switches: 0x0000[0m
+[0;32mI (648804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (649304) TEST: Switches: 0x0000[0m
+[0;32mI (649304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (649804) TEST: Switches: 0x0000[0m
+[0;32mI (649804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (650304) TEST: Switches: 0x0000[0m
+[0;32mI (650304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (650804) TEST: Switches: 0x0000[0m
+[0;32mI (650804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (651304) TEST: Switches: 0x0000[0m
+[0;32mI (651304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (651804) TEST: Switches: 0x0000[0m
+[0;32mI (651804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (652304) TEST: Switches: 0x0000[0m
+[0;32mI (652304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (652804) TEST: Switches: 0x0000[0m
+[0;32mI (652804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (653304) TEST: Switches: 0x0000[0m
+[0;32mI (653304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (653804) TEST: Switches: 0x0000[0m
+[0;32mI (653804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (654304) TEST: Switches: 0x0000[0m
+[0;32mI (654304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (654804) TEST: Switches: 0x0000[0m
+[0;32mI (654804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (655304) TEST: Switches: 0x0000[0m
+[0;32mI (655304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (655804) TEST: Switches: 0x0000[0m
+[0;32mI (655804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (656304) TEST: Switches: 0x0000[0m
+[0;32mI (656304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (656804) TEST: Switches: 0x0000[0m
+[0;32mI (656804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (657304) TEST: Switches: 0x0000[0m
+[0;32mI (657304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (657804) TEST: Switches: 0x0000[0m
+[0;32mI (657804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (658304) TEST: Switches: 0x0000[0m
+[0;32mI (658304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (658804) TEST: Switches: 0x0000[0m
+[0;32mI (658804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (659304) TEST: Switches: 0x0000[0m
+[0;32mI (659304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (659804) TEST: Switches: 0x0000[0m
+[0;32mI (659804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (660304) TEST: Switches: 0x0000[0m
+[0;32mI (660304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (660804) TEST: Switches: 0x0000[0m
+[0;32mI (660804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (661304) TEST: Switches: 0x0000[0m
+[0;32mI (661304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (661804) TEST: Switches: 0x0000[0m
+[0;32mI (661804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (662304) TEST: Switches: 0x0000[0m
+[0;32mI (662304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (662804) TEST: Switches: 0x0000[0m
+[0;32mI (662804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (663304) TEST: Switches: 0x0000[0m
+[0;32mI (663304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (663804) TEST: Switches: 0x0000[0m
+[0;32mI (663804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (664304) TEST: Switches: 0x0000[0m
+[0;32mI (664304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (664804) TEST: Switches: 0x0000[0m
+[0;32mI (664804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (665304) TEST: Switches: 0x0000[0m
+[0;32mI (665304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (665804) TEST: Switches: 0x0000[0m
+[0;32mI (665804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (666304) TEST: Switches: 0x0000[0m
+[0;32mI (666304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (666804) TEST: Switches: 0x0000[0m
+[0;32mI (666804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (667304) TEST: Switches: 0x0000[0m
+[0;32mI (667304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (667804) TEST: Switches: 0x0000[0m
+[0;32mI (667804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (668304) TEST: Switches: 0x0000[0m
+[0;32mI (668304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (668804) TEST: Switches: 0x0000[0m
+[0;32mI (668804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (669304) TEST: Switches: 0x0000[0m
+[0;32mI (669304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (669804) TEST: Switches: 0x0000[0m
+[0;32mI (669804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (670304) TEST: Switches: 0x0000[0m
+[0;32mI (670304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (670804) TEST: Switches: 0x0000[0m
+[0;32mI (670804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (671304) TEST: Switches: 0x0000[0m
+[0;32mI (671304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (671804) TEST: Switches: 0x0000[0m
+[0;32mI (671804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (672304) TEST: Switches: 0x0000[0m
+[0;32mI (672304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (672804) TEST: Switches: 0x0000[0m
+[0;32mI (672804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (673304) TEST: Switches: 0x0000[0m
+[0;32mI (673304) TEST: Writing LEDs: 0x04[0m
+[0;32mI (673804) TEST: Switches: 0x0000[0m
+[0;32mI (673804) TEST: Writing LEDs: 0x08[0m
+[0;32mI (674304) TEST: Switches: 0x0000[0m
+[0;32mI (674304) TEST: Writing LEDs: 0x10[0m
+[0;32mI (674804) TEST: Switches: 0x0000[0m
+[0;32mI (674804) TEST: Writing LEDs: 0x20[0m
+[0;32mI (675304) TEST: Switches: 0x0000[0m
+[0;32mI (675304) TEST: Writing LEDs: 0x40[0m
+[0;32mI (675804) TEST: Switches: 0x0000[0m
+[0;32mI (675804) TEST: Writing LEDs: 0x80[0m
+[0;32mI (676304) TEST: Switches: 0x0000[0m
+[0;32mI (676304) TEST: Writing LEDs: 0x01[0m
+[0;32mI (676804) TEST: Switches: 0x0000[0m
+[0;32mI (676804) TEST: Writing LEDs: 0x02[0m
+[0;32mI (677304) TEST: Switches: 0x0000[0m
+[0;32mI (677304) TEST: Writing LE

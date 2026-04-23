@@ -1,0 +1,1636 @@
+Command: /Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf_monitor.py -p /dev/cu.usbserial-140 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf -m '/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf.py' '-p' '/dev/cu.usbserial-140'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xfa8
+load:0x4086e610,len:0x31a8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  5 2026 11:04:44[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (34) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (71) boot:  3 coredump         Unknown data     01 03 00210000 00010000[0m
+[0;32mI (78) boot:  4 littlefs         Unknown data     01 82 00220000 0007d000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42100020 size=28f74h (167796) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=00038f9c vaddr=40800000 size=0707ch ( 28796) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=f2214h (991764) map[0m
+[0;32mI (320) esp_image: segment 3: paddr=0013223c vaddr=4080707c size=15010h ( 86032) load[0m
+[0;32mI (339) esp_image: segment 4: paddr=00147254 vaddr=4081c090 size=04a18h ( 18968) load[0m
+[0;32mI (351) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (351) boot: Disabling RNG early entropy source...[0m
+[0;32mI (361) cpu_start: Unicore app[0m
+[0;32mI (370) cpu_start: Pro cpu start user code[0m
+[0;32mI (370) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (370) app_init: Application information:[0m
+[0;32mI (370) app_init: Project name:     esp32c6_microros_test[0m
+[0;32mI (375) app_init: App version:      93b14e3-dirty[0m
+[0;32mI (379) app_init: Compile time:     Apr 23 2026 11:07:22[0m
+[0;32mI (384) app_init: ELF file SHA256:  fc1aa157c...[0m
+[0;32mI (389) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (392) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (396) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (400) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (404) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (410) heap_init: At 4082B5F0 len 00051020 (324 KiB): RAM[0m
+[0;32mI (415) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (421) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (427) spi_flash: detected chip: generic[0m
+[0;32mI (430) spi_flash: flash io: dio[0m
+[0;33mW (433) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (447) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (451) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (458) coexist: coex firmware version: 831ec70[0m
+[0;32mI (476) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (477) main_task: Started on CPU0[0m
+[0;32mI (477) main_task: Calling app_main()[0m
+app_main started
+[0;32mI (487) SPI1Manager: SPI1Manager begin()[0m
+[0;32mI (487) SPI1Manager: Using pins MOSI=19 MISO=20 CLK=15 CS=23[0m
+[0;32mI (487) RobotController: Switched to PURPLE_MAMRI[0m
+[0;32mI (487) app_main: Runtime mode: SPI1-only (InputController disabled)[0m
+[0;32mI (497) MicroRosManager: Initializing WiFi transport...[0m
+[0;32mI (497) wifi_station_netif: ESP_WIFI_MODE_STA[0m
+[0;32mI (507) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (507) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (517) wifi:wifi driver task: 40832994, prio:23, stack:6656, core=0[0m
+[0;32mI (527) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (527) wifi:wifi certification version: v7.0[0m
+[0;32mI (527) wifi:config NVS flash: enabled[0m
+[0;32mI (527) wifi:config nano formatting: disabled[0m
+[0;32mI (527) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (537) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (537) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (547) wifi:Init management short buffer num: 32[0m
+[0;32mI (547) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (557) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (557) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (567) wifi:Init static rx buffer num: 10[0m
+[0;32mI (567) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (577) wifi_init: rx ba win: 6[0m
+[0;32mI (577) wifi_init: accept mbox: 6[0m
+[0;32mI (577) wifi_init: tcpip mbox: 32[0m
+[0;32mI (577) wifi_init: udp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp mbox: 6[0m
+[0;32mI (587) wifi_init: tcp tx win: 5760[0m
+[0;32mI (587) wifi_init: tcp rx win: 5760[0m
+[0;32mI (597) wifi_init: tcp mss: 1440[0m
+[0;32mI (597) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (597) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (607) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;33mW (607) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (617) phy_init: phy_version 331,5b89037,Mar  3 2025,16:01:12[0m
+[0;33mW (687) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (687) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (697) wifi:(agc)0x600a7128:0xd2120aba, min.avgNF:0xce->0xd2(dB), RCalCount:0x120, min.RRssi:0xaba(-84.38)[0m
+[0;32mI (707) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (707) wifi:mode : sta (20:6e:f1:18:8c:28)[0m
+[0;32mI (717) wifi:enable tsf[0m
+[0;32mI (717) wifi_station_netif: wifi_init_sta finished.[0m
+[0;32mI (727) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (727) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (737) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (767) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1157) wifi:(assoc)RESP, Extended Capabilities length:1, operating_mode_notification:0[0m
+[0;32mI (1157) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (1167) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1167) wifi:(trc)phytype:CBW20-SGI, snr:53, maxRate:144, highestRateIdx:0[0m
+[0;33mW (1177) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (1187) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:53, ampduState:wait operational[0m
+[0;32mI (1197) wifi:ifidx:0, rssi:-42, nf:-95, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (1207) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:4(2 us)[0m
+[0;32mI (1227) wifi:connected with MyNewHotspot, aid = 6, channel 6, BW20, bssid = c2:de:de:da:8c:bb[0m
+[0;32mI (1227) wifi:security: WPA2-PSK, phy:bgn, rssi:-42, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (1227) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1237) wifi:pm start, type:1, aid:0x6, trans-BSSID:c2:de:de:da:8c:bb, BSSID[5]:0xbb, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (1247) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1257) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1257) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1277) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1287) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1297) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (1307) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1307) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1407) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (1407) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100bb8c, TALO:0xdadedec2, (ssn:0, win:64, cur_ssn:0), CONF:0xc0000005[0m
+[0;32mI (1417) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (2487) esp_netif_handlers: sta ip: 192.168.29.75, mask: 255.255.255.0, gw: 192.168.29.214[0m
+[0;32mI (2487) wifi_station_netif: got ip:192.168.29.75[0m
+[0;32mI (2487) wifi_station_netif: connected to ap SSID:MyNewHotspot password:12345678[0m
+[0;32mI (2487) MicroRosManager: Waiting before micro-ROS init...[0m
+[0;32mI (5837) MicroRosManager: micro-ROS entities created[0m
+[0;32mI (5837) MicroRosManager: micro-ROS base ready[0m
+[0;32mI (5837) app_main: Application initialized successfully[0m
+[0;32mI (7337) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (7337) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (7337) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (7337) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (7347) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (7357) RobotController: valve_state=0x0000[0m
+[0;32mI (8857) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (8857) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (8857) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (8857) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (8867) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (8877) RobotController: valve_state=0x0000[0m
+[0;32mI (10377) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (10377) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (10377) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (10377) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (10387) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (10397) RobotController: valve_state=0x0000[0m
+[0;32mI (11897) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (11897) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (11897) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (11897) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (11907) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (11917) RobotController: valve_state=0x0000[0m
+[0;32mI (13417) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (13417) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (13417) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (13417) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (13427) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (13437) RobotController: valve_state=0x0000[0m
+[0;32mI (14937) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (14937) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (14937) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (14937) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (14947) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (14957) RobotController: valve_state=0x0000[0m
+[0;32mI (16457) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (16457) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (16457) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (16457) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (16467) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (16477) RobotController: valve_state=0x0000[0m
+[0;32mI (17977) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (17977) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (17977) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (17977) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (17987) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (17997) RobotController: valve_state=0x0000[0m
+[0;32mI (19497) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (19497) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (19497) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (19497) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (19507) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (19517) RobotController: valve_state=0x0000[0m
+[0;32mI (21017) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (21017) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (21017) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (21027) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (21027) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (21037) RobotController: valve_state=0x0000[0m
+[0;32mI (22537) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (22537) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (22537) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (22537) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (22547) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (22557) RobotController: valve_state=0x0000[0m
+[0;32mI (24057) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (24057) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (24057) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (24057) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (24067) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (24077) RobotController: valve_state=0x0000[0m
+[0;32mI (25577) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (25577) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (25577) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (25577) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (25587) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (25597) RobotController: valve_state=0x0000[0m
+[0;32mI (27097) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (27097) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (27097) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (27097) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (27107) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (27117) RobotController: valve_state=0x0000[0m
+[0;32mI (28617) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (28617) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (28617) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (28627) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (28627) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (28637) RobotController: valve_state=0x0000[0m
+[0;32mI (30137) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (30137) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (30137) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (30137) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (30147) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (30157) RobotController: valve_state=0x0000[0m
+[0;32mI (31657) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (31657) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (31657) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (31657) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (31667) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (31677) RobotController: valve_state=0x0000[0m
+[0;32mI (33177) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (33177) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (33177) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (33177) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (33187) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (33197) RobotController: valve_state=0x0000[0m
+[0;32mI (34697) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (34697) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (34697) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (34697) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (34707) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (34717) RobotController: valve_state=0x0000[0m
+[0;32mI (36217) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (36217) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (36217) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (36217) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (36227) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (36237) RobotController: valve_state=0x0000[0m
+[0;32mI (37737) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (37737) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (37737) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (37737) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (37747) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (37757) RobotController: valve_state=0x0000[0m
+[0;32mI (39257) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (39257) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (39257) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (39267) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (39267) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (39277) RobotController: valve_state=0x0000[0m
+[0;32mI (40777) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (40777) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (40777) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (40777) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (40787) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (40797) RobotController: valve_state=0x0000[0m
+[0;32mI (42297) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (42297) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (42297) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (42297) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (42307) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (42317) RobotController: valve_state=0x0000[0m
+[0;32mI (43817) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (43817) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (43817) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (43817) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (43827) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (43837) RobotController: valve_state=0x0000[0m
+[0;32mI (45337) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (45337) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (45337) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (45337) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (45347) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (45357) RobotController: valve_state=0x0000[0m
+[0;32mI (46857) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (46857) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (46857) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (46857) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (46867) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (46877) RobotController: valve_state=0x0000[0m
+[0;32mI (48377) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (48377) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (48377) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (48377) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (48387) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (48397) RobotController: valve_state=0x0000[0m
+[0;32mI (49897) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (49897) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (49897) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (49897) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (49907) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (49917) RobotController: valve_state=0x0000[0m
+[0;32mI (51017) wifi:bcn_timeout,ap_probe_send_start[0m
+[0;32mI (51417) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (51417) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (51417) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (51427) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (51427) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (51437) RobotController: valve_state=0x0000[0m
+[0;32mI (52937) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (52937) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (52937) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (52947) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (52947) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (52957) RobotController: valve_state=0x0000[0m
+[0;32mI (53527) wifi:ap_probe_send over, reset wifi status to disassoc[0m
+[0;32mI (53527) wifi:state: run -> init (0xc800)[0m
+[0;32mI (53537) wifi:pm stop, total sleep time: 35795900 us / 52287703 us[0m
+
+[0;32mI (53537) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (53537) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (53537) wifi_station_netif: retry to connect to the AP[0m
+[0;32mI (53547) wifi_station_netif: connect to the AP fail[0m
+[0;32mI (53667) wifi:new:<1,0>, old:<6,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (53667) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (53677) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (53687) wifi:state: auth -> init (0x1c0)[0m
+[0;32mI (53687) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (53697) wifi_station_netif: retry to connect to the AP[0m
+[0;32mI (53697) wifi_station_netif: connect to the AP fail[0m
+[0;32mI (54487) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (54487) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (54487) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (54487) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (54497) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (54507) RobotController: valve_state=0x0000[0m
+[0;32mI (56007) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (56007) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (56007) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (56007) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (56017) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (56027) RobotController: valve_state=0x0000[0m
+[0;32mI (56107) wifi_station_netif: retry to connect to the AP[0m
+[0;32mI (56107) wifi_station_netif: connect to the AP fail[0m
+[0;32mI (56237) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (56237) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (56247) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (56257) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (56317) wifi:(assoc)RESP, Extended Capabilities length:1, operating_mode_notification:0[0m
+[0;32mI (56317) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (56317) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (56327) wifi:(trc)phytype:CBW20-SGI, snr:61, maxRate:144, highestRateIdx:0[0m
+[0;33mW (56327) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (56337) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:61, ampduState:wait operational[0m
+[0;32mI (56347) wifi:ifidx:0, rssi:-22, nf:-83, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (56367) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:4(2 us)[0m
+[0;32mI (56387) wifi:connected with MyNewHotspot, aid = 8, channel 1, BW20, bssid = c2:de:de:da:8c:bb[0m
+[0;32mI (56387) wifi:security: WPA2-PSK, phy:bgn, rssi:-22, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (56407) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (56407) wifi:pm start, type:1, aid:0x8, trans-BSSID:c2:de:de:da:8c:bb, BSSID[5]:0xbb, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (56407) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (56417) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (56427) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:4, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (56437) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:5, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (56447) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:6, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (56467) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (56467) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (56477) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;33mW (56487) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100bb8c, TALO:0xdadedec2, (ssn:0, win:64, cur_ssn:0), CONF:0xc0000005[0m
+[0;32mI (56497) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (56507) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (57567) esp_netif_handlers: sta ip: 192.168.29.75, mask: 255.255.255.0, gw: 192.168.29.214[0m
+[0;32mI (57567) wifi_station_netif: got ip:192.168.29.75[0m
+[0;32mI (57687) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (57687) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (57687) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (57687) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (57697) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (57707) RobotController: valve_state=0x0000[0m
+[0;32mI (59207) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (59207) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (59207) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (59207) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (59217) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (59227) RobotController: valve_state=0x0000[0m
+[0;32mI (60727) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (60727) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (60727) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (60727) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (60737) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (60747) RobotController: valve_state=0x0000[0m
+[0;32mI (62247) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (62247) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (62247) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (62247) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (62257) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (62267) RobotController: valve_state=0x0000[0m
+[0;32mI (63767) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (63767) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (63767) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (63767) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (63777) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (63787) RobotController: valve_state=0x0000[0m
+[0;32mI (65287) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (65287) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (65287) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (65287) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (65297) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (65307) RobotController: valve_state=0x0000[0m
+[0;32mI (66807) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (66807) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (66807) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (66807) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (66817) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (66827) RobotController: valve_state=0x0000[0m
+[0;32mI (68327) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (68327) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (68327) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (68327) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (68337) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (68347) RobotController: valve_state=0x0000[0m
+[0;32mI (69847) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (69847) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (69847) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (69847) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (69857) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (69867) RobotController: valve_state=0x0000[0m
+jointPathCallback called
+Received joint path: 22 waypoints, 5 dof
+Consuming path with 22 waypoints and 5 dof
+[0;32mI (71237) app_main: Received path with 22 waypoints[0m
+[0;32mI (71237) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (71247) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (71247) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (71257) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (71267) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (71297) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (71297) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (71297) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (71297) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (71307) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (71347) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (71347) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (71347) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (71347) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (71357) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (71397) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (71397) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (71397) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (71397) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (71407) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (71447) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (71447) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (71447) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (71447) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (71457) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (71467) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (71467) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (71477) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (71477) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (71487) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (71487) RobotController: valve_state=0x0000[0m
+[0;32mI (71527) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (71527) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (71527) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (71527) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (71537) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (71577) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (71577) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (71577) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (71577) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (71587) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (71627) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (71627) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (71627) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (71627) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (71637) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (71677) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (71677) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (71677) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (71677) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (71687) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (71727) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (71727) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (71727) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (71727) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (71737) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (71777) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (71777) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (71777) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (71777) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (71787) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (71827) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (71827) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (71827) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (71827) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (71837) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (71877) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (71877) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (71877) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (71877) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (71887) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (71927) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (71927) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (71927) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (71927) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (71937) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (71977) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (71977) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (71977) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (71977) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (71987) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (72027) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (72027) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (72027) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (72027) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (72037) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (72077) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (72077) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (72077) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (72077) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (72087) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (72127) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (72127) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (72127) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (72127) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (72137) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (72177) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (72177) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (72177) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (72177) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (72187) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (72227) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (72227) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (72227) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (72227) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (72237) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (72237) app_main: Advancing from waypoint 1 / 22[0m
+[0;32mI (72277) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (72277) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (72277) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (72277) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (72287) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (72327) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (72327) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (72327) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (72327) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (72337) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (72377) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (72377) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (72377) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (72377) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (72387) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (72427) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (72427) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (72427) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (72427) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (72437) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (72477) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (72477) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (72477) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (72477) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (72487) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (72527) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (72527) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (72527) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (72527) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (72537) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (72577) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (72577) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (72577) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (72577) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (72587) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (72627) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (72627) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (72627) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (72627) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (72637) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (72677) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (72677) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (72677) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (72677) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (72687) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (72727) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (72727) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (72727) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (72727) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (72737) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (72777) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (72777) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (72777) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (72777) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (72787) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (72827) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (72827) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (72827) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (72827) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (72837) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (72877) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (72877) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (72877) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (72877) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (72887) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (72927) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (72927) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (72927) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (72927) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (72937) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (72977) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (72977) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (72977) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (72977) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (72987) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (73027) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (73027) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (73027) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (73027) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (73037) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (73077) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (73077) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (73077) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (73077) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (73087) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (73127) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (73127) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (73127) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (73127) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (73137) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (73177) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (73177) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (73177) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (73177) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (73187) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (73227) RobotController: target joint[0]: rad=0.066457 -> steps=55[0m
+[0;32mI (73227) RobotController: target joint[1]: rad=0.042611 -> steps=22[0m
+[0;32mI (73227) RobotController: target joint[2]: rad=0.086745 -> steps=22[0m
+[0;32mI (73227) RobotController: target joint[3]: rad=0.099348 -> steps=26[0m
+[0;32mI (73237) RobotController: target joint[4]: rad=-0.080094 -> steps=-29[0m
+[0;32mI (73237) app_main: Advancing from waypoint 2 / 22[0m
+[0;32mI (73277) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (73277) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (73277) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (73277) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (73287) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (73327) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (73327) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (73327) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (73327) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (73337) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (73377) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (73377) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (73377) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (73377) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (73387) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (73427) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (73427) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (73427) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (73427) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (73437) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (73477) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (73477) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (73477) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (73477) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (73487) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (73527) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (73527) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (73527) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (73527) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (73537) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (73577) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (73577) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (73577) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (73577) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (73587) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (73627) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (73627) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (73627) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (73627) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (73637) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (73677) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (73677) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (73677) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (73677) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (73687) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (73727) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (73727) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (73727) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (73727) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (73737) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (73777) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (73777) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (73777) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (73777) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (73787) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (73827) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (73827) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (73827) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (73827) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (73837) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (73877) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (73877) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (73877) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (73877) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (73887) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (73927) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (73927) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (73927) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (73927) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (73937) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (73977) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (73977) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (73977) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (73977) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (73987) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (73997) RobotController: joint[0] current_steps=34 target_steps=110[0m
+[0;32mI (73997) RobotController: joint[1] current_steps=25 target_steps=44[0m
+[0;32mI (74007) RobotController: joint[2] current_steps=26 target_steps=45[0m
+[0;32mI (74007) RobotController: joint[3] current_steps=29 target_steps=51[0m
+[0;32mI (74017) RobotController: joint[4] current_steps=-33 target_steps=-59[0m
+[0;32mI (74027) RobotController: valve_state=0x03fe[0m
+[0;32mI (74057) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (74057) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (74057) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (74057) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (74067) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (74107) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (74107) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (74107) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (74107) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (74117) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (74157) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (74157) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (74157) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (74157) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (74167) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (74207) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (74207) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (74207) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (74207) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (74217) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (74257) RobotController: target joint[0]: rad=0.132914 -> steps=110[0m
+[0;32mI (74257) RobotController: target joint[1]: rad=0.085222 -> steps=44[0m
+[0;32mI (74257) RobotController: target joint[2]: rad=0.173489 -> steps=45[0m
+[0;32mI (74257) RobotController: target joint[3]: rad=0.198697 -> steps=51[0m
+[0;32mI (74267) RobotController: target joint[4]: rad=-0.160188 -> steps=-59[0m
+[0;32mI (74267) app_main: Advancing from waypoint 3 / 22[0m
+[0;32mI (74307) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (74307) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (74307) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (74307) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (74317) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (74357) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (74357) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (74357) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (74357) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (74367) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (74407) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (74407) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (74407) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (74407) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (74417) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (74457) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (74457) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (74457) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (74457) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (74467) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (74507) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (74507) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (74507) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (74507) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (74517) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (74557) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (74557) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (74557) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (74557) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (74567) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (74607) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (74607) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (74607) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (74607) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (74617) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (74657) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (74657) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (74657) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (74657) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (74667) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (74707) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (74707) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (74707) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (74707) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (74717) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (74757) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (74757) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (74757) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (74757) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (74767) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (74807) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (74807) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (74807) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (74807) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (74817) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (74857) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (74857) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (74857) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (74857) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (74867) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (74907) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (74907) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (74907) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (74907) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (74917) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (74957) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (74957) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (74957) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (74957) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (74967) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (75007) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (75007) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (75007) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (75007) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (75017) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (75057) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (75057) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (75057) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (75057) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (75067) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (75107) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (75107) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (75107) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (75107) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (75117) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (75157) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (75157) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (75157) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (75157) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (75167) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (75207) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (75207) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (75207) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (75207) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (75217) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (75257) RobotController: target joint[0]: rad=0.199371 -> steps=164[0m
+[0;32mI (75257) RobotController: target joint[1]: rad=0.127833 -> steps=66[0m
+[0;32mI (75257) RobotController: target joint[2]: rad=0.260234 -> steps=67[0m
+[0;32mI (75257) RobotController: target joint[3]: rad=0.298045 -> steps=77[0m
+[0;32mI (75267) RobotController: target joint[4]: rad=-0.240282 -> steps=-88[0m
+[0;32mI (75267) app_main: Advancing from waypoint 4 / 22[0m
+[0;32mI (75307) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (75307) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (75307) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (75307) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (75317) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (75357) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (75357) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (75357) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (75357) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (75367) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (75407) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (75407) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (75407) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (75407) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (75417) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (75457) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (75457) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (75457) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (75457) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (75467) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (75507) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (75507) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (75507) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (75507) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (75517) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (75557) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (75557) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (75557) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (75557) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (75567) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (75607) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (75607) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (75607) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (75607) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (75617) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (75657) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (75657) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (75657) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (75657) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (75667) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (75707) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (75707) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (75707) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (75707) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (75717) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (75757) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (75757) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (75757) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (75757) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (75767) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (75807) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (75807) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (75807) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (75807) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (75817) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (75857) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (75857) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (75857) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (75857) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (75867) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (75907) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (75907) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (75907) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (75907) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (75917) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (75957) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (75957) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (75957) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (75957) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (75967) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (76007) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (76007) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (76007) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (76007) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (76017) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (76057) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (76057) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (76057) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (76057) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (76067) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (76107) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (76107) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (76107) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (76107) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (76117) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (76157) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (76157) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (76157) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (76157) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (76167) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (76207) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (76207) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (76207) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (76207) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (76217) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (76257) RobotController: target joint[0]: rad=0.265828 -> steps=219[0m
+[0;32mI (76257) RobotController: target joint[1]: rad=0.170443 -> steps=88[0m
+[0;32mI (76257) RobotController: target joint[2]: rad=0.346979 -> steps=89[0m
+[0;32mI (76257) RobotController: target joint[3]: rad=0.397393 -> steps=102[0m
+[0;32mI (76267) RobotController: target joint[4]: rad=-0.320376 -> steps=-117[0m
+[0;32mI (76277) app_main: Advancing from waypoint 5 / 22[0m
+[0;32mI (76307) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (76307) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (76307) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (76307) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (76317) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (76357) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (76357) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (76357) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (76357) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (76367) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (76407) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (76407) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (76407) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (76407) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (76417) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (76457) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (76457) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (76457) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (76457) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (76467) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (76507) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (76507) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (76507) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (76507) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (76517) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (76527) RobotController: joint[0] current_steps=84 target_steps=246[0m
+[0;32mI (76527) RobotController: joint[1] current_steps=58 target_steps=99[0m
+[0;32mI (76537) RobotController: joint[2] current_steps=59 target_steps=101[0m
+[0;32mI (76537) RobotController: joint[3] current_steps=68 target_steps=119[0m
+[0;32mI (76547) RobotController: joint[4] current_steps=-77 target_steps=-135[0m
+[0;32mI (76557) RobotController: valve_state=0x0349[0m
+[0;32mI (76587) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (76587) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (76587) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (76587) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (76597) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (76637) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (76637) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (76637) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (76637) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (76647) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (76687) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (76687) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (76687) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (76687) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (76697) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (76737) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (76737) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (76737) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (76737) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (76747) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (76787) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (76787) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (76787) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (76787) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (76797) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (76837) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (76837) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (76837) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (76837) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (76847) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (76887) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (76887) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (76887) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (76887) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (76897) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (76937) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (76937) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (76937) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (76937) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (76947) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (76987) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (76987) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (76987) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (76987) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (76997) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (77037) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (77037) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (77037) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (77037) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (77047) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (77087) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (77087) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (77087) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (77087) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (77097) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (77137) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (77137) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (77137) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (77137) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (77147) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (77187) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (77187) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (77187) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (77187) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (77197) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (77237) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (77237) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (77237) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (77237) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (77247) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (77287) RobotController: target joint[0]: rad=0.298166 -> steps=246[0m
+[0;32mI (77287) RobotController: target joint[1]: rad=0.191616 -> steps=99[0m
+[0;32mI (77287) RobotController: target joint[2]: rad=0.391346 -> steps=101[0m
+[0;32mI (77287) RobotController: target joint[3]: rad=0.462840 -> steps=119[0m
+[0;32mI (77297) RobotController: target joint[4]: rad=-0.367855 -> steps=-135[0m
+[0;32mI (77307) app_main: Advancing from waypoint 6 / 22[0m
+[0;32mI (77337) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (77337) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (77337) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (77337) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (77347) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (77387) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (77387) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (77387) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (77387) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (77397) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (77437) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (77437) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (77437) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (77437) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (77447) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (77487) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (77487) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (77487) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (77487) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (77497) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (77537) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (77537) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (77537) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (77537) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (77547) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (77587) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (77587) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (77587) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (77587) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (77597) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (77637) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (77637) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (77637) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (77637) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (77647) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (77687) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (77687) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (77687) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (77687) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (77697) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (77737) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (77737) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (77737) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (77737) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (77747) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (77787) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (77787) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (77787) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (77787) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (77797) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (77837) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (77837) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (77837) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (77837) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (77847) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (77887) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (77887) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (77887) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (77887) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (77897) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (77937) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (77937) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (77937) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (77937) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (77947) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (77987) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (77987) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (77987) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (77987) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (77997) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (78037) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (78037) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (78037) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (78037) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (78047) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (78087) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (78087) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (78087) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (78087) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (78097) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (78137) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (78137) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (78137) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (78137) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (78147) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (78187) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (78187) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (78187) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (78187) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (78197) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (78237) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (78237) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (78237) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (78237) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (78247) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (78287) RobotController: target joint[0]: rad=0.330503 -> steps=273[0m
+[0;32mI (78287) RobotController: target joint[1]: rad=0.212789 -> steps=110[0m
+[0;32mI (78287) RobotController: target joint[2]: rad=0.435712 -> steps=112[0m
+[0;32mI (78287) RobotController: target joint[3]: rad=0.528287 -> steps=136[0m
+[0;32mI (78297) RobotController: target joint[4]: rad=-0.415334 -> steps=-152[0m
+[0;32mI (78307) app_main: Advancing from waypoint 7 / 22[0m
+[0;32mI (78337) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (78337) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (78337) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (78337) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (78347) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (78387) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (78387) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (78387) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (78387) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (78397) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (78437) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (78437) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (78437) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (78437) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (78447) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (78487) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (78487) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (78487) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (78487) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (78497) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (78537) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (78537) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (78537) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (78537) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (78547) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (78587) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (78587) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (78587) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (78587) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (78597) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (78637) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (78637) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (78637) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (78637) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (78647) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (78687) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (78687) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (78687) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (78687) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (78697) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (78737) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (78737) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (78737) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (78737) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (78747) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (78787) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (78787) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (78787) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (78787) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (78797) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (78837) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (78837) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (78837) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (78837) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (78847) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (78887) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (78887) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (78887) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (78887) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (78897) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (78937) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (78937) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (78937) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (78937) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (78947) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (78987) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (78987) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (78987) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (78987) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (78997) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (79037) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (79037) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (79037) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (79037) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (79047) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (79057) RobotController: joint[0] current_steps=134 target_steps=299[0m
+[0;32mI (79057) RobotController: joint[1] current_steps=87 target_steps=121[0m
+[0;32mI (79067) RobotController: joint[2] current_steps=89 target_steps=124[0m
+[0;32mI (79067) RobotController: joint[3] current_steps=106 target_steps=153[0m
+[0;32mI (79077) RobotController: joint[4] current_steps=-119 target_steps=-170[0m
+[0;32mI (79087) RobotController: valve_state=0x00d2[0m
+[0;32mI (79117) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (79117) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (79117) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (79117) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (79127) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (79167) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (79167) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (79167) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (79167) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (79177) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (79217) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (79217) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (79217) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (79217) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (79227) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (79267) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (79267) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (79267) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (79267) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (79277) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (79317) RobotController: target joint[0]: rad=0.362841 -> steps=299[0m
+[0;32mI (79317) RobotController: target joint[1]: rad=0.233962 -> steps=121[0m
+[0;32mI (79317) RobotController: target joint[2]: rad=0.480079 -> steps=124[0m
+[0;32mI (79317) RobotController: target joint[3]: rad=0.593734 -> steps=153[0m
+[0;32mI (79327) RobotController: target joint[4]: rad=-0.462813 -> steps=-170[0m
+[0;32mI (79337) app_main: Advancing from waypoint 8 / 22[0m
+[0;32mI (79367) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (79367) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (79367) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (79367) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (79377) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (79417) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (79417) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (79417) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (79417) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (79427) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (79467) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (79467) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (79467) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (79467) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (79477) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (79517) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (79517) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (79517) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (79517) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (79527) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (79567) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (79567) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (79567) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (79567) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (79577) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (79617) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (79617) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (79617) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (79617) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (79627) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (79667) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (79667) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (79667) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (79667) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (79677) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (79717) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (79717) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (79717) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (79717) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (79727) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (79767) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (79767) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (79767) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (79767) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (79777) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (79817) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (79817) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (79817) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (79817) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (79827) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (79867) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (79867) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (79867) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (79867) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (79877) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (79917) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (79917) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (79917) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (79917) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (79927) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (79967) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (79967) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (79967) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (79967) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (79977) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (80017) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (80017) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (80017) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (80017) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (80027) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (80067) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (80067) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (80067) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (80067) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (80077) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (80117) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (80117) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (80117) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (80117) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (80127) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (80167) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (80167) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (80167) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (80167) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (80177) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (80217) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (80217) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (80217) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (80217) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (80227) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (80267) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (80267) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (80267) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (80267) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (80277) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (80317) RobotController: target joint[0]: rad=0.395179 -> steps=326[0m
+[0;32mI (80317) RobotController: target joint[1]: rad=0.255135 -> steps=132[0m
+[0;32mI (80317) RobotController: target joint[2]: rad=0.524446 -> steps=135[0m
+[0;32mI (80317) RobotController: target joint[3]: rad=0.659181 -> steps=170[0m
+[0;32mI (80327) RobotController: target joint[4]: rad=-0.510292 -> steps=-187[0m
+[0;32mI (80337) app_main: Advancing from waypoint 9 / 22[0m
+[0;32mI (80367) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (80367) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (80367) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (80367) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (80377) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (80417) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (80417) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (80417) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (80417) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (80427) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (80467) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (80467) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (80467) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (80467) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (80477) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (80517) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (80517) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (80517) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (80517) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (80527) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (80567) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (80567) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (80567) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (80567) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (80577) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (80617) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (80617) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (80617) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (80617) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (80627) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (80667) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (80667) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (80667) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (80667) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (80677) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (80717) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (80717) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (80717) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (80717) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (80727) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (80767) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (80767) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (80767) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (80767) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (80777) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (80817) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (80817) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (80817) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (80817) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (80827) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (80867) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (80867) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (80867) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (80867) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (80877) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (80917) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (80917) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (80917) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (80917) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (80927) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (80967) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (80967) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (80967) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (80967) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (80977) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (81017) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (81017) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (81017) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (81017) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (81027) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (81067) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (81067) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (81067) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (81067) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (81077) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (81117) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (81117) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (81117) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (81117) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (81127) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (81167) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (81167) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (81167) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (81167) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (81177) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (81217) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (81217) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (81217) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (81217) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (81227) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (81267) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (81267) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (81267) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (81267) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (81277) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (81317) RobotController: target joint[0]: rad=0.427517 -> steps=353[0m
+[0;32mI (81317) RobotController: target joint[1]: rad=0.276309 -> steps=142[0m
+[0;32mI (81317) RobotController: target joint[2]: rad=0.568813 -> steps=147[0m
+[0;32mI (81317) RobotController: target joint[3]: rad=0.724628 -> steps=187[0m
+[0;32mI (81327) RobotController: target joint[4]: rad=-0.557770 -> steps=-205[0m
+[0;32mI (81337) app_main: Advancing from waypoint 10 / 22[0m
+[0;32mI (81367) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (81367) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (81367) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (81367) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (81377) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (81417) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (81417) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (81417) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (81417) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (81427) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (81467) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (81467) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (81467) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (81467) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (81477) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (81517) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (81517) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (81517) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (81517) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (81527) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (81567) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (81567) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (81567) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (81567) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (81577) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (81587) RobotController: joint[0] current_steps=184 target_steps=379[0m
+[0;32mI (81587) RobotController: joint[1] current_steps=113 target_steps=153[0m
+[0;32mI (81597) RobotController: joint[2] current_steps=116 target_steps=158[0m
+[0;32mI (81597) RobotController: joint[3] current_steps=143 target_steps=204[0m
+[0;32mI (81607) RobotController: joint[4] current_steps=-159 target_steps=-222[0m
+[0;32mI (81617) RobotController: valve_state=0x0105[0m
+[0;32mI (81647) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (81647) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (81647) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (81647) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (81657) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (81697) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (81697) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (81697) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (81697) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (81707) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (81747) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (81747) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (81747) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (81747) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (81757) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (81797) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (81797) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (81797) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (81797) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (81807) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (81847) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (81847) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (81847) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (81847) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (81857) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (81897) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (81897) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (81897) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (81897) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (81907) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (81947) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (81947) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (81947) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (81947) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (81957) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (81997) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (81997) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (81997) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (81997) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (82007) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (82047) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (82047) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (82047) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (82047) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (82057) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (82097) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (82097) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (82097) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (82097) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (82107) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (82147) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (82147) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (82147) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (82147) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (82157) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (82197) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (82197) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (82197) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (82197) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (82207) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (82247) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (82247) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (82247) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (82247) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (82257) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (82297) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (82297) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (82297) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (82297) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (82307) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (82347) RobotController: target joint[0]: rad=0.459855 -> steps=379[0m
+[0;32mI (82347) RobotController: target joint[1]: rad=0.297482 -> steps=153[0m
+[0;32mI (82347) RobotController: target joint[2]: rad=0.613180 -> steps=158[0m
+[0;32mI (82347) RobotController: target joint[3]: rad=0.790075 -> steps=204[0m
+[0;32mI (82357) RobotController: target joint[4]: rad=-0.605249 -> steps=-222[0m
+[0;32mI (82367) app_main: Advancing from waypoint 11 / 22[0m
+[0;32mI (82397) RobotController: target joint[0]: rad=0.492192 -> steps=406[0m
+[0;32mI (82397) RobotController: target joint[1]: rad=0.318655 -> steps=164[0m
+[0;32mI (82397) RobotController: target joint[2]: rad=0.657547 -> steps=170[0m
+[0;32mI (82397) RobotController: target joint[3]: rad=0.855522 -> steps=221[0m
+[0;32mI (82407) RobotController: target joint[4]: rad=-0.652728 -> steps=-239[0m
+[0;32mI (82447) RobotController: target joint[0]: rad=0.492192 -> steps=406[0m
+[0;32mI (82447) RobotController: target joint[1]: rad=0.318655 -> steps=164[0m
+[0;32mI (82447) RobotController: target joint[2]: rad=0.657547 -> steps=170[0m
+[0;32mI (82447) RobotController: target joint[3]: rad=0.855522 -> steps=221[0m
+[0;32mI (82457) RobotController: target joint[4]: rad=-0.652728 -> steps=-239[0m
+[0;32mI (82497) RobotController: target joint[0]: rad=0.492192 -> steps=406[0m
+[0;32mI (82497) RobotController: target joint[1]: rad=0.318655 -> steps=164[0m
+[0;32mI (82497) RobotController: target joint[2]: rad=0.657547 -> steps=170[0m
+[0;32mI (82497) RobotController: target joint[3]: rad=0.855522 -> steps=221[0m
+[0;32mI (82507) RobotController: target joint[4]: rad=-0.652728 -> steps=-239[0m
+[0;32mI (82547) RobotController: target joint[0]: rad=0.492192 -> steps=406[0m
+[0;32mI (82547) RobotController: target joint[1]: rad=0.318655 -> steps=164[0m
+[0;32mI (82547) RobotController: target joint[2]: rad=0.657547 -> steps=170[0m
+[0;32mI (82547) RobotController: target joint[3]: rad=0.855522 -> steps=221[0m
+[0;32mI (82557) RobotController: target joint[4]: rad=-0.652728 -> steps=-239[0m
+[0;32mI (82597) RobotController: target joint[0]: rad=0.492192 -> steps=406[0m
+[0;32mI (82597) RobotController: target joint[1]: rad=0.318655 -> steps=164[0m
+[0;32mI (82597) RobotController: target joint[2]: rad=0.657547 -> steps=170[0m
+[0;32mI (82597) RobotController: target joint[3]: rad=0.855522 -> steps=221[0m
+[0;32mI (82607) RobotController: target joint[4]: rad=-0.652728 -> steps=-239[0m
+[0;32mI (82647) RobotController: target joint[0]: rad=0.492192 -> steps=406[0m
+[0;32mI (82647) RobotController: target joint[1]: rad=0.318655 -> steps=164[0m
+[0;32mI (82647) RobotController: target joint[2]: rad=0.657547 -> steps=170[0m
+[0;32mI (82647) RobotController: target joint[3]: rad=0.855522 -> steps=221[0m
+[0;32mI (82657) RobotController: target joint[4]: rad=-0.652728 -> steps=-239[0m
+[0;32mI (82697) RobotController: target joint[0]: rad=0.492192 -> steps=406[0m
+[0;32mI (82697) RobotController: target joint[1]: rad=0.318655 -> steps=164[0m
+[0;32mI (82697) RobotController: target joint[2]: rad=0.657547 -> steps=170[0m
+[0;32mI (82697) RobotController: target joint[3]: rad=0.855522 -> steps=221[0m
+[0;32mI (82707) RobotController: target joint[4]: rad=-0.652728 -> steps=-239[0m
+[0;32mI (82747) RobotController: target joint[0]: rad=0.492192 -> steps=406[0m
+[0;32mI (82747) RobotController: target joint[1]: rad=0.318655 -> steps=164[0m
+[0;32mI (82747) RobotController: target joint[2]: rad=0.657547 -> steps=170[0m
+[0;32mI (82747) RobotController: target joint[3]: rad=0.855522 -> steps=221[0m
+[0;32mI (82757) RobotController: target joint[4]: rad=-0.652728 -> steps=-239[0m
+[0;32mI (82797) RobotController: target joint[0]: rad=0.492192 -> steps=406[0m
+[0;32mI (82797) RobotController: target joint[1]: rad=0.318655 -> steps=164[0m
+[0;32mI (82797) RobotController: target joint[2]: rad=0.657547 -> steps=170[0m
+[0;32mI (82797) RobotController: target joint[3]: rad=0.855522 -> steps=221[0m
+[0;32mI (82807) RobotController: target joint[4]: rad=-0.652728 -> steps=-239[0m
+[0;32mI (82847) RobotController: target joint[0]: rad=0.492192 -> steps=406[0m
+[0;32mI (82847) RobotController: target joint[1]: rad=0.318655 -> steps=164[0m
+[0;32mI (82847) RobotController: target joint[2]: rad=0.657547 -> steps=170[0m
+[0;32mI (82847) RobotController: target joint[3]: rad=0.855522 -> steps=221[0m
+[0;32mI (82857) RobotController: target joint[4]: rad=-0.652728 -> steps=-239[0m
+[0;32mI (82897) RobotController: target joint[0]: rad=0.492192 -> steps=406[0m
+[0;32mI (82897) RobotController: target joint[1]: rad=0.318655 -> steps=164[0m
+[0;32mI (82897) RobotController: target joint[2]: rad=0.657547 -> steps=170[0m
+[0;32mI (8289

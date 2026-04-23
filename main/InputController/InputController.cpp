@@ -6,6 +6,8 @@
 #include "esp_log.h"
 #include "esp_err.h"
 #include "driver/gpio.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 #include "pinDefinitions.h"
 
 #include <cstdio>
@@ -45,7 +47,7 @@ void InputController::begin() {
     // Screen / font/display init currently stubbed in CanvasManager
     _canvasManager.initScreen();
 
-    // Emergency button input (active-low by default for current wiring).
+    // Emergency button input (active-high by default for current wiring).
     gpio_config_t emergencyConf = {};
     emergencyConf.pin_bit_mask = (1ULL << EMERGENCY_PIN);
     emergencyConf.mode = GPIO_MODE_INPUT;
@@ -68,33 +70,22 @@ void InputController::begin() {
     // I2C
     // ============================================================
     #if ESP_ATTACHED
-        // For now we only care about pressure sensors.
-        // Ferris wheel initialization is disabled until AS5600 hardware is available.
-        /*
-        if(_i2cManager.begin(NUM_OF_FERRISWHEELS_ON_BOOT, 0)){
+        if (_i2cManager.begin(NUM_OF_FERRISWHEELS_ON_BOOT, 0)) {
             _ferrisWheelsReady = true;
-            ESP_LOGI(TAG, "Ferris wheels ready.");
+            ESP_LOGI(TAG, "I2CManager initialized. Ferris wheels configured: %u",
+                     static_cast<unsigned>(_i2cManager.getNumOfFerrisWheels()));
 
-            for(int i = 0; i < _i2cManager.getNumOfFerrisWheels(); i++){
+            for (uint8_t i = 0; i < _i2cManager.getNumOfFerrisWheels(); i++) {
                 float angle = _i2cManager.readFerrisWheelAngle(i);
                 (void)angle;
             }
         } else {
-            ESP_LOGW(TAG, "Ferris wheels not ready.");
+            ESP_LOGW(TAG, "I2CManager init failed. Ferris wheels not ready.");
             _ferrisWheelsReady = false;
         }
-        */
-
-        // Still initialize I2CManager so pressure sensors can be used.
-        if (_i2cManager.begin(0, 0)) {
-            ESP_LOGI(TAG, "I2CManager initialized for pressure sensors.");
-        } else {
-            ESP_LOGW(TAG, "I2CManager failed to initialize.");
-        }
+    #else
+        _ferrisWheelsReady = false;
     #endif
-
-    // Ferris wheels intentionally disabled for now
-    _ferrisWheelsReady = false;
 
     ESP_LOGI(TAG, "InputController initialized.");
 }
@@ -105,30 +96,26 @@ void InputController::testSPI0Manager() {
 }
 
 std::vector<float> InputController::readFerrisWheelAngles() {
-    // Ferris wheels disabled for now
-    return {};
+    if (!_ferrisWheelsReady) {
+        return {};
+    }
+    return _i2cManager.readAllFerrisWheelAngles();
 }
 
 std::vector<float> InputController::readFerrisWheelValues() {
-    // Ferris wheels disabled for now
-    return {};
+    if (!_ferrisWheelsReady) {
+        return {};
+    }
+    return _i2cManager.readAllFerrisWheelRawValues();
 }
 
 void InputController::updateNumOfFerrisWheels(uint8_t numOfFerrisWheels) {
-    (void)numOfFerrisWheels;
-
-    // Ferris wheel support temporarily disabled until hardware is available
-    /*
     #if ESP_ATTACHED
     ESP_LOGI(TAG, "InputController::updateNumOfFerrisWheels: calling _i2cManager.initFerrisWheels(%u)", numOfFerrisWheels);
     _ferrisWheelsReady = _i2cManager.initFerrisWheels(numOfFerrisWheels);
     #else
     _ferrisWheelsReady = false;
     #endif
-    */
-
-    _ferrisWheelsReady = false;
-    ESP_LOGI(TAG, "Ferris wheel update skipped: feature disabled for now.");
 }
 
 void InputController::beginWebserver() {
@@ -180,18 +167,24 @@ void InputController::update(RobotController& robotController) {
     _mamriWebServer.updateFerrisWheelsReady(_ferrisWheelsReady);
 
     // Display-only restore: draw UI into framebuffer and flush via SPI0 screen backend.
-    if (_canvasManager.hasCanvas()) {
-        _canvasManager.selectPage(mapPagePotmeter());
-        _canvasManager.updateDirect(_canvasManager.getCanvas(), _currentInputMode, robotController);
-        esp_err_t drawErr = _spi0Manager.drawScreenRGB565(0, 0,
-                                                          CanvasManager::WIDTH,
-                                                          CanvasManager::HEIGHT,
-                                                          _canvasManager.getCanvas().getBuffer());
-        if (drawErr != ESP_OK) {
-            ESP_LOGW(TAG, "drawScreenRGB565 failed: %s", esp_err_to_name(drawErr));
+    // Keep control loop fast, but limit TFT transfers to every 100 ms.
+    static TickType_t lastDisplayUpdateTick = 0;
+    const TickType_t now = xTaskGetTickCount();
+    if ((now - lastDisplayUpdateTick) >= pdMS_TO_TICKS(100)) {
+        lastDisplayUpdateTick = now;
+        if (_canvasManager.hasCanvas()) {
+            _canvasManager.selectPage(mapPagePotmeter());
+            _canvasManager.updateDirect(_canvasManager.getCanvas(), _currentInputMode, robotController);
+            esp_err_t drawErr = _spi0Manager.drawScreenRGB565(0, 0,
+                                                              CanvasManager::WIDTH,
+                                                              CanvasManager::HEIGHT,
+                                                              _canvasManager.getCanvas().getBuffer());
+            if (drawErr != ESP_OK) {
+                ESP_LOGW(TAG, "drawScreenRGB565 failed: %s", esp_err_to_name(drawErr));
+            }
+        } else {
+            ESP_LOGW(TAG, "Canvas unavailable, skipping display update.");
         }
-    } else {
-        ESP_LOGW(TAG, "Canvas unavailable, skipping display update.");
     }
 
     // ============================================================
@@ -201,9 +194,9 @@ void InputController::update(RobotController& robotController) {
     {
         float pressure = _i2cManager.readPressureSensor(1);
 
-        ESP_LOGI(TAG, "Pressure sensor 1: %.4f bar", pressure);
+        // ESP_LOGI(TAG, "Pressure sensor 1: %.4f bar", pressure);
 
-        const bool noPressure = (pressure < 2.0f);
+        const bool noPressure = (pressure < 0.03f);
         _spi0Manager.writeRed2(noPressure);
     }
     #else
@@ -229,12 +222,48 @@ void InputController::update(RobotController& robotController) {
     const int emergencyLevel = gpio_get_level(static_cast<gpio_num_t>(EMERGENCY_PIN));
     const bool emergencyPressed = (emergencyLevel == 1);
     _spi0Manager.writeRed3(emergencyPressed);
+    // Test behavior:
+    // emergency pressed  -> close valve
+    // emergency released -> open valve
+    _spi0Manager.setMainValve(!emergencyPressed);
 
 }
 
 float InputController::getMaxVelocityFromPotmeter() {
-    // Fixed fallback while SPI potmeter is disabled
-    return 20.0f;
+    const int pot = static_cast<int>(_spi0Manager.readPotmeters(true));
+    const int x = (pot < 0) ? 0 : ((pot > 1023) ? 1023 : pot);
+
+    struct Anchor {
+        int pos;
+        float hz;
+    };
+
+    // Calibrated to the real panel response:
+    // - around 1/4 turn was reading too low (~1.7 instead of 2.0)
+    // - around 3/4 turn was reading too high (~70 instead of 50)
+    static const Anchor k[] = {
+        {0,    1.0f},
+        {179,  2.0f},
+        {512, 10.0f},
+        {870, 50.0f},
+        {1023, 100.0f},
+    };
+
+    if (x <= k[0].pos) return k[0].hz;
+    if (x >= k[4].pos) return k[4].hz;
+
+    for (int i = 1; i < 5; ++i) {
+        if (x <= k[i].pos) {
+            const int x0 = k[i - 1].pos;
+            const int x1 = k[i].pos;
+            const float y0 = k[i - 1].hz;
+            const float y1 = k[i].hz;
+            const float t = static_cast<float>(x - x0) / static_cast<float>(x1 - x0);
+            return y0 + t * (y1 - y0);
+        }
+    }
+
+    return 100.0f;
 }
 
 Page InputController::mapPagePotmeter()

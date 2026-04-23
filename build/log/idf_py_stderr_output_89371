@@ -1,0 +1,1145 @@
+Command: /Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf_monitor.py -p /dev/cu.usbserial-140 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf -m '/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf.py' '-p' '/dev/cu.usbserial-140'
+[0;33m--- esp-idf-monitor 1.9.0 on /dev/cu.usbserial-140 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40000000: [0;33m_start[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', '/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf', '-ex', 'add-symbol-file /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf', '-ex', 'target remote | "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python" -m esp_idf_panic_decoder --target esp32c6 "/var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T/tmpdqv2cj80"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf"\nTraceback (most recent call last):\n  File "<frozen runpy>", line 198, in _run_module_as_main\n  File "<frozen runpy>", line 88, in _run_code\n  File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/esp_idf_panic_decoder/__main__.py", line 4, in <module>\n    main()\n    ~~~~^^\n  File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/esp_idf_panic_decoder/gdb_panic_server.py", line 289, in main\n    panic_info = PANIC_OUTPUT_PARSERS[args.target](args.input_file.read())\n  File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/esp_idf_panic_decoder/gdb_panic_server.py", line 138, in parse_idf_riscv_panic_output\n    raise ValueError("Couldn\'t parse panic handler output")\nValueError: Couldn\'t parse panic handler output\nRemote connection closed\nNo stack.\n'
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', '/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf', '-ex', 'add-symbol-file /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf', '-ex', 'target remote | "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python" -m esp_idf_panic_decoder --target esp32c6 "/var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T/tmpcd4l0so1"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf"\nTraceback (most recent call last):\n  File "<frozen runpy>", line 198, in _run_module_as_main\n  File "<frozen runpy>", line 88, in _run_code\n  File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/esp_idf_panic_decoder/__main__.py", line 4, in <module>\n    main()\n    ~~~~^^\n  File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/esp_idf_panic_decoder/gdb_panic_server.py", line 289, in main\n    panic_info = PANIC_OUTPUT_PARSERS[args.target](args.input_file.read())\n  File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/esp_idf_panic_decoder/gdb_panic_server.py", line 138, in parse_idf_riscv_panic_output\n    raise ValueError("Couldn\'t parse panic handler output")\nValueError: Couldn\'t parse panic handler output\nRemote connection closed\nNo stack.\n'
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', '/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf', '-ex', 'add-symbol-file /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf', '-ex', 'target remote | "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python" -m esp_idf_panic_decoder --target esp32c6 "/var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T/tmpu7ecbh4i"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf"\nTraceback (most recent call last):\n  File "<frozen runpy>", line 198, in _run_module_as_main\n  File "<frozen runpy>", line 88, in _run_code\n  File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/esp_idf_panic_decoder/__main__.py", line 4, in <module>\n    main()\n    ~~~~^^\n  File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/esp_idf_panic_decoder/gdb_panic_server.py", line 289, in main\n    panic_info = PANIC_OUTPUT_PARSERS[args.target](args.input_file.read())\n  File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/esp_idf_panic_decoder/gdb_panic_server.py", line 152, in parse_idf_riscv_panic_output\n    stack_base_addr, stack_data = get_stack_addr_and_data(res)\n                                  ~~~~~~~~~~~~~~~~~~~~~~~^^^^^\n  File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/esp_idf_panic_decoder/gdb_panic_server.py", line 120, in get_stack_addr_and_data\n    assert base_addr == prev_base_addr + bytes_in_line\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\nRemote connection closed\nNo stack.\n'
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', '/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf', '-ex', 'add-symbol-file /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf', '-ex', 'target remote | "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python" -m esp_idf_panic_decoder --target esp32c6 "/var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T/tmpjed4jfwj"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf"\nTraceback (most recent call last):\n  File "<frozen runpy>", line 198, in _run_module_as_main\n  File "<frozen runpy>", line 88, in _run_code\n  File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/esp_idf_panic_decoder/__main__.py", line 4, in <module>\n    main()\n    ~~~~^^\n  File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/esp_idf_panic_decoder/gdb_panic_server.py", line 289, in main\n    panic_info = PANIC_OUTPUT_PARSERS[args.target](args.input_file.read())\n  File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/esp_idf_panic_decoder/gdb_panic_server.py", line 138, in parse_idf_riscv_panic_output\n    raise ValueError("Couldn\'t parse panic handler output")\nValueError: Couldn\'t parse panic handler output\nRemote connection closed\nNo stack.\n'
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m--- Warning: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', '/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf', '-ex', 'add-symbol-file /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf', '-ex', 'target remote | "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python" -m esp_idf_panic_decoder --target esp32c6 "/var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T/tmp1hactwo8"', '-ex', 'bt']' returned non-zero exit status 1.
+--- Warning: b'add symbol table from file "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf"\nTraceback (most recent call last):\n  File "<frozen runpy>", line 198, in _run_module_as_main\n  File "<frozen runpy>", line 88, in _run_code\n  File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/esp_idf_panic_decoder/__main__.py", line 4, in <module>\n    main()\n    ~~~~^^\n  File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/esp_idf_panic_decoder/gdb_panic_server.py", line 289, in main\n    panic_info = PANIC_OUTPUT_PARSERS[args.target](args.input_file.read())\n  File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/esp_idf_panic_decoder/gdb_panic_server.py", line 138, in parse_idf_riscv_panic_output\n    raise ValueError("Couldn\'t parse panic handler output")\nValueError: Couldn\'t parse panic handler output\nRemote connection closed\nNo stack.\n'
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x420138aa: [0;33mDisplayCanvas::fillScreen(unsigned short)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/DisplayCanvas.cpp[0m[0m:[1;31m70[0m
+[0m--- 0x420137d8: [0;33mCanvasManager::updateDirect(DisplayCanvas&, InputModes, RobotController const&)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/CanvasManager.cpp[0m[0m:[1;31m56[0m
+[0m--- 0x40028192: [0;33m__retarget_lock_release_recursive[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0m--- 0x4080baa6: [0;33mesp_log[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/log/src/log.c[0m[0m:[1;31m91[0m
+[0m--- 0x42016222: [0;33mSPI0Manager::readPotmeters(bool)[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/InputController/SPI/SPI0Manager.cpp[0m[0m:[1;31m879[0m
+[0m--- 0x4201306e: [0;33mCanvasManager::getCanvas()[0m[0m at [0;32m/Users/jan

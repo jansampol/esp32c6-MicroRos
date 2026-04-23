@@ -1,0 +1,1766 @@
+Command: /Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf_monitor.py -p /dev/cu.usbserial-140 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf -m '/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf.py' '-p' '/dev/cu.usbserial-140'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xfa8
+load:0x4086e610,len:0x31a8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  5 2026 11:04:44[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (71) boot:  3 coredump         Unknown data     01 03 00210000 00010000[0m
+[0;32mI (78) boot:  4 littlefs         Unknown data     01 82 00220000 0007d000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0aff8h ( 45048) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b020 vaddr=40800000 size=04ff8h ( 20472) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=1a080h (106624) map[0m
+[0;32mI (130) esp_image: segment 3: paddr=0003a0a8 vaddr=40804ff8 size=071d0h ( 29136) load[0m
+[0;32mI (137) esp_image: segment 4: paddr=00041280 vaddr=4080c1d0 size=01990h (  6544) load[0m
+[0;32mI (142) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (143) boot: Disabling RNG early entropy source...[0m
+[0;32mI (155) cpu_start: Unicore app[0m
+[0;32mI (164) cpu_start: Pro cpu start user code[0m
+[0;32mI (164) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (164) app_init: Application information:[0m
+[0;32mI (164) app_init: Project name:     esp32c6_microros_test[0m
+[0;32mI (169) app_init: App version:      eb8ceaf-dirty[0m
+[0;32mI (174) app_init: Compile time:     Apr 16 2026 12:55:16[0m
+[0;32mI (179) app_init: ELF file SHA256:  4ce7c1e37...[0m
+[0;32mI (183) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (187) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (190) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (194) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (198) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (204) heap_init: At 4080EDE0 len 0006D830 (438 KiB): RAM[0m
+[0;32mI (210) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (215) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (221) spi_flash: detected chip: generic[0m
+[0;32mI (224) spi_flash: flash io: dio[0m
+[0;33mW (227) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (239) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (245) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (252) coexist: coex firmware version: 831ec70[0m
+[0;32mI (270) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (271) main_task: Started on CPU0[0m
+[0;32mI (271) main_task: Calling app_main()[0m
+FERRIS WHEEL TEST START
+[0;32mI (281) I2CManager: Starting I2C Manager with 5 Ferris wheels and 0 other sensors...[0m
+[0;32mI (281) I2CManager: I2C bus started[0m
+[0;32mI (281) I2CManager: I2C multiplexers initialized. Initializing Ferris wheels...[0m
+[0;32mI (281) I2CManager: Initializing Ferris wheel sensors...[0m
+[0;32mI (291) I2CManager: Ferris wheel sensor 0: 1[0m
+[0;32mI (301) I2CManager: Ferris wheel sensor 1: 1[0m
+[0;32mI (311) I2CManager: Ferris wheel sensor 2: 1[0m
+[0;32mI (321) I2CManager: Ferris wheel sensor 3: 1[0m
+[0;32mI (331) I2CManager: Ferris wheel sensor 4: 1[0m
+[0;32mI (341) I2CManager: Ferris wheels successfully initialized[0m
+[0;32mI (341) app_main: I2C initialized. Starting Ferris wheel scan...[0m
+[0;32mI (341) FERRIS_TEST: wheel=0 | raw=1249.00 | angle=109.78 deg[0m
+[0;32mI (341) FERRIS_TEST: wheel=1 | raw=596.00 | angle=52.38 deg[0m
+[0;32mI (351) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (351) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (361) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (361) app_main: --------------------------------------[0m
+[0;32mI (871) FERRIS_TEST: wheel=0 | raw=1249.00 | angle=109.78 deg[0m
+[0;32mI (871) FERRIS_TEST: wheel=1 | raw=596.00 | angle=52.38 deg[0m
+[0;32mI (871) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (871) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (881) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (881) app_main: --------------------------------------[0m
+[0;32mI (1391) FERRIS_TEST: wheel=0 | raw=1249.00 | angle=109.78 deg[0m
+[0;32mI (1391) FERRIS_TEST: wheel=1 | raw=596.00 | angle=52.38 deg[0m
+[0;32mI (1391) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (1391) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (1401) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (1401) app_main: --------------------------------------[0m
+[0;32mI (1911) FERRIS_TEST: wheel=0 | raw=1249.00 | angle=109.78 deg[0m
+[0;32mI (1911) FERRIS_TEST: wheel=1 | raw=596.00 | angle=52.38 deg[0m
+[0;32mI (1911) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (1911) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (1921) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (1921) app_main: --------------------------------------[0m
+[0;32mI (2431) FERRIS_TEST: wheel=0 | raw=1249.00 | angle=109.78 deg[0m
+[0;32mI (2431) FERRIS_TEST: wheel=1 | raw=596.00 | angle=52.38 deg[0m
+[0;32mI (2431) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (2431) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (2441) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (2441) app_main: --------------------------------------[0m
+[0;32mI (2951) FERRIS_TEST: wheel=0 | raw=1249.00 | angle=109.78 deg[0m
+[0;32mI (2951) FERRIS_TEST: wheel=1 | raw=596.00 | angle=52.38 deg[0m
+[0;32mI (2951) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (2951) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (2961) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (2961) app_main: --------------------------------------[0m
+[0;32mI (3471) FERRIS_TEST: wheel=0 | raw=1249.00 | angle=109.78 deg[0m
+[0;32mI (3471) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (3471) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (3471) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (3481) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (3481) app_main: --------------------------------------[0m
+[0;32mI (3991) FERRIS_TEST: wheel=0 | raw=1249.00 | angle=109.78 deg[0m
+[0;32mI (3991) FERRIS_TEST: wheel=1 | raw=596.00 | angle=52.38 deg[0m
+[0;32mI (3991) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (3991) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (4001) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (4001) app_main: --------------------------------------[0m
+[0;32mI (4511) FERRIS_TEST: wheel=0 | raw=1249.00 | angle=109.78 deg[0m
+[0;32mI (4511) FERRIS_TEST: wheel=1 | raw=596.00 | angle=52.38 deg[0m
+[0;32mI (4511) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (4511) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (4521) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (4521) app_main: --------------------------------------[0m
+[0;32mI (5031) FERRIS_TEST: wheel=0 | raw=1249.00 | angle=109.78 deg[0m
+[0;32mI (5031) FERRIS_TEST: wheel=1 | raw=596.00 | angle=52.38 deg[0m
+[0;32mI (5031) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (5031) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (5041) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (5041) app_main: --------------------------------------[0m
+[0;32mI (5551) FERRIS_TEST: wheel=0 | raw=1249.00 | angle=109.78 deg[0m
+[0;32mI (5551) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (5551) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (5551) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (5561) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (5561) app_main: --------------------------------------[0m
+[0;32mI (6071) FERRIS_TEST: wheel=0 | raw=1249.00 | angle=109.78 deg[0m
+[0;32mI (6071) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (6071) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (6071) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (6081) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (6081) app_main: --------------------------------------[0m
+[0;32mI (6591) FERRIS_TEST: wheel=0 | raw=1249.00 | angle=109.78 deg[0m
+[0;32mI (6591) FERRIS_TEST: wheel=1 | raw=596.00 | angle=52.38 deg[0m
+[0;32mI (6591) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (6591) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (6601) FERRIS_TEST: wheel=4 | raw=-1.00 | angle=-0.09 deg[0m
+[0;32mI (6601) app_main: --------------------------------------[0m
+[0;32mI (7111) FERRIS_TEST: wheel=0 | raw=1249.00 | angle=109.78 deg[0m
+[0;32mI (7111) FERRIS_TEST: wheel=1 | raw=596.00 | angle=52.38 deg[0m
+[0;32mI (7111) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (7111) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (7121) FERRIS_TEST: wheel=4 | raw=-1.00 | angle=-0.09 deg[0m
+[0;32mI (7121) app_main: --------------------------------------[0m
+[0;32mI (7631) FERRIS_TEST: wheel=0 | raw=1249.00 | angle=109.78 deg[0m
+[0;32mI (7631) FERRIS_TEST: wheel=1 | raw=596.00 | angle=52.38 deg[0m
+[0;32mI (7631) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (7631) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (7641) FERRIS_TEST: wheel=4 | raw=-1.00 | angle=-0.09 deg[0m
+[0;32mI (7641) app_main: --------------------------------------[0m
+[0;32mI (8151) FERRIS_TEST: wheel=0 | raw=1249.00 | angle=109.78 deg[0m
+[0;32mI (8151) FERRIS_TEST: wheel=1 | raw=596.00 | angle=52.38 deg[0m
+[0;32mI (8151) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (8151) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (8161) FERRIS_TEST: wheel=4 | raw=-1.00 | angle=-0.09 deg[0m
+[0;32mI (8161) app_main: --------------------------------------[0m
+[0;32mI (8671) FERRIS_TEST: wheel=0 | raw=1248.00 | angle=109.69 deg[0m
+[0;32mI (8671) FERRIS_TEST: wheel=1 | raw=596.00 | angle=52.38 deg[0m
+[0;32mI (8671) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (8671) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (8681) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (8681) app_main: --------------------------------------[0m
+[0;32mI (9191) FERRIS_TEST: wheel=0 | raw=1248.00 | angle=109.69 deg[0m
+[0;32mI (9191) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (9191) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (9191) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (9201) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (9201) app_main: --------------------------------------[0m
+[0;32mI (9711) FERRIS_TEST: wheel=0 | raw=1245.00 | angle=109.42 deg[0m
+[0;32mI (9711) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (9711) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (9711) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (9721) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (9721) app_main: --------------------------------------[0m
+[0;32mI (10231) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (10231) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (10231) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (10231) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.48 deg[0m
+[0;32mI (10241) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (10241) app_main: --------------------------------------[0m
+[0;32mI (10751) FERRIS_TEST: wheel=0 | raw=1242.00 | angle=109.16 deg[0m
+[0;32mI (10751) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (10751) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (10751) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (10761) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (10761) app_main: --------------------------------------[0m
+[0;32mI (11271) FERRIS_TEST: wheel=0 | raw=1244.00 | angle=109.34 deg[0m
+[0;32mI (11271) FERRIS_TEST: wheel=1 | raw=596.00 | angle=52.38 deg[0m
+[0;32mI (11271) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (11271) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (11281) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (11281) app_main: --------------------------------------[0m
+[0;32mI (11791) FERRIS_TEST: wheel=0 | raw=1252.00 | angle=110.04 deg[0m
+[0;32mI (11791) FERRIS_TEST: wheel=1 | raw=596.00 | angle=52.38 deg[0m
+[0;32mI (11791) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (11791) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (11801) FERRIS_TEST: wheel=4 | raw=-1.00 | angle=-0.09 deg[0m
+[0;32mI (11801) app_main: --------------------------------------[0m
+[0;32mI (12311) FERRIS_TEST: wheel=0 | raw=1246.00 | angle=109.51 deg[0m
+[0;32mI (12311) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (12311) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (12311) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (12321) FERRIS_TEST: wheel=4 | raw=-1.00 | angle=-0.09 deg[0m
+[0;32mI (12321) app_main: --------------------------------------[0m
+[0;32mI (12831) FERRIS_TEST: wheel=0 | raw=1244.00 | angle=109.34 deg[0m
+[0;32mI (12831) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (12831) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (12831) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (12841) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (12841) app_main: --------------------------------------[0m
+[0;32mI (13351) FERRIS_TEST: wheel=0 | raw=1289.00 | angle=113.29 deg[0m
+[0;32mI (13351) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (13351) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (13351) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (13361) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (13361) app_main: --------------------------------------[0m
+[0;32mI (13871) FERRIS_TEST: wheel=0 | raw=1531.00 | angle=134.56 deg[0m
+[0;32mI (13871) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (13871) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (13871) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (13881) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (13881) app_main: --------------------------------------[0m
+[0;32mI (14391) FERRIS_TEST: wheel=0 | raw=1809.00 | angle=158.99 deg[0m
+[0;32mI (14391) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (14391) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (14391) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (14401) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (14401) app_main: --------------------------------------[0m
+[0;32mI (14911) FERRIS_TEST: wheel=0 | raw=1899.00 | angle=166.90 deg[0m
+[0;32mI (14911) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (14911) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (14911) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (14921) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (14921) app_main: --------------------------------------[0m
+[0;32mI (15431) FERRIS_TEST: wheel=0 | raw=1829.00 | angle=160.75 deg[0m
+[0;32mI (15431) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (15431) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (15431) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (15441) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (15441) app_main: --------------------------------------[0m
+[0;32mI (15951) FERRIS_TEST: wheel=0 | raw=1565.00 | angle=137.55 deg[0m
+[0;32mI (15951) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (15951) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (15951) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (15961) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (15961) app_main: --------------------------------------[0m
+[0;32mI (16471) FERRIS_TEST: wheel=0 | raw=1459.00 | angle=128.23 deg[0m
+[0;32mI (16471) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (16471) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (16471) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (16481) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (16481) app_main: --------------------------------------[0m
+[0;32mI (16991) FERRIS_TEST: wheel=0 | raw=1388.00 | angle=121.99 deg[0m
+[0;32mI (16991) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (16991) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (16991) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (17001) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (17001) app_main: --------------------------------------[0m
+[0;32mI (17511) FERRIS_TEST: wheel=0 | raw=1330.00 | angle=116.81 deg[0m
+[0;32mI (17511) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (17511) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (17511) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (17521) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (17521) app_main: --------------------------------------[0m
+[0;32mI (18031) FERRIS_TEST: wheel=0 | raw=1270.00 | angle=111.62 deg[0m
+[0;32mI (18031) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (18031) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (18031) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (18041) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (18041) app_main: --------------------------------------[0m
+[0;32mI (18551) FERRIS_TEST: wheel=0 | raw=1268.00 | angle=111.45 deg[0m
+[0;32mI (18551) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (18551) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (18551) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (18561) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (18561) app_main: --------------------------------------[0m
+[0;32mI (19071) FERRIS_TEST: wheel=0 | raw=1246.00 | angle=109.51 deg[0m
+[0;32mI (19071) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (19071) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (19071) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (19081) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (19081) app_main: --------------------------------------[0m
+[0;32mI (19591) FERRIS_TEST: wheel=0 | raw=1246.00 | angle=109.51 deg[0m
+[0;32mI (19591) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (19591) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (19591) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (19601) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (19601) app_main: --------------------------------------[0m
+[0;32mI (20111) FERRIS_TEST: wheel=0 | raw=1246.00 | angle=109.51 deg[0m
+[0;32mI (20111) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (20111) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (20111) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (20121) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (20121) app_main: --------------------------------------[0m
+[0;32mI (20631) FERRIS_TEST: wheel=0 | raw=1245.00 | angle=109.42 deg[0m
+[0;32mI (20631) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (20631) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (20631) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (20641) FERRIS_TEST: wheel=4 | raw=0.00 | angle=0.00 deg[0m
+[0;32mI (20641) app_main: --------------------------------------[0m
+[0;32mI (21151) FERRIS_TEST: wheel=0 | raw=1245.00 | angle=109.42 deg[0m
+[0;32mI (21151) FERRIS_TEST: wheel=1 | raw=596.00 | angle=52.38 deg[0m
+[0;32mI (21151) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (21151) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (21161) FERRIS_TEST: wheel=4 | raw=-1.00 | angle=-0.09 deg[0m
+[0;32mI (21161) app_main: --------------------------------------[0m
+[0;32mI (21671) FERRIS_TEST: wheel=0 | raw=1244.00 | angle=109.34 deg[0m
+[0;32mI (21671) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (21671) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (21671) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (21681) FERRIS_TEST: wheel=4 | raw=5.00 | angle=0.44 deg[0m
+[0;32mI (21681) app_main: --------------------------------------[0m
+[0;32mI (22191) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (22191) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (22191) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (22191) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (22201) FERRIS_TEST: wheel=4 | raw=3.00 | angle=0.26 deg[0m
+[0;32mI (22201) app_main: --------------------------------------[0m
+[0;32mI (22711) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (22711) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (22711) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (22711) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (22721) FERRIS_TEST: wheel=4 | raw=5.00 | angle=0.44 deg[0m
+[0;32mI (22721) app_main: --------------------------------------[0m
+[0;32mI (23231) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (23231) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (23231) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (23231) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (23241) FERRIS_TEST: wheel=4 | raw=-1.00 | angle=-0.09 deg[0m
+[0;32mI (23241) app_main: --------------------------------------[0m
+[0;32mI (23751) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (23751) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (23751) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (23751) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (23761) FERRIS_TEST: wheel=4 | raw=9.00 | angle=0.79 deg[0m
+[0;32mI (23761) app_main: --------------------------------------[0m
+[0;32mI (24271) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (24271) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (24271) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (24271) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (24281) FERRIS_TEST: wheel=4 | raw=-2.00 | angle=-0.18 deg[0m
+[0;32mI (24281) app_main: --------------------------------------[0m
+[0;32mI (24791) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (24791) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (24791) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (24791) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (24801) FERRIS_TEST: wheel=4 | raw=-2.00 | angle=-0.18 deg[0m
+[0;32mI (24801) app_main: --------------------------------------[0m
+[0;32mI (25311) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (25311) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (25311) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (25311) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (25321) FERRIS_TEST: wheel=4 | raw=-2.00 | angle=-0.18 deg[0m
+[0;32mI (25321) app_main: --------------------------------------[0m
+[0;32mI (25831) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (25831) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (25831) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (25831) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (25841) FERRIS_TEST: wheel=4 | raw=-2.00 | angle=-0.18 deg[0m
+[0;32mI (25841) app_main: --------------------------------------[0m
+[0;32mI (26351) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (26351) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (26351) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (26351) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (26361) FERRIS_TEST: wheel=4 | raw=-11.00 | angle=-0.97 deg[0m
+[0;32mI (26361) app_main: --------------------------------------[0m
+[0;32mI (26871) FERRIS_TEST: wheel=0 | raw=1244.00 | angle=109.34 deg[0m
+[0;32mI (26871) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (26871) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (26871) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (26881) FERRIS_TEST: wheel=4 | raw=-8.00 | angle=-0.70 deg[0m
+[0;32mI (26881) app_main: --------------------------------------[0m
+[0;32mI (27391) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (27391) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (27391) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (27391) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (27401) FERRIS_TEST: wheel=4 | raw=3.00 | angle=0.26 deg[0m
+[0;32mI (27401) app_main: --------------------------------------[0m
+[0;32mI (27911) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (27911) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (27911) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (27911) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (27921) FERRIS_TEST: wheel=4 | raw=268.00 | angle=23.55 deg[0m
+[0;32mI (27921) app_main: --------------------------------------[0m
+[0;32mI (28431) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (28431) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (28431) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (28431) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (28441) FERRIS_TEST: wheel=4 | raw=520.00 | angle=45.70 deg[0m
+[0;32mI (28441) app_main: --------------------------------------[0m
+[0;32mI (28951) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (28951) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (28951) FERRIS_TEST: wheel=2 | raw=1320.00 | angle=116.02 deg[0m
+[0;32mI (28951) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (28961) FERRIS_TEST: wheel=4 | raw=601.00 | angle=52.82 deg[0m
+[0;32mI (28961) app_main: --------------------------------------[0m
+[0;32mI (29471) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (29471) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (29471) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (29471) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.48 deg[0m
+[0;32mI (29481) FERRIS_TEST: wheel=4 | raw=335.00 | angle=29.44 deg[0m
+[0;32mI (29481) app_main: --------------------------------------[0m
+[0;32mI (29991) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (29991) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (29991) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (29991) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (30001) FERRIS_TEST: wheel=4 | raw=65.00 | angle=5.71 deg[0m
+[0;32mI (30001) app_main: --------------------------------------[0m
+[0;32mI (30511) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (30511) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (30511) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (30511) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.48 deg[0m
+[0;32mI (30521) FERRIS_TEST: wheel=4 | raw=23.00 | angle=2.02 deg[0m
+[0;32mI (30521) app_main: --------------------------------------[0m
+[0;32mI (31031) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (31031) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (31031) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (31031) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (31041) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (31041) app_main: --------------------------------------[0m
+[0;32mI (31551) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (31551) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (31551) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (31551) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (31561) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (31561) app_main: --------------------------------------[0m
+[0;32mI (32071) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (32071) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (32071) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (32071) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (32081) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (32081) app_main: --------------------------------------[0m
+[0;32mI (32591) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (32591) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (32591) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (32591) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (32601) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (32601) app_main: --------------------------------------[0m
+[0;32mI (33111) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (33111) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (33111) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (33111) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (33121) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (33121) app_main: --------------------------------------[0m
+[0;32mI (33631) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (33631) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (33631) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (33631) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (33641) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (33641) app_main: --------------------------------------[0m
+[0;32mI (34151) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (34151) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (34151) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (34151) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (34161) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (34161) app_main: --------------------------------------[0m
+[0;32mI (34671) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (34671) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (34671) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (34671) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (34681) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (34681) app_main: --------------------------------------[0m
+[0;32mI (35191) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (35191) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (35191) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (35191) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (35201) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (35201) app_main: --------------------------------------[0m
+[0;32mI (35711) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (35711) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (35711) FERRIS_TEST: wheel=2 | raw=1338.00 | angle=117.60 deg[0m
+[0;32mI (35711) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (35721) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (35721) app_main: --------------------------------------[0m
+[0;32mI (36231) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (36231) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (36231) FERRIS_TEST: wheel=2 | raw=1671.00 | angle=146.87 deg[0m
+[0;32mI (36231) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (36241) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (36241) app_main: --------------------------------------[0m
+[0;32mI (36751) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (36751) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (36751) FERRIS_TEST: wheel=2 | raw=1990.00 | angle=174.90 deg[0m
+[0;32mI (36751) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (36761) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (36761) app_main: --------------------------------------[0m
+[0;32mI (37271) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (37271) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (37271) FERRIS_TEST: wheel=2 | raw=1738.00 | angle=152.75 deg[0m
+[0;32mI (37271) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (37281) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (37281) app_main: --------------------------------------[0m
+[0;32mI (37791) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (37791) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (37791) FERRIS_TEST: wheel=2 | raw=1404.00 | angle=123.40 deg[0m
+[0;32mI (37791) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (37801) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (37801) app_main: --------------------------------------[0m
+[0;32mI (38311) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (38311) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (38311) FERRIS_TEST: wheel=2 | raw=1336.00 | angle=117.42 deg[0m
+[0;32mI (38311) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (38321) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (38321) app_main: --------------------------------------[0m
+[0;32mI (38831) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (38831) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (38831) FERRIS_TEST: wheel=2 | raw=1321.00 | angle=116.10 deg[0m
+[0;32mI (38831) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (38841) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (38841) app_main: --------------------------------------[0m
+[0;32mI (39351) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (39351) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (39351) FERRIS_TEST: wheel=2 | raw=1321.00 | angle=116.02 deg[0m
+[0;32mI (39351) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.40 deg[0m
+[0;32mI (39361) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (39361) app_main: --------------------------------------[0m
+[0;32mI (39871) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (39871) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (39871) FERRIS_TEST: wheel=2 | raw=1320.00 | angle=115.93 deg[0m
+[0;32mI (39871) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (39881) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (39881) app_main: --------------------------------------[0m
+[0;32mI (40391) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (40391) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (40391) FERRIS_TEST: wheel=2 | raw=1320.00 | angle=115.93 deg[0m
+[0;32mI (40391) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (40401) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (40401) app_main: --------------------------------------[0m
+[0;32mI (40911) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (40911) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (40911) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=116.02 deg[0m
+[0;32mI (40911) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (40921) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (40921) app_main: --------------------------------------[0m
+[0;32mI (41431) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (41431) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (41431) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (41431) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.48 deg[0m
+[0;32mI (41441) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (41441) app_main: --------------------------------------[0m
+[0;32mI (41951) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (41951) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (41951) FERRIS_TEST: wheel=2 | raw=1319.00 | angle=115.93 deg[0m
+[0;32mI (41951) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (41961) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (41961) app_main: --------------------------------------[0m
+[0;32mI (42471) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (42471) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (42471) FERRIS_TEST: wheel=2 | raw=1316.00 | angle=115.66 deg[0m
+[0;32mI (42471) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (42481) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (42481) app_main: --------------------------------------[0m
+[0;32mI (42991) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (42991) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (42991) FERRIS_TEST: wheel=2 | raw=1315.00 | angle=115.58 deg[0m
+[0;32mI (42991) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (43001) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (43001) app_main: --------------------------------------[0m
+[0;32mI (43511) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (43511) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (43511) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (43511) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (43521) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (43521) app_main: --------------------------------------[0m
+[0;32mI (44031) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (44031) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (44031) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (44031) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (44041) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (44041) app_main: --------------------------------------[0m
+[0;32mI (44551) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (44551) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (44551) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (44551) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (44561) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (44561) app_main: --------------------------------------[0m
+[0;32mI (45071) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (45071) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (45071) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (45071) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (45081) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (45081) app_main: --------------------------------------[0m
+[0;32mI (45591) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (45591) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (45591) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (45591) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (45601) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (45601) app_main: --------------------------------------[0m
+[0;32mI (46111) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (46111) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (46111) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (46111) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (46121) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (46121) app_main: --------------------------------------[0m
+[0;32mI (46631) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (46631) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (46631) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (46631) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (46641) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (46641) app_main: --------------------------------------[0m
+[0;32mI (47151) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (47151) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (47151) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (47151) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (47161) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (47161) app_main: --------------------------------------[0m
+[0;32mI (47671) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (47671) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (47671) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (47671) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (47681) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (47681) app_main: --------------------------------------[0m
+[0;32mI (48191) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (48191) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (48191) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (48191) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (48201) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (48201) app_main: --------------------------------------[0m
+[0;32mI (48711) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (48711) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (48711) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (48711) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (48721) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (48721) app_main: --------------------------------------[0m
+[0;32mI (49231) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (49231) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (49231) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (49231) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (49241) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (49241) app_main: --------------------------------------[0m
+[0;32mI (49751) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (49751) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (49751) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (49751) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (49761) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (49761) app_main: --------------------------------------[0m
+[0;32mI (50271) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (50271) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (50271) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (50271) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (50281) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (50281) app_main: --------------------------------------[0m
+[0;32mI (50791) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (50791) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (50791) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (50791) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (50801) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (50801) app_main: --------------------------------------[0m
+[0;32mI (51311) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (51311) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (51311) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (51311) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (51321) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (51321) app_main: --------------------------------------[0m
+[0;32mI (51831) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (51831) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (51831) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (51831) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (51841) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (51841) app_main: --------------------------------------[0m
+[0;32mI (52351) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (52351) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (52351) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (52351) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (52361) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (52361) app_main: --------------------------------------[0m
+[0;32mI (52871) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (52871) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (52871) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (52871) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (52881) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (52881) app_main: --------------------------------------[0m
+[0;32mI (53391) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (53391) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (53391) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (53391) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (53401) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (53401) app_main: --------------------------------------[0m
+[0;32mI (53911) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (53911) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (53911) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (53911) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (53921) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (53921) app_main: --------------------------------------[0m
+[0;32mI (54431) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (54431) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (54431) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (54431) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (54441) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (54441) app_main: --------------------------------------[0m
+[0;32mI (54951) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (54951) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (54951) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (54951) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (54961) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (54961) app_main: --------------------------------------[0m
+[0;32mI (55471) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (55471) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (55471) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (55471) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (55481) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (55481) app_main: --------------------------------------[0m
+[0;32mI (55991) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (55991) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (55991) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (55991) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (56001) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (56001) app_main: --------------------------------------[0m
+[0;32mI (56511) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (56511) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (56511) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (56511) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (56521) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (56521) app_main: --------------------------------------[0m
+[0;32mI (57031) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (57031) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (57031) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (57031) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (57041) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (57041) app_main: --------------------------------------[0m
+[0;32mI (57551) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (57551) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (57551) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (57551) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (57561) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (57561) app_main: --------------------------------------[0m
+[0;32mI (58071) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (58071) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (58071) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (58071) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (58081) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (58081) app_main: --------------------------------------[0m
+[0;32mI (58591) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (58591) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (58591) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (58591) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (58601) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (58601) app_main: --------------------------------------[0m
+[0;32mI (59111) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (59111) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (59111) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (59111) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (59121) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (59121) app_main: --------------------------------------[0m
+[0;32mI (59631) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (59631) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (59631) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (59631) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (59641) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (59641) app_main: --------------------------------------[0m
+[0;32mI (60151) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (60151) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (60151) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (60151) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (60161) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (60161) app_main: --------------------------------------[0m
+[0;32mI (60671) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (60671) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (60671) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (60671) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (60681) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (60681) app_main: --------------------------------------[0m
+[0;32mI (61191) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (61191) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (61191) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (61191) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (61201) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (61201) app_main: --------------------------------------[0m
+[0;32mI (61711) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (61711) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (61711) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (61711) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (61721) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (61721) app_main: --------------------------------------[0m
+[0;32mI (62231) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (62231) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (62231) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (62231) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (62241) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (62241) app_main: --------------------------------------[0m
+[0;32mI (62751) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (62751) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (62751) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (62751) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (62761) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (62761) app_main: --------------------------------------[0m
+[0;32mI (63271) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (63271) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (63271) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (63271) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (63281) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (63281) app_main: --------------------------------------[0m
+[0;32mI (63791) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (63791) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (63791) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (63791) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (63801) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (63801) app_main: --------------------------------------[0m
+[0;32mI (64311) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (64311) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (64311) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (64311) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (64321) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (64321) app_main: --------------------------------------[0m
+[0;32mI (64831) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (64831) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (64831) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (64831) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (64841) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (64841) app_main: --------------------------------------[0m
+[0;32mI (65351) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (65351) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (65351) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (65351) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (65361) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (65361) app_main: --------------------------------------[0m
+[0;32mI (65871) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (65871) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (65871) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (65871) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (65881) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (65881) app_main: --------------------------------------[0m
+[0;32mI (66391) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (66391) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (66391) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (66391) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (66401) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (66401) app_main: --------------------------------------[0m
+[0;32mI (66911) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (66911) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (66911) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (66911) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (66921) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (66921) app_main: --------------------------------------[0m
+[0;32mI (67431) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (67431) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (67431) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (67431) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (67441) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (67441) app_main: --------------------------------------[0m
+[0;32mI (67951) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (67951) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (67951) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (67951) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (67961) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (67961) app_main: --------------------------------------[0m
+[0;32mI (68471) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (68471) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (68471) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (68471) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (68481) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (68481) app_main: --------------------------------------[0m
+[0;32mI (68991) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (68991) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (68991) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (68991) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (69001) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (69001) app_main: --------------------------------------[0m
+[0;32mI (69511) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (69511) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (69511) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (69511) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.48 deg[0m
+[0;32mI (69521) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (69521) app_main: --------------------------------------[0m
+[0;32mI (70031) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (70031) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (70031) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (70031) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (70041) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (70041) app_main: --------------------------------------[0m
+[0;32mI (70551) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (70551) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (70551) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (70551) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (70561) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (70561) app_main: --------------------------------------[0m
+[0;32mI (71071) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (71071) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (71071) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (71071) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (71081) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (71081) app_main: --------------------------------------[0m
+[0;32mI (71591) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (71591) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (71591) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (71591) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (71601) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (71601) app_main: --------------------------------------[0m
+[0;32mI (72111) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (72111) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (72111) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (72111) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (72121) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (72121) app_main: --------------------------------------[0m
+[0;32mI (72631) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (72631) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (72631) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (72631) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (72641) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (72641) app_main: --------------------------------------[0m
+[0;32mI (73151) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (73151) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (73151) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (73151) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (73161) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (73161) app_main: --------------------------------------[0m
+[0;32mI (73671) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (73671) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (73671) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (73671) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (73681) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (73681) app_main: --------------------------------------[0m
+[0;32mI (74191) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (74191) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (74191) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (74191) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (74201) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (74201) app_main: --------------------------------------[0m
+[0;32mI (74711) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (74711) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (74711) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (74711) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (74721) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (74721) app_main: --------------------------------------[0m
+[0;32mI (75231) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (75231) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (75231) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (75231) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (75241) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (75241) app_main: --------------------------------------[0m
+[0;32mI (75751) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (75751) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (75751) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (75751) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (75761) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (75761) app_main: --------------------------------------[0m
+[0;32mI (76271) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (76271) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (76271) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (76271) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (76281) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (76281) app_main: --------------------------------------[0m
+[0;32mI (76791) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (76791) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (76791) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (76791) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (76801) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (76801) app_main: --------------------------------------[0m
+[0;32mI (77311) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (77311) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (77311) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (77311) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (77321) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (77321) app_main: --------------------------------------[0m
+[0;32mI (77831) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (77831) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (77831) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (77831) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (77841) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (77841) app_main: --------------------------------------[0m
+[0;32mI (78351) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (78351) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (78351) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (78351) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (78361) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (78361) app_main: --------------------------------------[0m
+[0;32mI (78871) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (78871) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (78871) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (78871) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (78881) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (78881) app_main: --------------------------------------[0m
+[0;32mI (79391) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (79391) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (79391) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (79391) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (79401) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (79401) app_main: --------------------------------------[0m
+[0;32mI (79911) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (79911) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (79911) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (79911) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (79921) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (79921) app_main: --------------------------------------[0m
+[0;32mI (80431) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (80431) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (80431) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (80431) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (80441) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (80441) app_main: --------------------------------------[0m
+[0;32mI (80951) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (80951) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (80951) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (80951) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (80961) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (80961) app_main: --------------------------------------[0m
+[0;32mI (81471) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (81471) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (81471) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (81471) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (81481) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (81481) app_main: --------------------------------------[0m
+[0;32mI (81991) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (81991) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (81991) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (81991) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (82001) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (82001) app_main: --------------------------------------[0m
+[0;32mI (82511) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (82511) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (82511) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (82511) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (82521) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (82521) app_main: --------------------------------------[0m
+[0;32mI (83031) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (83031) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (83031) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (83031) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (83041) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (83041) app_main: --------------------------------------[0m
+[0;32mI (83551) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (83551) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (83551) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (83551) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (83561) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (83561) app_main: --------------------------------------[0m
+[0;32mI (84071) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (84071) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (84071) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (84071) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (84081) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (84081) app_main: --------------------------------------[0m
+[0;32mI (84591) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (84591) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (84591) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (84591) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (84601) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (84601) app_main: --------------------------------------[0m
+[0;32mI (85111) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (85111) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (85111) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (85111) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (85121) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (85121) app_main: --------------------------------------[0m
+[0;32mI (85631) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (85631) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (85631) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (85631) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.48 deg[0m
+[0;32mI (85641) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (85641) app_main: --------------------------------------[0m
+[0;32mI (86151) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (86151) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (86151) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (86151) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (86161) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (86161) app_main: --------------------------------------[0m
+[0;32mI (86671) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (86671) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (86671) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (86671) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (86681) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (86681) app_main: --------------------------------------[0m
+[0;32mI (87191) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (87191) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (87191) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (87191) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (87201) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (87201) app_main: --------------------------------------[0m
+[0;32mI (87711) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (87711) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (87711) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (87711) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (87721) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (87721) app_main: --------------------------------------[0m
+[0;32mI (88231) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (88231) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (88231) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (88231) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (88241) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (88241) app_main: --------------------------------------[0m
+[0;32mI (88751) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (88751) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (88751) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (88751) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (88761) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (88761) app_main: --------------------------------------[0m
+[0;32mI (89271) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (89271) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (89271) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (89271) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (89281) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (89281) app_main: --------------------------------------[0m
+[0;32mI (89791) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (89791) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (89791) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (89791) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (89801) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (89801) app_main: --------------------------------------[0m
+[0;32mI (90311) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (90311) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (90311) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (90311) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (90321) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (90321) app_main: --------------------------------------[0m
+[0;32mI (90831) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (90831) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (90831) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (90831) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (90841) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (90841) app_main: --------------------------------------[0m
+[0;32mI (91351) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (91351) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (91351) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (91351) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (91361) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (91361) app_main: --------------------------------------[0m
+[0;32mI (91871) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (91871) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (91871) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (91871) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (91881) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (91881) app_main: --------------------------------------[0m
+[0;32mI (92391) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (92391) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (92391) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (92391) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (92401) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (92401) app_main: --------------------------------------[0m
+[0;32mI (92911) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (92911) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (92911) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (92911) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (92921) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (92921) app_main: --------------------------------------[0m
+[0;32mI (93431) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (93431) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (93431) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (93431) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (93441) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (93441) app_main: --------------------------------------[0m
+[0;32mI (93951) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (93951) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (93951) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (93951) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (93961) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (93961) app_main: --------------------------------------[0m
+[0;32mI (94471) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (94471) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (94471) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (94471) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (94481) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (94481) app_main: --------------------------------------[0m
+[0;32mI (94991) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (94991) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (94991) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (94991) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (95001) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (95001) app_main: --------------------------------------[0m
+[0;32mI (95511) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (95511) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (95511) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (95511) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (95521) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (95521) app_main: --------------------------------------[0m
+[0;32mI (96031) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (96031) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (96031) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (96031) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (96041) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (96041) app_main: --------------------------------------[0m
+[0;32mI (96551) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (96551) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (96551) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (96551) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (96561) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (96561) app_main: --------------------------------------[0m
+[0;32mI (97071) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (97071) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (97071) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (97071) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (97081) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (97081) app_main: --------------------------------------[0m
+[0;32mI (97591) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (97591) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (97591) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (97591) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (97601) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (97601) app_main: --------------------------------------[0m
+[0;32mI (98111) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (98111) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (98111) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (98111) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (98121) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (98121) app_main: --------------------------------------[0m
+[0;32mI (98631) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (98631) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (98631) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (98631) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (98641) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (98641) app_main: --------------------------------------[0m
+[0;32mI (99151) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (99151) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (99151) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (99151) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (99161) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (99161) app_main: --------------------------------------[0m
+[0;32mI (99671) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (99671) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (99671) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (99671) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (99681) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (99681) app_main: --------------------------------------[0m
+[0;32mI (100191) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (100191) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (100191) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (100191) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (100201) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (100201) app_main: --------------------------------------[0m
+[0;32mI (100711) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (100711) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (100711) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (100711) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (100721) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (100721) app_main: --------------------------------------[0m
+[0;32mI (101231) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (101231) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (101231) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (101231) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (101241) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (101241) app_main: --------------------------------------[0m
+[0;32mI (101751) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (101751) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (101751) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (101751) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (101761) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (101761) app_main: --------------------------------------[0m
+[0;32mI (102271) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (102271) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (102271) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (102271) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (102281) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (102281) app_main: --------------------------------------[0m
+[0;32mI (102791) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (102791) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (102791) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (102791) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (102801) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (102801) app_main: --------------------------------------[0m
+[0;32mI (103311) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (103311) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (103311) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (103311) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (103321) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (103321) app_main: --------------------------------------[0m
+[0;32mI (103831) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (103831) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (103831) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (103831) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (103841) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (103841) app_main: --------------------------------------[0m
+[0;32mI (104351) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (104351) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (104351) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (104351) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (104361) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (104361) app_main: --------------------------------------[0m
+[0;32mI (104871) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (104871) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (104871) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (104871) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (104881) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (104881) app_main: --------------------------------------[0m
+[0;32mI (105391) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (105391) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (105391) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (105391) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (105401) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (105401) app_main: --------------------------------------[0m
+[0;32mI (105911) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (105911) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (105911) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (105911) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (105921) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (105921) app_main: --------------------------------------[0m
+[0;32mI (106431) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (106431) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (106431) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (106431) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (106441) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (106441) app_main: --------------------------------------[0m
+[0;32mI (106951) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (106951) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (106951) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (106951) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (106961) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (106961) app_main: --------------------------------------[0m
+[0;32mI (107471) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (107471) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (107471) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (107471) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (107481) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (107481) app_main: --------------------------------------[0m
+[0;32mI (107991) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (107991) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (107991) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (107991) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (108001) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (108001) app_main: --------------------------------------[0m
+[0;32mI (108511) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (108511) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (108511) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (108511) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (108521) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (108521) app_main: --------------------------------------[0m
+[0;32mI (109031) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (109031) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (109031) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (109031) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (109041) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (109041) app_main: --------------------------------------[0m
+[0;32mI (109551) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (109551) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (109551) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (109551) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (109561) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (109561) app_main: --------------------------------------[0m
+[0;32mI (110071) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (110071) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (110071) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (110071) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (110081) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (110081) app_main: --------------------------------------[0m
+[0;32mI (110591) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (110591) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (110591) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (110591) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (110601) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (110601) app_main: --------------------------------------[0m
+[0;32mI (111111) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (111111) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (111111) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (111111) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (111121) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (111121) app_main: --------------------------------------[0m
+[0;32mI (111631) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (111631) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (111631) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (111631) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (111641) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (111641) app_main: --------------------------------------[0m
+[0;32mI (112151) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (112151) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (112151) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (112151) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (112161) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (112161) app_main: --------------------------------------[0m
+[0;32mI (112671) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (112671) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (112671) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (112671) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (112681) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (112681) app_main: --------------------------------------[0m
+[0;32mI (113191) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (113191) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (113191) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (113191) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (113201) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (113201) app_main: --------------------------------------[0m
+[0;32mI (113711) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (113711) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (113711) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (113711) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (113721) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (113721) app_main: --------------------------------------[0m
+[0;32mI (114231) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (114231) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (114231) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (114231) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (114241) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (114241) app_main: --------------------------------------[0m
+[0;32mI (114751) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (114751) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (114751) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (114751) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (114761) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (114761) app_main: --------------------------------------[0m
+[0;32mI (115271) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (115271) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (115271) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (115271) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (115281) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (115281) app_main: --------------------------------------[0m
+[0;32mI (115791) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (115791) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (115791) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (115791) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (115801) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (115801) app_main: --------------------------------------[0m
+[0;32mI (116311) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (116311) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (116311) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (116311) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.40 deg[0m
+[0;32mI (116321) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (116321) app_main: --------------------------------------[0m
+[0;32mI (116831) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (116831) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (116831) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (116831) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (116841) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (116841) app_main: --------------------------------------[0m
+[0;32mI (117351) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (117351) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (117351) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (117351) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (117361) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (117361) app_main: --------------------------------------[0m
+[0;32mI (117871) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (117871) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (117871) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (117871) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (117881) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (117881) app_main: --------------------------------------[0m
+[0;32mI (118391) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (118391) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (118391) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (118391) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (118401) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (118401) app_main: --------------------------------------[0m
+[0;32mI (118911) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (118911) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (118911) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (118911) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (118921) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (118921) app_main: --------------------------------------[0m
+[0;32mI (119431) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (119431) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (119431) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (119431) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (119441) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (119441) app_main: --------------------------------------[0m
+[0;32mI (119951) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (119951) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (119951) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (119951) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (119961) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (119961) app_main: --------------------------------------[0m
+[0;32mI (120471) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (120471) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (120471) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (120471) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (120481) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (120481) app_main: --------------------------------------[0m
+[0;32mI (120991) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (120991) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (120991) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (120991) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (121001) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (121001) app_main: --------------------------------------[0m
+[0;32mI (121511) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (121511) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (121511) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (121511) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (121521) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (121521) app_main: --------------------------------------[0m
+[0;32mI (122031) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (122031) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (122031) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (122031) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (122041) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (122041) app_main: --------------------------------------[0m
+[0;32mI (122551) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (122551) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (122551) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (122551) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (122561) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (122561) app_main: --------------------------------------[0m
+[0;32mI (123071) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (123071) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (123071) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (123071) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (123081) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (123081) app_main: --------------------------------------[0m
+[0;32mI (123591) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (123591) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (123591) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (123591) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (123601) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (123601) app_main: --------------------------------------[0m
+[0;32mI (124111) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (124111) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (124111) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (124111) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (124121) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (124121) app_main: --------------------------------------[0m
+[0;32mI (124631) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (124631) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (124631) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (124631) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (124641) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (124641) app_main: --------------------------------------[0m
+[0;32mI (125151) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (125151) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (125151) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (125151) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (125161) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (125161) app_main: --------------------------------------[0m
+[0;32mI (125671) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (125671) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (125671) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (125671) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (125681) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (125681) app_main: --------------------------------------[0m
+[0;32mI (126191) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (126191) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (126191) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (126191) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.48 deg[0m
+[0;32mI (126201) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (126201) app_main: --------------------------------------[0m
+[0;32mI (126711) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (126711) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (126711) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (126711) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (126721) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (126721) app_main: --------------------------------------[0m
+[0;32mI (127231) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (127231) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (127231) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (127231) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (127241) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (127241) app_main: --------------------------------------[0m
+[0;32mI (127751) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (127751) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (127751) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (127751) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (127761) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (127761) app_main: --------------------------------------[0m
+[0;32mI (128271) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (128271) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (128271) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (128271) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (128281) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (128281) app_main: --------------------------------------[0m
+[0;32mI (128791) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (128791) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (128791) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (128791) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (128801) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (128801) app_main: --------------------------------------[0m
+[0;32mI (129311) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (129311) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (129311) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (129311) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (129321) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (129321) app_main: --------------------------------------[0m
+[0;32mI (129831) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (129831) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (129831) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (129831) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (129841) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (129841) app_main: --------------------------------------[0m
+[0;32mI (130351) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (130351) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (130351) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (130351) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (130361) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (130361) app_main: --------------------------------------[0m
+[0;32mI (130871) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (130871) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (130871) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (130871) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (130881) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (130881) app_main: --------------------------------------[0m
+[0;32mI (131391) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (131391) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (131391) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (131391) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (131401) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (131401) app_main: --------------------------------------[0m
+[0;32mI (131911) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (131911) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (131911) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (131911) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (131921) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (131921) app_main: --------------------------------------[0m
+[0;32mI (132431) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (132431) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (132431) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (132431) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (132441) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (132441) app_main: --------------------------------------[0m
+[0;32mI (132951) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (132951) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (132951) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (132951) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (132961) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (132961) app_main: --------------------------------------[0m
+[0;32mI (133471) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (133471) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (133471) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (133471) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (133481) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (133481) app_main: --------------------------------------[0m
+[0;32mI (133991) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (133991) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (133991) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (133991) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (134001) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (134001) app_main: --------------------------------------[0m
+[0;32mI (134511) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (134511) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (134511) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (134511) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (134521) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (134521) app_main: --------------------------------------[0m
+[0;32mI (135031) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (135031) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (135031) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (135031) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (135041) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (135041) app_main: --------------------------------------[0m
+[0;32mI (135551) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (135551) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (135551) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (135551) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (135561) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (135561) app_main: --------------------------------------[0m
+[0;32mI (136071) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (136071) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (136071) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (136071) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (136081) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (136081) app_main: --------------------------------------[0m
+[0;32mI (136591) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (136591) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (136591) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (136591) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (136601) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (136601) app_main: --------------------------------------[0m
+[0;32mI (137111) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (137111) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (137111) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (137111) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (137121) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (137121) app_main: --------------------------------------[0m
+[0;32mI (137631) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (137631) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (137631) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (137631) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (137641) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (137641) app_main: --------------------------------------[0m
+[0;32mI (138151) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (138151) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (138151) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (138151) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (138161) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (138161) app_main: --------------------------------------[0m
+[0;32mI (138671) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (138671) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (138671) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (138671) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (138681) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (138681) app_main: --------------------------------------[0m
+[0;32mI (139191) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (139191) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (139191) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (139191) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (139201) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (139201) app_main: --------------------------------------[0m
+[0;32mI (139711) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (139711) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (139711) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (139711) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (139721) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (139721) app_main: --------------------------------------[0m
+[0;32mI (140231) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (140231) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (140231) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (140231) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (140241) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (140241) app_main: --------------------------------------[0m
+[0;32mI (140751) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (140751) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (140751) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (140751) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (140761) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (140761) app_main: --------------------------------------[0m
+[0;32mI (141271) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (141271) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (141271) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (141271) FERRIS_TEST: wheel=3 | raw=1495.00 | angle=131.40 deg[0m
+[0;32mI (141281) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (141281) app_main: --------------------------------------[0m
+[0;32mI (141791) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (141791) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (141791) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (141791) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (141801) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (141801) app_main: --------------------------------------[0m
+[0;32mI (142311) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (142311) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (142311) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (142311) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (142321) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (142321) app_main: --------------------------------------[0m
+[0;32mI (142831) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (142831) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (142831) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (142831) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (142841) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (142841) app_main: --------------------------------------[0m
+[0;32mI (143351) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (143351) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (143351) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (143351) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (143361) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (143361) app_main: --------------------------------------[0m
+[0;32mI (143871) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (143871) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (143871) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (143871) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (143881) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (143881) app_main: --------------------------------------[0m
+[0;32mI (144391) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (144391) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (144391) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (144391) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (144401) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (144401) app_main: --------------------------------------[0m
+[0;32mI (144911) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (144911) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (144911) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (144911) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (144921) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (144921) app_main: --------------------------------------[0m
+[0;32mI (145431) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (145431) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (145431) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (145431) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (145441) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (145441) app_main: --------------------------------------[0m
+[0;32mI (145951) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (145951) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (145951) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (145951) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (145961) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (145961) app_main: --------------------------------------[0m
+[0;32mI (146471) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (146471) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (146471) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (146471) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=131.48 deg[0m
+[0;32mI (146481) FERRIS_TEST: wheel=4 | raw=19.00 | angle=1.67 deg[0m
+[0;32mI (146481) app_main: --------------------------------------[0m
+[0;32mI (146991) FERRIS_TEST: wheel=0 | raw=1243.00 | angle=109.25 deg[0m
+[0;32mI (146991) FERRIS_TEST: wheel=1 | raw=595.00 | angle=52.29 deg[0m
+[0;32mI (146991) FERRIS_TEST: wheel=2 | raw=1314.00 | angle=115.49 deg[0m
+[0;32mI (146991) FERRIS_TEST: wheel=3 | raw=1496.00 | angle=

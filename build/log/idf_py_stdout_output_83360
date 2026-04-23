@@ -1,0 +1,1817 @@
+Command: /Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf_monitor.py -p /dev/cu.usbserial-140 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf -m '/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf.py' '-p' '/dev/cu.usbserial-140'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xfa8
+load:0x4086e610,len:0x31a8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  5 2026 11:04:44[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (71) boot:  3 coredump         Unknown data     01 03 00210000 00010000[0m
+[0;32mI (78) boot:  4 littlefs         Unknown data     01 82 00220000 0007d000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42100020 size=2b57ch (177532) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0003b5a4 vaddr=40800000 size=04a74h ( 19060) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=f9c90h (1023120) map[0m
+[0;32mI (326) esp_image: segment 3: paddr=00139cb8 vaddr=40804a74 size=1c344h (115524) load[0m
+[0;32mI (358) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (358) boot: Disabling RNG early entropy source...[0m
+[0;32mI (368) cpu_start: Unicore app[0m
+[0;32mI (377) cpu_start: Pro cpu start user code[0m
+[0;32mI (377) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (377) app_init: Application information:[0m
+[0;32mI (377) app_init: Project name:     esp32c6_microros_test[0m
+[0;32mI (382) app_init: App version:      93b14e3-dirty[0m
+[0;32mI (387) app_init: Compile time:     Apr 21 2026 11:50:16[0m
+[0;32mI (392) app_init: ELF file SHA256:  09f856b72...[0m
+[0;32mI (396) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (400) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (403) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (407) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (411) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (417) heap_init: At 4082BA70 len 00050BA0 (322 KiB): RAM[0m
+[0;32mI (423) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (428) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (434) spi_flash: detected chip: generic[0m
+[0;32mI (437) spi_flash: flash io: dio[0m
+[0;33mW (440) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (454) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (458) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (465) coexist: coex firmware version: 831ec70[0m
+[0;32mI (483) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (484) main_task: Started on CPU0[0m
+[0;32mI (484) main_task: Calling app_main()[0m
+app_main started
+[0;32mI (494) RobotController: Switched to PURPLE_MAMRI[0m
+[0;32mI (494) InputController: Initializing InputController...[0m
+[0;32mI (494) SPI0Manager: SPI0Manager begin()[0m
+[0;32mI (494) SPI0Manager: Using pins MOSI=8 MISO=6 CLK=1[0m
+[0;32mI (534) SPI0Manager: UI_2 readback: IODIRA=0xFF IODIRB=0x00 GPIOA=0x00 GPIOB=0x00[0m
+[0;32mI (1364) SPI0Manager: Screen initialized (ST7789 over SPI0).[0m
+[0;32mI (1364) SPI0Manager: SPI0Manager initialized.[0m
+[0;32mI (1364) CanvasManager: Initializing CanvasManager...[0m
+[0;33mW (1364) CanvasManager: PSRAM allocation failed, falling back to internal RAM.[0m
+[0;32mI (1374) CanvasManager: Canvas buffer initialized successfully.[0m
+[0;32mI (1384) InputController: testSPI0Manager() skipped: SPI0 disabled[0m
+[0;32mI (1394) CanvasManager: Finished screen initialization.[0m
+[0;32mI (1394) I2CManager: Starting I2C Manager with 0 Ferris wheels and 0 other sensors...[0m
+[0;32mI (1404) I2CManager: I2C bus started[0m
+[0;32mI (1404) I2CManager: I2C multiplexers initialized. Initializing Ferris wheels...[0m
+[0;32mI (1414) I2CManager: Initializing Ferris wheel sensors...[0m
+[0;32mI (1414) I2CManager: Ferris wheels successfully initialized[0m
+[0;32mI (1424) InputController: I2CManager initialized for pressure sensors.[0m
+[0;32mI (1424) InputController: InputController initialized.[0m
+[0;32mI (1434) MicroRosManager: Initializing WiFi transport...[0m
+[0;32mI (1434) wifi_station_netif: ESP_WIFI_MODE_STA[0m
+[0;32mI (1444) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (1444) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (1454) wifi:wifi driver task: 40858c44, prio:23, stack:6656, core=0[0m
+[0;32mI (1464) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (1464) wifi:wifi certification version: v7.0[0m
+[0;32mI (1464) wifi:config NVS flash: enabled[0m
+[0;32mI (1464) wifi:config nano formatting: disabled[0m
+[0;32mI (1474) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (1474) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1484) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1484) wifi:Init management short buffer num: 32[0m
+[0;32mI (1494) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1494) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1494) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (1504) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1504) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1514) wifi_init: rx ba win: 6[0m
+[0;32mI (1514) wifi_init: accept mbox: 6[0m
+[0;32mI (1514) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1524) wifi_init: udp mbox: 6[0m
+[0;32mI (1524) wifi_init: tcp mbox: 6[0m
+[0;32mI (1524) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1534) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1534) wifi_init: tcp mss: 1440[0m
+[0;32mI (1534) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1544) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1544) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;33mW (1554) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1554) phy_init: phy_version 331,5b89037,Mar  3 2025,16:01:12[0m
+[0;33mW (1624) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1624) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1634) wifi:(agc)0x600a7128:0xd2066800, min.avgNF:0xce->0xd2(dB), RCalCount:0x66, min.RRssi:0x800(-128.00)[0m
+[0;32mI (1644) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (1644) wifi:mode : sta (20:6e:f1:18:8c:28)[0m
+[0;32mI (1654) wifi:enable tsf[0m
+[0;32mI (1654) wifi_station_netif: wifi_init_sta finished.[0m
+[0;32mI (2384) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2384) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (2384) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2404) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2604) wifi:(assoc)RESP, Extended Capabilities length:1, operating_mode_notification:0[0m
+[0;32mI (2604) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (2604) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2614) wifi:(trc)phytype:CBW20-SGI, snr:58, maxRate:144, highestRateIdx:0[0m
+[0;33mW (2614) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (2624) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:58, ampduState:wait operational[0m
+[0;32mI (2634) wifi:ifidx:0, rssi:-37, nf:-95, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (2644) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:4(2 us)[0m
+[0;32mI (2684) wifi:connected with MyNewHotspot, aid = 4, channel 6, BW20, bssid = c2:de:de:da:8c:bb[0m
+[0;32mI (2684) wifi:security: WPA2-PSK, phy:bgn, rssi:-37, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (2704) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (2704) wifi:pm start, type:1, aid:0x4, trans-BSSID:c2:de:de:da:8c:bb, BSSID[5]:0xbb, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (2704) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2714) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (2724) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (2734) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (2744) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (2784) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (2794) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (2794) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100bb8c, TALO:0xdadedec2, (ssn:0, win:64, cur_ssn:0), CONF:0xc0000005[0m
+[0;32mI (2804) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (2994) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (2994) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (4014) esp_netif_handlers: sta ip: 192.168.86.75, mask: 255.255.255.0, gw: 192.168.86.251[0m
+[0;32mI (4014) wifi_station_netif: got ip:192.168.86.75[0m
+[0;32mI (4014) wifi_station_netif: connected to ap SSID:MyNewHotspot password:12345678[0m
+[0;32mI (4014) MicroRosManager: Waiting before micro-ROS init...[0m
+[0;33mW (7164) wifi:<ba-add>idx:1, ifx:0, tid:6, TAHI:0x100bb8c, TALO:0xdadedec2, (ssn:2, win:64, cur_ssn:2), CONF:0xc0006005[0m
+[0;32mI (7294) MicroRosManager: micro-ROS entities created[0m
+[0;32mI (7294) MicroRosManager: micro-ROS base ready[0m
+[0;32mI (7294) app_main: Application initialized successfully[0m
+[0;32mI (7744) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (8194) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (8644) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (9094) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (9544) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (9994) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (10444) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (10894) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (11344) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (11794) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (12244) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (12694) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (13144) InputController: Pressure sensor 1: -0.0231 bar[0m
+[0;32mI (13594) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (14044) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (14494) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (14944) InputController: Pressure sensor 1: -0.0233 bar[0m
+[0;32mI (15394) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (15844) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (16294) InputController: Pressure sensor 1: -0.0225 bar[0m
+[0;32mI (16744) InputController: Pressure sensor 1: -0.0231 bar[0m
+[0;32mI (17194) InputController: Pressure sensor 1: -0.0233 bar[0m
+[0;32mI (17644) InputController: Pressure sensor 1: -0.0231 bar[0m
+[0;32mI (18094) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (18544) InputController: Pressure sensor 1: -0.0224 bar[0m
+[0;32mI (18994) InputController: Pressure sensor 1: -0.0225 bar[0m
+[0;32mI (19444) InputController: Pressure sensor 1: -0.0223 bar[0m
+[0;32mI (19894) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (20344) InputController: Pressure sensor 1: -0.0225 bar[0m
+[0;32mI (20794) InputController: Pressure sensor 1: -0.0224 bar[0m
+[0;32mI (21244) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (21694) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (22144) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (22594) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (23044) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (23494) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (23944) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (24394) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (24844) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (25294) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (25744) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (26194) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (26644) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (27094) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (27544) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (27994) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (28444) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (28894) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (29344) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (29374) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (29374) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (29374) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (29384) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (29384) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (29394) RobotController: valve_state=0x0000[0m
+[0;32mI (29814) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (30264) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (30714) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (31164) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (31614) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (32064) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (32514) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (32964) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (33414) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (33864) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (34314) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (34764) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (35214) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (35664) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (36114) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (36564) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (37014) InputController: Pressure sensor 1: -0.0226 bar[0m
+[0;32mI (37464) InputController: Pressure sensor 1: -0.0226 bar[0m
+[0;32mI (37914) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (38364) InputController: Pressure sensor 1: -0.0229 bar[0m
+[0;32mI (38814) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (39264) InputController: Pressure sensor 1: -0.0228 bar[0m
+[0;32mI (39714) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (40164) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (40614) InputController: Pressure sensor 1: -0.0221 bar[0m
+[0;32mI (41064) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (41514) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (41964) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (42414) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (42864) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (43314) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (43764) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (44214) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (44664) InputController: Pressure sensor 1: -0.0255 bar[0m
+[0;32mI (45114) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (45564) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (46014) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (46464) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (46914) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (47364) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (47814) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (48264) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (48714) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (49164) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (49614) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (50064) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (50514) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (50964) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (51414) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (51864) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (51894) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (51894) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (51894) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (51904) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (51904) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (51914) RobotController: valve_state=0x0000[0m
+[0;32mI (52334) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (52784) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (53234) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (53684) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (54134) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (54584) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (55034) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (55484) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (55934) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (56384) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (56834) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (57284) InputController: Pressure sensor 1: -0.0233 bar[0m
+[0;32mI (57734) InputController: Pressure sensor 1: -0.0233 bar[0m
+[0;32mI (58184) InputController: Pressure sensor 1: -0.0223 bar[0m
+[0;32mI (58634) InputController: Pressure sensor 1: -0.0226 bar[0m
+[0;32mI (59084) InputController: Pressure sensor 1: -0.0227 bar[0m
+[0;32mI (59534) InputController: Pressure sensor 1: -0.0225 bar[0m
+[0;32mI (59984) InputController: Pressure sensor 1: -0.0228 bar[0m
+[0;32mI (60434) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (60884) InputController: Pressure sensor 1: -0.0228 bar[0m
+[0;32mI (61334) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (61784) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (62234) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (62684) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (63134) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (63584) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (64034) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (64484) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (64934) InputController: Pressure sensor 1: -0.0255 bar[0m
+[0;32mI (65384) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (65834) InputController: Pressure sensor 1: -0.0255 bar[0m
+[0;32mI (66284) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (66734) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (67184) InputController: Pressure sensor 1: -0.0255 bar[0m
+[0;32mI (67634) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (68084) InputController: Pressure sensor 1: -0.0255 bar[0m
+[0;32mI (68534) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (68984) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (69434) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (69884) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (70334) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (70784) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (71234) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (71684) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (72134) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (72584) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (73034) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (73484) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (73934) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (74384) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (74414) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (74414) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (74414) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (74424) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (74424) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (74434) RobotController: valve_state=0x0000[0m
+[0;32mI (74854) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (75304) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (75754) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (76204) InputController: Pressure sensor 1: -0.0230 bar[0m
+[0;32mI (76654) InputController: Pressure sensor 1: -0.0231 bar[0m
+[0;32mI (77104) InputController: Pressure sensor 1: -0.0230 bar[0m
+[0;32mI (77554) InputController: Pressure sensor 1: -0.0231 bar[0m
+[0;32mI (78004) InputController: Pressure sensor 1: -0.0227 bar[0m
+[0;32mI (78454) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (78904) InputController: Pressure sensor 1: -0.0226 bar[0m
+[0;32mI (79354) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (79804) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (80254) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (80704) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (81154) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (81604) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (82054) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (82504) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (82954) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (83404) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (83854) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (84304) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (84754) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (85204) InputController: Pressure sensor 1: -0.0255 bar[0m
+[0;32mI (85654) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (86104) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (86554) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (87004) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (87454) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (87904) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (88354) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (88804) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (89254) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (89704) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (90154) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (90604) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (91054) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (91504) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (91954) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (92404) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (92854) InputController: Pressure sensor 1: -0.0231 bar[0m
+[0;32mI (93304) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (93754) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (94204) InputController: Pressure sensor 1: -0.0233 bar[0m
+[0;32mI (94654) InputController: Pressure sensor 1: -0.0225 bar[0m
+[0;32mI (95104) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (95554) InputController: Pressure sensor 1: -0.0228 bar[0m
+[0;32mI (96004) InputController: Pressure sensor 1: -0.0227 bar[0m
+[0;32mI (96454) InputController: Pressure sensor 1: -0.0229 bar[0m
+[0;32mI (96904) InputController: Pressure sensor 1: -0.0229 bar[0m
+[0;32mI (96934) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (96934) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (96934) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (96944) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (96944) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (96954) RobotController: valve_state=0x0000[0m
+[0;32mI (97374) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (97824) InputController: Pressure sensor 1: -0.0227 bar[0m
+[0;32mI (98274) InputController: Pressure sensor 1: -0.0225 bar[0m
+[0;32mI (98724) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (99174) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (99624) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (100074) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (100524) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (100974) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (101424) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (101874) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (102324) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (102774) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (103224) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (103674) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (104124) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (104574) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (105024) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (105474) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (105924) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (106374) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (106824) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (107274) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (107724) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (108174) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (108624) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (109074) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (109524) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (109974) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (110424) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (110874) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (111324) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (111774) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (112224) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (112674) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (113124) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (113574) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (114024) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (114474) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (114924) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (115374) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (115824) InputController: Pressure sensor 1: -0.0228 bar[0m
+[0;32mI (116274) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (116724) InputController: Pressure sensor 1: -0.0233 bar[0m
+[0;32mI (117174) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (117624) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (118074) InputController: Pressure sensor 1: -0.0229 bar[0m
+[0;32mI (118524) InputController: Pressure sensor 1: -0.0227 bar[0m
+[0;32mI (118974) InputController: Pressure sensor 1: -0.0230 bar[0m
+[0;32mI (119424) InputController: Pressure sensor 1: -0.0231 bar[0m
+[0;32mI (119454) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (119454) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (119454) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (119464) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (119464) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (119474) RobotController: valve_state=0x0000[0m
+[0;32mI (119894) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (120344) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (120794) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (121244) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (121694) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (122144) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (122594) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (123044) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (123494) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (123944) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (124394) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (124844) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (125294) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (125744) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (126194) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (126644) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (127094) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (127544) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (127994) InputController: Pressure sensor 1: -0.0255 bar[0m
+[0;32mI (128444) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (128894) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (129344) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (129794) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (130244) InputController: Pressure sensor 1: -0.0255 bar[0m
+[0;32mI (130694) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (131144) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (131594) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (132044) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (132494) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (132944) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (133394) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (133844) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (134294) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (134744) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (135194) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (135644) InputController: Pressure sensor 1: -0.0227 bar[0m
+[0;32mI (136094) InputController: Pressure sensor 1: -0.0227 bar[0m
+[0;32mI (136544) InputController: Pressure sensor 1: -0.0229 bar[0m
+[0;32mI (136994) InputController: Pressure sensor 1: -0.0227 bar[0m
+[0;32mI (137444) InputController: Pressure sensor 1: -0.0225 bar[0m
+[0;32mI (137894) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (138344) InputController: Pressure sensor 1: -0.0227 bar[0m
+[0;32mI (138794) InputController: Pressure sensor 1: -0.0227 bar[0m
+[0;32mI (139244) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (139694) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (140144) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (140594) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (141044) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (141494) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (141944) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (141974) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (141974) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (141974) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (141984) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (141984) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (141994) RobotController: valve_state=0x0000[0m
+[0;32mI (142414) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (142864) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (143314) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (143764) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (144214) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (144664) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (145114) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (145564) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (146014) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (146464) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (146914) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (147364) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (147814) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (148264) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (148714) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (149164) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (149614) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (150064) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (150514) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (150964) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (151414) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (151864) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (152314) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (152764) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (153214) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (153664) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (154114) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (154564) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (155014) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (155464) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (155914) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (156364) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (156814) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (157264) InputController: Pressure sensor 1: -0.0229 bar[0m
+[0;32mI (157714) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (158164) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (158614) InputController: Pressure sensor 1: -0.0233 bar[0m
+[0;32mI (159064) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (159514) InputController: Pressure sensor 1: -0.0231 bar[0m
+[0;32mI (159964) InputController: Pressure sensor 1: -0.0223 bar[0m
+[0;32mI (160414) InputController: Pressure sensor 1: -0.0223 bar[0m
+[0;32mI (160864) InputController: Pressure sensor 1: -0.0233 bar[0m
+[0;32mI (161314) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (161764) InputController: Pressure sensor 1: -0.0224 bar[0m
+[0;32mI (162214) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (162664) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (163114) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (163564) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (164014) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (164464) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (164494) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (164494) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (164494) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (164504) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (164504) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (164514) RobotController: valve_state=0x0000[0m
+[0;32mI (164934) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (165384) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (165834) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (166284) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (166734) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (167184) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (167634) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (168084) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (168534) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (168984) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (169434) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (169884) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (170334) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (170784) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (171234) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (171684) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (172134) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (172584) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (173034) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (173484) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (173934) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (174384) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (174834) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (175284) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (175734) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (176184) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (176634) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (177084) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (177534) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (177984) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (178434) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (178884) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (179334) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (179784) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (180234) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (180684) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (181134) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (181584) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (182034) InputController: Pressure sensor 1: -0.0230 bar[0m
+[0;32mI (182484) InputController: Pressure sensor 1: -0.0227 bar[0m
+[0;32mI (182934) InputController: Pressure sensor 1: -0.0231 bar[0m
+[0;32mI (183384) InputController: Pressure sensor 1: -0.0226 bar[0m
+[0;32mI (183834) InputController: Pressure sensor 1: -0.0229 bar[0m
+[0;32mI (184284) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (184734) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (185184) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (185634) InputController: Pressure sensor 1: -0.0229 bar[0m
+[0;32mI (186084) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (186534) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (186984) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (187014) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (187014) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (187014) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (187024) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (187024) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (187034) RobotController: valve_state=0x0000[0m
+[0;32mI (187454) InputController: Pressure sensor 1: -0.0279 bar[0m
+[0;32mI (187904) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (188354) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (188804) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (189254) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (189704) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (190154) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (190604) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (191054) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (191504) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (191954) InputController: Pressure sensor 1: -0.0255 bar[0m
+[0;32mI (192404) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (192854) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (193304) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (193754) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (194204) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (194654) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (195104) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (195554) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (196004) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (196454) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (196904) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (197354) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (197804) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (198254) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (198704) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (199154) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (199604) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (200054) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (200504) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (200954) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (201404) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (201854) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (202304) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (202754) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (203204) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (203654) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (204104) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (204554) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (205004) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (205454) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (205904) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (206354) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (206804) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (207254) InputController: Pressure sensor 1: -0.0235 bar[0m
+jointPathCallback called
+Received joint path: 20 waypoints, 5 dof
+Consuming path with 20 waypoints and 5 dof
+[0;32mI (207264) app_main: Received path with 20 waypoints[0m
+[0;32mI (207264) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (207274) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (207274) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (207284) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (207294) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (207294) app_main: Sent waypoint 1 / 20[0m
+[0;32mI (207304) app_main: Reached waypoint 1 / 20[0m
+[0;32mI (207724) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (207764) RobotController: target joint[0]: rad=0.064475 -> steps=53[0m
+[0;32mI (207764) RobotController: target joint[1]: rad=0.035033 -> steps=18[0m
+[0;32mI (207764) RobotController: target joint[2]: rad=0.087884 -> steps=23[0m
+[0;32mI (207764) RobotController: target joint[3]: rad=0.109475 -> steps=28[0m
+[0;32mI (207774) RobotController: target joint[4]: rad=-0.082357 -> steps=-30[0m
+[0;32mI (207784) app_main: Sent waypoint 2 / 20[0m
+[0;32mI (208204) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (208654) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (209104) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (209554) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (209584) RobotController: joint[0] current_steps=4 target_steps=53[0m
+[0;32mI (209584) RobotController: joint[1] current_steps=4 target_steps=18[0m
+[0;32mI (209584) RobotController: joint[2] current_steps=4 target_steps=23[0m
+[0;32mI (209594) RobotController: joint[3] current_steps=4 target_steps=28[0m
+[0;32mI (209594) RobotController: joint[4] current_steps=-4 target_steps=-30[0m
+[0;32mI (209604) RobotController: valve_state=0x0255[0m
+[0;32mI (210024) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (210474) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (210924) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (211374) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (211824) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (212274) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (212724) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (213174) InputController: Pressure sensor 1: -0.0233 bar[0m
+[0;32mI (213624) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (214074) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (214524) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (214974) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (215424) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (215874) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (216324) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (216774) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (217224) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (217674) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (218124) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (218574) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (219024) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (219474) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (219924) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (220374) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (220824) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (221274) InputController: Pressure sensor 1: -0.0255 bar[0m
+[0;32mI (221724) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (222174) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (222624) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (223074) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (223524) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (223974) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (224424) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (224874) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (225324) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (225774) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (226224) InputController: Pressure sensor 1: -0.0255 bar[0m
+[0;32mI (226674) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (227124) InputController: Pressure sensor 1: -0.0255 bar[0m
+[0;32mI (227574) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (228024) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (228474) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (228924) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (229374) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (229824) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (230274) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (230724) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (231174) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (231624) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (232074) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (232104) app_main: Reached waypoint 2 / 20[0m
+[0;32mI (232104) RobotController: joint[0] current_steps=53 target_steps=53[0m
+[0;32mI (232104) RobotController: joint[1] current_steps=18 target_steps=18[0m
+[0;32mI (232104) RobotController: joint[2] current_steps=23 target_steps=23[0m
+[0;32mI (232114) RobotController: joint[3] current_steps=28 target_steps=28[0m
+[0;32mI (232114) RobotController: joint[4] current_steps=-30 target_steps=-30[0m
+[0;32mI (232124) RobotController: valve_state=0x032d[0m
+[0;32mI (232544) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (232584) RobotController: target joint[0]: rad=0.128950 -> steps=106[0m
+[0;32mI (232584) RobotController: target joint[1]: rad=0.070066 -> steps=36[0m
+[0;32mI (232584) RobotController: target joint[2]: rad=0.175768 -> steps=45[0m
+[0;32mI (232584) RobotController: target joint[3]: rad=0.218949 -> steps=56[0m
+[0;32mI (232594) RobotController: target joint[4]: rad=-0.164715 -> steps=-60[0m
+[0;32mI (232604) app_main: Sent waypoint 3 / 20[0m
+[0;32mI (233024) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (233474) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (233924) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (234374) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (234824) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (235274) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (235724) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (236174) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (236624) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (237074) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (237524) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (237974) InputController: Pressure sensor 1: -0.0231 bar[0m
+[0;32mI (238424) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (238874) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (239324) InputController: Pressure sensor 1: -0.0280 bar[0m
+[0;32mI (239774) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (240224) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (240674) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (241124) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (241574) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (242024) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (242474) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (242924) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (243374) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (243824) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (244274) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (244724) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (245174) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (245624) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (246074) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (246524) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (246974) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (247424) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (247874) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (248324) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (248774) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (249224) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (249674) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (250124) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (250574) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (251024) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (251474) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (251924) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (252374) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (252824) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (253274) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (253724) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (254174) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (254624) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (254654) RobotController: joint[0] current_steps=102 target_steps=106[0m
+[0;32mI (254654) RobotController: joint[1] current_steps=36 target_steps=36[0m
+[0;32mI (254654) RobotController: joint[2] current_steps=45 target_steps=45[0m
+[0;32mI (254664) RobotController: joint[3] current_steps=56 target_steps=56[0m
+[0;32mI (254664) RobotController: joint[4] current_steps=-60 target_steps=-60[0m
+[0;32mI (254674) RobotController: valve_state=0x0012[0m
+[0;32mI (255094) InputController: Pressure sensor 1: -0.0255 bar[0m
+[0;32mI (255544) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (255994) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (256444) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (256894) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (256924) app_main: Reached waypoint 3 / 20[0m
+[0;32mI (257344) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (257374) RobotController: target joint[0]: rad=0.193426 -> steps=160[0m
+[0;32mI (257374) RobotController: target joint[1]: rad=0.105099 -> steps=54[0m
+[0;32mI (257374) RobotController: target joint[2]: rad=0.263653 -> steps=68[0m
+[0;32mI (257374) RobotController: target joint[3]: rad=0.328424 -> steps=85[0m
+[0;32mI (257384) RobotController: target joint[4]: rad=-0.247072 -> steps=-91[0m
+[0;32mI (257394) app_main: Sent waypoint 4 / 20[0m
+[0;32mI (257814) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (258274) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (258724) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (259174) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (259624) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (260074) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (260524) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (260974) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (261424) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (261874) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (262324) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (262774) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (263224) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (263674) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (264124) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (264574) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (265024) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (265474) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (265924) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (266374) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (266824) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (267274) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (267724) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (268174) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (268624) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (269074) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (269524) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (269974) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (270424) InputController: Pressure sensor 1: -0.0278 bar[0m
+[0;32mI (270874) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (271324) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (271774) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (272224) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (272674) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (273124) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (273574) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (274024) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (274474) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (274924) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (275374) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (275824) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (276274) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (276724) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (277174) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (277204) RobotController: joint[0] current_steps=150 target_steps=160[0m
+[0;32mI (277204) RobotController: joint[1] current_steps=54 target_steps=54[0m
+[0;32mI (277204) RobotController: joint[2] current_steps=68 target_steps=68[0m
+[0;32mI (277214) RobotController: joint[3] current_steps=85 target_steps=85[0m
+[0;32mI (277214) RobotController: joint[4] current_steps=-91 target_steps=-91[0m
+[0;32mI (277224) RobotController: valve_state=0x014e[0m
+[0;32mI (277654) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (278104) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (278554) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (279004) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (279454) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (279904) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (280354) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (280804) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (281254) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (281704) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (282154) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (282184) app_main: Reached waypoint 4 / 20[0m
+[0;32mI (282604) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (282634) RobotController: target joint[0]: rad=0.257901 -> steps=213[0m
+[0;32mI (282634) RobotController: target joint[1]: rad=0.140132 -> steps=72[0m
+[0;32mI (282634) RobotController: target joint[2]: rad=0.351537 -> steps=91[0m
+[0;32mI (282634) RobotController: target joint[3]: rad=0.437898 -> steps=113[0m
+[0;32mI (282644) RobotController: target joint[4]: rad=-0.329429 -> steps=-121[0m
+[0;32mI (282654) app_main: Sent waypoint 5 / 20[0m
+[0;32mI (283074) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (283524) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (283974) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (284424) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (284874) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (285324) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (285774) InputController: Pressure sensor 1: -0.0255 bar[0m
+[0;32mI (286224) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (286674) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (287124) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (287574) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (288024) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (288474) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (288924) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (289374) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (289824) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (290274) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (290724) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (291174) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (291624) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (292074) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (292524) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (292974) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (293424) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (293874) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (294324) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (294774) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (295224) InputController: Pressure sensor 1: -0.0233 bar[0m
+[0;32mI (295674) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (296124) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (296574) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (297024) InputController: Pressure sensor 1: -0.0280 bar[0m
+[0;32mI (297474) InputController: Pressure sensor 1: -0.0281 bar[0m
+[0;32mI (297924) InputController: Pressure sensor 1: -0.0278 bar[0m
+[0;32mI (298374) InputController: Pressure sensor 1: -0.0231 bar[0m
+[0;32mI (298824) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (299274) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (299724) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (299754) RobotController: joint[0] current_steps=198 target_steps=213[0m
+[0;32mI (299754) RobotController: joint[1] current_steps=72 target_steps=72[0m
+[0;32mI (299754) RobotController: joint[2] current_steps=91 target_steps=91[0m
+[0;32mI (299764) RobotController: joint[3] current_steps=113 target_steps=113[0m
+[0;32mI (299764) RobotController: joint[4] current_steps=-121 target_steps=-121[0m
+[0;32mI (299774) RobotController: valve_state=0x0262[0m
+[0;32mI (300194) InputController: Pressure sensor 1: -0.0278 bar[0m
+[0;32mI (300654) InputController: Pressure sensor 1: -0.0233 bar[0m
+[0;32mI (301104) InputController: Pressure sensor 1: -0.0279 bar[0m
+[0;32mI (301554) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (302004) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (302454) InputController: Pressure sensor 1: -0.0279 bar[0m
+[0;32mI (302904) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (303354) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (303804) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (304254) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (304704) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (305154) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (305604) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (306054) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (306504) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (306954) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (306984) app_main: Reached waypoint 5 / 20[0m
+[0;32mI (307404) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (307434) RobotController: target joint[0]: rad=0.322376 -> steps=266[0m
+[0;32mI (307434) RobotController: target joint[1]: rad=0.175166 -> steps=90[0m
+[0;32mI (307434) RobotController: target joint[2]: rad=0.439421 -> steps=113[0m
+[0;32mI (307434) RobotController: target joint[3]: rad=0.547373 -> steps=141[0m
+[0;32mI (307444) RobotController: target joint[4]: rad=-0.411787 -> steps=-151[0m
+[0;32mI (307454) app_main: Sent waypoint 6 / 20[0m
+[0;32mI (307874) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (308334) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (308784) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (309234) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (309684) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (310134) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (310584) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (311034) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (311484) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (311934) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (312384) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (312834) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (313284) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (313734) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (314184) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (314634) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (315084) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (315534) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (315984) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (316434) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (316884) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (317334) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (317784) InputController: Pressure sensor 1: -0.0255 bar[0m
+[0;32mI (318234) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (318684) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (319134) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (319584) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (320034) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (320484) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (320934) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (321384) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (321834) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (322284) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (322314) RobotController: joint[0] current_steps=246 target_steps=266[0m
+[0;32mI (322314) RobotController: joint[1] current_steps=90 target_steps=90[0m
+[0;32mI (322314) RobotController: joint[2] current_steps=113 target_steps=113[0m
+[0;32mI (322324) RobotController: joint[3] current_steps=141 target_steps=141[0m
+[0;32mI (322324) RobotController: joint[4] current_steps=-151 target_steps=-151[0m
+[0;32mI (322334) RobotController: valve_state=0x015e[0m
+[0;32mI (322764) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (323214) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (323664) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (324114) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (324564) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (325014) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (325464) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (325914) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (326364) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (326814) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (327264) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (327714) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (328164) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (328614) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (329064) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (329514) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (329964) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (330414) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (330864) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (331314) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (331764) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (331794) app_main: Reached waypoint 6 / 20[0m
+[0;32mI (332214) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (332244) RobotController: target joint[0]: rad=0.386851 -> steps=319[0m
+[0;32mI (332244) RobotController: target joint[1]: rad=0.210199 -> steps=108[0m
+[0;32mI (332244) RobotController: target joint[2]: rad=0.527305 -> steps=136[0m
+[0;32mI (332244) RobotController: target joint[3]: rad=0.656847 -> steps=169[0m
+[0;32mI (332254) RobotController: target joint[4]: rad=-0.494144 -> steps=-181[0m
+[0;32mI (332264) app_main: Sent waypoint 7 / 20[0m
+[0;32mI (332684) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (333134) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (333584) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (334034) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (334484) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (334934) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (335384) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (335834) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (336284) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (336734) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (337184) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (337634) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (338084) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (338534) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (338984) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (339434) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (339884) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (340334) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (340784) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (341234) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (341684) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (342134) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (342584) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (343034) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (343484) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (343934) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (344384) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (344834) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (344864) RobotController: joint[0] current_steps=294 target_steps=319[0m
+[0;32mI (344864) RobotController: joint[1] current_steps=108 target_steps=108[0m
+[0;32mI (344864) RobotController: joint[2] current_steps=136 target_steps=136[0m
+[0;32mI (344874) RobotController: joint[3] current_steps=169 target_steps=169[0m
+[0;32mI (344874) RobotController: joint[4] current_steps=-179 target_steps=-181[0m
+[0;32mI (344884) RobotController: valve_state=0x0042[0m
+[0;32mI (345314) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (345764) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (346214) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (346664) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (347114) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (347564) InputController: Pressure sensor 1: -0.0279 bar[0m
+[0;32mI (348014) InputController: Pressure sensor 1: -0.0280 bar[0m
+[0;32mI (348464) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (348914) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (349364) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (349814) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (350264) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (350714) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (351164) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (351614) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (352064) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (352514) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (352964) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (353414) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (353864) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (354314) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (354764) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (355214) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (355664) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (356114) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (356564) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (356594) app_main: Reached waypoint 7 / 20[0m
+[0;32mI (357014) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (357044) RobotController: target joint[0]: rad=0.451326 -> steps=372[0m
+[0;32mI (357044) RobotController: target joint[1]: rad=0.245232 -> steps=126[0m
+[0;32mI (357044) RobotController: target joint[2]: rad=0.615189 -> steps=159[0m
+[0;32mI (357044) RobotController: target joint[3]: rad=0.766322 -> steps=198[0m
+[0;32mI (357054) RobotController: target joint[4]: rad=-0.576501 -> steps=-211[0m
+[0;32mI (357064) app_main: Sent waypoint 8 / 20[0m
+[0;32mI (357484) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (357934) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (358384) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (358834) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (359284) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (359734) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (360184) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (360634) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (361084) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (361534) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (361984) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (362434) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (362884) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (363334) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (363784) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (364234) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (364684) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (365134) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (365584) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (366034) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (366484) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (366934) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (367384) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (367414) RobotController: joint[0] current_steps=342 target_steps=372[0m
+[0;32mI (367414) RobotController: joint[1] current_steps=126 target_steps=126[0m
+[0;32mI (367414) RobotController: joint[2] current_steps=159 target_steps=159[0m
+[0;32mI (367424) RobotController: joint[3] current_steps=192 target_steps=198[0m
+[0;32mI (367424) RobotController: joint[4] current_steps=-204 target_steps=-211[0m
+[0;32mI (367434) RobotController: valve_state=0x026e[0m
+[0;32mI (367864) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (368314) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (368764) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (369214) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (369664) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (370114) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (370564) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (371014) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (371464) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (371914) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (372364) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (372814) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (373264) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (373714) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (374164) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (374614) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (375064) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (375514) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (375964) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (376414) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (376864) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (377314) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (377764) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (378214) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (378664) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (379114) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (379564) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (380014) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (380464) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (380914) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (381364) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (381394) app_main: Reached waypoint 8 / 20[0m
+[0;32mI (381814) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (381844) RobotController: target joint[0]: rad=0.484736 -> steps=400[0m
+[0;32mI (381844) RobotController: target joint[1]: rad=0.261942 -> steps=135[0m
+[0;32mI (381844) RobotController: target joint[2]: rad=0.667409 -> steps=172[0m
+[0;32mI (381844) RobotController: target joint[3]: rad=0.823630 -> steps=212[0m
+[0;32mI (381854) RobotController: target joint[4]: rad=-0.627428 -> steps=-230[0m
+[0;32mI (381864) app_main: Sent waypoint 9 / 20[0m
+[0;32mI (382284) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (382734) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (383184) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (383634) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (384084) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (384534) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (384984) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (385434) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (385884) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (386334) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (386784) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (387234) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (387684) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (388134) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (388584) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (389034) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (389484) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (389934) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (389964) RobotController: joint[0] current_steps=390 target_steps=400[0m
+[0;32mI (389964) RobotController: joint[1] current_steps=135 target_steps=135[0m
+[0;32mI (389964) RobotController: joint[2] current_steps=172 target_steps=172[0m
+[0;32mI (389974) RobotController: joint[3] current_steps=212 target_steps=212[0m
+[0;32mI (389974) RobotController: joint[4] current_steps=-229 target_steps=-230[0m
+[0;32mI (389984) RobotController: valve_state=0x030a[0m
+[0;32mI (390414) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (390864) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (391314) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (391764) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (392214) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (392664) InputController: Pressure sensor 1: -0.0231 bar[0m
+[0;32mI (393114) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (393564) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (394014) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (394464) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (394914) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (394944) app_main: Reached waypoint 9 / 20[0m
+[0;32mI (395364) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (395394) RobotController: target joint[0]: rad=0.518145 -> steps=428[0m
+[0;32mI (395394) RobotController: target joint[1]: rad=0.278651 -> steps=144[0m
+[0;32mI (395394) RobotController: target joint[2]: rad=0.719629 -> steps=186[0m
+[0;32mI (395394) RobotController: target joint[3]: rad=0.880938 -> steps=227[0m
+[0;32mI (395404) RobotController: target joint[4]: rad=-0.678354 -> steps=-249[0m
+[0;32mI (395414) app_main: Sent waypoint 10 / 20[0m
+[0;32mI (395834) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (396284) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (396734) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (397184) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (397634) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (398084) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (398534) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (398984) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (399434) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (399884) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (400334) InputController: Pressure sensor 1: -0.0278 bar[0m
+[0;32mI (400784) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (401234) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (401684) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (402134) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (402584) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (403034) InputController: Pressure sensor 1: -0.0232 bar[0m
+[0;32mI (403484) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (403934) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (404384) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (404834) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (405284) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (405734) InputController: Pressure sensor 1: -0.0281 bar[0m
+[0;32mI (406184) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (406634) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (407084) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (407534) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (407984) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (408434) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (408464) app_main: Reached waypoint 10 / 20[0m
+[0;32mI (408884) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (408914) RobotController: target joint[0]: rad=0.551554 -> steps=455[0m
+[0;32mI (408914) RobotController: target joint[1]: rad=0.295361 -> steps=152[0m
+[0;32mI (408914) RobotController: target joint[2]: rad=0.771849 -> steps=199[0m
+[0;32mI (408914) RobotController: target joint[3]: rad=0.938246 -> steps=242[0m
+[0;32mI (408924) RobotController: target joint[4]: rad=-0.729281 -> steps=-267[0m
+[0;32mI (408934) app_main: Sent waypoint 11 / 20[0m
+[0;32mI (409354) InputController: Pressure sensor 1: -0.0235 bar[0m
+[0;32mI (409804) InputController: Pressure sensor 1: -0.0234 bar[0m
+[0;32mI (410254) InputController: Pressure sensor 1: -0.0281 bar[0m
+[0;32mI (410704) InputController: Pressure sensor 1: -0.0284 bar[0m
+[0;32mI (411154) InputController: Pressure sensor 1: -0.0281 bar[0m
+[0;32mI (411604) InputController: Pressure sensor 1: -0.0278 bar[0m
+[0;32mI (412054) InputController: Pressure sensor 1: -0.0279 bar[0m
+[0;32mI (412504) InputController: Pressure sensor 1: -0.0279 bar[0m
+[0;32mI (412534) RobotController: joint[0] current_steps=436 target_steps=455[0m
+[0;32mI (412534) RobotController: joint[1] current_steps=152 target_steps=152[0m
+[0;32mI (412534) RobotController: joint[2] current_steps=194 target_steps=199[0m
+[0;32mI (412544) RobotController: joint[3] current_steps=235 target_steps=242[0m
+[0;32mI (412544) RobotController: joint[4] current_steps=-257 target_steps=-267[0m
+[0;32mI (412554) RobotController: valve_state=0x0321[0m
+[0;32mI (412984) InputController: Pressure sensor 1: -0.0279 bar[0m
+[0;32mI (413434) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (413884) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (414334) InputController: Pressure sensor 1: -0.0283 bar[0m
+[0;32mI (414784) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (415234) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (415684) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (416134) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (416584) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (417034) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (417484) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (417934) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (418384) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (418834) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (419284) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (419734) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (420184) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (420634) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (421084) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (421534) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (421564) app_main: Reached waypoint 11 / 20[0m
+[0;32mI (421984) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (422014) RobotController: target joint[0]: rad=0.584963 -> steps=483[0m
+[0;32mI (422014) RobotController: target joint[1]: rad=0.312071 -> steps=161[0m
+[0;32mI (422014) RobotController: target joint[2]: rad=0.824068 -> steps=212[0m
+[0;32mI (422014) RobotController: target joint[3]: rad=0.995554 -> steps=257[0m
+[0;32mI (422024) RobotController: target joint[4]: rad=-0.780207 -> steps=-286[0m
+[0;32mI (422034) app_main: Sent waypoint 12 / 20[0m
+[0;32mI (422454) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (422904) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (423354) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (423804) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (424254) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (424704) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (425154) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (425604) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (426054) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (426504) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (426954) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (427404) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (427854) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (428304) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (428754) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (429204) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (429654) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (430104) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (430554) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (431004) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (431454) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (431904) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (432354) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (432804) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (433254) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (433704) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (434154) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (434604) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (435054) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (435084) app_main: Reached waypoint 12 / 20[0m
+[0;32mI (435084) RobotController: joint[0] current_steps=483 target_steps=483[0m
+[0;32mI (435084) RobotController: joint[1] current_steps=161 target_steps=161[0m
+[0;32mI (435084) RobotController: joint[2] current_steps=212 target_steps=212[0m
+[0;32mI (435094) RobotController: joint[3] current_steps=257 target_steps=257[0m
+[0;32mI (435094) RobotController: joint[4] current_steps=-286 target_steps=-286[0m
+[0;32mI (435104) RobotController: valve_state=0x0346[0m
+[0;32mI (435534) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (435564) RobotController: target joint[0]: rad=0.618373 -> steps=510[0m
+[0;32mI (435564) RobotController: target joint[1]: rad=0.328781 -> steps=170[0m
+[0;32mI (435564) RobotController: target joint[2]: rad=0.876288 -> steps=226[0m
+[0;32mI (435564) RobotController: target joint[3]: rad=1.052862 -> steps=271[0m
+[0;32mI (435574) RobotController: target joint[4]: rad=-0.831134 -> steps=-305[0m
+[0;32mI (435584) app_main: Sent waypoint 13 / 20[0m
+[0;32mI (436004) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (436454) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (436904) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (437354) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (437804) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (438254) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (438704) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (439154) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (439604) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (440054) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (440504) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (440954) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (441404) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (441854) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (442304) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (442754) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (443204) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (443654) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (444104) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (444554) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (445004) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (445454) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (445904) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (446354) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (446804) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (447254) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (447704) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (448154) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (448184) app_main: Reached waypoint 13 / 20[0m
+[0;32mI (448604) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (448634) RobotController: target joint[0]: rad=0.651782 -> steps=538[0m
+[0;32mI (448634) RobotController: target joint[1]: rad=0.345490 -> steps=178[0m
+[0;32mI (448634) RobotController: target joint[2]: rad=0.928508 -> steps=239[0m
+[0;32mI (448634) RobotController: target joint[3]: rad=1.110169 -> steps=286[0m
+[0;32mI (448644) RobotController: target joint[4]: rad=-0.882060 -> steps=-323[0m
+[0;32mI (448654) app_main: Sent waypoint 14 / 20[0m
+[0;32mI (449074) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (449524) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (449974) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (450424) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (450874) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (451324) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (451774) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (452224) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (452674) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (453124) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (453574) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (454024) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (454474) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (454924) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (455374) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (455824) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (456274) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (456724) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (457174) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (457624) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (457654) RobotController: joint[0] current_steps=530 target_steps=538[0m
+[0;32mI (457654) RobotController: joint[1] current_steps=178 target_steps=178[0m
+[0;32mI (457654) RobotController: joint[2] current_steps=239 target_steps=239[0m
+[0;32mI (457664) RobotController: joint[3] current_steps=286 target_steps=286[0m
+[0;32mI (457664) RobotController: joint[4] current_steps=-323 target_steps=-323[0m
+[0;32mI (457674) RobotController: valve_state=0x01ee[0m
+[0;32mI (458104) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (458554) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (459004) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (459454) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (459904) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (460354) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (460804) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (461254) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (461704) InputController: Pressure sensor 1: -0.0285 bar[0m
+[0;32mI (461734) app_main: Reached waypoint 14 / 20[0m
+[0;32mI (462154) InputController: Pressure sensor 1: -0.0284 bar[0m
+[0;32mI (462184) RobotController: target joint[0]: rad=0.685191 -> steps=565[0m
+[0;32mI (462184) RobotController: target joint[1]: rad=0.362200 -> steps=187[0m
+[0;32mI (462184) RobotController: target joint[2]: rad=0.980728 -> steps=253[0m
+[0;32mI (462184) RobotController: target joint[3]: rad=1.167477 -> steps=301[0m
+[0;32mI (462194) RobotController: target joint[4]: rad=-0.932987 -> steps=-342[0m
+[0;32mI (462204) app_main: Sent waypoint 15 / 20[0m
+[0;32mI (462624) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (463084) InputController: Pressure sensor 1: -0.0283 bar[0m
+[0;32mI (463534) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (463984) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (464434) InputController: Pressure sensor 1: -0.0278 bar[0m
+[0;32mI (464884) InputController: Pressure sensor 1: -0.0278 bar[0m
+[0;32mI (465334) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (465784) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (466234) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (466684) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (467134) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (467584) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (468034) InputController: Pressure sensor 1: -0.0280 bar[0m
+[0;32mI (468484) InputController: Pressure sensor 1: -0.0278 bar[0m
+[0;32mI (468934) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (469384) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (469834) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (470284) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (470734) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (471184) InputController: Pressure sensor 1: -0.0278 bar[0m
+[0;32mI (471634) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (472084) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (472534) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (472984) InputController: Pressure sensor 1: -0.0278 bar[0m
+[0;32mI (473434) InputController: Pressure sensor 1: -0.0279 bar[0m
+[0;32mI (473884) InputController: Pressure sensor 1: -0.0278 bar[0m
+[0;32mI (474334) InputController: Pressure sensor 1: -0.0281 bar[0m
+[0;32mI (474784) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (474814) app_main: Reached waypoint 15 / 20[0m
+[0;32mI (475234) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (475264) RobotController: target joint[0]: rad=0.718600 -> steps=593[0m
+[0;32mI (475264) RobotController: target joint[1]: rad=0.378910 -> steps=195[0m
+[0;32mI (475264) RobotController: target joint[2]: rad=1.032947 -> steps=266[0m
+[0;32mI (475264) RobotController: target joint[3]: rad=1.224785 -> steps=316[0m
+[0;32mI (475274) RobotController: target joint[4]: rad=-0.983913 -> steps=-361[0m
+[0;32mI (475284) app_main: Sent waypoint 16 / 20[0m
+[0;32mI (475714) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (476164) InputController: Pressure sensor 1: -0.0279 bar[0m
+[0;32mI (476614) InputController: Pressure sensor 1: -0.0279 bar[0m
+[0;32mI (477064) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (477514) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (477964) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (478414) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (478864) InputController: Pressure sensor 1: -0.0279 bar[0m
+[0;32mI (479314) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (479764) InputController: Pressure sensor 1: -0.0278 bar[0m
+[0;32mI (480214) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (480244) RobotController: joint[0] current_steps=576 target_steps=593[0m
+[0;32mI (480244) RobotController: joint[1] current_steps=195 target_steps=195[0m
+[0;32mI (480244) RobotController: joint[2] current_steps=264 target_steps=266[0m
+[0;32mI (480254) RobotController: joint[3] current_steps=312 target_steps=316[0m
+[0;32mI (480254) RobotController: joint[4] current_steps=-353 target_steps=-361[0m
+[0;32mI (480264) RobotController: valve_state=0x0359[0m
+[0;32mI (480694) InputController: Pressure sensor 1: -0.0279 bar[0m
+[0;32mI (481144) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (481594) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (482044) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (482494) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (482944) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (483394) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (483844) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (484294) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (484744) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (485194) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (485644) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (486094) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (486544) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (486994) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (487444) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (487894) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (488344) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (488374) app_main: Reached waypoint 16 / 20[0m
+[0;32mI (488794) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (488824) RobotController: target joint[0]: rad=0.752010 -> steps=620[0m
+[0;32mI (488824) RobotController: target joint[1]: rad=0.395620 -> steps=204[0m
+[0;32mI (488824) RobotController: target joint[2]: rad=1.085167 -> steps=280[0m
+[0;32mI (488824) RobotController: target joint[3]: rad=1.282093 -> steps=331[0m
+[0;32mI (488834) RobotController: target joint[4]: rad=-1.034840 -> steps=-379[0m
+[0;32mI (488844) app_main: Sent waypoint 17 / 20[0m
+[0;32mI (489264) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (489724) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (490174) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (490624) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (491074) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (491524) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (491974) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (492424) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (492874) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (493324) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (493774) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (494224) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (494674) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (495124) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (495574) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (496024) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (496474) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (496924) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (497374) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (497824) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (498274) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (498724) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (499174) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (499624) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (500074) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (500524) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (500974) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (501424) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (501454) app_main: Reached waypoint 17 / 20[0m
+[0;32mI (501874) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (501904) RobotController: target joint[0]: rad=0.785419 -> steps=648[0m
+[0;32mI (501904) RobotController: target joint[1]: rad=0.412330 -> steps=213[0m
+[0;32mI (501904) RobotController: target joint[2]: rad=1.137387 -> steps=293[0m
+[0;32mI (501904) RobotController: target joint[3]: rad=1.339401 -> steps=345[0m
+[0;32mI (501914) RobotController: target joint[4]: rad=-1.085766 -> steps=-398[0m
+[0;32mI (501924) app_main: Sent waypoint 18 / 20[0m
+[0;32mI (502344) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (502794) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (502824) RobotController: joint[0] current_steps=622 target_steps=648[0m
+[0;32mI (502824) RobotController: joint[1] current_steps=206 target_steps=213[0m
+[0;32mI (502824) RobotController: joint[2] current_steps=282 target_steps=293[0m
+[0;32mI (502834) RobotController: joint[3] current_steps=333 target_steps=345[0m
+[0;32mI (502834) RobotController: joint[4] current_steps=-381 target_steps=-398[0m
+[0;32mI (502844) RobotController: valve_state=0x03ea[0m
+[0;32mI (503274) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (503724) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (504174) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (504624) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (505074) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (505524) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (505974) InputController: Pressure sensor 1: -0.0261 bar[0m
+[0;32mI (506424) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (506874) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (507324) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (507774) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (508224) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (508674) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (509124) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (509574) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (510024) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (510474) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (510924) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (511374) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (511824) InputController: Pressure sensor 1: -0.0250 bar[0m
+[0;32mI (512274) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (512724) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (513174) InputController: Pressure sensor 1: -0.0252 bar[0m
+[0;32mI (513624) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (514074) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (514524) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (514974) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (515004) app_main: Reached waypoint 18 / 20[0m
+[0;32mI (515424) InputController: Pressure sensor 1: -0.0251 bar[0m
+[0;32mI (515454) RobotController: target joint[0]: rad=0.818828 -> steps=676[0m
+[0;32mI (515454) RobotController: target joint[1]: rad=0.429039 -> steps=221[0m
+[0;32mI (515454) RobotController: target joint[2]: rad=1.189607 -> steps=307[0m
+[0;32mI (515454) RobotController: target joint[3]: rad=1.396709 -> steps=360[0m
+[0;32mI (515464) RobotController: target joint[4]: rad=-1.136692 -> steps=-417[0m
+[0;32mI (515474) app_main: Sent waypoint 19 / 20[0m
+[0;32mI (515904) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (516354) InputController: Pressure sensor 1: -0.0255 bar[0m
+[0;32mI (516804) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (517254) InputController: Pressure sensor 1: -0.0255 bar[0m
+[0;32mI (517704) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (518154) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (518604) InputController: Pressure sensor 1: -0.0254 bar[0m
+[0;32mI (519054) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (519504) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (519954) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (520404) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (520854) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (521304) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (521754) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (522204) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (522654) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (523104) InputController: Pressure sensor 1: -0.0243 bar[0m
+[0;32mI (523554) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (524004) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (524454) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (524904) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (525354) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (525384) RobotController: joint[0] current_steps=670 target_steps=676[0m
+[0;32mI (525384) RobotController: joint[1] current_steps=221 target_steps=221[0m
+[0;32mI (525384) RobotController: joint[2] current_steps=307 target_steps=307[0m
+[0;32mI (525394) RobotController: joint[3] current_steps=360 target_steps=360[0m
+[0;32mI (525394) RobotController: joint[4] current_steps=-417 target_steps=-417[0m
+[0;32mI (525404) RobotController: valve_state=0x0226[0m
+[0;32mI (525834) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (526284) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (526734) InputController: Pressure sensor 1: -0.0242 bar[0m
+[0;32mI (527184) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (527634) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (528084) InputController: Pressure sensor 1: -0.0249 bar[0m
+[0;32mI (528534) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (528564) app_main: Reached waypoint 19 / 20[0m
+[0;32mI (528984) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (529014) RobotController: target joint[0]: rad=0.852237 -> steps=703[0m
+[0;32mI (529014) RobotController: target joint[1]: rad=0.445749 -> steps=230[0m
+[0;32mI (529014) RobotController: target joint[2]: rad=1.241826 -> steps=320[0m
+[0;32mI (529014) RobotController: target joint[3]: rad=1.454017 -> steps=375[0m
+[0;32mI (529024) RobotController: target joint[4]: rad=-1.187619 -> steps=-435[0m
+[0;32mI (529034) app_main: Sent waypoint 20 / 20[0m
+[0;32mI (529454) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (529904) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (530354) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (530804) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (531254) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (531704) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (532154) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (532604) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (533054) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (533504) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (533954) InputController: Pressure sensor 1: -0.0247 bar[0m
+[0;32mI (534404) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (534854) InputController: Pressure sensor 1: -0.0239 bar[0m
+[0;32mI (535304) InputController: Pressure sensor 1: -0.0236 bar[0m
+[0;32mI (535754) InputController: Pressure sensor 1: -0.0244 bar[0m
+[0;32mI (536204) InputController: Pressure sensor 1: -0.0281 bar[0m
+[0;32mI (536654) InputController: Pressure sensor 1: -0.0281 bar[0m
+[0;32mI (537104) InputController: Pressure sensor 1: -0.0238 bar[0m
+[0;32mI (537554) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (538004) InputController: Pressure sensor 1: -0.0245 bar[0m
+[0;32mI (538454) InputController: Pressure sensor 1: -0.0282 bar[0m
+[0;32mI (538904) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (539354) InputController: Pressure sensor 1: -0.0280 bar[0m
+[0;32mI (539804) InputController: Pressure sensor 1: -0.0241 bar[0m
+[0;32mI (540254) InputController: Pressure sensor 1: -0.0246 bar[0m
+[0;32mI (540704) InputController: Pressure sensor 1: -0.0248 bar[0m
+[0;32mI (541154) InputController: Pressure sensor 1: -0.0281 bar[0m
+[0;32mI (541604) InputController: Pressure sensor 1: -0.0282 bar[0m
+[0;32mI (541634) app_main: Reached waypoint 20 / 20[0m
+[0;32mI (541634) app_main: Path execution finished[0m
+[0;32mI (542054) InputController: Pressure sensor 1: -0.0240 bar[0m
+[0;32mI (542504) InputController: Pressure sensor 1: -0.0278 bar[0m
+[0;32mI (542954) InputController: Pressure sensor 1: -0.0284 bar[0m
+[0;32mI (543404) InputController: Pressure sensor 1: -0.0237 bar[0m
+[0;32mI (543854) InputController: Pressure sensor 1: -0.0283 bar[0m
+[0;32mI (544304) InputController: Pressure sensor 1: -0.0279 bar[0m
+[0;32mI (544754) InputController: Pressure sensor 1: -0.0280 bar[0m
+[0;32mI (545204) InputController: Pressure sensor 1: -0.0282 bar[0m
+[0;32mI (545654) InputController: Pressure sensor 1: -0.0279 bar[0m
+[0;32mI (546104) InputController: Pressure sensor 1: -0.0286 bar[0m
+[0;32mI (546554) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (547004) InputController: Pressure sensor 1: -0.0285 bar[0m
+[0;32mI (547454) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (547904) InputController: Pressure sensor 1: -0.0280 bar[0m
+[0;32mI (547934) RobotController: joint[0] current_steps=703 target_steps=703[0m
+[0;32mI (547934) RobotController: joint[1] current_steps=230 target_steps=230[0m
+[0;32mI (547934) RobotController: joint[2] current_steps=320 target_steps=320[0m
+[0;32mI (547944) RobotController: joint[3] current_steps=375 target_steps=375[0m
+[0;32mI (547944) RobotController: joint[4] current_steps=-435 target_steps=-435[0m
+[0;32mI (547954) RobotController: valve_state=0x018e[0m
+[0;32mI (548374) InputController: Pressure sensor 1: -0.0281 bar[0m
+[0;32mI (548834) InputController: Pressure sensor 1: -0.0285 bar[0m
+[0;32mI (549284) InputController: Pressure sensor 1: -0.0278 bar[0m
+[0;32mI (549734) InputController: Pressure sensor 1: -0.0284 bar[0m
+[0;32mI (550184) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (550634) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (551084) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (551534) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (551984) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (552434) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (552884) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (553334) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (553784) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (554234) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (554684) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (555134) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (555584) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (556034) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (556484) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (556934) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (557384) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (557834) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (558284) InputController: Pressure sensor 1: -0.0279 bar[0m
+[0;32mI (558734) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (559184) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (559634) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (560084) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (560534) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (560984) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (561434) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (561884) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (562334) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (562784) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (563234) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (563684) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (564134) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (564584) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (565034) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (565484) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (565934) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (566384) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (566834) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (567284) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (567734) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (568184) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (568634) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (569084) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (569534) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (569984) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (570434) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (570464) RobotController: joint[0] current_steps=703 target_steps=703[0m
+[0;32mI (570464) RobotController: joint[1] current_steps=230 target_steps=230[0m
+[0;32mI (570464) RobotController: joint[2] current_steps=320 target_steps=320[0m
+[0;32mI (570474) RobotController: joint[3] current_steps=375 target_steps=375[0m
+[0;32mI (570474) RobotController: joint[4] current_steps=-435 target_steps=-435[0m
+[0;32mI (570484) RobotController: valve_state=0x018e[0m
+[0;32mI (570904) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (571364) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (571814) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (572264) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (572714) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (573164) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (573614) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (574064) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (574514) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (574964) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (575414) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (575864) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (576314) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (576764) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (577214) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (577664) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (578114) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (578564) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (579014) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (579464) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (579914) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (580364) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (580814) InputController: Pressure sensor 1: -0.0276 bar[0m
+[0;32mI (581264) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (581714) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (582164) InputController: Pressure sensor 1: -0.0279 bar[0m
+[0;32mI (582614) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (583064) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (583514) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (583964) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (584414) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (584864) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (585314) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (585764) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (586214) InputController: Pressure sensor 1: -0.0271 bar[0m
+[0;32mI (586664) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (587114) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (587564) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (588014) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (588464) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (588914) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (589364) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (589814) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (590264) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (590714) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (591164) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (591614) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (592064) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (592514) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (592964) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (592994) RobotController: joint[0] current_steps=703 target_steps=703[0m
+[0;32mI (592994) RobotController: joint[1] current_steps=230 target_steps=230[0m
+[0;32mI (592994) RobotController: joint[2] current_steps=320 target_steps=320[0m
+[0;32mI (593004) RobotController: joint[3] current_steps=375 target_steps=375[0m
+[0;32mI (593004) RobotController: joint[4] current_steps=-435 target_steps=-435[0m
+[0;32mI (593014) RobotController: valve_state=0x018e[0m
+[0;32mI (593444) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (593894) InputController: Pressure sensor 1: -0.0260 bar[0m
+[0;32mI (594344) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (594794) InputController: Pressure sensor 1: -0.0266 bar[0m
+[0;32mI (595244) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (595694) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (596144) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (596594) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (597044) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (597494) InputController: Pressure sensor 1: -0.0258 bar[0m
+[0;32mI (597944) InputController: Pressure sensor 1: -0.0253 bar[0m
+[0;32mI (598394) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (598844) InputController: Pressure sensor 1: -0.0256 bar[0m
+[0;32mI (599294) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (599744) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (600194) InputController: Pressure sensor 1: -0.0257 bar[0m
+[0;32mI (600644) InputController: Pressure sensor 1: -0.0259 bar[0m
+[0;32mI (601094) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (601544) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (601994) InputController: Pressure sensor 1: -0.0262 bar[0m
+[0;32mI (602444) InputController: Pressure sensor 1: -0.0264 bar[0m
+[0;32mI (602894) InputController: Pressure sensor 1: -0.0267 bar[0m
+[0;32mI (603344) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (603794) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (604244) InputController: Pressure sensor 1: -0.0269 bar[0m
+[0;32mI (604694) InputController: Pressure sensor 1: -0.0263 bar[0m
+[0;32mI (605144) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (605594) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (606044) InputController: Pressure sensor 1: -0.0265 bar[0m
+[0;32mI (606494) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (606944) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (607394) InputController: Pressure sensor 1: -0.0268 bar[0m
+[0;32mI (607844) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (608294) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (608744) InputController: Pressure sensor 1: -0.0275 bar[0m
+[0;32mI (609194) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (609644) InputController: Pressure sensor 1: -0.0272 bar[0m
+[0;32mI (610094) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (610544) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (610994) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (611444) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (611894) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (612344) InputController: Pressure sensor 1: -0.0278 bar[0m
+[0;32mI (612794) InputController: Pressure sensor 1: -0.0270 bar[0m
+[0;32mI (613244) InputController: Pressure sensor 1: -0.0283 bar[0m
+[0;32mI (613694) InputController: Pressure sensor 1: -0.0282 bar[0m
+[0;32mI (614144) InputController: Pressure sensor 1: -0.0277 bar[0m
+[0;32mI (614594) InputController: Pressure sensor 1: -0.0284 bar[0m
+[0;32mI (615044) InputController: Pressure sensor 1: -0.0274 bar[0m
+[0;32mI (615494) InputController: Pressure sensor 1: -0.0273 bar[0m
+[0;32mI (615524) RobotController: joint[0] current_steps=703 target_steps=703[0m
+[0;32mI (615524) RobotController: joint[1] current_steps=230 target_steps=230[0m
+[0;32mI (615524) RobotController: joint[2] current_steps=320 target_steps=320[0m
+[0;32mI (615534) RobotController: joint[3] current_steps=375 target_steps=375[0m
+[0;32mI (615534) RobotController: joint[4] current_steps=-435 target_steps=-435[0m
+[0;32mI (615544) RobotController: valve_state=0x018e[0m
+[0;32mI (615964) InputController: Pressure sensor 1: -0.0282 bar[0m
+[0;32mI (616424) InputController: Pressure sensor 1: -0.0283 bar[0m
+[0;32mI (616874) InputController: Pressure sensor 1: -0.0283 bar[0m
+[0;32mI (617324) InputController: Pressure sensor 1: -0.0285 bar[0m
+[0;32mI (617774) InputController: Pressure sensor 1: -0.0280 bar[0m
+[0;32mI (618224) InputController: Pressure sensor 1: -0.0283 bar[0m
+[0;32mI (618674) InputController: Pressure sensor 1: -0.0281 bar[0m
+[0;32mI (619124) InputController: Pressure sensor 1: -0.0281 bar[0m
+[0;32mI (619574) InputController: Pressure sensor 1: -0.

@@ -6,6 +6,7 @@
 #include "esp_heap_caps.h"
 
 #include "InputController/InputController.h"
+#include "MicroRosController/MicroRosManager.h"
 
 static const char* TAG = "CanvasManager";
 
@@ -111,7 +112,15 @@ void CanvasManager::drawHome(DisplayCanvas& display, InputModes mode, const Robo
     display.print("page.");
 
     display.setCursor(10, 185);
-    display.print("WiFi: N/A");
+    char ip_str[20] = {0};
+    if (MicroRosManager::getWifiIp(ip_str, sizeof(ip_str))) {
+        display.print("IP: ");
+        display.print(ip_str);
+    } else if (MicroRosManager::isWifiConnected()) {
+        display.print("WiFi: Connected");
+    } else {
+        display.print("WiFi: Not Connected");
+    }
 }
 
 void CanvasManager::drawRobotInfoScreen(DisplayCanvas& display, const RobotState& robotState, const RobotController& robotController) {

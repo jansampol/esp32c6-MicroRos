@@ -9,6 +9,12 @@
 // TODO: Based on this variable configure the correct pinmappings, mainly for I2C and SPI pins.
 #define PROTOTYPE_ESP true      
 
+// Temporary runtime selector while PCB supports only one SPI path at a time.
+// Change only this line to switch quickly between modes.
+#define SPI_RUNTIME_MODE_SPI0_ONLY 0
+#define SPI_RUNTIME_MODE_SPI1_ONLY 1
+#define ACTIVE_SPI_RUNTIME_MODE SPI_RUNTIME_MODE_SPI1_ONLY
+
 // Wifi setup
 #define USING_WEB_SERVER true
 // set false at home and add own credentials below (Dont push those to git)

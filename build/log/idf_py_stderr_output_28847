@@ -1,0 +1,1297 @@
+Command: /Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf_monitor.py -p /dev/cu.usbserial-140 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf -m '/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf.py' '-p' '/dev/cu.usbserial-140'
+[0;33m--- esp-idf-monitor 1.9.0 on /dev/cu.usbserial-140 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40000000: [0;33m_start[0m[0m in [0;32mROM[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m103[0m
+[0m--- 0x420f6b24: [0;33mmain_task[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/freertos/app_startup.c[0m[0m:[1;31m209[0m
+[0m--- 0x40800001: [0;33m_vector_table[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/riscv/vectors_intc.S[0m[0m:[1;31m54[0m
+[0;33m
+--- Backtrace:
+
+[0m
+[0m--- 0x4001975a: [0;33msoftware_reset_cpu[0m[0m in [0;32mROM[0m
+[0m--- 0x4086b910: [0;33mesp_bootloader_get_description[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/esp_bootloader_format/esp_bootloader_desc.c[0m[0m:[1;31m39[0m
+[0m--- 0x4086e610: [0;33mesp_flash_encryption_enabled[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader_support/src/flash_encrypt.c[0m[0m:[1;31m89[0m
+[0m--- 0x4086b91a: [0;33mcall_start_cpu0[0m[0m at [0;32m/Users/jansampolramirez/esp/esp-idf-v5.5/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4200bae4: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/main/app_main.cpp[0m[0m:[1;31m102[0m
+[0;33m--- Stack dump detected[0m
+[0m--- 0x4200bae6: [0;33mapp_main[0m[0m at [0;32m/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/ma

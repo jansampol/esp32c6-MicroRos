@@ -5,6 +5,7 @@
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "SystemParameters.h"
 
 static const char *TAG = "RobotController";
 
@@ -15,10 +16,14 @@ RobotController::RobotController() :
 
 void RobotController::begin() {
 
-    // SPI1 DISABLED FOR SPI0-ONLY TESTING:
-    // _spi1Manager.begin();
-    // turnOffValves();
+    #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI1_ONLY
+    _spi1Manager.begin();
+    turnOffValves();
     _valveState = 0x0000;
+    #else
+    // In SPI0-only mode we must not touch SPI1.
+    _valveState = 0x0000;
+    #endif
 
     setupPurpleMamri();
     resetSteppers();
@@ -282,17 +287,17 @@ void RobotController::testValves() {
     // =============================
     // ORIGINAL
     // =============================
-    // SPI1 DISABLED FOR SPI0-ONLY TESTING:
-    // for (int i = 0; i < 8; i++) {
-    //     _spi1Manager.writeValves(1 << (i + 8));
-    //     vTaskDelay(pdMS_TO_TICKS(5));
-    // }
-    // for (int i = 0; i < 8; i++) {
-    //     _spi1Manager.writeValves(1 << i);
-    //     vTaskDelay(pdMS_TO_TICKS(5));
-    // }
+    // SPI1 valve line test
+    for (int i = 0; i < 8; i++) {
+        _spi1Manager.writeValves(1 << (i + 8));
+        vTaskDelay(pdMS_TO_TICKS(5));
+    }
+    for (int i = 0; i < 8; i++) {
+        _spi1Manager.writeValves(1 << i);
+        vTaskDelay(pdMS_TO_TICKS(5));
+    }
 
-    ESP_LOGI(TAG, "testValves() skipped (SPI1 disabled for SPI0-only test)");
+    ESP_LOGI(TAG, "testValves() completed");
 }
 
 void RobotController::turnOnValves() {
@@ -305,15 +310,15 @@ void RobotController::turnOnValves() {
         }
     }
 
-    // SPI1 DISABLED FOR SPI0-ONLY TESTING:
-    // _spi1Manager.writeValves(_valveState);
+    // SPI1 valve output write
+    _spi1Manager.writeValves(_valveState);
     ESP_LOGD(TAG, "Valve state: 0x%04x", _valveState);
 }
 
 void RobotController::turnOffValves() {
     _valveState = 0x0000;
-    // SPI1 DISABLED FOR SPI0-ONLY TESTING:
-    // _spi1Manager.writeValves(0x0000);
+    // SPI1 valve output write
+    _spi1Manager.writeValves(0x0000);
 
     _valveState = 0x0000;
 }
@@ -408,12 +413,55 @@ void RobotController::setJointTargetRad(const std::vector<float> &angles) {
         return;
     }
 
-    setJointTargetSteps(steps);
+    //setJointTargetSteps(steps);
+    setSynchronizedJointTargetSteps(steps, 10.0f);
 
     for (size_t i = 0; i < steps.size(); ++i) {
         ESP_LOGI(TAG, "target joint[%u]: rad=%.6f -> steps=%d",
                  (unsigned)i, angles[i], steps[i]);
     }
+}
+
+// This sets the target joint steps and also adjusts the max velocity of each stepper so that they reach the target at the same time.
+
+void RobotController::setSynchronizedJointTargetSteps(const std::vector<int>& steps, float baseMaxVelocity)
+{
+    const size_t n = std::min(steps.size(), _robotState.jointSteps.size());
+    if (n == 0) return;
+
+    int maxDistance = 0;
+    std::vector<int> distances(n, 0);
+
+    for (size_t i = 0; i < n; ++i) {
+        distances[i] = std::abs(steps[i] - _robotState.jointSteps[i]);
+        if (distances[i] > maxDistance) {
+            maxDistance = distances[i];
+        }
+    }
+
+    if (maxDistance == 0) {
+        return;
+    }
+
+    for (size_t i = 0; i < n; ++i) {
+        _robotState.targetJointSteps[i] = steps[i];
+
+        float ratio = static_cast<float>(distances[i]) / static_cast<float>(maxDistance);
+        float v = baseMaxVelocity * ratio;
+
+        // avoid zero or too small velocity for tiny moves
+        const float minVelocity = 1.0f;
+        if (distances[i] > 0 && v < minVelocity) {
+            v = minVelocity;
+        }
+        if (distances[i] == 0) {
+            v = minVelocity;
+        }
+
+        _steppers[i].setMaxVelocity(v);
+    }
+
+    _jointPosChanged = true;
 }
 
 // Debug / manual homing API

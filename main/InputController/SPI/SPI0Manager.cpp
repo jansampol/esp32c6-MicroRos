@@ -67,7 +67,7 @@ bool SPI0Manager::begin()
     }
 
     spi_device_interface_config_t devcfg = {};
-    devcfg.clock_speed_hz = 1 * 1000 * 1000;  // safe starting point
+    devcfg.clock_speed_hz = 5 * 1000 * 1000;  // safer speed-up for combined SPI0 workload
     devcfg.mode = 0;
     devcfg.spics_io_num = -1;                 // manual CS via demux
     devcfg.queue_size = 4;
@@ -102,19 +102,27 @@ bool SPI0Manager::begin()
     }
 
     vTaskDelay(pdMS_TO_TICKS(10));
+    
+    //
+    // We need to change this, since we are overriding the default all-inputs config with the next steps for LEDs and switches.
+    //
 
     // LEDs and Switches MCP23S17
-    err = mcpInitMCP23S17(UI_2_LEDS_AND_SWITCHES,
-                          0xFFC0,   // upper bits input, lower bits output
-                          0xFFC0,   // pullups on inputs
-                          0xFFC0,   // invert inputs
-                          0x0000);  // outputs low
-    if (err != ESP_OK) {
-        ESP_LOGE(TAG, "LEDs and Switches MCP23S17 init failed: %s", esp_err_to_name(err));
-        return false;
-    }
+    // err = mcpInitMCP23S17(UI_2_LEDS_AND_SWITCHES,
+    //                       0xFFC0,   // upper bits input, lower bits output
+    //                       0xFFC0,   // pullups on inputs
+    //                       0xFFC0,   // invert inputs
+    //                       0x0000);  // outputs low
+    // if (err != ESP_OK) {
+    //     ESP_LOGE(TAG, "LEDs and Switches MCP23S17 init failed: %s", esp_err_to_name(err));
+    //     return false;
+    // }
 
-    vTaskDelay(pdMS_TO_TICKS(10));
+    // vTaskDelay(pdMS_TO_TICKS(10));
+
+    //
+    //
+    //
 
     // Vertical Buttons MCP23S17
     err = mcpInitMCP23S17(UI_3_VBUTTONS,
@@ -591,13 +599,6 @@ void SPI0Manager::setScreenBLK(bool on)
                          : (_mainValveState & ~MAIN_VALVE_BLK);
     writeMainValve(_mainValveState);
 }
-
-// void SPI0Manager::setMainValve(bool on)
-// {
-//     _mainValveState = on ? (_mainValveState | MAIN_VALVE_VALVE)
-//                          : (_mainValveState & ~MAIN_VALVE_VALVE);
-//     writeMainValve(_mainValveState);
-// }
 
 void SPI0Manager::setMainValve(bool on)
 {

@@ -1,0 +1,1806 @@
+Command: /Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf_monitor.py -p /dev/cu.usbserial-140 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf -m '/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf.py' '-p' '/dev/cu.usbserial-140'
+00)
+[0;32mI (791) wifi:�ESP-ROM:esp32c6-20220919[0m
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xfa8
+load:0x4086e610,len:0x31a8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr  5 2026 11:04:44[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (71) boot:  3 coredump         Unknown data     01 03 00210000 00010000[0m
+[0;32mI (78) boot:  4 littlefs         Unknown data     01 82 00220000 0007d000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42100020 size=2a8e0h (174304) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0003a908 vaddr=40800000 size=05710h ( 22288) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=f77d8h (1013720) map[0m
+[0;32mI (324) esp_image: segment 3: paddr=00137800 vaddr=40805710 size=1b468h (111720) load[0m
+[0;32mI (355) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (355) boot: Disabling RNG early entropy source...[0m
+[0;32mI (365) cpu_start: Unicore app[0m
+[0;32mI (374) cpu_start: Pro cpu start user code[0m
+[0;32mI (374) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (374) app_init: Application information:[0m
+[0;32mI (374) app_init: Project name:     esp32c6_microros_test[0m
+[0;32mI (379) app_init: App version:      69ba50f-dirty[0m
+[0;32mI (384) app_init: Compile time:     Apr 13 2026 13:22:00[0m
+[0;32mI (389) app_init: ELF file SHA256:  db4951523...[0m
+[0;32mI (393) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (397) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (400) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (404) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (408) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (415) heap_init: At 4082B770 len 00050EA0 (323 KiB): RAM[0m
+[0;32mI (420) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (425) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (431) spi_flash: detected chip: generic[0m
+[0;32mI (434) spi_flash: flash io: dio[0m
+[0;33mW (437) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (451) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (455) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (462) coexist: coex firmware version: 831ec70[0m
+[0;32mI (480) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (481) main_task: Started on CPU0[0m
+[0;32mI (481) main_task: Calling app_main()[0m
+app_main started
+[0;32mI (491) SPI1Manager: SPI1Manager begin()[0m
+[0;32mI (491) SPI1Manager: Using pins MOSI=19 MISO=20 CLK=15 CS=23[0m
+[0;32mI (491) RobotController: Switched to PURPLE_MAMRI[0m
+[0;32mI (491) InputController: Initializing InputController...[0m
+[0;32mI (491) SPI0Manager: SPI0Manager begin()[0m
+[0;32mI (501) SPI0Manager: Using pins MOSI=8 MISO=6 CLK=1[0m
+[1;31mE (501) spi: spi_bus_initialize(809): SPI bus already initialized.[0m
+[1;31mE (511) SPI0Manager: spi_bus_initialize failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (511) CanvasManager: Initializing CanvasManager...[0m
+[0;32mI (521) CanvasManager: Canvas disabled (no display backend).[0m
+[0;32mI (521) InputController: testSPI0Manager() skipped: SPI0 disabled[0m
+[0;32mI (531) CanvasManager: initScreen skipped (display disabled).[0m
+[0;32mI (541) I2CManager: Starting I2C Manager with 0 Ferris wheels and 0 other sensors...[0m
+[0;32mI (541) I2CManager: I2C bus started[0m
+[0;32mI (551) I2CManager: I2C multiplexers initialized. Initializing Ferris wheels...[0m
+[0;32mI (551) I2CManager: Initializing Ferris wheel sensors...[0m
+[0;32mI (561) I2CManager: Ferris wheels successfully initialized[0m
+[0;32mI (561) InputController: I2CManager initialized for pressure sensors.[0m
+[0;32mI (571) InputController: InputController initialized.[0m
+[0;32mI (571) InputController: RobotController attached to webserver.[0m
+[0;33mW (581) InputController: Webserver not started.[0m
+[0;32mI (581) MicroRosManager: Initializing WiFi transport...[0m
+[0;32mI (591) wifi_station_netif: ESP_WIFI_MODE_STA[0m
+[0;32mI (601) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (601) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (611) wifi:wifi driver task: 40833110, prio:23, stack:6656, core=0[0m
+[0;32mI (611) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (611) wifi:wifi certification version: v7.0[0m
+[0;32mI (611) wifi:config NVS flash: enabled[0m
+[0;32mI (621) wifi:config nano formatting: disabled[0m
+[0;32mI (621) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (631) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (631) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (641) wifi:Init management short buffer num: 32[0m
+[0;32mI (641) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (651) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (651) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (661) wifi:Init static rx buffer num: 10[0m
+[0;32mI (661) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (661) wifi_init: rx ba win: 6[0m
+[0;32mI (671) wifi_init: accept mbox: 6[0m
+[0;32mI (671) wifi_init: tcpip mbox: 32[0m
+[0;32mI (671) wifi_init: udp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp mbox: 6[0m
+[0;32mI (681) wifi_init: tcp tx win: 5760[0m
+[0;32mI (681) wifi_init: tcp rx win: 5760[0m
+[0;32mI (681) wifi_init: tcp mss: 1440[0m
+[0;32mI (691) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (691) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (701) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;33mW (701) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (711) phy_init: phy_version 331,5b89037,Mar  3 2025,16:01:12[0m
+[0;33mW (781) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (781) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (781) wifi:(agc)0x600a7128:0xd2076800, min.avgNF:0xce->0xd2(dB), RCalCount:0x76, min.RRssi:0x800(-128.00)[0m
+[0;32mI (791) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (801) wifi:mode : sta (20:6e:f1:18:8c:28)[0m
+[0;32mI (801) wifi:enable tsf[0m
+[0;32mI (811) wifi_station_netif: wifi_init_sta finished.[0m
+[0;32mI (811) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (821) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (831) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (881) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (961) wifi:(assoc)RESP, Extended Capabilities length:1, operating_mode_notification:0[0m
+[0;32mI (961) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (971) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (971) wifi:(trc)phytype:CBW20-SGI, snr:56, maxRate:144, highestRateIdx:0[0m
+[0;33mW (981) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (991) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:56, ampduState:wait operational[0m
+[0;32mI (1001) wifi:ifidx:0, rssi:-40, nf:-96, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (1011) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:4(2 us)[0m
+[0;32mI (1051) wifi:connected with MyNewHotspot, aid = 5, channel 1, BW20, bssid = c2:de:de:da:8c:bb[0m
+[0;32mI (1051) wifi:security: WPA2-PSK, phy:bgn, rssi:-40, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (1061) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1061) wifi:pm start, type:1, aid:0x5, trans-BSSID:c2:de:de:da:8c:bb, BSSID[5]:0xbb, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (1071) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1081) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1091) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1101) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1111) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1171) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (1181) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100bb8c, TALO:0xdadedec2, (ssn:0, win:64, cur_ssn:0), CONF:0xc0000005[0m
+[0;32mI (1181) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1191) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1231) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (1231) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (2251) esp_netif_handlers: sta ip: 192.168.223.75, mask: 255.255.255.0, gw: 192.168.223.197[0m
+[0;32mI (2251) wifi_station_netif: got ip:192.168.223.75[0m
+[0;32mI (2251) wifi_station_netif: connected to ap SSID:MyNewHotspot password:12345678[0m
+[0;32mI (2251) MicroRosManager: Waiting before micro-ROS init...[0m
+[0;32mI (5491) MicroRosManager: micro-ROS entities created[0m
+[0;32mI (5491) MicroRosManager: micro-ROS base ready[0m
+[0;32mI (5491) app_main: Application initialized successfully[0m
+[0;32mI (5521) InputController: Pressure sensor 1: -0.0221 bar[0m
+[1;31mE (5521) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (5551) InputController: Pressure sensor 1: -0.0231 bar[0m
+[1;31mE (5551) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (5581) InputController: Pressure sensor 1: -0.0274 bar[0m
+[1;31mE (5581) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (5611) InputController: Pressure sensor 1: -0.0267 bar[0m
+[1;31mE (5611) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (5641) InputController: Pressure sensor 1: -0.0264 bar[0m
+[1;31mE (5641) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (5671) InputController: Pressure sensor 1: -0.0259 bar[0m
+[1;31mE (5671) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (5701) InputController: Pressure sensor 1: -0.0259 bar[0m
+[1;31mE (5701) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (5731) InputController: Pressure sensor 1: -0.0253 bar[0m
+[1;31mE (5731) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (5761) InputController: Pressure sensor 1: -0.0258 bar[0m
+[1;31mE (5761) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (5791) InputController: Pressure sensor 1: -0.0249 bar[0m
+[1;31mE (5791) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (5821) InputController: Pressure sensor 1: -0.0253 bar[0m
+[1;31mE (5821) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (5851) InputController: Pressure sensor 1: -0.0250 bar[0m
+[1;31mE (5851) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (5881) InputController: Pressure sensor 1: -0.0251 bar[0m
+[1;31mE (5881) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (5911) InputController: Pressure sensor 1: -0.0240 bar[0m
+[1;31mE (5911) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (5941) InputController: Pressure sensor 1: -0.0238 bar[0m
+[1;31mE (5941) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (5971) InputController: Pressure sensor 1: -0.0240 bar[0m
+[1;31mE (5971) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6001) InputController: Pressure sensor 1: -0.0240 bar[0m
+[1;31mE (6001) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6031) InputController: Pressure sensor 1: -0.0243 bar[0m
+[1;31mE (6031) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6061) InputController: Pressure sensor 1: -0.0240 bar[0m
+[1;31mE (6061) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6091) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (6091) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6121) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (6121) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6151) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (6151) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6181) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (6181) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6211) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (6211) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6241) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (6241) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6271) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (6271) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6301) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (6301) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6331) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (6331) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6361) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (6361) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6391) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (6391) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6421) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (6421) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6451) InputController: Pressure sensor 1: -0.0265 bar[0m
+[1;31mE (6451) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6481) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (6481) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6511) InputController: Pressure sensor 1: -0.0266 bar[0m
+[1;31mE (6511) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6541) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (6541) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6571) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (6571) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6601) InputController: Pressure sensor 1: -0.0266 bar[0m
+[1;31mE (6601) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6631) InputController: Pressure sensor 1: -0.0255 bar[0m
+[1;31mE (6631) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6661) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (6661) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6691) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (6691) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6721) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (6721) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6751) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (6751) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6781) InputController: Pressure sensor 1: -0.0265 bar[0m
+[1;31mE (6781) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6811) InputController: Pressure sensor 1: -0.0260 bar[0m
+[1;31mE (6811) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6841) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (6841) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6871) InputController: Pressure sensor 1: -0.0259 bar[0m
+[1;31mE (6871) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6901) InputController: Pressure sensor 1: -0.0260 bar[0m
+[1;31mE (6901) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6931) InputController: Pressure sensor 1: -0.0259 bar[0m
+[1;31mE (6931) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6961) InputController: Pressure sensor 1: -0.0261 bar[0m
+[1;31mE (6961) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6991) InputController: Pressure sensor 1: -0.0266 bar[0m
+[1;31mE (6991) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (6991) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (6991) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (7001) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (7001) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (7011) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (7011) RobotController: valve_state=0x0000[0m
+[0;32mI (7051) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (7051) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7081) InputController: Pressure sensor 1: -0.0259 bar[0m
+[1;31mE (7081) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7111) InputController: Pressure sensor 1: -0.0261 bar[0m
+[1;31mE (7111) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7141) InputController: Pressure sensor 1: -0.0258 bar[0m
+[1;31mE (7141) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7171) InputController: Pressure sensor 1: -0.0260 bar[0m
+[1;31mE (7171) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7201) InputController: Pressure sensor 1: -0.0261 bar[0m
+[1;31mE (7201) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7231) InputController: Pressure sensor 1: -0.0256 bar[0m
+[1;31mE (7231) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7261) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (7261) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7291) InputController: Pressure sensor 1: -0.0261 bar[0m
+[1;31mE (7291) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7321) InputController: Pressure sensor 1: -0.0261 bar[0m
+[1;31mE (7321) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7351) InputController: Pressure sensor 1: -0.0260 bar[0m
+[1;31mE (7351) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7381) InputController: Pressure sensor 1: -0.0258 bar[0m
+[1;31mE (7381) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7411) InputController: Pressure sensor 1: -0.0260 bar[0m
+[1;31mE (7411) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7441) InputController: Pressure sensor 1: -0.0261 bar[0m
+[1;31mE (7441) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7471) InputController: Pressure sensor 1: -0.0252 bar[0m
+[1;31mE (7471) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7501) InputController: Pressure sensor 1: -0.0255 bar[0m
+[1;31mE (7501) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7531) InputController: Pressure sensor 1: -0.0251 bar[0m
+[1;31mE (7531) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7561) InputController: Pressure sensor 1: -0.0251 bar[0m
+[1;31mE (7561) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7591) InputController: Pressure sensor 1: -0.0253 bar[0m
+[1;31mE (7591) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7621) InputController: Pressure sensor 1: -0.0253 bar[0m
+[1;31mE (7621) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7651) InputController: Pressure sensor 1: -0.0253 bar[0m
+[1;31mE (7651) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7681) InputController: Pressure sensor 1: -0.0250 bar[0m
+[1;31mE (7681) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7711) InputController: Pressure sensor 1: -0.0250 bar[0m
+[1;31mE (7711) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7741) InputController: Pressure sensor 1: -0.0256 bar[0m
+[1;31mE (7741) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7771) InputController: Pressure sensor 1: -0.0251 bar[0m
+[1;31mE (7771) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7801) InputController: Pressure sensor 1: -0.0247 bar[0m
+[1;31mE (7801) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7831) InputController: Pressure sensor 1: -0.0252 bar[0m
+[1;31mE (7831) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7861) InputController: Pressure sensor 1: -0.0252 bar[0m
+[1;31mE (7861) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7891) InputController: Pressure sensor 1: -0.0252 bar[0m
+[1;31mE (7891) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7921) InputController: Pressure sensor 1: -0.0249 bar[0m
+[1;31mE (7921) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7951) InputController: Pressure sensor 1: -0.0255 bar[0m
+[1;31mE (7951) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (7981) InputController: Pressure sensor 1: -0.0250 bar[0m
+[1;31mE (7981) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8011) InputController: Pressure sensor 1: -0.0252 bar[0m
+[1;31mE (8011) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8041) InputController: Pressure sensor 1: -0.0251 bar[0m
+[1;31mE (8041) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8071) InputController: Pressure sensor 1: -0.0248 bar[0m
+[1;31mE (8071) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8101) InputController: Pressure sensor 1: -0.0250 bar[0m
+[1;31mE (8101) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8131) InputController: Pressure sensor 1: -0.0250 bar[0m
+[1;31mE (8131) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8161) InputController: Pressure sensor 1: -0.0251 bar[0m
+[1;31mE (8161) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8191) InputController: Pressure sensor 1: -0.0246 bar[0m
+[1;31mE (8191) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8221) InputController: Pressure sensor 1: -0.0248 bar[0m
+[1;31mE (8221) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8251) InputController: Pressure sensor 1: -0.0253 bar[0m
+[1;31mE (8251) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8281) InputController: Pressure sensor 1: -0.0251 bar[0m
+[1;31mE (8281) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8311) InputController: Pressure sensor 1: -0.0250 bar[0m
+[1;31mE (8311) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8341) InputController: Pressure sensor 1: -0.0252 bar[0m
+[1;31mE (8341) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8371) InputController: Pressure sensor 1: -0.0253 bar[0m
+[1;31mE (8371) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8401) InputController: Pressure sensor 1: -0.0242 bar[0m
+[1;31mE (8401) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8431) InputController: Pressure sensor 1: -0.0251 bar[0m
+[1;31mE (8431) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8461) InputController: Pressure sensor 1: -0.0251 bar[0m
+[1;31mE (8461) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8491) InputController: Pressure sensor 1: -0.0243 bar[0m
+[1;31mE (8491) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8521) InputController: Pressure sensor 1: -0.0242 bar[0m
+[1;31mE (8521) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8521) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (8521) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (8531) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (8531) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (8541) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (8541) RobotController: valve_state=0x0000[0m
+[0;32mI (8581) InputController: Pressure sensor 1: -0.0255 bar[0m
+[1;31mE (8581) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8611) InputController: Pressure sensor 1: -0.0251 bar[0m
+[1;31mE (8611) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8641) InputController: Pressure sensor 1: -0.0251 bar[0m
+[1;31mE (8641) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8671) InputController: Pressure sensor 1: -0.0249 bar[0m
+[1;31mE (8671) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8701) InputController: Pressure sensor 1: -0.0250 bar[0m
+[1;31mE (8701) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8731) InputController: Pressure sensor 1: -0.0243 bar[0m
+[1;31mE (8731) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8761) InputController: Pressure sensor 1: -0.0250 bar[0m
+[1;31mE (8761) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8791) InputController: Pressure sensor 1: -0.0251 bar[0m
+[1;31mE (8791) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8821) InputController: Pressure sensor 1: -0.0250 bar[0m
+[1;31mE (8821) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8851) InputController: Pressure sensor 1: -0.0251 bar[0m
+[1;31mE (8851) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8881) InputController: Pressure sensor 1: -0.0252 bar[0m
+[1;31mE (8881) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8911) InputController: Pressure sensor 1: -0.0246 bar[0m
+[1;31mE (8911) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8941) InputController: Pressure sensor 1: -0.0252 bar[0m
+[1;31mE (8941) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (8971) InputController: Pressure sensor 1: -0.0240 bar[0m
+[1;31mE (8971) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9001) InputController: Pressure sensor 1: -0.0254 bar[0m
+[1;31mE (9001) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9031) InputController: Pressure sensor 1: -0.0242 bar[0m
+[1;31mE (9031) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9061) InputController: Pressure sensor 1: -0.0244 bar[0m
+[1;31mE (9061) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9091) InputController: Pressure sensor 1: -0.0244 bar[0m
+[1;31mE (9091) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9121) InputController: Pressure sensor 1: -0.0248 bar[0m
+[1;31mE (9121) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9151) InputController: Pressure sensor 1: -0.0240 bar[0m
+[1;31mE (9151) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9181) InputController: Pressure sensor 1: -0.0241 bar[0m
+[1;31mE (9181) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9211) InputController: Pressure sensor 1: -0.0246 bar[0m
+[1;31mE (9211) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9241) InputController: Pressure sensor 1: -0.0244 bar[0m
+[1;31mE (9241) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9271) InputController: Pressure sensor 1: -0.0243 bar[0m
+[1;31mE (9271) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9301) InputController: Pressure sensor 1: -0.0241 bar[0m
+[1;31mE (9301) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9331) InputController: Pressure sensor 1: -0.0243 bar[0m
+[1;31mE (9331) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9361) InputController: Pressure sensor 1: -0.0245 bar[0m
+[1;31mE (9361) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9391) InputController: Pressure sensor 1: -0.0241 bar[0m
+[1;31mE (9391) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9421) InputController: Pressure sensor 1: -0.0241 bar[0m
+[1;31mE (9421) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9451) InputController: Pressure sensor 1: -0.0246 bar[0m
+[1;31mE (9451) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9481) InputController: Pressure sensor 1: -0.0244 bar[0m
+[1;31mE (9481) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9511) InputController: Pressure sensor 1: -0.0246 bar[0m
+[1;31mE (9511) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9541) InputController: Pressure sensor 1: -0.0243 bar[0m
+[1;31mE (9541) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9571) InputController: Pressure sensor 1: -0.0242 bar[0m
+[1;31mE (9571) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9601) InputController: Pressure sensor 1: -0.0239 bar[0m
+[1;31mE (9601) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9631) InputController: Pressure sensor 1: -0.0243 bar[0m
+[1;31mE (9631) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9661) InputController: Pressure sensor 1: -0.0243 bar[0m
+[1;31mE (9661) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9691) InputController: Pressure sensor 1: -0.0244 bar[0m
+[1;31mE (9691) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9721) InputController: Pressure sensor 1: -0.0250 bar[0m
+[1;31mE (9721) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9751) InputController: Pressure sensor 1: -0.0242 bar[0m
+[1;31mE (9751) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9781) InputController: Pressure sensor 1: -0.0241 bar[0m
+[1;31mE (9781) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9811) InputController: Pressure sensor 1: -0.0242 bar[0m
+[1;31mE (9811) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9841) InputController: Pressure sensor 1: -0.0245 bar[0m
+[1;31mE (9841) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9871) InputController: Pressure sensor 1: -0.0244 bar[0m
+[1;31mE (9871) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9901) InputController: Pressure sensor 1: -0.0238 bar[0m
+[1;31mE (9901) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9931) InputController: Pressure sensor 1: -0.0243 bar[0m
+[1;31mE (9931) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9961) InputController: Pressure sensor 1: -0.0243 bar[0m
+[1;31mE (9961) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (9991) InputController: Pressure sensor 1: -0.0246 bar[0m
+[1;31mE (9991) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10021) InputController: Pressure sensor 1: -0.0243 bar[0m
+[1;31mE (10021) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10051) InputController: Pressure sensor 1: -0.0241 bar[0m
+[1;31mE (10051) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10051) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (10051) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (10061) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (10061) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (10071) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (10081) RobotController: valve_state=0x0000[0m
+[0;32mI (10111) InputController: Pressure sensor 1: -0.0243 bar[0m
+[1;31mE (10111) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10141) InputController: Pressure sensor 1: -0.0250 bar[0m
+[1;31mE (10141) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10171) InputController: Pressure sensor 1: -0.0242 bar[0m
+[1;31mE (10171) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10201) InputController: Pressure sensor 1: -0.0238 bar[0m
+[1;31mE (10201) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10231) InputController: Pressure sensor 1: -0.0241 bar[0m
+[1;31mE (10231) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10261) InputController: Pressure sensor 1: -0.0246 bar[0m
+[1;31mE (10261) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10291) InputController: Pressure sensor 1: -0.0244 bar[0m
+[1;31mE (10291) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10321) InputController: Pressure sensor 1: -0.0241 bar[0m
+[1;31mE (10321) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10351) InputController: Pressure sensor 1: -0.0241 bar[0m
+[1;31mE (10351) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10381) InputController: Pressure sensor 1: -0.0244 bar[0m
+[1;31mE (10381) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10411) InputController: Pressure sensor 1: -0.0243 bar[0m
+[1;31mE (10411) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10441) InputController: Pressure sensor 1: -0.0244 bar[0m
+[1;31mE (10441) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10471) InputController: Pressure sensor 1: -0.0243 bar[0m
+[1;31mE (10471) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10501) InputController: Pressure sensor 1: -0.0242 bar[0m
+[1;31mE (10501) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10531) InputController: Pressure sensor 1: -0.0242 bar[0m
+[1;31mE (10531) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10561) InputController: Pressure sensor 1: -0.0240 bar[0m
+[1;31mE (10561) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10591) InputController: Pressure sensor 1: -0.0247 bar[0m
+[1;31mE (10591) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10621) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (10621) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10651) InputController: Pressure sensor 1: -0.0241 bar[0m
+[1;31mE (10651) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10681) InputController: Pressure sensor 1: -0.0232 bar[0m
+[1;31mE (10681) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10711) InputController: Pressure sensor 1: -0.0242 bar[0m
+[1;31mE (10711) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10741) InputController: Pressure sensor 1: -0.0237 bar[0m
+[1;31mE (10741) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10771) InputController: Pressure sensor 1: -0.0238 bar[0m
+[1;31mE (10771) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10801) InputController: Pressure sensor 1: -0.0245 bar[0m
+[1;31mE (10801) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10831) InputController: Pressure sensor 1: -0.0244 bar[0m
+[1;31mE (10831) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10861) InputController: Pressure sensor 1: -0.0246 bar[0m
+[1;31mE (10861) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10891) InputController: Pressure sensor 1: -0.0240 bar[0m
+[1;31mE (10891) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10921) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (10921) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10951) InputController: Pressure sensor 1: -0.0246 bar[0m
+[1;31mE (10951) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (10981) InputController: Pressure sensor 1: -0.0243 bar[0m
+[1;31mE (10981) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11011) InputController: Pressure sensor 1: -0.0246 bar[0m
+[1;31mE (11011) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11041) InputController: Pressure sensor 1: -0.0238 bar[0m
+[1;31mE (11041) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11071) InputController: Pressure sensor 1: -0.0244 bar[0m
+[1;31mE (11071) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11101) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (11101) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11131) InputController: Pressure sensor 1: -0.0247 bar[0m
+[1;31mE (11131) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11161) InputController: Pressure sensor 1: -0.0231 bar[0m
+[1;31mE (11161) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11191) InputController: Pressure sensor 1: -0.0246 bar[0m
+[1;31mE (11191) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11221) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (11221) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11251) InputController: Pressure sensor 1: -0.0232 bar[0m
+[1;31mE (11251) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11281) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (11281) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11311) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (11311) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11341) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (11341) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11371) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (11371) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11401) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (11401) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11431) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (11431) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11461) InputController: Pressure sensor 1: -0.0237 bar[0m
+[1;31mE (11461) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11491) InputController: Pressure sensor 1: -0.0240 bar[0m
+[1;31mE (11491) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11521) InputController: Pressure sensor 1: -0.0232 bar[0m
+[1;31mE (11521) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11551) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (11551) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11581) InputController: Pressure sensor 1: -0.0232 bar[0m
+[1;31mE (11581) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11581) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (11581) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (11591) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (11591) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (11601) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (11611) RobotController: valve_state=0x0000[0m
+[0;32mI (11641) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (11641) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11671) InputController: Pressure sensor 1: -0.0243 bar[0m
+[1;31mE (11671) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11701) InputController: Pressure sensor 1: -0.0242 bar[0m
+[1;31mE (11701) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11731) InputController: Pressure sensor 1: -0.0241 bar[0m
+[1;31mE (11731) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11761) InputController: Pressure sensor 1: -0.0241 bar[0m
+[1;31mE (11761) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11791) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (11791) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11821) InputController: Pressure sensor 1: -0.0238 bar[0m
+[1;31mE (11821) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11851) InputController: Pressure sensor 1: -0.0237 bar[0m
+[1;31mE (11851) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11881) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (11881) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11911) InputController: Pressure sensor 1: -0.0246 bar[0m
+[1;31mE (11911) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11941) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (11941) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (11971) InputController: Pressure sensor 1: -0.0232 bar[0m
+[1;31mE (11971) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12001) InputController: Pressure sensor 1: -0.0246 bar[0m
+[1;31mE (12001) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12031) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (12031) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12061) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (12061) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12091) InputController: Pressure sensor 1: -0.0244 bar[0m
+[1;31mE (12091) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12121) InputController: Pressure sensor 1: -0.0232 bar[0m
+[1;31mE (12121) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12151) InputController: Pressure sensor 1: -0.0245 bar[0m
+[1;31mE (12151) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12181) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (12181) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12211) InputController: Pressure sensor 1: -0.0237 bar[0m
+[1;31mE (12211) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12241) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (12241) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12271) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (12271) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12301) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (12301) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12331) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (12331) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12361) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (12361) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12391) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (12391) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12421) InputController: Pressure sensor 1: -0.0239 bar[0m
+[1;31mE (12421) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12451) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (12451) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12481) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (12481) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12511) InputController: Pressure sensor 1: -0.0232 bar[0m
+[1;31mE (12511) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12541) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (12541) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12571) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (12571) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12601) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (12601) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12631) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (12631) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12661) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (12661) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12691) InputController: Pressure sensor 1: -0.0239 bar[0m
+[1;31mE (12691) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12721) InputController: Pressure sensor 1: -0.0232 bar[0m
+[1;31mE (12721) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12751) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (12751) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12781) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (12781) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12811) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (12811) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12841) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (12841) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12871) InputController: Pressure sensor 1: -0.0237 bar[0m
+[1;31mE (12871) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12901) InputController: Pressure sensor 1: -0.0232 bar[0m
+[1;31mE (12901) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12931) InputController: Pressure sensor 1: -0.0238 bar[0m
+[1;31mE (12931) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12961) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (12961) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (12991) InputController: Pressure sensor 1: -0.0239 bar[0m
+[1;31mE (12991) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13021) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (13021) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13051) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (13051) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13081) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (13081) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13111) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (13111) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13111) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (13111) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (13121) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (13121) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (13131) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (13141) RobotController: valve_state=0x0000[0m
+[0;32mI (13171) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (13171) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13201) InputController: Pressure sensor 1: -0.0240 bar[0m
+[1;31mE (13201) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13231) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (13231) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13261) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (13261) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13291) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (13291) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13321) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (13321) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13351) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (13351) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13381) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (13381) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13411) InputController: Pressure sensor 1: -0.0237 bar[0m
+[1;31mE (13411) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13441) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (13441) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13471) InputController: Pressure sensor 1: -0.0238 bar[0m
+[1;31mE (13471) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13501) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (13501) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13531) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (13531) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13561) InputController: Pressure sensor 1: -0.0232 bar[0m
+[1;31mE (13561) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13591) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (13591) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13621) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (13621) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13651) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (13651) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13681) InputController: Pressure sensor 1: -0.0223 bar[0m
+[1;31mE (13681) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13711) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (13711) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13741) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (13741) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13771) InputController: Pressure sensor 1: -0.0232 bar[0m
+[1;31mE (13771) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13801) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (13801) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13831) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (13831) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13861) InputController: Pressure sensor 1: -0.0237 bar[0m
+[1;31mE (13861) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13891) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (13891) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13921) InputController: Pressure sensor 1: -0.0237 bar[0m
+[1;31mE (13921) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13951) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (13951) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (13981) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (13981) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14011) InputController: Pressure sensor 1: -0.0238 bar[0m
+[1;31mE (14011) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14041) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (14041) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14071) InputController: Pressure sensor 1: -0.0231 bar[0m
+[1;31mE (14071) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14101) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (14101) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14131) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (14131) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14161) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (14161) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14191) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (14191) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14221) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (14221) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14251) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (14251) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14281) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (14281) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14311) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (14311) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14341) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (14341) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14371) InputController: Pressure sensor 1: -0.0237 bar[0m
+[1;31mE (14371) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14401) InputController: Pressure sensor 1: -0.0239 bar[0m
+[1;31mE (14401) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14431) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (14431) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14461) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (14461) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14491) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (14491) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14521) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (14521) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14551) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (14551) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14581) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (14581) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14611) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (14611) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14641) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (14641) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14641) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (14641) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (14651) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (14651) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (14661) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (14671) RobotController: valve_state=0x0000[0m
+[0;32mI (14701) InputController: Pressure sensor 1: -0.0223 bar[0m
+[1;31mE (14701) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14731) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (14731) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14761) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (14761) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14791) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (14791) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14821) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (14821) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14851) InputController: Pressure sensor 1: -0.0223 bar[0m
+[1;31mE (14851) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14881) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (14881) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14911) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (14911) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14941) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (14941) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (14971) InputController: Pressure sensor 1: -0.0231 bar[0m
+[1;31mE (14971) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15001) InputController: Pressure sensor 1: -0.0238 bar[0m
+[1;31mE (15001) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15031) InputController: Pressure sensor 1: -0.0232 bar[0m
+[1;31mE (15031) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15061) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (15061) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15091) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (15091) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15121) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (15121) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15151) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (15151) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15181) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (15181) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15211) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (15211) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15241) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (15241) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15271) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (15271) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15301) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (15301) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15331) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (15331) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15361) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (15361) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15391) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (15391) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15421) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (15421) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15451) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (15451) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15481) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (15481) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15511) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (15511) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15541) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (15541) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15571) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (15571) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15601) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (15601) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15631) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (15631) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15661) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (15661) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15691) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (15691) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15721) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (15721) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15751) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (15751) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15781) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (15781) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15811) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (15811) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15841) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (15841) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15871) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (15871) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15901) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (15901) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15931) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (15931) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15961) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (15961) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (15991) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (15991) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16021) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (16021) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16051) InputController: Pressure sensor 1: -0.0223 bar[0m
+[1;31mE (16051) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16081) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (16081) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16111) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (16111) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16141) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (16141) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16171) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (16171) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16171) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (16171) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (16181) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (16181) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (16191) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (16201) RobotController: valve_state=0x0000[0m
+[0;32mI (16231) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (16231) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16261) InputController: Pressure sensor 1: -0.0232 bar[0m
+[1;31mE (16261) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16291) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (16291) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16321) InputController: Pressure sensor 1: -0.0237 bar[0m
+[1;31mE (16321) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16351) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (16351) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16381) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (16381) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16411) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (16411) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16441) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (16441) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16471) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (16471) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16501) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (16501) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16531) InputController: Pressure sensor 1: -0.0231 bar[0m
+[1;31mE (16531) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16561) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (16561) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16591) InputController: Pressure sensor 1: -0.0232 bar[0m
+[1;31mE (16591) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16621) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (16621) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16651) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (16651) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16681) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (16681) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16711) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (16711) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16741) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (16741) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16771) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (16771) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16801) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (16801) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16831) InputController: Pressure sensor 1: -0.0237 bar[0m
+[1;31mE (16831) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16861) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (16861) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16891) InputController: Pressure sensor 1: -0.0222 bar[0m
+[1;31mE (16891) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16921) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (16921) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16951) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (16951) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (16981) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (16981) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17011) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (17011) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17041) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (17041) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17071) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (17071) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17101) InputController: Pressure sensor 1: -0.0222 bar[0m
+[1;31mE (17101) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17131) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (17131) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17161) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (17161) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17191) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (17191) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17221) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (17221) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17251) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (17251) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17281) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (17281) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17311) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (17311) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17341) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (17341) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17371) InputController: Pressure sensor 1: -0.0222 bar[0m
+[1;31mE (17371) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17401) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (17401) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17431) InputController: Pressure sensor 1: -0.0223 bar[0m
+[1;31mE (17431) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17461) InputController: Pressure sensor 1: -0.0223 bar[0m
+[1;31mE (17461) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17491) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (17491) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17521) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (17521) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17551) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (17551) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17581) InputController: Pressure sensor 1: -0.0223 bar[0m
+[1;31mE (17581) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17611) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (17611) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17641) InputController: Pressure sensor 1: -0.0222 bar[0m
+[1;31mE (17641) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17671) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (17671) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17701) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (17701) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17701) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (17701) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (17711) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (17711) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (17721) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (17731) RobotController: valve_state=0x0000[0m
+[0;32mI (17761) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (17761) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17791) InputController: Pressure sensor 1: -0.0235 bar[0m
+[1;31mE (17791) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17821) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (17821) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17851) InputController: Pressure sensor 1: -0.0232 bar[0m
+[1;31mE (17851) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17881) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (17881) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17911) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (17911) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17941) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (17941) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (17971) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (17971) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18001) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (18001) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18031) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (18031) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18061) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (18061) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18091) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (18091) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18121) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (18121) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18151) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (18151) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18181) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (18181) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18211) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (18211) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18241) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (18241) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18271) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (18271) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18301) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (18301) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18331) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (18331) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18361) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (18361) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18391) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (18391) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18421) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (18421) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18451) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (18451) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18481) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (18481) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18511) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (18511) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18541) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (18541) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18571) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (18571) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18601) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (18601) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18631) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (18631) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18661) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (18661) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18691) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (18691) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18721) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (18721) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18751) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (18751) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18781) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (18781) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18811) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (18811) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18841) InputController: Pressure sensor 1: -0.0267 bar[0m
+[1;31mE (18841) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18871) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (18871) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18901) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (18901) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18931) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (18931) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18961) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (18961) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (18991) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (18991) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19021) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (19021) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19051) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (19051) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19081) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (19081) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19111) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (19111) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19141) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (19141) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19171) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (19171) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19201) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (19201) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19231) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (19231) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19231) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (19231) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (19241) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (19241) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (19251) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (19261) RobotController: valve_state=0x0000[0m
+[0;32mI (19291) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (19291) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19321) InputController: Pressure sensor 1: -0.0236 bar[0m
+[1;31mE (19321) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19351) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (19351) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19381) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (19381) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19411) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (19411) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19441) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (19441) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19471) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (19471) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19501) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (19501) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19531) InputController: Pressure sensor 1: -0.0223 bar[0m
+[1;31mE (19531) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19561) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (19561) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19591) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (19591) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19621) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (19621) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19651) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (19651) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19681) InputController: Pressure sensor 1: -0.0232 bar[0m
+[1;31mE (19681) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19711) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (19711) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19741) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (19741) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19771) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (19771) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19801) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (19801) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19831) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (19831) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19861) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (19861) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19891) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (19891) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19921) InputController: Pressure sensor 1: -0.0221 bar[0m
+[1;31mE (19921) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19951) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (19951) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (19981) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (19981) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20011) InputController: Pressure sensor 1: -0.0223 bar[0m
+[1;31mE (20011) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20041) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (20041) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20071) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (20071) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20101) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (20101) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20131) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (20131) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20161) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (20161) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20191) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (20191) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20221) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (20221) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20251) InputController: Pressure sensor 1: -0.0267 bar[0m
+[1;31mE (20251) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20281) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (20281) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20311) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (20311) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20341) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (20341) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20371) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (20371) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20401) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (20401) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20431) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (20431) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20461) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (20461) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20491) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (20491) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20521) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (20521) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20551) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (20551) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20581) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (20581) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20611) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (20611) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20641) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (20641) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20671) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (20671) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20701) InputController: Pressure sensor 1: -0.0267 bar[0m
+[1;31mE (20701) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20731) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (20731) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20761) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (20761) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20761) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (20761) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (20771) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (20771) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (20781) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (20791) RobotController: valve_state=0x0000[0m
+[0;32mI (20821) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (20821) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20851) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (20851) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20881) InputController: Pressure sensor 1: -0.0234 bar[0m
+[1;31mE (20881) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20911) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (20911) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20941) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (20941) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (20971) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (20971) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21001) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (21001) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21031) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (21031) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21061) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (21061) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21091) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (21091) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21121) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (21121) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21151) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (21151) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21181) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (21181) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21211) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (21211) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21241) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (21241) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21271) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (21271) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21301) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (21301) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21331) InputController: Pressure sensor 1: -0.0231 bar[0m
+[1;31mE (21331) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21361) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (21361) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21391) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (21391) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21421) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (21421) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21451) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (21451) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;33mW (21451) wifi:<ba-add>idx:1, ifx:0, tid:6, TAHI:0x100bb8c, TALO:0xdadedec2, (ssn:2, win:64, cur_ssn:2), CONF:0xc0006005[0m
+[0;32mI (21491) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (21491) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21521) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (21521) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21551) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (21551) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21581) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (21581) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21611) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (21611) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21641) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (21641) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21671) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (21671) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21701) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (21701) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21731) InputController: Pressure sensor 1: -0.0223 bar[0m
+[1;31mE (21731) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21761) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (21761) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21791) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (21791) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21821) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (21821) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21851) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (21851) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21881) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (21881) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21911) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (21911) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21941) InputController: Pressure sensor 1: -0.0274 bar[0m
+[1;31mE (21941) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (21971) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (21971) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22001) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (22001) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22031) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (22031) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22061) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (22061) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22091) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (22091) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22121) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (22121) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22151) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (22151) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22181) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (22181) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22211) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (22211) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22241) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (22241) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22271) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (22271) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22301) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (22301) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22301) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (22301) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (22311) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (22311) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (22321) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (22331) RobotController: valve_state=0x0000[0m
+[0;32mI (22361) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (22361) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22391) InputController: Pressure sensor 1: -0.0233 bar[0m
+[1;31mE (22391) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22421) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (22421) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22451) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (22451) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22481) InputController: Pressure sensor 1: -0.0223 bar[0m
+[1;31mE (22481) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22511) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (22511) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22541) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (22541) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22571) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (22571) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22601) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (22601) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22631) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (22631) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22661) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (22661) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22691) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (22691) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22721) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (22721) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22751) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (22751) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22781) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (22781) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22811) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (22811) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22841) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (22841) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22871) InputController: Pressure sensor 1: -0.0278 bar[0m
+[1;31mE (22871) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22901) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (22901) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22931) InputController: Pressure sensor 1: -0.0276 bar[0m
+[1;31mE (22931) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22961) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (22961) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (22991) InputController: Pressure sensor 1: -0.0231 bar[0m
+[1;31mE (22991) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23021) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (23021) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23051) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (23051) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23081) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (23081) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23111) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (23111) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23141) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (23141) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23171) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (23171) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23201) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (23201) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23231) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (23231) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23261) InputController: Pressure sensor 1: -0.0275 bar[0m
+[1;31mE (23261) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23291) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (23291) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23321) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (23321) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23351) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (23351) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23381) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (23381) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23411) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (23411) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23441) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (23441) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23471) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (23471) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23501) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (23501) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23531) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (23531) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23561) InputController: Pressure sensor 1: -0.0274 bar[0m
+[1;31mE (23561) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23591) InputController: Pressure sensor 1: -0.0264 bar[0m
+[1;31mE (23591) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23621) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (23621) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23651) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (23651) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23681) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (23681) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23711) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (23711) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23741) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (23741) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23771) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (23771) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23801) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (23801) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23831) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (23831) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23831) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (23831) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (23841) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (23841) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (23851) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (23861) RobotController: valve_state=0x0000[0m
+[0;32mI (23891) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (23891) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23921) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (23921) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23951) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (23951) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (23981) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (23981) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24011) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (24011) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24041) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (24041) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24071) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (24071) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24101) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (24101) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24131) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (24131) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24161) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (24161) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24191) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (24191) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24221) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (24221) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24251) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (24251) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24281) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (24281) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24311) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (24311) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24341) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (24341) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24371) InputController: Pressure sensor 1: -0.0229 bar[0m
+[1;31mE (24371) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24401) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (24401) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24431) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (24431) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24461) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (24461) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24491) InputController: Pressure sensor 1: -0.0274 bar[0m
+[1;31mE (24491) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24521) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (24521) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24551) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (24551) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24581) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (24581) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24611) InputController: Pressure sensor 1: -0.0275 bar[0m
+[1;31mE (24611) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24641) InputController: Pressure sensor 1: -0.0267 bar[0m
+[1;31mE (24641) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24671) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (24671) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24701) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (24701) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24731) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (24731) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24761) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (24761) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24791) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (24791) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24821) InputController: Pressure sensor 1: -0.0264 bar[0m
+[1;31mE (24821) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24851) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (24851) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24881) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (24881) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24911) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (24911) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24941) InputController: Pressure sensor 1: -0.0263 bar[0m
+[1;31mE (24941) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (24971) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (24971) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25001) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (25001) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25031) InputController: Pressure sensor 1: -0.0274 bar[0m
+[1;31mE (25031) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25061) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (25061) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25091) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (25091) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25121) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (25121) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25151) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (25151) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25181) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (25181) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25211) InputController: Pressure sensor 1: -0.0224 bar[0m
+[1;31mE (25211) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25241) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (25241) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25271) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (25271) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25301) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (25301) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25331) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (25331) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25361) InputController: Pressure sensor 1: -0.0265 bar[0m
+[1;31mE (25361) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25361) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (25361) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (25371) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (25371) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (25381) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (25391) RobotController: valve_state=0x0000[0m
+[0;32mI (25421) InputController: Pressure sensor 1: -0.0264 bar[0m
+[1;31mE (25421) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25451) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (25451) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25481) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (25481) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25511) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (25511) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25541) InputController: Pressure sensor 1: -0.0230 bar[0m
+[1;31mE (25541) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25571) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (25571) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25601) InputController: Pressure sensor 1: -0.0223 bar[0m
+[1;31mE (25601) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25631) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (25631) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25661) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (25661) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25691) InputController: Pressure sensor 1: -0.0274 bar[0m
+[1;31mE (25691) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25721) InputController: Pressure sensor 1: -0.0274 bar[0m
+[1;31mE (25721) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25751) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (25751) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25781) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (25781) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25811) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (25811) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25841) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (25841) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25871) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (25871) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25901) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (25901) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25931) InputController: Pressure sensor 1: -0.0226 bar[0m
+[1;31mE (25931) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25961) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (25961) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (25991) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (25991) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26021) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (26021) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26051) InputController: Pressure sensor 1: -0.0274 bar[0m
+[1;31mE (26051) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26081) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (26081) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26111) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (26111) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26141) InputController: Pressure sensor 1: -0.0274 bar[0m
+[1;31mE (26141) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26171) InputController: Pressure sensor 1: -0.0228 bar[0m
+[1;31mE (26171) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26201) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (26201) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26231) InputController: Pressure sensor 1: -0.0263 bar[0m
+[1;31mE (26231) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26261) InputController: Pressure sensor 1: -0.0264 bar[0m
+[1;31mE (26261) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26291) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (26291) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26321) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (26321) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26351) InputController: Pressure sensor 1: -0.0263 bar[0m
+[1;31mE (26351) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26381) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (26381) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26411) InputController: Pressure sensor 1: -0.0265 bar[0m
+[1;31mE (26411) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26441) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (26441) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26471) InputController: Pressure sensor 1: -0.0274 bar[0m
+[1;31mE (26471) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26501) InputController: Pressure sensor 1: -0.0261 bar[0m
+[1;31mE (26501) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26531) InputController: Pressure sensor 1: -0.0263 bar[0m
+[1;31mE (26531) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26561) InputController: Pressure sensor 1: -0.0267 bar[0m
+[1;31mE (26561) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26591) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (26591) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26621) InputController: Pressure sensor 1: -0.0274 bar[0m
+[1;31mE (26621) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26651) InputController: Pressure sensor 1: -0.0264 bar[0m
+[1;31mE (26651) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26681) InputController: Pressure sensor 1: -0.0264 bar[0m
+[1;31mE (26681) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26711) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (26711) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26741) InputController: Pressure sensor 1: -0.0259 bar[0m
+[1;31mE (26741) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26771) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (26771) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26801) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (26801) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26831) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (26831) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26861) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (26861) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26891) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (26891) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26891) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (26891) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (26901) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (26901) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (26911) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (26921) RobotController: valve_state=0x0000[0m
+[0;32mI (26951) InputController: Pressure sensor 1: -0.0263 bar[0m
+[1;31mE (26951) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (26981) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (26981) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27011) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (27011) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27041) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (27041) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27071) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (27071) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27101) InputController: Pressure sensor 1: -0.0274 bar[0m
+[1;31mE (27101) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27131) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (27131) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27161) InputController: Pressure sensor 1: -0.0275 bar[0m
+[1;31mE (27161) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27191) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (27191) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27221) InputController: Pressure sensor 1: -0.0227 bar[0m
+[1;31mE (27221) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27251) InputController: Pressure sensor 1: -0.0258 bar[0m
+[1;31mE (27251) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27281) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (27281) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27311) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (27311) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27341) InputController: Pressure sensor 1: -0.0263 bar[0m
+[1;31mE (27341) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27371) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (27371) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27401) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (27401) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27431) InputController: Pressure sensor 1: -0.0260 bar[0m
+[1;31mE (27431) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27461) InputController: Pressure sensor 1: -0.0263 bar[0m
+[1;31mE (27461) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27491) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (27491) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27521) InputController: Pressure sensor 1: -0.0261 bar[0m
+[1;31mE (27521) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27551) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (27551) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27581) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (27581) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27611) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (27611) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27641) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (27641) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27671) InputController: Pressure sensor 1: -0.0267 bar[0m
+[1;31mE (27671) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27701) InputController: Pressure sensor 1: -0.0276 bar[0m
+[1;31mE (27701) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27731) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (27731) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27761) InputController: Pressure sensor 1: -0.0265 bar[0m
+[1;31mE (27761) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27791) InputController: Pressure sensor 1: -0.0261 bar[0m
+[1;31mE (27791) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27821) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (27821) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27851) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (27851) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27881) InputController: Pressure sensor 1: -0.0260 bar[0m
+[1;31mE (27881) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27911) InputController: Pressure sensor 1: -0.0264 bar[0m
+[1;31mE (27911) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27941) InputController: Pressure sensor 1: -0.0263 bar[0m
+[1;31mE (27941) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (27971) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (27971) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28001) InputController: Pressure sensor 1: -0.0263 bar[0m
+[1;31mE (28001) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28031) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (28031) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28061) InputController: Pressure sensor 1: -0.0264 bar[0m
+[1;31mE (28061) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28091) InputController: Pressure sensor 1: -0.0264 bar[0m
+[1;31mE (28091) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28121) InputController: Pressure sensor 1: -0.0265 bar[0m
+[1;31mE (28121) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28151) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (28151) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28181) InputController: Pressure sensor 1: -0.0263 bar[0m
+[1;31mE (28181) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28211) InputController: Pressure sensor 1: -0.0264 bar[0m
+[1;31mE (28211) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28241) InputController: Pressure sensor 1: -0.0260 bar[0m
+[1;31mE (28241) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28271) InputController: Pressure sensor 1: -0.0264 bar[0m
+[1;31mE (28271) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28301) InputController: Pressure sensor 1: -0.0264 bar[0m
+[1;31mE (28301) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28331) InputController: Pressure sensor 1: -0.0269 bar[0m
+[1;31mE (28331) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28361) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (28361) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28391) InputController: Pressure sensor 1: -0.0265 bar[0m
+[1;31mE (28391) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28421) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (28421) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28421) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (28421) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (28431) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (28431) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (28441) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (28451) RobotController: valve_state=0x0000[0m
+[0;32mI (28481) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (28481) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28511) InputController: Pressure sensor 1: -0.0225 bar[0m
+[1;31mE (28511) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28541) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (28541) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28571) InputController: Pressure sensor 1: -0.0272 bar[0m
+[1;31mE (28571) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28601) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (28601) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28631) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (28631) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28661) InputController: Pressure sensor 1: -0.0268 bar[0m
+[1;31mE (28661) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28691) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (28691) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28721) InputController: Pressure sensor 1: -0.0264 bar[0m
+[1;31mE (28721) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28751) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (28751) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28781) InputController: Pressure sensor 1: -0.0270 bar[0m
+[1;31mE (28781) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28811) InputController: Pressure sensor 1: -0.0271 bar[0m
+[1;31mE (28811) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28841) InputController: Pressure sensor 1: -0.0264 bar[0m
+[1;31mE (28841) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28871) InputController: Pressure sensor 1: -0.0277 bar[0m
+[1;31mE (28871) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28901) InputController: Pressure sensor 1: -0.0265 bar[0m
+[1;31mE (28901) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28931) InputController: Pressure sensor 1: -0.0265 bar[0m
+[1;31mE (28931) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28961) InputController: Pressure sensor 1: -0.0275 bar[0m
+[1;31mE (28961) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (28991) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (28991) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (29021) InputController: Pressure sensor 1: -0.0263 bar[0m
+[1;31mE (29021) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (29051) InputController: Pressure sensor 1: -0.0263 bar[0m
+[1;31mE (29051) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (29081) InputController: Pressure sensor 1: -0.0257 bar[0m
+[1;31mE (29081) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (29111) InputController: Pressure sensor 1: -0.0261 bar[0m
+[1;31mE (29111) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (29141) InputController: Pressure sensor 1: -0.0266 bar[0m
+[1;31mE (29141) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (29171) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (29171) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (29201) InputController: Pressure sensor 1: -0.0265 bar[0m
+[1;31mE (29201) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (29231) InputController: Pressure sensor 1: -0.0264 bar[0m
+[1;31mE (29231) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (29261) InputController: Pressure sensor 1: -0.0262 bar[0m
+[1;31mE (29261) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (29291) InputController: Pressure sensor 1: -0.0273 bar[0m
+[1;31mE (29291) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (29321) InputController: Pressure sensor 1: -0.0260 bar[0m
+[1;31mE (29321) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (29351) InputController: Pressure sensor 1: -0.0264 bar[0m
+[1;31mE (29351) SPI0Manager: writeLeds failed: ESP_ERR_INVALID_STATE[0m
+[0;32mI (29381) InputController: Pressure sen

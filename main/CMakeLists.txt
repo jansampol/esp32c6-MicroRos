@@ -1,13 +1,13 @@
 idf_component_register(
     SRCS
         "app_main.cpp"
-        # "MicroRosController/MicroRosManager.cpp"
+        "MicroRosController/MicroRosManager.cpp"
         "RobotController/RobotController.cpp"
         "RobotController/KinematicsController.cpp"
         "RobotController/Robots/PurpleMamriController.cpp"
         "arduino_compat.cpp"
         "PneumaticStepper/PneumaticStepper.cpp"
-        # "PneumaticStepper/ServoValve.cpp"
+        "PneumaticStepper/ServoValve.cpp"
         "InputController/SPI/SPI1Manager.cpp"
         "InputController/InputController.cpp"
         "InputController/MamriWebServer.cpp"
