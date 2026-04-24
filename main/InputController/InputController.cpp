@@ -169,21 +169,35 @@ void InputController::update(RobotController& robotController) {
     // Display-only restore: draw UI into framebuffer and flush via SPI0 screen backend.
     // Keep control loop fast, but limit TFT transfers to every 100 ms.
     static TickType_t lastDisplayUpdateTick = 0;
+    static bool screenForcedBlack = false;
     const TickType_t now = xTaskGetTickCount();
     if ((now - lastDisplayUpdateTick) >= pdMS_TO_TICKS(100)) {
         lastDisplayUpdateTick = now;
-        if (_canvasManager.hasCanvas()) {
-            _canvasManager.selectPage(mapPagePotmeter());
-            _canvasManager.updateDirect(_canvasManager.getCanvas(), _currentInputMode, robotController);
-            esp_err_t drawErr = _spi0Manager.drawScreenRGB565(0, 0,
-                                                              CanvasManager::WIDTH,
-                                                              CanvasManager::HEIGHT,
-                                                              _canvasManager.getCanvas().getBuffer());
-            if (drawErr != ESP_OK) {
-                ESP_LOGW(TAG, "drawScreenRGB565 failed: %s", esp_err_to_name(drawErr));
+
+        // At end of potmeter travel, keep display black and skip UI rendering to free time.
+        const int pagePot = static_cast<int>(_spi0Manager.readPotmeters(false));
+        const bool blackScreenMode = (pagePot >= 980);
+
+        if (blackScreenMode) {
+            if (!screenForcedBlack) {
+                _spi0Manager.fillScreen(0x0000);
+                screenForcedBlack = true;
             }
         } else {
-            ESP_LOGW(TAG, "Canvas unavailable, skipping display update.");
+            screenForcedBlack = false;
+            if (_canvasManager.hasCanvas()) {
+                _canvasManager.selectPage(mapPagePotmeter());
+                _canvasManager.updateDirect(_canvasManager.getCanvas(), _currentInputMode, robotController);
+                esp_err_t drawErr = _spi0Manager.drawScreenRGB565(0, 0,
+                                                                  CanvasManager::WIDTH,
+                                                                  CanvasManager::HEIGHT,
+                                                                  _canvasManager.getCanvas().getBuffer());
+                if (drawErr != ESP_OK) {
+                    ESP_LOGW(TAG, "drawScreenRGB565 failed: %s", esp_err_to_name(drawErr));
+                }
+            } else {
+                ESP_LOGW(TAG, "Canvas unavailable, skipping display update.");
+            }
         }
     }
 
@@ -194,9 +208,9 @@ void InputController::update(RobotController& robotController) {
     {
         float pressure = _i2cManager.readPressureSensor(1);
 
-        // ESP_LOGI(TAG, "Pressure sensor 1: %.4f bar", pressure);
+        ESP_LOGI(TAG, "Pressure sensor 1: %.4f bar", pressure);
 
-        const bool noPressure = (pressure < 0.03f);
+        const bool noPressure = (pressure < 1.0f);
         _spi0Manager.writeRed2(noPressure);
     }
     #else

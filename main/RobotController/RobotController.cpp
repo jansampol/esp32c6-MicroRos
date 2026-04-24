@@ -152,7 +152,7 @@ void RobotController::setupPinkMamri() {
 void RobotController::setupPurpleMamri() {
     _robotConfig.name = RobotName::PURPLE_MAMRI;
     _robotConfig.degreesOfFreedom = 5;
-    _robotConfig.numOfSteppers = 5;
+    _robotConfig.numOfSteppers = 6;
 
     _robotConfig.hasFerrisWheels = false;
     _robotConfig.numOfFerrisWheels = 0;
@@ -640,7 +640,8 @@ void RobotController::setFerrisWheelFeedback(const std::vector<float>& sensorVal
 
 bool RobotController::isAtStepTarget() const
 {
-    for (size_t i = 0; i < 4; ++i) {
+    const size_t n = std::min(_robotState.jointSteps.size(), _robotState.targetJointSteps.size());
+    for (size_t i = 0; i < n; ++i) {
         if (_robotState.jointSteps[i] != _robotState.targetJointSteps[i]) {
             return false;
         }
