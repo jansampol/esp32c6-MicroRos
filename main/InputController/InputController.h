@@ -42,7 +42,7 @@ public:
     void setScreenRES(bool on);
     void setScreenBLK(bool on);
 
-    void update(RobotController& robotController);
+    void update(RobotController& robotController, bool incisionMode = false);
 
     std::vector<float> readFerrisWheelAngles();
     std::vector<float> readFerrisWheelValues();
@@ -50,6 +50,7 @@ public:
 
     Page mapPagePotmeter();
     float getMaxVelocityFromPotmeter();
+    uint16_t readNeedleSlider();
 
     void handleHorizontalButtons(RobotController& robotController, bool jointMode);
     void handleVerticalButtons(RobotController& robotController);

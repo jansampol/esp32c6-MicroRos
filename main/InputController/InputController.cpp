@@ -14,6 +14,32 @@
 
 static const char* TAG = "InputController";
 
+namespace {
+float mapNeedleSliderToVelocity(uint16_t raw, float maxVelocity)
+{
+    constexpr int kSliderMin = 0;
+    constexpr int kSliderMax = 1023;
+    constexpr int kSliderCenter = (kSliderMax + kSliderMin) / 2;
+    constexpr int kDeadband = 80;
+
+    const int value = static_cast<int>(raw);
+    const int offset = value - kSliderCenter;
+    if (offset >= -kDeadband && offset <= kDeadband) {
+        return 0.0f;
+    }
+
+    if (offset > 0) {
+        const int activeRange = kSliderMax - kSliderCenter - kDeadband;
+        const float scale = static_cast<float>(offset - kDeadband) / static_cast<float>(activeRange);
+        return maxVelocity * ((scale > 1.0f) ? 1.0f : scale);
+    }
+
+    const int activeRange = kSliderCenter - kSliderMin - kDeadband;
+    const float scale = static_cast<float>((-offset) - kDeadband) / static_cast<float>(activeRange);
+    return -maxVelocity * ((scale > 1.0f) ? 1.0f : scale);
+}
+}
+
 // Constructor
 InputController::InputController(InputModes defaultMode)
     : _mamriWebServer(),
@@ -132,7 +158,7 @@ void InputController::webserverAttachRobotController(RobotController& robotContr
     ESP_LOGI(TAG, "RobotController attached to webserver.");
 }
 
-void InputController::update(RobotController& robotController) {
+void InputController::update(RobotController& robotController, bool incisionMode) {
     // No SPI switches/buttons for now
     handleSwitches(robotController);
 
@@ -171,7 +197,7 @@ void InputController::update(RobotController& robotController) {
     static TickType_t lastDisplayUpdateTick = 0;
     static bool screenForcedBlack = false;
     const TickType_t now = xTaskGetTickCount();
-    if ((now - lastDisplayUpdateTick) >= pdMS_TO_TICKS(100)) {
+    if ((now - lastDisplayUpdateTick) >= pdMS_TO_TICKS(1)) {
         lastDisplayUpdateTick = now;
 
         // At end of potmeter travel, keep display black and skip UI rendering to free time.
@@ -208,7 +234,7 @@ void InputController::update(RobotController& robotController) {
     {
         float pressure = _i2cManager.readPressureSensor(1);
 
-        ESP_LOGI(TAG, "Pressure sensor 1: %.4f bar", pressure);
+        //ESP_LOGI(TAG, "Pressure sensor 1: %.4f bar", pressure);
 
         const bool noPressure = (pressure < 1.0f);
         _spi0Manager.writeRed2(noPressure);
@@ -221,6 +247,33 @@ void InputController::update(RobotController& robotController) {
 
     float maxVelocity = getMaxVelocityFromPotmeter();
     robotController.setFrequency(maxVelocity);
+
+    const int numSteppers = robotController.getNumOfSteppers();
+    const uint16_t needleSliderRaw = readNeedleSlider();
+    float needleVelocity = 0.0f;
+    if (numSteppers > 0) {
+        const size_t needleJointIdx = static_cast<size_t>(numSteppers - 1);
+        for (int i = 0; i < numSteppers; ++i) {
+            robotController.setTargetVelocity(static_cast<size_t>(i), 0.0f);
+        }
+
+        if (incisionMode) {
+            needleVelocity = mapNeedleSliderToVelocity(needleSliderRaw, maxVelocity);
+            robotController.setControlStrategy(PneumaticStepper::Controlstrategy::VELOCITY_CONTROL);
+            robotController.setTargetVelocity(needleJointIdx, needleVelocity);
+        }
+    }
+
+    static TickType_t lastNeedleSliderLogTick = 0;
+    if ((now - lastNeedleSliderLogTick) >= pdMS_TO_TICKS(500)) {
+        lastNeedleSliderLogTick = now;
+        ESP_LOGI(TAG,
+                 "Needle slider: mode=%s raw=%u velocity=%.2f steps/s joint=%d",
+                 incisionMode ? "incision" : "disabled",
+                 static_cast<unsigned>(needleSliderRaw),
+                 needleVelocity,
+                 numSteppers > 0 ? (numSteppers - 1) : -1);
+    }
 
     // Ferris warning LED disabled for now
     _spi0Manager.writeGreen(true);
@@ -278,6 +331,11 @@ float InputController::getMaxVelocityFromPotmeter() {
     }
 
     return 100.0f;
+}
+
+uint16_t InputController::readNeedleSlider()
+{
+    return _spi0Manager.readNeedleSlider();
 }
 
 Page InputController::mapPagePotmeter()

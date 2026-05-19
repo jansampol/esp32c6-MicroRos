@@ -1,6 +1,9 @@
-#include <stdio.h>
-#include <vector>
+#include <cmath>
 #include <cstdint>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <vector>
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -8,13 +11,13 @@
 #include "nvs_flash.h"
 #include "esp_err.h"
 #include "esp_log.h"
+#include "esp_timer.h"
 
 #include "SystemParameters.h"
 #include "MicroRosController/MicroRosManager.h"
 #include "RobotController/RobotController.h"
-#include "InputController/SPI/SPI1Manager.h"
+#include "InputController/I2C/I2CManager.h"
 #include "InputController/InputController.h"
-#include "pinDefinitions.h"
 
 static const char *TAG = "app_main";
 
@@ -32,7 +35,7 @@ namespace
         return (endptr != text && *endptr == '\0');
     }
 
-    void handleEspCommand(const char *cmd, RobotController &robot_controller)
+    void handleEspCommand(const char *cmd, RobotController &robot_controller, bool &incision_mode)
     {
         if (cmd == nullptr || *cmd == '\0') {
             ESP_LOGW(TAG, "Received empty ESP command");
@@ -41,7 +44,34 @@ namespace
 
         ESP_LOGI(TAG, "Handling ESP command: %s", cmd);
 
-        // Global command
+        if (strcmp(cmd, "incision_on") == 0) {
+            incision_mode = true;
+            for (int i = 0; i < robot_controller.getNumOfSteppers(); ++i) {
+                robot_controller.setTargetVelocity(static_cast<size_t>(i), 0.0f);
+            }
+            robot_controller.setControlStrategy(PneumaticStepper::Controlstrategy::VELOCITY_CONTROL);
+            ESP_LOGI(TAG, "Applied command: incision_on");
+            return;
+        }
+
+        if (strcmp(cmd, "incision_off") == 0) {
+            incision_mode = false;
+            for (int i = 0; i < robot_controller.getNumOfSteppers(); ++i) {
+                robot_controller.setTargetVelocity(static_cast<size_t>(i), 0.0f);
+            }
+            const int numSteppers = robot_controller.getNumOfSteppers();
+            if (numSteppers > 0) {
+                const size_t needleJointIdx = static_cast<size_t>(numSteppers - 1);
+                const RobotState state = robot_controller.getRobotState();
+                if (needleJointIdx < state.jointSteps.size()) {
+                    robot_controller.setJointTargetStep(needleJointIdx, state.jointSteps[needleJointIdx]);
+                }
+            }
+            robot_controller.setControlStrategy(PneumaticStepper::Controlstrategy::POSITION_CONTROL);
+            ESP_LOGI(TAG, "Applied command: incision_off");
+            return;
+        }
+
         if (strcmp(cmd, "home_all") == 0) {
             robot_controller.sendAllJointsToHome();
             ESP_LOGI(TAG, "Applied command: home_all");
@@ -115,12 +145,10 @@ namespace
     }
 }
 
-extern "C" void app_main(void) {
+extern "C" void app_main(void)
+{
     printf("app_main started\n");
 
-    // ============================================================
-    // Initialize NVS
-    // ============================================================
     esp_err_t ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
         ESP_ERROR_CHECK(nvs_flash_erase());
@@ -133,6 +161,7 @@ extern "C" void app_main(void) {
     size_t current_wp = 0;
     bool executing_path = false;
     bool waypoint_sent = false;
+    bool incision_mode = false;
 
     static double path[MicroRosManager::MAX_WAYPOINTS][MicroRosManager::MAX_JOINTS];
 
@@ -140,14 +169,10 @@ extern "C" void app_main(void) {
     static MicroRosManager micro_ros;
 
     #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI0_ONLY
-    // ============================================================
-    // SPI0 mode: full integration path (micro-ROS + robot + input)
-    // ============================================================
     static InputController input_controller(InputModes::JOINT_TARGET_MODE);
-
     input_controller.begin();
     #endif
-    
+
     robot_controller.begin();
 
     if (!micro_ros.begin()) {
@@ -158,7 +183,6 @@ extern "C" void app_main(void) {
     }
 
     #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI1_ONLY
-    // I2C setup (ferris wheels + pressure sensors)
     static I2CManager i2cManager;
     uint8_t numFerris = 0;
     if (!i2cManager.begin(numFerris)) {
@@ -170,11 +194,10 @@ extern "C" void app_main(void) {
     #endif
 
     #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI0_ONLY
-    bool mainValveOn = true;
-    input_controller.setMainValve(mainValveOn);
-    ESP_LOGI(TAG, "Application initialized successfully (SPI0 mode)");
+    input_controller.setMainValve(true);
+    ESP_LOGI(TAG, "Application initialized successfully (SPI0 input mode)");
     #else
-    ESP_LOGI(TAG, "Application initialized successfully (SPI1 mode)");
+    ESP_LOGI(TAG, "Application initialized successfully (SPI1 motor mode)");
     #endif
 
     while (true) {
@@ -185,15 +208,18 @@ extern "C" void app_main(void) {
             micro_ros.consumeEspCmd(cmd, sizeof(cmd));
             executing_path = false;
             waypoint_sent = false;
-            handleEspCommand(cmd, robot_controller);
+            handleEspCommand(cmd, robot_controller, incision_mode);
         }
 
         if (micro_ros.hasNewPath()) {
             micro_ros.consumePath(path, path_waypoints, path_dof);
             current_wp = 0;
-            executing_path = (path_waypoints > 0);
+            executing_path = (path_waypoints > 0) && !incision_mode;
             waypoint_sent = false;
-            ESP_LOGI(TAG, "Received path with %d waypoints", (int)path_waypoints);
+            ESP_LOGI(TAG,
+                     "Received path with %d waypoints%s",
+                     (int)path_waypoints,
+                     incision_mode ? " (ignored while incision mode is active)" : "");
         }
 
         if (executing_path && current_wp < path_waypoints) {
@@ -219,117 +245,39 @@ extern "C" void app_main(void) {
                 if (current_wp >= path_waypoints) {
                     executing_path = false;
                     ESP_LOGI(TAG, "Path execution finished");
+                    micro_ros.publishRobotState("movement_finished");
                 }
             }
         }
 
         #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI1_ONLY
-        //Read pressure sensor
-        float pressure0 = i2cManager.readPressureSensor(1);
+        float pressure1 = i2cManager.readPressureSensor(1);
+        float pressure0 = i2cManager.readPressureSensor(0);
 
-        // Log pressure reading
-        if (isnan(pressure0)) {
-            ESP_LOGE("PRESSURE_TEST", "pressure sensor 1 read failed");
+        uint16_t valve_state = robot_controller.getValveState();
+        uint8_t j1_a = (valve_state >> 0) & 0x1;
+        uint8_t j1_b = (valve_state >> 1) & 0x1;
+
+        if (std::isnan(pressure0) || std::isnan(pressure1)) {
+            ESP_LOGE("PRESSURE_TEST", "pressure read failed p0=%.4f p1=%.4f", pressure0, pressure1);
         } else {
-            ESP_LOGI("PRESSURE_TEST", "pressure sensor = %.4f bar", pressure0);
+            ESP_LOGI("DATA_CSV", "%llu,%.4f,%.4f,%u,%u,0x%04X",
+                     (unsigned long long)(esp_timer_get_time() / 1000ULL),
+                     pressure1,
+                     pressure0,
+                     j1_a,
+                     j1_b,
+                     valve_state);
         }
         #endif
 
         robot_controller.update();
         robot_controller.service();
+
         #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI0_ONLY
-        input_controller.update(robot_controller);
+        input_controller.update(robot_controller, incision_mode);
         #endif
+
         vTaskDelay(pdMS_TO_TICKS(10));
     }
 }
-
-// //////////////////////////////////////////////////////
-// // I2C test code
-// //////////////////////////////////////////////////////
-
-// // extern "C" void app_main(void)
-// // {
-// //     printf("FERRIS + PRESSURE TEST START\n");
-
-// //     // ============================================================
-// //     // Initialize NVS
-// //     // ============================================================
-// //     esp_err_t ret = nvs_flash_init();
-// //     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
-// //         ESP_ERROR_CHECK(nvs_flash_erase());
-// //         ret = nvs_flash_init();
-// //     }
-// //     ESP_ERROR_CHECK(ret);
-
-// //     // ============================================================
-// //     // Create I2C Manager
-// //     // ============================================================
-// //     static I2CManager i2cManager;
-
-// //     uint8_t numFerris = 0;
-
-// //     if (!i2cManager.begin(numFerris)) {
-// //         ESP_LOGE(TAG, "I2CManager begin() failed");
-// //         while (true) {
-// //             vTaskDelay(pdMS_TO_TICKS(1000));
-// //         }
-// //     }
-
-// //     ESP_LOGI(TAG, "I2C initialized. Starting Ferris + pressure test...");
-
-// //     // spi0 manager
-// //     SPI0Manager spi0;
-// //     if (!spi0.begin()) {
-// //         ESP_LOGE(TAG, "SPI0Manager begin() failed");
-// //         while (true) {
-// //             vTaskDelay(pdMS_TO_TICKS(1000));
-// //         }
-// //     }
-
-// //     ESP_LOGI(TAG, "SPI0 initialized successfully");
-    
-// //     bool valveOpen = false;
-// //     // Turn on the mauin valve
-// //     spi0.setMainValve(valveOpen);
-
-
-// //     while (true) {
-
-// //         // Read ferris wheels
-// //         // for (uint8_t i = 0; i < i2cManager.getNumOfFerrisWheels(); i++) {
-// //         //     float raw = i2cManager.readFerrisWheelRawValue(i);
-// //         //     float angle = i2cManager.readFerrisWheelAngle(i);
-
-// //         //     ESP_LOGI(
-// //         //         "FERRIS_TEST",
-// //         //         "wheel=%u | raw=%.2f | angle=%.2f deg",
-// //         //         i,
-// //         //         raw,
-// //         //         angle
-// //         //     );
-// //         // }
-
-// //         // Read pressure sensor
-// //         float pressure0 = i2cManager.readPressureSensor(1);
-
-// //         if (isnan(pressure0)) {
-// //             ESP_LOGE("PRESSURE_TEST", "pressure sensor 1 read failed");
-// //         } else {
-// //             ESP_LOGI("PRESSURE_TEST", "pressure sensor 1 = %.4f bar", pressure0);
-// //         }
-
-// //         ESP_LOGI(TAG, "--------------------------------------");
-
-// //         //toggle the mai valve every 4 loops
-// //         static uint8_t loopCount = 0;
-// //         if ((loopCount % 4) == 0) {
-// //             valveOpen = !valveOpen;
-// //             spi0.setMainValve(valveOpen);
-// //         }
-// //         loopCount++;
-
-
-// //         vTaskDelay(pdMS_TO_TICKS(500));
-// //     }
-// // }

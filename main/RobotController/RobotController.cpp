@@ -237,7 +237,12 @@ void RobotController::update() {
     }
 
     for (size_t i = 0; i < _steppers.size(); ++i) {
-        _steppers[i].setSetpointPosition(_robotState.targetJointSteps[i]);
+        if (_robotState.controlStrategy == PneumaticStepper::Controlstrategy::VELOCITY_CONTROL) {
+            const float velocity = (i < _robotState.targetVelocity.size()) ? _robotState.targetVelocity[i] : 0.0f;
+            _steppers[i].setSetpointVelocity(velocity);
+        } else {
+            _steppers[i].setSetpointPosition(_robotState.targetJointSteps[i]);
+        }
     }
 
     if (_kinematics) {
@@ -267,10 +272,11 @@ void RobotController::service() {
         for (size_t i = 0; i < _robotState.jointSteps.size(); ++i) {
             ESP_LOGI(
                 TAG,
-                "joint[%u] current_steps=%d target_steps=%d",
+                "joint[%u] current_steps=%d target_steps=%d target_vel=%.2f",
                 (unsigned)i,
                 _robotState.jointSteps[i],
-                _robotState.targetJointSteps[i]
+                _robotState.targetJointSteps[i],
+                (i < _robotState.targetVelocity.size()) ? _robotState.targetVelocity[i] : 0.0f
             );
         }
 

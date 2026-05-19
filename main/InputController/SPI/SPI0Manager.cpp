@@ -67,7 +67,7 @@ bool SPI0Manager::begin()
     }
 
     spi_device_interface_config_t devcfg = {};
-    devcfg.clock_speed_hz = 5 * 1000 * 1000;  // safer speed-up for combined SPI0 workload
+    devcfg.clock_speed_hz = 10 * 1000 * 1000;  // matches the verified external MCP3008 test speed
     devcfg.mode = 0;
     devcfg.spics_io_num = -1;                 // manual CS via demux
     devcfg.queue_size = 4;
@@ -102,27 +102,6 @@ bool SPI0Manager::begin()
     }
 
     vTaskDelay(pdMS_TO_TICKS(10));
-    
-    //
-    // We need to change this, since we are overriding the default all-inputs config with the next steps for LEDs and switches.
-    //
-
-    // LEDs and Switches MCP23S17
-    // err = mcpInitMCP23S17(UI_2_LEDS_AND_SWITCHES,
-    //                       0xFFC0,   // upper bits input, lower bits output
-    //                       0xFFC0,   // pullups on inputs
-    //                       0xFFC0,   // invert inputs
-    //                       0x0000);  // outputs low
-    // if (err != ESP_OK) {
-    //     ESP_LOGE(TAG, "LEDs and Switches MCP23S17 init failed: %s", esp_err_to_name(err));
-    //     return false;
-    // }
-
-    // vTaskDelay(pdMS_TO_TICKS(10));
-
-    //
-    //
-    //
 
     // Vertical Buttons MCP23S17
     err = mcpInitMCP23S17(UI_3_VBUTTONS,
@@ -228,6 +207,18 @@ bool SPI0Manager::begin()
 
     ESP_LOGI(TAG, "UI_2 readback: IODIRA=0x%02X IODIRB=0x%02X GPIOA=0x%02X GPIOB=0x%02X",
             iodirA, iodirB, gpioA, gpioB);
+
+
+    gpio_config_t io_conf = {};
+    io_conf.pin_bit_mask = (1ULL << TEST_ADC_CS_PIN);
+    io_conf.mode = GPIO_MODE_OUTPUT;
+    io_conf.pull_up_en = GPIO_PULLUP_DISABLE;
+    io_conf.pull_down_en = GPIO_PULLDOWN_DISABLE;
+    io_conf.intr_type = GPIO_INTR_DISABLE;
+
+    gpio_config(&io_conf);
+
+    gpio_set_level((gpio_num_t)TEST_ADC_CS_PIN, 1);
 
     if (!initScreen()) {
         ESP_LOGW(TAG, "Screen init skipped/failed. SPI0 remains available for other devices.");
@@ -483,6 +474,61 @@ esp_err_t SPI0Manager::adcReadMcp3004(uint8_t channel, uint16_t& value)
         value = static_cast<uint16_t>(((rx[1] & 0x03U) << 8) | rx[2]);
     }
     return err;
+}
+
+esp_err_t SPI0Manager::adcReadExternalMcp3008(uint8_t channel, uint16_t& value)
+{
+    if (_spi_dev == nullptr) {
+        return ESP_ERR_INVALID_STATE;
+    }
+
+    if (channel > 7) {
+        return ESP_ERR_INVALID_ARG;
+    }
+
+    uint8_t tx[3] = {
+        0x01,
+        static_cast<uint8_t>((0x08U | channel) << 4),
+        0x00
+    };
+
+    uint8_t rx[3] = {0, 0, 0};
+
+    spi_transaction_t t = {};
+    t.length = 24;
+    t.tx_buffer = tx;
+    t.rx_buffer = rx;
+
+    // Important: deselect all demux SPI0 devices first
+    deselectDevice();
+
+    gpio_set_level((gpio_num_t)TEST_ADC_CS_PIN, 0);
+    esp_rom_delay_us(2);
+
+    esp_err_t err = spi_device_transmit(_spi_dev, &t);
+
+    esp_rom_delay_us(2);
+    gpio_set_level((gpio_num_t)TEST_ADC_CS_PIN, 1);
+
+    if (err == ESP_OK) {
+        value = static_cast<uint16_t>(((rx[1] & 0x03U) << 8) | rx[2]);
+    }
+
+    return err;
+}
+
+uint16_t SPI0Manager::readNeedleSlider()
+{
+    uint16_t raw = 0;
+
+    esp_err_t err = adcReadExternalMcp3008(0, raw);  // CH0 of external MCP3008
+
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "readNeedleSlider failed: %s", esp_err_to_name(err));
+        return 0;
+    }
+
+    return raw;  // 0 to 1023
 }
 
 esp_err_t SPI0Manager::mcpInitMCP23S17(deviceNameSPI0 device,

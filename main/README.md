@@ -174,3 +174,23 @@ cd ~/mamri_build/Mamri_v6_PlatformIO
 idf.py build
 idf.py -p /dev/cu.usbmodem1401 flash monitor
 ```
+
+
+
+Save the data:
+
+```bash
+
+cd ~/esp/esp-idf-v5.5
+. ./export.sh
+cd ~/mamri_build/Mamri_v6_PlatformIO                                            
+
+idf.py -p /dev/cu.usbserial-140 flash                                             
+mkdir -p logs
+idf.py -p /dev/cu.usbserial-140 monitor | tee logs/raw.txt
+
+
+grep 'DATA_CSV' logs/raw.txt | sed -E 's/^.*DATA_CSV: //' > logs/data_joint1.csv
+wc -l logs/data_joint1.csv
+head -n 5 logs/data_joint1.csv
+```

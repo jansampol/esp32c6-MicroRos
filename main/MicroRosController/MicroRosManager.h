@@ -30,6 +30,8 @@ public:
     bool hasNewEspCmd() const;
     void consumeEspCmd(char *out, size_t out_size);
 
+    bool publishRobotState(const char *state);
+
 private:
     static void jointPathCallback(const void *msgin);
     static void espCmdCallback(const void *msgin);
@@ -55,6 +57,9 @@ private:
     // Subscriber: ESP command
     rcl_subscription_t esp_cmd_subscriber_;
 
+    // Publisher: robot state
+    rcl_publisher_t robot_state_publisher_;
+
     rclc_executor_t executor_;
 
     // joint path
@@ -64,6 +69,10 @@ private:
     // esp cmd string
     std_msgs__msg__String esp_cmd_msg_;
     char esp_cmd_buffer_[MAX_ESP_CMD_LEN];
+
+    // robot state string
+    std_msgs__msg__String robot_state_msg_;
+    char robot_state_buffer_[MAX_ESP_CMD_LEN];
 
     double latest_path_[MAX_WAYPOINTS][MAX_JOINTS];
     size_t latest_path_waypoints_ = 0;

@@ -61,10 +61,12 @@ public:
     void writeBlue(bool on);
     void writeLeds(uint8_t ledStates);
 
-    uint16_t readPotmeters(bool id);
-
     uint16_t readExternalDevice(deviceNameSPI0 device);
     void writeExternalDevice(deviceNameSPI0 device, uint16_t data);
+
+    uint16_t readPotmeters(bool id);
+    uint16_t readNeedleSlider();
+    esp_err_t adcReadExternalMcp3008(uint8_t channel, uint16_t& value);
 
     void debugReadMcpRegisters(deviceNameSPI0 device);
     void debugWriteAndReadLeds(uint8_t value);
@@ -81,6 +83,7 @@ private:
     esp_err_t mcpRead8(deviceNameSPI0 device, uint8_t reg, uint8_t& value);
     esp_err_t mcpRead16(deviceNameSPI0 device, uint8_t regA, uint16_t& value);
     esp_err_t adcReadMcp3004(uint8_t channel, uint16_t& value);
+    esp_err_t adcReadMcp3004Single(uint8_t channel, uint16_t& value);
     esp_err_t screenWriteCommand(uint8_t cmd);
     esp_err_t screenWriteData(const uint8_t* data, size_t len);
     esp_err_t screenSetAddrWindow(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1);

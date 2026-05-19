@@ -2,7 +2,6 @@
 
 // =====================================================
 // ESP32-C6 pin draft
-// IMPORTANT: still verify against your exact board wiring
 // =====================================================
 
 // SPI for motor valves (checked)
@@ -26,6 +25,7 @@
 #define CS_2_PIN 2
 #define CS_3_PIN 21
 #define CS_4_PIN 9
+#define TEST_ADC_CS_PIN 22
 
 // I2C (checked)
 #define I2C_SDA_PIN 4
