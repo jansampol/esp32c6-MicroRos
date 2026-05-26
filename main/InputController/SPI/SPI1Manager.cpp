@@ -9,7 +9,6 @@ static const char *TAG = "SPI1Manager";
 
 // MCP23S17 base opcodes for HW address 000
 static constexpr uint8_t MCP23S17_OPCODE_WRITE = 0x40;
-static constexpr uint8_t MCP23S17_OPCODE_READ  = 0x41;
 
 // registers
 static constexpr uint8_t MCP23S17_IODIRA = 0x00;
@@ -45,7 +44,7 @@ bool SPI1Manager::begin() {
     }
 
     spi_device_interface_config_t devcfg = {};
-    devcfg.clock_speed_hz = 80 * 1000 * 1000;   // safe starting point
+    devcfg.clock_speed_hz = 1 * 1000 * 1000;   // safe starting point
     devcfg.mode = 0;
     devcfg.spics_io_num = SPI1_CS_MOTOR;
     devcfg.queue_size = 4;

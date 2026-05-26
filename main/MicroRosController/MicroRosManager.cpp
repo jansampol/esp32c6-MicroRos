@@ -9,7 +9,7 @@
 #include "esp_log.h"
 #include "esp_err.h"
 #include "esp_netif.h"
-#include "esp_random.h"
+#include "esp_mac.h"
 #include "esp_wifi.h"
 
 #include <rcl/error_handling.h>
@@ -25,7 +25,19 @@ namespace
 {
     uint32_t make_micro_ros_client_key()
     {
-        uint32_t key = esp_random();
+        uint8_t mac[6] = {0};
+        esp_err_t err = esp_read_mac(mac, ESP_MAC_WIFI_STA);
+        if (err != ESP_OK) {
+            ESP_LOGW(TAG, "esp_read_mac failed: %s", esp_err_to_name(err));
+            return 0xA5A50001;
+        }
+
+        uint32_t key =
+            (static_cast<uint32_t>(mac[2]) << 24) |
+            (static_cast<uint32_t>(mac[3]) << 16) |
+            (static_cast<uint32_t>(mac[4]) << 8) |
+            static_cast<uint32_t>(mac[5]);
+
         if (key == 0) {
             key = 0xA5A50001;
         }
@@ -215,7 +227,7 @@ bool MicroRosManager::createEntities()
     msg_.data.size = 0;
     msg_.data.capacity = MAX_PATH_MSG_VALUES;
 
-    rc = rclc_subscription_init_best_effort(
+    rc = rclc_subscription_init_default(
         &subscriber_,
         &node_,
         ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Float64MultiArray),
@@ -359,15 +371,15 @@ void MicroRosManager::destroyEntities()
 
 void MicroRosManager::jointPathCallback(const void *msgin)
 {
-    printf("jointPathCallback called\n");
     if (instance_ == nullptr || msgin == nullptr) {
+        ESP_LOGW(TAG, "jointPathCallback called with null instance/msg");
         return;
     }
 
     const auto *in = static_cast<const std_msgs__msg__Float64MultiArray *>(msgin);
 
     if (in->data.size < 2) {
-        printf("Received invalid path message: too short\n");
+        ESP_LOGW(TAG, "Received invalid path message: too short");
         return;
     }
 
@@ -375,19 +387,19 @@ void MicroRosManager::jointPathCallback(const void *msgin)
     size_t dof = static_cast<size_t>(in->data.data[1]);
 
     if (dof != MAX_JOINTS) {
-        printf("Received invalid path message: DOF=%zu expected=%zu\n", dof, MAX_JOINTS);
+        ESP_LOGW(TAG, "Received invalid path message: DOF=%zu expected=%zu", dof, MAX_JOINTS);
         return;
     }
 
     if (n_waypoints > MAX_WAYPOINTS) {
-        printf("Received path truncated from %zu to %zu waypoints\n", n_waypoints, MAX_WAYPOINTS);
+        ESP_LOGW(TAG, "Received path truncated from %zu to %zu waypoints", n_waypoints, MAX_WAYPOINTS);
         n_waypoints = MAX_WAYPOINTS;
     }
 
     size_t expected_size = 2 + n_waypoints * dof;
     if (in->data.size < expected_size) {
-        printf("Received invalid path message: expected at least %zu values, got %zu\n",
-               expected_size, in->data.size);
+        ESP_LOGW(TAG, "Received invalid path message: expected at least %zu values, got %zu",
+                 expected_size, in->data.size);
         return;
     }
 
@@ -401,8 +413,6 @@ void MicroRosManager::jointPathCallback(const void *msgin)
     instance_->latest_path_waypoints_ = n_waypoints;
     instance_->latest_path_dof_ = dof;
     instance_->new_path_available_ = true;
-
-    printf("Received joint path: %zu waypoints, %zu dof\n", n_waypoints, dof);
 }
 
 void MicroRosManager::espCmdCallback(const void *msgin)

@@ -11,6 +11,7 @@ set(OLD_GLOB
   "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/diagnostic_msgs"
   "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/example_interfaces"
   "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/geometry_msgs"
+  "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/include"
   "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/lifecycle_msgs"
   "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/micro_ros_msgs"
   "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/micro_ros_utilities"

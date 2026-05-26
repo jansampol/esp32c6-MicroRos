@@ -1,0 +1,1782 @@
+Command: /Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf_monitor.py -p /dev/cu.usbserial-140 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf -m '/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf.py' '-p' '/dev/cu.usbserial-140'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xfa8
+load:0x4086e610,len:0x31a8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time May 26 2026 16:51:11[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (71) boot:  3 coredump         Unknown data     01 03 00210000 00010000[0m
+[0;32mI (78) boot:  4 littlefs         Unknown data     01 82 00220000 0007d000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=420f0020 size=2a144h (172356) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0003a16c vaddr=40800000 size=05each ( 24236) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=ea420h (959520) map[0m
+[0;32mI (314) esp_image: segment 3: paddr=0012a448 vaddr=40805eac size=1ae74h (110196) load[0m
+[0;32mI (345) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (345) boot: Disabling RNG early entropy source...[0m
+[0;32mI (355) cpu_start: Unicore app[0m
+[0;32mI (364) cpu_start: Pro cpu start user code[0m
+[0;32mI (364) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (364) app_init: Application information:[0m
+[0;32mI (364) app_init: Project name:     esp32c6_microros_test[0m
+[0;32mI (369) app_init: App version:      f86ea8f-dirty[0m
+[0;32mI (374) app_init: Compile time:     May 26 2026 16:50:57[0m
+[0;32mI (379) app_init: ELF file SHA256:  00ec62aa0...[0m
+[0;32mI (383) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (387) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (390) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (394) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (398) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (405) heap_init: At 4082F930 len 0004CCE0 (307 KiB): RAM[0m
+[0;32mI (410) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (415) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (421) spi_flash: detected chip: generic[0m
+[0;32mI (424) spi_flash: flash io: dio[0m
+[0;33mW (427) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (441) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (445) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (452) coexist: coex firmware version: 831ec70[0m
+[0;32mI (470) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (471) main_task: Started on CPU0[0m
+[0;32mI (471) main_task: Calling app_main()[0m
+app_main started
+[0;32mI (481) SPI1Manager: SPI1Manager begin()[0m
+[0;32mI (481) SPI1Manager: Using pins MOSI=19 MISO=20 CLK=15 CS=23[0m
+[0;32mI (481) RobotController: Switched to PURPLE_MAMRI[0m
+[0;32mI (481) MicroRosManager: Initializing WiFi transport...[0m
+[0;32mI (481) wifi_station_netif: ESP_WIFI_MODE_STA[0m
+[0;32mI (491) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (491) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (511) wifi:wifi driver task: 40836cc4, prio:23, stack:6656, core=0[0m
+[0;32mI (511) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (511) wifi:wifi certification version: v7.0[0m
+[0;32mI (511) wifi:config NVS flash: enabled[0m
+[0;32mI (511) wifi:config nano formatting: disabled[0m
+[0;32mI (521) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (521) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (531) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (531) wifi:Init management short buffer num: 32[0m
+[0;32mI (541) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (541) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (551) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (551) wifi:Init static rx buffer num: 10[0m
+[0;32mI (551) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (561) wifi_init: rx ba win: 6[0m
+[0;32mI (561) wifi_init: accept mbox: 6[0m
+[0;32mI (561) wifi_init: tcpip mbox: 32[0m
+[0;32mI (571) wifi_init: udp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp tx win: 5760[0m
+[0;32mI (581) wifi_init: tcp rx win: 5760[0m
+[0;32mI (581) wifi_init: tcp mss: 1440[0m
+[0;32mI (581) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (591) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (591) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;33mW (591) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (601) phy_init: phy_version 331,5b89037,Mar  3 2025,16:01:12[0m
+[0;33mW (681) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (681) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (691) wifi:(agc)0x600a7128:0xd2013a60, min.avgNF:0xce->0xd2(dB), RCalCount:0x13, min.RRssi:0xa60(-90.00)[0m
+[0;32mI (701) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (701) wifi:mode : sta (20:6e:f1:18:8c:28)[0m
+[0;32mI (711) wifi:enable tsf[0m
+[0;32mI (711) wifi_station_netif: wifi_init_sta finished.[0m
+[0;32mI (721) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (721) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (731) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (741) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (841) wifi:(assoc)RESP, Extended Capabilities length:1, operating_mode_notification:0[0m
+[0;32mI (841) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (851) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (851) wifi:(trc)phytype:CBW20-SGI, snr:49, maxRate:144, highestRateIdx:0[0m
+[0;33mW (861) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (871) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:49, ampduState:wait operational[0m
+[0;32mI (881) wifi:ifidx:0, rssi:-47, nf:-96, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (891) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:4(2 us)[0m
+[0;32mI (981) wifi:connected with MyNewHotspot, aid = 3, channel 1, BW20, bssid = c2:de:de:da:8c:bb[0m
+[0;32mI (981) wifi:security: WPA2-PSK, phy:bgn, rssi:-47, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (991) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (991) wifi:pm start, type:1, aid:0x3, trans-BSSID:c2:de:de:da:8c:bb, BSSID[5]:0xbb, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (1001) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1011) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1021) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1031) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1041) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1051) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (1061) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1071) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1291) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1451) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1571) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (1581) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100bb8c, TALO:0xdadedec2, (ssn:0, win:64, cur_ssn:0), CONF:0xc0000005[0m
+[0;32mI (2651) esp_netif_handlers: sta ip: 192.168.73.75, mask: 255.255.255.0, gw: 192.168.73.180[0m
+[0;32mI (2651) wifi_station_netif: got ip:192.168.73.75[0m
+[0;32mI (2651) wifi_station_netif: connected to ap SSID:MyNewHotspot password:12345678[0m
+[0;32mI (2651) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (2661) MicroRosManager: Waiting before micro-ROS init...[0m
+[0;32mI (5661) MicroRosManager: Creating micro-ROS entities (attempt 1/5)...[0m
+[0;32mI (5661) MicroRosManager: Using micro-ROS client key: 0xf1188c28[0m
+[0;33mW (6421) wifi:<ba-add>idx:1, ifx:0, tid:6, TAHI:0x100bb8c, TALO:0xdadedec2, (ssn:2, win:64, cur_ssn:2), CONF:0xc0006005[0m
+[0;32mI (6741) MicroRosManager: micro-ROS entities created[0m
+[0;32mI (6741) MicroRosManager: micro-ROS base ready[0m
+[0;32mI (6741) I2CManager: Starting I2C Manager with 5 Ferris wheels and 0 other sensors...[0m
+[0;32mI (6751) I2CManager: I2C bus started[0m
+[0;32mI (6751) I2CManager: Pressure sensor/internal multiplexer not required for this I2C setup.[0m
+[0;32mI (6761) I2CManager: I2C multiplexers initialized. Initializing Ferris wheels...[0m
+[0;32mI (6771) I2CManager: Initializing Ferris wheel sensors...[0m
+[0;32mI (6771) I2CManager: Ferris wheel sensor 0: 1[0m
+[0;32mI (6781) I2CManager: Ferris wheel sensor 1: 1[0m
+[0;32mI (6791) I2CManager: Ferris wheel sensor 2: 1[0m
+[0;32mI (6801) I2CManager: Ferris wheel sensor 3: 1[0m
+[0;32mI (6811) I2CManager: Ferris wheel sensor 4: 1[0m
+[0;32mI (6821) I2CManager: Ferris wheels successfully initialized[0m
+[0;32mI (6821) app_main: Application initialized successfully (SPI1 motor mode)[0m
+[0;32mI (8311) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (8311) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (8311) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (8321) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (8331) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (8331) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (8341) RobotController: valve_state=0x0000[0m
+[0;32mI (9841) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (9841) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (9841) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (9851) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (9861) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (9861) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (9871) RobotController: valve_state=0x0000[0m
+[0;32mI (11371) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (11371) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (11371) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (11381) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (11391) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (11391) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (11401) RobotController: valve_state=0x0000[0m
+[0;32mI (12901) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (12901) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (12901) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (12911) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (12921) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (12921) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (12931) RobotController: valve_state=0x0000[0m
+[0;32mI (14431) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (14431) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (14431) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (14441) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (14451) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (14451) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (14461) RobotController: valve_state=0x0000[0m
+[0;32mI (15961) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (15961) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (15961) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (15971) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (15981) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (15981) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (15991) RobotController: valve_state=0x0000[0m
+[0;32mI (17491) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (17491) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (17491) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (17501) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (17511) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (17511) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (17521) RobotController: valve_state=0x0000[0m
+[0;32mI (19031) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (19031) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (19031) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (19041) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (19051) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (19051) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (19061) RobotController: valve_state=0x0000[0m
+[0;32mI (20561) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (20561) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (20561) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (20571) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (20581) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (20581) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (20591) RobotController: valve_state=0x0000[0m
+[0;32mI (22091) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (22091) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (22091) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (22101) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (22111) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (22111) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (22121) RobotController: valve_state=0x0000[0m
+[0;32mI (23621) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (23621) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (23621) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (23631) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (23641) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (23641) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (23651) RobotController: valve_state=0x0000[0m
+[0;32mI (25151) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (25151) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (25151) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (25161) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (25171) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (25171) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (25181) RobotController: valve_state=0x0000[0m
+[0;32mI (26681) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (26681) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (26681) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (26691) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (26701) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (26701) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (26711) RobotController: valve_state=0x0000[0m
+[0;32mI (28211) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (28211) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (28211) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (28221) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (28231) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (28231) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (28241) RobotController: valve_state=0x0000[0m
+[0;32mI (29741) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (29741) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (29741) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (29751) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (29761) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (29761) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (29771) RobotController: valve_state=0x0000[0m
+[0;32mI (31271) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (31271) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (31271) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (31281) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (31291) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (31291) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (31301) RobotController: valve_state=0x0000[0m
+[0;32mI (32811) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (32811) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (32811) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (32821) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (32831) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (32831) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (32841) RobotController: valve_state=0x0000[0m
+[0;32mI (34341) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (34341) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (34341) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (34351) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (34361) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (34361) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (34371) RobotController: valve_state=0x0000[0m
+[0;32mI (35871) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (35871) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (35871) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (35881) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (35891) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (35891) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (35901) RobotController: valve_state=0x0000[0m
+[0;32mI (37401) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (37401) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (37401) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (37411) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (37421) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (37421) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (37431) RobotController: valve_state=0x0000[0m
+[0;32mI (38931) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (38931) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (38931) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (38941) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (38951) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (38951) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (38961) RobotController: valve_state=0x0000[0m
+[0;32mI (40461) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (40461) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (40461) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (40471) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (40481) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (40481) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (40491) RobotController: valve_state=0x0000[0m
+[0;32mI (41991) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (41991) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (41991) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (42001) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (42011) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (42011) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (42021) RobotController: valve_state=0x0000[0m
+[0;32mI (43531) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (43531) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (43531) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (43541) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (43551) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (43551) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (43561) RobotController: valve_state=0x0000[0m
+[0;32mI (45061) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (45061) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (45061) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (45071) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (45081) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (45081) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (45091) RobotController: valve_state=0x0000[0m
+[0;32mI (46591) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (46591) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (46591) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (46601) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (46611) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (46611) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (46621) RobotController: valve_state=0x0000[0m
+[0;32mI (48121) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (48121) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (48121) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (48131) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (48141) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (48141) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (48151) RobotController: valve_state=0x0000[0m
+[0;32mI (49651) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (49651) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (49651) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (49661) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (49671) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (49671) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (49681) RobotController: valve_state=0x0000[0m
+[0;32mI (51181) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (51181) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (51181) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (51191) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (51201) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (51201) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (51211) RobotController: valve_state=0x0000[0m
+[0;32mI (52711) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (52711) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (52711) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (52721) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (52731) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (52731) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (52741) RobotController: valve_state=0x0000[0m
+[0;32mI (54241) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (54241) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (54241) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (54251) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (54261) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (54261) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (54271) RobotController: valve_state=0x0000[0m
+[0;32mI (55771) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (55771) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (55771) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (55781) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (55791) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (55791) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (55801) RobotController: valve_state=0x0000[0m
+[0;32mI (57301) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (57301) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (57301) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (57311) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (57321) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (57321) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (57331) RobotController: valve_state=0x0000[0m
+[0;32mI (58831) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (58831) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (58831) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (58841) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (58851) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (58851) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (58861) RobotController: valve_state=0x0000[0m
+[0;32mI (60361) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (60361) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (60361) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (60371) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (60381) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (60381) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (60391) RobotController: valve_state=0x0000[0m
+[0;32mI (61891) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (61891) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (61891) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (61901) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (61911) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (61911) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (61921) RobotController: valve_state=0x0000[0m
+[0;32mI (63431) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (63431) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (63431) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (63441) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (63451) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (63451) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (63461) RobotController: valve_state=0x0000[0m
+[0;32mI (64961) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (64961) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (64961) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (64971) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (64981) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (64981) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (64991) RobotController: valve_state=0x0000[0m
+[0;32mI (66491) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (66491) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (66491) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (66501) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (66511) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (66511) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (66521) RobotController: valve_state=0x0000[0m
+[0;32mI (68031) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (68031) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (68031) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (68041) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (68051) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (68051) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (68061) RobotController: valve_state=0x0000[0m
+[0;32mI (69561) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (69561) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (69561) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (69571) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (69581) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (69581) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (69591) RobotController: valve_state=0x0000[0m
+[0;32mI (71091) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (71091) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (71091) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (71101) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (71111) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (71111) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (71121) RobotController: valve_state=0x0000[0m
+[0;32mI (72631) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (72631) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (72631) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (72641) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (72651) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (72651) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (72661) RobotController: valve_state=0x0000[0m
+[0;32mI (74161) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (74161) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (74161) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (74171) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (74181) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (74181) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (74191) RobotController: valve_state=0x0000[0m
+[0;32mI (75691) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (75691) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (75691) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (75701) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (75711) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (75711) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (75721) RobotController: valve_state=0x0000[0m
+[0;32mI (77221) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (77221) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (77221) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (77231) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (77241) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (77241) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (77251) RobotController: valve_state=0x0000[0m
+[0;32mI (78751) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (78751) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (78751) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (78761) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (78771) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (78771) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (78781) RobotController: valve_state=0x0000[0m
+[0;32mI (80281) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (80281) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (80281) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (80291) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (80301) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (80301) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (80311) RobotController: valve_state=0x0000[0m
+[0;32mI (81811) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (81811) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (81811) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (81821) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (81831) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (81831) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (81841) RobotController: valve_state=0x0000[0m
+[0;32mI (83211) MicroRosManager: jointPathCallback: received 112 values[0m
+[0;32mI (83211) MicroRosManager: Received joint path: 22 waypoints, 5 dof[0m
+Consuming path with 22 waypoints and 5 dof
+[0;32mI (83221) app_main: Received path with 22 waypoints[0m
+[0;32mI (83221) RobotController: target joint[0]: rad=0.000000 -> steps=0[0m
+[0;32mI (83231) RobotController: target joint[1]: rad=0.000000 -> steps=0[0m
+[0;32mI (83241) RobotController: target joint[2]: rad=0.000000 -> steps=0[0m
+[0;32mI (83241) RobotController: target joint[3]: rad=0.000000 -> steps=0[0m
+[0;32mI (83251) RobotController: target joint[4]: rad=0.000000 -> steps=0[0m
+[0;32mI (83251) app_main: Sent waypoint 1 / 22[0m
+[0;32mI (83261) app_main: Reached waypoint 1 / 22[0m
+[0;32mI (83291) RobotController: target joint[0]: rad=0.056197 -> steps=46[0m
+[0;32mI (83291) RobotController: target joint[1]: rad=0.048967 -> steps=25[0m
+[0;32mI (83291) RobotController: target joint[2]: rad=0.073029 -> steps=19[0m
+[0;32mI (83291) RobotController: target joint[3]: rad=0.104536 -> steps=27[0m
+[0;32mI (83301) RobotController: target joint[4]: rad=-0.071877 -> steps=-26[0m
+[0;32mI (83301) app_main: Sent waypoint 2 / 22[0m
+[0;32mI (83341) SPI1Manager: writeValves: 0x0001[0m
+[0;32mI (83341) RobotController: Valve state changed: 0x0000 -> 0x0001[0m
+[0;32mI (83371) SPI1Manager: writeValves: 0x0245[0m
+[0;32mI (83371) RobotController: Valve state changed: 0x0001 -> 0x0245[0m
+[0;32mI (83401) SPI1Manager: writeValves: 0x0255[0m
+[0;32mI (83401) RobotController: Valve state changed: 0x0245 -> 0x0255[0m
+[0;32mI (83401) RobotController: joint[0] current_steps=1 target_steps=46 target_vel=0.00[0m
+[0;32mI (83401) RobotController: joint[1] current_steps=1 target_steps=25 target_vel=0.00[0m
+[0;32mI (83411) RobotController: joint[2] current_steps=0 target_steps=19 target_vel=0.00[0m
+[0;32mI (83421) RobotController: joint[3] current_steps=1 target_steps=27 target_vel=0.00[0m
+[0;32mI (83431) RobotController: joint[4] current_steps=-1 target_steps=-26 target_vel=0.00[0m
+[0;32mI (83431) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (83441) RobotController: valve_state=0x0255[0m
+[0;32mI (83481) SPI1Manager: writeValves: 0x0257[0m
+[0;32mI (83481) RobotController: Valve state changed: 0x0255 -> 0x0257[0m
+[0;32mI (83541) SPI1Manager: writeValves: 0x03d6[0m
+[0;32mI (83541) RobotController: Valve state changed: 0x0257 -> 0x03d6[0m
+[0;32mI (83571) SPI1Manager: writeValves: 0x03de[0m
+[0;32mI (83571) RobotController: Valve state changed: 0x03d6 -> 0x03de[0m
+[0;32mI (83631) SPI1Manager: writeValves: 0x03fc[0m
+[0;32mI (83631) RobotController: Valve state changed: 0x03de -> 0x03fc[0m
+[0;32mI (83721) SPI1Manager: writeValves: 0x01bd[0m
+[0;32mI (83721) RobotController: Valve state changed: 0x03fc -> 0x01bd[0m
+[0;32mI (83751) SPI1Manager: writeValves: 0x01b9[0m
+[0;32mI (83751) RobotController: Valve state changed: 0x01bd -> 0x01b9[0m
+[0;32mI (83841) SPI1Manager: writeValves: 0x01bb[0m
+[0;32mI (83841) RobotController: Valve state changed: 0x01b9 -> 0x01bb[0m
+[0;32mI (83871) SPI1Manager: writeValves: 0x013b[0m
+[0;32mI (83871) RobotController: Valve state changed: 0x01bb -> 0x013b[0m
+[0;32mI (83901) SPI1Manager: writeValves: 0x002b[0m
+[0;32mI (83901) RobotController: Valve state changed: 0x013b -> 0x002b[0m
+[0;32mI (83931) SPI1Manager: writeValves: 0x0022[0m
+[0;32mI (83931) RobotController: Valve state changed: 0x002b -> 0x0022[0m
+[0;32mI (84021) SPI1Manager: writeValves: 0x0020[0m
+[0;32mI (84021) RobotController: Valve state changed: 0x0022 -> 0x0020[0m
+[0;32mI (84051) SPI1Manager: writeValves: 0x0060[0m
+[0;32mI (84051) RobotController: Valve state changed: 0x0020 -> 0x0060[0m
+[0;32mI (84081) SPI1Manager: writeValves: 0x0260[0m
+[0;32mI (84081) RobotController: Valve state changed: 0x0060 -> 0x0260[0m
+[0;32mI (84111) SPI1Manager: writeValves: 0x0264[0m
+[0;32mI (84111) RobotController: Valve state changed: 0x0260 -> 0x0264[0m
+[0;32mI (84141) SPI1Manager: writeValves: 0x0245[0m
+[0;32mI (84141) RobotController: Valve state changed: 0x0264 -> 0x0245[0m
+[0;32mI (84231) SPI1Manager: writeValves: 0x02c7[0m
+[0;32mI (84231) RobotController: Valve state changed: 0x0245 -> 0x02c7[0m
+[0;32mI (84261) SPI1Manager: writeValves: 0x03c7[0m
+[0;32mI (84261) RobotController: Valve state changed: 0x02c7 -> 0x03c7[0m
+[0;32mI (84291) SPI1Manager: writeValves: 0x03cf[0m
+[0;32mI (84291) RobotController: Valve state changed: 0x03c7 -> 0x03cf[0m
+[0;32mI (84321) SPI1Manager: writeValves: 0x03ce[0m
+[0;32mI (84321) RobotController: Valve state changed: 0x03cf -> 0x03ce[0m
+[0;32mI (84381) SPI1Manager: writeValves: 0x039e[0m
+[0;32mI (84381) RobotController: Valve state changed: 0x03ce -> 0x039e[0m
+[0;32mI (84441) SPI1Manager: writeValves: 0x019c[0m
+[0;32mI (84441) RobotController: Valve state changed: 0x039e -> 0x019c[0m
+[0;32mI (84471) SPI1Manager: writeValves: 0x0198[0m
+[0;32mI (84471) RobotController: Valve state changed: 0x019c -> 0x0198[0m
+[0;32mI (84531) SPI1Manager: writeValves: 0x0199[0m
+[0;32mI (84531) RobotController: Valve state changed: 0x0198 -> 0x0199[0m
+[0;32mI (84561) SPI1Manager: writeValves: 0x0119[0m
+[0;32mI (84561) RobotController: Valve state changed: 0x0199 -> 0x0119[0m
+[0;32mI (84621) SPI1Manager: writeValves: 0x003b[0m
+[0;32mI (84621) RobotController: Valve state changed: 0x0119 -> 0x003b[0m
+[0;32mI (84651) SPI1Manager: writeValves: 0x0033[0m
+[0;32mI (84651) RobotController: Valve state changed: 0x003b -> 0x0033[0m
+[0;32mI (84741) SPI1Manager: writeValves: 0x0072[0m
+[0;32mI (84741) RobotController: Valve state changed: 0x0033 -> 0x0072[0m
+[0;32mI (84771) SPI1Manager: writeValves: 0x0272[0m
+[0;32mI (84771) RobotController: Valve state changed: 0x0072 -> 0x0272[0m
+[0;32mI (84831) SPI1Manager: writeValves: 0x0274[0m
+[0;32mI (84831) RobotController: Valve state changed: 0x0272 -> 0x0274[0m
+[0;32mI (84861) SPI1Manager: writeValves: 0x0264[0m
+[0;32mI (84861) RobotController: Valve state changed: 0x0274 -> 0x0264[0m
+[0;32mI (84891) SPI1Manager: writeValves: 0x02e4[0m
+[0;32mI (84891) RobotController: Valve state changed: 0x0264 -> 0x02e4[0m
+[0;32mI (84921) SPI1Manager: writeValves: 0x02e5[0m
+[0;32mI (84921) RobotController: Valve state changed: 0x02e4 -> 0x02e5[0m
+[0;32mI (84951) SPI1Manager: writeValves: 0x03e5[0m
+[0;32mI (84951) RobotController: Valve state changed: 0x02e5 -> 0x03e5[0m
+[0;32mI (84951) RobotController: joint[0] current_steps=17 target_steps=46 target_vel=0.00[0m
+[0;32mI (84951) RobotController: joint[1] current_steps=9 target_steps=25 target_vel=0.00[0m
+[0;32mI (84961) RobotController: joint[2] current_steps=7 target_steps=19 target_vel=0.00[0m
+[0;32mI (84971) RobotController: joint[3] current_steps=10 target_steps=27 target_vel=0.00[0m
+[0;32mI (84981) RobotController: joint[4] current_steps=-9 target_steps=-26 target_vel=0.00[0m
+[0;32mI (84981) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (84991) RobotController: valve_state=0x03e5[0m
+[0;32mI (85031) SPI1Manager: writeValves: 0x03ef[0m
+[0;32mI (85031) RobotController: Valve state changed: 0x03e5 -> 0x03ef[0m
+[0;32mI (85061) SPI1Manager: writeValves: 0x03af[0m
+[0;32mI (85061) RobotController: Valve state changed: 0x03ef -> 0x03af[0m
+[0;32mI (85091) SPI1Manager: writeValves: 0x038f[0m
+[0;32mI (85091) RobotController: Valve state changed: 0x03af -> 0x038f[0m
+[0;32mI (85121) SPI1Manager: writeValves: 0x038e[0m
+[0;32mI (85121) RobotController: Valve state changed: 0x038f -> 0x038e[0m
+[0;32mI (85151) SPI1Manager: writeValves: 0x018e[0m
+[0;32mI (85151) RobotController: Valve state changed: 0x038e -> 0x018e[0m
+[0;32mI (85211) SPI1Manager: writeValves: 0x018a[0m
+[0;32mI (85211) RobotController: Valve state changed: 0x018e -> 0x018a[0m
+[0;32mI (85241) SPI1Manager: writeValves: 0x0108[0m
+[0;32mI (85241) RobotController: Valve state changed: 0x018a -> 0x0108[0m
+[0;32mI (85331) SPI1Manager: writeValves: 0x0019[0m
+[0;32mI (85331) RobotController: Valve state changed: 0x0108 -> 0x0019[0m
+[0;32mI (85391) SPI1Manager: writeValves: 0x0011[0m
+[0;32mI (85391) RobotController: Valve state changed: 0x0019 -> 0x0011[0m
+[0;32mI (85421) SPI1Manager: writeValves: 0x0053[0m
+[0;32mI (85421) RobotController: Valve state changed: 0x0011 -> 0x0053[0m
+[0;32mI (85481) SPI1Manager: writeValves: 0x0253[0m
+[0;32mI (85481) RobotController: Valve state changed: 0x0053 -> 0x0253[0m
+[0;32mI (85541) SPI1Manager: writeValves: 0x0252[0m
+[0;32mI (85541) RobotController: Valve state changed: 0x0253 -> 0x0252[0m
+[0;32mI (85571) SPI1Manager: writeValves: 0x02f6[0m
+[0;32mI (85571) RobotController: Valve state changed: 0x0252 -> 0x02f6[0m
+[0;32mI (85631) SPI1Manager: writeValves: 0x02f4[0m
+[0;32mI (85631) RobotController: Valve state changed: 0x02f6 -> 0x02f4[0m
+[0;32mI (85661) SPI1Manager: writeValves: 0x03f4[0m
+[0;32mI (85661) RobotController: Valve state changed: 0x02f4 -> 0x03f4[0m
+[0;32mI (85721) SPI1Manager: writeValves: 0x03f5[0m
+[0;32mI (85721) RobotController: Valve state changed: 0x03f4 -> 0x03f5[0m
+[0;32mI (85751) SPI1Manager: writeValves: 0x03bd[0m
+[0;32mI (85751) RobotController: Valve state changed: 0x03f5 -> 0x03bd[0m
+[0;32mI (85811) SPI1Manager: writeValves: 0x03ad[0m
+[0;32mI (85811) RobotController: Valve state changed: 0x03bd -> 0x03ad[0m
+[0;32mI (85841) SPI1Manager: writeValves: 0x01af[0m
+[0;32mI (85841) RobotController: Valve state changed: 0x03ad -> 0x01af[0m
+[0;32mI (85931) SPI1Manager: writeValves: 0x012e[0m
+[0;32mI (85931) RobotController: Valve state changed: 0x01af -> 0x012e[0m
+[0;32mI (85961) SPI1Manager: writeValves: 0x012a[0m
+[0;32mI (85961) RobotController: Valve state changed: 0x012e -> 0x012a[0m
+[0;32mI (86021) SPI1Manager: writeValves: 0x0028[0m
+[0;32mI (86021) RobotController: Valve state changed: 0x012a -> 0x0028[0m
+[0;32mI (86051) SPI1Manager: writeValves: 0x0008[0m
+[0;32mI (86051) RobotController: Valve state changed: 0x0028 -> 0x0008[0m
+[0;32mI (86081) SPI1Manager: writeValves: 0x0048[0m
+[0;32mI (86081) RobotController: Valve state changed: 0x0008 -> 0x0048[0m
+[0;32mI (86141) SPI1Manager: writeValves: 0x0041[0m
+[0;32mI (86141) RobotController: Valve state changed: 0x0048 -> 0x0041[0m
+[0;32mI (86201) SPI1Manager: writeValves: 0x0241[0m
+[0;32mI (86201) RobotController: Valve state changed: 0x0041 -> 0x0241[0m
+[0;32mI (86231) SPI1Manager: writeValves: 0x0243[0m
+[0;32mI (86231) RobotController: Valve state changed: 0x0241 -> 0x0243[0m
+[0;32mI (86261) SPI1Manager: writeValves: 0x02c3[0m
+[0;32mI (86261) RobotController: Valve state changed: 0x0243 -> 0x02c3[0m
+[0;32mI (86321) SPI1Manager: writeValves: 0x02d6[0m
+[0;32mI (86321) RobotController: Valve state changed: 0x02c3 -> 0x02d6[0m
+[0;32mI (86381) SPI1Manager: writeValves: 0x03d6[0m
+[0;32mI (86381) RobotController: Valve state changed: 0x02d6 -> 0x03d6[0m
+[0;32mI (86441) SPI1Manager: writeValves: 0x0394[0m
+[0;32mI (86441) RobotController: Valve state changed: 0x03d6 -> 0x0394[0m
+[0;32mI (86501) SPI1Manager: writeValves: 0x039c[0m
+[0;32mI (86501) RobotController: Valve state changed: 0x0394 -> 0x039c[0m
+[0;32mI (86501) RobotController: joint[0] current_steps=32 target_steps=46 target_vel=0.00[0m
+[0;32mI (86501) RobotController: joint[1] current_steps=17 target_steps=25 target_vel=0.00[0m
+[0;32mI (86511) RobotController: joint[2] current_steps=13 target_steps=19 target_vel=0.00[0m
+[0;32mI (86521) RobotController: joint[3] current_steps=19 target_steps=27 target_vel=0.00[0m
+[0;32mI (86531) RobotController: joint[4] current_steps=-18 target_steps=-26 target_vel=0.00[0m
+[0;32mI (86531) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (86541) RobotController: valve_state=0x039c[0m
+[0;32mI (86581) SPI1Manager: writeValves: 0x01bd[0m
+[0;32mI (86581) RobotController: Valve state changed: 0x039c -> 0x01bd[0m
+[0;32mI (86611) SPI1Manager: writeValves: 0x013d[0m
+[0;32mI (86611) RobotController: Valve state changed: 0x01bd -> 0x013d[0m
+[0;32mI (86641) SPI1Manager: writeValves: 0x013f[0m
+[0;32mI (86641) RobotController: Valve state changed: 0x013d -> 0x013f[0m
+[0;32mI (86671) SPI1Manager: writeValves: 0x013b[0m
+[0;32mI (86671) RobotController: Valve state changed: 0x013f -> 0x013b[0m
+[0;32mI (86731) SPI1Manager: writeValves: 0x003a[0m
+[0;32mI (86731) RobotController: Valve state changed: 0x013b -> 0x003a[0m
+[0;32mI (86761) SPI1Manager: writeValves: 0x007a[0m
+[0;32mI (86761) RobotController: Valve state changed: 0x003a -> 0x007a[0m
+[0;32mI (86791) SPI1Manager: writeValves: 0x006a[0m
+[0;32mI (86791) RobotController: Valve state changed: 0x007a -> 0x006a[0m
+[0;32mI (86821) SPI1Manager: writeValves: 0x0068[0m
+[0;32mI (86821) RobotController: Valve state changed: 0x006a -> 0x0068[0m
+[0;32mI (86881) SPI1Manager: writeValves: 0x0060[0m
+[0;32mI (86881) RobotController: Valve state changed: 0x0068 -> 0x0060[0m
+[0;32mI (86911) SPI1Manager: writeValves: 0x0260[0m
+[0;32mI (86911) RobotController: Valve state changed: 0x0060 -> 0x0260[0m
+[0;32mI (86941) SPI1Manager: writeValves: 0x02e1[0m
+[0;32mI (86941) RobotController: Valve state changed: 0x0260 -> 0x02e1[0m
+[0;32mI (87031) SPI1Manager: writeValves: 0x02c3[0m
+[0;32mI (87031) RobotController: Valve state changed: 0x02e1 -> 0x02c3[0m
+[0;32mI (87061) SPI1Manager: writeValves: 0x02c7[0m
+[0;32mI (87061) RobotController: Valve state changed: 0x02c3 -> 0x02c7[0m
+[0;32mI (87091) SPI1Manager: writeValves: 0x03c7[0m
+[0;32mI (87091) RobotController: Valve state changed: 0x02c7 -> 0x03c7[0m
+[0;32mI (87121) SPI1Manager: writeValves: 0x0386[0m
+[0;32mI (87121) RobotController: Valve state changed: 0x03c7 -> 0x0386[0m
+[0;32mI (87241) SPI1Manager: writeValves: 0x038c[0m
+[0;32mI (87241) RobotController: Valve state changed: 0x0386 -> 0x038c[0m
+[0;32mI (87271) SPI1Manager: writeValves: 0x011c[0m
+[0;32mI (87271) RobotController: Valve state changed: 0x038c -> 0x011c[0m
+[0;32mI (87331) SPI1Manager: writeValves: 0x011d[0m
+[0;32mI (87331) RobotController: Valve state changed: 0x011c -> 0x011d[0m
+[0;32mI (87421) SPI1Manager: writeValves: 0x011b[0m
+[0;32mI (87421) RobotController: Valve state changed: 0x011d -> 0x011b[0m
+[0;32mI (87451) SPI1Manager: writeValves: 0x005b[0m
+[0;32mI (87451) RobotController: Valve state changed: 0x011b -> 0x005b[0m
+[0;32mI (87511) SPI1Manager: writeValves: 0x007b[0m
+[0;32mI (87511) RobotController: Valve state changed: 0x005b -> 0x007b[0m
+[0;32mI (87541) SPI1Manager: writeValves: 0x007a[0m
+[0;32mI (87541) RobotController: Valve state changed: 0x007b -> 0x007a[0m
+[0;32mI (87601) SPI1Manager: writeValves: 0x0072[0m
+[0;32mI (87601) RobotController: Valve state changed: 0x007a -> 0x0072[0m
+[0;32mI (87631) SPI1Manager: writeValves: 0x02f0[0m
+[0;32mI (87631) RobotController: Valve state changed: 0x0072 -> 0x02f0[0m
+[0;32mI (87721) SPI1Manager: writeValves: 0x02f1[0m
+[0;32mI (87721) RobotController: Valve state changed: 0x02f0 -> 0x02f1[0m
+[0;32mI (87751) SPI1Manager: writeValves: 0x02e1[0m
+[0;32mI (87751) RobotController: Valve state changed: 0x02f1 -> 0x02e1[0m
+[0;32mI (87781) SPI1Manager: writeValves: 0x03e5[0m
+[0;32mI (87781) RobotController: Valve state changed: 0x02e1 -> 0x03e5[0m
+[0;32mI (87811) SPI1Manager: writeValves: 0x03a5[0m
+[0;32mI (87811) RobotController: Valve state changed: 0x03e5 -> 0x03a5[0m
+[0;32mI (87841) SPI1Manager: writeValves: 0x03a7[0m
+[0;32mI (87841) RobotController: Valve state changed: 0x03a5 -> 0x03a7[0m
+[0;32mI (87901) app_main: Reached waypoint 2 / 22[0m
+[0;32mI (87931) RobotController: target joint[0]: rad=0.112393 -> steps=93[0m
+[0;32mI (87931) RobotController: target joint[1]: rad=0.097934 -> steps=51[0m
+[0;32mI (87931) RobotController: target joint[2]: rad=0.146058 -> steps=38[0m
+[0;32mI (87931) RobotController: target joint[3]: rad=0.209071 -> steps=54[0m
+[0;32mI (87941) RobotController: target joint[4]: rad=-0.143754 -> steps=-53[0m
+[0;32mI (87941) app_main: Sent waypoint 3 / 22[0m
+[0;32mI (87951) SPI1Manager: writeValves: 0x03a6[0m
+[0;32mI (87951) RobotController: Valve state changed: 0x03a7 -> 0x03a6[0m
+[0;32mI (87991) SPI1Manager: writeValves: 0x0126[0m
+[0;32mI (87991) RobotController: Valve state changed: 0x03a6 -> 0x0126[0m
+[0;32mI (88021) SPI1Manager: writeValves: 0x012e[0m
+[0;32mI (88021) RobotController: Valve state changed: 0x0126 -> 0x012e[0m
+[0;32mI (88051) SPI1Manager: writeValves: 0x010e[0m
+[0;32mI (88051) RobotController: Valve state changed: 0x012e -> 0x010e[0m
+[0;32mI (88081) SPI1Manager: writeValves: 0x010c[0m
+[0;32mI (88081) RobotController: Valve state changed: 0x010e -> 0x010c[0m
+[0;32mI (88081) RobotController: joint[0] current_steps=47 target_steps=93 target_vel=0.00[0m
+[0;32mI (88091) RobotController: joint[1] current_steps=26 target_steps=51 target_vel=0.00[0m
+[0;32mI (88091) RobotController: joint[2] current_steps=20 target_steps=38 target_vel=0.00[0m
+[0;32mI (88101) RobotController: joint[3] current_steps=28 target_steps=54 target_vel=0.00[0m
+[0;32mI (88111) RobotController: joint[4] current_steps=-27 target_steps=-53 target_vel=0.00[0m
+[0;32mI (88121) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (88121) RobotController: valve_state=0x010c[0m
+[0;32mI (88161) SPI1Manager: writeValves: 0x010d[0m
+[0;32mI (88161) RobotController: Valve state changed: 0x010c -> 0x010d[0m
+[0;32mI (88191) SPI1Manager: writeValves: 0x0049[0m
+[0;32mI (88191) RobotController: Valve state changed: 0x010d -> 0x0049[0m
+[0;32mI (88281) SPI1Manager: writeValves: 0x005b[0m
+[0;32mI (88281) RobotController: Valve state changed: 0x0049 -> 0x005b[0m
+[0;32mI (88341) SPI1Manager: writeValves: 0x02db[0m
+[0;32mI (88341) RobotController: Valve state changed: 0x005b -> 0x02db[0m
+[0;32mI (88371) SPI1Manager: writeValves: 0x02d2[0m
+[0;32mI (88371) RobotController: Valve state changed: 0x02db -> 0x02d2[0m
+[0;32mI (88461) SPI1Manager: writeValves: 0x02d0[0m
+[0;32mI (88461) RobotController: Valve state changed: 0x02d2 -> 0x02d0[0m
+[0;32mI (88521) SPI1Manager: writeValves: 0x03b0[0m
+[0;32mI (88521) RobotController: Valve state changed: 0x02d0 -> 0x03b0[0m
+[0;32mI (88551) SPI1Manager: writeValves: 0x03b4[0m
+[0;32mI (88551) RobotController: Valve state changed: 0x03b0 -> 0x03b4[0m
+[0;32mI (88581) SPI1Manager: writeValves: 0x03b5[0m
+[0;32mI (88581) RobotController: Valve state changed: 0x03b4 -> 0x03b5[0m
+[0;32mI (88671) SPI1Manager: writeValves: 0x03b7[0m
+[0;32mI (88671) RobotController: Valve state changed: 0x03b5 -> 0x03b7[0m
+[0;32mI (88701) SPI1Manager: writeValves: 0x0137[0m
+[0;32mI (88701) RobotController: Valve state changed: 0x03b7 -> 0x0137[0m
+[0;32mI (88731) SPI1Manager: writeValves: 0x013f[0m
+[0;32mI (88731) RobotController: Valve state changed: 0x0137 -> 0x013f[0m
+[0;32mI (88761) SPI1Manager: writeValves: 0x013e[0m
+[0;32mI (88761) RobotController: Valve state changed: 0x013f -> 0x013e[0m
+[0;32mI (88791) SPI1Manager: writeValves: 0x012e[0m
+[0;32mI (88791) RobotController: Valve state changed: 0x013e -> 0x012e[0m
+[0;32mI (88881) SPI1Manager: writeValves: 0x006c[0m
+[0;32mI (88881) RobotController: Valve state changed: 0x012e -> 0x006c[0m
+[0;32mI (88911) SPI1Manager: writeValves: 0x0068[0m
+[0;32mI (88911) RobotController: Valve state changed: 0x006c -> 0x0068[0m
+[0;32mI (88971) SPI1Manager: writeValves: 0x0069[0m
+[0;32mI (88971) RobotController: Valve state changed: 0x0068 -> 0x0069[0m
+[0;32mI (89031) SPI1Manager: writeValves: 0x0049[0m
+[0;32mI (89031) RobotController: Valve state changed: 0x0069 -> 0x0049[0m
+[0;32mI (89061) SPI1Manager: writeValves: 0x02cb[0m
+[0;32mI (89061) RobotController: Valve state changed: 0x0049 -> 0x02cb[0m
+[0;32mI (89091) SPI1Manager: writeValves: 0x02c3[0m
+[0;32mI (89091) RobotController: Valve state changed: 0x02cb -> 0x02c3[0m
+[0;32mI (89181) SPI1Manager: writeValves: 0x02c2[0m
+[0;32mI (89181) RobotController: Valve state changed: 0x02c3 -> 0x02c2[0m
+[0;32mI (89211) SPI1Manager: writeValves: 0x0382[0m
+[0;32mI (89211) RobotController: Valve state changed: 0x02c2 -> 0x0382[0m
+[0;32mI (89271) SPI1Manager: writeValves: 0x0394[0m
+[0;32mI (89271) RobotController: Valve state changed: 0x0382 -> 0x0394[0m
+[0;32mI (89361) SPI1Manager: writeValves: 0x0395[0m
+[0;32mI (89361) RobotController: Valve state changed: 0x0394 -> 0x0395[0m
+[0;32mI (89391) SPI1Manager: writeValves: 0x0115[0m
+[0;32mI (89391) RobotController: Valve state changed: 0x0395 -> 0x0115[0m
+[0;32mI (89451) SPI1Manager: writeValves: 0x011d[0m
+[0;32mI (89451) RobotController: Valve state changed: 0x0115 -> 0x011d[0m
+[0;32mI (89481) SPI1Manager: writeValves: 0x011f[0m
+[0;32mI (89481) RobotController: Valve state changed: 0x011d -> 0x011f[0m
+[0;32mI (89511) SPI1Manager: writeValves: 0x013f[0m
+[0;32mI (89511) RobotController: Valve state changed: 0x011f -> 0x013f[0m
+[0;32mI (89571) SPI1Manager: writeValves: 0x007e[0m
+[0;32mI (89571) RobotController: Valve state changed: 0x013f -> 0x007e[0m
+[0;32mI (89631) SPI1Manager: writeValves: 0x007a[0m
+[0;32mI (89631) RobotController: Valve state changed: 0x007e -> 0x007a[0m
+[0;32mI (89631) RobotController: joint[0] current_steps=63 target_steps=93 target_vel=0.00[0m
+[0;32mI (89641) RobotController: joint[1] current_steps=34 target_steps=51 target_vel=0.00[0m
+[0;32mI (89641) RobotController: joint[2] current_steps=26 target_steps=38 target_vel=0.00[0m
+[0;32mI (89651) RobotController: joint[3] current_steps=37 target_steps=54 target_vel=0.00[0m
+[0;32mI (89661) RobotController: joint[4] current_steps=-36 target_steps=-53 target_vel=0.00[0m
+[0;32mI (89671) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (89671) RobotController: valve_state=0x007a[0m
+[0;32mI (89711) SPI1Manager: writeValves: 0x0078[0m
+[0;32mI (89711) RobotController: Valve state changed: 0x007a -> 0x0078[0m
+[0;32mI (89741) SPI1Manager: writeValves: 0x02f8[0m
+[0;32mI (89741) RobotController: Valve state changed: 0x0078 -> 0x02f8[0m
+[0;32mI (89771) SPI1Manager: writeValves: 0x02e9[0m
+[0;32mI (89771) RobotController: Valve state changed: 0x02f8 -> 0x02e9[0m
+[0;32mI (89801) SPI1Manager: writeValves: 0x02e1[0m
+[0;32mI (89801) RobotController: Valve state changed: 0x02e9 -> 0x02e1[0m
+[0;32mI (89861) SPI1Manager: writeValves: 0x02e3[0m
+[0;32mI (89861) RobotController: Valve state changed: 0x02e1 -> 0x02e3[0m
+[0;32mI (89921) SPI1Manager: writeValves: 0x03a3[0m
+[0;32mI (89921) RobotController: Valve state changed: 0x02e3 -> 0x03a3[0m
+[0;32mI (89981) SPI1Manager: writeValves: 0x03a6[0m
+[0;32mI (89981) RobotController: Valve state changed: 0x03a3 -> 0x03a6[0m
+[0;32mI (90011) SPI1Manager: writeValves: 0x0386[0m
+[0;32mI (90011) RobotController: Valve state changed: 0x03a6 -> 0x0386[0m
+[0;32mI (90071) SPI1Manager: writeValves: 0x0384[0m
+[0;32mI (90071) RobotController: Valve state changed: 0x0386 -> 0x0384[0m
+[0;32mI (90101) SPI1Manager: writeValves: 0x0104[0m
+[0;32mI (90101) RobotController: Valve state changed: 0x0384 -> 0x0104[0m
+[0;32mI (90161) SPI1Manager: writeValves: 0x010d[0m
+[0;32mI (90161) RobotController: Valve state changed: 0x0104 -> 0x010d[0m
+[0;32mI (90251) SPI1Manager: writeValves: 0x005f[0m
+[0;32mI (90251) RobotController: Valve state changed: 0x010d -> 0x005f[0m
+[0;32mI (90371) SPI1Manager: writeValves: 0x005a[0m
+[0;32mI (90371) RobotController: Valve state changed: 0x005f -> 0x005a[0m
+[0;32mI (90431) SPI1Manager: writeValves: 0x02da[0m
+[0;32mI (90431) RobotController: Valve state changed: 0x005a -> 0x02da[0m
+[0;32mI (90461) SPI1Manager: writeValves: 0x02d8[0m
+[0;32mI (90461) RobotController: Valve state changed: 0x02da -> 0x02d8[0m
+[0;32mI (90521) SPI1Manager: writeValves: 0x02f8[0m
+[0;32mI (90521) RobotController: Valve state changed: 0x02d8 -> 0x02f8[0m
+[0;32mI (90551) SPI1Manager: writeValves: 0x02f0[0m
+[0;32mI (90551) RobotController: Valve state changed: 0x02f8 -> 0x02f0[0m
+[0;32mI (90581) SPI1Manager: writeValves: 0x02f1[0m
+[0;32mI (90581) RobotController: Valve state changed: 0x02f0 -> 0x02f1[0m
+[0;32mI (90611) SPI1Manager: writeValves: 0x03b1[0m
+[0;32mI (90611) RobotController: Valve state changed: 0x02f1 -> 0x03b1[0m
+[0;32mI (90671) SPI1Manager: writeValves: 0x03b3[0m
+[0;32mI (90671) RobotController: Valve state changed: 0x03b1 -> 0x03b3[0m
+[0;32mI (90731) SPI1Manager: writeValves: 0x03b7[0m
+[0;32mI (90731) RobotController: Valve state changed: 0x03b3 -> 0x03b7[0m
+[0;32mI (90761) SPI1Manager: writeValves: 0x03a6[0m
+[0;32mI (90761) RobotController: Valve state changed: 0x03b7 -> 0x03a6[0m
+[0;32mI (90791) SPI1Manager: writeValves: 0x0126[0m
+[0;32mI (90791) RobotController: Valve state changed: 0x03a6 -> 0x0126[0m
+[0;32mI (90851) SPI1Manager: writeValves: 0x0124[0m
+[0;32mI (90851) RobotController: Valve state changed: 0x0126 -> 0x0124[0m
+[0;32mI (90911) SPI1Manager: writeValves: 0x012c[0m
+[0;32mI (90911) RobotController: Valve state changed: 0x0124 -> 0x012c[0m
+[0;32mI (90971) SPI1Manager: writeValves: 0x006d[0m
+[0;32mI (90971) RobotController: Valve state changed: 0x012c -> 0x006d[0m
+[0;32mI (91001) SPI1Manager: writeValves: 0x004d[0m
+[0;32mI (91001) RobotController: Valve state changed: 0x006d -> 0x004d[0m
+[0;32mI (91061) SPI1Manager: writeValves: 0x004f[0m
+[0;32mI (91061) RobotController: Valve state changed: 0x004d -> 0x004f[0m
+[0;32mI (91091) SPI1Manager: writeValves: 0x004b[0m
+[0;32mI (91091) RobotController: Valve state changed: 0x004f -> 0x004b[0m
+[0;32mI (91151) SPI1Manager: writeValves: 0x02cb[0m
+[0;32mI (91151) RobotController: Valve state changed: 0x004b -> 0x02cb[0m
+[0;32mI (91181) SPI1Manager: writeValves: 0x02ca[0m
+[0;32mI (91181) RobotController: Valve state changed: 0x02cb -> 0x02ca[0m
+[0;32mI (91181) RobotController: joint[0] current_steps=78 target_steps=93 target_vel=0.00[0m
+[0;32mI (91181) RobotController: joint[1] current_steps=43 target_steps=51 target_vel=0.00[0m
+[0;32mI (91191) RobotController: joint[2] current_steps=32 target_steps=38 target_vel=0.00[0m
+[0;32mI (91201) RobotController: joint[3] current_steps=46 target_steps=54 target_vel=0.00[0m
+[0;32mI (91211) RobotController: joint[4] current_steps=-45 target_steps=-53 target_vel=0.00[0m
+[0;32mI (91211) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (91221) RobotController: valve_state=0x02ca[0m
+[0;32mI (91261) SPI1Manager: writeValves: 0x02d0[0m
+[0;32mI (91261) RobotController: Valve state changed: 0x02ca -> 0x02d0[0m
+[0;32mI (91321) SPI1Manager: writeValves: 0x0390[0m
+[0;32mI (91321) RobotController: Valve state changed: 0x02d0 -> 0x0390[0m
+[0;32mI (91351) SPI1Manager: writeValves: 0x0391[0m
+[0;32mI (91351) RobotController: Valve state changed: 0x0390 -> 0x0391[0m
+[0;32mI (91441) SPI1Manager: writeValves: 0x0395[0m
+[0;32mI (91441) RobotController: Valve state changed: 0x0391 -> 0x0395[0m
+[0;32mI (91471) SPI1Manager: writeValves: 0x0117[0m
+[0;32mI (91471) RobotController: Valve state changed: 0x0395 -> 0x0117[0m
+[0;32mI (91501) SPI1Manager: writeValves: 0x0137[0m
+[0;32mI (91501) RobotController: Valve state changed: 0x0117 -> 0x0137[0m
+[0;32mI (91561) SPI1Manager: writeValves: 0x0136[0m
+[0;32mI (91561) RobotController: Valve state changed: 0x0137 -> 0x0136[0m
+[0;32mI (91621) SPI1Manager: writeValves: 0x013e[0m
+[0;32mI (91621) RobotController: Valve state changed: 0x0136 -> 0x013e[0m
+[0;32mI (91651) SPI1Manager: writeValves: 0x007e[0m
+[0;32mI (91651) RobotController: Valve state changed: 0x013e -> 0x007e[0m
+[0;32mI (91681) SPI1Manager: writeValves: 0x007c[0m
+[0;32mI (91681) RobotController: Valve state changed: 0x007e -> 0x007c[0m
+[0;32mI (91741) SPI1Manager: writeValves: 0x006c[0m
+[0;32mI (91741) RobotController: Valve state changed: 0x007c -> 0x006c[0m
+[0;32mI (91771) SPI1Manager: writeValves: 0x006d[0m
+[0;32mI (91771) RobotController: Valve state changed: 0x006c -> 0x006d[0m
+[0;32mI (91801) SPI1Manager: writeValves: 0x0069[0m
+[0;32mI (91801) RobotController: Valve state changed: 0x006d -> 0x0069[0m
+[0;32mI (91831) SPI1Manager: writeValves: 0x02e9[0m
+[0;32mI (91831) RobotController: Valve state changed: 0x0069 -> 0x02e9[0m
+[0;32mI (91861) SPI1Manager: writeValves: 0x02eb[0m
+[0;32mI (91861) RobotController: Valve state changed: 0x02e9 -> 0x02eb[0m
+[0;32mI (91981) SPI1Manager: writeValves: 0x02e2[0m
+[0;32mI (91981) RobotController: Valve state changed: 0x02eb -> 0x02e2[0m
+[0;32mI (92011) SPI1Manager: writeValves: 0x0382[0m
+[0;32mI (92011) RobotController: Valve state changed: 0x02e2 -> 0x0382[0m
+[0;32mI (92071) SPI1Manager: writeValves: 0x0380[0m
+[0;32mI (92071) RobotController: Valve state changed: 0x0382 -> 0x0380[0m
+[0;32mI (92161) SPI1Manager: writeValves: 0x0385[0m
+[0;32mI (92161) RobotController: Valve state changed: 0x0380 -> 0x0385[0m
+[0;32mI (92191) SPI1Manager: writeValves: 0x0105[0m
+[0;32mI (92191) RobotController: Valve state changed: 0x0385 -> 0x0105[0m
+[0;32mI (92251) SPI1Manager: writeValves: 0x0115[0m
+[0;32mI (92251) RobotController: Valve state changed: 0x0105 -> 0x0115[0m
+[0;32mI (92281) SPI1Manager: writeValves: 0x0117[0m
+[0;32mI (92281) RobotController: Valve state changed: 0x0115 -> 0x0117[0m
+[0;32mI (92341) SPI1Manager: writeValves: 0x005f[0m
+[0;32mI (92341) RobotController: Valve state changed: 0x0117 -> 0x005f[0m
+[0;32mI (92371) SPI1Manager: writeValves: 0x005e[0m
+[0;32mI (92371) RobotController: Valve state changed: 0x005f -> 0x005e[0m
+[0;32mI (92461) SPI1Manager: writeValves: 0x005c[0m
+[0;32mI (92461) RobotController: Valve state changed: 0x005e -> 0x005c[0m
+[0;32mI (92491) SPI1Manager: writeValves: 0x007c[0m
+[0;32mI (92491) RobotController: Valve state changed: 0x005c -> 0x007c[0m
+[0;32mI (92521) SPI1Manager: writeValves: 0x02f8[0m
+[0;32mI (92521) RobotController: Valve state changed: 0x007c -> 0x02f8[0m
+[0;32mI (92581) SPI1Manager: writeValves: 0x02f9[0m
+[0;32mI (92581) RobotController: Valve state changed: 0x02f8 -> 0x02f9[0m
+[0;32mI (92641) app_main: Reached waypoint 3 / 22[0m
+[0;32mI (92671) RobotController: target joint[0]: rad=0.168590 -> steps=139[0m
+[0;32mI (92671) RobotController: target joint[1]: rad=0.146901 -> steps=76[0m
+[0;32mI (92671) RobotController: target joint[2]: rad=0.219088 -> steps=56[0m
+[0;32mI (92671) RobotController: target joint[3]: rad=0.313607 -> steps=81[0m
+[0;32mI (92681) RobotController: target joint[4]: rad=-0.215631 -> steps=-79[0m
+[0;32mI (92691) app_main: Sent waypoint 4 / 22[0m
+[0;32mI (92691) SPI1Manager: writeValves: 0x02fb[0m
+[0;32mI (92691) RobotController: Valve state changed: 0x02f9 -> 0x02fb[0m
+[0;32mI (92731) SPI1Manager: writeValves: 0x03bb[0m
+[0;32mI (92731) RobotController: Valve state changed: 0x02fb -> 0x03bb[0m
+[0;32mI (92761) SPI1Manager: writeValves: 0x03b3[0m
+[0;32mI (92761) RobotController: Valve state changed: 0x03bb -> 0x03b3[0m
+[0;32mI (92761) RobotController: joint[0] current_steps=94 target_steps=139 target_vel=0.00[0m
+[0;32mI (92761) RobotController: joint[1] current_steps=51 target_steps=76 target_vel=0.00[0m
+[0;32mI (92771) RobotController: joint[2] current_steps=38 target_steps=56 target_vel=0.00[0m
+[0;32mI (92781) RobotController: joint[3] current_steps=55 target_steps=81 target_vel=0.00[0m
+[0;32mI (92791) RobotController: joint[4] current_steps=-54 target_steps=-79 target_vel=0.00[0m
+[0;32mI (92791) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (92801) RobotController: valve_state=0x03b3[0m
+[0;32mI (92841) SPI1Manager: writeValves: 0x03a2[0m
+[0;32mI (92841) RobotController: Valve state changed: 0x03b3 -> 0x03a2[0m
+[0;32mI (92901) SPI1Manager: writeValves: 0x0320[0m
+[0;32mI (92901) RobotController: Valve state changed: 0x03a2 -> 0x0320[0m
+[0;32mI (92931) SPI1Manager: writeValves: 0x0124[0m
+[0;32mI (92931) RobotController: Valve state changed: 0x0320 -> 0x0124[0m
+[0;32mI (93021) SPI1Manager: writeValves: 0x0125[0m
+[0;32mI (93021) RobotController: Valve state changed: 0x0124 -> 0x0125[0m
+[0;32mI (93051) SPI1Manager: writeValves: 0x0105[0m
+[0;32mI (93051) RobotController: Valve state changed: 0x0125 -> 0x0105[0m
+[0;32mI (93081) SPI1Manager: writeValves: 0x0145[0m
+[0;32mI (93081) RobotController: Valve state changed: 0x0105 -> 0x0145[0m
+[0;32mI (93111) SPI1Manager: writeValves: 0x004f[0m
+[0;32mI (93111) RobotController: Valve state changed: 0x0145 -> 0x004f[0m
+[0;32mI (93201) SPI1Manager: writeValves: 0x004e[0m
+[0;32mI (93201) RobotController: Valve state changed: 0x004f -> 0x004e[0m
+[0;32mI (93261) SPI1Manager: writeValves: 0x02ce[0m
+[0;32mI (93261) RobotController: Valve state changed: 0x004e -> 0x02ce[0m
+[0;32mI (93291) SPI1Manager: writeValves: 0x02da[0m
+[0;32mI (93291) RobotController: Valve state changed: 0x02ce -> 0x02da[0m
+[0;32mI (93321) SPI1Manager: writeValves: 0x02d8[0m
+[0;32mI (93321) RobotController: Valve state changed: 0x02da -> 0x02d8[0m
+[0;32mI (93411) SPI1Manager: writeValves: 0x0299[0m
+[0;32mI (93411) RobotController: Valve state changed: 0x02d8 -> 0x0299[0m
+[0;32mI (93441) SPI1Manager: writeValves: 0x0399[0m
+[0;32mI (93441) RobotController: Valve state changed: 0x0299 -> 0x0399[0m
+[0;32mI (93471) SPI1Manager: writeValves: 0x0391[0m
+[0;32mI (93471) RobotController: Valve state changed: 0x0399 -> 0x0391[0m
+[0;32mI (93501) SPI1Manager: writeValves: 0x0393[0m
+[0;32mI (93501) RobotController: Valve state changed: 0x0391 -> 0x0393[0m
+[0;32mI (93561) SPI1Manager: writeValves: 0x03b3[0m
+[0;32mI (93561) RobotController: Valve state changed: 0x0393 -> 0x03b3[0m
+[0;32mI (93591) SPI1Manager: writeValves: 0x0333[0m
+[0;32mI (93591) RobotController: Valve state changed: 0x03b3 -> 0x0333[0m
+[0;32mI (93621) SPI1Manager: writeValves: 0x0132[0m
+[0;32mI (93621) RobotController: Valve state changed: 0x0333 -> 0x0132[0m
+[0;32mI (93681) SPI1Manager: writeValves: 0x0136[0m
+[0;32mI (93681) RobotController: Valve state changed: 0x0132 -> 0x0136[0m
+[0;32mI (93711) SPI1Manager: writeValves: 0x0134[0m
+[0;32mI (93711) RobotController: Valve state changed: 0x0136 -> 0x0134[0m
+[0;32mI (93771) SPI1Manager: writeValves: 0x0174[0m
+[0;32mI (93771) RobotController: Valve state changed: 0x0134 -> 0x0174[0m
+[0;32mI (93801) SPI1Manager: writeValves: 0x0065[0m
+[0;32mI (93801) RobotController: Valve state changed: 0x0174 -> 0x0065[0m
+[0;32mI (93861) SPI1Manager: writeValves: 0x006d[0m
+[0;32mI (93861) RobotController: Valve state changed: 0x0065 -> 0x006d[0m
+[0;32mI (93921) SPI1Manager: writeValves: 0x00ef[0m
+[0;32mI (93921) RobotController: Valve state changed: 0x006d -> 0x00ef[0m
+[0;32mI (93981) SPI1Manager: writeValves: 0x02ef[0m
+[0;32mI (93981) RobotController: Valve state changed: 0x00ef -> 0x02ef[0m
+[0;32mI (94011) SPI1Manager: writeValves: 0x02ee[0m
+[0;32mI (94011) RobotController: Valve state changed: 0x02ef -> 0x02ee[0m
+[0;32mI (94041) SPI1Manager: writeValves: 0x02ea[0m
+[0;32mI (94041) RobotController: Valve state changed: 0x02ee -> 0x02ea[0m
+[0;32mI (94071) SPI1Manager: writeValves: 0x02ca[0m
+[0;32mI (94071) RobotController: Valve state changed: 0x02ea -> 0x02ca[0m
+[0;32mI (94101) SPI1Manager: writeValves: 0x0288[0m
+[0;32mI (94101) RobotController: Valve state changed: 0x02ca -> 0x0288[0m
+[0;32mI (94161) SPI1Manager: writeValves: 0x0388[0m
+[0;32mI (94161) RobotController: Valve state changed: 0x0288 -> 0x0388[0m
+[0;32mI (94221) SPI1Manager: writeValves: 0x0381[0m
+[0;32mI (94221) RobotController: Valve state changed: 0x0388 -> 0x0381[0m
+[0;32mI (94281) SPI1Manager: writeValves: 0x0301[0m
+[0;32mI (94281) RobotController: Valve state changed: 0x0381 -> 0x0301[0m
+[0;32mI (94311) SPI1Manager: writeValves: 0x0313[0m
+[0;32mI (94311) RobotController: Valve state changed: 0x0301 -> 0x0313[0m
+[0;32mI (94311) RobotController: joint[0] current_steps=109 target_steps=139 target_vel=0.00[0m
+[0;32mI (94311) RobotController: joint[1] current_steps=60 target_steps=76 target_vel=0.00[0m
+[0;32mI (94321) RobotController: joint[2] current_steps=44 target_steps=56 target_vel=0.00[0m
+[0;32mI (94331) RobotController: joint[3] current_steps=64 target_steps=81 target_vel=0.00[0m
+[0;32mI (94341) RobotController: joint[4] current_steps=-62 target_steps=-79 target_vel=0.00[0m
+[0;32mI (94341) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (94351) RobotController: valve_state=0x0313[0m
+[0;32mI (94391) SPI1Manager: writeValves: 0x0117[0m
+[0;32mI (94391) RobotController: Valve state changed: 0x0313 -> 0x0117[0m
+[0;32mI (94421) SPI1Manager: writeValves: 0x0116[0m
+[0;32mI (94421) RobotController: Valve state changed: 0x0117 -> 0x0116[0m
+[0;32mI (94451) SPI1Manager: writeValves: 0x0156[0m
+[0;32mI (94451) RobotController: Valve state changed: 0x0116 -> 0x0156[0m
+[0;32mI (94511) SPI1Manager: writeValves: 0x0054[0m
+[0;32mI (94511) RobotController: Valve state changed: 0x0156 -> 0x0054[0m
+[0;32mI (94571) SPI1Manager: writeValves: 0x0074[0m
+[0;32mI (94571) RobotController: Valve state changed: 0x0054 -> 0x0074[0m
+[0;32mI (94601) SPI1Manager: writeValves: 0x00fd[0m
+[0;32mI (94601) RobotController: Valve state changed: 0x0074 -> 0x00fd[0m
+[0;32mI (94691) SPI1Manager: writeValves: 0x02fd[0m
+[0;32mI (94691) RobotController: Valve state changed: 0x00fd -> 0x02fd[0m
+[0;32mI (94721) SPI1Manager: writeValves: 0x02ff[0m
+[0;32mI (94721) RobotController: Valve state changed: 0x02fd -> 0x02ff[0m
+[0;32mI (94781) SPI1Manager: writeValves: 0x02bb[0m
+[0;32mI (94781) RobotController: Valve state changed: 0x02ff -> 0x02bb[0m
+[0;32mI (94811) SPI1Manager: writeValves: 0x02ba[0m
+[0;32mI (94811) RobotController: Valve state changed: 0x02bb -> 0x02ba[0m
+[0;32mI (94841) SPI1Manager: writeValves: 0x02aa[0m
+[0;32mI (94841) RobotController: Valve state changed: 0x02ba -> 0x02aa[0m
+[0;32mI (94871) SPI1Manager: writeValves: 0x03aa[0m
+[0;32mI (94871) RobotController: Valve state changed: 0x02aa -> 0x03aa[0m
+[0;32mI (94901) SPI1Manager: writeValves: 0x03a8[0m
+[0;32mI (94901) RobotController: Valve state changed: 0x03aa -> 0x03a8[0m
+[0;32mI (94961) SPI1Manager: writeValves: 0x0320[0m
+[0;32mI (94961) RobotController: Valve state changed: 0x03a8 -> 0x0320[0m
+[0;32mI (95021) SPI1Manager: writeValves: 0x0321[0m
+[0;32mI (95021) RobotController: Valve state changed: 0x0320 -> 0x0321[0m
+[0;32mI (95051) SPI1Manager: writeValves: 0x0121[0m
+[0;32mI (95051) RobotController: Valve state changed: 0x0321 -> 0x0121[0m
+[0;32mI (95081) SPI1Manager: writeValves: 0x0101[0m
+[0;32mI (95081) RobotController: Valve state changed: 0x0121 -> 0x0101[0m
+[0;32mI (95111) SPI1Manager: writeValves: 0x0103[0m
+[0;32mI (95111) RobotController: Valve state changed: 0x0101 -> 0x0103[0m
+[0;32mI (95141) SPI1Manager: writeValves: 0x0147[0m
+[0;32mI (95141) RobotController: Valve state changed: 0x0103 -> 0x0147[0m
+[0;32mI (95201) SPI1Manager: writeValves: 0x0146[0m
+[0;32mI (95201) RobotController: Valve state changed: 0x0147 -> 0x0146[0m
+[0;32mI (95231) SPI1Manager: writeValves: 0x0046[0m
+[0;32mI (95231) RobotController: Valve state changed: 0x0146 -> 0x0046[0m
+[0;32mI (95291) SPI1Manager: writeValves: 0x00c6[0m
+[0;32mI (95291) RobotController: Valve state changed: 0x0046 -> 0x00c6[0m
+[0;32mI (95321) SPI1Manager: writeValves: 0x00cc[0m
+[0;32mI (95321) RobotController: Valve state changed: 0x00c6 -> 0x00cc[0m
+[0;32mI (95351) SPI1Manager: writeValves: 0x00dc[0m
+[0;32mI (95351) RobotController: Valve state changed: 0x00cc -> 0x00dc[0m
+[0;32mI (95411) SPI1Manager: writeValves: 0x02dd[0m
+[0;32mI (95411) RobotController: Valve state changed: 0x00dc -> 0x02dd[0m
+[0;32mI (95471) SPI1Manager: writeValves: 0x029d[0m
+[0;32mI (95471) RobotController: Valve state changed: 0x02dd -> 0x029d[0m
+[0;32mI (95501) SPI1Manager: writeValves: 0x029b[0m
+[0;32mI (95501) RobotController: Valve state changed: 0x029d -> 0x029b[0m
+[0;32mI (95561) SPI1Manager: writeValves: 0x039b[0m
+[0;32mI (95561) RobotController: Valve state changed: 0x029b -> 0x039b[0m
+[0;32mI (95591) SPI1Manager: writeValves: 0x03bb[0m
+[0;32mI (95591) RobotController: Valve state changed: 0x039b -> 0x03bb[0m
+[0;32mI (95621) SPI1Manager: writeValves: 0x03ba[0m
+[0;32mI (95621) RobotController: Valve state changed: 0x03bb -> 0x03ba[0m
+[0;32mI (95651) SPI1Manager: writeValves: 0x033a[0m
+[0;32mI (95651) RobotController: Valve state changed: 0x03ba -> 0x033a[0m
+[0;32mI (95681) SPI1Manager: writeValves: 0x0332[0m
+[0;32mI (95681) RobotController: Valve state changed: 0x033a -> 0x0332[0m
+[0;32mI (95711) SPI1Manager: writeValves: 0x0330[0m
+[0;32mI (95711) RobotController: Valve state changed: 0x0332 -> 0x0330[0m
+[0;32mI (95741) SPI1Manager: writeValves: 0x0130[0m
+[0;32mI (95741) RobotController: Valve state changed: 0x0330 -> 0x0130[0m
+[0;32mI (95801) SPI1Manager: writeValves: 0x0171[0m
+[0;32mI (95801) RobotController: Valve state changed: 0x0130 -> 0x0171[0m
+[0;32mI (95861) SPI1Manager: writeValves: 0x0165[0m
+[0;32mI (95861) RobotController: Valve state changed: 0x0171 -> 0x0165[0m
+[0;32mI (95861) RobotController: joint[0] current_steps=125 target_steps=139 target_vel=0.00[0m
+[0;32mI (95871) RobotController: joint[1] current_steps=68 target_steps=76 target_vel=0.00[0m
+[0;32mI (95871) RobotController: joint[2] current_steps=50 target_steps=56 target_vel=0.00[0m
+[0;32mI (95881) RobotController: joint[3] current_steps=73 target_steps=81 target_vel=0.00[0m
+[0;32mI (95891) RobotController: joint[4] current_steps=-71 target_steps=-79 target_vel=0.00[0m
+[0;32mI (95901) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (95901) RobotController: valve_state=0x0165[0m
+[0;32mI (95941) SPI1Manager: writeValves: 0x0067[0m
+[0;32mI (95941) RobotController: Valve state changed: 0x0165 -> 0x0067[0m
+[0;32mI (95971) SPI1Manager: writeValves: 0x00e7[0m
+[0;32mI (95971) RobotController: Valve state changed: 0x0067 -> 0x00e7[0m
+[0;32mI (96001) SPI1Manager: writeValves: 0x00e6[0m
+[0;32mI (96001) RobotController: Valve state changed: 0x00e7 -> 0x00e6[0m
+[0;32mI (96061) SPI1Manager: writeValves: 0x00ee[0m
+[0;32mI (96061) RobotController: Valve state changed: 0x00e6 -> 0x00ee[0m
+[0;32mI (96121) SPI1Manager: writeValves: 0x02cc[0m
+[0;32mI (96121) RobotController: Valve state changed: 0x00ee -> 0x02cc[0m
+[0;32mI (96151) SPI1Manager: writeValves: 0x028c[0m
+[0;32mI (96151) RobotController: Valve state changed: 0x02cc -> 0x028c[0m
+[0;32mI (96211) SPI1Manager: writeValves: 0x028d[0m
+[0;32mI (96211) RobotController: Valve state changed: 0x028c -> 0x028d[0m
+[0;32mI (96241) SPI1Manager: writeValves: 0x0289[0m
+[0;32mI (96241) RobotController: Valve state changed: 0x028d -> 0x0289[0m
+[0;32mI (96271) SPI1Manager: writeValves: 0x0389[0m
+[0;32mI (96271) RobotController: Valve state changed: 0x0289 -> 0x0389[0m
+[0;32mI (96301) SPI1Manager: writeValves: 0x038b[0m
+[0;32mI (96301) RobotController: Valve state changed: 0x0389 -> 0x038b[0m
+[0;32mI (96331) SPI1Manager: writeValves: 0x030b[0m
+[0;32mI (96331) RobotController: Valve state changed: 0x038b -> 0x030b[0m
+[0;32mI (96361) SPI1Manager: writeValves: 0x031b[0m
+[0;32mI (96361) RobotController: Valve state changed: 0x030b -> 0x031b[0m
+[0;32mI (96391) SPI1Manager: writeValves: 0x031a[0m
+[0;32mI (96391) RobotController: Valve state changed: 0x031b -> 0x031a[0m
+[0;32mI (96421) SPI1Manager: writeValves: 0x0312[0m
+[0;32mI (96421) RobotController: Valve state changed: 0x031a -> 0x0312[0m
+[0;32mI (96451) SPI1Manager: writeValves: 0x0112[0m
+[0;32mI (96451) RobotController: Valve state changed: 0x0312 -> 0x0112[0m
+[0;32mI (96481) SPI1Manager: writeValves: 0x0152[0m
+[0;32mI (96481) RobotController: Valve state changed: 0x0112 -> 0x0152[0m
+[0;32mI (96511) SPI1Manager: writeValves: 0x0150[0m
+[0;32mI (96511) RobotController: Valve state changed: 0x0152 -> 0x0150[0m
+[0;32mI (96601) SPI1Manager: writeValves: 0x0155[0m
+[0;32mI (96601) RobotController: Valve state changed: 0x0150 -> 0x0155[0m
+[0;32mI (96631) SPI1Manager: writeValves: 0x0075[0m
+[0;32mI (96631) RobotController: Valve state changed: 0x0155 -> 0x0075[0m
+[0;32mI (96661) SPI1Manager: writeValves: 0x00f5[0m
+[0;32mI (96661) RobotController: Valve state changed: 0x0075 -> 0x00f5[0m
+[0;32mI (96721) SPI1Manager: writeValves: 0x00f7[0m
+[0;32mI (96721) RobotController: Valve state changed: 0x00f5 -> 0x00f7[0m
+[0;32mI (96811) SPI1Manager: writeValves: 0x02fe[0m
+[0;32mI (96811) RobotController: Valve state changed: 0x00f7 -> 0x02fe[0m
+[0;32mI (96841) SPI1Manager: writeValves: 0x02be[0m
+[0;32mI (96841) RobotController: Valve state changed: 0x02fe -> 0x02be[0m
+[0;32mI (96871) SPI1Manager: writeValves: 0x02ae[0m
+[0;32mI (96871) RobotController: Valve state changed: 0x02be -> 0x02ae[0m
+[0;32mI (96901) SPI1Manager: writeValves: 0x02ac[0m
+[0;32mI (96901) RobotController: Valve state changed: 0x02ae -> 0x02ac[0m
+[0;32mI (96991) SPI1Manager: writeValves: 0x0328[0m
+[0;32mI (96991) RobotController: Valve state changed: 0x02ac -> 0x0328[0m
+[0;32mI (97021) SPI1Manager: writeValves: 0x0329[0m
+[0;32mI (97021) RobotController: Valve state changed: 0x0328 -> 0x0329[0m
+[0;32mI (97111) SPI1Manager: writeValves: 0x032b[0m
+[0;32mI (97111) RobotController: Valve state changed: 0x0329 -> 0x032b[0m
+[0;32mI (97141) SPI1Manager: writeValves: 0x030b[0m
+[0;32mI (97141) RobotController: Valve state changed: 0x032b -> 0x030b[0m
+[0;32mI (97171) SPI1Manager: writeValves: 0x0143[0m
+[0;32mI (97171) RobotController: Valve state changed: 0x030b -> 0x0143[0m
+[0;32mI (97201) SPI1Manager: writeValves: 0x0142[0m
+[0;32mI (97201) RobotController: Valve state changed: 0x0143 -> 0x0142[0m
+[0;32mI (97261) app_main: Reached waypoint 4 / 22[0m
+[0;32mI (97291) RobotController: target joint[0]: rad=0.224787 -> steps=185[0m
+[0;32mI (97291) RobotController: target joint[1]: rad=0.195868 -> steps=101[0m
+[0;32mI (97291) RobotController: target joint[2]: rad=0.292117 -> steps=75[0m
+[0;32mI (97291) RobotController: target joint[3]: rad=0.418142 -> steps=108[0m
+[0;32mI (97301) RobotController: target joint[4]: rad=-0.287508 -> steps=-105[0m
+[0;32mI (97311) app_main: Sent waypoint 5 / 22[0m
+[0;32mI (97311) SPI1Manager: writeValves: 0x0140[0m
+[0;32mI (97311) RobotController: Valve state changed: 0x0142 -> 0x0140[0m
+[0;32mI (97351) SPI1Manager: writeValves: 0x00c0[0m
+[0;32mI (97351) RobotController: Valve state changed: 0x0140 -> 0x00c0[0m
+[0;32mI (97381) SPI1Manager: writeValves: 0x00c4[0m
+[0;32mI (97381) RobotController: Valve state changed: 0x00c0 -> 0x00c4[0m
+[0;32mI (97411) SPI1Manager: writeValves: 0x00d4[0m
+[0;32mI (97411) RobotController: Valve state changed: 0x00c4 -> 0x00d4[0m
+[0;32mI (97441) SPI1Manager: writeValves: 0x00d5[0m
+[0;32mI (97441) RobotController: Valve state changed: 0x00d4 -> 0x00d5[0m
+[0;32mI (97441) RobotController: joint[0] current_steps=140 target_steps=185 target_vel=0.00[0m
+[0;32mI (97441) RobotController: joint[1] current_steps=77 target_steps=101 target_vel=0.00[0m
+[0;32mI (97451) RobotController: joint[2] current_steps=57 target_steps=75 target_vel=0.00[0m
+[0;32mI (97461) RobotController: joint[3] current_steps=82 target_steps=108 target_vel=0.00[0m
+[0;32mI (97471) RobotController: joint[4] current_steps=-80 target_steps=-105 target_vel=0.00[0m
+[0;32mI (97481) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (97481) RobotController: valve_state=0x00d5[0m
+[0;32mI (97521) SPI1Manager: writeValves: 0x0097[0m
+[0;32mI (97521) RobotController: Valve state changed: 0x00d5 -> 0x0097[0m
+[0;32mI (97551) SPI1Manager: writeValves: 0x029f[0m
+[0;32mI (97551) RobotController: Valve state changed: 0x0097 -> 0x029f[0m
+[0;32mI (97641) SPI1Manager: writeValves: 0x02be[0m
+[0;32mI (97641) RobotController: Valve state changed: 0x029f -> 0x02be[0m
+[0;32mI (97701) SPI1Manager: writeValves: 0x023e[0m
+[0;32mI (97701) RobotController: Valve state changed: 0x02be -> 0x023e[0m
+[0;32mI (97731) SPI1Manager: writeValves: 0x0338[0m
+[0;32mI (97731) RobotController: Valve state changed: 0x023e -> 0x0338[0m
+[0;32mI (97821) SPI1Manager: writeValves: 0x0339[0m
+[0;32mI (97821) RobotController: Valve state changed: 0x0338 -> 0x0339[0m
+[0;32mI (97881) SPI1Manager: writeValves: 0x0169[0m
+[0;32mI (97881) RobotController: Valve state changed: 0x0339 -> 0x0169[0m
+[0;32mI (97911) SPI1Manager: writeValves: 0x0161[0m
+[0;32mI (97911) RobotController: Valve state changed: 0x0169 -> 0x0161[0m
+[0;32mI (97941) SPI1Manager: writeValves: 0x0163[0m
+[0;32mI (97941) RobotController: Valve state changed: 0x0161 -> 0x0163[0m
+[0;32mI (98031) SPI1Manager: writeValves: 0x01e2[0m
+[0;32mI (98031) RobotController: Valve state changed: 0x0163 -> 0x01e2[0m
+[0;32mI (98061) SPI1Manager: writeValves: 0x00e2[0m
+[0;32mI (98061) RobotController: Valve state changed: 0x01e2 -> 0x00e2[0m
+[0;32mI (98091) SPI1Manager: writeValves: 0x00e6[0m
+[0;32mI (98091) RobotController: Valve state changed: 0x00e2 -> 0x00e6[0m
+[0;32mI (98121) SPI1Manager: writeValves: 0x00c4[0m
+[0;32mI (98121) RobotController: Valve state changed: 0x00e6 -> 0x00c4[0m
+[0;32mI (98211) SPI1Manager: writeValves: 0x0084[0m
+[0;32mI (98211) RobotController: Valve state changed: 0x00c4 -> 0x0084[0m
+[0;32mI (98241) SPI1Manager: writeValves: 0x0285[0m
+[0;32mI (98241) RobotController: Valve state changed: 0x0084 -> 0x0285[0m
+[0;32mI (98301) SPI1Manager: writeValves: 0x028d[0m
+[0;32mI (98301) RobotController: Valve state changed: 0x0285 -> 0x028d[0m
+[0;32mI (98331) SPI1Manager: writeValves: 0x028f[0m
+[0;32mI (98331) RobotController: Valve state changed: 0x028d -> 0x028f[0m
+[0;32mI (98361) SPI1Manager: writeValves: 0x029f[0m
+[0;32mI (98361) RobotController: Valve state changed: 0x028f -> 0x029f[0m
+[0;32mI (98391) SPI1Manager: writeValves: 0x021f[0m
+[0;32mI (98391) RobotController: Valve state changed: 0x029f -> 0x021f[0m
+[0;32mI (98421) SPI1Manager: writeValves: 0x031e[0m
+[0;32mI (98421) RobotController: Valve state changed: 0x021f -> 0x031e[0m
+[0;32mI (98481) SPI1Manager: writeValves: 0x031a[0m
+[0;32mI (98481) RobotController: Valve state changed: 0x031e -> 0x031a[0m
+[0;32mI (98541) SPI1Manager: writeValves: 0x0358[0m
+[0;32mI (98541) RobotController: Valve state changed: 0x031a -> 0x0358[0m
+[0;32mI (98601) SPI1Manager: writeValves: 0x0178[0m
+[0;32mI (98601) RobotController: Valve state changed: 0x0358 -> 0x0178[0m
+[0;32mI (98631) SPI1Manager: writeValves: 0x0179[0m
+[0;32mI (98631) RobotController: Valve state changed: 0x0178 -> 0x0179[0m
+[0;32mI (98661) SPI1Manager: writeValves: 0x0171[0m
+[0;32mI (98661) RobotController: Valve state changed: 0x0179 -> 0x0171[0m
+[0;32mI (98721) SPI1Manager: writeValves: 0x01f3[0m
+[0;32mI (98721) RobotController: Valve state changed: 0x0171 -> 0x01f3[0m
+[0;32mI (98781) SPI1Manager: writeValves: 0x00f3[0m
+[0;32mI (98781) RobotController: Valve state changed: 0x01f3 -> 0x00f3[0m
+[0;32mI (98841) SPI1Manager: writeValves: 0x00e6[0m
+[0;32mI (98841) RobotController: Valve state changed: 0x00f3 -> 0x00e6[0m
+[0;32mI (98901) SPI1Manager: writeValves: 0x00a6[0m
+[0;32mI (98901) RobotController: Valve state changed: 0x00e6 -> 0x00a6[0m
+[0;32mI (98931) SPI1Manager: writeValves: 0x00a4[0m
+[0;32mI (98931) RobotController: Valve state changed: 0x00a6 -> 0x00a4[0m
+[0;32mI (98961) SPI1Manager: writeValves: 0x02a4[0m
+[0;32mI (98961) RobotController: Valve state changed: 0x00a4 -> 0x02a4[0m
+[0;32mI (98991) RobotController: joint[0] current_steps=156 target_steps=185 target_vel=0.00[0m
+[0;32mI (98991) RobotController: joint[1] current_steps=85 target_steps=101 target_vel=0.00[0m
+[0;32mI (98991) RobotController: joint[2] current_steps=63 target_steps=75 target_vel=0.00[0m
+[0;32mI (99001) RobotController: joint[3] current_steps=91 target_steps=108 target_vel=0.00[0m
+[0;32mI (99011) RobotController: joint[4] current_steps=-89 target_steps=-105 target_vel=0.00[0m
+[0;32mI (99021) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (99021) RobotController: valve_state=0x02a4[0m
+[0;32mI (99061) SPI1Manager: writeValves: 0x022d[0m
+[0;32mI (99061) RobotController: Valve state changed: 0x02a4 -> 0x022d[0m
+[0;32mI (99091) SPI1Manager: writeValves: 0x020d[0m
+[0;32mI (99091) RobotController: Valve state changed: 0x022d -> 0x020d[0m
+[0;32mI (99121) SPI1Manager: writeValves: 0x030f[0m
+[0;32mI (99121) RobotController: Valve state changed: 0x020d -> 0x030f[0m
+[0;32mI (99211) SPI1Manager: writeValves: 0x030b[0m
+[0;32mI (99211) RobotController: Valve state changed: 0x030f -> 0x030b[0m
+[0;32mI (99241) SPI1Manager: writeValves: 0x034a[0m
+[0;32mI (99241) RobotController: Valve state changed: 0x030b -> 0x034a[0m
+[0;32mI (99301) SPI1Manager: writeValves: 0x014a[0m
+[0;32mI (99301) RobotController: Valve state changed: 0x034a -> 0x014a[0m
+[0;32mI (99331) SPI1Manager: writeValves: 0x0158[0m
+[0;32mI (99331) RobotController: Valve state changed: 0x014a -> 0x0158[0m
+[0;32mI (99391) SPI1Manager: writeValves: 0x01d0[0m
+[0;32mI (99391) RobotController: Valve state changed: 0x0158 -> 0x01d0[0m
+[0;32mI (99421) SPI1Manager: writeValves: 0x01d1[0m
+[0;32mI (99421) RobotController: Valve state changed: 0x01d0 -> 0x01d1[0m
+[0;32mI (99481) SPI1Manager: writeValves: 0x00d1[0m
+[0;32mI (99481) RobotController: Valve state changed: 0x01d1 -> 0x00d1[0m
+[0;32mI (99541) SPI1Manager: writeValves: 0x00d3[0m
+[0;32mI (99541) RobotController: Valve state changed: 0x00d1 -> 0x00d3[0m
+[0;32mI (99571) SPI1Manager: writeValves: 0x00b7[0m
+[0;32mI (99571) RobotController: Valve state changed: 0x00d3 -> 0x00b7[0m
+[0;32mI (99631) SPI1Manager: writeValves: 0x00b6[0m
+[0;32mI (99631) RobotController: Valve state changed: 0x00b7 -> 0x00b6[0m
+[0;32mI (99661) SPI1Manager: writeValves: 0x02b6[0m
+[0;32mI (99661) RobotController: Valve state changed: 0x00b6 -> 0x02b6[0m
+[0;32mI (99721) SPI1Manager: writeValves: 0x02b4[0m
+[0;32mI (99721) RobotController: Valve state changed: 0x02b6 -> 0x02b4[0m
+[0;32mI (99751) SPI1Manager: writeValves: 0x023c[0m
+[0;32mI (99751) RobotController: Valve state changed: 0x02b4 -> 0x023c[0m
+[0;32mI (99811) SPI1Manager: writeValves: 0x022c[0m
+[0;32mI (99811) RobotController: Valve state changed: 0x023c -> 0x022c[0m
+[0;32mI (99841) SPI1Manager: writeValves: 0x032d[0m
+[0;32mI (99841) RobotController: Valve state changed: 0x022c -> 0x032d[0m
+[0;32mI (99931) SPI1Manager: writeValves: 0x036b[0m
+[0;32mI (99931) RobotController: Valve state changed: 0x032d -> 0x036b[0m
+[0;32mI (100021) SPI1Manager: writeValves: 0x016a[0m
+[0;32mI (100021) RobotController: Valve state changed: 0x036b -> 0x016a[0m
+[0;32mI (100051) SPI1Manager: writeValves: 0x014a[0m
+[0;32mI (100051) RobotController: Valve state changed: 0x016a -> 0x014a[0m
+[0;32mI (100081) SPI1Manager: writeValves: 0x01ca[0m
+[0;32mI (100081) RobotController: Valve state changed: 0x014a -> 0x01ca[0m
+[0;32mI (100141) SPI1Manager: writeValves: 0x01c0[0m
+[0;32mI (100141) RobotController: Valve state changed: 0x01ca -> 0x01c0[0m
+[0;32mI (100201) SPI1Manager: writeValves: 0x00c0[0m
+[0;32mI (100201) RobotController: Valve state changed: 0x01c0 -> 0x00c0[0m
+[0;32mI (100231) SPI1Manager: writeValves: 0x00c1[0m
+[0;32mI (100231) RobotController: Valve state changed: 0x00c0 -> 0x00c1[0m
+[0;32mI (100261) SPI1Manager: writeValves: 0x0081[0m
+[0;32mI (100261) RobotController: Valve state changed: 0x00c1 -> 0x0081[0m
+[0;32mI (100291) SPI1Manager: writeValves: 0x0091[0m
+[0;32mI (100291) RobotController: Valve state changed: 0x0081 -> 0x0091[0m
+[0;32mI (100321) SPI1Manager: writeValves: 0x0097[0m
+[0;32mI (100321) RobotController: Valve state changed: 0x0091 -> 0x0097[0m
+[0;32mI (100381) SPI1Manager: writeValves: 0x0297[0m
+[0;32mI (100381) RobotController: Valve state changed: 0x0097 -> 0x0297[0m
+[0;32mI (100441) SPI1Manager: writeValves: 0x0216[0m
+[0;32mI (100441) RobotController: Valve state changed: 0x0297 -> 0x0216[0m
+[0;32mI (100501) SPI1Manager: writeValves: 0x021e[0m
+[0;32mI (100501) RobotController: Valve state changed: 0x0216 -> 0x021e[0m
+[0;32mI (100531) SPI1Manager: writeValves: 0x023c[0m
+[0;32mI (100531) RobotController: Valve state changed: 0x021e -> 0x023c[0m
+[0;32mI (100531) RobotController: joint[0] current_steps=171 target_steps=185 target_vel=0.00[0m
+[0;32mI (100541) RobotController: joint[1] current_steps=94 target_steps=101 target_vel=0.00[0m
+[0;32mI (100541) RobotController: joint[2] current_steps=69 target_steps=75 target_vel=0.00[0m
+[0;32mI (100551) RobotController: joint[3] current_steps=100 target_steps=108 target_vel=0.00[0m
+[0;32mI (100561) RobotController: joint[4] current_steps=-97 target_steps=-105 target_vel=0.00[0m
+[0;32mI (100571) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (100571) RobotController: valve_state=0x023c[0m
+[0;32mI (100611) SPI1Manager: writeValves: 0x037c[0m
+[0;32mI (100611) RobotController: Valve state changed: 0x023c -> 0x037c[0m
+[0;32mI (100641) SPI1Manager: writeValves: 0x037d[0m
+[0;32mI (100641) RobotController: Valve state changed: 0x037c -> 0x037d[0m
+[0;32mI (100671) SPI1Manager: writeValves: 0x0379[0m
+[0;32mI (100671) RobotController: Valve state changed: 0x037d -> 0x0379[0m
+[0;32mI (100731) SPI1Manager: writeValves: 0x017b[0m
+[0;32mI (100731) RobotController: Valve state changed: 0x0379 -> 0x017b[0m
+[0;32mI (100761) SPI1Manager: writeValves: 0x01fb[0m
+[0;32mI (100761) RobotController: Valve state changed: 0x017b -> 0x01fb[0m
+[0;32mI (100791) SPI1Manager: writeValves: 0x01eb[0m
+[0;32mI (100791) RobotController: Valve state changed: 0x01fb -> 0x01eb[0m
+[0;32mI (100821) SPI1Manager: writeValves: 0x01ea[0m
+[0;32mI (100821) RobotController: Valve state changed: 0x01eb -> 0x01ea[0m
+[0;32mI (100851) SPI1Manager: writeValves: 0x01e2[0m
+[0;32mI (100851) RobotController: Valve state changed: 0x01ea -> 0x01e2[0m
+[0;32mI (100911) SPI1Manager: writeValves: 0x00e2[0m
+[0;32mI (100911) RobotController: Valve state changed: 0x01e2 -> 0x00e2[0m
+[0;32mI (100941) SPI1Manager: writeValves: 0x00a0[0m
+[0;32mI (100941) RobotController: Valve state changed: 0x00e2 -> 0x00a0[0m
+[0;32mI (101031) SPI1Manager: writeValves: 0x0081[0m
+[0;32mI (101031) RobotController: Valve state changed: 0x00a0 -> 0x0081[0m
+[0;32mI (101061) SPI1Manager: writeValves: 0x0085[0m
+[0;32mI (101061) RobotController: Valve state changed: 0x0081 -> 0x0085[0m
+[0;32mI (101091) SPI1Manager: writeValves: 0x0285[0m
+[0;32mI (101091) RobotController: Valve state changed: 0x0085 -> 0x0285[0m
+[0;32mI (101121) SPI1Manager: writeValves: 0x0207[0m
+[0;32mI (101121) RobotController: Valve state changed: 0x0285 -> 0x0207[0m
+[0;32mI (101241) SPI1Manager: writeValves: 0x020e[0m
+[0;32mI (101241) RobotController: Valve state changed: 0x0207 -> 0x020e[0m
+[0;32mI (101271) SPI1Manager: writeValves: 0x035e[0m
+[0;32mI (101271) RobotController: Valve state changed: 0x020e -> 0x035e[0m
+[0;32mI (101331) SPI1Manager: writeValves: 0x035c[0m
+[0;32mI (101331) RobotController: Valve state changed: 0x035e -> 0x035c[0m
+[0;32mI (101421) SPI1Manager: writeValves: 0x0159[0m
+[0;32mI (101421) RobotController: Valve state changed: 0x035c -> 0x0159[0m
+[0;32mI (101451) SPI1Manager: writeValves: 0x01d9[0m
+[0;32mI (101451) RobotController: Valve state changed: 0x0159 -> 0x01d9[0m
+[0;32mI (101511) SPI1Manager: writeValves: 0x01f9[0m
+[0;32mI (101511) RobotController: Valve state changed: 0x01d9 -> 0x01f9[0m
+[0;32mI (101541) SPI1Manager: writeValves: 0x01fb[0m
+[0;32mI (101541) RobotController: Valve state changed: 0x01f9 -> 0x01fb[0m
+[0;32mI (101601) SPI1Manager: writeValves: 0x00f3[0m
+[0;32mI (101601) RobotController: Valve state changed: 0x01fb -> 0x00f3[0m
+[0;32mI (101631) SPI1Manager: writeValves: 0x00b2[0m
+[0;32mI (101631) RobotController: Valve state changed: 0x00f3 -> 0x00b2[0m
+[0;32mI (101721) SPI1Manager: writeValves: 0x00b0[0m
+[0;32mI (101721) RobotController: Valve state changed: 0x00b2 -> 0x00b0[0m
+[0;32mI (101751) SPI1Manager: writeValves: 0x00a0[0m
+[0;32mI (101751) RobotController: Valve state changed: 0x00b0 -> 0x00a0[0m
+[0;32mI (101781) SPI1Manager: writeValves: 0x0224[0m
+[0;32mI (101781) RobotController: Valve state changed: 0x00a0 -> 0x0224[0m
+[0;32mI (101841) SPI1Manager: writeValves: 0x0225[0m
+[0;32mI (101841) RobotController: Valve state changed: 0x0224 -> 0x0225[0m
+[0;32mI (101901) app_main: Reached waypoint 5 / 22[0m
+[0;32mI (101931) RobotController: target joint[0]: rad=0.257860 -> steps=213[0m
+[0;32mI (101931) RobotController: target joint[1]: rad=0.220429 -> steps=114[0m
+[0;32mI (101931) RobotController: target joint[2]: rad=0.332499 -> steps=86[0m
+[0;32mI (101931) RobotController: target joint[3]: rad=0.484698 -> steps=125[0m
+[0;32mI (101941) RobotController: target joint[4]: rad=-0.334865 -> steps=-123[0m
+[0;32mI (101951) app_main: Sent waypoint 6 / 22[0m
+[0;32mI (101951) SPI1Manager: writeValves: 0x0227[0m
+[0;32mI (101951) RobotController: Valve state changed: 0x0225 -> 0x0227[0m
+[0;32mI (101991) SPI1Manager: writeValves: 0x0367[0m
+[0;32mI (101991) RobotController: Valve state changed: 0x0227 -> 0x0367[0m
+[0;32mI (102021) SPI1Manager: writeValves: 0x036f[0m
+[0;32mI (102021) RobotController: Valve state changed: 0x0367 -> 0x036f[0m
+[0;32mI (102051) SPI1Manager: writeValves: 0x034f[0m
+[0;32mI (102051) RobotController: Valve state changed: 0x036f -> 0x034f[0m
+[0;32mI (102081) SPI1Manager: writeValves: 0x034e[0m
+[0;32mI (102081) RobotController: Valve state changed: 0x034f -> 0x034e[0m
+[0;32mI (102111) RobotController: joint[0] current_steps=187 target_steps=213 target_vel=0.00[0m
+[0;32mI (102111) RobotController: joint[1] current_steps=102 target_steps=114 target_vel=0.00[0m
+[0;32mI (102111) RobotController: joint[2] current_steps=76 target_steps=86 target_vel=0.00[0m
+[0;32mI (102121) RobotController: joint[3] current_steps=109 target_steps=125 target_vel=0.00[0m
+[0;32mI (102131) RobotController: joint[4] current_steps=-106 target_steps=-123 target_vel=0.00[0m
+[0;32mI (102141) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (102141) RobotController: valve_state=0x034e[0m
+[0;32mI (102181) SPI1Manager: writeValves: 0x01cc[0m
+[0;32mI (102181) RobotController: Valve state changed: 0x034e -> 0x01cc[0m
+[0;32mI (102241) SPI1Manager: writeValves: 0x01c8[0m
+[0;32mI (102241) RobotController: Valve state changed: 0x01cc -> 0x01c8[0m
+[0;32mI (102271) SPI1Manager: writeValves: 0x01c9[0m
+[0;32mI (102271) RobotController: Valve state changed: 0x01c8 -> 0x01c9[0m
+[0;32mI (102301) SPI1Manager: writeValves: 0x00d9[0m
+[0;32mI (102301) RobotController: Valve state changed: 0x01c9 -> 0x00d9[0m
+[0;32mI (102331) SPI1Manager: writeValves: 0x0099[0m
+[0;32mI (102331) RobotController: Valve state changed: 0x00d9 -> 0x0099[0m
+[0;32mI (102361) SPI1Manager: writeValves: 0x009b[0m
+[0;32mI (102361) RobotController: Valve state changed: 0x0099 -> 0x009b[0m
+[0;32mI (102451) SPI1Manager: writeValves: 0x0293[0m
+[0;32mI (102451) RobotController: Valve state changed: 0x009b -> 0x0293[0m
+[0;32mI (102481) SPI1Manager: writeValves: 0x0212[0m
+[0;32mI (102481) RobotController: Valve state changed: 0x0293 -> 0x0212[0m
+[0;32mI (102541) SPI1Manager: writeValves: 0x0232[0m
+[0;32mI (102541) RobotController: Valve state changed: 0x0212 -> 0x0232[0m
+[0;32mI (102571) SPI1Manager: writeValves: 0x0230[0m
+[0;32mI (102571) RobotController: Valve state changed: 0x0232 -> 0x0230[0m
+[0;32mI (102631) SPI1Manager: writeValves: 0x0330[0m
+[0;32mI (102631) RobotController: Valve state changed: 0x0230 -> 0x0330[0m
+[0;32mI (102661) SPI1Manager: writeValves: 0x0375[0m
+[0;32mI (102661) RobotController: Valve state changed: 0x0330 -> 0x0375[0m
+[0;32mI (102781) SPI1Manager: writeValves: 0x0177[0m
+[0;32mI (102781) RobotController: Valve state changed: 0x0375 -> 0x0177[0m
+[0;32mI (102811) SPI1Manager: writeValves: 0x01e7[0m
+[0;32mI (102811) RobotController: Valve state changed: 0x0177 -> 0x01e7[0m
+[0;32mI (102871) SPI1Manager: writeValves: 0x01e6[0m
+[0;32mI (102871) RobotController: Valve state changed: 0x01e7 -> 0x01e6[0m
+[0;32mI (102901) SPI1Manager: writeValves: 0x01ee[0m
+[0;32mI (102901) RobotController: Valve state changed: 0x01e6 -> 0x01ee[0m
+[0;32mI (102931) SPI1Manager: writeValves: 0x00ee[0m
+[0;32mI (102931) RobotController: Valve state changed: 0x01ee -> 0x00ee[0m
+[0;32mI (102961) SPI1Manager: writeValves: 0x00ec[0m
+[0;32mI (102961) RobotController: Valve state changed: 0x00ee -> 0x00ec[0m
+[0;32mI (102991) SPI1Manager: writeValves: 0x00ac[0m
+[0;32mI (102991) RobotController: Valve state changed: 0x00ec -> 0x00ac[0m
+[0;32mI (103051) SPI1Manager: writeValves: 0x008c[0m
+[0;32mI (103051) RobotController: Valve state changed: 0x00ac -> 0x008c[0m
+[0;32mI (103081) SPI1Manager: writeValves: 0x028d[0m
+[0;32mI (103081) RobotController: Valve state changed: 0x008c -> 0x028d[0m
+[0;32mI (103111) SPI1Manager: writeValves: 0x0289[0m
+[0;32mI (103111) RobotController: Valve state changed: 0x028d -> 0x0289[0m
+[0;32mI (103141) SPI1Manager: writeValves: 0x0209[0m
+[0;32mI (103141) RobotController: Valve state changed: 0x0289 -> 0x0209[0m
+[0;32mI (103171) SPI1Manager: writeValves: 0x020b[0m
+[0;32mI (103171) RobotController: Valve state changed: 0x0209 -> 0x020b[0m
+[0;32mI (103231) SPI1Manager: writeValves: 0x030b[0m
+[0;32mI (103231) RobotController: Valve state changed: 0x020b -> 0x030b[0m
+[0;32mI (103261) SPI1Manager: writeValves: 0x030a[0m
+[0;32mI (103261) RobotController: Valve state changed: 0x030b -> 0x030a[0m
+[0;32mI (103321) SPI1Manager: writeValves: 0x0352[0m
+[0;32mI (103321) RobotController: Valve state changed: 0x030a -> 0x0352[0m
+[0;32mI (103381) SPI1Manager: writeValves: 0x0150[0m
+[0;32mI (103381) RobotController: Valve state changed: 0x0352 -> 0x0150[0m
+[0;32mI (103471) SPI1Manager: writeValves: 0x01d1[0m
+[0;32mI (103471) RobotController: Valve state changed: 0x0150 -> 0x01d1[0m
+[0;32mI (103531) SPI1Manager: writeValves: 0x01d5[0m
+[0;32mI (103531) RobotController: Valve state changed: 0x01d1 -> 0x01d5[0m
+[0;32mI (103561) SPI1Manager: writeValves: 0x00f7[0m
+[0;32mI (103561) RobotController: Valve state changed: 0x01d5 -> 0x00f7[0m
+[0;32mI (103651) SPI1Manager: writeValves: 0x00b7[0m
+[0;32mI (103651) RobotController: Valve state changed: 0x00f7 -> 0x00b7[0m
+[0;32mI (103651) RobotController: joint[0] current_steps=202 target_steps=213 target_vel=0.00[0m
+[0;32mI (103661) RobotController: joint[1] current_steps=109 target_steps=114 target_vel=0.00[0m
+[0;32mI (103661) RobotController: joint[2] current_steps=82 target_steps=86 target_vel=0.00[0m
+[0;32mI (103671) RobotController: joint[3] current_steps=118 target_steps=125 target_vel=0.00[0m
+[0;32mI (103681) RobotController: joint[4] current_steps=-116 target_steps=-123 target_vel=0.00[0m
+[0;32mI (103691) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (103691) RobotController: valve_state=0x00b7[0m
+[0;32mI (103731) SPI1Manager: writeValves: 0x02b6[0m
+[0;32mI (103731) RobotController: Valve state changed: 0x00b7 -> 0x02b6[0m
+[0;32mI (103761) SPI1Manager: writeValves: 0x02bc[0m
+[0;32mI (103761) RobotController: Valve state changed: 0x02b6 -> 0x02bc[0m
+[0;32mI (103821) SPI1Manager: writeValves: 0x022c[0m
+[0;32mI (103821) RobotController: Valve state changed: 0x02bc -> 0x022c[0m
+[0;32mI (103851) SPI1Manager: writeValves: 0x032c[0m
+[0;32mI (103851) RobotController: Valve state changed: 0x022c -> 0x032c[0m
+[0;32mI (103881) SPI1Manager: writeValves: 0x032d[0m
+[0;32mI (103881) RobotController: Valve state changed: 0x032c -> 0x032d[0m
+[0;32mI (103971) SPI1Manager: writeValves: 0x036b[0m
+[0;32mI (103971) RobotController: Valve state changed: 0x032d -> 0x036b[0m
+[0;32mI (104031) SPI1Manager: writeValves: 0x016b[0m
+[0;32mI (104031) RobotController: Valve state changed: 0x036b -> 0x016b[0m
+[0;32mI (104061) SPI1Manager: writeValves: 0x016a[0m
+[0;32mI (104061) RobotController: Valve state changed: 0x016b -> 0x016a[0m
+[0;32mI (104091) SPI1Manager: writeValves: 0x014a[0m
+[0;32mI (104091) RobotController: Valve state changed: 0x016a -> 0x014a[0m
+[0;32mI (104151) SPI1Manager: writeValves: 0x01ca[0m
+[0;32mI (104151) RobotController: Valve state changed: 0x014a -> 0x01ca[0m
+[0;32mI (104181) SPI1Manager: writeValves: 0x00c0[0m
+[0;32mI (104181) RobotController: Valve state changed: 0x01ca -> 0x00c0[0m
+[0;32mI (104271) SPI1Manager: writeValves: 0x00c1[0m
+[0;32mI (104271) RobotController: Valve state changed: 0x00c0 -> 0x00c1[0m
+[0;32mI (104301) SPI1Manager: writeValves: 0x0081[0m
+[0;32mI (104301) RobotController: Valve state changed: 0x00c1 -> 0x0081[0m
+[0;32mI (104331) SPI1Manager: writeValves: 0x0291[0m
+[0;32mI (104331) RobotController: Valve state changed: 0x0081 -> 0x0291[0m
+[0;32mI (104361) SPI1Manager: writeValves: 0x0293[0m
+[0;32mI (104361) RobotController: Valve state changed: 0x0291 -> 0x0293[0m
+[0;32mI (104391) SPI1Manager: writeValves: 0x0297[0m
+[0;32mI (104391) RobotController: Valve state changed: 0x0293 -> 0x0297[0m
+[0;32mI (104481) SPI1Manager: writeValves: 0x0316[0m
+[0;32mI (104481) RobotController: Valve state changed: 0x0297 -> 0x0316[0m
+[0;32mI (104571) SPI1Manager: writeValves: 0x0314[0m
+[0;32mI (104571) RobotController: Valve state changed: 0x0316 -> 0x0314[0m
+[0;32mI (104601) SPI1Manager: writeValves: 0x033c[0m
+[0;32mI (104601) RobotController: Valve state changed: 0x0314 -> 0x033c[0m
+[0;32mI (104631) SPI1Manager: writeValves: 0x017c[0m
+[0;32mI (104631) RobotController: Valve state changed: 0x033c -> 0x017c[0m
+[0;32mI (104661) SPI1Manager: writeValves: 0x017d[0m
+[0;32mI (104661) RobotController: Valve state changed: 0x017c -> 0x017d[0m
+[0;32mI (104721) app_main: Reached waypoint 6 / 22[0m
+[0;32mI (104751) RobotController: target joint[0]: rad=0.290933 -> steps=240[0m
+[0;32mI (104751) RobotController: target joint[1]: rad=0.244989 -> steps=126[0m
+[0;32mI (104751) RobotController: target joint[2]: rad=0.372882 -> steps=96[0m
+[0;32mI (104751) RobotController: target joint[3]: rad=0.551253 -> steps=142[0m
+[0;32mI (104761) RobotController: target joint[4]: rad=-0.382221 -> steps=-140[0m
+[0;32mI (104771) app_main: Sent waypoint 7 / 22[0m
+[0;32mI (104771) SPI1Manager: writeValves: 0x017f[0m
+[0;32mI (104771) RobotController: Valve state changed: 0x017d -> 0x017f[0m
+[0;32mI (104811) SPI1Manager: writeValves: 0x00ff[0m
+[0;32mI (104811) RobotController: Valve state changed: 0x017f -> 0x00ff[0m
+[0;32mI (104841) SPI1Manager: writeValves: 0x00fb[0m
+[0;32mI (104841) RobotController: Valve state changed: 0x00ff -> 0x00fb[0m
+[0;32mI (104871) SPI1Manager: writeValves: 0x00eb[0m
+[0;32mI (104871) RobotController: Valve state changed: 0x00fb -> 0x00eb[0m
+[0;32mI (104901) SPI1Manager: writeValves: 0x00ea[0m
+[0;32mI (104901) RobotController: Valve state changed: 0x00eb -> 0x00ea[0m
+[0;32mI (104961) SPI1Manager: writeValves: 0x02aa[0m
+[0;32mI (104961) RobotController: Valve state changed: 0x00ea -> 0x02aa[0m
+[0;32mI (104991) SPI1Manager: writeValves: 0x02a8[0m
+[0;32mI (104991) RobotController: Valve state changed: 0x02aa -> 0x02a8[0m
+[0;32mI (105081) SPI1Manager: writeValves: 0x02a1[0m
+[0;32mI (105081) RobotController: Valve state changed: 0x02a8 -> 0x02a1[0m
+[0;32mI (105141) SPI1Manager: writeValves: 0x0301[0m
+[0;32mI (105141) RobotController: Valve state changed: 0x02a1 -> 0x0301[0m
+[0;32mI (105171) SPI1Manager: writeValves: 0x0303[0m
+[0;32mI (105171) RobotController: Valve state changed: 0x0301 -> 0x0303[0m
+[0;32mI (105231) RobotController: joint[0] current_steps=218 target_steps=240 target_vel=0.00[0m
+[0;32mI (105231) RobotController: joint[1] current_steps=116 target_steps=126 target_vel=0.00[0m
+[0;32mI (105231) RobotController: joint[2] current_steps=88 target_steps=96 target_vel=0.00[0m
+[0;32mI (105241) RobotController: joint[3] current_steps=128 target_steps=142 target_vel=0.00[0m
+[0;32mI (105251) RobotController: joint[4] current_steps=-126 target_steps=-140 target_vel=0.00[0m
+[0;32mI (105261) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (105261) RobotController: valve_state=0x0303[0m
+[0;32mI (105301) SPI1Manager: writeValves: 0x0146[0m
+[0;32mI (105301) RobotController: Valve state changed: 0x0303 -> 0x0146[0m
+[0;32mI (105391) SPI1Manager: writeValves: 0x0144[0m
+[0;32mI (105391) RobotController: Valve state changed: 0x0146 -> 0x0144[0m
+[0;32mI (105421) SPI1Manager: writeValves: 0x0154[0m
+[0;32mI (105421) RobotController: Valve state changed: 0x0144 -> 0x0154[0m
+[0;32mI (105451) SPI1Manager: writeValves: 0x00d4[0m
+[0;32mI (105451) RobotController: Valve state changed: 0x0154 -> 0x00d4[0m
+[0;32mI (105481) SPI1Manager: writeValves: 0x00d5[0m
+[0;32mI (105481) RobotController: Valve state changed: 0x00d4 -> 0x00d5[0m
+[0;32mI (105511) SPI1Manager: writeValves: 0x00dd[0m
+[0;32mI (105511) RobotController: Valve state changed: 0x00d5 -> 0x00dd[0m
+[0;32mI (105601) SPI1Manager: writeValves: 0x029f[0m
+[0;32mI (105601) RobotController: Valve state changed: 0x00dd -> 0x029f[0m
+[0;32mI (105691) SPI1Manager: writeValves: 0x02be[0m
+[0;32mI (105691) RobotController: Valve state changed: 0x029f -> 0x02be[0m
+[0;32mI (105751) SPI1Manager: writeValves: 0x02ba[0m
+[0;32mI (105751) RobotController: Valve state changed: 0x02be -> 0x02ba[0m
+[0;32mI (105781) SPI1Manager: writeValves: 0x0338[0m
+[0;32mI (105781) RobotController: Valve state changed: 0x02ba -> 0x0338[0m
+[0;32mI (105901) SPI1Manager: writeValves: 0x0339[0m
+[0;32mI (105901) RobotController: Valve state changed: 0x0338 -> 0x0339[0m
+[0;32mI (105931) SPI1Manager: writeValves: 0x0179[0m
+[0;32mI (105931) RobotController: Valve state changed: 0x0339 -> 0x0179[0m
+[0;32mI (105961) SPI1Manager: writeValves: 0x0161[0m
+[0;32mI (105961) RobotController: Valve state changed: 0x0179 -> 0x0161[0m
+[0;32mI (105991) SPI1Manager: writeValves: 0x0163[0m
+[0;32mI (105991) RobotController: Valve state changed: 0x0161 -> 0x0163[0m
+[0;32mI (106081) SPI1Manager: writeValves: 0x00e2[0m
+[0;32mI (106081) RobotController: Valve state changed: 0x0163 -> 0x00e2[0m
+[0;32mI (106201) SPI1Manager: writeValves: 0x00e4[0m
+[0;32mI (106201) RobotController: Valve state changed: 0x00e2 -> 0x00e4[0m
+[0;32mI (106231) SPI1Manager: writeValves: 0x0284[0m
+[0;32mI (106231) RobotController: Valve state changed: 0x00e4 -> 0x0284[0m
+[0;32mI (106291) SPI1Manager: writeValves: 0x0285[0m
+[0;32mI (106291) RobotController: Valve state changed: 0x0284 -> 0x0285[0m
+[0;32mI (106381) SPI1Manager: writeValves: 0x0287[0m
+[0;32mI (106381) RobotController: Valve state changed: 0x0285 -> 0x0287[0m
+[0;32mI (106411) SPI1Manager: writeValves: 0x030f[0m
+[0;32mI (106411) RobotController: Valve state changed: 0x0287 -> 0x030f[0m
+[0;32mI (106501) SPI1Manager: writeValves: 0x031e[0m
+[0;32mI (106501) RobotController: Valve state changed: 0x030f -> 0x031e[0m
+[0;32mI (106561) SPI1Manager: writeValves: 0x015e[0m
+[0;32mI (106561) RobotController: Valve state changed: 0x031e -> 0x015e[0m
+[0;32mI (106591) SPI1Manager: writeValves: 0x015c[0m
+[0;32mI (106591) RobotController: Valve state changed: 0x015e -> 0x015c[0m
+[0;32mI (106651) SPI1Manager: writeValves: 0x0158[0m
+[0;32mI (106651) RobotController: Valve state changed: 0x015c -> 0x0158[0m
+[0;32mI (106681) SPI1Manager: writeValves: 0x0159[0m
+[0;32mI (106681) RobotController: Valve state changed: 0x0158 -> 0x0159[0m
+[0;32mI (106711) SPI1Manager: writeValves: 0x00d9[0m
+[0;32mI (106711) RobotController: Valve state changed: 0x0159 -> 0x00d9[0m
+[0;32mI (106771) SPI1Manager: writeValves: 0x00f9[0m
+[0;32mI (106771) RobotController: Valve state changed: 0x00d9 -> 0x00f9[0m
+[0;32mI (106771) RobotController: joint[0] current_steps=233 target_steps=240 target_vel=0.00[0m
+[0;32mI (106781) RobotController: joint[1] current_steps=123 target_steps=126 target_vel=0.00[0m
+[0;32mI (106781) RobotController: joint[2] current_steps=93 target_steps=96 target_vel=0.00[0m
+[0;32mI (106791) RobotController: joint[3] current_steps=138 target_steps=142 target_vel=0.00[0m
+[0;32mI (106801) RobotController: joint[4] current_steps=-136 target_steps=-140 target_vel=0.00[0m
+[0;32mI (106811) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (106811) RobotController: valve_state=0x00f9[0m
+[0;32mI (106851) SPI1Manager: writeValves: 0x00fb[0m
+[0;32mI (106851) RobotController: Valve state changed: 0x00f9 -> 0x00fb[0m
+[0;32mI (106881) SPI1Manager: writeValves: 0x02b2[0m
+[0;32mI (106881) RobotController: Valve state changed: 0x00fb -> 0x02b2[0m
+[0;32mI (107001) SPI1Manager: writeValves: 0x02b0[0m
+[0;32mI (107001) RobotController: Valve state changed: 0x02b2 -> 0x02b0[0m
+[0;32mI (107031) SPI1Manager: writeValves: 0x0320[0m
+[0;32mI (107031) RobotController: Valve state changed: 0x02b0 -> 0x0320[0m
+[0;32mI (107091) SPI1Manager: writeValves: 0x0325[0m
+[0;32mI (107091) RobotController: Valve state changed: 0x0320 -> 0x0325[0m
+[0;32mI (107181) SPI1Manager: writeValves: 0x0327[0m
+[0;32mI (107181) RobotController: Valve state changed: 0x0325 -> 0x0327[0m
+[0;32mI (107211) SPI1Manager: writeValves: 0x0167[0m
+[0;32mI (107211) RobotController: Valve state changed: 0x0327 -> 0x0167[0m
+[0;32mI (107301) SPI1Manager: writeValves: 0x0146[0m
+[0;32mI (107301) RobotController: Valve state changed: 0x0167 -> 0x0146[0m
+[0;32mI (107331) SPI1Manager: writeValves: 0x014e[0m
+[0;32mI (107331) RobotController: Valve state changed: 0x0146 -> 0x014e[0m
+[0;32mI (107361) SPI1Manager: writeValves: 0x00ce[0m
+[0;32mI (107361) RobotController: Valve state changed: 0x014e -> 0x00ce[0m
+[0;32mI (107391) SPI1Manager: writeValves: 0x00cc[0m
+[0;32mI (107391) RobotController: Valve state changed: 0x00ce -> 0x00cc[0m
+[0;32mI (107451) app_main: Reached waypoint 7 / 22[0m
+[0;32mI (107481) RobotController: target joint[0]: rad=0.324006 -> steps=267[0m
+[0;32mI (107481) RobotController: target joint[1]: rad=0.269549 -> steps=139[0m
+[0;32mI (107481) RobotController: target joint[2]: rad=0.413264 -> steps=107[0m
+[0;32mI (107481) RobotController: target joint[3]: rad=0.617808 -> steps=159[0m
+[0;32mI (107491) RobotController: target joint[4]: rad=-0.429577 -> steps=-158[0m
+[0;32mI (107501) app_main: Sent waypoint 8 / 22[0m
+[0;32mI (107501) SPI1Manager: writeValves: 0x00cd[0m
+[0;32mI (107501) RobotController: Valve state changed: 0x00cc -> 0x00cd[0m
+[0;32mI (107541) SPI1Manager: writeValves: 0x028d[0m
+[0;32mI (107541) RobotController: Valve state changed: 0x00cd -> 0x028d[0m
+[0;32mI (107571) SPI1Manager: writeValves: 0x0289[0m
+[0;32mI (107571) RobotController: Valve state changed: 0x028d -> 0x0289[0m
+[0;32mI (107601) SPI1Manager: writeValves: 0x0299[0m
+[0;32mI (107601) RobotController: Valve state changed: 0x0289 -> 0x0299[0m
+[0;32mI (107631) SPI1Manager: writeValves: 0x029b[0m
+[0;32mI (107631) RobotController: Valve state changed: 0x0299 -> 0x029b[0m
+[0;32mI (107691) SPI1Manager: writeValves: 0x031b[0m
+[0;32mI (107691) RobotController: Valve state changed: 0x029b -> 0x031b[0m
+[0;32mI (107721) SPI1Manager: writeValves: 0x031a[0m
+[0;32mI (107721) RobotController: Valve state changed: 0x031b -> 0x031a[0m
+[0;32mI (107781) SPI1Manager: writeValves: 0x0312[0m
+[0;32mI (107781) RobotController: Valve state changed: 0x031a -> 0x0312[0m
+[0;32mI (107811) SPI1Manager: writeValves: 0x0310[0m
+[0;32mI (107811) RobotController: Valve state changed: 0x0312 -> 0x0310[0m
+[0;32mI (107841) SPI1Manager: writeValves: 0x0130[0m
+[0;32mI (107841) RobotController: Valve state changed: 0x0310 -> 0x0130[0m
+[0;32mI (107871) SPI1Manager: writeValves: 0x0170[0m
+[0;32mI (107871) RobotController: Valve state changed: 0x0130 -> 0x0170[0m
+[0;32mI (107931) SPI1Manager: writeValves: 0x0171[0m
+[0;32mI (107931) RobotController: Valve state changed: 0x0170 -> 0x0171[0m
+[0;32mI (107991) SPI1Manager: writeValves: 0x0075[0m
+[0;32mI (107991) RobotController: Valve state changed: 0x0171 -> 0x0075[0m
+[0;32mI (108021) SPI1Manager: writeValves: 0x00f7[0m
+[0;32mI (108021) RobotController: Valve state changed: 0x0075 -> 0x00f7[0m
+[0;32mI (108081) SPI1Manager: writeValves: 0x00e7[0m
+[0;32mI (108081) RobotController: Valve state changed: 0x00f7 -> 0x00e7[0m
+[0;32mI (108111) SPI1Manager: writeValves: 0x00e6[0m
+[0;32mI (108111) RobotController: Valve state changed: 0x00e7 -> 0x00e6[0m
+[0;32mI (108141) SPI1Manager: writeValves: 0x02e6[0m
+[0;32mI (108141) RobotController: Valve state changed: 0x00e6 -> 0x02e6[0m
+[0;32mI (108171) SPI1Manager: writeValves: 0x02a6[0m
+[0;32mI (108171) RobotController: Valve state changed: 0x02e6 -> 0x02a6[0m
+[0;32mI (108201) SPI1Manager: writeValves: 0x02ae[0m
+[0;32mI (108201) RobotController: Valve state changed: 0x02a6 -> 0x02ae[0m
+[0;32mI (108231) SPI1Manager: writeValves: 0x02ac[0m
+[0;32mI (108231) RobotController: Valve state changed: 0x02ae -> 0x02ac[0m
+[0;32mI (108291) SPI1Manager: writeValves: 0x03ac[0m
+[0;32mI (108291) RobotController: Valve state changed: 0x02ac -> 0x03ac[0m
+[0;32mI (108321) SPI1Manager: writeValves: 0x038d[0m
+[0;32mI (108321) RobotController: Valve state changed: 0x03ac -> 0x038d[0m
+[0;32mI (108351) SPI1Manager: writeValves: 0x030d[0m
+[0;32mI (108351) RobotController: Valve state changed: 0x038d -> 0x030d[0m
+[0;32mI (108351) RobotController: joint[0] current_steps=249 target_steps=267 target_vel=0.00[0m
+[0;32mI (108361) RobotController: joint[1] current_steps=130 target_steps=139 target_vel=0.00[0m
+[0;32mI (108361) RobotController: joint[2] current_steps=100 target_steps=107 target_vel=0.00[0m
+[0;32mI (108371) RobotController: joint[3] current_steps=147 target_steps=159 target_vel=0.00[0m
+[0;32mI (108381) RobotController: joint[4] current_steps=-146 target_steps=-158 target_vel=0.00[0m
+[0;32mI (108391) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (108391) RobotController: valve_state=0x030d[0m
+[0;32mI (108431) SPI1Manager: writeValves: 0x010b[0m
+[0;32mI (108431) RobotController: Valve state changed: 0x030d -> 0x010b[0m
+[0;32mI (108491) SPI1Manager: writeValves: 0x014b[0m
+[0;32mI (108491) RobotController: Valve state changed: 0x010b -> 0x014b[0m
+[0;32mI (108521) SPI1Manager: writeValves: 0x014a[0m
+[0;32mI (108521) RobotController: Valve state changed: 0x014b -> 0x014a[0m
+[0;32mI (108581) SPI1Manager: writeValves: 0x005a[0m
+[0;32mI (108581) RobotController: Valve state changed: 0x014a -> 0x005a[0m
+[0;32mI (108611) SPI1Manager: writeValves: 0x0050[0m
+[0;32mI (108611) RobotController: Valve state changed: 0x005a -> 0x0050[0m
+[0;32mI (108671) SPI1Manager: writeValves: 0x00d0[0m
+[0;32mI (108671) RobotController: Valve state changed: 0x0050 -> 0x00d0[0m
+[0;32mI (108731) SPI1Manager: writeValves: 0x02d1[0m
+[0;32mI (108731) RobotController: Valve state changed: 0x00d0 -> 0x02d1[0m
+[0;32mI (108821) SPI1Manager: writeValves: 0x02b7[0m
+[0;32mI (108821) RobotController: Valve state changed: 0x02d1 -> 0x02b7[0m
+[0;32mI (108881) SPI1Manager: writeValves: 0x03b7[0m
+[0;32mI (108881) RobotController: Valve state changed: 0x02b7 -> 0x03b7[0m
+[0;32mI (108911) SPI1Manager: writeValves: 0x03b6[0m
+[0;32mI (108911) RobotController: Valve state changed: 0x03b7 -> 0x03b6[0m
+[0;32mI (108971) SPI1Manager: writeValves: 0x0336[0m
+[0;32mI (108971) RobotController: Valve state changed: 0x03b6 -> 0x0336[0m
+[0;32mI (109031) SPI1Manager: writeValves: 0x013c[0m
+[0;32mI (109031) RobotController: Valve state changed: 0x0336 -> 0x013c[0m
+[0;32mI (109061) SPI1Manager: writeValves: 0x012c[0m
+[0;32mI (109061) RobotController: Valve state changed: 0x013c -> 0x012c[0m
+[0;32mI (109121) SPI1Manager: writeValves: 0x016d[0m
+[0;32mI (109121) RobotController: Valve state changed: 0x012c -> 0x016d[0m
+[0;32mI (109181) SPI1Manager: writeValves: 0x006d[0m
+[0;32mI (109181) RobotController: Valve state changed: 0x016d -> 0x006d[0m
+[0;32mI (109211) SPI1Manager: writeValves: 0x006f[0m
+[0;32mI (109211) RobotController: Valve state changed: 0x006d -> 0x006f[0m
+[0;32mI (109241) SPI1Manager: writeValves: 0x006b[0m
+[0;32mI (109241) RobotController: Valve state changed: 0x006f -> 0x006b[0m
+[0;32mI (109301) SPI1Manager: writeValves: 0x00cb[0m
+[0;32mI (109301) RobotController: Valve state changed: 0x006b -> 0x00cb[0m
+[0;32mI (109331) SPI1Manager: writeValves: 0x02ca[0m
+[0;32mI (109331) RobotController: Valve state changed: 0x00cb -> 0x02ca[0m
+[0;32mI (109421) SPI1Manager: writeValves: 0x02c8[0m
+[0;32mI (109421) RobotController: Valve state changed: 0x02ca -> 0x02c8[0m
+[0;32mI (109451) SPI1Manager: writeValves: 0x0280[0m
+[0;32mI (109451) RobotController: Valve state changed: 0x02c8 -> 0x0280[0m
+[0;32mI (109481) SPI1Manager: writeValves: 0x0380[0m
+[0;32mI (109481) RobotController: Valve state changed: 0x0280 -> 0x0380[0m
+[0;32mI (109511) SPI1Manager: writeValves: 0x0381[0m
+[0;32mI (109511) RobotController: Valve state changed: 0x0380 -> 0x0381[0m
+[0;32mI (109541) SPI1Manager: writeValves: 0x0391[0m
+[0;32mI (109541) RobotController: Valve state changed: 0x0381 -> 0x0391[0m
+[0;32mI (109601) SPI1Manager: writeValves: 0x0311[0m
+[0;32mI (109601) RobotController: Valve state changed: 0x0391 -> 0x0311[0m
+[0;32mI (109631) SPI1Manager: writeValves: 0x0113[0m
+[0;32mI (109631) RobotController: Valve state changed: 0x0311 -> 0x0113[0m
+[0;32mI (109661) SPI1Manager: writeValves: 0x0117[0m
+[0;32mI (109661) RobotController: Valve state changed: 0x0113 -> 0x0117[0m
+[0;32mI (109721) SPI1Manager: writeValves: 0x0116[0m
+[0;32mI (109721) RobotController: Valve state changed: 0x0117 -> 0x0116[0m
+[0;32mI (109781) SPI1Manager: writeValves: 0x0056[0m
+[0;32mI (109781) RobotController: Valve state changed: 0x0116 -> 0x0056[0m
+[0;32mI (109811) SPI1Manager: writeValves: 0x0074[0m
+[0;32mI (109811) RobotController: Valve state changed: 0x0056 -> 0x0074[0m
+[0;32mI (109841) SPI1Manager: writeValves: 0x007c[0m
+[0;32mI (109841) RobotController: Valve state changed: 0x0074 -> 0x007c[0m
+[0;32mI (109901) RobotController: joint[0] current_steps=264 target_steps=267 target_vel=0.00[0m
+[0;32mI (109901) RobotController: joint[1] current_steps=138 target_steps=139 target_vel=0.00[0m
+[0;32mI (109901) RobotController: joint[2] current_steps=106 target_steps=107 target_vel=0.00[0m
+[0;32mI (109911) RobotController: joint[3] current_steps=157 target_steps=159 target_vel=0.00[0m
+[0;32mI (109921) RobotController: joint[4] current_steps=-156 target_steps=-158 target_vel=0.00[0m
+[0;32mI (109931) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (109931) RobotController: valve_state=0x007c[0m
+[0;32mI (109971) SPI1Manager: writeValves: 0x02fd[0m
+[0;32mI (109971) RobotController: Valve state changed: 0x007c -> 0x02fd[0m
+[0;32mI (110031) SPI1Manager: writeValves: 0x02ef[0m
+[0;32mI (110031) RobotControll

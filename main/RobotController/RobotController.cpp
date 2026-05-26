@@ -17,7 +17,9 @@ RobotController::RobotController() :
 void RobotController::begin() {
 
     #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI1_ONLY
-    _spi1Manager.begin();
+    if (!_spi1Manager.begin()) {
+        ESP_LOGE(TAG, "SPI1Manager begin() failed; motor valve writes will not reach hardware");
+    }
     turnOffValves();
     _valveState = 0x0000;
     #else
@@ -318,7 +320,6 @@ void RobotController::turnOnValves() {
 
     // SPI1 valve output write
     _spi1Manager.writeValves(_valveState);
-    ESP_LOGD(TAG, "Valve state: 0x%04x", _valveState);
 }
 
 void RobotController::turnOffValves() {
@@ -384,6 +385,8 @@ void RobotController::incrementTargetPosition(uint8_t id, bool direction) {
 void RobotController::setJointTargetSteps(const std::vector<int> &steps) {
     const size_t n = std::min(steps.size(), _robotState.targetJointSteps.size());
 
+    _robotState.controlStrategy = PneumaticStepper::Controlstrategy::POSITION_CONTROL;
+
     for (size_t i = 0; i < n; ++i) {
         _robotState.targetJointSteps[i] = steps[i];
     }
@@ -396,6 +399,7 @@ void RobotController::setJointTargetStep(size_t idx, int step) {
         return;
     }
 
+    _robotState.controlStrategy = PneumaticStepper::Controlstrategy::POSITION_CONTROL;
     _robotState.targetJointSteps[idx] = step;
     _jointPosChanged = true;
 }
@@ -434,6 +438,8 @@ void RobotController::setSynchronizedJointTargetSteps(const std::vector<int>& st
 {
     const size_t n = std::min(steps.size(), _robotState.jointSteps.size());
     if (n == 0) return;
+
+    _robotState.controlStrategy = PneumaticStepper::Controlstrategy::POSITION_CONTROL;
 
     int maxDistance = 0;
     std::vector<int> distances(n, 0);
@@ -485,6 +491,7 @@ void RobotController::jogJointSteps(size_t jointIdx, int deltaSteps) {
         deltaSteps = -maxJogStep;
     }
 
+    _robotState.controlStrategy = PneumaticStepper::Controlstrategy::POSITION_CONTROL;
     _robotState.targetJointSteps[jointIdx] += deltaSteps;
     _jointPosChanged = true;
 

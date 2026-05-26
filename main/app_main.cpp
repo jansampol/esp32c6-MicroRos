@@ -184,7 +184,7 @@ extern "C" void app_main(void)
 
     #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI1_ONLY
     static I2CManager i2cManager;
-    uint8_t numFerris = 0;
+    uint8_t numFerris = 5;
     if (!i2cManager.begin(numFerris)) {
         ESP_LOGE(TAG, "I2CManager begin() failed");
         while (true) {
@@ -271,26 +271,26 @@ extern "C" void app_main(void)
         //#endif
 
         // Read ferris wheel angles for logging and potential use in control (not currently used in control).
-        #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI1_ONLY
-        static TickType_t lastFerrisLogTick = 0;
-        const TickType_t now = xTaskGetTickCount();
-        if ((now - lastFerrisLogTick) >= pdMS_TO_TICKS(500)) {
-            lastFerrisLogTick = now;
+        // #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI1_ONLY
+        // static TickType_t lastFerrisLogTick = 0;
+        // const TickType_t now = xTaskGetTickCount();
+        // if ((now - lastFerrisLogTick) >= pdMS_TO_TICKS(500)) {
+        //     lastFerrisLogTick = now;
 
-            std::vector<float> ferris_angles = i2cManager.readAllFerrisWheelAngles();
-            std::vector<float> ferris_raw = i2cManager.readAllFerrisWheelRawValues();
-            robot_controller.setFerrisWheelFeedback(ferris_angles);
+        //     std::vector<float> ferris_angles = i2cManager.readAllFerrisWheelAngles();
+        //     std::vector<float> ferris_raw = i2cManager.readAllFerrisWheelRawValues();
+        //     robot_controller.setFerrisWheelFeedback(ferris_angles);
 
-            for (size_t i = 0; i < ferris_angles.size(); ++i) {
-                const float raw = (i < ferris_raw.size()) ? ferris_raw[i] : NAN;
-                ESP_LOGI(TAG,
-                         "Ferris wheel %d: angle=%.2f deg raw=%.2f",
-                         (int)i,
-                         ferris_angles[i],
-                         raw);
-            }
-        }
-        #endif  
+        //     for (size_t i = 0; i < ferris_angles.size(); ++i) {
+        //         const float raw = (i < ferris_raw.size()) ? ferris_raw[i] : NAN;
+        //         ESP_LOGI(TAG,
+        //                  "Ferris wheel %d: angle=%.2f deg raw=%.2f",
+        //                  (int)i,
+        //                  ferris_angles[i],
+        //                  raw);
+        //     }
+        // }
+        // #endif  
 
         robot_controller.update();
         robot_controller.service();

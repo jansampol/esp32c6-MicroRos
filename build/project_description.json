@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32c6_microros_test",
-    "project_version":    "cb38430-dirty",
+    "project_version":    "f86ea8f-dirty",
     "project_path":       "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO",
     "idf_path":           "/Users/jansampolramirez/esp/esp-idf-v5.5",
     "build_dir":          "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build",
