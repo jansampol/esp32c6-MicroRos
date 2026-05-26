@@ -54,14 +54,19 @@ bool I2CManager::begin(uint8_t numberOfFerrisWheels, uint8_t otherSensors)
         return false;
     }
 
-    if (!_pressureSensorMultiplexer || !_pressureSensorMultiplexer->begin()) {
-        ESP_LOGE(TAG, "Pressure sensor multiplexer failed to initialize");
-        return false;
-    }
-
     if (!_externalMultiplexer1 || !_externalMultiplexer1->begin()) {
         ESP_LOGE(TAG, "External multiplexer 1 failed to initialize");
         return false;
+    }
+
+    const bool needsInternalMux = (otherSensors > 0) || (numberOfFerrisWheels > 8);
+    if (needsInternalMux) {
+        if (!_pressureSensorMultiplexer || !_pressureSensorMultiplexer->begin()) {
+            ESP_LOGE(TAG, "Pressure sensor/internal multiplexer failed to initialize");
+            return false;
+        }
+    } else {
+        ESP_LOGI(TAG, "Pressure sensor/internal multiplexer not required for this I2C setup.");
     }
 
     ESP_LOGI(TAG, "I2C multiplexers initialized. Initializing Ferris wheels...");
@@ -308,6 +313,11 @@ float I2CManager::readPressureSensor(uint8_t sensorId)
 {
     if (sensorId >= _numOfPressureSensors) {
         ESP_LOGE(TAG, "Invalid pressure sensor ID: %u", sensorId);
+        return NAN;
+    }
+
+    if (!_pressureSensorMultiplexer) {
+        ESP_LOGE(TAG, "Pressure sensor multiplexer is not initialized");
         return NAN;
     }
 

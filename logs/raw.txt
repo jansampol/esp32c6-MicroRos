@@ -1,0 +1,2745 @@
+Executing action: monitor
+Running idf_monitor in directory /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO
+Executing "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf_monitor.py -p /dev/cu.usbserial-140 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf -m '/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf.py' '-p' '/dev/cu.usbserial-140'"...
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xfa8
+load:0x4086e610,len:0x31a8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Apr 29 2026 10:33:11[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (71) boot:  3 coredump         Unknown data     01 03 00210000 00010000[0m
+[0;32mI (78) boot:  4 littlefs         Unknown data     01 82 00220000 0007d000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=42100020 size=2ac14h (175124) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0003ac3c vaddr=40800000 size=053dch ( 21468) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=f7f38h (1015608) map[0m
+[0;32mI (324) esp_image: segment 3: paddr=00137f60 vaddr=408053dc size=1b9dch (113116) load[0m
+[0;32mI (356) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (356) boot: Disabling RNG early entropy source...[0m
+[0;32mI (366) cpu_start: Unicore app[0m
+[0;32mI (375) cpu_start: Pro cpu start user code[0m
+[0;32mI (375) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (375) app_init: Application information:[0m
+[0;32mI (375) app_init: Project name:     esp32c6_microros_test[0m
+[0;32mI (380) app_init: App version:      2181a69-dirty[0m
+[0;32mI (385) app_init: Compile time:     Apr 29 2026 10:32:56[0m
+[0;32mI (390) app_init: ELF file SHA256:  fde9d007a...[0m
+[0;32mI (394) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (398) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (401) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (405) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (409) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (416) heap_init: At 4082BA30 len 00050BE0 (322 KiB): RAM[0m
+[0;32mI (421) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (426) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (432) spi_flash: detected chip: generic[0m
+[0;32mI (435) spi_flash: flash io: dio[0m
+[0;33mW (438) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (452) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (456) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (463) coexist: coex firmware version: 831ec70[0m
+[0;32mI (481) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (482) main_task: Started on CPU0[0m
+[0;32mI (482) main_task: Calling app_main()[0m
+app_main started
+[0;32mI (492) SPI1Manager: SPI1Manager begin()[0m
+[0;32mI (492) SPI1Manager: Using pins MOSI=19 MISO=20 CLK=15 CS=23[0m
+[0;32mI (492) RobotController: Switched to PURPLE_MAMRI[0m
+[0;32mI (492) MicroRosManager: Initializing WiFi transport...[0m
+[0;32mI (492) wifi_station_netif: ESP_WIFI_MODE_STA[0m
+[0;32mI (502) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (502) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (522) wifi:wifi driver task: 40832e44, prio:23, stack:6656, core=0[0m
+[0;32mI (522) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (522) wifi:wifi certification version: v7.0[0m
+[0;32mI (522) wifi:config NVS flash: enabled[0m
+[0;32mI (522) wifi:config nano formatting: disabled[0m
+[0;32mI (532) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (532) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (542) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (542) wifi:Init management short buffer num: 32[0m
+[0;32mI (552) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (552) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (562) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (562) wifi:Init static rx buffer num: 10[0m
+[0;32mI (562) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (572) wifi_init: rx ba win: 6[0m
+[0;32mI (572) wifi_init: accept mbox: 6[0m
+[0;32mI (572) wifi_init: tcpip mbox: 32[0m
+[0;32mI (582) wifi_init: udp mbox: 6[0m
+[0;32mI (582) wifi_init: tcp mbox: 6[0m
+[0;32mI (582) wifi_init: tcp tx win: 5760[0m
+[0;32mI (592) wifi_init: tcp rx win: 5760[0m
+[0;32mI (592) wifi_init: tcp mss: 1440[0m
+[0;32mI (592) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (602) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (602) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;33mW (602) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (612) phy_init: phy_version 331,5b89037,Mar  3 2025,16:01:12[0m
+[0;33mW (682) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (682) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (692) wifi:(agc)0x600a7128:0xd2165800, min.avgNF:0xce->0xd2(dB), RCalCount:0x165, min.RRssi:0x800(-128.00)[0m
+[0;32mI (702) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (702) wifi:mode : sta (20:6e:f1:18:8c:28)[0m
+[0;32mI (712) wifi:enable tsf[0m
+[0;32mI (712) wifi_station_netif: wifi_init_sta finished.[0m
+[0;32mI (722) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (722) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (732) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (742) wifi:state: auth -> init (0x1c0)[0m
+[0;32mI (752) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (752) wifi_station_netif: retry to connect to the AP[0m
+[0;32mI (752) wifi_station_netif: connect to the AP fail[0m
+[0;32mI (3152) wifi_station_netif: retry to connect to the AP[0m
+[0;32mI (3152) wifi_station_netif: connect to the AP fail[0m
+[0;32mI (3162) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3162) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (3172) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3192) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3272) wifi:(assoc)RESP, Extended Capabilities length:1, operating_mode_notification:0[0m
+[0;32mI (3272) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (3282) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3292) wifi:(trc)phytype:CBW20-SGI, snr:48, maxRate:144, highestRateIdx:0[0m
+[0;33mW (3292) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (3302) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:48, ampduState:wait operational[0m
+[0;32mI (3312) wifi:ifidx:0, rssi:-42, nf:-90, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (3322) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:4(2 us)[0m
+[0;32mI (3352) wifi:connected with MyNewHotspot, aid = 3, channel 1, BW20, bssid = c2:de:de:da:8c:bb[0m
+[0;32mI (3352) wifi:security: WPA2-PSK, phy:bgn, rssi:-42, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (3352) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (3362) wifi:pm start, type:1, aid:0x3, trans-BSSID:c2:de:de:da:8c:bb, BSSID[5]:0xbb, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (3372) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3382) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (3382) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3392) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (3412) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (3422) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (3422) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (3432) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (3442) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (3472) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100bb8c, TALO:0xdadedec2, (ssn:0, win:64, cur_ssn:0), CONF:0xc0000005[0m
+[0;32mI (3522) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (4772) esp_netif_handlers: sta ip: 192.168.18.75, mask: 255.255.255.0, gw: 192.168.18.224[0m
+[0;32mI (4772) wifi_station_netif: got ip:192.168.18.75[0m
+[0;32mI (4772) wifi_station_netif: connected to ap SSID:MyNewHotspot password:12345678[0m
+[0;32mI (4772) MicroRosManager: Waiting before micro-ROS init...[0m
+[0;33mW (7892) wifi:<ba-add>idx:1, ifx:0, tid:6, TAHI:0x100bb8c, TALO:0xdadedec2, (ssn:2, win:64, cur_ssn:2), CONF:0xc0006005[0m
+[0;32mI (7962) MicroRosManager: micro-ROS entities created[0m
+[0;32mI (7962) MicroRosManager: micro-ROS base ready[0m
+[0;32mI (7962) I2CManager: Starting I2C Manager with 0 Ferris wheels and 0 other sensors...[0m
+[0;32mI (7972) I2CManager: I2C bus started[0m
+[0;32mI (7972) I2CManager: I2C multiplexers initialized. Initializing Ferris wheels...[0m
+[0;32mI (7982) I2CManager: Initializing Ferris wheel sensors...[0m
+[0;32mI (7982) I2CManager: Ferris wheels successfully initialized[0m
+[0;32mI (7992) app_main: Application initialized successfully (SPI1 mode)[0m
+[0;32mI (8022) DATA_CSV: 7593,4.5589,0.0139,0,0,0x0000[0m
+[0;32mI (8052) DATA_CSV: 7622,4.5561,0.0140,0,0,0x0000[0m
+[0;32mI (8082) DATA_CSV: 7652,4.5575,0.0091,0,0,0x0000[0m
+[0;32mI (8112) DATA_CSV: 7682,4.5578,0.0099,0,0,0x0000[0m
+[0;32mI (8142) DATA_CSV: 7712,4.5571,0.0111,0,0,0x0000[0m
+[0;32mI (8172) DATA_CSV: 7742,4.5579,0.0104,0,0,0x0000[0m
+[0;32mI (8202) DATA_CSV: 7772,4.5584,0.0114,0,0,0x0000[0m
+[0;32mI (8232) DATA_CSV: 7802,4.5583,0.0112,0,0,0x0000[0m
+[0;32mI (8262) DATA_CSV: 7832,4.5601,0.0117,0,0,0x0000[0m
+[0;32mI (8292) DATA_CSV: 7862,4.5594,0.0116,0,0,0x0000[0m
+[0;32mI (8322) DATA_CSV: 7892,4.5587,0.0123,0,0,0x0000[0m
+[0;32mI (8352) DATA_CSV: 7922,4.5584,0.0122,0,0,0x0000[0m
+[0;32mI (8382) DATA_CSV: 7952,4.5599,0.0122,0,0,0x0000[0m
+[0;32mI (8412) DATA_CSV: 7982,4.5600,0.0128,0,0,0x0000[0m
+[0;32mI (8442) DATA_CSV: 8012,4.5599,0.0131,0,0,0x0000[0m
+[0;32mI (8472) DATA_CSV: 8042,4.5601,0.0129,0,0,0x0000[0m
+[0;32mI (8502) DATA_CSV: 8072,4.5568,0.0136,0,0,0x0000[0m
+[0;32mI (8532) DATA_CSV: 8102,4.5583,0.0139,0,0,0x0000[0m
+[0;32mI (8562) DATA_CSV: 8132,4.5593,0.0135,0,0,0x0000[0m
+[0;32mI (8592) DATA_CSV: 8162,4.5575,0.0138,0,0,0x0000[0m
+[0;32mI (8622) DATA_CSV: 8192,4.5563,0.0138,0,0,0x0000[0m
+[0;32mI (8652) DATA_CSV: 8222,4.5575,0.0136,0,0,0x0000[0m
+[0;32mI (8682) DATA_CSV: 8252,4.5581,0.0088,0,0,0x0000[0m
+[0;32mI (8712) DATA_CSV: 8282,4.5573,0.0089,0,0,0x0000[0m
+[0;32mI (8742) DATA_CSV: 8312,4.5572,0.0101,0,0,0x0000[0m
+[0;32mI (8772) DATA_CSV: 8342,4.5579,0.0099,0,0,0x0000[0m
+[0;32mI (8802) DATA_CSV: 8372,4.5575,0.0096,0,0,0x0000[0m
+[0;32mI (8832) DATA_CSV: 8402,4.5574,0.0098,0,0,0x0000[0m
+[0;32mI (8862) DATA_CSV: 8432,4.5595,0.0097,0,0,0x0000[0m
+[0;32mI (8892) DATA_CSV: 8462,4.5573,0.0098,0,0,0x0000[0m
+[0;32mI (8922) DATA_CSV: 8492,4.5588,0.0099,0,0,0x0000[0m
+[0;32mI (8952) DATA_CSV: 8522,4.5583,0.0105,0,0,0x0000[0m
+[0;32mI (8982) DATA_CSV: 8552,4.5584,0.0108,0,0,0x0000[0m
+[0;32mI (9012) DATA_CSV: 8582,4.5581,0.0109,0,0,0x0000[0m
+[0;32mI (9042) DATA_CSV: 8612,4.5593,0.0103,0,0,0x0000[0m
+[0;32mI (9072) DATA_CSV: 8642,4.5593,0.0105,0,0,0x0000[0m
+[0;32mI (9102) DATA_CSV: 8672,4.5589,0.0107,0,0,0x0000[0m
+[0;32mI (9132) DATA_CSV: 8702,4.5578,0.0106,0,0,0x0000[0m
+[0;32mI (9162) DATA_CSV: 8732,4.5577,0.0113,0,0,0x0000[0m
+[0;32mI (9192) DATA_CSV: 8762,4.5593,0.0116,0,0,0x0000[0m
+[0;32mI (9222) DATA_CSV: 8792,4.5599,0.0110,0,0,0x0000[0m
+[0;32mI (9252) DATA_CSV: 8822,4.5594,0.0112,0,0,0x0000[0m
+[0;32mI (9282) DATA_CSV: 8852,4.5595,0.0116,0,0,0x0000[0m
+[0;32mI (9312) DATA_CSV: 8882,4.5596,0.0114,0,0,0x0000[0m
+[0;32mI (9342) DATA_CSV: 8912,4.5585,0.0117,0,0,0x0000[0m
+[0;32mI (9372) DATA_CSV: 8942,4.5593,0.0117,0,0,0x0000[0m
+[0;32mI (9402) DATA_CSV: 8972,4.5595,0.0114,0,0,0x0000[0m
+[0;32mI (9432) DATA_CSV: 9002,4.5601,0.0116,0,0,0x0000[0m
+[0;32mI (9462) DATA_CSV: 9032,4.5599,0.0113,0,0,0x0000[0m
+[0;32mI (9492) DATA_CSV: 9062,4.5592,0.0116,0,0,0x0000[0m
+[0;32mI (9492) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (9492) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (9492) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (9502) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (9502) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (9512) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (9512) RobotController: valve_state=0x0000[0m
+[0;32mI (9552) DATA_CSV: 9122,4.5592,0.0113,0,0,0x0000[0m
+[0;32mI (9582) DATA_CSV: 9152,4.5589,0.0110,0,0,0x0000[0m
+[0;32mI (9612) DATA_CSV: 9182,4.5590,0.0107,0,0,0x0000[0m
+[0;32mI (9642) DATA_CSV: 9212,4.5584,0.0116,0,0,0x0000[0m
+[0;32mI (9672) DATA_CSV: 9242,4.5589,0.0113,0,0,0x0000[0m
+[0;32mI (9702) DATA_CSV: 9272,4.5596,0.0110,0,0,0x0000[0m
+[0;32mI (9732) DATA_CSV: 9302,4.5579,0.0116,0,0,0x0000[0m
+[0;32mI (9762) DATA_CSV: 9332,4.5595,0.0116,0,0,0x0000[0m
+[0;32mI (9792) DATA_CSV: 9362,4.5601,0.0116,0,0,0x0000[0m
+[0;32mI (9822) DATA_CSV: 9392,4.5593,0.0121,0,0,0x0000[0m
+[0;32mI (9852) DATA_CSV: 9422,4.5607,0.0114,0,0,0x0000[0m
+[0;32mI (9882) DATA_CSV: 9452,4.5598,0.0115,0,0,0x0000[0m
+[0;32mI (9912) DATA_CSV: 9482,4.5585,0.0119,0,0,0x0000[0m
+[0;32mI (9942) DATA_CSV: 9512,4.5602,0.0119,0,0,0x0000[0m
+[0;32mI (9972) DATA_CSV: 9542,4.5594,0.0119,0,0,0x0000[0m
+[0;32mI (10002) DATA_CSV: 9572,4.5591,0.0111,0,0,0x0000[0m
+[0;32mI (10032) DATA_CSV: 9602,4.5586,0.0111,0,0,0x0000[0m
+[0;32mI (10062) DATA_CSV: 9632,4.5586,0.0115,0,0,0x0000[0m
+[0;32mI (10092) DATA_CSV: 9662,4.5594,0.0115,0,0,0x0000[0m
+[0;32mI (10122) DATA_CSV: 9692,4.5595,0.0119,0,0,0x0000[0m
+[0;32mI (10152) DATA_CSV: 9722,4.5585,0.0126,0,0,0x0000[0m
+[0;32mI (10182) DATA_CSV: 9752,4.5593,0.0123,0,0,0x0000[0m
+[0;32mI (10212) DATA_CSV: 9782,4.5593,0.0123,0,0,0x0000[0m
+[0;32mI (10242) DATA_CSV: 9812,4.5595,0.0122,0,0,0x0000[0m
+[0;32mI (10272) DATA_CSV: 9842,4.5591,0.0118,0,0,0x0000[0m
+[0;32mI (10302) DATA_CSV: 9872,4.5605,0.0120,0,0,0x0000[0m
+[0;32mI (10332) DATA_CSV: 9902,4.5604,0.0121,0,0,0x0000[0m
+[0;32mI (10362) DATA_CSV: 9932,4.5604,0.0125,0,0,0x0000[0m
+[0;32mI (10392) DATA_CSV: 9962,4.5592,0.0121,0,0,0x0000[0m
+[0;32mI (10422) DATA_CSV: 9992,4.5600,0.0122,0,0,0x0000[0m
+[0;32mI (10452) DATA_CSV: 10022,4.5591,0.0123,0,0,0x0000[0m
+[0;32mI (10482) DATA_CSV: 10052,4.5606,0.0125,0,0,0x0000[0m
+[0;32mI (10512) DATA_CSV: 10082,4.5611,0.0120,0,0,0x0000[0m
+[0;32mI (10542) DATA_CSV: 10112,4.5594,0.0119,0,0,0x0000[0m
+[0;32mI (10572) DATA_CSV: 10142,4.5606,0.0123,0,0,0x0000[0m
+[0;32mI (10602) DATA_CSV: 10172,4.5595,0.0120,0,0,0x0000[0m
+[0;32mI (10632) DATA_CSV: 10202,4.5602,0.0126,0,0,0x0000[0m
+[0;32mI (10662) DATA_CSV: 10232,4.5597,0.0121,0,0,0x0000[0m
+[0;32mI (10692) DATA_CSV: 10262,4.5597,0.0122,0,0,0x0000[0m
+[0;32mI (10722) DATA_CSV: 10292,4.5603,0.0127,0,0,0x0000[0m
+[0;32mI (10752) DATA_CSV: 10322,4.5599,0.0123,0,0,0x0000[0m
+[0;32mI (10782) DATA_CSV: 10352,4.5598,0.0132,0,0,0x0000[0m
+[0;32mI (10812) DATA_CSV: 10382,4.5608,0.0126,0,0,0x0000[0m
+[0;32mI (10842) DATA_CSV: 10412,4.5589,0.0121,0,0,0x0000[0m
+[0;32mI (10872) DATA_CSV: 10442,4.5603,0.0124,0,0,0x0000[0m
+[0;32mI (10902) DATA_CSV: 10472,4.5609,0.0122,0,0,0x0000[0m
+[0;32mI (10932) DATA_CSV: 10502,4.5601,0.0127,0,0,0x0000[0m
+[0;32mI (10962) DATA_CSV: 10532,4.5611,0.0120,0,0,0x0000[0m
+[0;32mI (10992) DATA_CSV: 10562,4.5597,0.0121,0,0,0x0000[0m
+[0;32mI (11022) DATA_CSV: 10592,4.5606,0.0125,0,0,0x0000[0m
+[0;32mI (11022) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (11022) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (11022) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (11032) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (11032) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (11042) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (11052) RobotController: valve_state=0x0000[0m
+[0;32mI (11082) DATA_CSV: 10652,4.5609,0.0128,0,0,0x0000[0m
+[0;32mI (11112) DATA_CSV: 10682,4.5591,0.0119,0,0,0x0000[0m
+[0;32mI (11142) DATA_CSV: 10712,4.5595,0.0121,0,0,0x0000[0m
+[0;32mI (11172) DATA_CSV: 10742,4.5594,0.0125,0,0,0x0000[0m
+[0;32mI (11202) DATA_CSV: 10772,4.5589,0.0114,0,0,0x0000[0m
+[0;32mI (11232) DATA_CSV: 10802,4.5587,0.0116,0,0,0x0000[0m
+[0;32mI (11262) DATA_CSV: 10832,4.5600,0.0124,0,0,0x0000[0m
+[0;32mI (11292) DATA_CSV: 10862,4.5603,0.0126,0,0,0x0000[0m
+[0;32mI (11322) DATA_CSV: 10892,4.5604,0.0128,0,0,0x0000[0m
+[0;32mI (11352) DATA_CSV: 10922,4.5608,0.0124,0,0,0x0000[0m
+[0;32mI (11382) DATA_CSV: 10952,4.5598,0.0122,0,0,0x0000[0m
+[0;32mI (11412) DATA_CSV: 10982,4.5604,0.0125,0,0,0x0000[0m
+[0;32mI (11442) DATA_CSV: 11012,4.5593,0.0122,0,0,0x0000[0m
+[0;32mI (11472) DATA_CSV: 11042,4.5603,0.0130,0,0,0x0000[0m
+[0;32mI (11502) DATA_CSV: 11072,4.5607,0.0121,0,0,0x0000[0m
+[0;32mI (11532) DATA_CSV: 11102,4.5594,0.0130,0,0,0x0000[0m
+[0;32mI (11562) DATA_CSV: 11132,4.5592,0.0134,0,0,0x0000[0m
+[0;32mI (11592) DATA_CSV: 11162,4.5588,0.0127,0,0,0x0000[0m
+[0;32mI (11622) DATA_CSV: 11192,4.5601,0.0118,0,0,0x0000[0m
+[0;32mI (11652) DATA_CSV: 11222,4.5597,0.0122,0,0,0x0000[0m
+[0;32mI (11682) DATA_CSV: 11252,4.5602,0.0123,0,0,0x0000[0m
+[0;32mI (11712) DATA_CSV: 11282,4.5596,0.0125,0,0,0x0000[0m
+[0;32mI (11742) DATA_CSV: 11312,4.5599,0.0127,0,0,0x0000[0m
+[0;32mI (11772) DATA_CSV: 11342,4.5601,0.0129,0,0,0x0000[0m
+[0;32mI (11802) DATA_CSV: 11372,4.5608,0.0132,0,0,0x0000[0m
+[0;32mI (11832) DATA_CSV: 11402,4.5609,0.0131,0,0,0x0000[0m
+[0;32mI (11862) DATA_CSV: 11432,4.5604,0.0125,0,0,0x0000[0m
+[0;32mI (11892) DATA_CSV: 11462,4.5594,0.0128,0,0,0x0000[0m
+[0;32mI (11922) DATA_CSV: 11492,4.5597,0.0131,0,0,0x0000[0m
+[0;32mI (11952) DATA_CSV: 11522,4.5600,0.0131,0,0,0x0000[0m
+[0;32mI (11982) DATA_CSV: 11552,4.5603,0.0130,0,0,0x0000[0m
+[0;32mI (12012) DATA_CSV: 11582,4.5603,0.0125,0,0,0x0000[0m
+[0;32mI (12042) DATA_CSV: 11612,4.5602,0.0131,0,0,0x0000[0m
+[0;32mI (12072) DATA_CSV: 11642,4.5597,0.0130,0,0,0x0000[0m
+[0;32mI (12102) DATA_CSV: 11672,4.5613,0.0131,0,0,0x0000[0m
+[0;32mI (12132) DATA_CSV: 11702,4.5608,0.0134,0,0,0x0000[0m
+[0;32mI (12162) DATA_CSV: 11732,4.5610,0.0131,0,0,0x0000[0m
+[0;32mI (12192) DATA_CSV: 11762,4.5613,0.0131,0,0,0x0000[0m
+[0;32mI (12222) DATA_CSV: 11792,4.5606,0.0132,0,0,0x0000[0m
+[0;32mI (12252) DATA_CSV: 11822,4.5597,0.0132,0,0,0x0000[0m
+[0;32mI (12282) DATA_CSV: 11852,4.5614,0.0131,0,0,0x0000[0m
+[0;32mI (12312) DATA_CSV: 11882,4.5602,0.0129,0,0,0x0000[0m
+[0;32mI (12342) DATA_CSV: 11912,4.5605,0.0130,0,0,0x0000[0m
+[0;32mI (12372) DATA_CSV: 11942,4.5607,0.0130,0,0,0x0000[0m
+[0;32mI (12402) DATA_CSV: 11972,4.5603,0.0132,0,0,0x0000[0m
+[0;32mI (12432) DATA_CSV: 12002,4.5608,0.0133,0,0,0x0000[0m
+[0;32mI (12462) DATA_CSV: 12032,4.5606,0.0133,0,0,0x0000[0m
+[0;32mI (12492) DATA_CSV: 12062,4.5611,0.0130,0,0,0x0000[0m
+[0;32mI (12522) DATA_CSV: 12092,4.5601,0.0127,0,0,0x0000[0m
+[0;32mI (12552) DATA_CSV: 12122,4.5618,0.0131,0,0,0x0000[0m
+[0;32mI (12552) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (12552) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (12552) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (12562) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (12562) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (12572) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (12582) RobotController: valve_state=0x0000[0m
+[0;32mI (12612) DATA_CSV: 12182,4.5602,0.0131,0,0,0x0000[0m
+[0;32mI (12642) DATA_CSV: 12212,4.5603,0.0123,0,0,0x0000[0m
+[0;32mI (12672) DATA_CSV: 12242,4.5596,0.0121,0,0,0x0000[0m
+[0;32mI (12702) DATA_CSV: 12272,4.5607,0.0123,0,0,0x0000[0m
+[0;32mI (12732) DATA_CSV: 12302,4.5611,0.0132,0,0,0x0000[0m
+[0;32mI (12762) DATA_CSV: 12332,4.5606,0.0132,0,0,0x0000[0m
+[0;32mI (12792) DATA_CSV: 12362,4.5609,0.0123,0,0,0x0000[0m
+[0;32mI (12822) DATA_CSV: 12392,4.5605,0.0133,0,0,0x0000[0m
+[0;32mI (12852) DATA_CSV: 12422,4.5611,0.0135,0,0,0x0000[0m
+[0;32mI (12882) DATA_CSV: 12452,4.5613,0.0132,0,0,0x0000[0m
+[0;32mI (12912) DATA_CSV: 12482,4.5619,0.0131,0,0,0x0000[0m
+[0;32mI (12942) DATA_CSV: 12512,4.5612,0.0129,0,0,0x0000[0m
+[0;32mI (12972) DATA_CSV: 12542,4.5612,0.0126,0,0,0x0000[0m
+[0;32mI (13002) DATA_CSV: 12572,4.5619,0.0131,0,0,0x0000[0m
+[0;32mI (13032) DATA_CSV: 12602,4.5612,0.0133,0,0,0x0000[0m
+[0;32mI (13062) DATA_CSV: 12632,4.5607,0.0127,0,0,0x0000[0m
+[0;32mI (13092) DATA_CSV: 12662,4.5618,0.0135,0,0,0x0000[0m
+[0;32mI (13122) DATA_CSV: 12692,4.5606,0.0131,0,0,0x0000[0m
+[0;32mI (13152) DATA_CSV: 12722,4.5621,0.0128,0,0,0x0000[0m
+[0;32mI (13182) DATA_CSV: 12752,4.5620,0.0130,0,0,0x0000[0m
+[0;32mI (13212) DATA_CSV: 12782,4.5628,0.0136,0,0,0x0000[0m
+[0;32mI (13242) DATA_CSV: 12812,4.5617,0.0133,0,0,0x0000[0m
+[0;32mI (13272) DATA_CSV: 12842,4.5617,0.0132,0,0,0x0000[0m
+[0;32mI (13302) DATA_CSV: 12872,4.5623,0.0129,0,0,0x0000[0m
+[0;32mI (13332) DATA_CSV: 12902,4.5618,0.0131,0,0,0x0000[0m
+[0;32mI (13362) DATA_CSV: 12932,4.5625,0.0138,0,0,0x0000[0m
+[0;32mI (13392) DATA_CSV: 12962,4.5628,0.0128,0,0,0x0000[0m
+[0;32mI (13422) DATA_CSV: 12992,4.5620,0.0131,0,0,0x0000[0m
+[0;32mI (13452) DATA_CSV: 13022,4.5626,0.0132,0,0,0x0000[0m
+[0;32mI (13482) DATA_CSV: 13052,4.5609,0.0131,0,0,0x0000[0m
+[0;32mI (13512) DATA_CSV: 13082,4.5610,0.0130,0,0,0x0000[0m
+[0;32mI (13542) DATA_CSV: 13112,4.5630,0.0131,0,0,0x0000[0m
+[0;32mI (13572) DATA_CSV: 13142,4.5625,0.0133,0,0,0x0000[0m
+[0;32mI (13602) DATA_CSV: 13172,4.5625,0.0133,0,0,0x0000[0m
+[0;32mI (13632) DATA_CSV: 13202,4.5615,0.0137,0,0,0x0000[0m
+[0;32mI (13662) DATA_CSV: 13232,4.5633,0.0138,0,0,0x0000[0m
+[0;32mI (13692) DATA_CSV: 13262,4.5624,0.0132,0,0,0x0000[0m
+[0;32mI (13722) DATA_CSV: 13292,4.5630,0.0132,0,0,0x0000[0m
+[0;32mI (13752) DATA_CSV: 13322,4.5632,0.0138,0,0,0x0000[0m
+[0;32mI (13782) DATA_CSV: 13352,4.5627,0.0139,0,0,0x0000[0m
+[0;32mI (13812) DATA_CSV: 13382,4.5628,0.0131,0,0,0x0000[0m
+[0;32mI (13842) DATA_CSV: 13412,4.5633,0.0138,0,0,0x0000[0m
+[0;32mI (13872) DATA_CSV: 13442,4.5631,0.0132,0,0,0x0000[0m
+[0;32mI (13902) DATA_CSV: 13473,4.5626,0.0132,0,0,0x0000[0m
+[0;32mI (13932) DATA_CSV: 13502,4.5626,0.0130,0,0,0x0000[0m
+[0;32mI (13962) DATA_CSV: 13532,4.5632,0.0141,0,0,0x0000[0m
+[0;32mI (13992) DATA_CSV: 13562,4.5618,0.0126,0,0,0x0000[0m
+[0;32mI (14022) DATA_CSV: 13592,4.5644,0.0143,0,0,0x0000[0m
+[0;32mI (14052) DATA_CSV: 13622,4.5629,0.0139,0,0,0x0000[0m
+[0;32mI (14082) DATA_CSV: 13652,4.5627,0.0135,0,0,0x0000[0m
+[0;32mI (14082) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (14082) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (14082) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (14092) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (14092) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (14102) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (14112) RobotController: valve_state=0x0000[0m
+[0;32mI (14142) DATA_CSV: 13712,4.5633,0.0135,0,0,0x0000[0m
+[0;32mI (14172) DATA_CSV: 13742,4.5628,0.0121,0,0,0x0000[0m
+[0;32mI (14202) DATA_CSV: 13772,4.5631,0.0129,0,0,0x0000[0m
+[0;32mI (14232) DATA_CSV: 13802,4.5637,0.0133,0,0,0x0000[0m
+[0;32mI (14262) DATA_CSV: 13832,4.5627,0.0130,0,0,0x0000[0m
+[0;32mI (14292) DATA_CSV: 13862,4.5629,0.0131,0,0,0x0000[0m
+[0;32mI (14322) DATA_CSV: 13892,4.5624,0.0129,0,0,0x0000[0m
+[0;32mI (14352) DATA_CSV: 13922,4.5636,0.0132,0,0,0x0000[0m
+[0;32mI (14382) DATA_CSV: 13952,4.5621,0.0128,0,0,0x0000[0m
+[0;32mI (14412) DATA_CSV: 13982,4.5633,0.0132,0,0,0x0000[0m
+[0;32mI (14442) DATA_CSV: 14012,4.5632,0.0131,0,0,0x0000[0m
+[0;32mI (14472) DATA_CSV: 14042,4.5636,0.0131,0,0,0x0000[0m
+[0;32mI (14502) DATA_CSV: 14072,4.5632,0.0131,0,0,0x0000[0m
+[0;32mI (14532) DATA_CSV: 14102,4.5629,0.0130,0,0,0x0000[0m
+[0;32mI (14562) DATA_CSV: 14132,4.5631,0.0138,0,0,0x0000[0m
+[0;32mI (14592) DATA_CSV: 14162,4.5637,0.0138,0,0,0x0000[0m
+[0;32mI (14622) DATA_CSV: 14192,4.5639,0.0136,0,0,0x0000[0m
+[0;32mI (14652) DATA_CSV: 14222,4.5625,0.0127,0,0,0x0000[0m
+[0;32mI (14682) DATA_CSV: 14252,4.5636,0.0130,0,0,0x0000[0m
+[0;32mI (14712) DATA_CSV: 14282,4.5629,0.0129,0,0,0x0000[0m
+[0;32mI (14742) DATA_CSV: 14312,4.5626,0.0138,0,0,0x0000[0m
+[0;32mI (14772) DATA_CSV: 14342,4.5631,0.0132,0,0,0x0000[0m
+[0;32mI (14802) DATA_CSV: 14372,4.5634,0.0133,0,0,0x0000[0m
+[0;32mI (14832) DATA_CSV: 14402,4.5642,0.0137,0,0,0x0000[0m
+[0;32mI (14862) DATA_CSV: 14432,4.5640,0.0131,0,0,0x0000[0m
+[0;32mI (14892) DATA_CSV: 14462,4.5640,0.0139,0,0,0x0000[0m
+[0;32mI (14922) DATA_CSV: 14492,4.5637,0.0140,0,0,0x0000[0m
+[0;32mI (14952) DATA_CSV: 14522,4.5635,0.0127,0,0,0x0000[0m
+[0;32mI (14982) DATA_CSV: 14552,4.5648,0.0138,0,0,0x0000[0m
+[0;32mI (15012) DATA_CSV: 14582,4.5629,0.0139,0,0,0x0000[0m
+[0;32mI (15042) DATA_CSV: 14612,4.5654,0.0134,0,0,0x0000[0m
+[0;32mI (15072) DATA_CSV: 14642,4.5632,0.0140,0,0,0x0000[0m
+[0;32mI (15102) DATA_CSV: 14672,4.5634,0.0132,0,0,0x0000[0m
+[0;32mI (15132) DATA_CSV: 14702,4.5640,0.0134,0,0,0x0000[0m
+[0;32mI (15162) DATA_CSV: 14732,4.5648,0.0140,0,0,0x0000[0m
+[0;32mI (15192) DATA_CSV: 14762,4.5639,0.0136,0,0,0x0000[0m
+[0;32mI (15222) DATA_CSV: 14792,4.5639,0.0128,0,0,0x0000[0m
+[0;32mI (15252) DATA_CSV: 14822,4.5648,0.0138,0,0,0x0000[0m
+[0;32mI (15282) DATA_CSV: 14852,4.5639,0.0127,0,0,0x0000[0m
+[0;32mI (15312) DATA_CSV: 14882,4.5652,0.0135,0,0,0x0000[0m
+[0;32mI (15342) DATA_CSV: 14912,4.5642,0.0134,0,0,0x0000[0m
+[0;32mI (15372) DATA_CSV: 14942,4.5651,0.0130,0,0,0x0000[0m
+[0;32mI (15402) DATA_CSV: 14972,4.5639,0.0138,0,0,0x0000[0m
+[0;32mI (15432) DATA_CSV: 15002,4.5659,0.0134,0,0,0x0000[0m
+[0;32mI (15462) DATA_CSV: 15032,4.5651,0.0135,0,0,0x0000[0m
+[0;32mI (15492) DATA_CSV: 15062,4.5651,0.0137,0,0,0x0000[0m
+[0;32mI (15522) DATA_CSV: 15092,4.5653,0.0132,0,0,0x0000[0m
+[0;32mI (15552) DATA_CSV: 15122,4.5653,0.0138,0,0,0x0000[0m
+[0;32mI (15582) DATA_CSV: 15152,4.5662,0.0138,0,0,0x0000[0m
+[0;32mI (15612) DATA_CSV: 15182,4.5645,0.0139,0,0,0x0000[0m
+[0;32mI (15612) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (15612) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (15612) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (15622) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (15622) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (15632) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (15642) RobotController: valve_state=0x0000[0m
+[0;32mI (15672) DATA_CSV: 15242,4.5651,0.0137,0,0,0x0000[0m
+[0;32mI (15702) DATA_CSV: 15272,4.5652,0.0128,0,0,0x0000[0m
+[0;32mI (15732) DATA_CSV: 15302,4.5645,0.0127,0,0,0x0000[0m
+[0;32mI (15762) DATA_CSV: 15332,4.5654,0.0129,0,0,0x0000[0m
+[0;32mI (15792) DATA_CSV: 15362,4.5654,0.0132,0,0,0x0000[0m
+[0;32mI (15822) DATA_CSV: 15392,4.5651,0.0130,0,0,0x0000[0m
+[0;32mI (15852) DATA_CSV: 15422,4.5663,0.0129,0,0,0x0000[0m
+[0;32mI (15882) DATA_CSV: 15452,4.5663,0.0132,0,0,0x0000[0m
+[0;32mI (15912) DATA_CSV: 15482,4.5648,0.0139,0,0,0x0000[0m
+[0;32mI (15942) DATA_CSV: 15512,4.5659,0.0132,0,0,0x0000[0m
+[0;32mI (15972) DATA_CSV: 15542,4.5655,0.0127,0,0,0x0000[0m
+[0;32mI (16002) DATA_CSV: 15572,4.5663,0.0130,0,0,0x0000[0m
+[0;32mI (16032) DATA_CSV: 15602,4.5659,0.0127,0,0,0x0000[0m
+[0;32mI (16062) DATA_CSV: 15632,4.5649,0.0129,0,0,0x0000[0m
+[0;32mI (16092) DATA_CSV: 15662,4.5663,0.0139,0,0,0x0000[0m
+[0;32mI (16122) DATA_CSV: 15692,4.5662,0.0129,0,0,0x0000[0m
+[0;32mI (16152) DATA_CSV: 15722,4.5662,0.0129,0,0,0x0000[0m
+[0;32mI (16182) DATA_CSV: 15752,4.5656,0.0125,0,0,0x0000[0m
+[0;32mI (16212) DATA_CSV: 15782,4.5663,0.0136,0,0,0x0000[0m
+[0;32mI (16242) DATA_CSV: 15812,4.5665,0.0129,0,0,0x0000[0m
+[0;32mI (16272) DATA_CSV: 15842,4.5662,0.0128,0,0,0x0000[0m
+[0;32mI (16302) DATA_CSV: 15872,4.5669,0.0130,0,0,0x0000[0m
+[0;32mI (16332) DATA_CSV: 15902,4.5673,0.0140,0,0,0x0000[0m
+[0;32mI (16362) DATA_CSV: 15932,4.5659,0.0140,0,0,0x0000[0m
+[0;32mI (16392) DATA_CSV: 15962,4.5659,0.0139,0,0,0x0000[0m
+[0;32mI (16422) DATA_CSV: 15992,4.5669,0.0132,0,0,0x0000[0m
+[0;32mI (16452) DATA_CSV: 16022,4.5662,0.0140,0,0,0x0000[0m
+[0;32mI (16482) DATA_CSV: 16052,4.5668,0.0139,0,0,0x0000[0m
+[0;32mI (16512) DATA_CSV: 16082,4.5660,0.0137,0,0,0x0000[0m
+[0;32mI (16542) DATA_CSV: 16112,4.5660,0.0130,0,0,0x0000[0m
+[0;32mI (16572) DATA_CSV: 16142,4.5656,0.0129,0,0,0x0000[0m
+[0;32mI (16602) DATA_CSV: 16172,4.5658,0.0142,0,0,0x0000[0m
+[0;32mI (16632) DATA_CSV: 16202,4.5661,0.0128,0,0,0x0000[0m
+[0;32mI (16662) DATA_CSV: 16232,4.5666,0.0130,0,0,0x0000[0m
+[0;32mI (16692) DATA_CSV: 16262,4.5662,0.0139,0,0,0x0000[0m
+[0;32mI (16722) DATA_CSV: 16292,4.5663,0.0136,0,0,0x0000[0m
+[0;32mI (16752) DATA_CSV: 16322,4.5663,0.0137,0,0,0x0000[0m
+[0;32mI (16782) DATA_CSV: 16352,4.5660,0.0132,0,0,0x0000[0m
+[0;32mI (16812) DATA_CSV: 16382,4.5671,0.0139,0,0,0x0000[0m
+[0;32mI (16842) DATA_CSV: 16412,4.5667,0.0140,0,0,0x0000[0m
+[0;32mI (16872) DATA_CSV: 16442,4.5664,0.0128,0,0,0x0000[0m
+[0;32mI (16902) DATA_CSV: 16472,4.5667,0.0139,0,0,0x0000[0m
+[0;32mI (16932) DATA_CSV: 16502,4.5668,0.0132,0,0,0x0000[0m
+[0;32mI (16962) DATA_CSV: 16532,4.5679,0.0131,0,0,0x0000[0m
+[0;32mI (16992) DATA_CSV: 16562,4.5667,0.0139,0,0,0x0000[0m
+[0;32mI (17022) DATA_CSV: 16592,4.5676,0.0130,0,0,0x0000[0m
+[0;32mI (17052) DATA_CSV: 16622,4.5674,0.0136,0,0,0x0000[0m
+[0;32mI (17082) DATA_CSV: 16652,4.5676,0.0127,0,0,0x0000[0m
+[0;32mI (17112) DATA_CSV: 16682,4.5668,0.0128,0,0,0x0000[0m
+[0;32mI (17142) DATA_CSV: 16712,4.5672,0.0130,0,0,0x0000[0m
+[0;32mI (17142) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (17142) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (17142) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (17152) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (17152) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (17162) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (17172) RobotController: valve_state=0x0000[0m
+[0;32mI (17202) DATA_CSV: 16772,4.5669,0.0136,0,0,0x0000[0m
+[0;32mI (17232) DATA_CSV: 16802,4.5679,0.0127,0,0,0x0000[0m
+[0;32mI (17262) DATA_CSV: 16832,4.5675,0.0128,0,0,0x0000[0m
+[0;32mI (17292) DATA_CSV: 16862,4.5668,0.0135,0,0,0x0000[0m
+[0;32mI (17322) DATA_CSV: 16892,4.5674,0.0130,0,0,0x0000[0m
+[0;32mI (17352) DATA_CSV: 16922,4.5676,0.0132,0,0,0x0000[0m
+[0;32mI (17382) DATA_CSV: 16952,4.5676,0.0139,0,0,0x0000[0m
+[0;32mI (17412) DATA_CSV: 16982,4.5675,0.0126,0,0,0x0000[0m
+[0;32mI (17442) DATA_CSV: 17012,4.5673,0.0139,0,0,0x0000[0m
+[0;32mI (17472) DATA_CSV: 17042,4.5673,0.0128,0,0,0x0000[0m
+[0;32mI (17502) DATA_CSV: 17072,4.5674,0.0139,0,0,0x0000[0m
+[0;32mI (17532) DATA_CSV: 17102,4.5667,0.0131,0,0,0x0000[0m
+[0;32mI (17562) DATA_CSV: 17132,4.5671,0.0132,0,0,0x0000[0m
+[0;32mI (17592) DATA_CSV: 17162,4.5671,0.0138,0,0,0x0000[0m
+[0;32mI (17622) DATA_CSV: 17192,4.5682,0.0129,0,0,0x0000[0m
+[0;32mI (17652) DATA_CSV: 17222,4.5672,0.0130,0,0,0x0000[0m
+[0;32mI (17682) DATA_CSV: 17252,4.5678,0.0127,0,0,0x0000[0m
+[0;32mI (17712) DATA_CSV: 17282,4.5671,0.0129,0,0,0x0000[0m
+[0;32mI (17742) DATA_CSV: 17312,4.5676,0.0132,0,0,0x0000[0m
+[0;32mI (17772) DATA_CSV: 17342,4.5674,0.0137,0,0,0x0000[0m
+[0;32mI (17802) DATA_CSV: 17372,4.5676,0.0138,0,0,0x0000[0m
+[0;32mI (17832) DATA_CSV: 17402,4.5673,0.0129,0,0,0x0000[0m
+[0;32mI (17862) DATA_CSV: 17432,4.5674,0.0139,0,0,0x0000[0m
+[0;32mI (17892) DATA_CSV: 17462,4.5677,0.0138,0,0,0x0000[0m
+[0;32mI (17922) DATA_CSV: 17492,4.5674,0.0139,0,0,0x0000[0m
+[0;32mI (17952) DATA_CSV: 17522,4.5672,0.0136,0,0,0x0000[0m
+[0;32mI (17982) DATA_CSV: 17552,4.5684,0.0138,0,0,0x0000[0m
+[0;32mI (18012) DATA_CSV: 17582,4.5672,0.0136,0,0,0x0000[0m
+[0;32mI (18042) DATA_CSV: 17612,4.5688,0.0129,0,0,0x0000[0m
+[0;32mI (18072) DATA_CSV: 17642,4.5681,0.0140,0,0,0x0000[0m
+[0;32mI (18102) DATA_CSV: 17672,4.5674,0.0133,0,0,0x0000[0m
+[0;32mI (18132) DATA_CSV: 17702,4.5674,0.0140,0,0,0x0000[0m
+[0;32mI (18162) DATA_CSV: 17732,4.5684,0.0138,0,0,0x0000[0m
+[0;32mI (18192) DATA_CSV: 17762,4.5678,0.0139,0,0,0x0000[0m
+[0;32mI (18222) DATA_CSV: 17792,4.5674,0.0134,0,0,0x0000[0m
+[0;32mI (18252) DATA_CSV: 17822,4.5680,0.0139,0,0,0x0000[0m
+[0;32mI (18282) DATA_CSV: 17852,4.5675,0.0140,0,0,0x0000[0m
+[0;32mI (18312) DATA_CSV: 17882,4.5675,0.0135,0,0,0x0000[0m
+[0;32mI (18342) DATA_CSV: 17912,4.5683,0.0135,0,0,0x0000[0m
+[0;32mI (18372) DATA_CSV: 17942,4.5688,0.0137,0,0,0x0000[0m
+[0;32mI (18402) DATA_CSV: 17972,4.5678,0.0140,0,0,0x0000[0m
+[0;32mI (18432) DATA_CSV: 18002,4.5681,0.0141,0,0,0x0000[0m
+[0;32mI (18462) DATA_CSV: 18032,4.5688,0.0140,0,0,0x0000[0m
+[0;32mI (18492) DATA_CSV: 18062,4.5669,0.0140,0,0,0x0000[0m
+[0;32mI (18522) DATA_CSV: 18092,4.5687,0.0135,0,0,0x0000[0m
+[0;32mI (18552) DATA_CSV: 18122,4.5682,0.0138,0,0,0x0000[0m
+[0;32mI (18582) DATA_CSV: 18152,4.5687,0.0138,0,0,0x0000[0m
+[0;32mI (18612) DATA_CSV: 18182,4.5679,0.0139,0,0,0x0000[0m
+[0;32mI (18642) DATA_CSV: 18212,4.5690,0.0135,0,0,0x0000[0m
+[0;32mI (18672) DATA_CSV: 18242,4.5678,0.0127,0,0,0x0000[0m
+[0;32mI (18672) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (18672) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (18672) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (18682) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (18682) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (18692) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (18702) RobotController: valve_state=0x0000[0m
+[0;32mI (18732) DATA_CSV: 18302,4.5679,0.0135,0,0,0x0000[0m
+[0;32mI (18762) DATA_CSV: 18332,4.5679,0.0131,0,0,0x0000[0m
+[0;32mI (18792) DATA_CSV: 18362,4.5690,0.0131,0,0,0x0000[0m
+[0;32mI (18822) DATA_CSV: 18392,4.5687,0.0128,0,0,0x0000[0m
+[0;32mI (18852) DATA_CSV: 18422,4.5683,0.0135,0,0,0x0000[0m
+[0;32mI (18882) DATA_CSV: 18452,4.5683,0.0130,0,0,0x0000[0m
+[0;32mI (18912) DATA_CSV: 18482,4.5688,0.0141,0,0,0x0000[0m
+[0;32mI (18942) DATA_CSV: 18512,4.5685,0.0131,0,0,0x0000[0m
+[0;32mI (18972) DATA_CSV: 18542,4.5698,0.0139,0,0,0x0000[0m
+[0;32mI (19002) DATA_CSV: 18572,4.5683,0.0139,0,0,0x0000[0m
+[0;32mI (19032) DATA_CSV: 18602,4.5687,0.0128,0,0,0x0000[0m
+[0;32mI (19062) DATA_CSV: 18632,4.5697,0.0134,0,0,0x0000[0m
+[0;32mI (19092) DATA_CSV: 18662,4.5686,0.0133,0,0,0x0000[0m
+[0;32mI (19122) DATA_CSV: 18692,4.5688,0.0137,0,0,0x0000[0m
+[0;32mI (19152) DATA_CSV: 18722,4.5686,0.0136,0,0,0x0000[0m
+[0;32mI (19182) DATA_CSV: 18752,4.5694,0.0140,0,0,0x0000[0m
+[0;32mI (19212) DATA_CSV: 18782,4.5687,0.0137,0,0,0x0000[0m
+[0;32mI (19242) DATA_CSV: 18812,4.5693,0.0137,0,0,0x0000[0m
+[0;32mI (19272) DATA_CSV: 18842,4.5687,0.0141,0,0,0x0000[0m
+[0;32mI (19302) DATA_CSV: 18872,4.5686,0.0129,0,0,0x0000[0m
+[0;32mI (19332) DATA_CSV: 18902,4.5699,0.0136,0,0,0x0000[0m
+[0;32mI (19362) DATA_CSV: 18932,4.5700,0.0137,0,0,0x0000[0m
+[0;32mI (19392) DATA_CSV: 18962,4.5682,0.0135,0,0,0x0000[0m
+[0;32mI (19422) DATA_CSV: 18992,4.5691,0.0141,0,0,0x0000[0m
+[0;32mI (19452) DATA_CSV: 19022,4.5698,0.0133,0,0,0x0000[0m
+[0;32mI (19482) DATA_CSV: 19052,4.5696,0.0139,0,0,0x0000[0m
+[0;32mI (19512) DATA_CSV: 19082,4.5681,0.0136,0,0,0x0000[0m
+[0;32mI (19542) DATA_CSV: 19112,4.5683,0.0137,0,0,0x0000[0m
+[0;32mI (19572) DATA_CSV: 19142,4.5683,0.0139,0,0,0x0000[0m
+[0;32mI (19602) DATA_CSV: 19172,4.5692,0.0139,0,0,0x0000[0m
+[0;32mI (19632) DATA_CSV: 19202,4.5687,0.0137,0,0,0x0000[0m
+[0;32mI (19662) DATA_CSV: 19232,4.5694,0.0137,0,0,0x0000[0m
+[0;32mI (19692) DATA_CSV: 19262,4.5681,0.0138,0,0,0x0000[0m
+[0;32mI (19722) DATA_CSV: 19292,4.5690,0.0133,0,0,0x0000[0m
+[0;32mI (19752) DATA_CSV: 19322,4.5682,0.0135,0,0,0x0000[0m
+[0;32mI (19782) DATA_CSV: 19352,4.5696,0.0137,0,0,0x0000[0m
+[0;32mI (19812) DATA_CSV: 19382,4.5686,0.0139,0,0,0x0000[0m
+[0;32mI (19842) DATA_CSV: 19412,4.5687,0.0135,0,0,0x0000[0m
+[0;32mI (19872) DATA_CSV: 19442,4.5698,0.0139,0,0,0x0000[0m
+[0;32mI (19902) DATA_CSV: 19472,4.5692,0.0136,0,0,0x0000[0m
+[0;32mI (19932) DATA_CSV: 19502,4.5693,0.0136,0,0,0x0000[0m
+[0;32mI (19962) DATA_CSV: 19532,4.5689,0.0135,0,0,0x0000[0m
+[0;32mI (19992) DATA_CSV: 19562,4.5697,0.0137,0,0,0x0000[0m
+[0;32mI (20022) DATA_CSV: 19592,4.5692,0.0142,0,0,0x0000[0m
+[0;32mI (20052) DATA_CSV: 19622,4.5692,0.0138,0,0,0x0000[0m
+[0;32mI (20082) DATA_CSV: 19652,4.5694,0.0138,0,0,0x0000[0m
+[0;32mI (20112) DATA_CSV: 19682,4.5702,0.0137,0,0,0x0000[0m
+[0;32mI (20142) DATA_CSV: 19712,4.5691,0.0137,0,0,0x0000[0m
+[0;32mI (20172) DATA_CSV: 19742,4.5688,0.0135,0,0,0x0000[0m
+[0;32mI (20202) DATA_CSV: 19772,4.5698,0.0137,0,0,0x0000[0m
+[0;32mI (20202) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (20202) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (20202) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (20212) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (20212) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (20222) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (20232) RobotController: valve_state=0x0000[0m
+[0;32mI (20262) DATA_CSV: 19832,4.5688,0.0133,0,0,0x0000[0m
+[0;32mI (20292) DATA_CSV: 19862,4.5694,0.0133,0,0,0x0000[0m
+[0;32mI (20322) DATA_CSV: 19892,4.5688,0.0132,0,0,0x0000[0m
+[0;32mI (20352) DATA_CSV: 19922,4.5699,0.0129,0,0,0x0000[0m
+[0;32mI (20382) DATA_CSV: 19952,4.5702,0.0132,0,0,0x0000[0m
+[0;32mI (20412) DATA_CSV: 19982,4.5699,0.0139,0,0,0x0000[0m
+[0;32mI (20442) DATA_CSV: 20012,4.5690,0.0137,0,0,0x0000[0m
+[0;32mI (20472) DATA_CSV: 20042,4.5699,0.0133,0,0,0x0000[0m
+[0;32mI (20502) DATA_CSV: 20072,4.5702,0.0129,0,0,0x0000[0m
+[0;32mI (20532) DATA_CSV: 20102,4.5699,0.0137,0,0,0x0000[0m
+[0;32mI (20562) DATA_CSV: 20132,4.5693,0.0137,0,0,0x0000[0m
+[0;32mI (20592) DATA_CSV: 20162,4.5684,0.0137,0,0,0x0000[0m
+[0;32mI (20622) DATA_CSV: 20192,4.5688,0.0137,0,0,0x0000[0m
+[0;32mI (20652) DATA_CSV: 20222,4.5701,0.0139,0,0,0x0000[0m
+[0;32mI (20682) DATA_CSV: 20253,4.5698,0.0134,0,0,0x0000[0m
+[0;32mI (20712) DATA_CSV: 20282,4.5702,0.0139,0,0,0x0000[0m
+[0;32mI (20742) DATA_CSV: 20312,4.5696,0.0137,0,0,0x0000[0m
+[0;32mI (20772) DATA_CSV: 20342,4.5701,0.0137,0,0,0x0000[0m
+[0;32mI (20802) DATA_CSV: 20372,4.5702,0.0137,0,0,0x0000[0m
+[0;32mI (20832) DATA_CSV: 20402,4.5691,0.0137,0,0,0x0000[0m
+[0;32mI (20862) DATA_CSV: 20432,4.5695,0.0136,0,0,0x0000[0m
+[0;32mI (20892) DATA_CSV: 20462,4.5694,0.0138,0,0,0x0000[0m
+[0;32mI (20922) DATA_CSV: 20492,4.5692,0.0136,0,0,0x0000[0m
+[0;32mI (20952) DATA_CSV: 20522,4.5695,0.0139,0,0,0x0000[0m
+[0;32mI (20982) DATA_CSV: 20552,4.5704,0.0134,0,0,0x0000[0m
+[0;32mI (21012) DATA_CSV: 20582,4.5697,0.0139,0,0,0x0000[0m
+[0;32mI (21042) DATA_CSV: 20612,4.5705,0.0135,0,0,0x0000[0m
+[0;32mI (21072) DATA_CSV: 20642,4.5703,0.0135,0,0,0x0000[0m
+[0;32mI (21102) DATA_CSV: 20672,4.5699,0.0137,0,0,0x0000[0m
+[0;32mI (21132) DATA_CSV: 20702,4.5691,0.0139,0,0,0x0000[0m
+[0;32mI (21162) DATA_CSV: 20732,4.5704,0.0140,0,0,0x0000[0m
+[0;32mI (21192) DATA_CSV: 20762,4.5702,0.0135,0,0,0x0000[0m
+[0;32mI (21222) DATA_CSV: 20792,4.5713,0.0136,0,0,0x0000[0m
+[0;32mI (21252) DATA_CSV: 20822,4.5701,0.0138,0,0,0x0000[0m
+[0;32mI (21282) DATA_CSV: 20852,4.5702,0.0140,0,0,0x0000[0m
+[0;32mI (21312) DATA_CSV: 20882,4.5705,0.0140,0,0,0x0000[0m
+[0;32mI (21342) DATA_CSV: 20912,4.5710,0.0137,0,0,0x0000[0m
+[0;32mI (21372) DATA_CSV: 20942,4.5699,0.0134,0,0,0x0000[0m
+[0;32mI (21402) DATA_CSV: 20972,4.5701,0.0147,0,0,0x0000[0m
+[0;32mI (21432) DATA_CSV: 21002,4.5696,0.0136,0,0,0x0000[0m
+[0;32mI (21462) DATA_CSV: 21032,4.5699,0.0139,0,0,0x0000[0m
+[0;32mI (21492) DATA_CSV: 21062,4.5705,0.0138,0,0,0x0000[0m
+[0;32mI (21522) DATA_CSV: 21092,4.5701,0.0136,0,0,0x0000[0m
+[0;32mI (21552) DATA_CSV: 21122,4.5699,0.0138,0,0,0x0000[0m
+[0;32mI (21582) DATA_CSV: 21152,4.5699,0.0137,0,0,0x0000[0m
+[0;32mI (21612) DATA_CSV: 21182,4.5702,0.0140,0,0,0x0000[0m
+[0;32mI (21642) DATA_CSV: 21212,4.5693,0.0134,0,0,0x0000[0m
+[0;32mI (21672) DATA_CSV: 21242,4.5699,0.0138,0,0,0x0000[0m
+[0;32mI (21702) DATA_CSV: 21272,4.5705,0.0142,0,0,0x0000[0m
+[0;32mI (21732) DATA_CSV: 21302,4.5696,0.0138,0,0,0x0000[0m
+[0;32mI (21732) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (21732) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (21732) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (21742) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (21742) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (21752) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (21762) RobotController: valve_state=0x0000[0m
+[0;32mI (21792) DATA_CSV: 21362,4.5702,0.0135,0,0,0x0000[0m
+[0;32mI (21822) DATA_CSV: 21392,4.5691,0.0131,0,0,0x0000[0m
+[0;32mI (21852) DATA_CSV: 21422,4.5703,0.0140,0,0,0x0000[0m
+[0;32mI (21882) DATA_CSV: 21452,4.5704,0.0128,0,0,0x0000[0m
+[0;32mI (21912) DATA_CSV: 21482,4.5701,0.0138,0,0,0x0000[0m
+[0;32mI (21942) DATA_CSV: 21512,4.5702,0.0137,0,0,0x0000[0m
+[0;32mI (21972) DATA_CSV: 21542,4.5711,0.0134,0,0,0x0000[0m
+[0;32mI (22002) DATA_CSV: 21572,4.5709,0.0133,0,0,0x0000[0m
+[0;32mI (22032) DATA_CSV: 21602,4.5706,0.0139,0,0,0x0000[0m
+[0;32mI (22062) DATA_CSV: 21632,4.5701,0.0136,0,0,0x0000[0m
+[0;32mI (22092) DATA_CSV: 21662,4.5714,0.0135,0,0,0x0000[0m
+[0;32mI (22122) DATA_CSV: 21692,4.5704,0.0142,0,0,0x0000[0m
+[0;32mI (22152) DATA_CSV: 21722,4.5713,0.0137,0,0,0x0000[0m
+[0;32mI (22182) DATA_CSV: 21752,4.5699,0.0139,0,0,0x0000[0m
+[0;32mI (22212) DATA_CSV: 21782,4.5698,0.0137,0,0,0x0000[0m
+[0;32mI (22242) DATA_CSV: 21812,4.5709,0.0139,0,0,0x0000[0m
+[0;32mI (22272) DATA_CSV: 21842,4.5704,0.0135,0,0,0x0000[0m
+[0;32mI (22302) DATA_CSV: 21872,4.5700,0.0141,0,0,0x0000[0m
+[0;32mI (22332) DATA_CSV: 21902,4.5716,0.0135,0,0,0x0000[0m
+[0;32mI (22362) DATA_CSV: 21932,4.5705,0.0129,0,0,0x0000[0m
+[0;32mI (22392) DATA_CSV: 21962,4.5709,0.0139,0,0,0x0000[0m
+[0;32mI (22422) DATA_CSV: 21992,4.5713,0.0147,0,0,0x0000[0m
+[0;32mI (22452) DATA_CSV: 22022,4.5703,0.0139,0,0,0x0000[0m
+[0;32mI (22482) DATA_CSV: 22052,4.5712,0.0136,0,0,0x0000[0m
+[0;32mI (22512) DATA_CSV: 22082,4.5703,0.0137,0,0,0x0000[0m
+[0;32mI (22542) DATA_CSV: 22112,4.5710,0.0139,0,0,0x0000[0m
+[0;32mI (22572) DATA_CSV: 22142,4.5711,0.0137,0,0,0x0000[0m
+[0;32mI (22602) DATA_CSV: 22172,4.5703,0.0136,0,0,0x0000[0m
+[0;32mI (22632) DATA_CSV: 22202,4.5703,0.0139,0,0,0x0000[0m
+[0;32mI (22662) DATA_CSV: 22232,4.5707,0.0141,0,0,0x0000[0m
+[0;32mI (22692) DATA_CSV: 22262,4.5699,0.0137,0,0,0x0000[0m
+[0;32mI (22722) DATA_CSV: 22292,4.5707,0.0139,0,0,0x0000[0m
+[0;32mI (22752) DATA_CSV: 22322,4.5700,0.0134,0,0,0x0000[0m
+[0;32mI (22782) DATA_CSV: 22352,4.5694,0.0139,0,0,0x0000[0m
+[0;32mI (22812) DATA_CSV: 22382,4.5709,0.0139,0,0,0x0000[0m
+[0;32mI (22842) DATA_CSV: 22412,4.5712,0.0140,0,0,0x0000[0m
+[0;32mI (22872) DATA_CSV: 22442,4.5702,0.0138,0,0,0x0000[0m
+[0;32mI (22902) DATA_CSV: 22472,4.5707,0.0137,0,0,0x0000[0m
+[0;32mI (22932) DATA_CSV: 22502,4.5711,0.0135,0,0,0x0000[0m
+[0;32mI (22962) DATA_CSV: 22532,4.5711,0.0133,0,0,0x0000[0m
+[0;32mI (22992) DATA_CSV: 22562,4.5711,0.0137,0,0,0x0000[0m
+[0;32mI (23022) DATA_CSV: 22592,4.5710,0.0134,0,0,0x0000[0m
+[0;32mI (23052) DATA_CSV: 22622,4.5707,0.0142,0,0,0x0000[0m
+[0;32mI (23082) DATA_CSV: 22652,4.5709,0.0136,0,0,0x0000[0m
+[0;32mI (23112) DATA_CSV: 22682,4.5709,0.0138,0,0,0x0000[0m
+[0;32mI (23142) DATA_CSV: 22712,4.5715,0.0137,0,0,0x0000[0m
+[0;32mI (23172) DATA_CSV: 22742,4.5702,0.0139,0,0,0x0000[0m
+[0;32mI (23202) DATA_CSV: 22772,4.5698,0.0138,0,0,0x0000[0m
+[0;32mI (23232) DATA_CSV: 22802,4.5710,0.0135,0,0,0x0000[0m
+[0;32mI (23262) DATA_CSV: 22832,4.5707,0.0144,0,0,0x0000[0m
+[0;32mI (23262) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (23262) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (23262) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (23272) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (23272) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (23282) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (23292) RobotController: valve_state=0x0000[0m
+[0;32mI (23322) DATA_CSV: 22892,4.5722,0.0137,0,0,0x0000[0m
+[0;32mI (23352) DATA_CSV: 22922,4.5707,0.0132,0,0,0x0000[0m
+[0;32mI (23382) DATA_CSV: 22952,4.5719,0.0134,0,0,0x0000[0m
+[0;32mI (23412) DATA_CSV: 22982,4.5712,0.0135,0,0,0x0000[0m
+[0;32mI (23442) DATA_CSV: 23012,4.5716,0.0141,0,0,0x0000[0m
+[0;32mI (23472) DATA_CSV: 23042,4.5716,0.0141,0,0,0x0000[0m
+[0;32mI (23502) DATA_CSV: 23072,4.5716,0.0130,0,0,0x0000[0m
+[0;32mI (23532) DATA_CSV: 23102,4.5715,0.0137,0,0,0x0000[0m
+[0;32mI (23562) DATA_CSV: 23132,4.5713,0.0136,0,0,0x0000[0m
+[0;32mI (23592) DATA_CSV: 23162,4.5719,0.0138,0,0,0x0000[0m
+[0;32mI (23622) DATA_CSV: 23192,4.5705,0.0132,0,0,0x0000[0m
+[0;32mI (23652) DATA_CSV: 23222,4.5717,0.0135,0,0,0x0000[0m
+[0;32mI (23682) DATA_CSV: 23252,4.5718,0.0137,0,0,0x0000[0m
+[0;32mI (23712) DATA_CSV: 23282,4.5715,0.0135,0,0,0x0000[0m
+[0;32mI (23742) DATA_CSV: 23312,4.5703,0.0137,0,0,0x0000[0m
+[0;32mI (23772) DATA_CSV: 23342,4.5709,0.0137,0,0,0x0000[0m
+[0;32mI (23802) DATA_CSV: 23372,4.5715,0.0142,0,0,0x0000[0m
+[0;32mI (23832) DATA_CSV: 23402,4.5718,0.0139,0,0,0x0000[0m
+[0;32mI (23862) DATA_CSV: 23432,4.5713,0.0137,0,0,0x0000[0m
+[0;32mI (23892) DATA_CSV: 23462,4.5707,0.0139,0,0,0x0000[0m
+[0;32mI (23922) DATA_CSV: 23492,4.5696,0.0139,0,0,0x0000[0m
+[0;32mI (23952) DATA_CSV: 23522,4.5710,0.0139,0,0,0x0000[0m
+[0;32mI (23982) DATA_CSV: 23552,4.5712,0.0133,0,0,0x0000[0m
+[0;32mI (24012) DATA_CSV: 23582,4.5710,0.0140,0,0,0x0000[0m
+[0;32mI (24042) DATA_CSV: 23612,4.5711,0.0139,0,0,0x0000[0m
+[0;32mI (24072) DATA_CSV: 23642,4.5719,0.0138,0,0,0x0000[0m
+[0;32mI (24102) DATA_CSV: 23672,4.5718,0.0134,0,0,0x0000[0m
+[0;32mI (24132) DATA_CSV: 23702,4.5714,0.0138,0,0,0x0000[0m
+[0;32mI (24162) DATA_CSV: 23732,4.5715,0.0136,0,0,0x0000[0m
+[0;32mI (24192) DATA_CSV: 23762,4.5715,0.0136,0,0,0x0000[0m
+[0;32mI (24222) DATA_CSV: 23792,4.5708,0.0134,0,0,0x0000[0m
+[0;32mI (24252) DATA_CSV: 23822,4.5708,0.0136,0,0,0x0000[0m
+[0;32mI (24282) DATA_CSV: 23852,4.5700,0.0140,0,0,0x0000[0m
+[0;32mI (24312) DATA_CSV: 23882,4.5713,0.0139,0,0,0x0000[0m
+[0;32mI (24342) DATA_CSV: 23912,4.5714,0.0134,0,0,0x0000[0m
+[0;32mI (24372) DATA_CSV: 23942,4.5706,0.0136,0,0,0x0000[0m
+[0;32mI (24402) DATA_CSV: 23972,4.5708,0.0135,0,0,0x0000[0m
+[0;32mI (24432) DATA_CSV: 24002,4.5714,0.0137,0,0,0x0000[0m
+[0;32mI (24462) DATA_CSV: 24032,4.5706,0.0141,0,0,0x0000[0m
+[0;32mI (24492) DATA_CSV: 24062,4.5704,0.0137,0,0,0x0000[0m
+[0;32mI (24522) DATA_CSV: 24092,4.5713,0.0137,0,0,0x0000[0m
+[0;32mI (24552) DATA_CSV: 24122,4.5702,0.0138,0,0,0x0000[0m
+[0;32mI (24582) DATA_CSV: 24152,4.5714,0.0141,0,0,0x0000[0m
+[0;32mI (24612) DATA_CSV: 24182,4.5710,0.0134,0,0,0x0000[0m
+[0;32mI (24642) DATA_CSV: 24212,4.5714,0.0139,0,0,0x0000[0m
+[0;32mI (24672) DATA_CSV: 24242,4.5700,0.0136,0,0,0x0000[0m
+[0;32mI (24702) DATA_CSV: 24272,4.5709,0.0138,0,0,0x0000[0m
+[0;32mI (24732) DATA_CSV: 24302,4.5711,0.0135,0,0,0x0000[0m
+[0;32mI (24762) DATA_CSV: 24332,4.5716,0.0138,0,0,0x0000[0m
+[0;32mI (24792) DATA_CSV: 24362,4.5708,0.0138,0,0,0x0000[0m
+[0;32mI (24792) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (24792) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (24792) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (24802) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (24802) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (24812) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (24822) RobotController: valve_state=0x0000[0m
+[0;32mI (24852) DATA_CSV: 24422,4.5703,0.0138,0,0,0x0000[0m
+[0;32mI (24882) DATA_CSV: 24452,4.5711,0.0127,0,0,0x0000[0m
+[0;32mI (24912) DATA_CSV: 24482,4.5711,0.0127,0,0,0x0000[0m
+[0;32mI (24942) DATA_CSV: 24512,4.5703,0.0136,0,0,0x0000[0m
+[0;32mI (24972) DATA_CSV: 24542,4.5706,0.0131,0,0,0x0000[0m
+[0;32mI (25002) DATA_CSV: 24572,4.5710,0.0134,0,0,0x0000[0m
+[0;32mI (25032) DATA_CSV: 24602,4.5718,0.0129,0,0,0x0000[0m
+[0;32mI (25062) DATA_CSV: 24632,4.5703,0.0134,0,0,0x0000[0m
+[0;32mI (25092) DATA_CSV: 24662,4.5715,0.0131,0,0,0x0000[0m
+[0;32mI (25122) DATA_CSV: 24692,4.5709,0.0136,0,0,0x0000[0m
+[0;32mI (25152) DATA_CSV: 24722,4.5705,0.0139,0,0,0x0000[0m
+[0;32mI (25182) DATA_CSV: 24752,4.5716,0.0136,0,0,0x0000[0m
+[0;32mI (25212) DATA_CSV: 24782,4.5719,0.0141,0,0,0x0000[0m
+[0;32mI (25242) DATA_CSV: 24812,4.5702,0.0135,0,0,0x0000[0m
+[0;32mI (25272) DATA_CSV: 24842,4.5696,0.0134,0,0,0x0000[0m
+[0;32mI (25302) DATA_CSV: 24872,4.5712,0.0138,0,0,0x0000[0m
+[0;32mI (25332) DATA_CSV: 24902,4.5715,0.0136,0,0,0x0000[0m
+[0;32mI (25362) DATA_CSV: 24932,4.5704,0.0137,0,0,0x0000[0m
+[0;32mI (25392) DATA_CSV: 24963,4.5698,0.0135,0,0,0x0000[0m
+[0;32mI (25422) DATA_CSV: 24992,4.5712,0.0132,0,0,0x0000[0m
+[0;32mI (25452) DATA_CSV: 25022,4.5708,0.0133,0,0,0x0000[0m
+[0;32mI (25482) DATA_CSV: 25052,4.5708,0.0136,0,0,0x0000[0m
+[0;32mI (25512) DATA_CSV: 25082,4.5706,0.0137,0,0,0x0000[0m
+[0;32mI (25542) DATA_CSV: 25112,4.5702,0.0138,0,0,0x0000[0m
+[0;32mI (25572) DATA_CSV: 25142,4.5708,0.0137,0,0,0x0000[0m
+[0;32mI (25602) DATA_CSV: 25172,4.5706,0.0140,0,0,0x0000[0m
+[0;32mI (25632) DATA_CSV: 25202,4.5706,0.0139,0,0,0x0000[0m
+[0;32mI (25662) DATA_CSV: 25232,4.5705,0.0140,0,0,0x0000[0m
+[0;32mI (25692) DATA_CSV: 25262,4.5702,0.0136,0,0,0x0000[0m
+[0;32mI (25722) DATA_CSV: 25292,4.5708,0.0138,0,0,0x0000[0m
+[0;32mI (25752) DATA_CSV: 25322,4.5698,0.0133,0,0,0x0000[0m
+[0;32mI (25782) DATA_CSV: 25352,4.5707,0.0133,0,0,0x0000[0m
+[0;32mI (25812) DATA_CSV: 25382,4.5704,0.0135,0,0,0x0000[0m
+[0;32mI (25842) DATA_CSV: 25412,4.5709,0.0135,0,0,0x0000[0m
+[0;32mI (25872) DATA_CSV: 25442,4.5717,0.0140,0,0,0x0000[0m
+[0;32mI (25902) DATA_CSV: 25472,4.5705,0.0136,0,0,0x0000[0m
+[0;32mI (25932) DATA_CSV: 25502,4.5708,0.0140,0,0,0x0000[0m
+[0;32mI (25962) DATA_CSV: 25532,4.5706,0.0134,0,0,0x0000[0m
+[0;32mI (25992) DATA_CSV: 25562,4.5706,0.0138,0,0,0x0000[0m
+[0;32mI (26022) DATA_CSV: 25592,4.5707,0.0132,0,0,0x0000[0m
+[0;32mI (26052) DATA_CSV: 25622,4.5703,0.0139,0,0,0x0000[0m
+[0;32mI (26082) DATA_CSV: 25652,4.5698,0.0142,0,0,0x0000[0m
+[0;32mI (26112) DATA_CSV: 25682,4.5697,0.0136,0,0,0x0000[0m
+[0;32mI (26142) DATA_CSV: 25712,4.5695,0.0137,0,0,0x0000[0m
+[0;32mI (26172) DATA_CSV: 25742,4.5704,0.0136,0,0,0x0000[0m
+[0;32mI (26202) DATA_CSV: 25772,4.5707,0.0136,0,0,0x0000[0m
+[0;32mI (26232) DATA_CSV: 25802,4.5708,0.0134,0,0,0x0000[0m
+[0;32mI (26262) DATA_CSV: 25832,4.5714,0.0138,0,0,0x0000[0m
+[0;32mI (26292) DATA_CSV: 25862,4.5714,0.0137,0,0,0x0000[0m
+[0;32mI (26322) DATA_CSV: 25892,4.5703,0.0138,0,0,0x0000[0m
+[0;32mI (26322) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (26322) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (26322) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (26332) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (26332) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (26342) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (26352) RobotController: valve_state=0x0000[0m
+[0;32mI (26382) DATA_CSV: 25952,4.5695,0.0138,0,0,0x0000[0m
+[0;32mI (26412) DATA_CSV: 25982,4.5705,0.0129,0,0,0x0000[0m
+[0;32mI (26442) DATA_CSV: 26012,4.5707,0.0133,0,0,0x0000[0m
+[0;32mI (26472) DATA_CSV: 26042,4.5697,0.0123,0,0,0x0000[0m
+[0;32mI (26502) DATA_CSV: 26072,4.5712,0.0133,0,0,0x0000[0m
+[0;32mI (26532) DATA_CSV: 26102,4.5701,0.0129,0,0,0x0000[0m
+[0;32mI (26562) DATA_CSV: 26132,4.5705,0.0126,0,0,0x0000[0m
+[0;32mI (26592) DATA_CSV: 26162,4.5713,0.0138,0,0,0x0000[0m
+[0;32mI (26622) DATA_CSV: 26192,4.5696,0.0132,0,0,0x0000[0m
+[0;32mI (26652) DATA_CSV: 26222,4.5701,0.0139,0,0,0x0000[0m
+[0;32mI (26682) DATA_CSV: 26252,4.5700,0.0135,0,0,0x0000[0m
+[0;32mI (26712) DATA_CSV: 26282,4.5710,0.0139,0,0,0x0000[0m
+[0;32mI (26742) DATA_CSV: 26312,4.5705,0.0128,0,0,0x0000[0m
+[0;32mI (26772) DATA_CSV: 26342,4.5698,0.0136,0,0,0x0000[0m
+[0;32mI (26802) DATA_CSV: 26372,4.5701,0.0137,0,0,0x0000[0m
+[0;32mI (26832) DATA_CSV: 26402,4.5703,0.0137,0,0,0x0000[0m
+[0;32mI (26862) DATA_CSV: 26432,4.5701,0.0136,0,0,0x0000[0m
+[0;32mI (26892) DATA_CSV: 26462,4.5699,0.0139,0,0,0x0000[0m
+[0;32mI (26922) DATA_CSV: 26492,4.5704,0.0139,0,0,0x0000[0m
+[0;32mI (26952) DATA_CSV: 26522,4.5712,0.0135,0,0,0x0000[0m
+[0;32mI (26982) DATA_CSV: 26552,4.5707,0.0128,0,0,0x0000[0m
+[0;32mI (27012) DATA_CSV: 26582,4.5724,0.0131,0,0,0x0000[0m
+[0;32mI (27042) DATA_CSV: 26612,4.5710,0.0137,0,0,0x0000[0m
+[0;32mI (27072) DATA_CSV: 26642,4.5699,0.0137,0,0,0x0000[0m
+[0;32mI (27102) DATA_CSV: 26672,4.5698,0.0134,0,0,0x0000[0m
+[0;32mI (27132) DATA_CSV: 26702,4.5699,0.0140,0,0,0x0000[0m
+[0;32mI (27162) DATA_CSV: 26732,4.5700,0.0135,0,0,0x0000[0m
+[0;32mI (27192) DATA_CSV: 26762,4.5689,0.0134,0,0,0x0000[0m
+[0;32mI (27222) DATA_CSV: 26792,4.5692,0.0132,0,0,0x0000[0m
+[0;32mI (27252) DATA_CSV: 26822,4.5700,0.0139,0,0,0x0000[0m
+[0;32mI (27282) DATA_CSV: 26852,4.5700,0.0136,0,0,0x0000[0m
+[0;32mI (27312) DATA_CSV: 26882,4.5703,0.0135,0,0,0x0000[0m
+[0;32mI (27342) DATA_CSV: 26912,4.5705,0.0139,0,0,0x0000[0m
+[0;32mI (27372) DATA_CSV: 26942,4.5695,0.0141,0,0,0x0000[0m
+[0;32mI (27402) DATA_CSV: 26972,4.5699,0.0133,0,0,0x0000[0m
+[0;32mI (27432) DATA_CSV: 27002,4.5701,0.0136,0,0,0x0000[0m
+[0;32mI (27462) DATA_CSV: 27032,4.5712,0.0140,0,0,0x0000[0m
+[0;32mI (27492) DATA_CSV: 27062,4.5699,0.0136,0,0,0x0000[0m
+[0;32mI (27522) DATA_CSV: 27092,4.5706,0.0135,0,0,0x0000[0m
+[0;32mI (27552) DATA_CSV: 27122,4.5693,0.0134,0,0,0x0000[0m
+[0;32mI (27582) DATA_CSV: 27152,4.5698,0.0137,0,0,0x0000[0m
+[0;32mI (27612) DATA_CSV: 27182,4.5696,0.0139,0,0,0x0000[0m
+[0;32mI (27642) DATA_CSV: 27212,4.5694,0.0132,0,0,0x0000[0m
+[0;32mI (27672) DATA_CSV: 27242,4.5691,0.0137,0,0,0x0000[0m
+[0;32mI (27702) DATA_CSV: 27272,4.5694,0.0139,0,0,0x0000[0m
+[0;32mI (27732) DATA_CSV: 27302,4.5704,0.0136,0,0,0x0000[0m
+[0;32mI (27762) DATA_CSV: 27332,4.5706,0.0133,0,0,0x0000[0m
+[0;32mI (27792) DATA_CSV: 27362,4.5696,0.0135,0,0,0x0000[0m
+[0;32mI (27822) DATA_CSV: 27392,4.5698,0.0136,0,0,0x0000[0m
+[0;32mI (27852) DATA_CSV: 27422,4.5695,0.0135,0,0,0x0000[0m
+[0;32mI (27852) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (27852) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (27852) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (27862) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (27862) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (27872) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (27882) RobotController: valve_state=0x0000[0m
+[0;32mI (27912) DATA_CSV: 27482,4.5697,0.0135,0,0,0x0000[0m
+[0;32mI (27942) DATA_CSV: 27512,4.5703,0.0129,0,0,0x0000[0m
+[0;32mI (27972) DATA_CSV: 27542,4.5693,0.0129,0,0,0x0000[0m
+[0;32mI (28002) DATA_CSV: 27572,4.5702,0.0127,0,0,0x0000[0m
+[0;32mI (28032) DATA_CSV: 27602,4.5702,0.0135,0,0,0x0000[0m
+[0;32mI (28062) DATA_CSV: 27632,4.5702,0.0136,0,0,0x0000[0m
+[0;32mI (28092) DATA_CSV: 27662,4.5709,0.0130,0,0,0x0000[0m
+[0;32mI (28122) DATA_CSV: 27692,4.5701,0.0135,0,0,0x0000[0m
+[0;32mI (28152) DATA_CSV: 27722,4.5697,0.0139,0,0,0x0000[0m
+[0;32mI (28182) DATA_CSV: 27752,4.5693,0.0135,0,0,0x0000[0m
+[0;32mI (28212) DATA_CSV: 27782,4.5696,0.0129,0,0,0x0000[0m
+[0;32mI (28242) DATA_CSV: 27812,4.5708,0.0136,0,0,0x0000[0m
+[0;32mI (28272) DATA_CSV: 27842,4.5695,0.0136,0,0,0x0000[0m
+[0;32mI (28302) DATA_CSV: 27872,4.5689,0.0130,0,0,0x0000[0m
+[0;32mI (28332) DATA_CSV: 27902,4.5700,0.0131,0,0,0x0000[0m
+[0;32mI (28362) DATA_CSV: 27932,4.5704,0.0133,0,0,0x0000[0m
+[0;32mI (28392) DATA_CSV: 27962,4.5691,0.0135,0,0,0x0000[0m
+[0;32mI (28422) DATA_CSV: 27992,4.5699,0.0137,0,0,0x0000[0m
+[0;32mI (28452) DATA_CSV: 28022,4.5699,0.0129,0,0,0x0000[0m
+[0;32mI (28482) DATA_CSV: 28052,4.5697,0.0138,0,0,0x0000[0m
+[0;32mI (28512) DATA_CSV: 28082,4.5693,0.0136,0,0,0x0000[0m
+[0;32mI (28542) DATA_CSV: 28112,4.5691,0.0135,0,0,0x0000[0m
+[0;32mI (28572) DATA_CSV: 28142,4.5703,0.0138,0,0,0x0000[0m
+[0;32mI (28602) DATA_CSV: 28172,4.5697,0.0138,0,0,0x0000[0m
+[0;32mI (28632) DATA_CSV: 28202,4.5692,0.0125,0,0,0x0000[0m
+[0;32mI (28662) DATA_CSV: 28232,4.5694,0.0135,0,0,0x0000[0m
+[0;32mI (28692) DATA_CSV: 28262,4.5683,0.0131,0,0,0x0000[0m
+[0;32mI (28722) DATA_CSV: 28292,4.5696,0.0128,0,0,0x0000[0m
+[0;32mI (28752) DATA_CSV: 28322,4.5695,0.0134,0,0,0x0000[0m
+[0;32mI (28782) DATA_CSV: 28352,4.5703,0.0129,0,0,0x0000[0m
+[0;32mI (28812) DATA_CSV: 28382,4.5697,0.0134,0,0,0x0000[0m
+[0;32mI (28842) DATA_CSV: 28412,4.5702,0.0137,0,0,0x0000[0m
+[0;32mI (28872) DATA_CSV: 28442,4.5692,0.0139,0,0,0x0000[0m
+[0;32mI (28902) DATA_CSV: 28472,4.5707,0.0136,0,0,0x0000[0m
+[0;32mI (28932) DATA_CSV: 28502,4.5702,0.0132,0,0,0x0000[0m
+[0;32mI (28962) DATA_CSV: 28532,4.5708,0.0135,0,0,0x0000[0m
+[0;32mI (28992) DATA_CSV: 28562,4.5696,0.0139,0,0,0x0000[0m
+[0;32mI (29022) DATA_CSV: 28592,4.5696,0.0139,0,0,0x0000[0m
+[0;32mI (29052) DATA_CSV: 28622,4.5704,0.0137,0,0,0x0000[0m
+[0;32mI (29082) DATA_CSV: 28652,4.5697,0.0139,0,0,0x0000[0m
+[0;32mI (29112) DATA_CSV: 28682,4.5703,0.0135,0,0,0x0000[0m
+[0;32mI (29142) DATA_CSV: 28712,4.5703,0.0136,0,0,0x0000[0m
+[0;32mI (29172) DATA_CSV: 28742,4.5710,0.0140,0,0,0x0000[0m
+[0;32mI (29202) DATA_CSV: 28772,4.5706,0.0137,0,0,0x0000[0m
+[0;32mI (29232) DATA_CSV: 28802,4.5693,0.0137,0,0,0x0000[0m
+[0;32mI (29262) DATA_CSV: 28832,4.5704,0.0135,0,0,0x0000[0m
+[0;32mI (29292) DATA_CSV: 28862,4.5702,0.0134,0,0,0x0000[0m
+[0;32mI (29322) DATA_CSV: 28892,4.5710,0.0135,0,0,0x0000[0m
+[0;32mI (29352) DATA_CSV: 28922,4.5692,0.0140,0,0,0x0000[0m
+[0;32mI (29382) DATA_CSV: 28952,4.5706,0.0141,0,0,0x0000[0m
+[0;32mI (29382) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (29382) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (29382) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (29392) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (29392) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (29402) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (29412) RobotController: valve_state=0x0000[0m
+[0;32mI (29442) DATA_CSV: 29012,4.5702,0.0137,0,0,0x0000[0m
+[0;32mI (29472) DATA_CSV: 29042,4.5694,0.0125,0,0,0x0000[0m
+[0;32mI (29502) DATA_CSV: 29072,4.5698,0.0128,0,0,0x0000[0m
+[0;32mI (29532) DATA_CSV: 29102,4.5697,0.0130,0,0,0x0000[0m
+[0;32mI (29562) DATA_CSV: 29132,4.5695,0.0130,0,0,0x0000[0m
+[0;32mI (29592) DATA_CSV: 29162,4.5700,0.0133,0,0,0x0000[0m
+[0;32mI (29622) DATA_CSV: 29192,4.5699,0.0126,0,0,0x0000[0m
+[0;32mI (29652) DATA_CSV: 29222,4.5696,0.0132,0,0,0x0000[0m
+[0;32mI (29682) DATA_CSV: 29252,4.5701,0.0128,0,0,0x0000[0m
+[0;32mI (29712) DATA_CSV: 29282,4.5709,0.0136,0,0,0x0000[0m
+[0;32mI (29742) DATA_CSV: 29312,4.5689,0.0129,0,0,0x0000[0m
+[0;32mI (29772) DATA_CSV: 29342,4.5699,0.0129,0,0,0x0000[0m
+[0;32mI (29802) DATA_CSV: 29372,4.5698,0.0130,0,0,0x0000[0m
+[0;32mI (29832) DATA_CSV: 29402,4.5701,0.0131,0,0,0x0000[0m
+[0;32mI (29862) DATA_CSV: 29432,4.5697,0.0138,0,0,0x0000[0m
+[0;32mI (29892) DATA_CSV: 29462,4.5695,0.0131,0,0,0x0000[0m
+[0;32mI (29922) DATA_CSV: 29492,4.5699,0.0128,0,0,0x0000[0m
+[0;32mI (29952) DATA_CSV: 29522,4.5704,0.0140,0,0,0x0000[0m
+[0;32mI (29982) DATA_CSV: 29552,4.5692,0.0126,0,0,0x0000[0m
+[0;32mI (30012) DATA_CSV: 29582,4.5697,0.0132,0,0,0x0000[0m
+[0;32mI (30042) DATA_CSV: 29612,4.5696,0.0128,0,0,0x0000[0m
+[0;32mI (30072) DATA_CSV: 29642,4.5719,0.0138,0,0,0x0000[0m
+[0;32mI (30102) DATA_CSV: 29673,4.5694,0.0136,0,0,0x0000[0m
+[0;32mI (30132) DATA_CSV: 29702,4.5698,0.0135,0,0,0x0000[0m
+[0;32mI (30162) DATA_CSV: 29732,4.5700,0.0136,0,0,0x0000[0m
+[0;32mI (30192) DATA_CSV: 29762,4.5697,0.0133,0,0,0x0000[0m
+[0;32mI (30222) DATA_CSV: 29792,4.5696,0.0129,0,0,0x0000[0m
+[0;32mI (30252) DATA_CSV: 29822,4.5699,0.0128,0,0,0x0000[0m
+[0;32mI (30282) DATA_CSV: 29852,4.5706,0.0136,0,0,0x0000[0m
+[0;32mI (30312) DATA_CSV: 29882,4.5692,0.0136,0,0,0x0000[0m
+[0;32mI (30342) DATA_CSV: 29912,4.5699,0.0128,0,0,0x0000[0m
+[0;32mI (30372) DATA_CSV: 29942,4.5692,0.0127,0,0,0x0000[0m
+[0;32mI (30402) DATA_CSV: 29972,4.5701,0.0135,0,0,0x0000[0m
+[0;32mI (30432) DATA_CSV: 30002,4.5697,0.0140,0,0,0x0000[0m
+[0;32mI (30462) DATA_CSV: 30032,4.5696,0.0126,0,0,0x0000[0m
+[0;32mI (30492) DATA_CSV: 30062,4.5695,0.0129,0,0,0x0000[0m
+[0;32mI (30522) DATA_CSV: 30092,4.5690,0.0137,0,0,0x0000[0m
+[0;32mI (30552) DATA_CSV: 30122,4.5696,0.0137,0,0,0x0000[0m
+[0;32mI (30582) DATA_CSV: 30152,4.5704,0.0133,0,0,0x0000[0m
+[0;32mI (30612) DATA_CSV: 30182,4.5696,0.0130,0,0,0x0000[0m
+[0;32mI (30642) DATA_CSV: 30212,4.5691,0.0131,0,0,0x0000[0m
+[0;32mI (30672) DATA_CSV: 30242,4.5690,0.0126,0,0,0x0000[0m
+[0;32mI (30702) DATA_CSV: 30272,4.5703,0.0130,0,0,0x0000[0m
+[0;32mI (30732) DATA_CSV: 30302,4.5692,0.0129,0,0,0x0000[0m
+[0;32mI (30762) DATA_CSV: 30332,4.5693,0.0123,0,0,0x0000[0m
+[0;32mI (30792) DATA_CSV: 30362,4.5700,0.0130,0,0,0x0000[0m
+[0;32mI (30822) DATA_CSV: 30392,4.5711,0.0130,0,0,0x0000[0m
+[0;32mI (30852) DATA_CSV: 30422,4.5703,0.0136,0,0,0x0000[0m
+[0;32mI (30882) DATA_CSV: 30452,4.5701,0.0130,0,0,0x0000[0m
+[0;32mI (30912) DATA_CSV: 30482,4.5694,0.0132,0,0,0x0000[0m
+[0;32mI (30912) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (30912) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (30912) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (30922) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (30922) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (30932) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (30942) RobotController: valve_state=0x0000[0m
+[0;32mI (30972) DATA_CSV: 30542,4.5702,0.0125,0,0,0x0000[0m
+[0;32mI (31002) DATA_CSV: 30572,4.5689,0.0122,0,0,0x0000[0m
+[0;32mI (31032) DATA_CSV: 30602,4.5693,0.0118,0,0,0x0000[0m
+[0;32mI (31062) DATA_CSV: 30632,4.5683,0.0118,0,0,0x0000[0m
+[0;32mI (31092) DATA_CSV: 30662,4.5690,0.0130,0,0,0x0000[0m
+[0;32mI (31122) DATA_CSV: 30692,4.5690,0.0128,0,0,0x0000[0m
+[0;32mI (31152) DATA_CSV: 30722,4.5695,0.0130,0,0,0x0000[0m
+[0;32mI (31182) DATA_CSV: 30752,4.5695,0.0126,0,0,0x0000[0m
+[0;32mI (31212) DATA_CSV: 30782,4.5684,0.0129,0,0,0x0000[0m
+[0;32mI (31242) DATA_CSV: 30812,4.5699,0.0127,0,0,0x0000[0m
+[0;32mI (31272) DATA_CSV: 30842,4.5693,0.0133,0,0,0x0000[0m
+[0;32mI (31302) DATA_CSV: 30872,4.5702,0.0131,0,0,0x0000[0m
+[0;32mI (31332) DATA_CSV: 30902,4.5699,0.0135,0,0,0x0000[0m
+[0;32mI (31362) DATA_CSV: 30932,4.5689,0.0126,0,0,0x0000[0m
+[0;32mI (31392) DATA_CSV: 30962,4.5692,0.0129,0,0,0x0000[0m
+[0;32mI (31422) DATA_CSV: 30992,4.5693,0.0130,0,0,0x0000[0m
+[0;32mI (31452) DATA_CSV: 31022,4.5693,0.0127,0,0,0x0000[0m
+[0;32mI (31482) DATA_CSV: 31052,4.5702,0.0130,0,0,0x0000[0m
+[0;32mI (31512) DATA_CSV: 31082,4.5689,0.0131,0,0,0x0000[0m
+[0;32mI (31542) DATA_CSV: 31112,4.5697,0.0122,0,0,0x0000[0m
+[0;32mI (31572) DATA_CSV: 31142,4.5691,0.0131,0,0,0x0000[0m
+[0;32mI (31602) DATA_CSV: 31172,4.5702,0.0129,0,0,0x0000[0m
+[0;32mI (31632) DATA_CSV: 31202,4.5693,0.0130,0,0,0x0000[0m
+[0;32mI (31662) DATA_CSV: 31232,4.5707,0.0127,0,0,0x0000[0m
+[0;32mI (31692) DATA_CSV: 31262,4.5706,0.0130,0,0,0x0000[0m
+[0;32mI (31722) DATA_CSV: 31292,4.5686,0.0129,0,0,0x0000[0m
+[0;32mI (31752) DATA_CSV: 31322,4.5701,0.0127,0,0,0x0000[0m
+[0;32mI (31782) DATA_CSV: 31352,4.5697,0.0130,0,0,0x0000[0m
+[0;32mI (31812) DATA_CSV: 31382,4.5699,0.0130,0,0,0x0000[0m
+[0;32mI (31842) DATA_CSV: 31412,4.5690,0.0129,0,0,0x0000[0m
+[0;32mI (31872) DATA_CSV: 31442,4.5686,0.0131,0,0,0x0000[0m
+[0;32mI (31902) DATA_CSV: 31472,4.5705,0.0121,0,0,0x0000[0m
+[0;32mI (31932) DATA_CSV: 31502,4.5696,0.0132,0,0,0x0000[0m
+[0;32mI (31962) DATA_CSV: 31532,4.5683,0.0126,0,0,0x0000[0m
+[0;32mI (31992) DATA_CSV: 31562,4.5682,0.0124,0,0,0x0000[0m
+[0;32mI (32022) DATA_CSV: 31592,4.5706,0.0128,0,0,0x0000[0m
+[0;32mI (32052) DATA_CSV: 31622,4.5696,0.0130,0,0,0x0000[0m
+[0;32mI (32082) DATA_CSV: 31652,4.5687,0.0130,0,0,0x0000[0m
+[0;32mI (32112) DATA_CSV: 31682,4.5682,0.0123,0,0,0x0000[0m
+[0;32mI (32142) DATA_CSV: 31712,4.5698,0.0128,0,0,0x0000[0m
+[0;32mI (32172) DATA_CSV: 31742,4.5698,0.0128,0,0,0x0000[0m
+[0;32mI (32202) DATA_CSV: 31772,4.5691,0.0131,0,0,0x0000[0m
+[0;32mI (32232) DATA_CSV: 31802,4.5696,0.0128,0,0,0x0000[0m
+[0;32mI (32262) DATA_CSV: 31832,4.5694,0.0128,0,0,0x0000[0m
+[0;32mI (32292) DATA_CSV: 31862,4.5690,0.0128,0,0,0x0000[0m
+[0;32mI (32322) DATA_CSV: 31892,4.5684,0.0132,0,0,0x0000[0m
+[0;32mI (32352) DATA_CSV: 31922,4.5696,0.0128,0,0,0x0000[0m
+[0;32mI (32382) DATA_CSV: 31952,4.5686,0.0131,0,0,0x0000[0m
+[0;32mI (32412) DATA_CSV: 31982,4.5693,0.0137,0,0,0x0000[0m
+[0;32mI (32442) DATA_CSV: 32012,4.5697,0.0118,0,0,0x0000[0m
+[0;32mI (32442) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (32442) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (32442) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (32452) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (32452) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (32462) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (32472) RobotController: valve_state=0x0000[0m
+[0;32mI (32502) DATA_CSV: 32072,4.5700,0.0127,0,0,0x0000[0m
+[0;32mI (32532) DATA_CSV: 32102,4.5696,0.0123,0,0,0x0000[0m
+[0;32mI (32562) DATA_CSV: 32132,4.5697,0.0121,0,0,0x0000[0m
+[0;32mI (32592) DATA_CSV: 32162,4.5682,0.0119,0,0,0x0000[0m
+[0;32mI (32622) DATA_CSV: 32192,4.5689,0.0123,0,0,0x0000[0m
+[0;32mI (32652) DATA_CSV: 32222,4.5692,0.0128,0,0,0x0000[0m
+[0;32mI (32682) DATA_CSV: 32252,4.5684,0.0121,0,0,0x0000[0m
+[0;32mI (32712) DATA_CSV: 32282,4.5688,0.0117,0,0,0x0000[0m
+[0;32mI (32742) DATA_CSV: 32312,4.5696,0.0119,0,0,0x0000[0m
+[0;32mI (32772) DATA_CSV: 32342,4.5689,0.0123,0,0,0x0000[0m
+[0;32mI (32802) DATA_CSV: 32372,4.5699,0.0129,0,0,0x0000[0m
+[0;32mI (32832) DATA_CSV: 32402,4.5698,0.0120,0,0,0x0000[0m
+[0;32mI (32862) DATA_CSV: 32432,4.5689,0.0125,0,0,0x0000[0m
+[0;32mI (32892) DATA_CSV: 32462,4.5687,0.0121,0,0,0x0000[0m
+[0;32mI (32922) DATA_CSV: 32492,4.5693,0.0122,0,0,0x0000[0m
+[0;32mI (32952) DATA_CSV: 32522,4.5685,0.0119,0,0,0x0000[0m
+[0;32mI (32982) DATA_CSV: 32552,4.5706,0.0119,0,0,0x0000[0m
+[0;32mI (33012) DATA_CSV: 32582,4.5688,0.0121,0,0,0x0000[0m
+[0;32mI (33042) DATA_CSV: 32612,4.5699,0.0120,0,0,0x0000[0m
+[0;32mI (33072) DATA_CSV: 32642,4.5697,0.0120,0,0,0x0000[0m
+[0;32mI (33102) DATA_CSV: 32672,4.5691,0.0125,0,0,0x0000[0m
+[0;32mI (33132) DATA_CSV: 32702,4.5693,0.0120,0,0,0x0000[0m
+[0;32mI (33162) DATA_CSV: 32732,4.5690,0.0121,0,0,0x0000[0m
+[0;32mI (33192) DATA_CSV: 32762,4.5695,0.0129,0,0,0x0000[0m
+[0;32mI (33222) DATA_CSV: 32792,4.5692,0.0120,0,0,0x0000[0m
+[0;32mI (33252) DATA_CSV: 32822,4.5703,0.0122,0,0,0x0000[0m
+[0;32mI (33282) DATA_CSV: 32852,4.5694,0.0121,0,0,0x0000[0m
+[0;32mI (33312) DATA_CSV: 32882,4.5701,0.0123,0,0,0x0000[0m
+[0;32mI (33342) DATA_CSV: 32912,4.5684,0.0129,0,0,0x0000[0m
+[0;32mI (33372) DATA_CSV: 32942,4.5686,0.0120,0,0,0x0000[0m
+[0;32mI (33402) DATA_CSV: 32972,4.5699,0.0128,0,0,0x0000[0m
+[0;32mI (33432) DATA_CSV: 33002,4.5695,0.0121,0,0,0x0000[0m
+[0;32mI (33462) DATA_CSV: 33032,4.5701,0.0119,0,0,0x0000[0m
+[0;32mI (33492) DATA_CSV: 33062,4.5689,0.0129,0,0,0x0000[0m
+[0;32mI (33522) DATA_CSV: 33092,4.5694,0.0117,0,0,0x0000[0m
+[0;32mI (33552) DATA_CSV: 33122,4.5689,0.0121,0,0,0x0000[0m
+[0;32mI (33582) DATA_CSV: 33152,4.5696,0.0128,0,0,0x0000[0m
+[0;32mI (33612) DATA_CSV: 33182,4.5703,0.0117,0,0,0x0000[0m
+[0;32mI (33642) DATA_CSV: 33212,4.5688,0.0120,0,0,0x0000[0m
+[0;32mI (33672) DATA_CSV: 33242,4.5701,0.0120,0,0,0x0000[0m
+[0;32mI (33702) DATA_CSV: 33272,4.5689,0.0118,0,0,0x0000[0m
+[0;32mI (33732) DATA_CSV: 33302,4.5705,0.0127,0,0,0x0000[0m
+[0;32mI (33762) DATA_CSV: 33332,4.5696,0.0131,0,0,0x0000[0m
+[0;32mI (33792) DATA_CSV: 33362,4.5688,0.0121,0,0,0x0000[0m
+[0;32mI (33822) DATA_CSV: 33392,4.5684,0.0119,0,0,0x0000[0m
+[0;32mI (33852) DATA_CSV: 33422,4.5685,0.0121,0,0,0x0000[0m
+[0;32mI (33882) DATA_CSV: 33452,4.5701,0.0129,0,0,0x0000[0m
+[0;32mI (33912) DATA_CSV: 33482,4.5686,0.0129,0,0,0x0000[0m
+[0;32mI (33942) DATA_CSV: 33512,4.5701,0.0116,0,0,0x0000[0m
+[0;32mI (33972) DATA_CSV: 33542,4.5688,0.0122,0,0,0x0000[0m
+[0;32mI (33972) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (33972) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (33972) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (33982) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (33982) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (33992) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (34002) RobotController: valve_state=0x0000[0m
+[0;32mI (34032) DATA_CSV: 33602,4.5687,0.0130,0,0,0x0000[0m
+[0;32mI (34062) DATA_CSV: 33632,4.5683,0.0121,0,0,0x0000[0m
+[0;32mI (34092) DATA_CSV: 33662,4.5696,0.0120,0,0,0x0000[0m
+[0;32mI (34122) DATA_CSV: 33692,4.5685,0.0121,0,0,0x0000[0m
+[0;32mI (34152) DATA_CSV: 33722,4.5685,0.0117,0,0,0x0000[0m
+[0;32mI (34182) DATA_CSV: 33752,4.5693,0.0121,0,0,0x0000[0m
+[0;32mI (34212) DATA_CSV: 33782,4.5700,0.0122,0,0,0x0000[0m
+[0;32mI (34242) DATA_CSV: 33812,4.5688,0.0120,0,0,0x0000[0m
+[0;32mI (34272) DATA_CSV: 33842,4.5697,0.0123,0,0,0x0000[0m
+[0;32mI (34302) DATA_CSV: 33872,4.5704,0.0123,0,0,0x0000[0m
+[0;32mI (34332) DATA_CSV: 33902,4.5704,0.0121,0,0,0x0000[0m
+[0;32mI (34362) DATA_CSV: 33932,4.5693,0.0124,0,0,0x0000[0m
+[0;32mI (34392) DATA_CSV: 33962,4.5692,0.0117,0,0,0x0000[0m
+[0;32mI (34422) DATA_CSV: 33992,4.5694,0.0116,0,0,0x0000[0m
+[0;32mI (34452) DATA_CSV: 34022,4.5691,0.0121,0,0,0x0000[0m
+[0;32mI (34482) DATA_CSV: 34052,4.5707,0.0123,0,0,0x0000[0m
+[0;32mI (34512) DATA_CSV: 34082,4.5699,0.0118,0,0,0x0000[0m
+[0;32mI (34542) DATA_CSV: 34112,4.5705,0.0117,0,0,0x0000[0m
+[0;32mI (34572) DATA_CSV: 34142,4.5699,0.0117,0,0,0x0000[0m
+[0;32mI (34602) DATA_CSV: 34172,4.5707,0.0120,0,0,0x0000[0m
+[0;32mI (34632) DATA_CSV: 34202,4.5708,0.0121,0,0,0x0000[0m
+[0;32mI (34662) DATA_CSV: 34232,4.5711,0.0119,0,0,0x0000[0m
+[0;32mI (34692) DATA_CSV: 34262,4.5706,0.0119,0,0,0x0000[0m
+[0;32mI (34722) DATA_CSV: 34292,4.5701,0.0120,0,0,0x0000[0m
+[0;32mI (34752) DATA_CSV: 34322,4.5689,0.0121,0,0,0x0000[0m
+[0;32mI (34782) DATA_CSV: 34352,4.5698,0.0121,0,0,0x0000[0m
+[0;32mI (34812) DATA_CSV: 34382,4.5710,0.0120,0,0,0x0000[0m
+[0;32mI (34842) DATA_CSV: 34412,4.5710,0.0122,0,0,0x0000[0m
+[0;32mI (34872) DATA_CSV: 34442,4.5705,0.0121,0,0,0x0000[0m
+[0;32mI (34902) DATA_CSV: 34472,4.5704,0.0118,0,0,0x0000[0m
+[0;32mI (34932) DATA_CSV: 34502,4.5701,0.0122,0,0,0x0000[0m
+[0;32mI (34962) DATA_CSV: 34532,4.5702,0.0122,0,0,0x0000[0m
+[0;32mI (34992) DATA_CSV: 34562,4.5706,0.0124,0,0,0x0000[0m
+[0;32mI (35022) DATA_CSV: 34592,4.5708,0.0121,0,0,0x0000[0m
+[0;32mI (35052) DATA_CSV: 34622,4.5711,0.0120,0,0,0x0000[0m
+[0;32mI (35082) DATA_CSV: 34652,4.5698,0.0116,0,0,0x0000[0m
+[0;32mI (35112) DATA_CSV: 34682,4.5705,0.0122,0,0,0x0000[0m
+[0;32mI (35142) DATA_CSV: 34712,4.5710,0.0118,0,0,0x0000[0m
+[0;32mI (35172) DATA_CSV: 34742,4.5706,0.0119,0,0,0x0000[0m
+[0;32mI (35202) DATA_CSV: 34772,4.5681,0.0119,0,0,0x0000[0m
+[0;32mI (35232) DATA_CSV: 34802,4.5711,0.0120,0,0,0x0000[0m
+[0;32mI (35262) DATA_CSV: 34832,4.5699,0.0117,0,0,0x0000[0m
+[0;32mI (35292) DATA_CSV: 34862,4.5709,0.0116,0,0,0x0000[0m
+[0;32mI (35322) DATA_CSV: 34892,4.5705,0.0122,0,0,0x0000[0m
+[0;32mI (35352) DATA_CSV: 34922,4.5714,0.0120,0,0,0x0000[0m
+[0;32mI (35382) DATA_CSV: 34952,4.5716,0.0119,0,0,0x0000[0m
+[0;32mI (35412) DATA_CSV: 34982,4.5714,0.0123,0,0,0x0000[0m
+[0;32mI (35442) DATA_CSV: 35012,4.5717,0.0121,0,0,0x0000[0m
+[0;32mI (35472) DATA_CSV: 35042,4.5692,0.0122,0,0,0x0000[0m
+[0;32mI (35502) DATA_CSV: 35072,4.5717,0.0120,0,0,0x0000[0m
+[0;32mI (35502) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (35502) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (35502) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (35512) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (35512) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (35522) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (35532) RobotController: valve_state=0x0000[0m
+[0;32mI (35562) DATA_CSV: 35132,4.5713,0.0115,0,0,0x0000[0m
+[0;32mI (35592) DATA_CSV: 35162,4.5715,0.0118,0,0,0x0000[0m
+[0;32mI (35622) DATA_CSV: 35192,4.5704,0.0120,0,0,0x0000[0m
+[0;32mI (35652) DATA_CSV: 35222,4.5722,0.0119,0,0,0x0000[0m
+[0;32mI (35682) DATA_CSV: 35252,4.5703,0.0122,0,0,0x0000[0m
+[0;32mI (35712) DATA_CSV: 35282,4.5708,0.0120,0,0,0x0000[0m
+[0;32mI (35742) DATA_CSV: 35312,4.5704,0.0117,0,0,0x0000[0m
+[0;32mI (35772) DATA_CSV: 35342,4.5726,0.0120,0,0,0x0000[0m
+[0;32mI (35802) DATA_CSV: 35372,4.5724,0.0120,0,0,0x0000[0m
+[0;32mI (35832) DATA_CSV: 35402,4.5717,0.0122,0,0,0x0000[0m
+[0;32mI (35862) DATA_CSV: 35432,4.5715,0.0121,0,0,0x0000[0m
+[0;32mI (35892) DATA_CSV: 35462,4.5709,0.0122,0,0,0x0000[0m
+[0;32mI (35922) DATA_CSV: 35492,4.5723,0.0120,0,0,0x0000[0m
+[0;32mI (35952) DATA_CSV: 35522,4.5710,0.0121,0,0,0x0000[0m
+[0;32mI (35982) DATA_CSV: 35552,4.5721,0.0119,0,0,0x0000[0m
+[0;32mI (36012) DATA_CSV: 35582,4.5719,0.0120,0,0,0x0000[0m
+[0;32mI (36042) DATA_CSV: 35612,4.5712,0.0119,0,0,0x0000[0m
+[0;32mI (36072) DATA_CSV: 35642,4.5722,0.0112,0,0,0x0000[0m
+[0;32mI (36102) DATA_CSV: 35672,4.5718,0.0123,0,0,0x0000[0m
+[0;32mI (36132) DATA_CSV: 35702,4.5719,0.0122,0,0,0x0000[0m
+[0;32mI (36162) DATA_CSV: 35732,4.5726,0.0121,0,0,0x0000[0m
+[0;32mI (36192) DATA_CSV: 35762,4.5729,0.0120,0,0,0x0000[0m
+[0;32mI (36222) DATA_CSV: 35792,4.5722,0.0122,0,0,0x0000[0m
+[0;32mI (36252) DATA_CSV: 35822,4.5719,0.0123,0,0,0x0000[0m
+[0;32mI (36282) DATA_CSV: 35852,4.5733,0.0121,0,0,0x0000[0m
+[0;32mI (36312) DATA_CSV: 35882,4.5714,0.0119,0,0,0x0000[0m
+[0;32mI (36342) DATA_CSV: 35912,4.5732,0.0119,0,0,0x0000[0m
+[0;32mI (36372) DATA_CSV: 35942,4.5690,0.0121,0,0,0x0000[0m
+[0;32mI (36402) DATA_CSV: 35972,4.5725,0.0119,0,0,0x0000[0m
+[0;32mI (36432) DATA_CSV: 36002,4.5717,0.0120,0,0,0x0000[0m
+[0;32mI (36462) DATA_CSV: 36032,4.5735,0.0120,0,0,0x0000[0m
+[0;32mI (36492) DATA_CSV: 36062,4.5718,0.0119,0,0,0x0000[0m
+[0;32mI (36522) DATA_CSV: 36092,4.5727,0.0128,0,0,0x0000[0m
+[0;32mI (36552) DATA_CSV: 36122,4.5729,0.0122,0,0,0x0000[0m
+[0;32mI (36582) DATA_CSV: 36152,4.5728,0.0119,0,0,0x0000[0m
+[0;32mI (36612) DATA_CSV: 36182,4.5738,0.0119,0,0,0x0000[0m
+[0;32mI (36642) DATA_CSV: 36212,4.5725,0.0117,0,0,0x0000[0m
+[0;32mI (36672) DATA_CSV: 36242,4.5734,0.0118,0,0,0x0000[0m
+[0;32mI (36702) DATA_CSV: 36272,4.5729,0.0128,0,0,0x0000[0m
+[0;32mI (36732) DATA_CSV: 36302,4.5726,0.0121,0,0,0x0000[0m
+[0;32mI (36762) DATA_CSV: 36332,4.5729,0.0121,0,0,0x0000[0m
+[0;32mI (36792) DATA_CSV: 36362,4.5742,0.0127,0,0,0x0000[0m
+[0;32mI (36822) DATA_CSV: 36392,4.5740,0.0120,0,0,0x0000[0m
+[0;32mI (36852) DATA_CSV: 36422,4.5723,0.0118,0,0,0x0000[0m
+[0;32mI (36882) DATA_CSV: 36452,4.5728,0.0119,0,0,0x0000[0m
+[0;32mI (36912) DATA_CSV: 36482,4.5739,0.0121,0,0,0x0000[0m
+[0;32mI (36942) DATA_CSV: 36512,4.5737,0.0120,0,0,0x0000[0m
+[0;32mI (36972) DATA_CSV: 36542,4.5728,0.0118,0,0,0x0000[0m
+[0;32mI (37002) DATA_CSV: 36572,4.5741,0.0123,0,0,0x0000[0m
+[0;32mI (37032) DATA_CSV: 36602,4.5735,0.0118,0,0,0x0000[0m
+[0;32mI (37032) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (37032) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (37032) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (37042) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (37042) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (37052) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (37062) RobotController: valve_state=0x0000[0m
+[0;32mI (37092) DATA_CSV: 36662,4.5706,0.0122,0,0,0x0000[0m
+[0;32mI (37122) DATA_CSV: 36692,4.5724,0.0111,0,0,0x0000[0m
+[0;32mI (37152) DATA_CSV: 36722,4.5724,0.0114,0,0,0x0000[0m
+[0;32mI (37182) DATA_CSV: 36752,4.5737,0.0116,0,0,0x0000[0m
+[0;32mI (37212) DATA_CSV: 36782,4.5742,0.0120,0,0,0x0000[0m
+[0;32mI (37242) DATA_CSV: 36812,4.5732,0.0120,0,0,0x0000[0m
+[0;32mI (37272) DATA_CSV: 36842,4.5730,0.0120,0,0,0x0000[0m
+[0;32mI (37302) DATA_CSV: 36872,4.5744,0.0120,0,0,0x0000[0m
+[0;32mI (37332) DATA_CSV: 36902,4.5735,0.0120,0,0,0x0000[0m
+[0;32mI (37362) DATA_CSV: 36932,4.5735,0.0120,0,0,0x0000[0m
+[0;32mI (37392) DATA_CSV: 36962,4.5721,0.0119,0,0,0x0000[0m
+[0;32mI (37422) DATA_CSV: 36992,4.5737,0.0111,0,0,0x0000[0m
+[0;32mI (37452) DATA_CSV: 37022,4.5730,0.0122,0,0,0x0000[0m
+[0;32mI (37482) DATA_CSV: 37052,4.5729,0.0119,0,0,0x0000[0m
+[0;32mI (37512) DATA_CSV: 37082,4.5740,0.0119,0,0,0x0000[0m
+[0;32mI (37542) DATA_CSV: 37112,4.5738,0.0119,0,0,0x0000[0m
+[0;32mI (37572) DATA_CSV: 37142,4.5745,0.0119,0,0,0x0000[0m
+[0;32mI (37602) DATA_CSV: 37172,4.5741,0.0121,0,0,0x0000[0m
+[0;32mI (37632) DATA_CSV: 37202,4.5744,0.0120,0,0,0x0000[0m
+[0;32mI (37662) DATA_CSV: 37232,4.5740,0.0122,0,0,0x0000[0m
+[0;32mI (37692) DATA_CSV: 37262,4.5737,0.0114,0,0,0x0000[0m
+[0;32mI (37722) DATA_CSV: 37292,4.5738,0.0120,0,0,0x0000[0m
+[0;32mI (37752) DATA_CSV: 37322,4.5746,0.0118,0,0,0x0000[0m
+[0;32mI (37782) DATA_CSV: 37352,4.5749,0.0117,0,0,0x0000[0m
+[0;32mI (37812) DATA_CSV: 37382,4.5743,0.0120,0,0,0x0000[0m
+[0;32mI (37842) DATA_CSV: 37412,4.5754,0.0118,0,0,0x0000[0m
+[0;32mI (37872) DATA_CSV: 37442,4.5745,0.0120,0,0,0x0000[0m
+[0;32mI (37902) DATA_CSV: 37472,4.5719,0.0121,0,0,0x0000[0m
+[0;32mI (37932) DATA_CSV: 37502,4.5738,0.0116,0,0,0x0000[0m
+[0;32mI (37962) DATA_CSV: 37532,4.5740,0.0117,0,0,0x0000[0m
+[0;32mI (37992) DATA_CSV: 37562,4.5750,0.0120,0,0,0x0000[0m
+[0;32mI (38022) DATA_CSV: 37592,4.5735,0.0118,0,0,0x0000[0m
+[0;32mI (38052) DATA_CSV: 37622,4.5732,0.0122,0,0,0x0000[0m
+[0;32mI (38082) DATA_CSV: 37652,4.5741,0.0119,0,0,0x0000[0m
+[0;32mI (38112) DATA_CSV: 37682,4.5706,0.0120,0,0,0x0000[0m
+[0;32mI (38142) DATA_CSV: 37712,4.5715,0.0119,0,0,0x0000[0m
+[0;32mI (38172) DATA_CSV: 37742,4.5745,0.0119,0,0,0x0000[0m
+[0;32mI (38202) DATA_CSV: 37772,4.5743,0.0119,0,0,0x0000[0m
+[0;32mI (38232) DATA_CSV: 37802,4.5747,0.0119,0,0,0x0000[0m
+[0;32mI (38262) DATA_CSV: 37832,4.5746,0.0115,0,0,0x0000[0m
+[0;32mI (38292) DATA_CSV: 37862,4.5743,0.0116,0,0,0x0000[0m
+[0;32mI (38322) DATA_CSV: 37892,4.5752,0.0116,0,0,0x0000[0m
+[0;32mI (38352) DATA_CSV: 37922,4.5715,0.0121,0,0,0x0000[0m
+[0;32mI (38382) DATA_CSV: 37952,4.5726,0.0121,0,0,0x0000[0m
+[0;32mI (38412) DATA_CSV: 37982,4.5747,0.0117,0,0,0x0000[0m
+[0;32mI (38442) DATA_CSV: 38012,4.5748,0.0118,0,0,0x0000[0m
+[0;32mI (38472) DATA_CSV: 38042,4.5726,0.0121,0,0,0x0000[0m
+[0;32mI (38502) DATA_CSV: 38072,4.5723,0.0121,0,0,0x0000[0m
+[0;32mI (38532) DATA_CSV: 38102,4.5742,0.0123,0,0,0x0000[0m
+[0;32mI (38562) DATA_CSV: 38132,4.5748,0.0122,0,0,0x0000[0m
+[0;32mI (38562) RobotController: joint[0] current_steps=0 target_steps=0[0m
+[0;32mI (38562) RobotController: joint[1] current_steps=0 target_steps=0[0m
+[0;32mI (38562) RobotController: joint[2] current_steps=0 target_steps=0[0m
+[0;32mI (38572) RobotController: joint[3] current_steps=0 target_steps=0[0m
+[0;32mI (38572) RobotController: joint[4] current_steps=0 target_steps=0[0m
+[0;32mI (38582) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (38592) RobotController: valve_state=0x0000[0m
+[0;32mI (38622) DATA_CSV: 38192,4.5757,0.0116,0,0,0x0000[0m
+[0;32mI (38652) DATA_CSV: 38222,4.5739,0.0109,0,0,0x0000[0m
+[0;32mI (38682) DATA_CSV: 38252,4.5747,0.0110,0,0,0x0000[0m
+[0;32mI (38712) DATA_CSV: 38282,4.5741,0.0121,0,0,0x0000[0m
+[0;32mI (38742) DATA_CSV: 38312,4.5755,0.0109,0,0,0x0000[0m
+[0;32mI (38772) DATA_CSV: 38342,4.5756,0.0110,0,0,0x0000[0m
+[0;32mI (38802) DATA_CSV: 38372,4.5739,0.0118,0,0,0x0000[0m
+[0;32mI (38832) DATA_CSV: 38402,4.5763,0.0123,0,0,0x0000[0m
+[0;32mI (38862) DATA_CSV: 38432,4.5754,0.0118,0,0,0x0000[0m
+[0;32mI (38892) DATA_CSV: 38462,4.5750,0.0123,0,0,0x0000[0m
+[0;32mI (38922) DATA_CSV: 38492,4.5753,0.0122,0,0,0x0000[0m
+[0;32mI (38952) DATA_CSV: 38522,4.5757,0.0118,0,0,0x0000[0m
+[0;32mI (38982) DATA_CSV: 38552,4.5754,0.0119,0,0,0x0000[0m
+[0;32mI (39012) DATA_CSV: 38582,4.5757,0.0119,0,0,0x0000[0m
+[0;32mI (39042) DATA_CSV: 38612,4.5757,0.0118,0,0,0x0000[0m
+[0;32mI (39072) DATA_CSV: 38642,4.5719,0.0119,0,0,0x0000[0m
+[0;32mI (39102) DATA_CSV: 38672,4.5762,0.0119,0,0,0x0000[0m
+[0;32mI (39132) DATA_CSV: 38702,4.5739,0.0117,0,0,0x0000[0m
+[0;32mI (39162) DATA_CSV: 38732,4.5755,0.0118,0,0,0x0000[0m
+[0;32mI (39192) DATA_CSV: 38762,4.5760,0.0120,0,0,0x0000[0m
+[0;32mI (39222) DATA_CSV: 38792,4.5762,0.0119,0,0,0x0000[0m
+[0;32mI (39252) DATA_CSV: 38822,4.5728,0.0118,0,0,0x0000[0m
+[0;32mI (39282) DATA_CSV: 38852,4.5760,0.0114,0,0,0x0000[0m
+[0;32mI (39312) DATA_CSV: 38882,4.5726,0.0122,0,0,0x0000[0m
+[0;32mI (39342) DATA_CSV: 38912,4.5726,0.0114,0,0,0x0000[0m
+[0;32mI (39372) DATA_CSV: 38942,4.5725,0.0115,0,0,0x0000[0m
+[0;32mI (39402) DATA_CSV: 38972,4.5754,0.0121,0,0,0x0000[0m
+[0;32mI (39432) DATA_CSV: 39002,4.5751,0.0122,0,0,0x0000[0m
+[0;32mI (39462) DATA_CSV: 39032,4.5726,0.0122,0,0,0x0000[0m
+[0;32mI (39492) DATA_CSV: 39062,4.5729,0.0118,0,0,0x0000[0m
+[0;32mI (39522) DATA_CSV: 39092,4.5731,0.0120,0,0,0x0000[0m
+[0;32mI (39552) DATA_CSV: 39122,4.5755,0.0116,0,0,0x0000[0m
+[0;32mI (39582) DATA_CSV: 39152,4.5761,0.0119,0,0,0x0000[0m
+[0;32mI (39612) DATA_CSV: 39182,4.5725,0.0121,0,0,0x0000[0m
+[0;32mI (39642) DATA_CSV: 39212,4.5765,0.0118,0,0,0x0000[0m
+[0;32mI (39672) DATA_CSV: 39242,4.5736,0.0120,0,0,0x0000[0m
+[0;32mI (39702) DATA_CSV: 39272,4.5725,0.0117,0,0,0x0000[0m
+[0;32mI (39732) DATA_CSV: 39302,4.5735,0.0116,0,0,0x0000[0m
+[0;32mI (39762) DATA_CSV: 39332,4.5732,0.0120,0,0,0x0000[0m
+[0;32mI (39792) DATA_CSV: 39362,4.5729,0.0117,0,0,0x0000[0m
+[0;32mI (39822) DATA_CSV: 39392,4.5766,0.0118,0,0,0x0000[0m
+[0;32mI (39852) DATA_CSV: 39422,4.5734,0.0122,0,0,0x0000[0m
+[0;32mI (39882) DATA_CSV: 39452,4.5731,0.0117,0,0,0x0000[0m
+[0;32mI (39912) DATA_CSV: 39482,4.5731,0.0119,0,0,0x0000[0m
+[0;32mI (39942) DATA_CSV: 39512,4.5729,0.0117,0,0,0x0000[0m
+[0;32mI (39972) DATA_CSV: 39542,4.5765,0.0119,0,0,0x0000[0m
+[0;32mI (40002) DATA_CSV: 39572,4.5763,0.0118,0,0,0x0000[0m
+[0;32mI (40032) DATA_CSV: 39602,4.5743,0.0118,0,0,0x0000[0m
+jointPathCallback called
+Received joint path: 1 waypoints, 5 dof
+Consuming path with 1 waypoints and 5 dof
+[0;32mI (40042) app_main: Received path with 1 waypoints[0m
+[0;32mI (40052) RobotController: target joint[0]: rad=0.400000 -> steps=330[0m
+[0;32mI (40052) RobotController: target joint[1]: rad=0.400000 -> steps=206[0m
+[0;32mI (40062) RobotController: target joint[2]: rad=0.400000 -> steps=103[0m
+[0;32mI (40062) RobotController: target joint[3]: rad=0.400000 -> steps=103[0m
+[0;32mI (40072) RobotController: target joint[4]: rad=0.400000 -> steps=147[0m
+[0;32mI (40082) app_main: Sent waypoint 1 / 1[0m
+[0;32mI (40082) DATA_CSV: 39656,4.5739,0.0121,0,0,0x0000[0m
+[0;32mI (40122) DATA_CSV: 39692,4.5753,0.0119,1,0,0x0105[0m
+[0;32mI (40122) RobotController: joint[0] current_steps=1 target_steps=330[0m
+[0;32mI (40122) RobotController: joint[1] current_steps=1 target_steps=206[0m
+[0;32mI (40122) RobotController: joint[2] current_steps=0 target_steps=103[0m
+[0;32mI (40132) RobotController: joint[3] current_steps=0 target_steps=103[0m
+[0;32mI (40132) RobotController: joint[4] current_steps=1 target_steps=147[0m
+[0;32mI (40142) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (40152) RobotController: valve_state=0x0157[0m
+[0;32mI (40182) DATA_CSV: 39752,4.2798,0.0116,1,1,0x0157[0m
+[0;32mI (40212) DATA_CSV: 39782,3.6969,1.7260,0,1,0x015E[0m
+[0;32mI (40242) DATA_CSV: 39812,3.5893,2.9388,0,1,0x035E[0m
+[0;32mI (40272) DATA_CSV: 39842,3.4371,3.2925,0,0,0x0358[0m
+[0;32mI (40302) DATA_CSV: 39872,3.3127,2.5512,0,0,0x0358[0m
+[0;32mI (40332) DATA_CSV: 39902,3.3142,1.1390,1,0,0x03F9[0m
+[0;32mI (40362) DATA_CSV: 39932,3.2567,0.3745,1,1,0x02F3[0m
+[0;32mI (40392) DATA_CSV: 39962,2.9080,0.1462,1,1,0x02F3[0m
+[0;32mI (40422) DATA_CSV: 39992,2.8397,1.5478,0,1,0x02F2[0m
+[0;32mI (40452) DATA_CSV: 40022,2.8792,2.3749,0,1,0x02F6[0m
+[0;32mI (40482) DATA_CSV: 40052,2.8800,2.6634,0,0,0x00A4[0m
+[0;32mI (40512) DATA_CSV: 40082,2.6690,2.1066,1,0,0x00AD[0m
+[0;32mI (40542) DATA_CSV: 40112,2.5569,0.9177,1,0,0x00AD[0m
+[0;32mI (40572) DATA_CSV: 40142,2.6639,0.2686,1,1,0x01AF[0m
+[0;32mI (40602) DATA_CSV: 40172,2.6352,0.0914,1,1,0x01AB[0m
+[0;32mI (40632) DATA_CSV: 40202,2.5647,1.3016,0,1,0x010A[0m
+[0;32mI (40662) DATA_CSV: 40232,2.4252,2.0372,0,0,0x0108[0m
+[0;32mI (40692) DATA_CSV: 40262,2.3891,1.7291,0,0,0x0300[0m
+[0;32mI (40722) DATA_CSV: 40292,2.3864,0.7009,1,0,0x0301[0m
+[0;32mI (40752) DATA_CSV: 40322,2.4097,0.1717,1,0,0x0305[0m
+[0;32mI (40782) DATA_CSV: 40352,2.4564,0.0205,1,1,0x0307[0m
+[0;32mI (40812) DATA_CSV: 40382,2.5792,0.0147,0,1,0x0256[0m
+[0;32mI (40842) DATA_CSV: 40412,2.3657,0.9564,0,1,0x025E[0m
+[0;32mI (40872) DATA_CSV: 40442,2.3346,1.8053,0,0,0x025C[0m
+[0;32mI (40902) DATA_CSV: 40472,2.4038,1.5853,0,0,0x025C[0m
+[0;32mI (40932) DATA_CSV: 40502,2.5476,0.6206,1,0,0x0059[0m
+[0;32mI (40962) DATA_CSV: 40532,2.5148,0.1401,1,1,0x00FB[0m
+[0;32mI (40992) DATA_CSV: 40562,2.4786,0.0475,1,1,0x00F3[0m
+[0;32mI (41022) DATA_CSV: 40592,2.4915,0.9301,0,1,0x01F2[0m
+[0;32mI (41052) DATA_CSV: 40622,2.3806,1.8631,0,1,0x01F2[0m
+[0;32mI (41082) DATA_CSV: 40652,2.4178,2.1592,0,0,0x01F4[0m
+[0;32mI (41112) DATA_CSV: 40682,2.4383,1.7229,1,0,0x01A5[0m
+[0;32mI (41142) DATA_CSV: 40712,2.3272,0.7326,1,0,0x03A5[0m
+[0;32mI (41172) DATA_CSV: 40742,2.2999,0.1832,1,1,0x03AF[0m
+[0;32mI (41202) DATA_CSV: 40772,2.4070,0.0559,1,1,0x03AF[0m
+[0;32mI (41232) DATA_CSV: 40802,2.4934,0.6834,0,1,0x03AA[0m
+[0;32mI (41262) DATA_CSV: 40832,2.4745,1.7647,0,0,0x02A8[0m
+[0;32mI (41292) DATA_CSV: 40862,2.4164,1.5783,0,0,0x0208[0m
+[0;32mI (41322) DATA_CSV: 40892,2.3730,0.6401,1,0,0x0201[0m
+[0;32mI (41352) DATA_CSV: 40922,2.3920,0.1460,1,0,0x0201[0m
+[0;32mI (41382) DATA_CSV: 40952,2.4952,0.0183,1,1,0x0003[0m
+[0;32mI (41412) DATA_CSV: 40982,2.5906,0.0144,0,1,0x0006[0m
+[0;32mI (41442) DATA_CSV: 41012,2.4748,1.0639,0,1,0x0056[0m
+[0;32mI (41472) DATA_CSV: 41042,2.3890,1.9292,0,0,0x015C[0m
+[0;32mI (41502) DATA_CSV: 41072,2.3354,1.6186,0,0,0x015C[0m
+[0;32mI (41532) DATA_CSV: 41102,2.4022,0.6576,1,0,0x015D[0m
+[0;32mI (41562) DATA_CSV: 41132,2.5015,0.1548,1,1,0x015B[0m
+[0;32mI (41592) DATA_CSV: 41162,2.5513,0.0530,1,1,0x03FB[0m
+[0;32mI (41622) DATA_CSV: 41192,2.4081,1.0809,0,1,0x03FA[0m
+[0;32mI (41652) DATA_CSV: 41222,2.3757,1.8827,0,1,0x03F2[0m
+[0;32mI (41652) RobotController: joint[0] current_steps=31 target_steps=330[0m
+[0;32mI (41652) RobotController: joint[1] current_steps=20 target_steps=206[0m
+[0;32mI (41652) RobotController: joint[2] current_steps=10 target_steps=103[0m
+[0;32mI (41662) RobotController: joint[3] current_steps=10 target_steps=103[0m
+[0;32mI (41662) RobotController: joint[4] current_steps=14 target_steps=147[0m
+[0;32mI (41672) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (41682) RobotController: valve_state=0x03f0[0m
+[0;32mI (41712) DATA_CSV: 41282,2.3865,2.1406,0,0,0x03F0[0m
+[0;32mI (41742) DATA_CSV: 41312,2.5980,0.7189,1,0,0x02F5[0m
+[0;32mI (41772) DATA_CSV: 41342,2.5407,0.1790,1,1,0x02A7[0m
+[0;32mI (41802) DATA_CSV: 41372,2.4325,0.0593,1,1,0x00AF[0m
+[0;32mI (41832) DATA_CSV: 41402,2.3453,0.8100,0,1,0x00AE[0m
+[0;32mI (41862) DATA_CSV: 41432,2.3642,1.7166,0,1,0x00AE[0m
+[0;32mI (41892) DATA_CSV: 41462,2.4651,2.1488,0,0,0x00A8[0m
+[0;32mI (41922) DATA_CSV: 41492,2.5021,1.7312,1,0,0x0109[0m
+[0;32mI (41952) DATA_CSV: 41522,2.3063,0.7412,1,0,0x0101[0m
+[0;32mI (41982) DATA_CSV: 41552,2.3176,0.1887,1,1,0x0103[0m
+[0;32mI (42012) DATA_CSV: 41582,2.4538,0.0624,1,1,0x0103[0m
+[0;32mI (42042) DATA_CSV: 41612,2.5256,0.9668,0,1,0x0306[0m
+[0;32mI (42072) DATA_CSV: 41642,2.4331,1.9237,0,0,0x0354[0m
+[0;32mI (42102) DATA_CSV: 41672,2.2798,1.6229,0,0,0x0354[0m
+[0;32mI (42132) DATA_CSV: 41702,2.3286,0.6700,1,0,0x035D[0m
+[0;32mI (42162) DATA_CSV: 41732,2.4125,0.1581,1,0,0x025D[0m
+[0;32mI (42192) DATA_CSV: 41762,2.4878,0.0195,1,1,0x025B[0m
+[0;32mI (42222) DATA_CSV: 41792,2.5367,0.0162,0,1,0x025A[0m
+[0;32mI (42252) DATA_CSV: 41822,2.5047,1.0241,0,1,0x00FA[0m
+[0;32mI (42282) DATA_CSV: 41852,2.4487,1.9082,0,0,0x00F0[0m
+[0;32mI (42312) DATA_CSV: 41882,2.3870,1.6152,0,0,0x00F0[0m
+[0;32mI (42342) DATA_CSV: 41912,2.4583,0.6685,1,0,0x00F1[0m
+[0;32mI (42372) DATA_CSV: 41942,2.5409,0.1583,1,1,0x01F7[0m
+[0;32mI (42402) DATA_CSV: 41972,2.5088,0.0538,1,1,0x01A7[0m
+[0;32mI (42432) DATA_CSV: 42002,2.3667,1.1588,0,1,0x01AE[0m
+[0;32mI (42462) DATA_CSV: 42032,2.3354,1.8806,0,1,0x01AE[0m
+[0;32mI (42492) DATA_CSV: 42062,2.4306,2.1631,0,0,0x03AC[0m
+[0;32mI (42522) DATA_CSV: 42092,2.4526,1.7156,1,0,0x03A9[0m
+[0;32mI (42552) DATA_CSV: 42122,2.4091,0.7312,1,0,0x0309[0m
+[0;32mI (42582) DATA_CSV: 42152,2.3641,0.1847,1,1,0x030B[0m
+[0;32mI (42612) DATA_CSV: 42182,2.4438,0.0615,1,1,0x0203[0m
+[0;32mI (42642) DATA_CSV: 42212,2.4351,0.9827,0,1,0x0202[0m
+[0;32mI (42672) DATA_CSV: 42242,2.4649,1.8728,0,0,0x0204[0m
+[0;32mI (42702) DATA_CSV: 42272,2.4529,1.6017,0,0,0x0004[0m
+[0;32mI (42732) DATA_CSV: 42302,2.4786,0.6577,1,0,0x0055[0m
+[0;32mI (42762) DATA_CSV: 42332,2.3984,0.1546,1,0,0x005D[0m
+[0;32mI (42792) DATA_CSV: 42362,2.4500,0.0190,1,1,0x005F[0m
+[0;32mI (42822) DATA_CSV: 42392,2.5741,0.0155,0,1,0x015E[0m
+[0;32mI (42852) DATA_CSV: 42422,2.4986,1.1138,0,1,0x015A[0m
+[0;32mI (42882) DATA_CSV: 42453,2.4836,1.9642,0,0,0x01F8[0m
+[0;32mI (42912) DATA_CSV: 42482,2.4597,1.6521,0,0,0x01F0[0m
+[0;32mI (42942) DATA_CSV: 42512,2.4675,0.6738,1,0,0x03F1[0m
+[0;32mI (42972) DATA_CSV: 42542,2.4295,0.1609,1,1,0x03F3[0m
+[0;32mI (43002) DATA_CSV: 42572,2.5062,0.0535,1,1,0x03F7[0m
+[0;32mI (43032) DATA_CSV: 42602,2.5031,1.0760,0,1,0x03A6[0m
+[0;32mI (43062) DATA_CSV: 42632,2.3899,1.9227,0,1,0x02A6[0m
+[0;32mI (43092) DATA_CSV: 42662,2.3451,2.1208,0,0,0x02AC[0m
+[0;32mI (43122) DATA_CSV: 42692,2.4007,1.6888,1,0,0x02AD[0m
+[0;32mI (43152) DATA_CSV: 42722,2.4699,0.7116,1,0,0x00A9[0m
+[0;32mI (43182) DATA_CSV: 42752,2.4665,0.1753,1,1,0x00AB[0m
+[0;32mI (43182) RobotController: joint[0] current_steps=62 target_steps=330[0m
+[0;32mI (43182) RobotController: joint[1] current_steps=39 target_steps=206[0m
+[0;32mI (43182) RobotController: joint[2] current_steps=19 target_steps=103[0m
+[0;32mI (43192) RobotController: joint[3] current_steps=19 target_steps=103[0m
+[0;32mI (43192) RobotController: joint[4] current_steps=28 target_steps=147[0m
+[0;32mI (43202) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (43212) RobotController: valve_state=0x000b[0m
+[0;32mI (43242) DATA_CSV: 42812,2.5277,0.0575,1,1,0x000B[0m
+[0;32mI (43272) DATA_CSV: 42842,2.4879,1.9542,0,1,0x0102[0m
+[0;32mI (43302) DATA_CSV: 42872,2.4814,2.2681,0,0,0x0100[0m
+[0;32mI (43332) DATA_CSV: 42902,2.4968,1.7464,1,0,0x0105[0m
+[0;32mI (43362) DATA_CSV: 42932,2.4856,0.7531,1,0,0x0155[0m
+[0;32mI (43392) DATA_CSV: 42962,2.4330,0.1911,1,1,0x035F[0m
+[0;32mI (43422) DATA_CSV: 42992,2.4286,0.0578,1,1,0x035F[0m
+[0;32mI (43452) DATA_CSV: 43022,2.4295,1.0303,0,1,0x035E[0m
+[0;32mI (43482) DATA_CSV: 43052,2.5005,1.9082,0,0,0x0358[0m
+[0;32mI (43512) DATA_CSV: 43082,2.5021,1.6195,0,0,0x02F8[0m
+[0;32mI (43542) DATA_CSV: 43112,2.4409,0.6675,1,0,0x02F9[0m
+[0;32mI (43572) DATA_CSV: 43142,2.4010,0.1575,1,0,0x02F1[0m
+[0;32mI (43602) DATA_CSV: 43172,2.4716,0.0188,1,1,0x00F3[0m
+[0;32mI (43632) DATA_CSV: 43202,2.5506,0.0147,0,1,0x00F6[0m
+[0;32mI (43662) DATA_CSV: 43232,2.4451,1.0960,0,1,0x00F6[0m
+[0;32mI (43692) DATA_CSV: 43262,2.4879,1.9235,0,0,0x00A4[0m
+[0;32mI (43722) DATA_CSV: 43292,2.4444,1.6309,0,0,0x01AC[0m
+[0;32mI (43752) DATA_CSV: 43322,2.4074,0.6675,1,0,0x01AD[0m
+[0;32mI (43782) DATA_CSV: 43352,2.4679,0.1573,1,1,0x01AF[0m
+[0;32mI (43812) DATA_CSV: 43382,2.5615,0.0503,1,1,0x01AB[0m
+[0;32mI (43842) DATA_CSV: 43412,2.5475,1.1900,0,1,0x030A[0m
+[0;32mI (43872) DATA_CSV: 43442,2.3259,1.9847,0,1,0x0302[0m
+[0;32mI (43902) DATA_CSV: 43472,2.3260,2.0919,0,0,0x0300[0m
+[0;32mI (43932) DATA_CSV: 43502,2.4099,1.6785,1,0,0x0301[0m
+[0;32mI (43962) DATA_CSV: 43532,2.4915,0.6996,1,0,0x0205[0m
+[0;32mI (43992) DATA_CSV: 43562,2.4841,0.1686,1,1,0x0257[0m
+[0;32mI (44022) DATA_CSV: 43592,2.4204,0.0526,1,1,0x0257[0m
+[0;32mI (44052) DATA_CSV: 43622,2.4012,1.0562,0,1,0x005E[0m
+[0;32mI (44082) DATA_CSV: 43652,2.3860,1.8687,0,0,0x005C[0m
+[0;32mI (44112) DATA_CSV: 43682,2.4150,1.5721,0,0,0x0058[0m
+[0;32mI (44142) DATA_CSV: 43712,2.4841,0.6382,1,0,0x0059[0m
+[0;32mI (44172) DATA_CSV: 43742,2.5474,0.1454,1,0,0x01F9[0m
+[0;32mI (44202) DATA_CSV: 43772,2.5163,0.0182,1,1,0x01F3[0m
+[0;32mI (44232) DATA_CSV: 43802,2.5127,0.0152,0,1,0x01F2[0m
+[0;32mI (44262) DATA_CSV: 43832,2.4497,1.0582,0,1,0x01F2[0m
+[0;32mI (44292) DATA_CSV: 43862,2.5209,1.9248,0,0,0x03F4[0m
+[0;32mI (44322) DATA_CSV: 43892,2.4671,1.6506,0,0,0x03A4[0m
+[0;32mI (44352) DATA_CSV: 43922,2.3796,0.6697,1,0,0x03AD[0m
+[0;32mI (44382) DATA_CSV: 43952,2.3893,0.1593,1,1,0x03AF[0m
+[0;32mI (44412) DATA_CSV: 43982,2.5080,0.0509,1,1,0x02AF[0m
+[0;32mI (44442) DATA_CSV: 44012,2.5028,1.1023,0,1,0x02AA[0m
+[0;32mI (44472) DATA_CSV: 44042,2.4560,1.9436,0,1,0x020A[0m
+[0;32mI (44502) DATA_CSV: 44072,2.3870,2.1911,0,0,0x0008[0m
+[0;32mI (44532) DATA_CSV: 44102,2.3480,1.7167,1,0,0x0001[0m
+[0;32mI (44562) DATA_CSV: 44132,2.3628,0.7180,1,0,0x0001[0m
+[0;32mI (44592) DATA_CSV: 44162,2.4888,0.1839,1,1,0x0007[0m
+[0;32mI (44622) DATA_CSV: 44193,2.5473,0.0577,1,1,0x0107[0m
+[0;32mI (44652) DATA_CSV: 44222,2.5244,1.3079,0,1,0x0156[0m
+[0;32mI (44682) DATA_CSV: 44252,2.4012,2.0548,0,0,0x015C[0m
+[0;32mI (44712) DATA_CSV: 44282,2.3799,1.6554,0,0,0x015C[0m
+[0;32mI (44712) RobotController: joint[0] current_steps=92 target_steps=330[0m
+[0;32mI (44712) RobotController: joint[1] current_steps=58 target_steps=206[0m
+[0;32mI (44712) RobotController: joint[2] current_steps=29 target_steps=103[0m
+[0;32mI (44722) RobotController: joint[3] current_steps=29 target_steps=103[0m
+[0;32mI (44722) RobotController: joint[4] current_steps=41 target_steps=147[0m
+[0;32mI (44732) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (44742) RobotController: valve_state=0x035d[0m
+[0;32mI (44772) DATA_CSV: 44342,2.4793,0.6781,1,0,0x035D[0m
+[0;32mI (44802) DATA_CSV: 44372,2.5794,0.0206,1,1,0x03FB[0m
+[0;32mI (44832) DATA_CSV: 44402,2.5402,0.0149,1,1,0x03F3[0m
+[0;32mI (44862) DATA_CSV: 44432,2.4711,1.2148,0,1,0x02F2[0m
+[0;32mI (44892) DATA_CSV: 44462,2.4208,1.9636,0,0,0x02F0[0m
+[0;32mI (44922) DATA_CSV: 44492,2.4360,1.6315,0,0,0x02F4[0m
+[0;32mI (44952) DATA_CSV: 44522,2.5017,0.6628,1,0,0x00A5[0m
+[0;32mI (44982) DATA_CSV: 44552,2.3523,0.1609,1,0,0x00A5[0m
+[0;32mI (45012) DATA_CSV: 44582,2.3450,0.0252,1,1,0x00AF[0m
+[0;32mI (45042) DATA_CSV: 44612,2.4981,0.0159,0,1,0x00AE[0m
+[0;32mI (45072) DATA_CSV: 44642,2.5111,1.0190,0,1,0x01AA[0m
+[0;32mI (45102) DATA_CSV: 44672,2.4535,1.9243,0,0,0x01A8[0m
+[0;32mI (45132) DATA_CSV: 44702,2.4643,1.6281,0,0,0x0108[0m
+[0;32mI (45162) DATA_CSV: 44732,2.4477,0.6672,1,0,0x0101[0m
+[0;32mI (45192) DATA_CSV: 44762,2.4491,0.1585,1,1,0x0303[0m
+[0;32mI (45222) DATA_CSV: 44792,2.4795,0.0534,1,1,0x0303[0m
+[0;32mI (45252) DATA_CSV: 44822,2.5079,1.1322,0,1,0x0306[0m
+[0;32mI (45282) DATA_CSV: 44852,2.4972,1.9898,0,1,0x0256[0m
+[0;32mI (45312) DATA_CSV: 44882,2.3640,2.2529,0,0,0x025C[0m
+[0;32mI (45342) DATA_CSV: 44912,2.3348,1.7255,1,0,0x025D[0m
+[0;32mI (45372) DATA_CSV: 44942,2.3973,0.7120,1,0,0x025D[0m
+[0;32mI (45402) DATA_CSV: 44972,2.5318,0.1826,1,1,0x005B[0m
+[0;32mI (45432) DATA_CSV: 45002,2.5371,0.0592,1,1,0x00FB[0m
+[0;32mI (45462) DATA_CSV: 45032,2.4509,1.2049,0,1,0x00FA[0m
+[0;32mI (45492) DATA_CSV: 45062,2.4035,1.9636,0,0,0x00F0[0m
+[0;32mI (45522) DATA_CSV: 45092,2.4084,1.6340,0,0,0x01F0[0m
+[0;32mI (45552) DATA_CSV: 45122,2.4658,0.6586,1,0,0x01F5[0m
+[0;32mI (45582) DATA_CSV: 45152,2.4696,0.1550,1,0,0x01F5[0m
+[0;32mI (45612) DATA_CSV: 45182,2.5316,0.0227,1,1,0x01A7[0m
+[0;32mI (45642) DATA_CSV: 45212,2.5359,0.0153,0,1,0x03AE[0m
+[0;32mI (45672) DATA_CSV: 45242,2.3554,1.0847,0,1,0x03AE[0m
+[0;32mI (45702) DATA_CSV: 45272,2.3932,1.8540,0,0,0x03AC[0m
+[0;32mI (45732) DATA_CSV: 45302,2.4958,1.5762,0,0,0x02A8[0m
+[0;32mI (45762) DATA_CSV: 45332,2.4866,0.6361,1,0,0x0209[0m
+[0;32mI (45792) DATA_CSV: 45362,2.3615,0.1474,1,1,0x0203[0m
+[0;32mI (45822) DATA_CSV: 45392,2.4081,0.0531,1,1,0x0203[0m
+[0;32mI (45852) DATA_CSV: 45422,2.4740,0.9518,0,1,0x0002[0m
+[0;32mI (45882) DATA_CSV: 45452,2.4811,1.8946,0,1,0x0006[0m
+[0;32mI (45912) DATA_CSV: 45482,2.4707,2.2339,0,0,0x0054[0m
+[0;32mI (45942) DATA_CSV: 45512,2.3973,1.7385,1,0,0x0055[0m
+[0;32mI (45972) DATA_CSV: 45542,2.3745,0.7271,1,0,0x015D[0m
+[0;32mI (46002) DATA_CSV: 45572,2.4143,0.1904,1,1,0x015F[0m
+[0;32mI (46032) DATA_CSV: 45602,2.5293,0.0574,1,1,0x015B[0m
+[0;32mI (46062) DATA_CSV: 45632,2.5305,1.1988,0,1,0x015A[0m
+[0;32mI (46092) DATA_CSV: 45662,2.5450,2.0072,0,0,0x03F8[0m
+[0;32mI (46122) DATA_CSV: 45692,2.4327,1.6714,0,0,0x03F0[0m
+[0;32mI (46152) DATA_CSV: 45722,2.4100,0.6844,1,0,0x03F1[0m
+[0;32mI (46182) DATA_CSV: 45752,2.4550,0.1666,1,0,0x02F1[0m
+[0;32mI (46212) DATA_CSV: 45782,2.5085,0.0230,1,1,0x02F7[0m
+[0;32mI (46242) DATA_CSV: 45812,2.5324,0.0156,0,1,0x02A6[0m
+[0;32mI (46242) RobotController: joint[0] current_steps=123 target_steps=330[0m
+[0;32mI (46242) RobotController: joint[1] current_steps=77 target_steps=206[0m
+[0;32mI (46242) RobotController: joint[2] current_steps=39 target_steps=103[0m
+[0;32mI (46252) RobotController: joint[3] current_steps=39 target_steps=103[0m
+[0;32mI (46252) RobotController: joint[4] current_steps=55 target_steps=147[0m
+[0;32mI (46262) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (46272) RobotController: valve_state=0x02ae[0m
+[0;32mI (46302) DATA_CSV: 45872,2.3720,1.1343,0,1,0x02AE[0m
+[0;32mI (46332) DATA_CSV: 45902,2.5187,2.2220,0,0,0x00AC[0m
+[0;32mI (46362) DATA_CSV: 45932,2.5515,1.7712,1,0,0x00A9[0m
+[0;32mI (46392) DATA_CSV: 45962,2.4867,0.7488,1,0,0x0009[0m
+[0;32mI (46422) DATA_CSV: 45992,2.4305,0.1955,1,1,0x010B[0m
+[0;32mI (46452) DATA_CSV: 46022,2.4353,0.0645,0,1,0x0102[0m
+[0;32mI (46482) DATA_CSV: 46052,2.3861,1.0973,0,1,0x0102[0m
+[0;32mI (46512) DATA_CSV: 46082,2.4712,1.9046,0,0,0x0104[0m
+[0;32mI (46542) DATA_CSV: 46112,2.5023,1.6297,0,0,0x0304[0m
+[0;32mI (46572) DATA_CSV: 46142,2.5050,0.6658,1,0,0x0355[0m
+[0;32mI (46602) DATA_CSV: 46172,2.4130,0.1589,1,1,0x035F[0m
+[0;32mI (46632) DATA_CSV: 46202,2.4481,0.0496,1,1,0x025F[0m
+[0;32mI (46662) DATA_CSV: 46232,2.4410,1.0493,0,1,0x025E[0m
+[0;32mI (46692) DATA_CSV: 46262,2.4707,1.8993,0,1,0x025A[0m
+[0;32mI (46722) DATA_CSV: 46292,2.5178,2.2401,0,0,0x02F8[0m
+[0;32mI (46752) DATA_CSV: 46322,2.4999,1.7727,1,0,0x00F1[0m
+[0;32mI (46782) DATA_CSV: 46352,2.3738,0.7454,1,0,0x00F1[0m
+[0;32mI (46812) DATA_CSV: 46382,2.3931,0.1994,1,1,0x00F3[0m
+[0;32mI (46842) DATA_CSV: 46412,2.5342,0.0622,1,1,0x00F7[0m
+[0;32mI (46872) DATA_CSV: 46442,2.5521,1.2398,0,1,0x01A6[0m
+[0;32mI (46902) DATA_CSV: 46472,2.3598,2.0126,0,0,0x01A4[0m
+[0;32mI (46932) DATA_CSV: 46502,2.2947,1.7344,0,0,0x01AC[0m
+[0;32mI (46962) DATA_CSV: 46532,2.4121,0.6748,1,0,0x01AD[0m
+[0;32mI (46992) DATA_CSV: 46562,2.5070,0.1719,1,0,0x03A9[0m
+[0;32mI (47022) DATA_CSV: 46592,2.4809,0.0221,1,1,0x03AB[0m
+[0;32mI (47052) DATA_CSV: 46622,2.5330,0.0154,0,1,0x030A[0m
+[0;32mI (47082) DATA_CSV: 46652,2.4002,1.1385,0,1,0x0202[0m
+[0;32mI (47112) DATA_CSV: 46682,2.3381,1.8774,0,0,0x0200[0m
+[0;32mI (47142) DATA_CSV: 46712,2.3861,1.6099,0,0,0x0200[0m
+[0;32mI (47172) DATA_CSV: 46742,2.5168,0.6520,1,0,0x0205[0m
+[0;32mI (47202) DATA_CSV: 46772,2.5567,0.1543,1,1,0x0057[0m
+[0;32mI (47232) DATA_CSV: 46802,2.4144,0.0488,1,1,0x005F[0m
+[0;32mI (47262) DATA_CSV: 46832,2.3553,1.0527,0,1,0x005E[0m
+[0;32mI (47292) DATA_CSV: 46862,2.4151,1.8584,0,1,0x005E[0m
+[0;32mI (47322) DATA_CSV: 46892,2.5327,2.2245,0,0,0x0158[0m
+[0;32mI (47352) DATA_CSV: 46922,2.4936,1.7792,1,0,0x01F9[0m
+[0;32mI (47382) DATA_CSV: 46952,2.3906,0.7602,1,0,0x01F9[0m
+[0;32mI (47412) DATA_CSV: 46982,2.4061,0.2000,1,1,0x01F3[0m
+[0;32mI (47442) DATA_CSV: 47012,2.4976,0.0576,1,1,0x03F3[0m
+[0;32mI (47472) DATA_CSV: 47042,2.4792,1.1305,0,1,0x03F6[0m
+[0;32mI (47502) DATA_CSV: 47072,2.4382,1.9576,0,0,0x03F4[0m
+[0;32mI (47532) DATA_CSV: 47102,2.4525,1.6087,0,0,0x02A4[0m
+[0;32mI (47562) DATA_CSV: 47132,2.3866,0.6774,1,0,0x02AD[0m
+[0;32mI (47592) DATA_CSV: 47163,2.3583,0.1615,1,0,0x02AD[0m
+[0;32mI (47622) DATA_CSV: 47192,2.4786,0.0197,1,1,0x02AF[0m
+[0;32mI (47652) DATA_CSV: 47222,2.6140,0.0151,0,1,0x00AA[0m
+[0;32mI (47682) DATA_CSV: 47252,2.4730,1.1862,0,1,0x000A[0m
+[0;32mI (47712) DATA_CSV: 47282,2.3441,1.9358,0,0,0x0000[0m
+[0;32mI (47742) DATA_CSV: 47312,2.3584,1.6363,0,0,0x0000[0m
+[0;32mI (47772) DATA_CSV: 47342,2.4760,0.6646,1,0,0x0101[0m
+[0;32mI (47772) RobotController: joint[0] current_steps=153 target_steps=330[0m
+[0;32mI (47772) RobotController: joint[1] current_steps=96 target_steps=206[0m
+[0;32mI (47772) RobotController: joint[2] current_steps=48 target_steps=103[0m
+[0;32mI (47782) RobotController: joint[3] current_steps=48 target_steps=103[0m
+[0;32mI (47782) RobotController: joint[4] current_steps=69 target_steps=147[0m
+[0;32mI (47792) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (47802) RobotController: valve_state=0x0107[0m
+[0;32mI (47832) DATA_CSV: 47402,2.5097,0.1581,1,1,0x0107[0m
+[0;32mI (47862) DATA_CSV: 47432,2.5298,1.1928,0,1,0x0156[0m
+[0;32mI (47892) DATA_CSV: 47462,2.4412,2.0316,0,1,0x035E[0m
+[0;32mI (47922) DATA_CSV: 47492,2.3824,2.2174,0,0,0x035C[0m
+[0;32mI (47952) DATA_CSV: 47522,2.4277,1.7186,0,0,0x0358[0m
+[0;32mI (47982) DATA_CSV: 47552,2.4973,0.7254,1,0,0x0259[0m
+[0;32mI (48012) DATA_CSV: 47582,2.4933,0.1814,1,1,0x02FB[0m
+[0;32mI (48042) DATA_CSV: 47612,2.4734,0.0608,1,1,0x02F3[0m
+[0;32mI (48072) DATA_CSV: 47642,2.4456,1.2089,0,1,0x02F2[0m
+[0;32mI (48102) DATA_CSV: 47672,2.4615,1.9737,0,1,0x00F2[0m
+[0;32mI (48132) DATA_CSV: 47702,2.5035,2.2574,0,0,0x00F4[0m
+[0;32mI (48162) DATA_CSV: 47732,2.4920,1.7777,1,0,0x00A5[0m
+[0;32mI (48192) DATA_CSV: 47762,2.3805,0.7714,1,0,0x00AD[0m
+[0;32mI (48222) DATA_CSV: 47792,2.4220,0.1998,1,1,0x01AF[0m
+[0;32mI (48252) DATA_CSV: 47822,2.4763,0.0617,1,1,0x01AF[0m
+[0;32mI (48282) DATA_CSV: 47852,2.5173,1.2004,0,1,0x01AA[0m
+[0;32mI (48312) DATA_CSV: 47882,2.5007,2.0170,0,0,0x01A8[0m
+[0;32mI (48342) DATA_CSV: 47912,2.4981,1.6661,0,0,0x0308[0m
+[0;32mI (48372) DATA_CSV: 47942,2.4050,0.6929,1,0,0x0301[0m
+[0;32mI (48402) DATA_CSV: 47972,2.3700,0.1693,1,0,0x0301[0m
+[0;32mI (48432) DATA_CSV: 48002,2.4792,0.0213,1,1,0x0203[0m
+[0;32mI (48462) DATA_CSV: 48032,2.5513,0.0150,0,1,0x0206[0m
+[0;32mI (48492) DATA_CSV: 48062,2.4635,1.1874,0,1,0x0256[0m
+[0;32mI (48522) DATA_CSV: 48092,2.3870,1.9762,0,0,0x025C[0m
+[0;32mI (48552) DATA_CSV: 48122,2.3991,1.6323,0,0,0x005C[0m
+[0;32mI (48582) DATA_CSV: 48152,2.4528,0.6735,1,0,0x005D[0m
+[0;32mI (48612) DATA_CSV: 48182,2.5191,0.1603,1,1,0x005B[0m
+[0;32mI (48642) DATA_CSV: 48212,2.5426,0.0535,1,1,0x00FB[0m
+[0;32mI (48672) DATA_CSV: 48242,2.5106,1.2400,0,1,0x01FA[0m
+[0;32mI (48702) DATA_CSV: 48272,2.3916,2.0138,0,1,0x01F2[0m
+[0;32mI (48732) DATA_CSV: 48302,2.4085,2.1710,0,0,0x01F0[0m
+[0;32mI (48762) DATA_CSV: 48332,2.4986,1.7231,1,0,0x03F5[0m
+[0;32mI (48792) DATA_CSV: 48362,2.4221,0.7307,1,0,0x03F5[0m
+[0;32mI (48822) DATA_CSV: 48392,2.4641,0.1835,1,1,0x03A7[0m
+[0;32mI (48852) DATA_CSV: 48422,2.4871,0.0587,1,1,0x03AF[0m
+[0;32mI (48882) DATA_CSV: 48452,2.4570,1.1001,0,1,0x02AE[0m
+[0;32mI (48912) DATA_CSV: 48482,2.4407,1.9270,0,0,0x02AC[0m
+[0;32mI (48942) DATA_CSV: 48512,2.4580,1.6090,0,0,0x02A8[0m
+[0;32mI (48972) DATA_CSV: 48542,2.5248,0.6577,1,0,0x0209[0m
+[0;32mI (49002) DATA_CSV: 48572,2.4457,0.1576,1,0,0x0001[0m
+[0;32mI (49032) DATA_CSV: 48602,2.4075,0.0266,1,1,0x0003[0m
+[0;32mI (49062) DATA_CSV: 48632,2.5082,0.0181,0,1,0x0002[0m
+[0;32mI (49092) DATA_CSV: 48662,2.5179,1.1004,0,1,0x0006[0m
+[0;32mI (49122) DATA_CSV: 48692,2.5368,1.9814,0,0,0x0154[0m
+[0;32mI (49152) DATA_CSV: 48722,2.3805,1.6842,0,0,0x0154[0m
+[0;32mI (49182) DATA_CSV: 48752,2.3800,0.6930,1,0,0x015D[0m
+[0;32mI (49212) DATA_CSV: 48782,2.4587,0.1683,1,1,0x035F[0m
+[0;32mI (49242) DATA_CSV: 48812,2.4975,0.0521,1,1,0x035B[0m
+[0;32mI (49272) DATA_CSV: 48842,2.4713,1.1840,0,1,0x035A[0m
+[0;32mI (49302) DATA_CSV: 48872,2.4971,1.9788,0,1,0x03FA[0m
+[0;32mI (49302) RobotController: joint[0] current_steps=183 target_steps=330[0m
+[0;32mI (49302) RobotController: joint[1] current_steps=115 target_steps=206[0m
+[0;32mI (49302) RobotController: joint[2] current_steps=58 target_steps=103[0m
+[0;32mI (49312) RobotController: joint[3] current_steps=58 target_steps=103[0m
+[0;32mI (49312) RobotController: joint[4] current_steps=82 target_steps=147[0m
+[0;32mI (49322) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (49332) RobotController: valve_state=0x02f0[0m
+[0;32mI (49362) DATA_CSV: 48932,2.5369,2.3191,0,0,0x02F0[0m
+[0;32mI (49392) DATA_CSV: 48962,2.4761,0.7803,1,0,0x02F1[0m
+[0;32mI (49422) DATA_CSV: 48992,2.5686,0.2077,1,1,0x02F7[0m
+[0;32mI (49452) DATA_CSV: 49022,2.5723,0.0679,1,1,0x00A7[0m
+[0;32mI (49482) DATA_CSV: 49052,2.4123,1.2951,0,1,0x00AE[0m
+[0;32mI (49512) DATA_CSV: 49082,2.3503,1.9498,0,1,0x00AE[0m
+[0;32mI (49542) DATA_CSV: 49112,2.4539,2.1863,0,0,0x00AC[0m
+[0;32mI (49572) DATA_CSV: 49142,2.5568,1.7358,1,0,0x01A9[0m
+[0;32mI (49602) DATA_CSV: 49172,2.4688,0.7354,1,0,0x0109[0m
+[0;32mI (49632) DATA_CSV: 49202,2.3783,0.1877,1,1,0x010B[0m
+[0;32mI (49662) DATA_CSV: 49232,2.4458,0.0622,1,1,0x0303[0m
+[0;32mI (49692) DATA_CSV: 49262,2.4241,1.0925,0,1,0x0302[0m
+[0;32mI (49722) DATA_CSV: 49292,2.4552,1.9236,0,0,0x0304[0m
+[0;32mI (49752) DATA_CSV: 49322,2.4512,1.6355,0,0,0x0304[0m
+[0;32mI (49782) DATA_CSV: 49352,2.5356,0.6661,1,0,0x0255[0m
+[0;32mI (49812) DATA_CSV: 49382,2.4289,0.1589,1,0,0x025D[0m
+[0;32mI (49842) DATA_CSV: 49412,2.4266,0.0208,1,1,0x025F[0m
+[0;32mI (49872) DATA_CSV: 49442,2.5524,0.0154,0,1,0x025E[0m
+[0;32mI (49902) DATA_CSV: 49472,2.5665,1.1659,0,1,0x005A[0m
+[0;32mI (49932) DATA_CSV: 49502,2.5178,2.0229,0,0,0x00F8[0m
+[0;32mI (49962) DATA_CSV: 49532,2.4496,1.6953,0,0,0x00F0[0m
+[0;32mI (49992) DATA_CSV: 49562,2.4693,0.7060,1,0,0x00F1[0m
+[0;32mI (50022) DATA_CSV: 49592,2.5111,0.1729,1,1,0x01F3[0m
+[0;32mI (50052) DATA_CSV: 49622,2.5147,0.0568,1,1,0x01F7[0m
+[0;32mI (50082) DATA_CSV: 49652,2.5052,1.2698,0,1,0x01A6[0m
+[0;32mI (50112) DATA_CSV: 49682,2.3879,2.0065,0,1,0x03A6[0m
+[0;32mI (50142) DATA_CSV: 49712,2.3381,2.1696,0,0,0x03AC[0m
+[0;32mI (50172) DATA_CSV: 49742,2.3893,1.7133,1,0,0x03AD[0m
+[0;32mI (50202) DATA_CSV: 49772,2.4607,0.7086,1,0,0x03A9[0m
+[0;32mI (50232) DATA_CSV: 49802,2.5278,0.1788,1,1,0x02AB[0m
+[0;32mI (50262) DATA_CSV: 49832,2.5292,0.0573,1,1,0x020B[0m
+[0;32mI (50292) DATA_CSV: 49862,2.4400,1.2393,0,1,0x0202[0m
+[0;32mI (50322) DATA_CSV: 49892,2.4168,1.9806,0,0,0x0200[0m
+[0;32mI (50352) DATA_CSV: 49922,2.4639,1.6523,0,0,0x0000[0m
+[0;32mI (50382) DATA_CSV: 49952,2.5379,0.6788,1,0,0x0005[0m
+[0;32mI (50412) DATA_CSV: 49982,2.5236,0.1655,1,0,0x0055[0m
+[0;32mI (50442) DATA_CSV: 50012,2.4627,0.0211,1,1,0x005F[0m
+[0;32mI (50472) DATA_CSV: 50042,2.5295,0.0156,0,1,0x015E[0m
+[0;32mI (50502) DATA_CSV: 50072,2.4435,1.1195,0,1,0x015E[0m
+[0;32mI (50532) DATA_CSV: 50102,2.4996,1.9685,0,0,0x0158[0m
+[0;32mI (50562) DATA_CSV: 50132,2.5197,1.6598,0,0,0x03F8[0m
+[0;32mI (50592) DATA_CSV: 50162,2.4474,0.6900,1,0,0x03F9[0m
+[0;32mI (50622) DATA_CSV: 50192,2.3957,0.1663,1,1,0x03F3[0m
+[0;32mI (50652) DATA_CSV: 50222,2.4691,0.0529,1,1,0x03F3[0m
+[0;32mI (50682) DATA_CSV: 50252,2.5364,1.0848,0,1,0x02F6[0m
+[0;32mI (50712) DATA_CSV: 50282,2.4601,1.9750,0,1,0x02F6[0m
+[0;32mI (50742) DATA_CSV: 50312,2.4853,2.2502,0,0,0x02A4[0m
+[0;32mI (50772) DATA_CSV: 50342,2.4487,1.7722,1,0,0x02AD[0m
+[0;32mI (50802) DATA_CSV: 50372,2.4231,0.7632,1,0,0x00AD[0m
+[0;32mI (50832) DATA_CSV: 50402,2.4748,0.1982,1,1,0x00AF[0m
+[0;32mI (50832) RobotController: joint[0] current_steps=214 target_steps=330[0m
+[0;32mI (50832) RobotController: joint[1] current_steps=134 target_steps=206[0m
+[0;32mI (50832) RobotController: joint[2] current_steps=67 target_steps=103[0m
+[0;32mI (50842) RobotController: joint[3] current_steps=67 target_steps=103[0m
+[0;32mI (50842) RobotController: joint[4] current_steps=96 target_steps=147[0m
+[0;32mI (50852) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (50862) RobotController: valve_state=0x00ab[0m
+[0;32mI (50892) DATA_CSV: 50462,2.5488,0.0610,1,1,0x00AB[0m
+[0;32mI (50922) DATA_CSV: 50492,2.6520,2.1132,0,1,0x0102[0m
+[0;32mI (50952) DATA_CSV: 50522,2.4831,2.3783,0,0,0x0100[0m
+[0;32mI (50982) DATA_CSV: 50552,2.4029,1.8157,1,0,0x0101[0m
+[0;32mI (51012) DATA_CSV: 50582,2.4574,0.7690,1,0,0x0305[0m
+[0;32mI (51042) DATA_CSV: 50612,2.4494,0.2037,1,1,0x0357[0m
+[0;32mI (51072) DATA_CSV: 50642,2.3987,0.0610,1,1,0x0357[0m
+[0;32mI (51102) DATA_CSV: 50672,2.3808,1.0578,0,1,0x035E[0m
+[0;32mI (51132) DATA_CSV: 50702,2.4379,1.9018,0,0,0x025C[0m
+[0;32mI (51162) DATA_CSV: 50732,2.4420,1.6229,0,0,0x0258[0m
+[0;32mI (51192) DATA_CSV: 50762,2.4694,0.6641,1,0,0x0259[0m
+[0;32mI (51222) DATA_CSV: 50792,2.5389,0.1587,1,0,0x02F9[0m
+[0;32mI (51252) DATA_CSV: 50822,2.5823,0.0194,1,1,0x00F3[0m
+[0;32mI (51282) DATA_CSV: 50852,2.5212,0.0157,0,1,0x00F2[0m
+[0;32mI (51312) DATA_CSV: 50882,2.4414,1.1317,0,1,0x00F2[0m
+[0;32mI (51342) DATA_CSV: 50912,2.5282,1.9580,0,0,0x00F4[0m
+[0;32mI (51372) DATA_CSV: 50942,2.5597,1.6708,0,0,0x01A4[0m
+[0;32mI (51402) DATA_CSV: 50972,2.4336,0.6881,1,0,0x01AD[0m
+[0;32mI (51432) DATA_CSV: 51002,2.3945,0.1662,1,1,0x01AF[0m
+[0;32mI (51462) DATA_CSV: 51032,2.5058,0.0511,1,1,0x03AF[0m
+[0;32mI (51492) DATA_CSV: 51062,2.4900,1.1226,0,1,0x03AA[0m
+[0;32mI (51522) DATA_CSV: 51092,2.4440,1.9618,0,1,0x030A[0m
+[0;32mI (51552) DATA_CSV: 51122,2.3782,2.1945,0,0,0x0308[0m
+[0;32mI (51582) DATA_CSV: 51152,2.4010,1.7574,1,0,0x0201[0m
+[0;32mI (51612) DATA_CSV: 51182,2.4000,0.7268,1,0,0x0201[0m
+[0;32mI (51642) DATA_CSV: 51212,2.4857,0.1866,1,1,0x0207[0m
+[0;32mI (51672) DATA_CSV: 51242,2.5319,0.0576,1,1,0x0207[0m
+[0;32mI (51702) DATA_CSV: 51272,2.5854,1.2632,0,1,0x0056[0m
+[0;32mI (51732) DATA_CSV: 51302,2.4249,2.0769,0,0,0x005C[0m
+[0;32mI (51762) DATA_CSV: 51332,2.3498,1.6917,0,0,0x005C[0m
+[0;32mI (51792) DATA_CSV: 51362,2.4696,0.6939,1,0,0x015D[0m
+[0;32mI (51822) DATA_CSV: 51392,2.5098,0.1703,1,0,0x0159[0m
+[0;32mI (51852) DATA_CSV: 51422,2.5299,0.0234,1,1,0x01FB[0m
+[0;32mI (51882) DATA_CSV: 51452,2.5207,0.0171,0,1,0x01F2[0m
+[0;32mI (51912) DATA_CSV: 51482,2.4184,1.1879,0,1,0x03F2[0m
+[0;32mI (51942) DATA_CSV: 51512,2.3892,1.9511,0,0,0x03F0[0m
+[0;32mI (51972) DATA_CSV: 51542,2.4472,1.6267,0,0,0x03F4[0m
+[0;32mI (52002) DATA_CSV: 51572,2.5073,0.6677,1,0,0x03A5[0m
+[0;32mI (52032) DATA_CSV: 51602,2.4389,0.1578,1,1,0x02A7[0m
+[0;32mI (52062) DATA_CSV: 51632,2.3995,0.0518,1,1,0x02AF[0m
+[0;32mI (52092) DATA_CSV: 51662,2.4253,0.9328,0,1,0x02AE[0m
+[0;32mI (52122) DATA_CSV: 51692,2.4944,1.8726,0,1,0x02AA[0m
+[0;32mI (52152) DATA_CSV: 51722,2.5308,2.2512,0,0,0x00A8[0m
+[0;32mI (52182) DATA_CSV: 51752,2.5143,1.7856,1,0,0x0009[0m
+[0;32mI (52212) DATA_CSV: 51782,2.3849,0.7665,1,0,0x0001[0m
+[0;32mI (52242) DATA_CSV: 51812,2.4196,0.2016,1,1,0x0103[0m
+[0;32mI (52272) DATA_CSV: 51842,2.4868,0.0613,1,1,0x0103[0m
+[0;32mI (52302) DATA_CSV: 51872,2.5239,1.1934,0,1,0x0106[0m
+[0;32mI (52332) DATA_CSV: 51902,2.5107,2.0261,0,0,0x0154[0m
+[0;32mI (52362) DATA_CSV: 51932,2.3776,1.6832,0,0,0x035C[0m
+[0;32mI (52362) RobotController: joint[0] current_steps=244 target_steps=330[0m
+[0;32mI (52362) RobotController: joint[1] current_steps=154 target_steps=206[0m
+[0;32mI (52362) RobotController: joint[2] current_steps=77 target_steps=103[0m
+[0;32mI (52372) RobotController: joint[3] current_steps=77 target_steps=103[0m
+[0;32mI (52372) RobotController: joint[4] current_steps=110 target_steps=147[0m
+[0;32mI (52382) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (52392) RobotController: valve_state=0x035d[0m
+[0;32mI (52422) DATA_CSV: 51992,2.3506,0.7065,1,0,0x035D[0m
+[0;32mI (52452) DATA_CSV: 52022,2.5328,0.0208,1,1,0x035B[0m
+[0;32mI (52482) DATA_CSV: 52052,2.5923,0.0166,1,1,0x02FB[0m
+[0;32mI (52512) DATA_CSV: 52082,2.4886,1.2273,0,1,0x02FA[0m
+[0;32mI (52542) DATA_CSV: 52112,2.3907,1.9661,0,0,0x02F0[0m
+[0;32mI (52572) DATA_CSV: 52142,2.3986,1.6669,0,0,0x02F0[0m
+[0;32mI (52602) DATA_CSV: 52172,2.5317,0.6830,1,0,0x00F5[0m
+[0;32mI (52632) DATA_CSV: 52202,2.4991,0.1646,1,0,0x00F5[0m
+[0;32mI (52662) DATA_CSV: 52232,2.5257,0.0213,1,1,0x00A7[0m
+[0;32mI (52692) DATA_CSV: 52262,2.5411,0.0166,0,1,0x01AE[0m
+[0;32mI (52722) DATA_CSV: 52292,2.3721,1.0913,0,1,0x01AE[0m
+[0;32mI (52752) DATA_CSV: 52322,2.4123,1.8596,0,0,0x01AC[0m
+[0;32mI (52782) DATA_CSV: 52352,2.5050,1.5916,0,0,0x01A8[0m
+[0;32mI (52812) DATA_CSV: 52382,2.5598,0.6496,1,0,0x0309[0m
+[0;32mI (52842) DATA_CSV: 52412,2.3753,0.1510,1,1,0x0303[0m
+[0;32mI (52872) DATA_CSV: 52442,2.3754,0.0508,1,1,0x0303[0m
+[0;32mI (52902) DATA_CSV: 52472,2.4476,0.8754,0,1,0x0302[0m
+[0;32mI (52932) DATA_CSV: 52502,2.5140,1.8490,0,1,0x0206[0m
+[0;32mI (52962) DATA_CSV: 52532,2.4825,2.2502,0,0,0x0254[0m
+[0;32mI (52992) DATA_CSV: 52562,2.3672,1.7707,1,0,0x0255[0m
+[0;32mI (53022) DATA_CSV: 52592,2.3561,0.7596,1,0,0x025D[0m
+[0;32mI (53052) DATA_CSV: 52622,2.4634,0.1968,1,1,0x005F[0m
+[0;32mI (53082) DATA_CSV: 52652,2.5441,0.0597,1,1,0x005B[0m
+[0;32mI (53112) DATA_CSV: 52682,2.5131,1.2306,0,1,0x005A[0m
+[0;32mI (53142) DATA_CSV: 52712,2.5370,2.0333,0,0,0x01F8[0m
+[0;32mI (53172) DATA_CSV: 52742,2.4287,1.6992,0,0,0x01F0[0m
+[0;32mI (53202) DATA_CSV: 52772,2.4205,0.7160,1,0,0x01F1[0m
+[0;32mI (53232) DATA_CSV: 52802,2.4557,0.1770,1,0,0x01F1[0m
+[0;32mI (53262) DATA_CSV: 52832,2.5687,0.0224,1,1,0x03F7[0m
+[0;32mI (53292) DATA_CSV: 52862,2.5262,0.0157,0,1,0x03A6[0m
+[0;32mI (53322) DATA_CSV: 52892,2.3234,1.1942,0,1,0x03AE[0m
+[0;32mI (53352) DATA_CSV: 52922,2.3457,1.8667,0,0,0x03AC[0m
+[0;32mI (53382) DATA_CSV: 52952,2.4416,1.5951,0,0,0x02AC[0m
+[0;32mI (53412) DATA_CSV: 52982,2.5107,0.6475,1,0,0x02A9[0m
+[0;32mI (53442) DATA_CSV: 53012,2.5011,0.1514,1,1,0x020B[0m
+[0;32mI (53472) DATA_CSV: 53042,2.4389,0.0521,1,1,0x020B[0m
+[0;32mI (53502) DATA_CSV: 53072,2.4185,1.0714,0,1,0x0002[0m
+[0;32mI (53532) DATA_CSV: 53102,2.4071,1.8915,0,1,0x0002[0m
+[0;32mI (53562) DATA_CSV: 53132,2.4772,2.2028,0,0,0x0004[0m
+[0;32mI (53592) DATA_CSV: 53162,2.5095,1.7488,1,0,0x0105[0m
+[0;32mI (53622) DATA_CSV: 53192,2.4559,0.7513,1,0,0x0155[0m
+[0;32mI (53652) DATA_CSV: 53222,2.4023,0.1928,1,1,0x015F[0m
+[0;32mI (53682) DATA_CSV: 53252,2.4810,0.0589,1,1,0x015F[0m
+[0;32mI (53712) DATA_CSV: 53282,2.5174,1.1240,0,1,0x035E[0m
+[0;32mI (53742) DATA_CSV: 53312,2.5021,2.0068,0,0,0x0358[0m
+[0;32mI (53772) DATA_CSV: 53342,2.4528,1.6747,0,0,0x03F8[0m
+[0;32mI (53802) DATA_CSV: 53372,2.4738,0.7031,1,0,0x03F1[0m
+[0;32mI (53832) DATA_CSV: 53402,2.4650,0.1711,1,0,0x02F1[0m
+[0;32mI (53862) DATA_CSV: 53432,2.4676,0.0237,1,1,0x02F3[0m
+[0;32mI (53892) DATA_CSV: 53462,2.5564,0.0168,0,1,0x02F6[0m
+[0;32mI (53892) RobotController: joint[0] current_steps=275 target_steps=330[0m
+[0;32mI (53892) RobotController: joint[1] current_steps=173 target_steps=206[0m
+[0;32mI (53892) RobotController: joint[2] current_steps=86 target_steps=103[0m
+[0;32mI (53902) RobotController: joint[3] current_steps=86 target_steps=103[0m
+[0;32mI (53902) RobotController: joint[4] current_steps=123 target_steps=147[0m
+[0;32mI (53912) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (53922) RobotController: valve_state=0x02a6[0m
+[0;32mI (53952) DATA_CSV: 53522,2.5043,1.1691,0,1,0x02A6[0m
+[0;32mI (53982) DATA_CSV: 53552,2.4710,2.2392,0,0,0x00AC[0m
+[0;32mI (54012) DATA_CSV: 53582,2.4897,1.7671,1,0,0x00AD[0m
+[0;32mI (54042) DATA_CSV: 53612,2.5050,0.7503,1,0,0x01A9[0m
+[0;32mI (54072) DATA_CSV: 53642,2.4937,0.1901,1,1,0x01AB[0m
+[0;32mI (54102) DATA_CSV: 53672,2.5373,0.0600,0,1,0x010A[0m
+[0;32mI (54132) DATA_CSV: 53702,2.4054,1.2220,0,1,0x0102[0m
+[0;32mI (54162) DATA_CSV: 53732,2.4219,1.9342,0,0,0x0300[0m
+[0;32mI (54192) DATA_CSV: 53762,2.4352,1.6378,0,0,0x0300[0m
+[0;32mI (54222) DATA_CSV: 53792,2.5186,0.6784,1,0,0x0305[0m
+[0;32mI (54252) DATA_CSV: 53822,2.5489,0.1643,1,1,0x0357[0m
+[0;32mI (54282) DATA_CSV: 53852,2.4639,0.0528,1,1,0x025F[0m
+[0;32mI (54312) DATA_CSV: 53882,2.3870,1.1732,0,1,0x025E[0m
+[0;32mI (54342) DATA_CSV: 53912,2.4097,1.9180,0,1,0x025E[0m
+[0;32mI (54372) DATA_CSV: 53942,2.5262,2.2346,0,0,0x0258[0m
+[0;32mI (54402) DATA_CSV: 53972,2.5669,1.7808,1,0,0x00F9[0m
+[0;32mI (54432) DATA_CSV: 54002,2.4269,0.7701,1,0,0x00F9[0m
+[0;32mI (54462) DATA_CSV: 54032,2.3992,0.1998,1,1,0x00F3[0m
+[0;32mI (54492) DATA_CSV: 54062,2.4892,0.0627,1,1,0x01F3[0m
+[0;32mI (54522) DATA_CSV: 54092,2.4929,1.1779,0,1,0x01F6[0m
+[0;32mI (54552) DATA_CSV: 54122,2.4526,1.9889,0,0,0x01F4[0m
+[0;32mI (54582) DATA_CSV: 54152,2.4599,1.6550,0,0,0x01A4[0m
+[0;32mI (54612) DATA_CSV: 54182,2.4447,0.6905,1,0,0x03AD[0m
+[0;32mI (54642) DATA_CSV: 54212,2.3754,0.1682,1,0,0x03AD[0m
+[0;32mI (54672) DATA_CSV: 54242,2.4470,0.0226,1,1,0x03AF[0m
+[0;32mI (54702) DATA_CSV: 54272,2.5734,0.0164,0,1,0x03AA[0m
+[0;32mI (54732) DATA_CSV: 54302,2.5305,1.2046,0,1,0x020A[0m
+[0;32mI (54762) DATA_CSV: 54332,2.3578,1.9599,0,0,0x0200[0m
+[0;32mI (54792) DATA_CSV: 54362,2.3475,1.6778,0,0,0x0200[0m
+[0;32mI (54822) DATA_CSV: 54392,2.4576,0.6802,1,0,0x0201[0m
+[0;32mI (54852) DATA_CSV: 54422,2.5633,0.1644,1,1,0x0007[0m
+[0;32mI (54882) DATA_CSV: 54452,2.5136,0.0533,1,1,0x0057[0m
+[0;32mI (54912) DATA_CSV: 54482,2.3742,1.2219,0,1,0x0056[0m
+[0;32mI (54942) DATA_CSV: 54512,2.3689,1.9247,0,1,0x015E[0m
+[0;32mI (54972) DATA_CSV: 54542,2.4024,2.1897,0,0,0x015C[0m
+[0;32mI (55002) DATA_CSV: 54572,2.4757,1.7203,1,0,0x0159[0m
+[0;32mI (55032) DATA_CSV: 54602,2.4702,0.7303,1,0,0x0159[0m
+[0;32mI (55062) DATA_CSV: 54632,2.5388,0.1844,1,1,0x03FB[0m
+[0;32mI (55092) DATA_CSV: 54662,2.4828,0.0583,1,1,0x03F3[0m
+[0;32mI (55122) DATA_CSV: 54692,2.4228,1.2648,0,1,0x03F2[0m
+[0;32mI (55152) DATA_CSV: 54722,2.4374,1.9791,0,0,0x03F0[0m
+[0;32mI (55182) DATA_CSV: 54752,2.4991,1.6458,0,0,0x02F4[0m
+[0;32mI (55212) DATA_CSV: 54782,2.4858,0.6784,1,0,0x02A5[0m
+[0;32mI (55242) DATA_CSV: 54812,2.3689,0.1657,1,0,0x02AD[0m
+[0;32mI (55272) DATA_CSV: 54842,2.4059,0.0245,1,1,0x00AF[0m
+[0;32mI (55302) DATA_CSV: 54872,2.4924,0.0182,0,1,0x00AE[0m
+[0;32mI (55332) DATA_CSV: 54902,2.4601,1.0496,0,1,0x00AA[0m
+[0;32mI (55362) DATA_CSV: 54932,2.4803,1.9193,0,0,0x0008[0m
+[0;32mI (55392) DATA_CSV: 54962,2.4049,1.6378,0,0,0x0108[0m
+[0;32mI (55422) DATA_CSV: 54992,2.3855,0.6777,1,0,0x0101[0m
+[0;32mI (55422) RobotController: joint[0] current_steps=305 target_steps=330[0m
+[0;32mI (55422) RobotController: joint[1] current_steps=192 target_steps=206[0m
+[0;32mI (55422) RobotController: joint[2] current_steps=96 target_steps=103[0m
+[0;32mI (55432) RobotController: joint[3] current_steps=96 target_steps=103[0m
+[0;32mI (55432) RobotController: joint[4] current_steps=137 target_steps=147[0m
+[0;32mI (55442) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (55452) RobotController: valve_state=0x0103[0m
+[0;32mI (55482) DATA_CSV: 55052,2.4270,0.1629,1,1,0x0103[0m
+[0;32mI (55512) DATA_CSV: 55082,2.5881,1.2268,0,1,0x0306[0m
+[0;32mI (55542) DATA_CSV: 55112,2.4946,2.0756,0,1,0x0356[0m
+[0;32mI (55572) DATA_CSV: 55142,2.3752,2.2682,0,0,0x035C[0m
+[0;32mI (55602) DATA_CSV: 55172,2.3912,1.7526,0,0,0x035C[0m
+[0;32mI (55632) DATA_CSV: 55202,2.5100,0.7288,1,0,0x025D[0m
+[0;32mI (55662) DATA_CSV: 55232,2.5495,0.1855,1,1,0x025B[0m
+[0;32mI (55692) DATA_CSV: 55262,2.5254,0.0626,1,1,0x02FB[0m
+[0;32mI (55722) DATA_CSV: 55292,2.4976,1.2433,0,1,0x00F2[0m
+[0;32mI (55752) DATA_CSV: 55322,2.3753,1.9796,0,1,0x00F2[0m
+[0;32mI (55782) DATA_CSV: 55352,2.3937,2.1574,0,0,0x00F0[0m
+[0;32mI (55812) DATA_CSV: 55382,2.4975,1.7214,1,0,0x00F5[0m
+[0;32mI (55842) DATA_CSV: 55412,2.4987,0.7186,1,0,0x01A5[0m
+[0;32mI (55872) DATA_CSV: 55442,2.3797,0.1853,1,1,0x01A7[0m
+[0;32mI (55902) DATA_CSV: 55472,2.4047,0.0583,1,1,0x01AF[0m
+[0;32mI (55932) DATA_CSV: 55502,2.4628,1.0202,0,1,0x01AE[0m
+[0;32mI (55962) DATA_CSV: 55532,2.5251,1.9225,0,0,0x03A8[0m
+[0;32mI (55992) DATA_CSV: 55562,2.4311,1.6393,0,0,0x03A8[0m
+[0;32mI (56022) DATA_CSV: 55592,2.4785,0.6725,1,0,0x0309[0m
+[0;32mI (56052) DATA_CSV: 55622,2.4416,0.1638,1,0,0x0301[0m
+[0;32mI (56082) DATA_CSV: 55652,2.4707,0.0254,1,1,0x0203[0m
+[0;32mI (56112) DATA_CSV: 55683,2.5322,0.0176,0,1,0x0202[0m
+[0;32mI (56142) DATA_CSV: 55712,2.5154,1.1881,0,1,0x0206[0m
+[0;32mI (56172) DATA_CSV: 55742,2.5269,2.0032,0,0,0x0054[0m
+[0;32mI (56202) DATA_CSV: 55772,2.3786,1.6909,0,0,0x005C[0m
+[0;32mI (56232) DATA_CSV: 55802,2.3809,0.7029,1,0,0x005D[0m
+[0;32mI (56262) DATA_CSV: 55832,2.4713,0.1717,1,1,0x005F[0m
+[0;32mI (56292) DATA_CSV: 55862,2.5633,0.0555,1,1,0x015B[0m
+[0;32mI (56322) DATA_CSV: 55892,2.5119,1.2650,0,1,0x01FA[0m
+[0;32mI (56352) DATA_CSV: 55922,2.4321,2.0382,0,1,0x01FA[0m
+[0;32mI (56382) DATA_CSV: 55952,2.4190,2.2016,0,0,0x01F0[0m
+[0;32mI (56412) DATA_CSV: 55982,2.4470,1.7520,1,0,0x03F1[0m
+[0;32mI (56442) DATA_CSV: 56012,2.4404,0.7273,1,0,0x03F5[0m
+[0;32mI (56472) DATA_CSV: 56042,2.4571,0.1804,1,1,0x03F7[0m
+[0;32mI (56502) DATA_CSV: 56072,2.5388,0.0580,1,1,0x03A7[0m
+[0;32mI (56532) DATA_CSV: 56102,2.4882,1.2316,0,1,0x02AE[0m
+[0;32mI (56562) DATA_CSV: 56132,2.3797,1.9740,0,0,0x02AC[0m
+[0;32mI (56592) DATA_CSV: 56162,2.3957,1.6531,0,0,0x02AC[0m
+[0;32mI (56622) DATA_CSV: 56192,2.5338,0.6658,1,0,0x02AD[0m
+[0;32mI (56652) DATA_CSV: 56222,2.6391,0.1583,1,0,0x02AD[0m
+[0;32mI (56682) DATA_CSV: 56252,2.7488,0.0222,1,1,0x02AF[0m
+[0;32mI (56712) app_main: Reached waypoint 1 / 1[0m
+[0;32mI (56712) app_main: Path execution finished[0m
+[0;32mI (56712) DATA_CSV: 56282,2.8194,0.0162,1,1,0x02AF[0m
+[0;32mI (56742) DATA_CSV: 56312,2.9029,1.5216,1,1,0x02AF[0m
+[0;32mI (56772) DATA_CSV: 56342,2.9932,2.4150,1,1,0x02AF[0m
+[0;32mI (56802) DATA_CSV: 56372,3.0926,2.7997,1,1,0x02AF[0m
+[0;32mI (56832) DATA_CSV: 56402,3.1922,2.9712,1,1,0x02AF[0m
+[0;32mI (56862) DATA_CSV: 56432,3.2807,3.0809,1,1,0x02AF[0m
+[0;32mI (56892) DATA_CSV: 56462,3.3605,3.1715,1,1,0x02AF[0m
+[0;32mI (56922) DATA_CSV: 56492,3.4347,3.2509,1,1,0x02AF[0m
+[0;32mI (56952) DATA_CSV: 56522,3.5004,3.3235,1,1,0x02AF[0m
+[0;32mI (56952) RobotController: joint[0] current_steps=330 target_steps=330[0m
+[0;32mI (56952) RobotController: joint[1] current_steps=206 target_steps=206[0m
+[0;32mI (56952) RobotController: joint[2] current_steps=103 target_steps=103[0m
+[0;32mI (56962) RobotController: joint[3] current_steps=103 target_steps=103[0m
+[0;32mI (56972) RobotController: joint[4] current_steps=147 target_steps=147[0m
+[0;32mI (56972) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (56982) RobotController: valve_state=0x02af[0m
+[0;32mI (57012) DATA_CSV: 56582,3.5625,3.3891,1,1,0x02AF[0m
+[0;32mI (57042) DATA_CSV: 56612,3.6682,3.5037,1,1,0x02AF[0m
+[0;32mI (57072) DATA_CSV: 56642,3.7171,3.5537,1,1,0x02AF[0m
+[0;32mI (57102) DATA_CSV: 56672,3.7630,3.6011,1,1,0x02AF[0m
+[0;32mI (57132) DATA_CSV: 56702,3.8039,3.6444,1,1,0x02AF[0m
+[0;32mI (57162) DATA_CSV: 56732,3.8397,3.6839,1,1,0x02AF[0m
+[0;32mI (57192) DATA_CSV: 56762,3.8772,3.7209,1,1,0x02AF[0m
+[0;32mI (57222) DATA_CSV: 56792,3.9082,3.7542,1,1,0x02AF[0m
+[0;32mI (57252) DATA_CSV: 56822,3.9362,3.7853,1,1,0x02AF[0m
+[0;32mI (57282) DATA_CSV: 56852,3.9660,3.8142,1,1,0x02AF[0m
+[0;32mI (57312) DATA_CSV: 56882,3.9904,3.8419,1,1,0x02AF[0m
+[0;32mI (57342) DATA_CSV: 56912,4.0139,3.8666,1,1,0x02AF[0m
+[0;32mI (57372) DATA_CSV: 56942,4.0371,3.8890,1,1,0x02AF[0m
+[0;32mI (57402) DATA_CSV: 56972,4.0565,3.9102,1,1,0x02AF[0m
+[0;32mI (57432) DATA_CSV: 57002,4.0755,3.9299,1,1,0x02AF[0m
+[0;32mI (57462) DATA_CSV: 57032,4.0913,3.9490,1,1,0x02AF[0m
+[0;32mI (57492) DATA_CSV: 57062,4.1070,3.9657,1,1,0x02AF[0m
+[0;32mI (57522) DATA_CSV: 57092,4.1230,3.9814,1,1,0x02AF[0m
+[0;32mI (57552) DATA_CSV: 57122,4.1361,3.9959,1,1,0x02AF[0m
+[0;32mI (57582) DATA_CSV: 57152,4.1490,4.0092,1,1,0x02AF[0m
+[0;32mI (57612) DATA_CSV: 57182,4.1614,4.0224,1,1,0x02AF[0m
+[0;32mI (57642) DATA_CSV: 57212,4.1695,4.0344,1,1,0x02AF[0m
+[0;32mI (57672) DATA_CSV: 57242,4.0860,3.9945,1,1,0x02AF[0m
+[0;32mI (57702) DATA_CSV: 57272,4.0481,3.9043,1,1,0x02AF[0m
+[0;32mI (57732) DATA_CSV: 57302,4.0471,3.9127,1,1,0x02AF[0m
+[0;32mI (57762) DATA_CSV: 57332,4.0503,3.9149,1,1,0x02AF[0m
+[0;32mI (57792) DATA_CSV: 57362,4.0481,3.9173,1,1,0x02AF[0m
+[0;32mI (57822) DATA_CSV: 57392,4.0469,3.9174,1,1,0x02AF[0m
+[0;32mI (57852) DATA_CSV: 57422,4.0458,3.9173,1,1,0x02AF[0m
+[0;32mI (57882) DATA_CSV: 57452,4.0471,3.9167,1,1,0x02AF[0m
+[0;32mI (57912) DATA_CSV: 57482,4.0453,3.9167,1,1,0x02AF[0m
+[0;32mI (57942) DATA_CSV: 57512,4.0436,3.9152,1,1,0x02AF[0m
+[0;32mI (57972) DATA_CSV: 57542,4.0418,3.9144,1,1,0x02AF[0m
+[0;32mI (58002) DATA_CSV: 57572,4.0422,3.9136,1,1,0x02AF[0m
+[0;32mI (58032) DATA_CSV: 57602,4.0406,3.9133,1,1,0x02AF[0m
+[0;32mI (58062) DATA_CSV: 57632,4.0401,3.9117,1,1,0x02AF[0m
+[0;32mI (58092) DATA_CSV: 57662,4.0377,3.9109,1,1,0x02AF[0m
+[0;32mI (58122) DATA_CSV: 57692,4.0370,3.9115,1,1,0x02AF[0m
+[0;32mI (58152) DATA_CSV: 57722,4.0362,3.9100,1,1,0x02AF[0m
+[0;32mI (58182) DATA_CSV: 57752,4.0370,3.9104,1,1,0x02AF[0m
+[0;32mI (58212) DATA_CSV: 57782,4.0339,3.9098,1,1,0x02AF[0m
+[0;32mI (58242) DATA_CSV: 57812,4.0353,3.9083,1,1,0x02AF[0m
+[0;32mI (58272) DATA_CSV: 57842,4.0331,3.9080,1,1,0x02AF[0m
+[0;32mI (58302) DATA_CSV: 57872,4.0348,3.9077,1,1,0x02AF[0m
+[0;32mI (58332) DATA_CSV: 57902,4.0339,3.9076,1,1,0x02AF[0m
+[0;32mI (58362) DATA_CSV: 57932,4.0315,3.9074,1,1,0x02AF[0m
+[0;32mI (58392) DATA_CSV: 57962,4.0319,3.9066,1,1,0x02AF[0m
+[0;32mI (58422) DATA_CSV: 57992,4.0326,3.9072,1,1,0x02AF[0m
+[0;32mI (58452) DATA_CSV: 58022,4.0332,3.9068,1,1,0x02AF[0m
+[0;32mI (58482) DATA_CSV: 58052,4.0318,3.9067,1,1,0x02AF[0m
+[0;32mI (58482) RobotController: joint[0] current_steps=330 target_steps=330[0m
+[0;32mI (58482) RobotController: joint[1] current_steps=206 target_steps=206[0m
+[0;32mI (58482) RobotController: joint[2] current_steps=103 target_steps=103[0m
+[0;32mI (58492) RobotController: joint[3] current_steps=103 target_steps=103[0m
+[0;32mI (58502) RobotController: joint[4] current_steps=147 target_steps=147[0m
+[0;32mI (58502) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (58512) RobotController: valve_state=0x02af[0m
+[0;32mI (58542) DATA_CSV: 58112,4.0313,3.9068,1,1,0x02AF[0m
+[0;32mI (58572) DATA_CSV: 58142,4.0304,3.9058,1,1,0x02AF[0m
+[0;32mI (58602) DATA_CSV: 58172,4.0299,3.9067,1,1,0x02AF[0m
+[0;32mI (58632) DATA_CSV: 58202,4.0344,3.9064,1,1,0x02AF[0m
+[0;32mI (58662) DATA_CSV: 58232,4.0332,3.9062,1,1,0x02AF[0m
+[0;32mI (58692) DATA_CSV: 58262,4.0324,3.9058,1,1,0x02AF[0m
+[0;32mI (58722) DATA_CSV: 58292,4.0325,3.9053,1,1,0x02AF[0m
+[0;32mI (58752) DATA_CSV: 58322,4.0322,3.9049,1,1,0x02AF[0m
+[0;32mI (58782) DATA_CSV: 58352,4.0310,3.9059,1,1,0x02AF[0m
+[0;32mI (58812) DATA_CSV: 58382,4.0324,3.9051,1,1,0x02AF[0m
+[0;32mI (58842) DATA_CSV: 58412,4.0321,3.9057,1,1,0x02AF[0m
+[0;32mI (58872) DATA_CSV: 58442,4.0318,3.9058,1,1,0x02AF[0m
+[0;32mI (58902) DATA_CSV: 58472,4.0324,3.9057,1,1,0x02AF[0m
+[0;32mI (58932) DATA_CSV: 58502,4.0310,3.9061,1,1,0x02AF[0m
+[0;32mI (58962) DATA_CSV: 58532,4.0317,3.9063,1,1,0x02AF[0m
+[0;32mI (58992) DATA_CSV: 58562,4.0308,3.9065,1,1,0x02AF[0m
+[0;32mI (59022) DATA_CSV: 58592,4.0325,3.9072,1,1,0x02AF[0m
+[0;32mI (59052) DATA_CSV: 58622,4.0335,3.9066,1,1,0x02AF[0m
+[0;32mI (59082) DATA_CSV: 58652,4.0326,3.9068,1,1,0x02AF[0m
+[0;32mI (59112) DATA_CSV: 58682,4.0338,3.9071,1,1,0x02AF[0m
+[0;32mI (59142) DATA_CSV: 58712,4.0334,3.9069,1,1,0x02AF[0m
+[0;32mI (59172) DATA_CSV: 58742,4.0336,3.9068,1,1,0x02AF[0m
+[0;32mI (59202) DATA_CSV: 58772,4.0342,3.9077,1,1,0x02AF[0m
+[0;32mI (59232) DATA_CSV: 58802,4.0327,3.9067,1,1,0x02AF[0m
+[0;32mI (59262) DATA_CSV: 58832,4.0339,3.9071,1,1,0x02AF[0m
+[0;32mI (59292) DATA_CSV: 58862,4.0322,3.9076,1,1,0x02AF[0m
+[0;32mI (59322) DATA_CSV: 58892,4.0314,3.9076,1,1,0x02AF[0m
+[0;32mI (59352) DATA_CSV: 58922,4.0321,3.9079,1,1,0x02AF[0m
+[0;32mI (59382) DATA_CSV: 58952,4.0321,3.9080,1,1,0x02AF[0m
+[0;32mI (59412) DATA_CSV: 58982,4.0346,3.9088,1,1,0x02AF[0m
+[0;32mI (59442) DATA_CSV: 59012,4.0345,3.9094,1,1,0x02AF[0m
+[0;32mI (59472) DATA_CSV: 59042,4.0348,3.9090,1,1,0x02AF[0m
+[0;32mI (59502) DATA_CSV: 59072,4.0354,3.9086,1,1,0x02AF[0m
+[0;32mI (59532) DATA_CSV: 59102,4.0376,3.9090,1,1,0x02AF[0m
+[0;32mI (59562) DATA_CSV: 59132,4.0357,3.9090,1,1,0x02AF[0m
+[0;32mI (59592) DATA_CSV: 59162,4.0332,3.9088,1,1,0x02AF[0m
+[0;32mI (59622) DATA_CSV: 59192,4.0340,3.9103,1,1,0x02AF[0m
+[0;32mI (59652) DATA_CSV: 59222,4.0356,3.9103,1,1,0x02AF[0m
+[0;32mI (59682) DATA_CSV: 59252,4.0356,3.9099,1,1,0x02AF[0m
+[0;32mI (59712) DATA_CSV: 59282,4.0350,3.9096,1,1,0x02AF[0m
+[0;32mI (59742) DATA_CSV: 59312,4.0354,3.9099,1,1,0x02AF[0m
+[0;32mI (59772) DATA_CSV: 59342,4.0355,3.9102,1,1,0x02AF[0m
+[0;32mI (59802) DATA_CSV: 59372,4.0366,3.9106,1,1,0x02AF[0m
+[0;32mI (59832) DATA_CSV: 59402,4.0353,3.9104,1,1,0x02AF[0m
+[0;32mI (59862) DATA_CSV: 59432,4.0360,3.9110,1,1,0x02AF[0m
+[0;32mI (59892) DATA_CSV: 59462,4.0353,3.9109,1,1,0x02AF[0m
+[0;32mI (59922) DATA_CSV: 59492,4.0342,3.9107,1,1,0x02AF[0m
+[0;32mI (59952) DATA_CSV: 59522,4.0363,3.9111,1,1,0x02AF[0m
+[0;32mI (59982) DATA_CSV: 59552,4.0357,3.9114,1,1,0x02AF[0m
+[0;32mI (60012) DATA_CSV: 59582,4.0340,3.9120,1,1,0x02AF[0m
+[0;32mI (60012) RobotController: joint[0] current_steps=330 target_steps=330[0m
+[0;32mI (60012) RobotController: joint[1] current_steps=206 target_steps=206[0m
+[0;32mI (60012) RobotController: joint[2] current_steps=103 target_steps=103[0m
+[0;32mI (60022) RobotController: joint[3] current_steps=103 target_steps=103[0m
+[0;32mI (60032) RobotController: joint[4] current_steps=147 target_steps=147[0m
+[0;32mI (60032) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (60042) RobotController: valve_state=0x02af[0m
+[0;32mI (60072) DATA_CSV: 59642,4.0353,3.9120,1,1,0x02AF[0m
+[0;32mI (60102) DATA_CSV: 59672,4.0365,3.9111,1,1,0x02AF[0m
+[0;32mI (60132) DATA_CSV: 59702,4.0381,3.9122,1,1,0x02AF[0m
+[0;32mI (60162) DATA_CSV: 59732,4.0377,3.9121,1,1,0x02AF[0m
+[0;32mI (60192) DATA_CSV: 59762,4.0361,3.9124,1,1,0x02AF[0m
+[0;32mI (60222) DATA_CSV: 59792,4.0370,3.9118,1,1,0x02AF[0m
+[0;32mI (60252) DATA_CSV: 59822,4.0367,3.9112,1,1,0x02AF[0m
+[0;32mI (60282) DATA_CSV: 59852,4.0384,3.9125,1,1,0x02AF[0m
+[0;32mI (60312) DATA_CSV: 59882,4.0384,3.9129,1,1,0x02AF[0m
+[0;32mI (60342) DATA_CSV: 59912,4.0351,3.9134,1,1,0x02AF[0m
+[0;32mI (60372) DATA_CSV: 59942,4.0381,3.9135,1,1,0x02AF[0m
+[0;32mI (60402) DATA_CSV: 59972,4.0395,3.9134,1,1,0x02AF[0m
+[0;32mI (60432) DATA_CSV: 60002,4.0368,3.9139,1,1,0x02AF[0m
+[0;32mI (60462) DATA_CSV: 60032,4.0376,3.9137,1,1,0x02AF[0m
+[0;32mI (60492) DATA_CSV: 60062,4.0379,3.9142,1,1,0x02AF[0m
+[0;32mI (60522) DATA_CSV: 60092,4.0379,3.9139,1,1,0x02AF[0m
+[0;32mI (60552) DATA_CSV: 60122,4.0402,3.9144,1,1,0x02AF[0m
+[0;32mI (60582) DATA_CSV: 60152,4.0376,3.9146,1,1,0x02AF[0m
+[0;32mI (60612) DATA_CSV: 60182,4.0396,3.9141,1,1,0x02AF[0m
+[0;32mI (60642) DATA_CSV: 60212,4.0390,3.9147,1,1,0x02AF[0m
+[0;32mI (60672) DATA_CSV: 60242,4.0381,3.9139,1,1,0x02AF[0m
+[0;32mI (60702) DATA_CSV: 60272,4.0407,3.9145,1,1,0x02AF[0m
+[0;32mI (60732) DATA_CSV: 60302,4.0375,3.9143,1,1,0x02AF[0m
+[0;32mI (60762) DATA_CSV: 60332,4.0399,3.9147,1,1,0x02AF[0m
+[0;32mI (60792) DATA_CSV: 60362,4.0402,3.9155,1,1,0x02AF[0m
+[0;32mI (60822) DATA_CSV: 60392,4.0403,3.9150,1,1,0x02AF[0m
+[0;32mI (60852) DATA_CSV: 60422,4.0394,3.9150,1,1,0x02AF[0m
+[0;32mI (60882) DATA_CSV: 60452,4.0392,3.9155,1,1,0x02AF[0m
+[0;32mI (60912) DATA_CSV: 60482,4.0396,3.9154,1,1,0x02AF[0m
+[0;32mI (60942) DATA_CSV: 60512,4.0402,3.9151,1,1,0x02AF[0m
+[0;32mI (60972) DATA_CSV: 60542,4.0416,3.9158,1,1,0x02AF[0m
+[0;32mI (61002) DATA_CSV: 60572,4.0399,3.9159,1,1,0x02AF[0m
+[0;32mI (61032) DATA_CSV: 60602,4.0413,3.9158,1,1,0x02AF[0m
+[0;32mI (61062) DATA_CSV: 60632,4.0418,3.9157,1,1,0x02AF[0m
+[0;32mI (61092) DATA_CSV: 60662,4.0413,3.9170,1,1,0x02AF[0m
+[0;32mI (61122) DATA_CSV: 60692,4.0406,3.9162,1,1,0x02AF[0m
+[0;32mI (61152) DATA_CSV: 60722,4.0391,3.9166,1,1,0x02AF[0m
+[0;32mI (61182) DATA_CSV: 60752,4.0410,3.9159,1,1,0x02AF[0m
+[0;32mI (61212) DATA_CSV: 60782,4.0399,3.9165,1,1,0x02AF[0m
+[0;32mI (61242) DATA_CSV: 60812,4.0416,3.9165,1,1,0x02AF[0m
+[0;32mI (61272) DATA_CSV: 60842,4.0430,3.9151,1,1,0x02AF[0m
+[0;32mI (61302) DATA_CSV: 60872,4.0409,3.9164,1,1,0x02AF[0m
+[0;32mI (61332) DATA_CSV: 60902,4.0443,3.9168,1,1,0x02AF[0m
+[0;32mI (61362) DATA_CSV: 60932,4.0421,3.9169,1,1,0x02AF[0m
+[0;32mI (61392) DATA_CSV: 60962,4.0411,3.9175,1,1,0x02AF[0m
+[0;32mI (61422) DATA_CSV: 60992,4.0406,3.9169,1,1,0x02AF[0m
+[0;32mI (61452) DATA_CSV: 61022,4.0410,3.9172,1,1,0x02AF[0m
+[0;32mI (61482) DATA_CSV: 61052,4.0423,3.9168,1,1,0x02AF[0m
+[0;32mI (61512) DATA_CSV: 61082,4.0419,3.9167,1,1,0x02AF[0m
+[0;32mI (61542) DATA_CSV: 61112,4.0420,3.9173,1,1,0x02AF[0m
+[0;32mI (61542) RobotController: joint[0] current_steps=330 target_steps=330[0m
+[0;32mI (61542) RobotController: joint[1] current_steps=206 target_steps=206[0m
+[0;32mI (61542) RobotController: joint[2] current_steps=103 target_steps=103[0m
+[0;32mI (61552) RobotController: joint[3] current_steps=103 target_steps=103[0m
+[0;32mI (61562) RobotController: joint[4] current_steps=147 target_steps=147[0m
+[0;32mI (61562) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (61572) RobotController: valve_state=0x02af[0m
+[0;32mI (61602) DATA_CSV: 61172,4.0419,3.9166,1,1,0x02AF[0m
+[0;32mI (61632) DATA_CSV: 61202,4.0438,3.9166,1,1,0x02AF[0m
+[0;32mI (61662) DATA_CSV: 61232,4.0416,3.9160,1,1,0x02AF[0m
+[0;32mI (61692) DATA_CSV: 61262,4.0397,3.9173,1,1,0x02AF[0m
+[0;32mI (61722) DATA_CSV: 61292,4.0420,3.9172,1,1,0x02AF[0m
+[0;32mI (61752) DATA_CSV: 61322,4.0431,3.9171,1,1,0x02AF[0m
+[0;32mI (61782) DATA_CSV: 61352,4.0429,3.9165,1,1,0x02AF[0m
+[0;32mI (61812) DATA_CSV: 61382,4.0430,3.9174,1,1,0x02AF[0m
+[0;32mI (61842) DATA_CSV: 61412,4.0428,3.9175,1,1,0x02AF[0m
+[0;32mI (61872) DATA_CSV: 61442,4.0425,3.9182,1,1,0x02AF[0m
+[0;32mI (61902) DATA_CSV: 61472,4.0425,3.9183,1,1,0x02AF[0m
+[0;32mI (61932) DATA_CSV: 61502,4.0432,3.9175,1,1,0x02AF[0m
+[0;32mI (61962) DATA_CSV: 61532,4.0428,3.9178,1,1,0x02AF[0m
+[0;32mI (61992) DATA_CSV: 61562,4.0425,3.9187,1,1,0x02AF[0m
+[0;32mI (62022) DATA_CSV: 61592,4.0422,3.9188,1,1,0x02AF[0m
+[0;32mI (62052) DATA_CSV: 61622,4.0443,3.9185,1,1,0x02AF[0m
+[0;32mI (62082) DATA_CSV: 61652,4.0424,3.9183,1,1,0x02AF[0m
+[0;32mI (62112) DATA_CSV: 61682,4.0413,3.9175,1,1,0x02AF[0m
+[0;32mI (62142) DATA_CSV: 61712,4.0414,3.9185,1,1,0x02AF[0m
+[0;32mI (62172) DATA_CSV: 61742,4.0446,3.9184,1,1,0x02AF[0m
+[0;32mI (62202) DATA_CSV: 61772,4.0447,3.9185,1,1,0x02AF[0m
+[0;32mI (62232) DATA_CSV: 61802,4.0437,3.9188,1,1,0x02AF[0m
+[0;32mI (62262) DATA_CSV: 61832,4.0440,3.9190,1,1,0x02AF[0m
+[0;32mI (62292) DATA_CSV: 61862,4.0464,3.9190,1,1,0x02AF[0m
+[0;32mI (62322) DATA_CSV: 61892,4.0441,3.9188,1,1,0x02AF[0m
+[0;32mI (62352) DATA_CSV: 61922,4.0429,3.9188,1,1,0x02AF[0m
+[0;32mI (62382) DATA_CSV: 61952,4.0417,3.9194,1,1,0x02AF[0m
+[0;32mI (62412) DATA_CSV: 61982,4.0424,3.9194,1,1,0x02AF[0m
+[0;32mI (62442) DATA_CSV: 62012,4.0437,3.9196,1,1,0x02AF[0m
+[0;32mI (62472) DATA_CSV: 62042,4.0433,3.9196,1,1,0x02AF[0m
+[0;32mI (62502) DATA_CSV: 62072,4.0432,3.9195,1,1,0x02AF[0m
+[0;32mI (62532) DATA_CSV: 62102,4.0440,3.9190,1,1,0x02AF[0m
+[0;32mI (62562) DATA_CSV: 62132,4.0422,3.9197,1,1,0x02AF[0m
+[0;32mI (62592) DATA_CSV: 62162,4.0450,3.9196,1,1,0x02AF[0m
+[0;32mI (62622) DATA_CSV: 62192,4.0433,3.9200,1,1,0x02AF[0m
+[0;32mI (62652) DATA_CSV: 62222,4.0421,3.9200,1,1,0x02AF[0m
+[0;32mI (62682) DATA_CSV: 62252,4.0421,3.9193,1,1,0x02AF[0m
+[0;32mI (62712) DATA_CSV: 62282,4.0443,3.9199,1,1,0x02AF[0m
+[0;32mI (62742) DATA_CSV: 62312,4.0439,3.9197,1,1,0x02AF[0m
+[0;32mI (62772) DATA_CSV: 62342,4.0420,3.9201,1,1,0x02AF[0m
+[0;32mI (62802) DATA_CSV: 62372,4.0440,3.9196,1,1,0x02AF[0m
+[0;32mI (62832) DATA_CSV: 62402,4.0445,3.9204,1,1,0x02AF[0m
+[0;32mI (62862) DATA_CSV: 62432,4.0437,3.9203,1,1,0x02AF[0m
+[0;32mI (62892) DATA_CSV: 62462,4.0440,3.9201,1,1,0x02AF[0m
+[0;32mI (62922) DATA_CSV: 62492,4.0440,3.9201,1,1,0x02AF[0m
+[0;32mI (62952) DATA_CSV: 62522,4.0452,3.9196,1,1,0x02AF[0m
+[0;32mI (62982) DATA_CSV: 62552,4.0436,3.9204,1,1,0x02AF[0m
+[0;32mI (63012) DATA_CSV: 62582,4.0441,3.9202,1,1,0x02AF[0m
+[0;32mI (63042) DATA_CSV: 62612,4.0432,3.9211,1,1,0x02AF[0m
+[0;32mI (63072) DATA_CSV: 62642,4.0454,3.9206,1,1,0x02AF[0m
+[0;32mI (63072) RobotController: joint[0] current_steps=330 target_steps=330[0m
+[0;32mI (63072) RobotController: joint[1] current_steps=206 target_steps=206[0m
+[0;32mI (63072) RobotController: joint[2] current_steps=103 target_steps=103[0m
+[0;32mI (63082) RobotController: joint[3] current_steps=103 target_steps=103[0m
+[0;32mI (63092) RobotController: joint[4] current_steps=147 target_steps=147[0m
+[0;32mI (63092) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (63102) RobotController: valve_state=0x02af[0m
+[0;32mI (63132) DATA_CSV: 62702,4.0429,3.9208,1,1,0x02AF[0m
+[0;32mI (63162) DATA_CSV: 62732,4.0432,3.9198,1,1,0x02AF[0m
+[0;32mI (63192) DATA_CSV: 62762,4.0461,3.9196,1,1,0x02AF[0m
+[0;32mI (63222) DATA_CSV: 62792,4.0450,3.9199,1,1,0x02AF[0m
+[0;32mI (63252) DATA_CSV: 62822,4.0419,3.9202,1,1,0x02AF[0m
+[0;32mI (63282) DATA_CSV: 62852,4.0436,3.9206,1,1,0x02AF[0m
+[0;32mI (63312) DATA_CSV: 62882,4.0451,3.9207,1,1,0x02AF[0m
+[0;32mI (63342) DATA_CSV: 62912,4.0438,3.9207,1,1,0x02AF[0m
+[0;32mI (63372) DATA_CSV: 62942,4.0451,3.9208,1,1,0x02AF[0m
+[0;32mI (63402) DATA_CSV: 62972,4.0459,3.9212,1,1,0x02AF[0m
+[0;32mI (63432) DATA_CSV: 63002,4.0449,3.9198,1,1,0x02AF[0m
+[0;32mI (63462) DATA_CSV: 63032,4.0441,3.9203,1,1,0x02AF[0m
+[0;32mI (63492) DATA_CSV: 63062,4.0459,3.9213,1,1,0x02AF[0m
+[0;32mI (63522) DATA_CSV: 63092,4.0435,3.9208,1,1,0x02AF[0m
+[0;32mI (63552) DATA_CSV: 63122,4.0441,3.9214,1,1,0x02AF[0m
+[0;32mI (63582) DATA_CSV: 63152,4.0455,3.9207,1,1,0x02AF[0m
+[0;32mI (63612) DATA_CSV: 63182,4.0462,3.9204,1,1,0x02AF[0m
+[0;32mI (63642) DATA_CSV: 63212,4.0457,3.9214,1,1,0x02AF[0m
+[0;32mI (63672) DATA_CSV: 63242,4.0440,3.9212,1,1,0x02AF[0m
+[0;32mI (63702) DATA_CSV: 63272,4.0457,3.9216,1,1,0x02AF[0m
+[0;32mI (63732) DATA_CSV: 63302,4.0454,3.9219,1,1,0x02AF[0m
+[0;32mI (63762) DATA_CSV: 63332,4.0450,3.9217,1,1,0x02AF[0m
+[0;32mI (63792) DATA_CSV: 63362,4.0463,3.9213,1,1,0x02AF[0m
+[0;32mI (63822) DATA_CSV: 63392,4.0456,3.9214,1,1,0x02AF[0m
+[0;32mI (63852) DATA_CSV: 63422,4.0458,3.9211,1,1,0x02AF[0m
+[0;32mI (63882) DATA_CSV: 63452,4.0457,3.9214,1,1,0x02AF[0m
+[0;32mI (63912) DATA_CSV: 63482,4.0444,3.9215,1,1,0x02AF[0m
+[0;32mI (63942) DATA_CSV: 63512,4.0469,3.9218,1,1,0x02AF[0m
+[0;32mI (63972) DATA_CSV: 63542,4.0468,3.9218,1,1,0x02AF[0m
+[0;32mI (64002) DATA_CSV: 63572,4.0444,3.9225,1,1,0x02AF[0m
+[0;32mI (64032) DATA_CSV: 63602,4.0450,3.9222,1,1,0x02AF[0m
+[0;32mI (64062) DATA_CSV: 63632,4.0453,3.9220,1,1,0x02AF[0m
+[0;32mI (64092) DATA_CSV: 63662,4.0437,3.9216,1,1,0x02AF[0m
+[0;32mI (64122) DATA_CSV: 63692,4.0464,3.9215,1,1,0x02AF[0m
+[0;32mI (64152) DATA_CSV: 63722,4.0461,3.9217,1,1,0x02AF[0m
+[0;32mI (64182) DATA_CSV: 63752,4.0457,3.9224,1,1,0x02AF[0m
+[0;32mI (64212) DATA_CSV: 63782,4.0462,3.9220,1,1,0x02AF[0m
+[0;32mI (64242) DATA_CSV: 63812,4.0463,3.9223,1,1,0x02AF[0m
+[0;32mI (64272) DATA_CSV: 63842,4.0453,3.9214,1,1,0x02AF[0m
+[0;32mI (64302) DATA_CSV: 63872,4.0449,3.9232,1,1,0x02AF[0m
+[0;32mI (64332) DATA_CSV: 63902,4.0465,3.9222,1,1,0x02AF[0m
+[0;32mI (64362) DATA_CSV: 63932,4.0451,3.9221,1,1,0x02AF[0m
+[0;32mI (64392) DATA_CSV: 63962,4.0471,3.9221,1,1,0x02AF[0m
+[0;32mI (64422) DATA_CSV: 63992,4.0453,3.9226,1,1,0x02AF[0m
+[0;32mI (64452) DATA_CSV: 64022,4.0444,3.9223,1,1,0x02AF[0m
+[0;32mI (64482) DATA_CSV: 64052,4.0465,3.9227,1,1,0x02AF[0m
+[0;32mI (64512) DATA_CSV: 64082,4.0436,3.9225,1,1,0x02AF[0m
+[0;32mI (64542) DATA_CSV: 64112,4.0469,3.9222,1,1,0x02AF[0m
+[0;32mI (64572) DATA_CSV: 64142,4.0470,3.9225,1,1,0x02AF[0m
+[0;32mI (64602) DATA_CSV: 64172,4.0452,3.9214,1,1,0x02AF[0m
+[0;32mI (64602) RobotController: joint[0] current_steps=330 target_steps=330[0m
+[0;32mI (64602) RobotController: joint[1] current_steps=206 target_steps=206[0m
+[0;32mI (64602) RobotController: joint[2] current_steps=103 target_steps=103[0m
+[0;32mI (64612) RobotController: joint[3] current_steps=103 target_steps=103[0m
+[0;32mI (64622) RobotController: joint[4] current_steps=147 target_steps=147[0m
+[0;32mI (64622) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (64632) RobotController: valve_state=0x02af[0m
+[0;32mI (64662) DATA_CSV: 64232,4.0457,3.9222,1,1,0x02AF[0m
+[0;32mI (64692) DATA_CSV: 64262,4.0457,3.9225,1,1,0x02AF[0m
+[0;32mI (64722) DATA_CSV: 64292,4.0456,3.9216,1,1,0x02AF[0m
+[0;32mI (64752) DATA_CSV: 64322,4.0455,3.9216,1,1,0x02AF[0m
+[0;32mI (64782) DATA_CSV: 64352,4.0458,3.9227,1,1,0x02AF[0m
+[0;32mI (64812) DATA_CSV: 64382,4.0464,3.9228,1,1,0x02AF[0m
+[0;32mI (64842) DATA_CSV: 64412,4.0459,3.9221,1,1,0x02AF[0m
+[0;32mI (64872) DATA_CSV: 64442,4.0461,3.9219,1,1,0x02AF[0m
+[0;32mI (64902) DATA_CSV: 64472,4.0456,3.9226,1,1,0x02AF[0m
+[0;32mI (64932) DATA_CSV: 64502,4.0464,3.9229,1,1,0x02AF[0m
+[0;32mI (64962) DATA_CSV: 64532,4.0472,3.9230,1,1,0x02AF[0m
+[0;32mI (64992) DATA_CSV: 64562,4.0470,3.9231,1,1,0x02AF[0m
+[0;32mI (65022) DATA_CSV: 64592,4.0452,3.9231,1,1,0x02AF[0m
+[0;32mI (65052) DATA_CSV: 64622,4.0488,3.9231,1,1,0x02AF[0m
+[0;32mI (65082) DATA_CSV: 64652,4.0450,3.9230,1,1,0x02AF[0m
+[0;32mI (65112) DATA_CSV: 64682,4.0477,3.9234,1,1,0x02AF[0m
+[0;32mI (65142) DATA_CSV: 64712,4.0446,3.9225,1,1,0x02AF[0m
+[0;32mI (65172) DATA_CSV: 64742,4.0465,3.9231,1,1,0x02AF[0m
+[0;32mI (65202) DATA_CSV: 64772,4.0467,3.9232,1,1,0x02AF[0m
+[0;32mI (65232) DATA_CSV: 64802,4.0453,3.9228,1,1,0x02AF[0m
+[0;32mI (65262) DATA_CSV: 64832,4.0465,3.9231,1,1,0x02AF[0m
+[0;32mI (65292) DATA_CSV: 64862,4.0472,3.9230,1,1,0x02AF[0m
+[0;32mI (65322) DATA_CSV: 64892,4.0448,3.9228,1,1,0x02AF[0m
+[0;32mI (65352) DATA_CSV: 64922,4.0468,3.9248,1,1,0x02AF[0m
+[0;32mI (65382) DATA_CSV: 64952,4.0479,3.9242,1,1,0x02AF[0m
+[0;32mI (65412) DATA_CSV: 64982,4.0490,3.9240,1,1,0x02AF[0m
+[0;32mI (65442) DATA_CSV: 65012,4.0473,3.9234,1,1,0x02AF[0m
+[0;32mI (65472) DATA_CSV: 65042,4.0474,3.9235,1,1,0x02AF[0m
+[0;32mI (65502) DATA_CSV: 65072,4.0486,3.9236,1,1,0x02AF[0m
+[0;32mI (65532) DATA_CSV: 65102,4.0490,3.9241,1,1,0x02AF[0m
+[0;32mI (65562) DATA_CSV: 65132,4.0475,3.9238,1,1,0x02AF[0m
+[0;32mI (65592) DATA_CSV: 65162,4.0490,3.9239,1,1,0x02AF[0m
+[0;32mI (65622) DATA_CSV: 65192,4.0503,3.9240,1,1,0x02AF[0m
+[0;32mI (65652) DATA_CSV: 65222,4.0465,3.9236,1,1,0x02AF[0m
+[0;32mI (65682) DATA_CSV: 65252,4.0481,3.9232,1,1,0x02AF[0m
+[0;32mI (65712) DATA_CSV: 65282,4.0448,3.9237,1,1,0x02AF[0m
+[0;32mI (65742) DATA_CSV: 65312,4.0459,3.9232,1,1,0x02AF[0m
+[0;32mI (65772) DATA_CSV: 65342,4.0468,3.9234,1,1,0x02AF[0m
+[0;32mI (65802) DATA_CSV: 65372,4.0468,3.9239,1,1,0x02AF[0m
+[0;32mI (65832) DATA_CSV: 65402,4.0458,3.9237,1,1,0x02AF[0m
+[0;32mI (65862) DATA_CSV: 65432,4.0487,3.9243,1,1,0x02AF[0m
+[0;32mI (65892) DATA_CSV: 65462,4.0453,3.9249,1,1,0x02AF[0m
+[0;32mI (65922) DATA_CSV: 65492,4.0478,3.9243,1,1,0x02AF[0m
+[0;32mI (65952) DATA_CSV: 65522,4.0465,3.9241,1,1,0x02AF[0m
+[0;32mI (65982) DATA_CSV: 65552,4.0479,3.9241,1,1,0x02AF[0m
+[0;32mI (66012) DATA_CSV: 65582,4.0473,3.9245,1,1,0x02AF[0m
+[0;32mI (66042) DATA_CSV: 65612,4.0492,3.9242,1,1,0x02AF[0m
+[0;32mI (66072) DATA_CSV: 65642,4.0467,3.9253,1,1,0x02AF[0m
+[0;32mI (66102) DATA_CSV: 65672,4.0493,3.9237,1,1,0x02AF[0m
+[0;32mI (66132) DATA_CSV: 65702,4.0481,3.9242,1,1,0x02AF[0m
+[0;32mI (66132) RobotController: joint[0] current_steps=330 target_steps=330[0m
+[0;32mI (66132) RobotController: joint[1] current_steps=206 target_steps=206[0m
+[0;32mI (66132) RobotController: joint[2] current_steps=103 target_steps=103[0m
+[0;32mI (66142) RobotController: joint[3] current_steps=103 target_steps=103[0m
+[0;32mI (66152) RobotController: joint[4] current_steps=147 target_steps=147[0m
+[0;32mI (66152) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (66162) RobotController: valve_state=0x02af[0m
+[0;32mI (66192) DATA_CSV: 65762,4.0481,3.9252,1,1,0x02AF[0m
+[0;32mI (66222) DATA_CSV: 65792,4.0457,3.9241,1,1,0x02AF[0m
+[0;32mI (66252) DATA_CSV: 65822,4.0456,3.9238,1,1,0x02AF[0m
+[0;32mI (66282) DATA_CSV: 65852,4.0470,3.9252,1,1,0x02AF[0m
+[0;32mI (66312) DATA_CSV: 65882,4.0474,3.9249,1,1,0x02AF[0m
+[0;32mI (66342) DATA_CSV: 65912,4.0479,3.9254,1,1,0x02AF[0m
+[0;32mI (66372) DATA_CSV: 65942,4.0489,3.9252,1,1,0x02AF[0m
+[0;32mI (66402) DATA_CSV: 65972,4.0490,3.9243,1,1,0x02AF[0m
+[0;32mI (66432) DATA_CSV: 66002,4.0475,3.9252,1,1,0x02AF[0m
+[0;32mI (66462) DATA_CSV: 66032,4.0488,3.9258,1,1,0x02AF[0m
+[0;32mI (66492) DATA_CSV: 66062,4.0467,3.9242,1,1,0x02AF[0m
+[0;32mI (66522) DATA_CSV: 66092,4.0476,3.9252,1,1,0x02AF[0m
+[0;32mI (66552) DATA_CSV: 66122,4.0480,3.9247,1,1,0x02AF[0m
+[0;32mI (66582) DATA_CSV: 66152,4.0484,3.9251,1,1,0x02AF[0m
+[0;32mI (66612) DATA_CSV: 66182,4.0482,3.9251,1,1,0x02AF[0m
+[0;32mI (66642) DATA_CSV: 66212,4.0480,3.9256,1,1,0x02AF[0m
+[0;32mI (66672) DATA_CSV: 66242,4.0474,3.9257,1,1,0x02AF[0m
+[0;32mI (66702) DATA_CSV: 66272,4.0476,3.9254,1,1,0x02AF[0m
+[0;32mI (66732) DATA_CSV: 66302,4.0482,3.9267,1,1,0x02AF[0m
+[0;32mI (66762) DATA_CSV: 66332,4.0469,3.9257,1,1,0x02AF[0m
+[0;32mI (66792) DATA_CSV: 66362,4.0472,3.9257,1,1,0x02AF[0m
+[0;32mI (66822) DATA_CSV: 66392,4.0477,3.9257,1,1,0x02AF[0m
+[0;32mI (66852) DATA_CSV: 66422,4.0469,3.9254,1,1,0x02AF[0m
+[0;32mI (66882) DATA_CSV: 66452,4.0472,3.9259,1,1,0x02AF[0m
+[0;32mI (66912) DATA_CSV: 66482,4.0479,3.9262,1,1,0x02AF[0m
+[0;32mI (66942) DATA_CSV: 66512,4.0504,3.9260,1,1,0x02AF[0m
+[0;32mI (66972) DATA_CSV: 66542,4.0485,3.9255,1,1,0x02AF[0m
+[0;32mI (67002) DATA_CSV: 66572,4.0499,3.9255,1,1,0x02AF[0m
+[0;32mI (67032) DATA_CSV: 66602,4.0491,3.9256,1,1,0x02AF[0m
+[0;32mI (67062) DATA_CSV: 66632,4.0492,3.9260,1,1,0x02AF[0m
+[0;32mI (67092) DATA_CSV: 66662,4.0488,3.9255,1,1,0x02AF[0m
+[0;32mI (67122) DATA_CSV: 66692,4.0504,3.9251,1,1,0x02AF[0m
+[0;32mI (67152) DATA_CSV: 66722,4.0488,3.9258,1,1,0x02AF[0m
+[0;32mI (67182) DATA_CSV: 66752,4.0506,3.9270,1,1,0x02AF[0m
+[0;32mI (67212) DATA_CSV: 66782,4.0474,3.9257,1,1,0x02AF[0m
+[0;32mI (67242) DATA_CSV: 66812,4.0483,3.9256,1,1,0x02AF[0m
+[0;32mI (67272) DATA_CSV: 66842,4.0485,3.9262,1,1,0x02AF[0m
+[0;32mI (67302) DATA_CSV: 66872,4.0475,3.9273,1,1,0x02AF[0m
+[0;32mI (67332) DATA_CSV: 66902,4.0487,3.9262,1,1,0x02AF[0m
+[0;32mI (67362) DATA_CSV: 66932,4.0477,3.9261,1,1,0x02AF[0m
+[0;32mI (67392) DATA_CSV: 66962,4.0481,3.9262,1,1,0x02AF[0m
+[0;32mI (67422) DATA_CSV: 66992,4.0456,3.9264,1,1,0x02AF[0m
+[0;32mI (67452) DATA_CSV: 67022,4.0490,3.9258,1,1,0x02AF[0m
+[0;32mI (67482) DATA_CSV: 67052,4.0489,3.9260,1,1,0x02AF[0m
+[0;32mI (67512) DATA_CSV: 67082,4.0483,3.9265,1,1,0x02AF[0m
+[0;32mI (67542) DATA_CSV: 67112,4.0476,3.9256,1,1,0x02AF[0m
+[0;32mI (67572) DATA_CSV: 67142,4.0499,3.9266,1,1,0x02AF[0m
+[0;32mI (67602) DATA_CSV: 67172,4.0480,3.9263,1,1,0x02AF[0m
+[0;32mI (67632) DATA_CSV: 67202,4.0480,3.9265,1,1,0x02AF[0m
+[0;32mI (67662) DATA_CSV: 67232,4.0492,3.9264,1,1,0x02AF[0m
+[0;32mI (67662) RobotController: joint[0] current_steps=330 target_steps=330[0m
+[0;32mI (67662) RobotController: joint[1] current_steps=206 target_steps=206[0m
+[0;32mI (67662) RobotController: joint[2] current_steps=103 target_steps=103[0m
+[0;32mI (67672) RobotController: joint[3] current_steps=103 target_steps=103[0m
+[0;32mI (67682) RobotController: joint[4] current_steps=147 target_steps=147[0m
+[0;32mI (67682) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (67692) RobotController: valve_state=0x02af[0m
+[0;32mI (67722) DATA_CSV: 67292,4.0506,3.9267,1,1,0x02AF[0m
+[0;32mI (67752) DATA_CSV: 67322,4.0485,3.9252,1,1,0x02AF[0m
+[0;32mI (67782) DATA_CSV: 67352,4.0492,3.9265,1,1,0x02AF[0m
+[0;32mI (67812) DATA_CSV: 67382,4.0510,3.9261,1,1,0x02AF[0m
+[0;32mI (67842) DATA_CSV: 67412,4.0493,3.9254,1,1,0x02AF[0m
+[0;32mI (67872) DATA_CSV: 67442,4.0477,3.9262,1,1,0x02AF[0m
+[0;32mI (67902) DATA_CSV: 67472,4.0480,3.9260,1,1,0x02AF[0m
+[0;32mI (67932) DATA_CSV: 67502,4.0496,3.9262,1,1,0x02AF[0m
+[0;32mI (67962) DATA_CSV: 67532,4.0477,3.9263,1,1,0x02AF[0m
+[0;32mI (67992) DATA_CSV: 67562,4.0495,3.9266,1,1,0x02AF[0m
+[0;32mI (68022) DATA_CSV: 67592,4.0485,3.9267,1,1,0x02AF[0m
+[0;32mI (68052) DATA_CSV: 67622,4.0507,3.9265,1,1,0x02AF[0m
+[0;32mI (68082) DATA_CSV: 67652,4.0493,3.9261,1,1,0x02AF[0m
+[0;32mI (68112) DATA_CSV: 67682,4.0493,3.9266,1,1,0x02AF[0m
+[0;32mI (68142) DATA_CSV: 67712,4.0504,3.9278,1,1,0x02AF[0m
+[0;32mI (68172) DATA_CSV: 67742,4.0496,3.9267,1,1,0x02AF[0m
+[0;32mI (68202) DATA_CSV: 67772,4.0495,3.9268,1,1,0x02AF[0m
+[0;32mI (68232) DATA_CSV: 67802,4.0518,3.9271,1,1,0x02AF[0m
+[0;32mI (68262) DATA_CSV: 67832,4.0523,3.9276,1,1,0x02AF[0m
+[0;32mI (68292) DATA_CSV: 67862,4.0515,3.9277,1,1,0x02AF[0m
+[0;32mI (68322) DATA_CSV: 67892,4.0514,3.9289,1,1,0x02AF[0m
+[0;32mI (68352) DATA_CSV: 67922,4.0511,3.9294,1,1,0x02AF[0m
+[0;32mI (68382) DATA_CSV: 67952,4.0524,3.9301,1,1,0x02AF[0m
+[0;32mI (68412) DATA_CSV: 67982,4.0523,3.9313,1,1,0x02AF[0m
+[0;32mI (68442) DATA_CSV: 68012,4.0540,3.9313,1,1,0x02AF[0m
+[0;32mI (68472) DATA_CSV: 68042,4.0554,3.9317,1,1,0x02AF[0m
+[0;32mI (68502) DATA_CSV: 68072,4.0523,3.9303,1,1,0x02AF[0m
+[0;32mI (68532) DATA_CSV: 68102,4.0531,3.9296,1,1,0x02AF[0m
+[0;32mI (68562) DATA_CSV: 68132,4.0517,3.9289,1,1,0x02AF[0m
+[0;32mI (68592) DATA_CSV: 68162,4.0508,3.9280,1,1,0x02AF[0m
+[0;32mI (68622) DATA_CSV: 68192,4.0511,3.9274,1,1,0x02AF[0m
+[0;32mI (68652) DATA_CSV: 68222,4.0501,3.9286,1,1,0x02AF[0m
+[0;32mI (68682) DATA_CSV: 68252,4.0504,3.9285,1,1,0x02AF[0m
+[0;32mI (68712) DATA_CSV: 68282,4.0509,3.9277,1,1,0x02AF[0m
+[0;32mI (68742) DATA_CSV: 68312,4.0512,3.9281,1,1,0x02AF[0m
+[0;32mI (68772) DATA_CSV: 68342,4.0530,3.9289,1,1,0x02AF[0m
+[0;32mI (68802) DATA_CSV: 68372,4.0540,3.9296,1,1,0x02AF[0m
+[0;32mI (68832) DATA_CSV: 68402,4.0541,3.9308,1,1,0x02AF[0m
+[0;32mI (68862) DATA_CSV: 68432,4.0540,3.9313,1,1,0x02AF[0m
+[0;32mI (68892) DATA_CSV: 68462,4.0573,3.9316,1,1,0x02AF[0m
+[0;32mI (68922) DATA_CSV: 68492,4.0541,3.9310,1,1,0x02AF[0m
+[0;32mI (68952) DATA_CSV: 68522,4.0531,3.9307,1,1,0x02AF[0m
+[0;32mI (68982) DATA_CSV: 68552,4.0516,3.9304,1,1,0x02AF[0m
+[0;32mI (69012) DATA_CSV: 68582,4.0528,3.9290,1,1,0x02AF[0m
+[0;32mI (69042) DATA_CSV: 68612,4.0524,3.9284,1,1,0x02AF[0m
+[0;32mI (69072) DATA_CSV: 68642,4.0508,3.9274,1,1,0x02AF[0m
+[0;32mI (69102) DATA_CSV: 68672,4.0484,3.9269,1,1,0x02AF[0m
+[0;32mI (69132) DATA_CSV: 68702,4.0481,3.9261,1,1,0x02AF[0m
+[0;32mI (69162) DATA_CSV: 68732,4.0474,3.9255,1,1,0x02AF[0m
+[0;32mI (69192) DATA_CSV: 68762,4.0472,3.9252,1,1,0x02AF[0m
+[0;32mI (69192) RobotController: joint[0] current_steps=330 target_steps=330[0m
+[0;32mI (69192) RobotController: joint[1] current_steps=206 target_steps=206[0m
+[0;32mI (69192) RobotController: joint[2] current_steps=103 target_steps=103[0m
+[0;32mI (69202) RobotController: joint[3] current_steps=103 target_steps=103[0m
+[0;32mI (69212) RobotController: joint[4] current_steps=147 target_steps=147[0m
+[0;32mI (69212) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (69222) RobotController: valve_state=0x02af[0m
+[0;32mI (69252) DATA_CSV: 68822,4.0457,3.9243,1,1,0x02AF[0m
+[0;32mI (69282) DATA_CSV: 68852,4.0461,3.9221,1,1,0x02AF[0m
+[0;32mI (69312) DATA_CSV: 68882,4.0447,3.9225,1,1,0x02AF[0m
+[0;32mI (69342) DATA_CSV: 68912,4.0457,3.9220,1,1,0x02AF[0m
+[0;32mI (69372) DATA_CSV: 68942,4.0441,3.9222,1,1,0x02AF[0m
+[0;32mI (69402) DATA_CSV: 68972,4.0451,3.9219,1,1,0x02AF[0m
+[0;32mI (69432) DATA_CSV: 69002,4.0439,3.9221,1,1,0x02AF[0m
+[0;32mI (69462) DATA_CSV: 69032,4.0425,3.9223,1,1,0x02AF[0m
+[0;32mI (69492) DATA_CSV: 69062,4.0426,3.9218,1,1,0x02AF[0m
+[0;32mI (69522) DATA_CSV: 69092,4.0454,3.9215,1,1,0x02AF[0m
+[0;32mI (69552) DATA_CSV: 69122,4.0433,3.9210,1,1,0x02AF[0m
+[0;32mI (69582) DATA_CSV: 69152,4.0443,3.9215,1,1,0x02AF[0m
+[0;32mI (69612) DATA_CSV: 69182,4.0447,3.9218,1,1,0x02AF[0m
+[0;32mI (69642) DATA_CSV: 69212,4.0461,3.9217,1,1,0x02AF[0m
+[0;32mI (69672) DATA_CSV: 69242,4.0448,3.9216,1,1,0x02AF[0m
+[0;32mI (69702) DATA_CSV: 69272,4.0441,3.9216,1,1,0x02AF[0m
+[0;32mI (69732) DATA_CSV: 69302,4.0460,3.9219,1,1,0x02AF[0m
+[0;32mI (69762) DATA_CSV: 69332,4.0433,3.9217,1,1,0x02AF[0m
+[0;32mI (69792) DATA_CSV: 69362,4.0440,3.9218,1,1,0x02AF[0m
+[0;32mI (69822) DATA_CSV: 69392,4.0440,3.9222,1,1,0x02AF[0m
+[0;32mI (69852) DATA_CSV: 69422,4.0424,3.9221,1,1,0x02AF[0m
+[0;32mI (69882) DATA_CSV: 69452,4.0442,3.9209,1,1,0x02AF[0m
+[0;32mI (69912) DATA_CSV: 69482,4.0447,3.9219,1,1,0x02AF[0m
+[0;32mI (69942) DATA_CSV: 69512,4.0436,3.9223,1,1,0x02AF[0m
+[0;32mI (69972) DATA_CSV: 69542,4.0438,3.9224,1,1,0x02AF[0m
+[0;32mI (70002) DATA_CSV: 69572,4.0432,3.9219,1,1,0x02AF[0m
+[0;32mI (70032) DATA_CSV: 69602,4.0449,3.9210,1,1,0x02AF[0m
+[0;32mI (70062) DATA_CSV: 69632,4.0429,3.9211,1,1,0x02AF[0m
+[0;32mI (70092) DATA_CSV: 69662,4.0429,3.9214,1,1,0x02AF[0m
+[0;32mI (70122) DATA_CSV: 69692,4.0435,3.9208,1,1,0x02AF[0m
+[0;32mI (70152) DATA_CSV: 69722,4.0423,3.9212,1,1,0x02AF[0m
+[0;32mI (70182) DATA_CSV: 69752,4.0433,3.9213,1,1,0x02AF[0m
+[0;32mI (70212) DATA_CSV: 69782,4.0436,3.9221,1,1,0x02AF[0m
+[0;32mI (70242) DATA_CSV: 69812,4.0437,3.9222,1,1,0x02AF[0m
+[0;32mI (70272) DATA_CSV: 69842,4.0458,3.9215,1,1,0x02AF[0m
+[0;32mI (70302) DATA_CSV: 69872,4.0444,3.9222,1,1,0x02AF[0m
+[0;32mI (70332) DATA_CSV: 69902,4.0433,3.9214,1,1,0x02AF[0m
+[0;32mI (70362) DATA_CSV: 69932,4.0438,3.9215,1,1,0x02AF[0m
+[0;32mI (70392) DATA_CSV: 69962,4.0474,3.9216,1,1,0x02AF[0m
+[0;32mI (70422) DATA_CSV: 69992,4.0437,3.9221,1,1,0x02AF[0m
+[0;32mI (70452) DATA_CSV: 70022,4.0453,3.9229,1,1,0x02AF[0m
+[0;32mI (70482) DATA_CSV: 70052,4.0438,3.9229,1,1,0x02AF[0m
+[0;32mI (70512) DATA_CSV: 70082,4.0463,3.9228,1,1,0x02AF[0m
+[0;32mI (70542) DATA_CSV: 70112,4.0440,3.9234,1,1,0x02AF[0m
+[0;32mI (70572) DATA_CSV: 70142,4.0455,3.9237,1,1,0x02AF[0m
+[0;32mI (70602) DATA_CSV: 70172,4.0442,3.9237,1,1,0x02AF[0m
+[0;32mI (70632) DATA_CSV: 70203,4.0468,3.9240,1,1,0x02AF[0m
+[0;32mI (70662) DATA_CSV: 70232,4.0458,3.9240,1,1,0x02AF[0m
+[0;32mI (70692) DATA_CSV: 70262,4.0465,3.9245,1,1,0x02AF[0m
+[0;32mI (70722) DATA_CSV: 70292,4.0451,3.9246,1,1,0x02AF[0m
+[0;32mI (70722) RobotController: joint[0] current_steps=330 target_steps=330[0m
+[0;32mI (70722) RobotController: joint[1] current_steps=206 target_steps=206[0m
+[0;32mI (70722) RobotController: joint[2] current_steps=103 target_steps=103[0m
+[0;32mI (70732) RobotController: joint[3] current_steps=103 target_steps=103[0m
+[0;32mI (70742) RobotController: joint[4] current_steps=147 target_steps=147[0m
+[0;32mI (70742) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (70752) RobotController: valve_state=0x02af[0m
+[0;32mI (70782) DATA_CSV: 70352,4.0455,3.9234,1,1,0x02AF[0m
+[0;32mI (70812) DATA_CSV: 70382,4.0472,3.9227,1,1,0x02AF[0m
+[0;32mI (70842) DATA_CSV: 70412,4.0448,3.9226,1,1,0x02AF[0m
+[0;32mI (70872) DATA_CSV: 70442,4.0446,3.9235,1,1,0x02AF[0m
+[0;32mI (70902) DATA_CSV: 70472,4.0462,3.9243,1,1,0x02AF[0m
+[0;32mI (70932) DATA_CSV: 70502,4.0472,3.9249,1,1,0x02AF[0m
+[0;32mI (70962) DATA_CSV: 70532,4.0473,3.9249,1,1,0x02AF[0m
+[0;32mI (70992) DATA_CSV: 70562,4.0473,3.9251,1,1,0x02AF[0m
+[0;32mI (71022) DATA_CSV: 70592,4.0473,3.9252,1,1,0x02AF[0m
+[0;32mI (71052) DATA_CSV: 70622,4.0476,3.9243,1,1,0x02AF[0m
+[0;32mI (71082) DATA_CSV: 70652,4.0462,3.9253,1,1,0x02AF[0m
+[0;32mI (71112) DATA_CSV: 70682,4.0481,3.9251,1,1,0x02AF[0m
+[0;32mI (71142) DATA_CSV: 70712,4.0466,3.9253,1,1,0x02AF[0m
+[0;32mI (71172) DATA_CSV: 70742,4.0460,3.9252,1,1,0x02AF[0m
+[0;32mI (71202) DATA_CSV: 70772,4.0472,3.9256,1,1,0x02AF[0m
+[0;32mI (71232) DATA_CSV: 70802,4.0447,3.9251,1,1,0x02AF[0m
+[0;32mI (71262) DATA_CSV: 70832,4.0443,3.9250,1,1,0x02AF[0m
+[0;32mI (71292) DATA_CSV: 70862,4.0439,3.9245,1,1,0x02AF[0m
+[0;32mI (71322) DATA_CSV: 70892,4.0453,3.9241,1,1,0x02AF[0m
+[0;32mI (71352) DATA_CSV: 70922,4.0484,3.9239,1,1,0x02AF[0m
+[0;32mI (71382) DATA_CSV: 70952,4.0465,3.9239,1,1,0x02AF[0m
+[0;32mI (71412) DATA_CSV: 70982,4.0476,3.9248,1,1,0x02AF[0m
+[0;32mI (71442) DATA_CSV: 71012,4.0457,3.9242,1,1,0x02AF[0m
+[0;32mI (71472) DATA_CSV: 71042,4.0445,3.9247,1,1,0x02AF[0m
+[0;32mI (71502) DATA_CSV: 71072,4.0459,3.9249,1,1,0x02AF[0m
+[0;32mI (71532) DATA_CSV: 71102,4.0471,3.9250,1,1,0x02AF[0m
+[0;32mI (71562) DATA_CSV: 71132,4.0455,3.9249,1,1,0x02AF[0m
+[0;32mI (71592) DATA_CSV: 71162,4.0459,3.9238,1,1,0x02AF[0m
+[0;32mI (71622) DATA_CSV: 71192,4.0476,3.9244,1,1,0x02AF[0m
+[0;32mI (71652) DATA_CSV: 71222,4.0456,3.9245,1,1,0x02AF[0m
+[0;32mI (71682) DATA_CSV: 71252,4.0457,3.9253,1,1,0x02AF[0m
+[0;32mI (71712) DATA_CSV: 71282,4.0467,3.9237,1,1,0x02AF[0m
+[0;32mI (71742) DATA_CSV: 71312,4.0446,3.9248,1,1,0x02AF[0m
+[0;32mI (71772) DATA_CSV: 71342,4.0456,3.9244,1,1,0x02AF[0m
+[0;32mI (71802) DATA_CSV: 71372,4.0443,3.9245,1,1,0x02AF[0m
+[0;32mI (71832) DATA_CSV: 71402,4.0462,3.9245,1,1,0x02AF[0m
+[0;32mI (71862) DATA_CSV: 71432,4.0471,3.9244,1,1,0x02AF[0m
+[0;32mI (71892) DATA_CSV: 71462,4.0482,3.9245,1,1,0x02AF[0m
+[0;32mI (71922) DATA_CSV: 71492,4.0469,3.9244,1,1,0x02AF[0m
+[0;32mI (71952) DATA_CSV: 71522,4.0457,3.9250,1,1,0x02AF[0m
+[0;32mI (71982) DATA_CSV: 71552,4.0460,3.9254,1,1,0x02AF[0m
+[0;32mI (72012) DATA_CSV: 71582,4.0483,3.9238,1,1,0x02AF[0m
+[0;32mI (72042) DATA_CSV: 71612,4.0460,3.9249,1,1,0x02AF[0m
+[0;32mI (72072) DATA_CSV: 71642,4.0460,3.9251,1,1,0x02AF[0m
+[0;32mI (72102) DATA_CSV: 71672,4.0457,3.9248,1,1,0x02AF[0m
+[0;32mI (72132) DATA_CSV: 71702,4.0457,3.9243,1,1,0x02AF[0m
+[0;32mI (72162) DATA_CSV: 71732,4.0455,3.9246,1,1,0x02AF[0m
+[0;32mI (72192) DATA_CSV: 71762,4.0464,3.9253,1,1,0x02AF[0m
+[0;32mI (72222) DATA_CSV: 71792,4.0467,3.9246,1,1,0x02AF[0m
+[0;32mI (72252) DATA_CSV: 71822,4.0466,3.9256,1,1,0x02AF[0m
+[0;32mI (72252) RobotController: joint[0] current_steps=330 target_steps=330[0m
+[0;32mI (72252) RobotController: joint[1] current_steps=206 target_steps=206[0m
+[0;32mI (72252) RobotController: joint[2] current_steps=103 target_steps=103[0m
+[0;32mI (72262) RobotController: joint[3] current_steps=103 target_steps=103[0m
+[0;32mI (72272) RobotController: joint[4] current_steps=147 target_steps=147[0m
+[0;32mI (72272) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (72282) RobotController: valve_state=0x02af[0m
+[0;32mI (72312) DATA_CSV: 71882,4.0474,3.9249,1,1,0x02AF[0m
+[0;32mI (72342) DATA_CSV: 71912,4.0463,3.9242,1,1,0x02AF[0m
+[0;32mI (72372) DATA_CSV: 71942,4.0476,3.9240,1,1,0x02AF[0m
+[0;32mI (72402) DATA_CSV: 71972,4.0458,3.9250,1,1,0x02AF[0m
+[0;32mI (72432) DATA_CSV: 72002,4.0459,3.9250,1,1,0x02AF[0m
+[0;32mI (72462) DATA_CSV: 72032,4.0465,3.9239,1,1,0x02AF[0m
+[0;32mI (72492) DATA_CSV: 72062,4.0476,3.9255,1,1,0x02AF[0m
+[0;32mI (72522) DATA_CSV: 72092,4.0460,3.9252,1,1,0x02AF[0m
+[0;32mI (72552) DATA_CSV: 72122,4.0475,3.9252,1,1,0x02AF[0m
+[0;32mI (72582) DATA_CSV: 72152,4.0448,3.9250,1,1,0x02AF[0m
+[0;32mI (72612) DATA_CSV: 72182,4.0463,3.9250,1,1,0x02AF[0m
+[0;32mI (72642) DATA_CSV: 72212,4.0478,3.9251,1,1,0x02AF[0m
+[0;32mI (72672) DATA_CSV: 72242,4.0447,3.9253,1,1,0x02AF[0m
+[0;32mI (72702) DATA_CSV: 72272,4.0479,3.9254,1,1,0x02AF[0m
+[0;32mI (72732) DATA_CSV: 72302,4.0466,3.9250,1,1,0x02AF[0m
+[0;32mI (72762) DATA_CSV: 72332,4.0464,3.9250,1,1,0x02AF[0m
+[0;32mI (72792) DATA_CSV: 72362,4.0462,3.9254,1,1,0x02AF[0m
+[0;32mI (72822) DATA_CSV: 72392,4.0480,3.9252,1,1,0x02AF[0m
+[0;32mI (72852) DATA_CSV: 72422,4.0473,3.9249,1,1,0x02AF[0m
+[0;32mI (72882) DATA_CSV: 72452,4.0456,3.9256,1,1,0x02AF[0m
+[0;32mI (72912) DATA_CSV: 72482,4.0473,3.9255,1,1,0x02AF[0m
+[0;32mI (72942) DATA_CSV: 72512,4.0476,3.9255,1,1,0x02AF[0m
+[0;32mI (72972) DATA_CSV: 72542,4.0445,3.9253,1,1,0x02AF[0m
+[0;32mI (73002) DATA_CSV: 72572,4.0458,3.9258,1,1,0x02AF[0m
+[0;32mI (73032) DATA_CSV: 72602,4.0455,3.9257,1,1,0x02AF[0m
+[0;32mI (73062) DATA_CSV: 72632,4.0472,3.9251,1,1,0x02AF[0m
+[0;32mI (73092) DATA_CSV: 72662,4.0476,3.9254,1,1,0x02AF[0m
+[0;32mI (73122) DATA_CSV: 72692,4.0469,3.9257,1,1,0x02AF[0m
+[0;32mI (73152) DATA_CSV: 72722,4.0460,3.9256,1,1,0x02AF[0m
+[0;32mI (73182) DATA_CSV: 72752,4.0463,3.9260,1,1,0x02AF[0m
+[0;32mI (73212) DATA_CSV: 72782,4.0464,3.9257,1,1,0x02AF[0m
+[0;32mI (73242) DATA_CSV: 72812,4.0456,3.9268,1,1,0x02AF[0m
+[0;32mI (73272) DATA_CSV: 72842,4.0458,3.9262,1,1,0x02AF[0m
+[0;32mI (73302) DATA_CSV: 72872,4.0458,3.9256,1,1,0x02AF[0m
+[0;32mI (73332) DATA_CSV: 72902,4.0472,3.9258,1,1,0x02AF[0m
+[0;32mI (73362) DATA_CSV: 72932,4.0462,3.9261,1,1,0x02AF[0m
+[0;32mI (73392) DATA_CSV: 72962,4.0443,3.9258,1,1,0x02AF[0m
+[0;32mI (73422) DATA_CSV: 72992,4.0498,3.9260,1,1,0x02AF[0m
+[0;32mI (73452) DATA_CSV: 73022,4.0476,3.9263,1,1,0x02AF[0m
+[0;32mI (73482) DATA_CSV: 73052,4.0465,3.9259,1,1,0x02AF[0m
+[0;32mI (73512) DATA_CSV: 73082,4.0461,3.9257,1,1,0x02AF[0m
+[0;32mI (73542) DATA_CSV: 73112,4.0476,3.9258,1,1,0x02AF[0m
+[0;32mI (73572) DATA_CSV: 73142,4.0275,3.9252,1,1,0x02AF[0m
+[0;32mI (73602) DATA_CSV: 73172,3.9993,3.8985,1,1,0x02AF[0m
+[0;32mI (73632) DATA_CSV: 73202,3.9630,3.8667,1,1,0x02AF[0m
+[0;32mI (73662) DATA_CSV: 73232,3.9245,3.8299,1,1,0x02AF[0m
+[0;32mI (73692) DATA_CSV: 73262,3.9172,3.8079,1,1,0x02AF[0m
+[0;32mI (73722) DATA_CSV: 73292,3.9101,3.7986,1,1,0x02AF[0m
+[0;32mI (73752) DATA_CSV: 73322,3.9105,3.7934,1,1,0x02AF[0m
+[0;32mI (73782) DATA_CSV: 73352,3.9152,3.7942,1,1,0x02AF[0m
+[0;32mI (73782) RobotController: joint[0] current_steps=330 target_steps=330[0m
+[0;32mI (73782) RobotController: joint[1] current_steps=206 target_steps=206[0m
+[0;32mI (73782) RobotController: joint[2] current_steps=103 target_steps=103[0m
+[0;32mI (73792) RobotController: joint[3] current_steps=103 target_steps=103[0m
+[0;32mI (73802) RobotController: joint[4] current_steps=147 target_steps=147[0m
+[0;32mI (73802) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (73812) RobotController: valve_state=0x02af[0m
+[0;32mI (73842) DATA_CSV: 73412,3.9139,3.7976,1,1,0x02AF[0m
+[0;32mI (73872) DATA_CSV: 73442,3.9260,3.8045,1,1,0x02AF[0m
+[0;32mI (73902) DATA_CSV: 73472,3.9309,3.8092,1,1,0x02AF[0m
+[0;32mI (73932) DATA_CSV: 73502,3.9372,3.8147,1,1,0x02AF[0m
+[0;32mI (73962) DATA_CSV: 73532,3.9410,3.8197,1,1,0x02AF[0m
+[0;32mI (73992) DATA_CSV: 73562,3.9469,3.8251,1,1,0x02AF[0m
+[0;32mI (74022) DATA_CSV: 73592,3.9512,3.8297,1,1,0x02AF[0m
+[0;32mI (74052) DATA_CSV: 73622,3.9552,3.8344,1,1,0x02AF[0m
+[0;32mI (74082) DATA_CSV: 73652,3.9621,3.8388,1,1,0x02AF[0m
+[0;32mI (74112) DATA_CSV: 73682,3.9650,3.8423,1,1,0x02AF[0m
+[0;32mI (74142) DATA_CSV: 73712,3.9653,3.8461,1,1,0x02AF[0m
+[0;32mI (74172) DATA_CSV: 73742,3.9705,3.8503,1,1,0x02AF[0m
+[0;32mI (74202) DATA_CSV: 73772,3.9741,3.8539,1,1,0x02AF[0m
+[0;32mI (74232) DATA_CSV: 73802,3.9766,3.8571,1,1,0x02AF[0m
+[0;32mI (74262) DATA_CSV: 73832,3.9833,3.8601,1,1,0x02AF[0m
+[0;32mI (74292) DATA_CSV: 73862,3.9830,3.8629,1,1,0x02AF[0m
+[0;32mI (74322) DATA_CSV: 73892,3.9856,3.8658,1,1,0x02AF[0m
+[0;32mI (74352) DATA_CSV: 73922,3.9898,3.8691,1,1,0x02AF[0m
+[0;32mI (74382) DATA_CSV: 73952,3.9933,3.8712,1,1,0x02AF[0m
+[0;32mI (74412) DATA_CSV: 73982,3.9932,3.8737,1,1,0x02AF[0m
+[0;32mI (74442) DATA_CSV: 74012,3.9980,3.8766,1,1,0x02AF[0m
+[0;32mI (74472) DATA_CSV: 74042,3.9991,3.8775,1,1,0x02AF[0m
+[0;32mI (74502) DATA_CSV: 74072,4.0011,3.8796,1,1,0x02AF[0m
+[0;32mI (74532) DATA_CSV: 74102,4.0012,3.8810,1,1,0x02AF[0m
+[0;32mI (74562) DATA_CSV: 74132,4.0018,3.8827,1,1,0x02AF[0m
+[0;32mI (74592) DATA_CSV: 74162,4.0044,3.8838,1,1,0x02AF[0m
+[0;32mI (74622) DATA_CSV: 74192,4.0054,3.8859,1,1,0x02AF[0m
+[0;32mI (74652) DATA_CSV: 74222,4.0076,3.8867,1,1,0x02AF[0m
+[0;32mI (74682) DATA_CSV: 74252,4.0087,3.8889,1,1,0x02AF[0m
+[0;32mI (74712) DATA_CSV: 74282,4.0107,3.8897,1,1,0x02AF[0m
+[0;32mI (74742) DATA_CSV: 74312,4.0121,3.8906,1,1,0x02AF[0m
+[0;32mI (74772) DATA_CSV: 74342,4.0132,3.8913,1,1,0x02AF[0m
+[0;32mI (74802) DATA_CSV: 74372,4.0122,3.8926,1,1,0x02AF[0m
+[0;32mI (74832) DATA_CSV: 74402,4.0150,3.8940,1,1,0x02AF[0m
+[0;32mI (74862) DATA_CSV: 74432,4.0149,3.8953,1,1,0x02AF[0m
+[0;32mI (74892) DATA_CSV: 74462,4.0161,3.8956,1,1,0x02AF[0m
+[0;32mI (74922) DATA_CSV: 74492,4.0180,3.8970,1,1,0x02AF[0m
+[0;32mI (74952) DATA_CSV: 74522,4.0193,3.8972,1,1,0x02AF[0m
+[0;32mI (74982) DATA_CSV: 74552,3.9849,3.8963,1,1,0x02AF[0m
+[0;32mI (75012) DATA_CSV: 74582,3.9571,3.8586,1,1,0x02AF[0m
+[0;32mI (75042) DATA_CSV: 74612,3.9542,3.8404,1,1,0x02AF[0m
+[0;32mI (75072) DATA_CSV: 74642,3.9535,3.8370,1,1,0x02AF[0m
+[0;32mI (75102) DATA_CSV: 74672,3.9555,3.8352,1,1,0x02AF[0m
+[0;32mI (75132) DATA_CSV: 74702,3.9592,3.8371,1,1,0x02AF[0m
+[0;32mI (75162) DATA_CSV: 74732,3.9619,3.8413,1,1,0x02AF[0m
+[0;32mI (75192) DATA_CSV: 74762,3.9681,3.8456,1,1,0x02AF[0m
+[0;32mI (75222) DATA_CSV: 74792,3.9735,3.8501,1,1,0x02AF[0m
+[0;32mI (75252) DATA_CSV: 74822,3.9767,3.8551,1,1,0x02AF[0m
+[0;32mI (75282) DATA_CSV: 74852,3.9831,3.8594,1,1,0x02AF[0m
+[0;32mI (75312) DATA_CSV: 74882,3.9882,3.8648,1,1,0x02AF[0m
+[0;32mI (75312) RobotController: joint[0] current_steps=330 target_steps=330[0m
+[0;32mI (75312) RobotController: joint[1] current_steps=206 target_steps=206[0m
+[0;32mI (75312) RobotController: joint[2] current_steps=103 target_steps=103[0m
+[0;32mI (75322) RobotController: joint[3] current_steps=103 target_steps=103[0m
+[0;32mI (75332) RobotController: joint[4] current_steps=147 target_steps=147[0m
+[0;32mI (75332) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (75342) RobotController: valve_state=0x02af[0m
+[0;32mI (75372) DATA_CSV: 74942,3.9911,3.8693,1,1,0x02AF[0m
+[0;32mI (75402) DATA_CSV: 74972,3.9976,3.8757,1,1,0x02AF[0m
+[0;32mI (75432) DATA_CSV: 75002,4.0020,3.8797,1,1,0x02AF[0m
+[0;32mI (75462) DATA_CSV: 75032,4.0054,3.8846,1,1,0x02AF[0m
+[0;32mI (75492) DATA_CSV: 75062,4.0078,3.8861,1,1,0x02AF[0m
+[0;32mI (75522) DATA_CSV: 75092,4.0116,3.8898,1,1,0x02AF[0m
+[0;32mI (75552) DATA_CSV: 75122,4.0153,3.8918,1,1,0x02AF[0m
+[0;32mI (75582) DATA_CSV: 75152,4.0175,3.8964,1,1,0x02AF[0m
+[0;32mI (75612) DATA_CSV: 75182,4.0214,3.8982,1,1,0x02AF[0m
+[0;32mI (75642) DATA_CSV: 75212,4.0230,3.9008,1,1,0x02AF[0m
+[0;32mI (75672) DATA_CSV: 75242,4.0255,3.9033,1,1,0x02AF[0m
+[0;32mI (75702) DATA_CSV: 75272,4.0260,3.9049,1,1,0x02AF[0m
+[0;32mI (75732) DATA_CSV: 75302,4.0275,3.9071,1,1,0x02AF[0m
+[0;32mI (75762) DATA_CSV: 75332,4.0303,3.9090,1,1,0x02AF[0m
+[0;32mI (75792) DATA_CSV: 75362,4.0327,3.9110,1,1,0x02AF[0m
+[0;32mI (75822) DATA_CSV: 75392,4.0329,3.9120,1,1,0x02AF[0m
+[0;32mI (75852) DATA_CSV: 75422,4.0341,3.9134,1,1,0x02AF[0m
+[0;32mI (75882) DATA_CSV: 75452,4.0368,3.9153,1,1,0x02AF[0m
+[0;32mI (75912) DATA_CSV: 75482,4.0390,3.9167,1,1,0x02AF[0m
+[0;32mI (75942) DATA_CSV: 75512,4.0407,3.9181,1,1,0x02AF[0m
+[0;32mI (75972) DATA_CSV: 75542,4.0426,3.9187,1,1,0x02AF[0m
+[0;32mI (76002) DATA_CSV: 75572,4.0414,3.9201,1,1,0x02AF[0m
+[0;32mI (76032) DATA_CSV: 75602,4.0442,3.9210,1,1,0x02AF[0m
+[0;32mI (76062) DATA_CSV: 75632,4.0463,3.9222,1,1,0x02AF[0m
+[0;32mI (76092) DATA_CSV: 75662,4.0442,3.9234,1,1,0x02AF[0m
+[0;32mI (76122) DATA_CSV: 75692,4.0445,3.9241,1,1,0x02AF[0m
+[0;32mI (76152) DATA_CSV: 75722,4.0461,3.9248,1,1,0x02AF[0m
+[0;32mI (76182) DATA_CSV: 75752,4.0446,3.9255,1,1,0x02AF[0m
+[0;32mI (76212) DATA_CSV: 75782,4.0483,3.9261,1,1,0x02AF[0m
+[0;32mI (76242) DATA_CSV: 75812,4.0466,3.9263,1,1,0x02AF[0m
+[0;32mI (76272) DATA_CSV: 75842,4.0473,3.9278,1,1,0x02AF[0m
+[0;32mI (76302) DATA_CSV: 75872,4.0485,3.9275,1,1,0x02AF[0m
+[0;32mI (76332) DATA_CSV: 75902,4.0475,3.9285,1,1,0x02AF[0m
+[0;32mI (76362) DATA_CSV: 75932,4.0499,3.9293,1,1,0x02AF[0m
+[0;32mI (76392) DATA_CSV: 75962,4.0486,3.9296,1,1,0x02AF[0m
+[0;32mI (76422) DATA_CSV: 75992,4.0510,3.9300,1,1,0x02AF[0m
+[0;32mI (76452) DATA_CSV: 76022,4.0512,3.9300,1,1,0x02AF[0m
+[0;32mI (76482) DATA_CSV: 76052,4.0515,3.9303,1,1,0x02AF[0m
+[0;32mI (76512) DATA_CSV: 76082,4.0513,3.9308,1,1,0x02AF[0m
+[0;32mI (76542) DATA_CSV: 76112,4.0533,3.9314,1,1,0x02AF[0m
+[0;32mI (76572) DATA_CSV: 76142,4.0534,3.9308,1,1,0x02AF[0m
+[0;32mI (76602) DATA_CSV: 76172,3.9383,3.8754,1,1,0x02AF[0m
+[0;32mI (76632) DATA_CSV: 76202,3.7977,3.7397,1,1,0x02AF[0m
+[0;32mI (76662) DATA_CSV: 76232,3.6713,3.6173,1,1,0x02AF[0m
+[0;32mI (76692) DATA_CSV: 76262,3.5500,3.4981,1,1,0x02AF[0m
+[0;32mI (76722) DATA_CSV: 76292,3.4324,3.3843,1,1,0x02AF[0m
+[0;32mI (76752) DATA_CSV: 76322,3.3217,3.2739,1,1,0x02AF[0m
+[0;32mI (76782) DATA_CSV: 76352,3.2145,3.1676,1,1,0x02AF[0m
+[0;32mI (76812) DATA_CSV: 76382,3.1109,3.0656,1,1,0x02AF[0m
+[0;32mI (76842) DATA_CSV: 76412,3.0127,2.9664,1,1,0x02AF[0m
+[0;32mI (76842) RobotController: joint[0] current_steps=330 target_steps=330[0m
+[0;32mI (76842) RobotController: joint[1] current_steps=206 target_steps=206[0m
+[0;32mI (76842) RobotController: joint[2] current_steps=103 target_steps=103[0m
+[0;32mI (76852) RobotController: joint[3] current_steps=103 target_steps=103[0m
+[0;32mI (76862) RobotController: joint[4] current_steps=147 target_steps=147[0m
+[0;32mI (76862) RobotController: joint[5] current_steps=0 target_steps=0[0m
+[0;32mI (76872) RobotController: valve_state=0x02af[0m
+[0;32mI (76902) DATA_CSV: 76472,2.9154,2.8717,1,1,0x02AF[0m
+[0;32mI (76932) DATA_CSV: 76502,2.7336,2.6909,1,1,0x02AF[0m
+[0;32mI (76962) DATA_CSV: 76532,2.6485,2.6067,1,1,0x02AF[0m
+[0;32mI (76992) DATA_CSV: 76562,2.5660,2.5249,1,1,0x02AF[0m
+[0;32mI (77022) DATA_CSV: 76592,2.4859,2.4466,1,1,0x02AF[0m
+[0;32mI (77052) DATA_CSV: 76622,2.4086,2.3704,1,1,0x02AF[0m
+[0;32mI (77082) DATA_CSV: 76652,2.3339,2.2962,1,1,0x02AF[0m
+[0;32mI (77112) DATA_CSV: 76682,2.2618,2.2244,1,1,0x02AF[0m
+[0;32mI (77142) DATA_CSV: 76712,2.1928,2.1569,1,1,0x02AF[0m
+[0;32mI (77172) DATA_CSV: 76742,2.1245,2.0895,1,1,0x02AF[0m
+[0;32mI (77202) DATA_CSV: 76772,2.0594,2.0248,1,1,0x02AF[0m
+[0;32mI (77232) DATA_CSV: 76802,1.9961,1.9612,1,1,0x02AF[0m
+[0;32mI (77262) DATA_CSV: 76832,1.9359,1.9020,1,1,0x02AF[0m
+[0;32mI (77292) DATA_CSV: 76862,1.8766,1.8435,1,1,0x02AF[0m
+[0;32mI (77322) DATA_CSV: 76892,1.8187,1.7868,1,1,0x02AF[0m
+[0;32mI (77352) DATA_CSV: 76922,1.7638,1.7327,1,1,0x02AF[0m

@@ -54,7 +54,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     searched_directories:
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/git"
@@ -100,7 +100,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -153,7 +153,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     searched_directories:
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/uname"
@@ -209,7 +209,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "message-v1"
@@ -273,7 +273,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     searched_directories:
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/ninja-build"
@@ -338,7 +338,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -392,7 +392,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     searched_directories:
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/riscv32-esp-elf-gcc"
@@ -433,7 +433,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -496,7 +496,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "message-v1"
@@ -584,7 +584,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     found: "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-ar"
     search_context:
@@ -620,7 +620,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -675,7 +675,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     found: "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-ranlib"
     search_context:
@@ -711,7 +711,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -766,7 +766,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     found: "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-strip"
     search_context:
@@ -802,7 +802,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -857,7 +857,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     found: "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-ld"
     search_context:
@@ -893,7 +893,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -948,7 +948,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     found: "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-nm"
     search_context:
@@ -984,7 +984,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -1039,7 +1039,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     found: "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-objdump"
     search_context:
@@ -1075,7 +1075,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -1130,7 +1130,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     found: "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-objcopy"
     search_context:
@@ -1166,7 +1166,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -1221,7 +1221,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     found: "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-readelf"
     search_context:
@@ -1257,7 +1257,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -1312,7 +1312,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     searched_directories:
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-dlltool"
@@ -1346,7 +1346,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-dlltool"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-dlltool"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-dlltool"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-dlltool"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-dlltool"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-dlltool"
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/dlltool"
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/dlltool"
@@ -1379,7 +1379,7 @@ events:
       - "/Users/jansampolramirez/bin/dlltool"
       - "/Users/jansampolramirez/anaconda3/bin/dlltool"
       - "/Users/jansampolramirez/anaconda3/condabin/dlltool"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/dlltool"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/dlltool"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/dlltool"
     found: false
     search_context:
@@ -1415,7 +1415,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -1470,7 +1470,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     found: "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-addr2line"
     search_context:
@@ -1506,7 +1506,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -1561,7 +1561,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     searched_directories:
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-tapi"
@@ -1595,7 +1595,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-tapi"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-tapi"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-tapi"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-tapi"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-tapi"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-tapi"
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/tapi"
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/tapi"
@@ -1628,7 +1628,7 @@ events:
       - "/Users/jansampolramirez/bin/tapi"
       - "/Users/jansampolramirez/anaconda3/bin/tapi"
       - "/Users/jansampolramirez/anaconda3/condabin/tapi"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/tapi"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/tapi"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/tapi"
     found: false
     search_context:
@@ -1664,7 +1664,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -1721,7 +1721,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     searched_directories:
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ar-14.2"
@@ -1755,7 +1755,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-gcc-ar-14.2"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-gcc-ar-14.2"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-gcc-ar-14.2"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ar-14.2"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ar-14.2"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-gcc-ar-14.2"
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ar-14"
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/riscv32-esp-elf-gcc-ar-14"
@@ -1788,7 +1788,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-gcc-ar-14"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-gcc-ar-14"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-gcc-ar-14"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ar-14"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ar-14"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-gcc-ar-14"
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ar14"
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/riscv32-esp-elf-gcc-ar14"
@@ -1821,7 +1821,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-gcc-ar14"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-gcc-ar14"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-gcc-ar14"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ar14"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ar14"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-gcc-ar14"
     found: "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ar"
     search_context:
@@ -1857,7 +1857,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -1914,7 +1914,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     searched_directories:
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ranlib-14.2"
@@ -1948,7 +1948,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-gcc-ranlib-14.2"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-gcc-ranlib-14.2"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-gcc-ranlib-14.2"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ranlib-14.2"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ranlib-14.2"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-gcc-ranlib-14.2"
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ranlib-14"
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/riscv32-esp-elf-gcc-ranlib-14"
@@ -1981,7 +1981,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-gcc-ranlib-14"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-gcc-ranlib-14"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-gcc-ranlib-14"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ranlib-14"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ranlib-14"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-gcc-ranlib-14"
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ranlib14"
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/riscv32-esp-elf-gcc-ranlib14"
@@ -2014,7 +2014,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-gcc-ranlib14"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-gcc-ranlib14"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-gcc-ranlib14"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ranlib14"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ranlib14"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-gcc-ranlib14"
     found: "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ranlib"
     search_context:
@@ -2050,7 +2050,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -2104,7 +2104,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     searched_directories:
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/riscv32-esp-elf-g++"
@@ -2145,7 +2145,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -2208,7 +2208,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "message-v1"
@@ -2298,7 +2298,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     searched_directories:
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ar-14.2"
@@ -2332,7 +2332,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-gcc-ar-14.2"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-gcc-ar-14.2"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-gcc-ar-14.2"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ar-14.2"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ar-14.2"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-gcc-ar-14.2"
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ar-14"
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/riscv32-esp-elf-gcc-ar-14"
@@ -2365,7 +2365,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-gcc-ar-14"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-gcc-ar-14"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-gcc-ar-14"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ar-14"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ar-14"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-gcc-ar-14"
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ar14"
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/riscv32-esp-elf-gcc-ar14"
@@ -2398,7 +2398,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-gcc-ar14"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-gcc-ar14"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-gcc-ar14"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ar14"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ar14"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-gcc-ar14"
     found: "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ar"
     search_context:
@@ -2434,7 +2434,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -2491,7 +2491,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     searched_directories:
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ranlib-14.2"
@@ -2525,7 +2525,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-gcc-ranlib-14.2"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-gcc-ranlib-14.2"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-gcc-ranlib-14.2"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ranlib-14.2"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ranlib-14.2"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-gcc-ranlib-14.2"
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ranlib-14"
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/riscv32-esp-elf-gcc-ranlib-14"
@@ -2558,7 +2558,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-gcc-ranlib-14"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-gcc-ranlib-14"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-gcc-ranlib-14"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ranlib-14"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ranlib-14"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-gcc-ranlib-14"
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ranlib14"
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/riscv32-esp-elf-gcc-ranlib14"
@@ -2591,7 +2591,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-gcc-ranlib14"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-gcc-ranlib14"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-gcc-ranlib14"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ranlib14"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ranlib14"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-gcc-ranlib14"
     found: "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ranlib"
     search_context:
@@ -2627,7 +2627,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -2681,7 +2681,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     searched_directories:
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/riscv32-esp-elf-gcc"
@@ -2722,7 +2722,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "message-v1"
@@ -2793,7 +2793,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     searched_directories:
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ar-"
@@ -2827,7 +2827,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-gcc-ar-"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-gcc-ar-"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-gcc-ar-"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ar-"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ar-"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-gcc-ar-"
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ar-"
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/riscv32-esp-elf-gcc-ar-"
@@ -2860,7 +2860,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-gcc-ar-"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-gcc-ar-"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-gcc-ar-"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ar-"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ar-"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-gcc-ar-"
     found: "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ar"
     search_context:
@@ -2896,7 +2896,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "find-v1"
@@ -2953,7 +2953,7 @@ events:
       - "/Users/jansampolramirez/bin/"
       - "/Users/jansampolramirez/anaconda3/bin/"
       - "/Users/jansampolramirez/anaconda3/condabin/"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/"
     searched_directories:
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ranlib-"
@@ -2987,7 +2987,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-gcc-ranlib-"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-gcc-ranlib-"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-gcc-ranlib-"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ranlib-"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ranlib-"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-gcc-ranlib-"
       - "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ranlib-"
       - "/Users/jansampolramirez/esp/esp-idf-v5.5/components/espcoredump/riscv32-esp-elf-gcc-ranlib-"
@@ -3020,7 +3020,7 @@ events:
       - "/Users/jansampolramirez/bin/riscv32-esp-elf-gcc-ranlib-"
       - "/Users/jansampolramirez/anaconda3/bin/riscv32-esp-elf-gcc-ranlib-"
       - "/Users/jansampolramirez/anaconda3/condabin/riscv32-esp-elf-gcc-ranlib-"
-      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ranlib-"
+      - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/riscv32-esp-elf-gcc-ranlib-"
       - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts/riscv32-esp-elf-gcc-ranlib-"
     found: "/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ranlib"
     search_context:
@@ -3056,7 +3056,7 @@ events:
         - "/Users/jansampolramirez/bin"
         - "/Users/jansampolramirez/anaconda3/bin"
         - "/Users/jansampolramirez/anaconda3/condabin"
-        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2025.18.0-darwin-arm64/bundled/scripts/noConfigScripts"
+        - "/Users/jansampolramirez/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/jansampolramirez/Library/Application Support/JetBrains/Toolbox/scripts"
   -
     kind: "try_compile-v1"
@@ -3068,8 +3068,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-70sYjj"
-      binary: "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-70sYjj"
+      source: "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-NTWeHN"
+      binary: "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-NTWeHN"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: "-march=rv32imac_zicsr_zifencei "
@@ -3080,10 +3080,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-70sYjj'
+        Change Dir: '/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-NTWeHN'
         
-        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_09563
-        [1/2] /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   -march=rv32imac_zicsr_zifencei     -v -o CMakeFiles/cmTC_09563.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_cd31d
+        [1/2] /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   -march=rv32imac_zicsr_zifencei     -v -o CMakeFiles/cmTC_cd31d.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc
         Target: riscv32-esp-elf
@@ -3091,8 +3091,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) 
-        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_09563.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_09563.dir/'
-         /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/cc1 -quiet -v -imultilib rv32imac_zicsr_zifencei/ilp32 -iprefix /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/ -isysroot /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_09563.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei -version -o /var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccc2vxqB.s
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_cd31d.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_cd31d.dir/'
+         /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/cc1 -quiet -v -imultilib rv32imac_zicsr_zifencei/ilp32 -iprefix /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/ -isysroot /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_cd31d.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei -version -o /var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccmvT0Fm.s
         GNU C17 (crosstool-NG esp-14.2.0_20241119) version 14.2.0 (riscv32-esp-elf)
         	compiled by GNU C version Debian Clang 11.0.1, GMP version 6.2.1, MPFR version 4.2.1, MPC version 1.2.1, isl version isl-0.26-GMP
         
@@ -3109,13 +3109,13 @@ events:
          /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/include
         End of search list.
         Compiler executable checksum: 355c689fdbec0c7ff41056f2865da6bc
-        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_09563.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_09563.dir/'
-         /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_09563.dir/CMakeCCompilerABI.c.obj /var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccc2vxqB.s
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_cd31d.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_cd31d.dir/'
+         /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_cd31d.dir/CMakeCCompilerABI.c.obj /var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccmvT0Fm.s
         GNU assembler version 2.43.1 (riscv32-esp-elf) using BFD version (crosstool-NG esp-14.2.0_20241119) 2.43.1
         COMPILER_PATH=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/
         LIBRARY_PATH=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_09563.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_09563.dir/CMakeCCompilerABI.c.'
-        [2/2] : && /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei  -v CMakeFiles/cmTC_09563.dir/CMakeCCompilerABI.c.obj -o cmTC_09563   && :
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_cd31d.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_cd31d.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei  -v CMakeFiles/cmTC_cd31d.dir/CMakeCCompilerABI.c.obj -o cmTC_cd31d   && :
         Using built-in specs.
         COLLECT_GCC=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc
         COLLECT_LTO_WRAPPER=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/lto-wrapper
@@ -3126,10 +3126,10 @@ events:
         gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) 
         COMPILER_PATH=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/
         LIBRARY_PATH=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-v' '-o' 'cmTC_09563' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_09563.'
-         /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/collect2 -plugin /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccl8ciQU.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_09563 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib CMakeFiles/cmTC_09563.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc
+        COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-v' '-o' 'cmTC_cd31d' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_cd31d.'
+         /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/collect2 -plugin /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccwf0Cm4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_cd31d -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib CMakeFiles/cmTC_cd31d.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc
         /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 000100b4
-        COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-v' '-o' 'cmTC_09563' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_09563.'
+        COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-v' '-o' 'cmTC_cd31d' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_cd31d.'
         
       exitCode: 0
   -
@@ -3164,10 +3164,10 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-70sYjj']
+        ignore line: [Change Dir: '/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-NTWeHN']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_09563]
-        ignore line: [[1/2] /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   -march=rv32imac_zicsr_zifencei     -v -o CMakeFiles/cmTC_09563.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_cd31d]
+        ignore line: [[1/2] /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   -march=rv32imac_zicsr_zifencei     -v -o CMakeFiles/cmTC_cd31d.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc]
         ignore line: [Target: riscv32-esp-elf]
@@ -3175,8 +3175,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_09563.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_09563.dir/']
-        ignore line: [ /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/cc1 -quiet -v -imultilib rv32imac_zicsr_zifencei/ilp32 -iprefix /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/ -isysroot /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_09563.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei -version -o /var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccc2vxqB.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_cd31d.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_cd31d.dir/']
+        ignore line: [ /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/cc1 -quiet -v -imultilib rv32imac_zicsr_zifencei/ilp32 -iprefix /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/ -isysroot /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_cd31d.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei -version -o /var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccmvT0Fm.s]
         ignore line: [GNU C17 (crosstool-NG esp-14.2.0_20241119) version 14.2.0 (riscv32-esp-elf)]
         ignore line: [	compiled by GNU C version Debian Clang 11.0.1  GMP version 6.2.1  MPFR version 4.2.1  MPC version 1.2.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -3193,13 +3193,13 @@ events:
         ignore line: [ /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 355c689fdbec0c7ff41056f2865da6bc]
-        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_09563.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_09563.dir/']
-        ignore line: [ /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_09563.dir/CMakeCCompilerABI.c.obj /var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccc2vxqB.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_cd31d.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_cd31d.dir/']
+        ignore line: [ /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_cd31d.dir/CMakeCCompilerABI.c.obj /var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccmvT0Fm.s]
         ignore line: [GNU assembler version 2.43.1 (riscv32-esp-elf) using BFD version (crosstool-NG esp-14.2.0_20241119) 2.43.1]
         ignore line: [COMPILER_PATH=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_09563.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_09563.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] : && /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei  -v CMakeFiles/cmTC_09563.dir/CMakeCCompilerABI.c.obj -o cmTC_09563   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_cd31d.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_cd31d.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei  -v CMakeFiles/cmTC_cd31d.dir/CMakeCCompilerABI.c.obj -o cmTC_cd31d   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-gcc]
         ignore line: [COLLECT_LTO_WRAPPER=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/lto-wrapper]
@@ -3210,13 +3210,13 @@ events:
         ignore line: [gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) ]
         ignore line: [COMPILER_PATH=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-v' '-o' 'cmTC_09563' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_09563.']
-        link line: [ /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/collect2 -plugin /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccl8ciQU.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_09563 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib CMakeFiles/cmTC_09563.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc]
+        ignore line: [COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-v' '-o' 'cmTC_cd31d' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_cd31d.']
+        link line: [ /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/collect2 -plugin /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccwf0Cm4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_cd31d -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib CMakeFiles/cmTC_cd31d.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc]
           arg [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccl8ciQU.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccwf0Cm4.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
           arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
@@ -3226,7 +3226,7 @@ events:
           arg [-melf32lriscv] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_09563] ==> ignore
+          arg [cmTC_cd31d] ==> ignore
           arg [-L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32] ==> dir [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32]
           arg [-L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32] ==> dir [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32]
           arg [-L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32] ==> dir [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32]
@@ -3235,7 +3235,7 @@ events:
           arg [-L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib] ==> dir [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib]
           arg [-L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib] ==> dir [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib]
           arg [-L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib] ==> dir [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib]
-          arg [CMakeFiles/cmTC_09563.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [CMakeFiles/cmTC_cd31d.dir/CMakeCCompilerABI.c.obj] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [-lc] ==> lib [c]
           arg [-lnosys] ==> lib [nosys]
@@ -3243,7 +3243,7 @@ events:
           arg [-lgcc] ==> lib [gcc]
         ignore line: [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/ld: warning: cannot find entry symbol _start]
         ignore line: [ defaulting to 000100b4]
-        ignore line: [COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-v' '-o' 'cmTC_09563' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_09563.']
+        ignore line: [COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-v' '-o' 'cmTC_cd31d' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_cd31d.']
         ignore line: []
         ignore line: []
         collapse library dir [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32] ==> [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32]
@@ -3270,8 +3270,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-aT3QKZ"
-      binary: "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-aT3QKZ"
+      source: "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-jwMByr"
+      binary: "/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-jwMByr"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-march=rv32imac_zicsr_zifencei "
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -3283,10 +3283,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-aT3QKZ'
+        Change Dir: '/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-jwMByr'
         
-        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_c756d
-        [1/2] /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-g++   -march=rv32imac_zicsr_zifencei     -v -o CMakeFiles/cmTC_c756d.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_8b4de
+        [1/2] /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-g++   -march=rv32imac_zicsr_zifencei     -v -o CMakeFiles/cmTC_8b4de.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-g++
         Target: riscv32-esp-elf
@@ -3294,8 +3294,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) 
-        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_c756d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_c756d.dir/'
-         /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/cc1plus -quiet -v -imultilib rv32imac_zicsr_zifencei/ilp32 -iprefix /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/ -isysroot /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_c756d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei -version -o /var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccjpQT9V.s
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_8b4de.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_8b4de.dir/'
+         /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/cc1plus -quiet -v -imultilib rv32imac_zicsr_zifencei/ilp32 -iprefix /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/ -isysroot /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_8b4de.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei -version -o /var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccdiKYF3.s
         GNU C++17 (crosstool-NG esp-14.2.0_20241119) version 14.2.0 (riscv32-esp-elf)
         	compiled by GNU C version Debian Clang 11.0.1, GMP version 6.2.1, MPFR version 4.2.1, MPC version 1.2.1, isl version isl-0.26-GMP
         
@@ -3318,13 +3318,13 @@ events:
          /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/include
         End of search list.
         Compiler executable checksum: 6e49372a1109dc465056ef40790c161d
-        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_c756d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_c756d.dir/'
-         /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_c756d.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccjpQT9V.s
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_8b4de.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_8b4de.dir/'
+         /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_8b4de.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccdiKYF3.s
         GNU assembler version 2.43.1 (riscv32-esp-elf) using BFD version (crosstool-NG esp-14.2.0_20241119) 2.43.1
         COMPILER_PATH=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/
         LIBRARY_PATH=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_c756d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_c756d.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] : && /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-g++ -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei  -v CMakeFiles/cmTC_c756d.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_c756d   && :
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_8b4de.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_8b4de.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-g++ -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei  -v CMakeFiles/cmTC_8b4de.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_8b4de   && :
         Using built-in specs.
         COLLECT_GCC=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-g++
         COLLECT_LTO_WRAPPER=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/lto-wrapper
@@ -3335,10 +3335,10 @@ events:
         gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) 
         COMPILER_PATH=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/
         LIBRARY_PATH=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/
-        COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-v' '-o' 'cmTC_c756d' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_c756d.'
-         /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/collect2 -plugin /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//cc4GecmK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_c756d -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib CMakeFiles/cmTC_c756d.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc
+        COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-v' '-o' 'cmTC_8b4de' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_8b4de.'
+         /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/collect2 -plugin /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccc3pld9.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_8b4de -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib CMakeFiles/cmTC_8b4de.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc
         /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 000100b4
-        COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-v' '-o' 'cmTC_c756d' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_c756d.'
+        COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-v' '-o' 'cmTC_8b4de' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_8b4de.'
         
       exitCode: 0
   -
@@ -3379,10 +3379,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-aT3QKZ']
+        ignore line: [Change Dir: '/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-jwMByr']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_c756d]
-        ignore line: [[1/2] /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-g++   -march=rv32imac_zicsr_zifencei     -v -o CMakeFiles/cmTC_c756d.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/ninja -v cmTC_8b4de]
+        ignore line: [[1/2] /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-g++   -march=rv32imac_zicsr_zifencei     -v -o CMakeFiles/cmTC_8b4de.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-g++]
         ignore line: [Target: riscv32-esp-elf]
@@ -3390,8 +3390,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_c756d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_c756d.dir/']
-        ignore line: [ /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/cc1plus -quiet -v -imultilib rv32imac_zicsr_zifencei/ilp32 -iprefix /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/ -isysroot /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_c756d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei -version -o /var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccjpQT9V.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_8b4de.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_8b4de.dir/']
+        ignore line: [ /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/cc1plus -quiet -v -imultilib rv32imac_zicsr_zifencei/ilp32 -iprefix /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/ -isysroot /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_8b4de.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei -version -o /var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccdiKYF3.s]
         ignore line: [GNU C++17 (crosstool-NG esp-14.2.0_20241119) version 14.2.0 (riscv32-esp-elf)]
         ignore line: [	compiled by GNU C version Debian Clang 11.0.1  GMP version 6.2.1  MPFR version 4.2.1  MPC version 1.2.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -3414,13 +3414,13 @@ events:
         ignore line: [ /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 6e49372a1109dc465056ef40790c161d]
-        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_c756d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_c756d.dir/']
-        ignore line: [ /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_c756d.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccjpQT9V.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_8b4de.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_8b4de.dir/']
+        ignore line: [ /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_8b4de.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccdiKYF3.s]
         ignore line: [GNU assembler version 2.43.1 (riscv32-esp-elf) using BFD version (crosstool-NG esp-14.2.0_20241119) 2.43.1]
         ignore line: [COMPILER_PATH=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_c756d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_c756d.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] : && /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-g++ -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei  -v CMakeFiles/cmTC_c756d.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_c756d   && :]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_8b4de.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_8b4de.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-g++ -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei  -v CMakeFiles/cmTC_8b4de.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_8b4de   && :]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/riscv32-esp-elf-g++]
         ignore line: [COLLECT_LTO_WRAPPER=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/lto-wrapper]
@@ -3431,13 +3431,13 @@ events:
         ignore line: [gcc version 14.2.0 (crosstool-NG esp-14.2.0_20241119) ]
         ignore line: [COMPILER_PATH=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/]
         ignore line: [LIBRARY_PATH=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/:/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-v' '-o' 'cmTC_c756d' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_c756d.']
-        link line: [ /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/collect2 -plugin /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//cc4GecmK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_c756d -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib CMakeFiles/cmTC_c756d.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc]
+        ignore line: [COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-v' '-o' 'cmTC_8b4de' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_8b4de.']
+        link line: [ /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/collect2 -plugin /Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/liblto_plugin.so -plugin-opt=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccc3pld9.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf -melf32lriscv -X -o cmTC_8b4de -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0 -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib -L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib CMakeFiles/cmTC_8b4de.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc]
           arg [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/14.2.0/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//cc4GecmK.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/var/folders/v_/b8tw111n6nvfkbc3ddx8zmsc0000gn/T//ccc3pld9.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
           arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
@@ -3447,7 +3447,7 @@ events:
           arg [-melf32lriscv] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_c756d] ==> ignore
+          arg [cmTC_8b4de] ==> ignore
           arg [-L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32] ==> dir [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32]
           arg [-L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32] ==> dir [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32]
           arg [-L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32] ==> dir [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32]
@@ -3456,7 +3456,7 @@ events:
           arg [-L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib] ==> dir [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/lib]
           arg [-L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib] ==> dir [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/lib]
           arg [-L/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib] ==> dir [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../riscv32-esp-elf/usr/lib]
-          arg [CMakeFiles/cmTC_c756d.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [CMakeFiles/cmTC_8b4de.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc] ==> lib [gcc]
@@ -3466,7 +3466,7 @@ events:
           arg [-lgcc] ==> lib [gcc]
         ignore line: [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/../../../../riscv32-esp-elf/bin/ld: warning: cannot find entry symbol _start]
         ignore line: [ defaulting to 000100b4]
-        ignore line: [COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-v' '-o' 'cmTC_c756d' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_c756d.']
+        ignore line: [COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-v' '-o' 'cmTC_8b4de' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_8b4de.']
         ignore line: []
         ignore line: []
         collapse library dir [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32] ==> [/Users/jansampolramirez/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/14.2.0/rv32imac_zicsr_zifencei/ilp32]

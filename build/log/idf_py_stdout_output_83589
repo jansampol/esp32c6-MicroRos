@@ -1,0 +1,89 @@
+Command: ninja flash
+[0/2] Re-checking globbed directories...
+[1/6] cd /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp-idf/esptool_py && /Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/partition_table/partition-table.bin /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.bin
+esp32c6_microros_test.bin binary size 0x1481f0 bytes. Smallest app partition is 0x200000 bytes. 0xb7e10 bytes (36%) free.
+[2/6] Performing build step for 'bootloader'
+[1/1] cd /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/esp-idf/esptool_py && /Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.bin
+Bootloader binary size 0x58f0 bytes. 0x2710 bytes (31%) free.
+[3/6] No install step for 'bootloader'
+[4/6] Completed 'bootloader'
+[4/6] cd /Users/jansampolramirez/esp/esp-idf-v5.5/components/esptool_py && /opt/homebrew/bin/cmake -D IDF_PATH=/Users/jansampolramirez/esp/esp-idf-v5.5 -D "SERIAL_TOOL=/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python;;/Users/jansampolramirez/esp/esp-idf-v5.5/components/esptool_py/esptool/esptool.py;--chip;esp32c6" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build -P /Users/jansampolramirez/esp/esp-idf-v5.5/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32c6 -p /dev/cu.usbserial-140 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 4MB 0x0 bootloader/bootloader.bin 0x10000 esp32c6_microros_test.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.12.dev1
+Serial port /dev/cu.usbserial-140
+Connecting....
+Chip is ESP32-C6 (QFN40) (revision v0.2)
+Features: Wi-Fi 6, BT 5 (LE), IEEE802.15.4, Single Core + LP Core, 160MHz, Unknown Embedded Flash
+Crystal is 40MHz
+MAC: 20:6e:f1:ff:fe:18:8c:28
+BASE MAC: 20:6e:f1:18:8c:28
+MAC_EXT: ff:fe
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00158fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 22768 bytes to 14171...
+Writing at 0x00000000... (100 %)
+Wrote 22768 bytes (14171 compressed) at 0x00000000 in 0.5 seconds (effective 347.5 kbit/s)...
+Hash of data verified.
+Compressed 1343984 bytes to 724636...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001de91... (4 %)
+Writing at 0x00029d6a... (6 %)
+Writing at 0x0003281d... (8 %)
+Writing at 0x0003cecc... (11 %)
+Writing at 0x00043824... (13 %)
+Writing at 0x0004afd3... (15 %)
+Writing at 0x00052fbb... (17 %)
+Writing at 0x0005a89e... (20 %)
+Writing at 0x00066e3a... (22 %)
+Writing at 0x00073183... (24 %)
+Writing at 0x0007ce83... (26 %)
+Writing at 0x00083fe5... (28 %)
+Writing at 0x0008a9b1... (31 %)
+Writing at 0x00091c3b... (33 %)
+Writing at 0x00098b3a... (35 %)
+Writing at 0x0009fd71... (37 %)
+Writing at 0x000a6ce8... (40 %)
+Writing at 0x000ace19... (42 %)
+Writing at 0x000b3398... (44 %)
+Writing at 0x000ba20a... (46 %)
+Writing at 0x000bfc7a... (48 %)
+Writing at 0x000c5884... (51 %)
+Writing at 0x000cc1a1... (53 %)
+Writing at 0x000d2428... (55 %)
+Writing at 0x000d81e6... (57 %)
+Writing at 0x000de13e... (60 %)
+Writing at 0x000e42ed... (62 %)
+Writing at 0x000ea0ad... (64 %)
+Writing at 0x000f049f... (66 %)
+Writing at 0x000f6642... (68 %)
+Writing at 0x000fcacd... (71 %)
+Writing at 0x0010358f... (73 %)
+Writing at 0x0010a836... (75 %)
+Writing at 0x00111ba4... (77 %)
+Writing at 0x0011954f... (80 %)
+Writing at 0x00122005... (82 %)
+Writing at 0x001281af... (84 %)
+Writing at 0x0012e395... (86 %)
+Writing at 0x0013410c... (88 %)
+Writing at 0x0013b88f... (91 %)
+Writing at 0x001421a9... (93 %)
+Writing at 0x0014864f... (95 %)
+Writing at 0x0014e185... (97 %)
+Writing at 0x00155650... (100 %)
+Wrote 1343984 bytes (724636 compressed) at 0x00010000 in 17.0 seconds (effective 634.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 139...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (139 compressed) at 0x00008000 in 0.0 seconds (effective 564.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

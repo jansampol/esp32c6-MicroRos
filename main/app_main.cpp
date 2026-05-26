@@ -245,31 +245,52 @@ extern "C" void app_main(void)
                 if (current_wp >= path_waypoints) {
                     executing_path = false;
                     ESP_LOGI(TAG, "Path execution finished");
-                    micro_ros.publishRobotState("movement_finished");
                 }
             }
         }
 
+        //#if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI1_ONLY
+        //float pressure1 = i2cManager.readPressureSensor(1);
+        //float pressure0 = i2cManager.readPressureSensor(0);
+
+        // uint16_t valve_state = robot_controller.getValveState();
+        // uint8_t j1_a = (valve_state >> 0) & 0x1;
+        // uint8_t j1_b = (valve_state >> 1) & 0x1;
+
+        // if (std::isnan(pressure0) || std::isnan(pressure1)) {
+        //     ESP_LOGE("PRESSURE_TEST", "pressure read failed p0=%.4f p1=%.4f", pressure0, pressure1);
+        // } else {
+        //     ESP_LOGI("DATA_CSV", "%llu,%.4f,%.4f,%u,%u,0x%04X",
+        //              (unsigned long long)(esp_timer_get_time() / 1000ULL),
+        //              pressure1,
+        //              pressure0,
+        //              j1_a,
+        //              j1_b,
+        //              valve_state);
+        //}
+        //#endif
+
+        // Read ferris wheel angles for logging and potential use in control (not currently used in control).
         #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI1_ONLY
-        float pressure1 = i2cManager.readPressureSensor(1);
-        float pressure0 = i2cManager.readPressureSensor(0);
+        static TickType_t lastFerrisLogTick = 0;
+        const TickType_t now = xTaskGetTickCount();
+        if ((now - lastFerrisLogTick) >= pdMS_TO_TICKS(500)) {
+            lastFerrisLogTick = now;
 
-        uint16_t valve_state = robot_controller.getValveState();
-        uint8_t j1_a = (valve_state >> 0) & 0x1;
-        uint8_t j1_b = (valve_state >> 1) & 0x1;
+            std::vector<float> ferris_angles = i2cManager.readAllFerrisWheelAngles();
+            std::vector<float> ferris_raw = i2cManager.readAllFerrisWheelRawValues();
+            robot_controller.setFerrisWheelFeedback(ferris_angles);
 
-        if (std::isnan(pressure0) || std::isnan(pressure1)) {
-            ESP_LOGE("PRESSURE_TEST", "pressure read failed p0=%.4f p1=%.4f", pressure0, pressure1);
-        } else {
-            ESP_LOGI("DATA_CSV", "%llu,%.4f,%.4f,%u,%u,0x%04X",
-                     (unsigned long long)(esp_timer_get_time() / 1000ULL),
-                     pressure1,
-                     pressure0,
-                     j1_a,
-                     j1_b,
-                     valve_state);
+            for (size_t i = 0; i < ferris_angles.size(); ++i) {
+                const float raw = (i < ferris_raw.size()) ? ferris_raw[i] : NAN;
+                ESP_LOGI(TAG,
+                         "Ferris wheel %d: angle=%.2f deg raw=%.2f",
+                         (int)i,
+                         ferris_angles[i],
+                         raw);
+            }
         }
-        #endif
+        #endif  
 
         robot_controller.update();
         robot_controller.service();

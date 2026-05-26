@@ -1,0 +1,90 @@
+Command: ninja all
+-- GLOB mismatch!
+The following files were removed:
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/action_msgs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/actionlib_msgs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/builtin_interfaces
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/composition_interfaces
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/diagnostic_msgs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/example_interfaces
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/geometry_msgs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/include
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/lifecycle_msgs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/micro_ros_msgs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/micro_ros_utilities
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/nav_msgs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rcl
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rcl_action
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rcl_interfaces
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rcl_lifecycle
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rcl_logging_interface
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rclc
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rclc_lifecycle
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rclc_parameter
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rcutils
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rmw
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rmw_microros
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rmw_microxrcedds_c
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rmw_security_common
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rosgraph_msgs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rosidl_dynamic_typesupport
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rosidl_runtime_c
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rosidl_typesupport_c
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rosidl_typesupport_interface
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rosidl_typesupport_introspection_c
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/rosidl_typesupport_microxrcedds_c
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/sensor_msgs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/service_msgs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/shape_msgs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/statistics_msgs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/std_msgs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/std_srvs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/stereo_msgs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/test_msgs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/tracetools
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/trajectory_msgs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/type_description_interfaces
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/ucdr
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/unique_identifier_msgs
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/uxr
+  -/Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/components/micro_ros_espidf_component/include/visualization_msgs
+CMake Error at /Users/jansampolramirez/esp/esp-idf-v5.5/tools/cmake/build.cmake:629 (message):
+  Traceback (most recent call last):
+
+    File "<frozen runpy>", line 198, in _run_module_as_main
+    File "<frozen runpy>", line 88, in _run_code
+    File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/idf_component_manager/prepare_components/__main__.py", line 6, in <module>
+      main()
+      ~~~~^^
+    File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/idf_component_manager/prepare_components/prepare.py", line 337, in main
+      args.func(args)
+      ~~~~~~~~~^^^^^^
+    File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/idf_component_manager/prepare_components/prepare.py", line 143, in prepare_dep_dirs
+      if sdk_config_json_path and should_load_sdkconfig_json(args, build_dir, sdk_config_json_path):
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/idf_component_manager/prepare_components/prepare.py", line 133, in should_load_sdkconfig_json
+      return RunCounter(build_dir).value > 0 or CMAKEV2
+             ~~~~~~~~~~^^^^^^^^^^^
+    File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/idf_component_manager/prepare_components/prepare.py", line 34, in __init__
+      self._file_path = Path(build_dir) / f'component_manager_run_counter.{get_cmake_pid()}'
+                                                                           ~~~~~~~~~~~~~^^
+    File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/idf_component_manager/prepare_components/cmake_pid.py", line 33, in get_cmake_pid
+      parent = current.parent()
+    File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/psutil/__init__.py", line 597, in parent
+      lowest_pid = _LOWEST_PID if _LOWEST_PID is not None else pids()[0]
+                                                               ~~~~^^
+    File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/psutil/__init__.py", line 1485, in pids
+      ret = sorted(_psplatform.pids())
+                   ~~~~~~~~~~~~~~~~^^
+    File "/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/lib/python3.14/site-packages/psutil/_psosx.py", line 320, in pids
+      ls = cext.pids()
+
+  PermissionError: [Errno 1] Operation not permitted (originated from
+  sysctl() malloc 1/3)
+
+Call Stack (most recent call first):
+  /Users/jansampolramirez/esp/esp-idf-v5.5/tools/cmake/project.cmake:740 (idf_build_process)
+  CMakeLists.txt:3 (project)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed
