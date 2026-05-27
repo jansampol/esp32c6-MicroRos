@@ -412,6 +412,14 @@ void MicroRosManager::jointPathCallback(const void *msgin)
 
     instance_->latest_path_waypoints_ = n_waypoints;
     instance_->latest_path_dof_ = dof;
+    instance_->latest_path_has_insertion_depth_ = false;
+    instance_->latest_insertion_depth_mm_ = 0.0f;
+
+    if (in->data.size > expected_size) {
+        instance_->latest_path_has_insertion_depth_ = true;
+        instance_->latest_insertion_depth_mm_ = static_cast<float>(in->data.data[expected_size]);
+    }
+
     instance_->new_path_available_ = true;
 }
 
@@ -500,11 +508,19 @@ bool MicroRosManager::hasNewPath() const
     return new_path_available_;
 }
 
-void MicroRosManager::consumePath(double out[][MAX_JOINTS], size_t &waypoints, size_t &dof)
+void MicroRosManager::consumePath(
+    double out[][MAX_JOINTS],
+    size_t &waypoints,
+    size_t &dof,
+    bool &has_insertion_depth,
+    float &insertion_depth_mm
+)
 {
     printf("Consuming path with %zu waypoints and %zu dof\n", latest_path_waypoints_, latest_path_dof_);
     waypoints = latest_path_waypoints_;
     dof = latest_path_dof_;
+    has_insertion_depth = latest_path_has_insertion_depth_;
+    insertion_depth_mm = latest_insertion_depth_mm_;
 
     for (size_t wp = 0; wp < waypoints; ++wp) {
         for (size_t j = 0; j < dof; ++j) {
@@ -513,6 +529,8 @@ void MicroRosManager::consumePath(double out[][MAX_JOINTS], size_t &waypoints, s
     }
 
     new_path_available_ = false;
+    latest_path_has_insertion_depth_ = false;
+    latest_insertion_depth_mm_ = 0.0f;
 }
 
 bool MicroRosManager::hasNewEspCmd() const

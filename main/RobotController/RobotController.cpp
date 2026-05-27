@@ -404,6 +404,15 @@ void RobotController::setJointTargetStep(size_t idx, int step) {
     _jointPosChanged = true;
 }
 
+void RobotController::setNeedleIncisionTargetSteps(int step) {
+    if (_robotState.targetJointSteps.empty()) {
+        return;
+    }
+
+    const size_t needleJointIdx = _robotState.targetJointSteps.size() - 1;
+    _robotState.targetJointSteps[needleJointIdx] = step;
+}
+
 void RobotController::setJointTargetRad(const std::vector<float> &angles) {
     if (!_kinematics) {
         ESP_LOGW(TAG, "No kinematics controller available");
@@ -625,6 +634,20 @@ std::vector<int> RobotController::radToSteps(const std::vector<float> &angles) c
         return {};
     }
     return _kinematics->radToSteps(angles);
+}
+
+int RobotController::needleDepthMmToSteps(float depthMm) const {
+    if (!_kinematics) {
+        return 0;
+    }
+    return _kinematics->needleDepthMmToSteps(depthMm);
+}
+
+float RobotController::needleStepsToDepthMm(int steps) const {
+    if (!_kinematics) {
+        return 0.0f;
+    }
+    return _kinematics->needleStepsToDepthMm(steps);
 }
 
 // -------------------------------------------------------------------------------------------------

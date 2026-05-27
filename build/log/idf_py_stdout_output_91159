@@ -1,0 +1,1418 @@
+Command: /Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf_monitor.py -p /dev/cu.usbserial-140 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf -m '/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf.py' '-p' '/dev/cu.usbserial-140'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xfa8
+load:0x4086e610,len:0x31a8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time May 26 2026 16:51:11[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (71) boot:  3 coredump         Unknown data     01 03 00210000 00010000[0m
+[0;32mI (78) boot:  4 littlefs         Unknown data     01 82 00220000 0007d000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=420f0020 size=2acech (175340) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0003ad14 vaddr=40800000 size=05304h ( 21252) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=ece78h (970360) map[0m
+[0;32mI (316) esp_image: segment 3: paddr=0012cea0 vaddr=40805304 size=1ba1ch (113180) load[0m
+[0;32mI (348) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (348) boot: Disabling RNG early entropy source...[0m
+[0;32mI (358) cpu_start: Unicore app[0m
+[0;32mI (367) cpu_start: Pro cpu start user code[0m
+[0;32mI (367) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (367) app_init: Application information:[0m
+[0;32mI (367) app_init: Project name:     esp32c6_microros_test[0m
+[0;32mI (372) app_init: App version:      44ae1dd-dirty[0m
+[0;32mI (376) app_init: Compile time:     May 27 2026 10:53:10[0m
+[0;32mI (381) app_init: ELF file SHA256:  588e1a921...[0m
+[0;32mI (386) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (389) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (393) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (397) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (401) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (407) heap_init: At 4082F990 len 0004CC80 (307 KiB): RAM[0m
+[0;32mI (412) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (417) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (424) spi_flash: detected chip: generic[0m
+[0;32mI (427) spi_flash: flash io: dio[0m
+[0;33mW (430) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (444) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (448) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (455) coexist: coex firmware version: 831ec70[0m
+[0;32mI (473) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (474) main_task: Started on CPU0[0m
+[0;32mI (474) main_task: Calling app_main()[0m
+app_main started
+[0;32mI (484) InputController: Initializing InputController...[0m
+[0;32mI (484) SPI0Manager: SPI0Manager begin()[0m
+[0;32mI (484) SPI0Manager: Using pins MOSI=8 MISO=6 CLK=1[0m
+[0;32mI (504) SPI0Manager: UI_2 readback: IODIRA=0xFF IODIRB=0x00 GPIOA=0x00 GPIOB=0x00[0m
+[0;32mI (1214) SPI0Manager: Screen initialized (ST7789 over SPI0).[0m
+[0;32mI (1214) SPI0Manager: SPI0Manager initialized.[0m
+[0;32mI (1214) CanvasManager: Initializing CanvasManager...[0m
+[0;33mW (1214) CanvasManager: PSRAM allocation failed, falling back to internal RAM.[0m
+[0;32mI (1224) CanvasManager: Canvas buffer initialized successfully.[0m
+[0;32mI (1224) InputController: testSPI0Manager() skipped: SPI0 disabled[0m
+[0;32mI (1234) CanvasManager: Finished screen initialization.[0m
+[0;32mI (1234) I2CManager: Starting I2C Manager with 0 Ferris wheels and 0 other sensors...[0m
+[0;32mI (1244) I2CManager: I2C bus started[0m
+[0;32mI (1254) I2CManager: Pressure sensor/internal multiplexer not required for this I2C setup.[0m
+[0;32mI (1254) I2CManager: I2C multiplexers initialized. Initializing Ferris wheels...[0m
+[0;32mI (1264) I2CManager: Initializing Ferris wheel sensors...[0m
+[0;32mI (1274) I2CManager: Ferris wheels successfully initialized[0m
+[0;32mI (1274) InputController: I2CManager initialized. Ferris wheels configured: 0[0m
+[0;32mI (1284) InputController: InputController initialized.[0m
+[0;32mI (1294) RobotController: Switched to PURPLE_MAMRI[0m
+[0;32mI (1294) MicroRosManager: Initializing WiFi transport...[0m
+[0;32mI (1294) wifi_station_netif: ESP_WIFI_MODE_STA[0m
+[0;32mI (1304) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (1304) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (1314) wifi:wifi driver task: 4085cb4c, prio:23, stack:6656, core=0[0m
+[0;32mI (1324) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (1324) wifi:wifi certification version: v7.0[0m
+[0;32mI (1324) wifi:config NVS flash: enabled[0m
+[0;32mI (1324) wifi:config nano formatting: disabled[0m
+[0;32mI (1334) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (1334) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (1344) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (1344) wifi:Init management short buffer num: 32[0m
+[0;32mI (1354) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (1354) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (1354) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (1364) wifi:Init static rx buffer num: 10[0m
+[0;32mI (1364) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (1374) wifi_init: rx ba win: 6[0m
+[0;32mI (1374) wifi_init: accept mbox: 6[0m
+[0;32mI (1374) wifi_init: tcpip mbox: 32[0m
+[0;32mI (1384) wifi_init: udp mbox: 6[0m
+[0;32mI (1384) wifi_init: tcp mbox: 6[0m
+[0;32mI (1384) wifi_init: tcp tx win: 5760[0m
+[0;32mI (1394) wifi_init: tcp rx win: 5760[0m
+[0;32mI (1394) wifi_init: tcp mss: 1440[0m
+[0;32mI (1394) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1404) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1404) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;33mW (1404) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1414) phy_init: phy_version 331,5b89037,Mar  3 2025,16:01:12[0m
+[0;33mW (1494) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1494) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1494) wifi:(agc)0x600a7128:0xd211faf8, min.avgNF:0xce->0xd2(dB), RCalCount:0x11f, min.RRssi:0xaf8(-80.50)[0m
+[0;32mI (1504) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (1514) wifi:mode : sta (20:6e:f1:18:8c:28)[0m
+[0;32mI (1514) wifi:enable tsf[0m
+[0;32mI (1524) wifi_station_netif: wifi_init_sta finished.[0m
+[0;32mI (1534) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1534) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1534) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1554) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1694) wifi:(assoc)RESP, Extended Capabilities length:1, operating_mode_notification:0[0m
+[0;32mI (1694) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (1704) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1704) wifi:(trc)phytype:CBW20-SGI, snr:73, maxRate:144, highestRateIdx:0[0m
+[0;33mW (1714) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (1724) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:73, ampduState:wait operational[0m
+[0;32mI (1734) wifi:ifidx:0, rssi:-23, nf:-96, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (1744) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:4(2 us)[0m
+[0;32mI (1774) wifi:connected with MyNewHotspot, aid = 7, channel 6, BW20, bssid = c2:de:de:da:8c:bb[0m
+[0;32mI (1774) wifi:security: WPA2-PSK, phy:bgn, rssi:-23, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (1784) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1784) wifi:pm start, type:1, aid:0x7, trans-BSSID:c2:de:de:da:8c:bb, BSSID[5]:0xbb, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (1794) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1804) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1814) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1824) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1834) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1844) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (1854) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1864) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1874) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1884) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1904) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (2014) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100bb8c, TALO:0xdadedec2, (ssn:0, win:64, cur_ssn:0), CONF:0xc0000005[0m
+[0;32mI (3234) esp_netif_handlers: sta ip: 192.168.161.75, mask: 255.255.255.0, gw: 192.168.161.183[0m
+[0;32mI (3234) wifi_station_netif: got ip:192.168.161.75[0m
+[0;32mI (3234) wifi_station_netif: connected to ap SSID:MyNewHotspot password:12345678[0m
+[0;32mI (3234) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (3244) MicroRosManager: Waiting before micro-ROS init...[0m
+[0;33mW (3634) wifi:<ba-add>idx:1, ifx:0, tid:6, TAHI:0x100bb8c, TALO:0xdadedec2, (ssn:2, win:64, cur_ssn:2), CONF:0xc0006005[0m
+[0;32mI (6244) MicroRosManager: Creating micro-ROS entities (attempt 1/5)...[0m
+[0;32mI (6244) MicroRosManager: Using micro-ROS client key: 0xf1188c28[0m
+[0;32mI (6554) MicroRosManager: micro-ROS entities created[0m
+[0;32mI (6554) MicroRosManager: micro-ROS base ready[0m
+[0;32mI (6554) app_main: Application initialized successfully (SPI0 input mode)[0m
+[0;32mI (6884) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (7094) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (7604) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (8114) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (8354) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (8354) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (8354) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (8364) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (8374) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (8374) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (8384) RobotController: valve_state=0x0000[0m
+[0;32mI (8634) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (9144) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (9654) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (9894) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (9894) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (9894) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (9904) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (9914) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (9914) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (9924) RobotController: valve_state=0x0000[0m
+[0;32mI (10174) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (10684) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (11194) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (11434) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (11434) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (11434) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (11444) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (11454) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (11454) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (11464) RobotController: valve_state=0x0000[0m
+[0;32mI (11714) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (12224) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (12734) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (12974) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (12974) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (12974) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (12984) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (12994) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (12994) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (13004) RobotController: valve_state=0x0000[0m
+[0;32mI (13254) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (13764) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (14274) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (14514) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (14514) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (14514) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (14524) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (14534) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (14534) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (14544) RobotController: valve_state=0x0000[0m
+[0;32mI (14794) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (15304) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (15814) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (16054) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (16054) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (16054) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (16064) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (16074) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (16074) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (16084) RobotController: valve_state=0x0000[0m
+[0;32mI (16334) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (16844) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (17354) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (17594) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (17594) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (17594) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (17604) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (17614) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (17614) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (17624) RobotController: valve_state=0x0000[0m
+[0;32mI (17874) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (18384) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (18894) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (19134) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (19134) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (19134) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (19144) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (19154) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (19154) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (19164) RobotController: valve_state=0x0000[0m
+[0;32mI (19414) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (19924) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (20434) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (20674) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (20674) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (20674) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (20684) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (20694) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (20694) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (20704) RobotController: valve_state=0x0000[0m
+[0;32mI (20954) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (21464) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (21974) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (22214) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (22214) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (22214) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (22224) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (22234) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (22234) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (22244) RobotController: valve_state=0x0000[0m
+[0;32mI (22494) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (23004) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (23514) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (23754) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (23754) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (23754) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (23764) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (23774) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (23774) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (23784) RobotController: valve_state=0x0000[0m
+[0;32mI (24034) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (24544) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (25054) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (25294) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (25294) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (25294) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (25304) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (25314) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (25314) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (25324) RobotController: valve_state=0x0000[0m
+[0;32mI (25574) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (26084) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (26594) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (26834) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (26834) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (26834) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (26844) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (26854) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (26854) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (26864) RobotController: valve_state=0x0000[0m
+[0;32mI (27114) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (27624) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (28134) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (28374) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (28374) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (28374) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (28384) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (28394) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (28394) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (28404) RobotController: valve_state=0x0000[0m
+[0;32mI (28654) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (29164) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (29674) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (29914) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (29914) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (29914) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (29924) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (29934) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (29934) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (29944) RobotController: valve_state=0x0000[0m
+[0;32mI (30194) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (30704) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (31214) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (31454) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (31454) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (31454) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (31464) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (31474) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (31474) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (31484) RobotController: valve_state=0x0000[0m
+[0;32mI (31734) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (32244) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (32754) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (32994) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (32994) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (32994) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (33004) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (33014) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (33014) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (33024) RobotController: valve_state=0x0000[0m
+[0;32mI (33274) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (33784) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (34294) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (34534) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (34534) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (34534) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (34544) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (34554) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (34554) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (34564) RobotController: valve_state=0x0000[0m
+[0;32mI (34814) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (35324) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (35834) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (36074) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (36074) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (36074) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (36084) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (36094) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (36094) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (36104) RobotController: valve_state=0x0000[0m
+[0;32mI (36354) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (36864) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (37374) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (37614) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (37614) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (37614) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (37624) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (37634) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (37634) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (37644) RobotController: valve_state=0x0000[0m
+[0;32mI (37894) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (38404) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (38914) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (39154) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (39154) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (39154) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (39164) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (39174) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (39174) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (39184) RobotController: valve_state=0x0000[0m
+[0;32mI (39434) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (39944) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (40894) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (41534) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (42194) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (42844) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (43514) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (44164) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (44824) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (44864) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (44864) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (44864) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (44874) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (44884) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (44884) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (44894) RobotController: valve_state=0x0000[0m
+[0;32mI (45514) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (46164) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (46814) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (47464) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (48114) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (48744) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (48984) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (49494) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (49914) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (49914) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (49914) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (49924) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (49934) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (49934) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (49944) RobotController: valve_state=0x0000[0m
+[0;32mI (50014) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (50524) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (51034) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (51454) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (51454) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (51454) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (51464) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (51474) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (51474) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (51484) RobotController: valve_state=0x0000[0m
+[0;32mI (51554) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (52064) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (52574) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (52994) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (52994) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (52994) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (53004) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (53014) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (53014) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (53024) RobotController: valve_state=0x0000[0m
+[0;32mI (53094) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (53604) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (54114) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (54534) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (54534) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (54534) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (54544) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (54554) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (54554) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (54564) RobotController: valve_state=0x0000[0m
+[0;32mI (54634) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (55144) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (55654) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (56074) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (56074) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (56074) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (56084) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (56094) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (56094) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (56104) RobotController: valve_state=0x0000[0m
+[0;32mI (56174) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (56684) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (57194) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (57614) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (57614) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (57614) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (57624) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (57634) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (57634) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (57644) RobotController: valve_state=0x0000[0m
+[0;32mI (57714) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (58224) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (58734) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (59154) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (59154) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (59154) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (59164) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (59174) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (59174) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (59184) RobotController: valve_state=0x0000[0m
+[0;32mI (59254) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (59764) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (60274) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (60694) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (60694) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (60694) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (60704) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (60714) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (60714) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (60724) RobotController: valve_state=0x0000[0m
+[0;32mI (60794) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (61304) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (61814) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (62234) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (62234) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (62234) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (62244) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (62254) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (62254) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (62264) RobotController: valve_state=0x0000[0m
+[0;32mI (62334) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (62844) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (63354) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (63774) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (63774) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (63774) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (63784) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (63794) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (63794) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (63804) RobotController: valve_state=0x0000[0m
+[0;32mI (63874) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (64384) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (64894) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (65314) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (65314) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (65314) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (65324) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (65334) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (65334) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (65344) RobotController: valve_state=0x0000[0m
+[0;32mI (65414) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (65924) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (66434) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (66854) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (66854) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (66854) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (66864) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (66874) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (66874) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (66884) RobotController: valve_state=0x0000[0m
+[0;32mI (66954) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (67464) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (67974) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (68394) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (68394) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (68394) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (68404) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (68414) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (68414) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (68424) RobotController: valve_state=0x0000[0m
+[0;32mI (68494) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (69004) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (69514) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (69934) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (69934) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (69934) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (69944) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (69954) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (69954) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (69964) RobotController: valve_state=0x0000[0m
+[0;32mI (70034) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (70544) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (71054) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (71474) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (71474) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (71474) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (71484) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (71494) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (71494) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (71504) RobotController: valve_state=0x0000[0m
+[0;32mI (71574) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (72084) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (72594) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (73014) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (73014) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (73014) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (73024) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (73034) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (73034) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (73044) RobotController: valve_state=0x0000[0m
+[0;32mI (73114) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (73624) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (74134) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (74554) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (74554) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (74554) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (74564) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (74574) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (74574) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (74584) RobotController: valve_state=0x0000[0m
+[0;32mI (74654) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (75164) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (75674) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (76094) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (76094) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (76094) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (76104) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (76114) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (76114) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (76124) RobotController: valve_state=0x0000[0m
+[0;32mI (76194) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (76704) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (77214) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (77634) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (77634) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (77634) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (77644) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (77654) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (77654) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (77664) RobotController: valve_state=0x0000[0m
+[0;32mI (77734) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (78244) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (78754) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (79174) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (79174) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (79174) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (79184) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (79194) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (79194) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (79204) RobotController: valve_state=0x0000[0m
+[0;32mI (79274) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (79784) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (80294) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (80714) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (80714) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (80714) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (80724) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (80734) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (80734) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (80744) RobotController: valve_state=0x0000[0m
+[0;32mI (80814) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (81324) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (81834) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (82254) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (82254) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (82254) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (82264) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (82274) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (82274) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (82284) RobotController: valve_state=0x0000[0m
+[0;32mI (82354) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (82864) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (83374) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (83794) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (83794) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (83794) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (83804) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (83814) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (83814) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (83824) RobotController: valve_state=0x0000[0m
+[0;32mI (83894) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (84404) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (84914) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (85334) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (85334) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (85334) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (85344) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (85354) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (85354) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (85364) RobotController: valve_state=0x0000[0m
+[0;32mI (85434) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (85944) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (86454) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (86874) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (86874) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (86874) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (86884) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (86894) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (86894) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (86904) RobotController: valve_state=0x0000[0m
+[0;32mI (86974) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (87484) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (87994) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (88414) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (88414) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (88414) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (88424) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (88434) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (88434) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (88444) RobotController: valve_state=0x0000[0m
+[0;32mI (88514) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (89024) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (89534) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (89954) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (89954) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (89954) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (89964) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (89974) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (89974) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (89984) RobotController: valve_state=0x0000[0m
+[0;32mI (90054) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (90564) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (91074) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (91494) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (91494) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (91494) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (91504) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (91514) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (91514) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (91524) RobotController: valve_state=0x0000[0m
+[0;32mI (91594) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (92104) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (92614) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (93034) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (93034) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (93034) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (93044) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (93054) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (93054) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (93064) RobotController: valve_state=0x0000[0m
+[0;32mI (93134) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (93644) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (94154) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (94574) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (94574) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (94574) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (94584) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (94594) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (94594) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (94604) RobotController: valve_state=0x0000[0m
+[0;32mI (94674) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (95184) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (95694) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (96114) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (96114) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (96114) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (96124) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (96134) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (96134) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (96144) RobotController: valve_state=0x0000[0m
+[0;32mI (96214) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (96724) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (97234) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (97654) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (97654) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (97654) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (97664) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (97674) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (97674) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (97684) RobotController: valve_state=0x0000[0m
+[0;32mI (97754) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (98264) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (98774) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (99194) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (99194) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (99194) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (99204) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (99214) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (99214) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (99224) RobotController: valve_state=0x0000[0m
+[0;32mI (99294) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (99804) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (100314) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (100734) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (100734) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (100734) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (100744) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (100754) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (100754) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (100764) RobotController: valve_state=0x0000[0m
+[0;32mI (100834) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (101344) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (101854) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (102274) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (102274) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (102274) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (102284) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (102294) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (102294) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (102304) RobotController: valve_state=0x0000[0m
+[0;32mI (102374) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (102884) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (103394) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (103814) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (103814) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (103814) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (103824) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (103834) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (103834) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (103844) RobotController: valve_state=0x0000[0m
+[0;32mI (103914) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (104424) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (104934) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (105354) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (105354) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (105354) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (105364) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (105374) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (105374) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (105384) RobotController: valve_state=0x0000[0m
+[0;32mI (105454) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (105964) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (106474) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (106894) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (106894) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (106894) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (106904) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (106914) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (106914) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (106924) RobotController: valve_state=0x0000[0m
+[0;32mI (106994) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (107504) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (108014) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (108434) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (108434) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (108434) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (108444) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (108454) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (108454) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (108464) RobotController: valve_state=0x0000[0m
+[0;32mI (108534) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (109044) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (109554) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (109974) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (109974) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (109974) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (109984) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (109994) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (109994) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (110004) RobotController: valve_state=0x0000[0m
+[0;32mI (110074) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (110584) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (111094) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (111514) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (111514) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (111514) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (111524) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (111534) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (111534) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (111544) RobotController: valve_state=0x0000[0m
+[0;32mI (111614) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (112124) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (112634) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (113054) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (113054) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (113054) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (113064) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (113074) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (113074) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (113084) RobotController: valve_state=0x0000[0m
+[0;32mI (113154) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (113664) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (114174) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (114594) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (114594) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (114594) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (114604) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (114614) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (114614) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (114624) RobotController: valve_state=0x0000[0m
+[0;32mI (114694) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (115204) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (115714) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (116134) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (116134) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (116134) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (116144) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (116154) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (116154) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (116164) RobotController: valve_state=0x0000[0m
+[0;32mI (116234) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (116744) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (117254) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (117674) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (117674) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (117674) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (117684) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (117694) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (117694) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (117704) RobotController: valve_state=0x0000[0m
+[0;32mI (117774) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (118284) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (118794) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (119214) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (119214) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (119214) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (119224) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (119234) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (119234) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (119244) RobotController: valve_state=0x0000[0m
+[0;32mI (119314) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (119824) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (120334) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (120754) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (120754) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (120754) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (120764) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (120774) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (120774) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (120784) RobotController: valve_state=0x0000[0m
+[0;32mI (120854) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (121364) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (121874) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (122294) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (122294) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (122294) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (122304) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (122314) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (122314) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (122324) RobotController: valve_state=0x0000[0m
+[0;32mI (122394) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (122904) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (123414) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (123834) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (123834) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (123834) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (123844) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (123854) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (123854) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (123864) RobotController: valve_state=0x0000[0m
+[0;32mI (123934) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (124444) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (124954) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (125374) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (125374) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (125374) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (125384) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (125394) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (125394) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (125404) RobotController: valve_state=0x0000[0m
+[0;32mI (125474) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (125984) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (126494) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (126914) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (126914) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (126914) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (126924) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (126934) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (126934) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (126944) RobotController: valve_state=0x0000[0m
+[0;32mI (127014) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (127524) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (128034) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (128454) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (128454) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (128454) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (128464) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (128474) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (128474) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (128484) RobotController: valve_state=0x0000[0m
+[0;32mI (128554) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (129064) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (129574) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (129994) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (129994) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (129994) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (130004) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (130014) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (130014) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (130024) RobotController: valve_state=0x0000[0m
+[0;32mI (130094) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (130604) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (131114) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (131534) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (131534) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (131534) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (131544) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (131554) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (131554) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (131564) RobotController: valve_state=0x0000[0m
+[0;32mI (131634) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (132144) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (132654) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (133074) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (133074) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (133074) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (133084) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (133094) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (133094) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (133104) RobotController: valve_state=0x0000[0m
+[0;32mI (133174) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (133684) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (134194) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (134614) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (134614) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (134614) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (134624) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (134634) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (134634) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (134644) RobotController: valve_state=0x0000[0m
+[0;32mI (134714) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (135224) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (135734) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (136154) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (136154) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (136154) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (136164) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (136174) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (136174) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (136184) RobotController: valve_state=0x0000[0m
+[0;32mI (136254) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (136764) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (137274) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (137694) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (137694) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (137694) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (137704) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (137714) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (137714) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (137724) RobotController: valve_state=0x0000[0m
+[0;32mI (137794) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (138304) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (138814) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (139234) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (139234) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (139234) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (139244) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (139254) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (139254) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (139264) RobotController: valve_state=0x0000[0m
+[0;32mI (139334) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (139844) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (140354) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (140774) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (140774) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (140774) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (140784) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (140794) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (140794) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (140804) RobotController: valve_state=0x0000[0m
+[0;32mI (140874) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (141384) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (141894) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (142314) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (142314) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (142314) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (142324) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (142334) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (142334) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (142344) RobotController: valve_state=0x0000[0m
+[0;32mI (142414) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (142924) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (143434) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (143854) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (143854) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (143854) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (143864) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (143874) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (143874) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (143884) RobotController: valve_state=0x0000[0m
+[0;32mI (143954) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (144464) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (144974) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (145394) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (145394) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (145394) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (145404) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (145414) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (145414) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (145424) RobotController: valve_state=0x0000[0m
+[0;32mI (145494) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (146004) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (146514) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (146934) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (146934) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (146934) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (146944) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (146954) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (146954) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (146964) RobotController: valve_state=0x0000[0m
+[0;32mI (147034) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (147544) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (148054) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (148474) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (148474) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (148474) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (148484) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (148494) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (148494) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (148504) RobotController: valve_state=0x0000[0m
+[0;32mI (148574) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (149084) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (149594) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (150014) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (150014) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (150014) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (150024) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (150034) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (150034) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (150044) RobotController: valve_state=0x0000[0m
+[0;32mI (150114) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (150624) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (151134) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (151554) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (151554) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (151554) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (151564) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (151574) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (151574) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (151584) RobotController: valve_state=0x0000[0m
+[0;32mI (151654) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (152164) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (152674) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (153094) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (153094) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (153094) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (153104) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (153114) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (153114) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (153124) RobotController: valve_state=0x0000[0m
+[0;32mI (153194) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (153704) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (154214) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (154634) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (154634) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (154634) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (154644) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (154654) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (154654) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (154664) RobotController: valve_state=0x0000[0m
+[0;32mI (154734) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (155244) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (155754) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (156174) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (156174) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (156174) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (156184) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (156194) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (156194) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (156204) RobotController: valve_state=0x0000[0m
+[0;32mI (156274) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (156784) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (157294) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (157714) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (157714) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (157714) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (157724) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (157734) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (157734) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (157744) RobotController: valve_state=0x0000[0m
+[0;32mI (157814) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (158324) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (158834) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (159254) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (159254) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (159254) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (159264) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (159274) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (159274) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (159284) RobotController: valve_state=0x0000[0m
+[0;32mI (159354) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (159864) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (160374) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (160794) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (160794) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (160794) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (160804) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (160814) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (160814) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (160824) RobotController: valve_state=0x0000[0m
+[0;32mI (160894) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (161404) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (161914) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (162334) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (162334) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (162334) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (162344) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (162354) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (162354) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (162364) RobotController: valve_state=0x0000[0m
+[0;32mI (162434) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (162944) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (163454) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (163874) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (163874) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (163874) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (163884) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (163894) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (163894) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (163904) RobotController: valve_state=0x0000[0m
+[0;32mI (163974) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (164484) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (164994) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (165414) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (165414) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (165414) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (165424) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (165434) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (165434) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (165444) RobotController: valve_state=0x0000[0m
+[0;32mI (165514) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (166024) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (166534) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (166954) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (166954) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (166954) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (166964) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (166974) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (166974) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (166984) RobotController: valve_state=0x0000[0m
+[0;32mI (167054) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (167564) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (168074) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (168494) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (168494) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (168494) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (168504) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (168514) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (168514) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (168524) RobotController: valve_state=0x0000[0m
+[0;32mI (168594) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (169104) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (169614) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (170034) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (170034) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (170034) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (170044) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (170054) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (170054) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (170064) RobotController: valve_state=0x0000[0m
+[0;32mI (170134) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (170644) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (171154) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (171574) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (171574) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (171574) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (171584) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (171594) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (171594) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (171604) RobotController: valve_state=0x0000[0m
+[0;32mI (171674) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (172184) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (172694) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (173114) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (173114) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (173114) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (173124) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (173134) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (173134) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (173144) RobotController: valve_state=0x0000[0m
+[0;32mI (173214) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (173724) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (174234) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (174654) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (174654) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (174654) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (174664) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (174674) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (174674) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (174684) RobotController: valve_state=0x0000[0m
+[0;32mI (174754) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (175264) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (175774) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (176194) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (176194) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (176194) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (176204) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (176214) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (176214) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (176224) RobotController: valve_state=0x0000[0m
+[0;32mI (176294) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (176804) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (177314) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (177734) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (177734) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (177734) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (177744) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (177754) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (177754) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (177764) RobotController: valve_state=0x0000[0m
+[0;32mI (177834) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (178344) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (178854) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (179274) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (179274) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (179274) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (179284) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (179294) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (179294) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (179304) RobotController: valve_state=0x0000[0m
+[0;32mI (179374) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (179884) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (180394) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (180814) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (180814) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (180814) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (180824) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (180834) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (180834) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (180844) RobotController: valve_state=0x0000[0m
+[0;32mI (180914) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (181424) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (181934) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (182354) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (182354) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (182354) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (182364) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (182374) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (182374) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (182384) RobotController: valve_state=0x0000[0m
+[0;32mI (182454) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (182964) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (183474) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (183894) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (183894) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (183894) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (183904) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (183914) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (183914) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (183924) RobotController: valve_state=0x0000[0m
+[0;32mI (183994) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (184504) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (185014) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (185434) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (185434) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (185434) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (185444) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (185454) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (185454) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (185464) RobotController: valve_state=0x0000[0m
+[0;32mI (185534) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (186044) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (186554) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (186974) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (186974) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (186974) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (186984) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (186994) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (186994) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (187004) RobotController: valve_state=0x0000[0m
+[0;32mI (187074) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (187584) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (188094) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (188514) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (188514) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (188514) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (188524) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (188534) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (188534) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (188544) RobotController: valve_state=0x0000[0m
+[0;32mI (188614) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (189124) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (189634) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (190054) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (190054) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (190054) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (190064) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (190074) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (190074) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (190084) RobotController: valve_state=0x0000[0m
+[0;32mI (190154) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (190664) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (191174) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (191594) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (191594) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (191594) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (191604) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (191614) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (191614) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (191624) RobotController: valve_state=0x0000[0m
+[0;32mI (191694) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (192204) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (192714) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (193134) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (193134) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (193134) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (193144) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (193154) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (193154) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (193164) RobotController: valve_state=0x0000[0m
+[0;32mI (193234) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (193744) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (194254) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (194674) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (194674) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (194674) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (194684) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (194694) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (194694) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (194704) RobotController: valve_state=0x0000[0m
+[0;32mI (194774) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (195284) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (195794) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (196214) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (196214) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (196214) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (196224) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (196234) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (196234) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (196244) RobotController: valve_state=0x0000[0m
+[0;32mI (196314) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (196824) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (197334) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (197754) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (197754) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (197754) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (197764) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (197774) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (197774) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (197784) RobotController: valve_state=0x0000[0m
+[0;32mI (197854) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (198364) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (198874) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (199294) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (199294) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (199294) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (199304) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (199314) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (199314) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (199324) RobotController: valve_state=0x0000[0m
+[0;32mI (199394) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (199904) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (200414) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (200834) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (200834) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (200834) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (200844) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (200854) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (200854) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (200864) RobotController: valve_state=0x0000[0m
+[0;32mI (200934) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (201444) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (201954) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (202374) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (202374) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (202374) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (202384) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (202394) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (202394) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (202404) RobotController: valve_state=0x0000[0m
+[0;32mI (202474) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (202984) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (203494) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (203914) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (203914) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (203914) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (203924) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (203934) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (203934) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (203944) RobotController: valve_state=0x0000[0m
+[0;32mI (204014) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (204524) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (205034) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (205454) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (205454) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (205454) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (205464) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (205474) RobotController: joint[4] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (205474) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (205484) RobotController: valve_state=0x0000[0m
+[0;32mI (205554) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (206064) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (206574) InputController: Needle slider: mode=disabled raw=0 velocity=0.00 steps/s joint=5[0m
+[0;32mI (206994) RobotController: joint[0] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (206994) RobotController: joint[1] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (206994) RobotController: joint[2] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (207004) RobotController: joint[3] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (207014) RobotController: joint[4] current_steps=0 target_steps=0 target_vel

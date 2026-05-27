@@ -158,11 +158,16 @@ void InputController::webserverAttachRobotController(RobotController& robotContr
     ESP_LOGI(TAG, "RobotController attached to webserver.");
 }
 
-void InputController::update(RobotController& robotController, bool incisionMode) {
-    // No SPI switches/buttons for now
+void InputController::update(
+    RobotController& robotController,
+    bool incisionMode,
+    bool hasNeedleTarget,
+    int needleTargetSteps
+) {
+    // Handle input based on current mode
     handleSwitches(robotController);
 
-    // Blue LED disabled for now
+
     if (_currentInputMode != BUTTON_EE_CONTROL_MODE) {
         robotController.disableIK();
     } else {
@@ -197,7 +202,7 @@ void InputController::update(RobotController& robotController, bool incisionMode
     static TickType_t lastDisplayUpdateTick = 0;
     static bool screenForcedBlack = false;
     const TickType_t now = xTaskGetTickCount();
-    if ((now - lastDisplayUpdateTick) >= pdMS_TO_TICKS(1)) {
+    if ((now - lastDisplayUpdateTick) >= pdMS_TO_TICKS(50)) {
         lastDisplayUpdateTick = now;
 
         // At end of potmeter travel, keep display black and skip UI rendering to free time.
@@ -233,9 +238,6 @@ void InputController::update(RobotController& robotController, bool incisionMode
     #if ESP_ATTACHED
     {
         float pressure = _i2cManager.readPressureSensor(1);
-
-        //ESP_LOGI(TAG, "Pressure sensor 1: %.4f bar", pressure);
-
         const bool noPressure = (pressure < 1.0f);
         _spi0Manager.writeRed2(noPressure);
     }
@@ -259,6 +261,17 @@ void InputController::update(RobotController& robotController, bool incisionMode
 
         if (incisionMode) {
             needleVelocity = mapNeedleSliderToVelocity(needleSliderRaw, maxVelocity);
+            if (hasNeedleTarget) {
+                robotController.setNeedleIncisionTargetSteps(needleTargetSteps);
+
+                const RobotState state = robotController.getRobotState();
+                if (needleJointIdx < state.jointSteps.size()) {
+                    const int currentSteps = state.jointSteps[needleJointIdx];
+                    if (needleVelocity > 0.0f && currentSteps >= needleTargetSteps) {
+                        needleVelocity = 0.0f;
+                    }
+                }
+            }
             robotController.setControlStrategy(PneumaticStepper::Controlstrategy::VELOCITY_CONTROL);
             robotController.setTargetVelocity(needleJointIdx, needleVelocity);
         }
@@ -268,11 +281,12 @@ void InputController::update(RobotController& robotController, bool incisionMode
     if ((now - lastNeedleSliderLogTick) >= pdMS_TO_TICKS(500)) {
         lastNeedleSliderLogTick = now;
         ESP_LOGI(TAG,
-                 "Needle slider: mode=%s raw=%u velocity=%.2f steps/s joint=%d",
+                 "Needle slider: mode=%s raw=%u velocity=%.2f steps/s joint=%d%s",
                  incisionMode ? "incision" : "disabled",
                  static_cast<unsigned>(needleSliderRaw),
                  needleVelocity,
-                 numSteppers > 0 ? (numSteppers - 1) : -1);
+                 numSteppers > 0 ? (numSteppers - 1) : -1,
+                 hasNeedleTarget ? " target-limited" : "");
     }
 
     // Ferris warning LED disabled for now

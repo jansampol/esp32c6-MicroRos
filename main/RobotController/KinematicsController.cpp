@@ -232,3 +232,13 @@ KinematicsController::radToSteps(const std::vector<float> &jointAngles) const
     }
     return steps;
 }
+
+int KinematicsController::needleDepthMmToSteps(float depthMm) const
+{
+    return static_cast<int>(std::lround(depthMm / NEEDLE_MM_PER_STEP));
+}
+
+float KinematicsController::needleStepsToDepthMm(int steps) const
+{
+    return static_cast<float>(steps) * NEEDLE_MM_PER_STEP;
+}

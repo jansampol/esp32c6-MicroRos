@@ -1,4 +1,3 @@
-#include <cmath>
 #include <cstdint>
 #include <cstdio>
 #include <cstdlib>
@@ -158,6 +157,14 @@ extern "C" void app_main(void)
 
     size_t path_waypoints = 0;
     size_t path_dof = 0;
+    bool path_has_insertion_depth = false;
+    float path_insertion_depth_mm = 0.0f;
+    bool needle_target_available = false;
+    int needle_target_steps = 0;
+#if ACTIVE_SPI_RUNTIME_MODE != SPI_RUNTIME_MODE_SPI0_ONLY
+    (void)needle_target_available;
+    (void)needle_target_steps;
+#endif
     size_t current_wp = 0;
     bool executing_path = false;
     bool waypoint_sent = false;
@@ -212,13 +219,31 @@ extern "C" void app_main(void)
         }
 
         if (micro_ros.hasNewPath()) {
-            micro_ros.consumePath(path, path_waypoints, path_dof);
+            micro_ros.consumePath(
+                path,
+                path_waypoints,
+                path_dof,
+                path_has_insertion_depth,
+                path_insertion_depth_mm
+            );
             current_wp = 0;
             executing_path = (path_waypoints > 0) && !incision_mode;
             waypoint_sent = false;
+            if (path_has_insertion_depth) {
+                needle_target_steps = robot_controller.needleDepthMmToSteps(path_insertion_depth_mm);
+                needle_target_available = true;
+                ESP_LOGI(TAG,
+                         "Stored needle incision target: %.3f mm -> %d steps",
+                         path_insertion_depth_mm,
+                         needle_target_steps);
+            } else {
+                needle_target_available = false;
+                needle_target_steps = 0;
+            }
             ESP_LOGI(TAG,
-                     "Received path with %d waypoints%s",
+                     "Received path with %d waypoints%s%s",
                      (int)path_waypoints,
+                     path_has_insertion_depth ? " and insertion depth" : "",
                      incision_mode ? " (ignored while incision mode is active)" : "");
         }
 
@@ -296,7 +321,12 @@ extern "C" void app_main(void)
         robot_controller.service();
 
         #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI0_ONLY
-        input_controller.update(robot_controller, incision_mode);
+        input_controller.update(
+            robot_controller,
+            incision_mode,
+            needle_target_available,
+            needle_target_steps
+        );
         #endif
 
         vTaskDelay(pdMS_TO_TICKS(10));

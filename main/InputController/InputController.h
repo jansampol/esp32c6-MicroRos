@@ -42,7 +42,12 @@ public:
     void setScreenRES(bool on);
     void setScreenBLK(bool on);
 
-    void update(RobotController& robotController, bool incisionMode = false);
+    void update(
+        RobotController& robotController,
+        bool incisionMode = false,
+        bool hasNeedleTarget = false,
+        int needleTargetSteps = 0
+    );
 
     std::vector<float> readFerrisWheelAngles();
     std::vector<float> readFerrisWheelValues();

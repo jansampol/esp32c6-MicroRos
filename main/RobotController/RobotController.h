@@ -84,6 +84,7 @@ public:
     void setJointTargetSteps(const std::vector<int> &steps);
     void setJointTargetStep(size_t idx, int step);
     void setJointTargetRad(const std::vector<float> &angles);
+    void setNeedleIncisionTargetSteps(int step);
 
     void setTargetPosition(const std::vector<float> &pos);
     void setTargetPosition(size_t idx, float pos);
@@ -118,6 +119,8 @@ public:
 
     std::vector<float> stepsToRad(const std::vector<int> &steps) const;
     std::vector<int> radToSteps(const std::vector<float> &angles) const;
+    int needleDepthMmToSteps(float depthMm) const;
+    float needleStepsToDepthMm(int steps) const;
 
     std::vector<int> getSensorCorrectedJointSteps() const;
 

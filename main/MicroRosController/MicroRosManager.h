@@ -13,7 +13,8 @@ class MicroRosManager {
 public:
     static constexpr size_t MAX_JOINTS = 5;
     static constexpr size_t MAX_WAYPOINTS = 30;
-    static constexpr size_t MAX_PATH_MSG_VALUES = 2 + MAX_WAYPOINTS * MAX_JOINTS;
+    static constexpr size_t MAX_PATH_EXTRA_VALUES = 1;
+    static constexpr size_t MAX_PATH_MSG_VALUES = 2 + MAX_WAYPOINTS * MAX_JOINTS + MAX_PATH_EXTRA_VALUES;
 
     static constexpr size_t MAX_ESP_CMD_LEN = 64;
 
@@ -25,7 +26,13 @@ public:
     static bool getWifiIp(char *out, size_t out_size);
 
     bool hasNewPath() const;
-    void consumePath(double out[][MAX_JOINTS], size_t &waypoints, size_t &dof);
+    void consumePath(
+        double out[][MAX_JOINTS],
+        size_t &waypoints,
+        size_t &dof,
+        bool &has_insertion_depth,
+        float &insertion_depth_mm
+    );
 
     bool hasNewEspCmd() const;
     void consumeEspCmd(char *out, size_t out_size);
@@ -68,6 +75,8 @@ private:
     double latest_path_[MAX_WAYPOINTS][MAX_JOINTS];
     size_t latest_path_waypoints_ = 0;
     size_t latest_path_dof_ = 0;
+    bool latest_path_has_insertion_depth_ = false;
+    float latest_insertion_depth_mm_ = 0.0f;
 
     // latest raw ESP command
     char latest_esp_cmd_[MAX_ESP_CMD_LEN];

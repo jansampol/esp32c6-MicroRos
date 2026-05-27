@@ -11,9 +11,9 @@
 
 // Temporary runtime selector while PCB supports only one SPI path at a time.
 // Change only this line to switch quickly between modes.
-#define SPI_RUNTIME_MODE_SPI0_ONLY 1
-#define SPI_RUNTIME_MODE_SPI1_ONLY 0
-#define ACTIVE_SPI_RUNTIME_MODE SPI_RUNTIME_MODE_SPI1_ONLY
+#define SPI_RUNTIME_MODE_SPI0_ONLY 0
+#define SPI_RUNTIME_MODE_SPI1_ONLY 1
+#define ACTIVE_SPI_RUNTIME_MODE SPI_RUNTIME_MODE_SPI0_ONLY
 
 // Wifi setup
 #define USING_WEB_SERVER true

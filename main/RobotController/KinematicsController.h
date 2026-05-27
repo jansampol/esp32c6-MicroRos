@@ -87,6 +87,10 @@ public:
     std::vector<float> stepsToRad(const std::vector<int> &steps) const;
     std::vector<int> radToSteps(const std::vector<float> &jointAngles) const;
 
+    // Needle insertion conversion helpers
+    int needleDepthMmToSteps(float depthMm) const;
+    float needleStepsToDepthMm(int steps) const;
+
 protected: 
     // Helper functions
 
@@ -111,6 +115,7 @@ protected:
 
     // Drive data
     std::vector<int> stepsPerRev_; // Revolutions per revolution per joint
-};
 
+    static constexpr float NEEDLE_MM_PER_STEP = 3.0f;
+};
 
