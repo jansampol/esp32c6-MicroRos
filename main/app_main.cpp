@@ -270,6 +270,9 @@ extern "C" void app_main(void)
                 if (current_wp >= path_waypoints) {
                     executing_path = false;
                     ESP_LOGI(TAG, "Path execution finished");
+                    if (!micro_ros.publishRobotState("movement_finished")) {
+                        ESP_LOGW(TAG, "Failed to publish movement_finished");
+                    }
                 }
             }
         }
