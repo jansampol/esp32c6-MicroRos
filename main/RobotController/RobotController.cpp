@@ -69,7 +69,7 @@ void RobotController::resetPositions() {
     _robotState.targetPosition.assign(6, 0.0f);
 
     _robotState.rawFerrisValues.clear();
-    _robotState.sensorCorrectedJointSteps.assign(n, 0);
+    _robotState.ferrisWheelJointSteps.assign(n, 0);
 
     resetSteppers();
 
@@ -188,7 +188,7 @@ void RobotController::setupPurpleMamri() {
     _robotState.currentPosition.assign(6, 0.0f);
     _robotState.targetPosition.assign(6, 0.0f);
     _robotState.rawFerrisValues.clear();
-    _robotState.sensorCorrectedJointSteps.assign(n, 0);
+    _robotState.ferrisWheelJointSteps.assign(n, 0);
 
     _robotConfigChanged = true;
 }
@@ -224,7 +224,7 @@ void RobotController::noRobotSetup() {
     _robotState.currentPosition.assign(6, 0.0f);
     _robotState.targetPosition.assign(6, 0.0f);
     _robotState.rawFerrisValues.clear();
-    _robotState.sensorCorrectedJointSteps.clear();
+    _robotState.ferrisWheelJointSteps.clear();
 
     _robotConfigChanged = true;
 }
@@ -654,8 +654,8 @@ float RobotController::needleStepsToDepthMm(int steps) const {
 // State getters
 // -------------------------------------------------------------------------------------------------
 
-std::vector<int> RobotController::getSensorCorrectedJointSteps() const {
-    return _robotState.sensorCorrectedJointSteps;
+std::vector<int> RobotController::getFerrisWheelJointSteps() const {
+    return _robotState.ferrisWheelJointSteps;
 }
 
 RobotState RobotController::getRobotState() const {
@@ -671,8 +671,90 @@ RobotConfig RobotController::getRobotConfig() const {
 // -------------------------------------------------------------------------------------------------
 
 void RobotController::setFerrisWheelFeedback(const std::vector<float>& sensorValues) {
-    (void)sensorValues;
+    _robotState.rawFerrisValues = sensorValues;
+    
+    if (!_kinematics || sensorValues.size() < _robotConfig.degreesOfFreedom) {
+        return;
+    }
+
+    const float degreesToRadians = PI_FLOAT / 180.0f;
+    std::vector<float> jointAnglesRad;
+    jointAnglesRad.reserve(_robotConfig.degreesOfFreedom);
+
+    for (size_t i = 0; i < static_cast<size_t>(_robotConfig.degreesOfFreedom); ++i) {
+        jointAnglesRad.push_back(sensorValues[i] * degreesToRadians);
+    }
+
+    std::vector<int> steps = radToSteps(jointAnglesRad);
+    _robotState.ferrisWheelJointSteps = steps;
+
+    // Keep the Ferris wheel joint-step vector aligned with the joint state size if needed.
+    if (_robotState.ferrisWheelJointSteps.size() < _robotState.jointSteps.size()) {
+        _robotState.ferrisWheelJointSteps.resize(_robotState.jointSteps.size(), 0);
+    }
+
+    // Print the output in steps for debugging
+    // for (size_t i = 0; i < steps.size(); ++i) {
+    //     ESP_LOGI(TAG, "Ferris wheel joint[%u]: sensor=%.2f deg -> %.6f rad -> steps=%d",
+    //              (unsigned)i, sensorValues[i], jointAnglesRad[i], steps[i]);
+    // }
+
+    _robotState.needsPositionalFeedback = true;
 }
+
+void RobotController::setNewPath(const std::vector<std::vector<float>> &path, size_t path_waypoints, size_t path_dof) {
+    _path = path;
+    _pathWaypoints = path_waypoints;
+    _pathDof = path_dof;
+    _currentWaypoint = 0;
+    _pathExecuting = true;
+    _waypointSent = false;
+
+    ESP_LOGI(TAG, "New path accepted: %zu waypoints, %zu DOF", path_waypoints, path_dof);
+}
+
+void RobotController::processMotionControl(bool executing_path, size_t path_waypoints, size_t path_dof) {
+    if (!executing_path || path_waypoints == 0 || path_dof == 0) {
+        return;
+    }
+
+    // Send waypoint if not already sent
+    if (!_waypointSent && _currentWaypoint < _pathWaypoints && !_path.empty()) {
+        if (_currentWaypoint < _path.size()) {
+            std::vector<float> target(_path[_currentWaypoint].begin(), _path[_currentWaypoint].end());
+            setJointTargetRad(target);
+            _waypointSent = true;
+
+            ESP_LOGI(TAG, "Sent waypoint %zu / %zu",
+                     _currentWaypoint + 1, _pathWaypoints);
+        }
+    }
+
+    // Check if waypoint reached and advance
+    if (_waypointSent && isAtStepTarget()) {
+        ESP_LOGI(TAG, "Reached waypoint %zu / %zu",
+                 _currentWaypoint + 1, _pathWaypoints);
+        _currentWaypoint++;
+        _waypointSent = false;
+
+        if (_currentWaypoint >= _pathWaypoints) {
+            ESP_LOGI(TAG, "Path execution finished");
+        }
+    }
+
+    // To start implementing the Close Loop controller, we will start printing the 
+    // different errors (Ferris wheel feedback vs expected current position) here for debugging and analysis.
+    for (size_t i = 0; i < std::min(_robotState.ferrisWheelJointSteps.size(), _robotState.jointSteps.size()); ++i) {
+        int error = _robotState.ferrisWheelJointSteps[i] - _robotState.jointSteps[i];
+        ESP_LOGI(TAG, "Joint[%u] error: ferris=%d current=%d diff=%+d",
+                 (unsigned)i, 
+                 _robotState.ferrisWheelJointSteps[i],
+                 _robotState.jointSteps[i],
+                 error);
+    }
+}
+
+
 
 bool RobotController::isAtStepTarget() const
 {

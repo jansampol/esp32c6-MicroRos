@@ -122,9 +122,12 @@ public:
     int needleDepthMmToSteps(float depthMm) const;
     float needleStepsToDepthMm(int steps) const;
 
-    std::vector<int> getSensorCorrectedJointSteps() const;
+    std::vector<int> getFerrisWheelJointSteps() const;
 
     void setFerrisWheelFeedback(const std::vector<float>& sensorValues);
+    void setNewPath(const std::vector<std::vector<float>> &path, size_t path_waypoints, size_t path_dof);
+    void processMotionControl(bool executing_path, size_t path_waypoints, size_t path_dof);
+    bool isPathExecuting() const { return _pathExecuting && _currentWaypoint < _pathWaypoints; }
 
     void ferrisWheelTareCurrentPosition() {}
     void ferrisWheelResetTare() {}
@@ -155,6 +158,13 @@ private:
     RobotState _robotState;
 
     std::vector<PneumaticStepper> _steppers;
+
+    std::vector<std::vector<float>> _path;
+    size_t _currentWaypoint = 0;
+    size_t _pathWaypoints = 0;
+    size_t _pathDof = 0;
+    bool _pathExecuting = false;
+    bool _waypointSent = false;
 
     // =============================
     // ORIGINAL

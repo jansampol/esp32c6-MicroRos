@@ -116,6 +116,6 @@ protected:
     // Drive data
     std::vector<int> stepsPerRev_; // Revolutions per revolution per joint
 
-    static constexpr float NEEDLE_MM_PER_STEP = 3.0f;
+    static constexpr float NEEDLE_MM_PER_STEP = 0.2f;
 };
 

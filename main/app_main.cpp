@@ -226,6 +226,12 @@ extern "C" void app_main(void)
                 path_has_insertion_depth,
                 path_insertion_depth_mm
             );
+            // Convert C-style array to std::vector<std::vector<float>>
+            std::vector<std::vector<float>> pathVec(path_waypoints);
+            for (size_t i = 0; i < path_waypoints; ++i) {
+                pathVec[i].assign(path[i], path[i] + path_dof);
+            }
+            robot_controller.setNewPath(pathVec, path_waypoints, path_dof);
             current_wp = 0;
             executing_path = (path_waypoints > 0) && !incision_mode;
             waypoint_sent = false;
@@ -247,35 +253,52 @@ extern "C" void app_main(void)
                      incision_mode ? " (ignored while incision mode is active)" : "");
         }
 
-        if (executing_path && current_wp < path_waypoints) {
-            if (!waypoint_sent) {
-                std::vector<float> target;
-                target.reserve(path_dof);
-                for (size_t i = 0; i < path_dof; ++i) {
-                    target.push_back(static_cast<float>(path[current_wp][i]));
+        // if (executing_path && current_wp < path_waypoints) {
+        //     if (!waypoint_sent) {
+        //         std::vector<float> target;
+        //         target.reserve(path_dof);
+        //         for (size_t i = 0; i < path_dof; ++i) {
+        //             target.push_back(static_cast<float>(path[current_wp][i]));
+        //         }
+        //         robot_controller.setJointTargetRad(target);
+        //         waypoint_sent = true;
+
+        //         ESP_LOGI(TAG, "Sent waypoint %d / %d",
+        //                  (int)(current_wp + 1), (int)path_waypoints);
+        //     }
+
+        //     if (robot_controller.isAtStepTarget()) {
+        //         ESP_LOGI(TAG, "Reached waypoint %d / %d",
+        //                  (int)(current_wp + 1), (int)path_waypoints);
+        //         current_wp++;
+        //         waypoint_sent = false;
+
+        //         if (current_wp >= path_waypoints) {
+        //             executing_path = false;
+        //             ESP_LOGI(TAG, "Path execution finished");
+        //             if (!micro_ros.publishRobotState("movement_finished")) {
+        //                 ESP_LOGW(TAG, "Failed to publish movement_finished");
+        //             }
+        //         }
+        //     }
+        // }
+
+        // Read ferris wheel angles for logging and potential use in control (not currently used in control).
+        #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI1_ONLY
+
+            std::vector<float> ferris_angles = i2cManager.readAllFerrisWheelAngles();
+            std::vector<float> ferris_raw = i2cManager.readAllFerrisWheelRawValues();
+            robot_controller.setFerrisWheelFeedback(ferris_angles);
+            robot_controller.processMotionControl(executing_path, path_waypoints, path_dof);
+            
+            // Check if path execution finished
+            if (executing_path && !robot_controller.isPathExecuting()) {
+                executing_path = false;
+                if (!micro_ros.publishRobotState("movement_finished")) {
+                    ESP_LOGW(TAG, "Failed to publish movement_finished");
                 }
-                robot_controller.setJointTargetRad(target);
-                waypoint_sent = true;
-
-                ESP_LOGI(TAG, "Sent waypoint %d / %d",
-                         (int)(current_wp + 1), (int)path_waypoints);
             }
-
-            if (robot_controller.isAtStepTarget()) {
-                ESP_LOGI(TAG, "Reached waypoint %d / %d",
-                         (int)(current_wp + 1), (int)path_waypoints);
-                current_wp++;
-                waypoint_sent = false;
-
-                if (current_wp >= path_waypoints) {
-                    executing_path = false;
-                    ESP_LOGI(TAG, "Path execution finished");
-                    if (!micro_ros.publishRobotState("movement_finished")) {
-                        ESP_LOGW(TAG, "Failed to publish movement_finished");
-                    }
-                }
-            }
-        }
+        #endif  
 
         //#if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI1_ONLY
         //float pressure1 = i2cManager.readPressureSensor(1);
@@ -297,28 +320,6 @@ extern "C" void app_main(void)
         //              valve_state);
         //}
         //#endif
-
-        // Read ferris wheel angles for logging and potential use in control (not currently used in control).
-        // #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI1_ONLY
-        // static TickType_t lastFerrisLogTick = 0;
-        // const TickType_t now = xTaskGetTickCount();
-        // if ((now - lastFerrisLogTick) >= pdMS_TO_TICKS(500)) {
-        //     lastFerrisLogTick = now;
-
-        //     std::vector<float> ferris_angles = i2cManager.readAllFerrisWheelAngles();
-        //     std::vector<float> ferris_raw = i2cManager.readAllFerrisWheelRawValues();
-        //     robot_controller.setFerrisWheelFeedback(ferris_angles);
-
-        //     for (size_t i = 0; i < ferris_angles.size(); ++i) {
-        //         const float raw = (i < ferris_raw.size()) ? ferris_raw[i] : NAN;
-        //         ESP_LOGI(TAG,
-        //                  "Ferris wheel %d: angle=%.2f deg raw=%.2f",
-        //                  (int)i,
-        //                  ferris_angles[i],
-        //                  raw);
-        //     }
-        // }
-        // #endif  
 
         robot_controller.update();
         robot_controller.service();

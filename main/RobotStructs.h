@@ -78,7 +78,7 @@ struct RobotState {
     std::vector<float> targetPosition;
 
     std::vector<float> rawFerrisValues;
-    std::vector<int> sensorCorrectedJointSteps;
+    std::vector<int> ferrisWheelJointSteps;
 
     bool needsPositionalFeedback = false;
     bool needsForceFeedback = false;
