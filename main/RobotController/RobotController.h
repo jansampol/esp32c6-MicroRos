@@ -129,7 +129,7 @@ public:
     void processMotionControl(bool executing_path, size_t path_waypoints, size_t path_dof);
     bool isPathExecuting() const { return _pathExecuting && _currentWaypoint < _pathWaypoints; }
 
-    void ferrisWheelTareCurrentPosition() {}
+    void ferrisWheelTareCurrentPosition();
     void ferrisWheelResetTare() {}
 
     void setFrequency(float frequency);
@@ -165,6 +165,8 @@ private:
     size_t _pathDof = 0;
     bool _pathExecuting = false;
     bool _waypointSent = false;
+
+    std::vector<float> _ferrisWheelZeroOffset;
 
     // =============================
     // ORIGINAL

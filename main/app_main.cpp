@@ -77,6 +77,12 @@ namespace
             return;
         }
 
+        if (strcmp(cmd, "ferris_tare") == 0) {
+            robot_controller.ferrisWheelTareCurrentPosition();
+            ESP_LOGI(TAG, "Applied command: ferris:tare");
+            return;
+        }
+
         // Expected format:
         //   <jointIdx>:zero
         //   <jointIdx>:home
