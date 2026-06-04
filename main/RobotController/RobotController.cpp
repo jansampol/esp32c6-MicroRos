@@ -9,6 +9,21 @@
 
 static const char *TAG = "RobotController";
 
+namespace {
+constexpr float kFerrisToJointScale[] = {
+    5.0f / 8.0f,
+    5.0f / 9.5f,
+    5.0f / 4.0f,
+    5.0f / 4.0f,
+   -5.0f / 4.5f,
+};
+
+float ferrisToJointScale(size_t jointIdx) {
+    constexpr size_t scaleCount = sizeof(kFerrisToJointScale) / sizeof(kFerrisToJointScale[0]);
+    return (jointIdx < scaleCount) ? kFerrisToJointScale[jointIdx] : 1.0f;
+}
+}
+
 RobotController::RobotController() :
     _kinematics()
 {
@@ -679,18 +694,22 @@ void RobotController::setFerrisWheelFeedback(const std::vector<float>& sensorVal
 
     const float degreesToRadians = PI_FLOAT / 180.0f;
     std::vector<float> taredSensorValuesDeg;
+    std::vector<float> jointSensorValuesDeg;
     std::vector<float> jointAnglesRad;
     taredSensorValuesDeg.reserve(_robotConfig.degreesOfFreedom);
+    jointSensorValuesDeg.reserve(_robotConfig.degreesOfFreedom);
     jointAnglesRad.reserve(_robotConfig.degreesOfFreedom);
 
-    // Apply zero offset and convert to radians
+    // Apply zero offset, convert Ferris angle to joint angle, then convert to radians.
     for (size_t i = 0; i < static_cast<size_t>(_robotConfig.degreesOfFreedom); ++i) {
         float offsetSensorValue = sensorValues[i];
         if (i < _ferrisWheelZeroOffset.size()) {
             offsetSensorValue -= _ferrisWheelZeroOffset[i];
         }
+        const float jointSensorValue = offsetSensorValue * ferrisToJointScale(i);
         taredSensorValuesDeg.push_back(offsetSensorValue);
-        jointAnglesRad.push_back(offsetSensorValue * degreesToRadians);
+        jointSensorValuesDeg.push_back(jointSensorValue);
+        jointAnglesRad.push_back(jointSensorValue * degreesToRadians);
     }
 
     std::vector<int> steps = radToSteps(jointAnglesRad);
@@ -706,9 +725,12 @@ void RobotController::setFerrisWheelFeedback(const std::vector<float>& sensorVal
     log_counter++;
     // Print the output in steps for debugging
     if (log_counter >= 40) {
-        for (size_t i = 0; i < taredSensorValuesDeg.size(); ++i) {
-            ESP_LOGI(TAG, "Ferris wheel joint[%u]: tared_sensor=%.2f deg",
-                     (unsigned)i, taredSensorValuesDeg[i]);
+        for (size_t i = 0; i < jointSensorValuesDeg.size(); ++i) {
+            ESP_LOGI(TAG, "Ferris wheel joint[%u]: tared_sensor=%.2f deg scale=%.3f joint_sensor=%.2f deg",
+                     (unsigned)i,
+                     taredSensorValuesDeg[i],
+                     ferrisToJointScale(i),
+                     jointSensorValuesDeg[i]);
         }
         log_counter = 0;
     }
