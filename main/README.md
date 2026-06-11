@@ -166,7 +166,7 @@ cd ~/esp/esp-idf-v5.5
 . ./export.sh
 cd ~/mamri_build/Mamri_v6_PlatformIO
 idf.py build
-idf.py -p /dev/cu.usbserial-140 flash monitor
+idf.py -p /dev/cu.usbserial-1140 flash monitor
 
 
 idf.py -p /dev/cu.usbserial-1140 flash monitor
@@ -190,4 +190,97 @@ idf.py -p /dev/cu.usbserial-140 monitor | tee logs/raw.txt
 grep 'DATA_CSV' logs/raw.txt | sed -E 's/^.*DATA_CSV: //' > logs/data_joint1.csv
 wc -l logs/data_joint1.csv
 head -n 5 logs/data_joint1.csv
+```
+
+Motion path CSV:
+
+```bash
+cd ~/esp/esp-idf-v5.5
+. ./export.sh
+cd ~/mamri_build/Mamri_v6_PlatformIO
+
+idf.py -p /dev/cu.usbserial-140 flash
+mkdir -p logs
+idf.py -p /dev/cu.usbserial-140 monitor | tee logs/raw.txt
+```
+
+In another terminal, or after exiting monitor with `Ctrl + ]`, extract the motion path data:
+
+```bash
+mkdir -p logs
+printf 'time_ms,sample,event,waypoint,total_waypoints,joint,q_ol,q_ref,remaining_ol,ferris_valid,ferris_raw_deg,ferris_tared_deg,ferris_scale,ferris_joint_deg,q_sensor,sensor_target_error,slip_error,q_cmd,cl_tolerance,needs_correction,correction_attempt\n' > logs/motion_path.csv
+grep 'MOTION_CSV' logs/raw.txt | sed -E 's/^.*MOTION_CSV: //' >> logs/motion_path.csv
+
+wc -l logs/motion_path.csv
+head -n 5 logs/motion_path.csv
+tail -n 5 logs/motion_path.csv
+```
+
+Extract Ferris wheel raw/degree samples:
+
+```bash
+printf 'time_ms,joint,absolute_raw_counts,mechanical_zero_raw_counts,calibration_valid,angle_deg,calibrated_deg,tared_deg,ferris_scale,joint_deg\n' > logs/ferris_values.csv
+grep 'FERRIS_CSV' logs/raw.txt | sed -E 's/^.*FERRIS_CSV: //' >> logs/ferris_values.csv
+
+wc -l logs/ferris_values.csv
+head -n 5 logs/ferris_values.csv
+tail -n 5 logs/ferris_values.csv
+```
+
+Optional: split one CSV per joint:
+
+```bash
+for j in 0 1 2 3 4; do
+  awk -F, -v joint="$j" 'NR==1 || $6==joint' logs/motion_path.csv > "logs/motion_path_joint${j}.csv"
+done
+
+wc -l logs/motion_path_joint*.csv
+```
+
+Useful quick checks:
+
+```bash
+
+# Final measured error at every reached waypoint.
+awk -F, 'NR==1 || $3=="waypoint_reached" {print}' logs/motion_path.csv > logs/motion_waypoints.csv
+
+# Path-finish rows only.
+awk -F, 'NR==1 || $3=="path_finished" {print}' logs/motion_path.csv > logs/motion_finished.csv
+
+# Worst absolute slip and sensor-target error per joint.
+awk -F, '
+NR>1 {
+  joint=$6
+  sensor=$16+0
+  slip=$17+0
+  abs_sensor=(sensor<0?-sensor:sensor)
+  abs_slip=(slip<0?-slip:slip)
+  if (abs_sensor > max_sensor[joint]) max_sensor[joint]=abs_sensor
+  if (abs_slip > max_slip[joint]) max_slip[joint]=abs_slip
+}
+END {
+  for (j=0; j<=4; ++j) {
+    printf "joint[%d] max_abs_sensor_target_error=%d max_abs_slip_error=%d\n", j, max_sensor[j], max_slip[j]
+  }
+}' logs/motion_path.csv
+```
+
+
+```bash
+cd ~/esp/esp-idf-v5.5
+. ./export.sh
+cd ~/mamri_build/Mamri_v6_PlatformIO
+
+idf.py -p /dev/cu.usbserial-140 flash
+mkdir -p logs
+idf.py -p /dev/cu.usbserial-140 monitor | tee logs/raw.txt
+```
+
+```bash
+printf 'time_ms,sample,event,waypoint,total_waypoints,joint,q_ol,q_ref,remaining_ol,ferris_valid,ferris_raw_deg,ferris_tared_deg,ferris_scale,ferris_joint_deg,q_sensor,sensor_target_error,slip_error\n' > logs/motion_path.csv
+grep 'MOTION_CSV' logs/raw.txt | sed -E 's/^.*MOTION_CSV: //' >> logs/motion_path.csv
+
+wc -l logs/motion_path.csv
+head -n 5 logs/motion_path.csv
+tail -n 5 logs/motion_path.csv
 ```

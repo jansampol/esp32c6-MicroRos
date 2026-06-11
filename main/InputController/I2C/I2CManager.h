@@ -39,6 +39,9 @@ public:
     float readFerrisWheelRawValue(uint8_t wheelId);
     std::vector<float> readAllFerrisWheelRawValues();
 
+    float readFerrisWheelAbsoluteRawValue(uint8_t wheelId);
+    std::vector<float> readAllFerrisWheelAbsoluteRawValues();
+
     float readPressureSensor(uint8_t sensorId);
     void  startPressureMeasurement();
 

@@ -293,8 +293,8 @@ extern "C" void app_main(void)
         #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI1_ONLY
 
             std::vector<float> ferris_angles = i2cManager.readAllFerrisWheelAngles();
-            std::vector<float> ferris_raw = i2cManager.readAllFerrisWheelRawValues();
-            robot_controller.setFerrisWheelFeedback(ferris_angles);
+            std::vector<float> ferris_raw = i2cManager.readAllFerrisWheelAbsoluteRawValues();
+            robot_controller.setFerrisWheelFeedback(ferris_angles, ferris_raw);
             robot_controller.processMotionControl(executing_path, path_waypoints, path_dof);
             
             // Check if path execution finished

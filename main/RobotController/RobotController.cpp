@@ -3,6 +3,7 @@
 #include <algorithm>
 
 #include "esp_log.h"
+#include "esp_timer.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "SystemParameters.h"
@@ -11,16 +12,47 @@ static const char *TAG = "RobotController";
 
 namespace {
 constexpr float kFerrisToJointScale[] = {
-    5.0f / 8.0f,
-    5.0f / 9.5f,
-    5.0f / 4.0f,
-    5.0f / 4.0f,
-   -5.0f / 4.5f,
+    5.0f / 8.33f,
+    5.0f / 9.24f,
+    5.0f / 4.23f,
+    5.0f / 4.28f,
+   -5.0f / 4.44f,
 };
+
+// Absolute AS5600 rawAngle() readings at the leveled mechanical (0,0,0,0,0) pose.
+constexpr float kFerrisMechanicalZeroRawCounts[] = {
+    430.0f,
+    593.0f,
+    205.0f,
+    1598.0f,
+    1972.0f,
+};
+
+constexpr float kFerrisRawCountsToDegrees = 360.0f / 4096.0f;
 
 float ferrisToJointScale(size_t jointIdx) {
     constexpr size_t scaleCount = sizeof(kFerrisToJointScale) / sizeof(kFerrisToJointScale[0]);
     return (jointIdx < scaleCount) ? kFerrisToJointScale[jointIdx] : 1.0f;
+}
+
+float ferrisMechanicalZeroRawCounts(size_t jointIdx) {
+    constexpr size_t zeroCount = sizeof(kFerrisMechanicalZeroRawCounts) / sizeof(kFerrisMechanicalZeroRawCounts[0]);
+    return (jointIdx < zeroCount) ? kFerrisMechanicalZeroRawCounts[jointIdx] : 0.0f;
+}
+
+bool ferrisMechanicalZeroRawCountsValid(size_t jointIdx) {
+    const float zero = ferrisMechanicalZeroRawCounts(jointIdx);
+    return zero >= 0.0f && zero <= 4095.0f;
+}
+
+float ferrisWrappedRawDelta(float rawCounts, float zeroRawCounts) {
+    float delta = rawCounts - zeroRawCounts;
+    if (delta > 2048.0f) {
+        delta -= 4096.0f;
+    } else if (delta < -2048.0f) {
+        delta += 4096.0f;
+    }
+    return delta;
 }
 }
 
@@ -84,6 +116,7 @@ void RobotController::resetPositions() {
     _robotState.targetPosition.assign(6, 0.0f);
 
     _robotState.rawFerrisValues.clear();
+    _robotState.ferrisWheelRawValues.clear();
     _robotState.ferrisWheelJointSteps.assign(n, 0);
 
     resetSteppers();
@@ -203,6 +236,7 @@ void RobotController::setupPurpleMamri() {
     _robotState.currentPosition.assign(6, 0.0f);
     _robotState.targetPosition.assign(6, 0.0f);
     _robotState.rawFerrisValues.clear();
+    _robotState.ferrisWheelRawValues.clear();
     _robotState.ferrisWheelJointSteps.assign(n, 0);
 
     _robotConfigChanged = true;
@@ -239,6 +273,7 @@ void RobotController::noRobotSetup() {
     _robotState.currentPosition.assign(6, 0.0f);
     _robotState.targetPosition.assign(6, 0.0f);
     _robotState.rawFerrisValues.clear();
+    _robotState.ferrisWheelRawValues.clear();
     _robotState.ferrisWheelJointSteps.clear();
 
     _robotConfigChanged = true;
@@ -685,30 +720,31 @@ RobotConfig RobotController::getRobotConfig() const {
 // Ferris wheels disabled in current version
 // -------------------------------------------------------------------------------------------------
 
-void RobotController::setFerrisWheelFeedback(const std::vector<float>& sensorValues) {
+void RobotController::setFerrisWheelFeedback(const std::vector<float>& sensorValues, const std::vector<float>& rawValues) {
     _robotState.rawFerrisValues = sensorValues;
+    _robotState.ferrisWheelRawValues = rawValues;
+    ++_ferrisFeedbackLogCounter;
     
     if (!_kinematics || sensorValues.size() < _robotConfig.degreesOfFreedom) {
         return;
     }
 
     const float degreesToRadians = PI_FLOAT / 180.0f;
-    std::vector<float> taredSensorValuesDeg;
-    std::vector<float> jointSensorValuesDeg;
     std::vector<float> jointAnglesRad;
-    taredSensorValuesDeg.reserve(_robotConfig.degreesOfFreedom);
-    jointSensorValuesDeg.reserve(_robotConfig.degreesOfFreedom);
     jointAnglesRad.reserve(_robotConfig.degreesOfFreedom);
 
     // Apply zero offset, convert Ferris angle to joint angle, then convert to radians.
     for (size_t i = 0; i < static_cast<size_t>(_robotConfig.degreesOfFreedom); ++i) {
         float offsetSensorValue = sensorValues[i];
+        if (i < rawValues.size() && ferrisMechanicalZeroRawCountsValid(i)) {
+            offsetSensorValue =
+                ferrisWrappedRawDelta(rawValues[i], ferrisMechanicalZeroRawCounts(i)) *
+                kFerrisRawCountsToDegrees;
+        }
         if (i < _ferrisWheelZeroOffset.size()) {
             offsetSensorValue -= _ferrisWheelZeroOffset[i];
         }
         const float jointSensorValue = offsetSensorValue * ferrisToJointScale(i);
-        taredSensorValuesDeg.push_back(offsetSensorValue);
-        jointSensorValuesDeg.push_back(jointSensorValue);
         jointAnglesRad.push_back(jointSensorValue * degreesToRadians);
     }
 
@@ -720,19 +756,55 @@ void RobotController::setFerrisWheelFeedback(const std::vector<float>& sensorVal
         _robotState.ferrisWheelJointSteps.resize(_robotState.jointSteps.size(), 0);
     }
 
-    // filter every 15 loop cycles to reduce log spam, and only if we have valid data
-    static int log_counter = 0;
-    log_counter++;
-    // Print the output in steps for debugging
-    if (log_counter >= 40) {
-        for (size_t i = 0; i < jointSensorValuesDeg.size(); ++i) {
-            ESP_LOGI(TAG, "Ferris wheel joint[%u]: tared_sensor=%.2f deg scale=%.3f joint_sensor=%.2f deg",
+    if (_ferrisFeedbackLogCounter >= 40) {
+        _ferrisFeedbackLogCounter = 0;
+        const uint64_t timeMs = static_cast<uint64_t>(esp_timer_get_time() / 1000ULL);
+
+        for (size_t i = 0; i < static_cast<size_t>(_robotConfig.degreesOfFreedom); ++i) {
+            const float angleDeg = (i < sensorValues.size()) ? sensorValues[i] : 0.0f;
+            const float rawCounts = (i < rawValues.size()) ? rawValues[i] : 0.0f;
+            const float mechanicalZeroRawCounts = ferrisMechanicalZeroRawCounts(i);
+            const bool calibrationValid = i < rawValues.size() && ferrisMechanicalZeroRawCountsValid(i);
+
+            float calibratedDeg = angleDeg;
+            if (calibrationValid) {
+                calibratedDeg =
+                    ferrisWrappedRawDelta(rawCounts, mechanicalZeroRawCounts) *
+                    kFerrisRawCountsToDegrees;
+            }
+
+            float taredDeg = calibratedDeg;
+            if (i < _ferrisWheelZeroOffset.size()) {
+                taredDeg -= _ferrisWheelZeroOffset[i];
+            }
+
+            const float scale = ferrisToJointScale(i);
+            const float jointDeg = taredDeg * scale;
+
+            ESP_LOGI(TAG,
+                     "FERRIS joint[%u] abs_raw=%.3f zero_raw=%.3f cal_valid=%d angle_deg=%.3f calibrated_deg=%.3f tared_deg=%.3f scale=%.3f joint_deg=%.3f",
                      (unsigned)i,
-                     taredSensorValuesDeg[i],
-                     ferrisToJointScale(i),
-                     jointSensorValuesDeg[i]);
+                     rawCounts,
+                     mechanicalZeroRawCounts,
+                     calibrationValid ? 1 : 0,
+                     angleDeg,
+                     calibratedDeg,
+                     taredDeg,
+                     scale,
+                     jointDeg);
+            ESP_LOGI(TAG,
+                     "FERRIS_CSV: %llu,%u,%.3f,%.3f,%d,%.3f,%.3f,%.3f,%.3f,%.3f",
+                     (unsigned long long)timeMs,
+                     (unsigned)i,
+                     rawCounts,
+                     mechanicalZeroRawCounts,
+                     calibrationValid ? 1 : 0,
+                     angleDeg,
+                     calibratedDeg,
+                     taredDeg,
+                     scale,
+                     jointDeg);
         }
-        log_counter = 0;
     }
 
     _robotState.needsPositionalFeedback = true;
@@ -745,15 +817,24 @@ void RobotController::ferrisWheelTareCurrentPosition() {
         return;
     }
     
-    // Capture current sensor readings as the zero baseline
-    _ferrisWheelZeroOffset = _robotState.rawFerrisValues;
+    // Debug override: capture the current calibrated Ferris angle as an extra zero offset.
+    _ferrisWheelZeroOffset.assign(_robotConfig.degreesOfFreedom, 0.0f);
+    for (size_t i = 0; i < static_cast<size_t>(_robotConfig.degreesOfFreedom); ++i) {
+        float calibratedDeg = (i < _robotState.rawFerrisValues.size()) ? _robotState.rawFerrisValues[i] : 0.0f;
+        if (i < _robotState.ferrisWheelRawValues.size() && ferrisMechanicalZeroRawCountsValid(i)) {
+            calibratedDeg =
+                ferrisWrappedRawDelta(_robotState.ferrisWheelRawValues[i], ferrisMechanicalZeroRawCounts(i)) *
+                kFerrisRawCountsToDegrees;
+        }
+        _ferrisWheelZeroOffset[i] = calibratedDeg;
+    }
     
     // Ensure offset vector is sized correctly
     if (_ferrisWheelZeroOffset.size() < static_cast<size_t>(_robotConfig.degreesOfFreedom)) {
         _ferrisWheelZeroOffset.resize(_robotConfig.degreesOfFreedom, 0.0f);
     }
     
-    ESP_LOGI(TAG, "Ferris wheels tared at:");
+    ESP_LOGI(TAG, "Ferris debug tare offset set at:");
     for (size_t i = 0; i < _ferrisWheelZeroOffset.size(); ++i) {
         ESP_LOGI(TAG, "  Joint[%u]: %.2f degrees", (unsigned)i, _ferrisWheelZeroOffset[i]);
     }
@@ -766,6 +847,11 @@ void RobotController::setNewPath(const std::vector<std::vector<float>> &path, si
     _currentWaypoint = 0;
     _pathExecuting = true;
     _waypointSent = false;
+    _waypointCorrectionActive = false;
+    _motionLogCounter = 0;
+    _motionCsvSample = 0;
+    _waypointCorrectionAttempts = 0;
+    _waypointReferenceJointSteps.clear();
 
     ESP_LOGI(TAG, "New path accepted: %zu waypoints, %zu DOF", path_waypoints, path_dof);
 }
@@ -775,158 +861,266 @@ void RobotController::processMotionControl(bool executing_path, size_t path_wayp
         return;
     }
 
+    ++_motionLogCounter;
+
+    const auto waypointToleranceSteps = [](size_t waypointIndex) {
+        (void)waypointIndex;
+        return 3;
+    };
+
+    const auto logMotionSignals = [this, &waypointToleranceSteps](const char *event, size_t waypointIndex) {
+        const size_t n = std::min(
+            std::min(static_cast<size_t>(_robotConfig.degreesOfFreedom), _robotState.targetJointSteps.size()),
+            _robotState.jointSteps.size());
+        const uint64_t timeMs = static_cast<uint64_t>(esp_timer_get_time() / 1000ULL);
+        const uint32_t sample = _motionCsvSample++;
+        const int toleranceSteps = waypointToleranceSteps(waypointIndex);
+
+        int maxAbsRemainingOl = 0;
+        int maxAbsSensorTargetError = 0;
+        int maxAbsSlipError = 0;
+        size_t maxRemainingJoint = 0;
+        size_t maxSensorTargetJoint = 0;
+        size_t maxSlipJoint = 0;
+
+        for (size_t i = 0; i < n; ++i) {
+            const int qOl = _robotState.jointSteps[i];
+            const int qCmd = _robotState.targetJointSteps[i];
+            const int qRef =
+                (i < _waypointReferenceJointSteps.size()) ? _waypointReferenceJointSteps[i] : qCmd;
+            const int remainingOl = qRef - qOl;
+
+            const bool hasFerris =
+                _robotState.needsPositionalFeedback &&
+                i < _robotState.rawFerrisValues.size() &&
+                i < _robotState.ferrisWheelJointSteps.size();
+
+            float ferrisTaredDeg = 0.0f;
+            if (i < _robotState.rawFerrisValues.size()) {
+                ferrisTaredDeg = _robotState.rawFerrisValues[i];
+                if (i < _robotState.ferrisWheelRawValues.size() && ferrisMechanicalZeroRawCountsValid(i)) {
+                    ferrisTaredDeg =
+                        ferrisWrappedRawDelta(_robotState.ferrisWheelRawValues[i], ferrisMechanicalZeroRawCounts(i)) *
+                        kFerrisRawCountsToDegrees;
+                }
+                if (i < _ferrisWheelZeroOffset.size()) {
+                    ferrisTaredDeg -= _ferrisWheelZeroOffset[i];
+                }
+            }
+
+            const float ferrisJointDeg = ferrisTaredDeg * ferrisToJointScale(i);
+            const int qSensor = hasFerris ? _robotState.ferrisWheelJointSteps[i] : 0;
+            const int sensorTargetError = hasFerris ? (qRef - qSensor) : 0;
+            const int slipError = hasFerris ? (qSensor - qOl) : 0;
+            const float ferrisRawDeg = (i < _robotState.rawFerrisValues.size()) ? _robotState.rawFerrisValues[i] : 0.0f;
+            const float ferrisScale = ferrisToJointScale(i);
+            const bool needsCorrection = hasFerris && std::abs(sensorTargetError) > toleranceSteps;
+
+            if (std::abs(remainingOl) > maxAbsRemainingOl) {
+                maxAbsRemainingOl = std::abs(remainingOl);
+                maxRemainingJoint = i;
+            }
+            if (hasFerris && std::abs(sensorTargetError) > maxAbsSensorTargetError) {
+                maxAbsSensorTargetError = std::abs(sensorTargetError);
+                maxSensorTargetJoint = i;
+            }
+            if (hasFerris && std::abs(slipError) > maxAbsSlipError) {
+                maxAbsSlipError = std::abs(slipError);
+                maxSlipJoint = i;
+            }
+
+            ESP_LOGI(TAG,
+                     "MOTION_CSV: %llu,%u,%s,%u,%u,%u,%d,%d,%+d,%d,%.3f,%.3f,%.3f,%.3f,%d,%+d,%+d,%d,%d,%d,%u",
+                     (unsigned long long)timeMs,
+                     (unsigned)sample,
+                     event,
+                     (unsigned)(waypointIndex + 1),
+                     (unsigned)_pathWaypoints,
+                     (unsigned)i,
+                     qOl,
+                     qRef,
+                     remainingOl,
+                     hasFerris ? 1 : 0,
+                     ferrisRawDeg,
+                     ferrisTaredDeg,
+                     ferrisScale,
+                     ferrisJointDeg,
+                     qSensor,
+                     sensorTargetError,
+                     slipError,
+                     qCmd,
+                     toleranceSteps,
+                     needsCorrection ? 1 : 0,
+                     (unsigned)_waypointCorrectionAttempts);
+        }
+
+        ESP_LOGI(TAG,
+                 "MC_SUMMARY event=%s waypoint=%u/%u cl_active=%d cl_tolerance=%d correction_attempt=%u max_remaining_ol=%d@joint[%u] max_sensor_target_error=%d@joint[%u] max_slip_error=%d@joint[%u]",
+                 event,
+                 (unsigned)(waypointIndex + 1),
+                 (unsigned)_pathWaypoints,
+                 _waypointCorrectionActive ? 1 : 0,
+                 toleranceSteps,
+                 (unsigned)_waypointCorrectionAttempts,
+                 maxAbsRemainingOl,
+                 (unsigned)maxRemainingJoint,
+                 maxAbsSensorTargetError,
+                 (unsigned)maxSensorTargetJoint,
+                 maxAbsSlipError,
+                 (unsigned)maxSlipJoint);
+    };
+
+    const auto syncOpenLoopEstimateToFerris = [this](size_t waypointIndex) {
+        const size_t n = std::min(
+            std::min(static_cast<size_t>(_robotConfig.degreesOfFreedom), _robotState.jointSteps.size()),
+            _robotState.ferrisWheelJointSteps.size());
+
+        for (size_t i = 0; i < n; ++i) {
+            const bool hasFerris =
+                _robotState.needsPositionalFeedback &&
+                i < _robotState.rawFerrisValues.size();
+
+            if (!hasFerris || i >= _steppers.size() || i >= _robotState.targetJointSteps.size()) {
+                continue;
+            }
+
+            const int sensorSteps = _robotState.ferrisWheelJointSteps[i];
+            _steppers[i].setPosition(sensorSteps);
+            _steppers[i].setSetpointPosition(sensorSteps);
+            _robotState.jointSteps[i] = sensorSteps;
+            _robotState.targetJointSteps[i] = sensorSteps;
+        }
+
+        ESP_LOGI(TAG, "Open-loop estimate synced to Ferris feedback at waypoint %zu / %zu",
+                 waypointIndex + 1,
+                 _pathWaypoints);
+    };
+
     // Send waypoint if not already sent
     if (!_waypointSent && _currentWaypoint < _pathWaypoints && !_path.empty()) {
         if (_currentWaypoint < _path.size()) {
             std::vector<float> target(_path[_currentWaypoint].begin(), _path[_currentWaypoint].end());
-            setJointTargetRad(target);
+            _waypointReferenceJointSteps = radToSteps(target);
+            if (_waypointReferenceJointSteps.size() < static_cast<size_t>(_robotConfig.degreesOfFreedom)) {
+                ESP_LOGW(TAG, "Skipping invalid waypoint %zu: radToSteps() returned %u steps",
+                         _currentWaypoint + 1,
+                         (unsigned)_waypointReferenceJointSteps.size());
+                _currentWaypoint++;
+                return;
+            }
+
+            setSynchronizedJointTargetSteps(_waypointReferenceJointSteps, 10.0f);
             _waypointSent = true;
+            _waypointCorrectionActive = false;
+            _waypointCorrectionAttempts = 0;
+
+            for (size_t i = 0; i < _waypointReferenceJointSteps.size(); ++i) {
+                const float angle = (i < target.size()) ? target[i] : 0.0f;
+                ESP_LOGI(TAG, "target joint[%u]: rad=%.6f -> steps=%d",
+                         (unsigned)i,
+                         angle,
+                         _waypointReferenceJointSteps[i]);
+            }
 
             ESP_LOGI(TAG, "Sent waypoint %zu / %zu",
                      _currentWaypoint + 1, _pathWaypoints);
         }
     }
 
-    // Check if waypoint reached and advance
+    if (_motionLogCounter >= 30) {
+        _motionLogCounter = 0;
+        logMotionSignals("periodic", _currentWaypoint);
+    }
+
+    // Closed-loop waypoint check: accept the waypoint only when Ferris error is inside tolerance.
     if (_waypointSent && isAtStepTarget()) {
-        ESP_LOGI(TAG, "Reached waypoint %zu / %zu",
-                 _currentWaypoint + 1, _pathWaypoints);
-        _currentWaypoint++;
-        _waypointSent = false;
+        const size_t reachedWaypoint = _currentWaypoint;
+        const size_t n = std::min(
+            std::min(static_cast<size_t>(_robotConfig.degreesOfFreedom), _robotState.jointSteps.size()),
+            std::min(_robotState.targetJointSteps.size(), _waypointReferenceJointSteps.size()));
+        const int toleranceSteps = waypointToleranceSteps(reachedWaypoint);
+        const bool isFinalWaypoint = (reachedWaypoint + 1 >= _pathWaypoints);
 
-        if (_currentWaypoint >= _pathWaypoints) {
-            ESP_LOGI(TAG, "Path execution finished");
-        }
-    }
+        bool needsCorrection = false;
+        bool hasAnyFerris = false;
+        std::vector<int> correctionTargets = _robotState.jointSteps;
 
-    // To start implementing the Close Loop controller, we will start printing the 
-    // different errors (Ferris wheel feedback vs expected current position) here for debugging and analysis.
-    static uint32_t error_log_counter = 0;
-    ++error_log_counter;
-    
-    if (error_log_counter >= 20) {  // Log every 20 cycles to reduce spam
-        error_log_counter = 0;
-        for (size_t i = 0; i < std::min(_robotState.ferrisWheelJointSteps.size(), _robotState.targetJointSteps.size()); ++i) {
-            float tairedFerrisValue = 0.0f;
-            if (i < _robotState.rawFerrisValues.size() && i < _ferrisWheelZeroOffset.size()) {
-                tairedFerrisValue = _robotState.rawFerrisValues[i] - _ferrisWheelZeroOffset[i];
-            }
-            int error = _robotState.ferrisWheelJointSteps[i] - _robotState.targetJointSteps[i];
-            ESP_LOGI(TAG, "Joint[%u] current_steps=%d target=%d steps ferris_tared=%.2f deg ferris_steps=%d error=%+d steps",
-                     (unsigned)i,
-                     _robotState.jointSteps[i],
-                     _robotState.targetJointSteps[i],
-                     tairedFerrisValue,
-                     _robotState.ferrisWheelJointSteps[i],
-                     error);
-        }
-    }
-
-    /*
-    // Closed-loop motion-control strategy - disabled until Ferris wheel feedback is calibrated.
-    //
-    // Goal:
-    // Keep the existing waypoint and synchronized open-loop motion, but use Ferris wheel feedback
-    // to detect missed steps, adapt synchronization, and verify waypoint completion from measured
-    // joint position instead of commanded step position.
-    //
-    // Position definitions:
-    // q_ref_steps    = _robotState.targetJointSteps      // next waypoint / motion objective
-    // q_ol_steps     = _robotState.jointSteps            // open-loop step estimate
-    // q_sensor_steps = calibrated Ferris wheel feedback  // measured physical joint position
-
-    static constexpr int CL_WAYPOINT_TOLERANCE_STEPS = 3;
-    static constexpr int CL_CORRECTION_THRESHOLD_STEPS = 8;
-    static constexpr int CL_RECOVERY_THRESHOLD_STEPS = 30;
-    static constexpr int CL_MAX_RECOVERY_ATTEMPTS = 3;
-    static constexpr float CL_BASE_MAX_VELOCITY = 10.0f;
-
-    if (_robotState.ferrisWheelJointSteps.size() >= _robotState.targetJointSteps.size()) {
-        const size_t n = std::min(_robotState.targetJointSteps.size(), _robotState.jointSteps.size());
-
-        bool waypointReachedBySensor = true;
-        bool needsAdaptiveCorrection = false;
-        bool needsRecovery = false;
-        size_t recoveryJoint = 0;
-        int largestSlipError = 0;
-
-        std::vector<int> remainingTargetSteps(n, 0);
-
-        for (size_t i = 0; i < n; ++i) {
-            const int qRef = _robotState.targetJointSteps[i];
-            const int qOl = _robotState.jointSteps[i];
-            const int qSensor = _robotState.ferrisWheelJointSteps[i];
-
-            const int slipError = qSensor - qOl;
-            const int targetError = qRef - qSensor;
-            remainingTargetSteps[i] = qRef;
-
-            if (std::abs(targetError) > CL_WAYPOINT_TOLERANCE_STEPS) {
-                waypointReachedBySensor = false;
-            }
-
-            if (std::abs(slipError) > CL_CORRECTION_THRESHOLD_STEPS) {
-                needsAdaptiveCorrection = true;
-            }
-
-            if (std::abs(slipError) > std::abs(largestSlipError)) {
-                largestSlipError = slipError;
-                recoveryJoint = i;
-            }
-
-            if (std::abs(slipError) > CL_RECOVERY_THRESHOLD_STEPS) {
-                needsRecovery = true;
-            }
-        }
-
-        // Waypoint verification should eventually use measured sensor position.
-        if (_waypointSent && waypointReachedBySensor) {
-            ESP_LOGI(TAG, "Reached waypoint %zu / %zu using Ferris feedback",
-                     _currentWaypoint + 1, _pathWaypoints);
-            _currentWaypoint++;
-            _waypointSent = false;
-
-            if (_currentWaypoint >= _pathWaypoints) {
-                ESP_LOGI(TAG, "Path execution finished");
-            }
-        }
-
-        if (needsRecovery) {
-            static int recoveryAttempts = 0;
-            recoveryAttempts++;
-
-            if (recoveryAttempts > CL_MAX_RECOVERY_ATTEMPTS) {
-                ESP_LOGE(TAG, "Closed-loop recovery failed; stopping motion");
-                for (size_t i = 0; i < n; ++i) {
-                    _steppers[i].setMaxVelocity(0.0f);
-                    _robotState.targetJointSteps[i] = _robotState.jointSteps[i];
-                }
-                _pathExecuting = false;
-                _waypointSent = false;
-                return;
-            }
-
-            // Pause all other joints and command only the joint with the largest slip error.
+        if (!isFinalWaypoint) {
             for (size_t i = 0; i < n; ++i) {
-                if (i == recoveryJoint) {
-                    _steppers[i].setMaxVelocity(CL_BASE_MAX_VELOCITY);
-                    _robotState.targetJointSteps[i] = remainingTargetSteps[i];
+                const bool hasFerris =
+                    _robotState.needsPositionalFeedback &&
+                    i < _robotState.rawFerrisValues.size() &&
+                    i < _robotState.ferrisWheelJointSteps.size();
+
+                if (!hasFerris) {
+                    correctionTargets[i] = _robotState.jointSteps[i];
+                    continue;
+                }
+
+                hasAnyFerris = true;
+                const int sensorTargetError = _waypointReferenceJointSteps[i] - _robotState.ferrisWheelJointSteps[i];
+                if (std::abs(sensorTargetError) > toleranceSteps) {
+                    needsCorrection = true;
+                    correctionTargets[i] = _robotState.jointSteps[i] + sensorTargetError;
                 } else {
-                    _steppers[i].setMaxVelocity(0.0f);
-                    _robotState.targetJointSteps[i] = _robotState.jointSteps[i];
+                    correctionTargets[i] = _robotState.jointSteps[i];
                 }
             }
+        }
+
+        if (needsCorrection) {
+            _waypointCorrectionActive = true;
+            ++_waypointCorrectionAttempts;
+
+            for (size_t i = 0; i < _robotState.targetJointSteps.size(); ++i) {
+                const int target = (i < correctionTargets.size()) ? correctionTargets[i] : _robotState.jointSteps[i];
+                _robotState.targetJointSteps[i] = target;
+
+                if (i < _steppers.size()) {
+                    const bool jointNeedsCorrection =
+                        i < n && target != _robotState.jointSteps[i];
+                    _steppers[i].setMaxVelocity(jointNeedsCorrection ? 5.0f : 0.0f);
+                }
+            }
+
+            _jointPosChanged = true;
+            ESP_LOGI(TAG, "CL correction commanded for waypoint %zu / %zu tolerance=%d attempt=%u",
+                     reachedWaypoint + 1,
+                     _pathWaypoints,
+                     toleranceSteps,
+                     (unsigned)_waypointCorrectionAttempts);
+            logMotionSignals("correction_commanded", reachedWaypoint);
             return;
         }
 
-        if (needsAdaptiveCorrection) {
-            // Recompute synchronized motion using the sensor-measured remaining distance.
-            // The implementation should convert targetError into new joint targets/frequencies
-            // so all joints still arrive at the waypoint together.
-            setSynchronizedJointTargetSteps(remainingTargetSteps, CL_BASE_MAX_VELOCITY);
+        if (isFinalWaypoint) {
+            ESP_LOGI(TAG, "Final waypoint CL correction skipped");
+        } else if (!hasAnyFerris) {
+            ESP_LOGW(TAG, "No valid Ferris feedback at waypoint %zu / %zu; accepting open-loop target",
+                     reachedWaypoint + 1,
+                     _pathWaypoints);
+        }
+
+        ESP_LOGI(TAG, "Reached waypoint %zu / %zu",
+                 reachedWaypoint + 1, _pathWaypoints);
+        logMotionSignals("waypoint_reached", reachedWaypoint);
+
+        if (!isFinalWaypoint && hasAnyFerris) {
+            syncOpenLoopEstimateToFerris(reachedWaypoint);
+            logMotionSignals("estimate_synced", reachedWaypoint);
+        }
+
+        _currentWaypoint++;
+        _waypointSent = false;
+        _waypointCorrectionActive = false;
+        _waypointCorrectionAttempts = 0;
+
+        if (_currentWaypoint >= _pathWaypoints) {
+            _pathExecuting = false;
+            ESP_LOGI(TAG, "Path execution finished");
+            logMotionSignals("path_finished", reachedWaypoint);
         }
     }
-    */
 }
 
 

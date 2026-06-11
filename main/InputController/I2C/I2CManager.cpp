@@ -274,6 +274,31 @@ std::vector<float> I2CManager::readAllFerrisWheelRawValues()
     return rawValues;
 }
 
+float I2CManager::readFerrisWheelAbsoluteRawValue(uint8_t wheelId)
+{
+    if (wheelId >= _numFerrisWheels) {
+        ESP_LOGE(TAG, "Invalid Ferris wheel ID: %u", wheelId);
+        return NAN;
+    }
+
+    if (wheelId < 8) {
+        _externalMultiplexer1->selectChannel(_wheelIdMapping[wheelId]);
+    } else {
+        _pressureSensorMultiplexer->selectChannel(_wheelIdMapping[wheelId]);
+    }
+
+    return static_cast<float>(_ferrisWheelSensors[wheelId]->rawAngle());
+}
+
+std::vector<float> I2CManager::readAllFerrisWheelAbsoluteRawValues()
+{
+    std::vector<float> rawValues(_numFerrisWheels, 0.0f);
+    for (uint8_t i = 0; i < _numFerrisWheels; i++) {
+        rawValues[i] = readFerrisWheelAbsoluteRawValue(i);
+    }
+    return rawValues;
+}
+
 bool I2CManager::writePressureRegister(uint8_t reg, const uint8_t* data, size_t len)
 {
     if (_pressureSensorDev == nullptr) {

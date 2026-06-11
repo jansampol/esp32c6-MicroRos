@@ -124,7 +124,7 @@ public:
 
     std::vector<int> getFerrisWheelJointSteps() const;
 
-    void setFerrisWheelFeedback(const std::vector<float>& sensorValues);
+    void setFerrisWheelFeedback(const std::vector<float>& sensorValues, const std::vector<float>& rawValues = {});
     void setNewPath(const std::vector<std::vector<float>> &path, size_t path_waypoints, size_t path_dof);
     void processMotionControl(bool executing_path, size_t path_waypoints, size_t path_dof);
     bool isPathExecuting() const { return _pathExecuting && _currentWaypoint < _pathWaypoints; }
@@ -165,6 +165,12 @@ private:
     size_t _pathDof = 0;
     bool _pathExecuting = false;
     bool _waypointSent = false;
+    bool _waypointCorrectionActive = false;
+    uint32_t _motionLogCounter = 0;
+    uint32_t _motionCsvSample = 0;
+    uint32_t _waypointCorrectionAttempts = 0;
+    uint32_t _ferrisFeedbackLogCounter = 0;
+    std::vector<int> _waypointReferenceJointSteps;
 
     std::vector<float> _ferrisWheelZeroOffset;
 
