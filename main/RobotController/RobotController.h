@@ -123,6 +123,7 @@ public:
     float needleStepsToDepthMm(int steps) const;
 
     std::vector<int> getFerrisWheelJointSteps() const;
+    bool syncOpenLoopEstimateToFerrisFeedback(const char *reason = nullptr);
 
     void setFerrisWheelFeedback(const std::vector<float>& sensorValues, const std::vector<float>& rawValues = {});
     void setNewPath(const std::vector<std::vector<float>> &path, size_t path_waypoints, size_t path_dof);

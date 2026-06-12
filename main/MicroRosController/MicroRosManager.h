@@ -16,7 +16,7 @@ public:
     static constexpr size_t MAX_PATH_EXTRA_VALUES = 1;
     static constexpr size_t MAX_PATH_MSG_VALUES = 2 + MAX_WAYPOINTS * MAX_JOINTS + MAX_PATH_EXTRA_VALUES;
 
-    static constexpr size_t MAX_ESP_CMD_LEN = 64;
+    static constexpr size_t MAX_ESP_CMD_LEN = 192;
 
     MicroRosManager();
 

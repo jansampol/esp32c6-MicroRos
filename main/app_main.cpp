@@ -34,7 +34,60 @@ namespace
         return (endptr != text && *endptr == '\0');
     }
 
-    void handleEspCommand(const char *cmd, RobotController &robot_controller, bool &incision_mode)
+    bool isCurrentJointPositionCommand(const char *cmd)
+    {
+        if (cmd == nullptr) {
+            return false;
+        }
+        return strcmp(cmd, "get_init_pos") == 0 ||
+               strcmp(cmd, "get_current_joint_pos") == 0;
+    }
+
+    bool publishCurrentJointPosition(RobotController &robot_controller, MicroRosManager &micro_ros)
+    {
+        const RobotState state = robot_controller.getRobotState();
+        const size_t dof = static_cast<size_t>(robot_controller.getDegreesOfFreedom());
+
+        if (dof == 0 ||
+            state.ferrisWheelJointSteps.size() < dof ||
+            state.ferrisWheelRawValues.size() < dof ||
+            !state.needsPositionalFeedback) {
+            ESP_LOGW(TAG, "Cannot publish initial position: Ferris feedback is not ready");
+            return micro_ros.publishRobotState("init_pos_rad,0");
+        }
+
+        const std::vector<int> ferrisSteps(
+            state.ferrisWheelJointSteps.begin(),
+            state.ferrisWheelJointSteps.begin() + dof
+        );
+        const std::vector<float> jointRad = robot_controller.stepsToRad(ferrisSteps);
+
+        char payload[MicroRosManager::MAX_ESP_CMD_LEN] = {0};
+        int written = snprintf(payload, sizeof(payload), "init_pos_rad,1");
+        for (size_t i = 0; i < jointRad.size() && written > 0 && written < static_cast<int>(sizeof(payload)); ++i) {
+            written += snprintf(
+                payload + written,
+                sizeof(payload) - static_cast<size_t>(written),
+                ",%.6f",
+                static_cast<double>(jointRad[i])
+            );
+        }
+
+        if (written < 0 || written >= static_cast<int>(sizeof(payload))) {
+            ESP_LOGW(TAG, "Initial position payload was truncated");
+            payload[sizeof(payload) - 1] = '\0';
+        }
+
+        ESP_LOGI(TAG, "Publishing Ferris initial position: %s", payload);
+        return micro_ros.publishRobotState(payload);
+    }
+
+    void handleEspCommand(
+        const char *cmd,
+        RobotController &robot_controller,
+        MicroRosManager &micro_ros,
+        bool &incision_mode
+    )
     {
         if (cmd == nullptr || *cmd == '\0') {
             ESP_LOGW(TAG, "Received empty ESP command");
@@ -68,6 +121,14 @@ namespace
             }
             robot_controller.setControlStrategy(PneumaticStepper::Controlstrategy::POSITION_CONTROL);
             ESP_LOGI(TAG, "Applied command: incision_off");
+            return;
+        }
+
+        if (isCurrentJointPositionCommand(cmd)) {
+            if (!publishCurrentJointPosition(robot_controller, micro_ros)) {
+                ESP_LOGW(TAG, "Failed to publish initial joint position");
+            }
+            ESP_LOGI(TAG, "Applied command: %s", cmd);
             return;
         }
 
@@ -217,11 +278,13 @@ extern "C" void app_main(void)
         micro_ros.update();
 
         if (micro_ros.hasNewEspCmd()) {
-            char cmd[64];
+            char cmd[MicroRosManager::MAX_ESP_CMD_LEN];
             micro_ros.consumeEspCmd(cmd, sizeof(cmd));
-            executing_path = false;
-            waypoint_sent = false;
-            handleEspCommand(cmd, robot_controller, incision_mode);
+            if (!isCurrentJointPositionCommand(cmd)) {
+                executing_path = false;
+                waypoint_sent = false;
+            }
+            handleEspCommand(cmd, robot_controller, micro_ros, incision_mode);
         }
 
         if (micro_ros.hasNewPath()) {
