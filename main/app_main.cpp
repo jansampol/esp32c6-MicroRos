@@ -124,6 +124,12 @@ namespace
             return;
         }
 
+        if (strcmp(cmd,"reset_robot") == 0) {
+            incision_mode = false;
+            ESP_LOGI(TAG, "Applied command: reset_robot");
+            return;
+        }
+
         if (isCurrentJointPositionCommand(cmd)) {
             if (!publishCurrentJointPosition(robot_controller, micro_ros)) {
                 ESP_LOGW(TAG, "Failed to publish initial joint position");
@@ -226,6 +232,7 @@ extern "C" void app_main(void)
     size_t path_dof = 0;
     bool path_has_insertion_depth = false;
     float path_insertion_depth_mm = 0.0f;
+    bool path_is_incision_correction = false;
     bool needle_target_available = false;
     int needle_target_steps = 0;
 #if ACTIVE_SPI_RUNTIME_MODE != SPI_RUNTIME_MODE_SPI0_ONLY
@@ -293,7 +300,8 @@ extern "C" void app_main(void)
                 path_waypoints,
                 path_dof,
                 path_has_insertion_depth,
-                path_insertion_depth_mm
+                path_insertion_depth_mm,
+                path_is_incision_correction
             );
             // Convert C-style array to std::vector<std::vector<float>>
             std::vector<std::vector<float>> pathVec(path_waypoints);
@@ -302,7 +310,9 @@ extern "C" void app_main(void)
             }
             robot_controller.setNewPath(pathVec, path_waypoints, path_dof);
             current_wp = 0;
-            executing_path = (path_waypoints > 0) && !incision_mode;
+            const bool path_allowed_in_incision_mode = path_is_incision_correction;
+            const bool suppress_motion_for_incision_mode = incision_mode && !path_allowed_in_incision_mode;
+            executing_path = (path_waypoints > 0) && !suppress_motion_for_incision_mode;
             waypoint_sent = false;
             if (path_has_insertion_depth) {
                 needle_target_steps = robot_controller.needleDepthMmToSteps(path_insertion_depth_mm);
@@ -316,10 +326,11 @@ extern "C" void app_main(void)
                 needle_target_steps = 0;
             }
             ESP_LOGI(TAG,
-                     "Received path with %d waypoints%s%s",
+                     "Received path with %d waypoints%s%s%s",
                      (int)path_waypoints,
                      path_has_insertion_depth ? " and insertion depth" : "",
-                     incision_mode ? " (ignored while incision mode is active)" : "");
+                     path_is_incision_correction ? " (incision correction)" : "",
+                     suppress_motion_for_incision_mode ? " (motion suppressed while incision mode is active)" : "");
         }
 
         // if (executing_path && current_wp < path_waypoints) {

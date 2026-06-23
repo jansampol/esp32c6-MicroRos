@@ -908,7 +908,7 @@ void RobotController::setNewPath(const std::vector<std::vector<float>> &path, si
     }
 }
 
-void RobotController::processMotionControl(bool executing_path, size_t path_waypoints, size_t path_dof) {
+/*void RobotController::processMotionControl(bool executing_path, size_t path_waypoints, size_t path_dof) {
     if (!executing_path || path_waypoints == 0 || path_dof == 0) {
         return;
     }
@@ -920,6 +920,7 @@ void RobotController::processMotionControl(bool executing_path, size_t path_wayp
         return 3;
     };
     constexpr uint32_t maxCorrectionAttempts = 5;
+    constexpr int smoothSyncLimitSteps = 10;
 
     const auto logMotionSignals = [this, &waypointToleranceSteps](const char *event, size_t waypointIndex) {
         const size_t n = std::min(
@@ -928,6 +929,7 @@ void RobotController::processMotionControl(bool executing_path, size_t path_wayp
         const uint64_t timeMs = static_cast<uint64_t>(esp_timer_get_time() / 1000ULL);
         const uint32_t sample = _motionCsvSample++;
         const int toleranceSteps = waypointToleranceSteps(waypointIndex);
+        const char *controlMode = _waypointCorrectionActive ? "stop_go" : "synchronized";
 
         int maxAbsRemainingOl = 0;
         int maxAbsSensorTargetError = 0;
@@ -968,6 +970,9 @@ void RobotController::processMotionControl(bool executing_path, size_t path_wayp
             const float ferrisRawDeg = (i < _robotState.rawFerrisValues.size()) ? _robotState.rawFerrisValues[i] : 0.0f;
             const float ferrisScale = ferrisToJointScale(i);
             const bool needsCorrection = hasFerris && std::abs(sensorTargetError) > toleranceSteps;
+            const float jointVelocity = (i < _steppers.size()) ? _steppers[i].getVelocity() : 0.0f;
+            const float jointSetpointVelocity = (i < _steppers.size()) ? _steppers[i].getSetpointVelocity() : 0.0f;
+            const float jointMaxVelocity = (i < _steppers.size()) ? _steppers[i].getMaxVelocity() : 0.0f;
 
             if (std::abs(remainingOl) > maxAbsRemainingOl) {
                 maxAbsRemainingOl = std::abs(remainingOl);
@@ -983,10 +988,11 @@ void RobotController::processMotionControl(bool executing_path, size_t path_wayp
             }
 
             ESP_LOGI(TAG,
-                     "MOTION_CSV: %llu,%u,%s,%u,%u,%u,%d,%d,%+d,%d,%.3f,%.3f,%.3f,%.3f,%d,%+d,%+d,%d,%d,%d,%u",
+                     "MOTION_CSV: %llu,%u,%s,%s,%u,%u,%u,%d,%d,%+d,%d,%.3f,%.3f,%.3f,%.3f,%d,%+d,%+d,%d,%d,%d,%u,%.3f,%.3f,%.3f",
                      (unsigned long long)timeMs,
                      (unsigned)sample,
                      event,
+                     controlMode,
                      (unsigned)(waypointIndex + 1),
                      (unsigned)_pathWaypoints,
                      (unsigned)i,
@@ -1004,12 +1010,16 @@ void RobotController::processMotionControl(bool executing_path, size_t path_wayp
                      qCmd,
                      toleranceSteps,
                      needsCorrection ? 1 : 0,
-                     (unsigned)_waypointCorrectionAttempts);
+                     (unsigned)_waypointCorrectionAttempts,
+                     jointVelocity,
+                     jointSetpointVelocity,
+                     jointMaxVelocity);
         }
 
         ESP_LOGI(TAG,
-                 "MC_SUMMARY event=%s waypoint=%u/%u cl_active=%d cl_tolerance=%d correction_attempt=%u max_remaining_ol=%d@joint[%u] max_sensor_target_error=%d@joint[%u] max_slip_error=%d@joint[%u]",
+                 "MC_SUMMARY event=%s mode=%s waypoint=%u/%u cl_active=%d cl_tolerance=%d correction_attempt=%u max_remaining_ol=%d@joint[%u] max_sensor_target_error=%d@joint[%u] max_slip_error=%d@joint[%u]",
                  event,
+                 controlMode,
                  (unsigned)(waypointIndex + 1),
                  (unsigned)_pathWaypoints,
                  _waypointCorrectionActive ? 1 : 0,
@@ -1065,13 +1075,280 @@ void RobotController::processMotionControl(bool executing_path, size_t path_wayp
             std::min(static_cast<size_t>(_robotConfig.degreesOfFreedom), _robotState.jointSteps.size()),
             std::min(_robotState.targetJointSteps.size(), _waypointReferenceJointSteps.size()));
         const int toleranceSteps = waypointToleranceSteps(reachedWaypoint);
-        //const bool isFinalWaypoint = (reachedWaypoint + 1 >= _pathWaypoints);
+
+        bool needsStopGoCorrection = false;
+        bool hasAnyFerris = false;
+        int maxAbsSensorTargetError = 0;
+        std::vector<int> correctionTargets = _robotState.jointSteps;
+
+        for (size_t i = 0; i < n; ++i) {
+            const bool hasFerris =
+                _robotState.needsPositionalFeedback &&
+                i < _robotState.rawFerrisValues.size() &&
+                i < _robotState.ferrisWheelJointSteps.size();
+
+            if (!hasFerris) {
+                correctionTargets[i] = _robotState.jointSteps[i];
+                continue;
+            }
+
+            hasAnyFerris = true;
+            const int sensorTargetError =
+                _waypointReferenceJointSteps[i] - _robotState.ferrisWheelJointSteps[i];
+            const int absSensorTargetError =
+                (sensorTargetError < 0) ? -sensorTargetError : sensorTargetError;
+            maxAbsSensorTargetError = std::max(maxAbsSensorTargetError, absSensorTargetError);
+
+            if (absSensorTargetError > toleranceSteps) {
+                correctionTargets[i] = _robotState.jointSteps[i] + sensorTargetError;
+                if (absSensorTargetError > smoothSyncLimitSteps) {
+                    needsStopGoCorrection = true;
+                }
+            } else {
+                correctionTargets[i] = _robotState.jointSteps[i];
+            }
+        }
+
+        if (needsStopGoCorrection && _waypointCorrectionAttempts < maxCorrectionAttempts) {
+            _waypointCorrectionActive = true;
+            ++_waypointCorrectionAttempts;
+
+            for (size_t i = 0; i < _robotState.targetJointSteps.size(); ++i) {
+                const int target = (i < correctionTargets.size()) ? correctionTargets[i] : _robotState.jointSteps[i];
+                _robotState.targetJointSteps[i] = target;
+
+                if (i < _steppers.size()) {
+                    const bool jointNeedsCorrection =
+                        i < n && target != _robotState.jointSteps[i];
+                    _steppers[i].setMaxVelocity(jointNeedsCorrection ? 5.0f : 0.0f);
+                }
+            }
+
+            _jointPosChanged = true;
+            ESP_LOGI(TAG, "CL correction commanded for waypoint %zu / %zu tolerance=%d attempt=%u",
+                     reachedWaypoint + 1,
+                     _pathWaypoints,
+                     toleranceSteps,
+                     (unsigned)_waypointCorrectionAttempts);
+            logMotionSignals("correction_commanded", reachedWaypoint);
+            return;
+        }
+
+        if (needsStopGoCorrection) {
+            ESP_LOGW(TAG, "Max CL correction attempts reached for waypoint %zu / %zu: accepting with remaining error",
+                     reachedWaypoint + 1,
+                     _pathWaypoints);
+            logMotionSignals("correction_limit_reached", reachedWaypoint);
+        } else if (hasAnyFerris && maxAbsSensorTargetError > toleranceSteps) {
+            ESP_LOGI(TAG, "Waypoint %zu / %zu accepted with smooth sync: max_sensor_target_error=%d tolerance=%d smooth_limit=%d",
+                     reachedWaypoint + 1,
+                     _pathWaypoints,
+                     maxAbsSensorTargetError,
+                     toleranceSteps,
+                     smoothSyncLimitSteps);
+            logMotionSignals("smooth_sync_accept", reachedWaypoint);
+        }
+
+        if (!hasAnyFerris) {
+            ESP_LOGW(TAG, "No valid Ferris feedback at waypoint %zu / %zu; accepting open-loop target",
+                     reachedWaypoint + 1,
+                     _pathWaypoints);
+        }
+
+        ESP_LOGI(TAG, "Reached waypoint %zu / %zu",
+                 reachedWaypoint + 1, _pathWaypoints);
+        logMotionSignals("waypoint_reached", reachedWaypoint);
+
+        if (hasAnyFerris) {
+            syncOpenLoopEstimateToFerrisFeedback("waypoint_reached");
+            logMotionSignals("estimate_synced", reachedWaypoint);
+        }
+
+        _currentWaypoint++;
+        _waypointSent = false;
+        _waypointCorrectionActive = false;
+        _waypointCorrectionAttempts = 0;
+
+        if (_currentWaypoint >= _pathWaypoints) {
+            _pathExecuting = false;
+            ESP_LOGI(TAG, "Path execution finished");
+            logMotionSignals("path_finished", reachedWaypoint);
+        }
+    }
+}
+*/
+
+void RobotController::processMotionControl(bool executing_path, size_t path_waypoints, size_t path_dof) {
+    if (!executing_path || path_waypoints == 0 || path_dof == 0) {
+        return;
+    }
+
+    ++_motionLogCounter;
+
+    const auto waypointToleranceSteps = [](size_t waypointIndex) {
+        (void)waypointIndex;
+        return 3;
+    };
+    constexpr uint32_t maxCorrectionAttempts = 5;
+
+    const auto logMotionSignals = [this, &waypointToleranceSteps](const char *event, size_t waypointIndex) {
+        const size_t n = std::min(
+            std::min(static_cast<size_t>(_robotConfig.degreesOfFreedom), _robotState.targetJointSteps.size()),
+            _robotState.jointSteps.size());
+        const uint64_t timeMs = static_cast<uint64_t>(esp_timer_get_time() / 1000ULL);
+        const uint32_t sample = _motionCsvSample++;
+        const int toleranceSteps = waypointToleranceSteps(waypointIndex);
+        const char *controlMode = _waypointCorrectionActive ? "stop_go" : "synchronized";
+
+        int maxAbsRemainingOl = 0;
+        int maxAbsSensorTargetError = 0;
+        int maxAbsSlipError = 0;
+        size_t maxRemainingJoint = 0;
+        size_t maxSensorTargetJoint = 0;
+        size_t maxSlipJoint = 0;
+
+        for (size_t i = 0; i < n; ++i) {
+            const int qOl = _robotState.jointSteps[i];
+            const int qCmd = _robotState.targetJointSteps[i];
+            const int qRef =
+                (i < _waypointReferenceJointSteps.size()) ? _waypointReferenceJointSteps[i] : qCmd;
+            const int remainingOl = qRef - qOl;
+
+            const bool hasFerris =
+                _robotState.needsPositionalFeedback &&
+                i < _robotState.rawFerrisValues.size() &&
+                i < _robotState.ferrisWheelJointSteps.size();
+
+            float ferrisTaredDeg = 0.0f;
+            if (i < _robotState.rawFerrisValues.size()) {
+                ferrisTaredDeg = _robotState.rawFerrisValues[i];
+                if (i < _robotState.ferrisWheelRawValues.size() && ferrisMechanicalZeroRawCountsValid(i)) {
+                    ferrisTaredDeg =
+                        ferrisWrappedRawDelta(_robotState.ferrisWheelRawValues[i], ferrisMechanicalZeroRawCounts(i)) *
+                        kFerrisRawCountsToDegrees;
+                }
+                if (i < _ferrisWheelZeroOffset.size()) {
+                    ferrisTaredDeg -= _ferrisWheelZeroOffset[i];
+                }
+            }
+
+            const float ferrisJointDeg = ferrisTaredDeg * ferrisToJointScale(i);
+            const int qSensor = hasFerris ? _robotState.ferrisWheelJointSteps[i] : 0;
+            const int sensorTargetError = hasFerris ? (qRef - qSensor) : 0;
+            const int slipError = hasFerris ? (qSensor - qOl) : 0;
+            const float ferrisRawDeg = (i < _robotState.rawFerrisValues.size()) ? _robotState.rawFerrisValues[i] : 0.0f;
+            const float ferrisScale = ferrisToJointScale(i);
+            const bool needsCorrection = hasFerris && std::abs(sensorTargetError) > toleranceSteps;
+            const float jointVelocity = (i < _steppers.size()) ? _steppers[i].getVelocity() : 0.0f;
+            const float jointSetpointVelocity = (i < _steppers.size()) ? _steppers[i].getSetpointVelocity() : 0.0f;
+            const float jointMaxVelocity = (i < _steppers.size()) ? _steppers[i].getMaxVelocity() : 0.0f;
+
+            if (std::abs(remainingOl) > maxAbsRemainingOl) {
+                maxAbsRemainingOl = std::abs(remainingOl);
+                maxRemainingJoint = i;
+            }
+            if (hasFerris && std::abs(sensorTargetError) > maxAbsSensorTargetError) {
+                maxAbsSensorTargetError = std::abs(sensorTargetError);
+                maxSensorTargetJoint = i;
+            }
+            if (hasFerris && std::abs(slipError) > maxAbsSlipError) {
+                maxAbsSlipError = std::abs(slipError);
+                maxSlipJoint = i;
+            }
+
+            ESP_LOGI(TAG,
+                     "MOTION_CSV: %llu,%u,%s,%s,%u,%u,%u,%d,%d,%+d,%d,%.3f,%.3f,%.3f,%.3f,%d,%+d,%+d,%d,%d,%d,%u,%.3f,%.3f,%.3f",
+                     (unsigned long long)timeMs,
+                     (unsigned)sample,
+                     event,
+                     controlMode,
+                     (unsigned)(waypointIndex + 1),
+                     (unsigned)_pathWaypoints,
+                     (unsigned)i,
+                     qOl,
+                     qRef,
+                     remainingOl,
+                     hasFerris ? 1 : 0,
+                     ferrisRawDeg,
+                     ferrisTaredDeg,
+                     ferrisScale,
+                     ferrisJointDeg,
+                     qSensor,
+                     sensorTargetError,
+                     slipError,
+                     qCmd,
+                     toleranceSteps,
+                     needsCorrection ? 1 : 0,
+                     (unsigned)_waypointCorrectionAttempts,
+                     jointVelocity,
+                     jointSetpointVelocity,
+                     jointMaxVelocity);
+        }
+
+        ESP_LOGI(TAG,
+                 "MC_SUMMARY event=%s mode=%s waypoint=%u/%u cl_active=%d cl_tolerance=%d correction_attempt=%u max_remaining_ol=%d@joint[%u] max_sensor_target_error=%d@joint[%u] max_slip_error=%d@joint[%u]",
+                 event,
+                 controlMode,
+                 (unsigned)(waypointIndex + 1),
+                 (unsigned)_pathWaypoints,
+                 _waypointCorrectionActive ? 1 : 0,
+                 toleranceSteps,
+                 (unsigned)_waypointCorrectionAttempts,
+                 maxAbsRemainingOl,
+                 (unsigned)maxRemainingJoint,
+                 maxAbsSensorTargetError,
+                 (unsigned)maxSensorTargetJoint,
+                 maxAbsSlipError,
+                 (unsigned)maxSlipJoint);
+    };
+
+    // Send waypoint if not already sent
+    if (!_waypointSent && _currentWaypoint < _pathWaypoints && !_path.empty()) {
+        if (_currentWaypoint < _path.size()) {
+            std::vector<float> target(_path[_currentWaypoint].begin(), _path[_currentWaypoint].end());
+            _waypointReferenceJointSteps = radToSteps(target);
+            if (_waypointReferenceJointSteps.size() < static_cast<size_t>(_robotConfig.degreesOfFreedom)) {
+                ESP_LOGW(TAG, "Skipping invalid waypoint %zu: radToSteps() returned %u steps",
+                         _currentWaypoint + 1,
+                         (unsigned)_waypointReferenceJointSteps.size());
+                _currentWaypoint++;
+                return;
+            }
+
+            setSynchronizedJointTargetSteps(_waypointReferenceJointSteps, 10.0f);
+            _waypointSent = true;
+            _waypointCorrectionActive = false;
+            _waypointCorrectionAttempts = 0;
+
+            for (size_t i = 0; i < _waypointReferenceJointSteps.size(); ++i) {
+                const float angle = (i < target.size()) ? target[i] : 0.0f;
+                ESP_LOGI(TAG, "target joint[%u]: rad=%.6f -> steps=%d",
+                         (unsigned)i,
+                         angle,
+                         _waypointReferenceJointSteps[i]);
+            }
+
+            ESP_LOGI(TAG, "Sent waypoint %zu / %zu",
+                     _currentWaypoint + 1, _pathWaypoints);
+        }
+    }
+
+    if (_motionLogCounter >= 30) {
+        _motionLogCounter = 0;
+        logMotionSignals("periodic", _currentWaypoint);
+    }
+
+    if (_waypointSent && isAtStepTarget()) {
+        const size_t reachedWaypoint = _currentWaypoint;
+        const size_t n = std::min(
+            std::min(static_cast<size_t>(_robotConfig.degreesOfFreedom), _robotState.jointSteps.size()),
+            std::min(_robotState.targetJointSteps.size(), _waypointReferenceJointSteps.size()));
+        const int toleranceSteps = waypointToleranceSteps(reachedWaypoint);
 
         bool needsCorrection = false;
         bool hasAnyFerris = false;
         std::vector<int> correctionTargets = _robotState.jointSteps;
 
-        //if (!isFinalWaypoint) {
         for (size_t i = 0; i < n; ++i) {
             const bool hasFerris =
                 _robotState.needsPositionalFeedback &&
@@ -1093,7 +1370,6 @@ void RobotController::processMotionControl(bool executing_path, size_t path_wayp
                 correctionTargets[i] = _robotState.jointSteps[i];
             }
         }
-        //}
 
         if (needsCorrection && _waypointCorrectionAttempts < maxCorrectionAttempts) {
             _waypointCorrectionActive = true;
@@ -1127,8 +1403,6 @@ void RobotController::processMotionControl(bool executing_path, size_t path_wayp
             logMotionSignals("correction_limit_reached", reachedWaypoint);
         }
 
-        //if (isFinalWaypoint) {
-        //    ESP_LOGI(TAG, "Final waypoint CL correction skipped");
         if (!hasAnyFerris) {
             ESP_LOGW(TAG, "No valid Ferris feedback at waypoint %zu / %zu; accepting open-loop target",
                      reachedWaypoint + 1,

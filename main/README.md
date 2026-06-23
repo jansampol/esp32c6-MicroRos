@@ -208,7 +208,7 @@ In another terminal, or after exiting monitor with `Ctrl + ]`, extract the motio
 
 ```bash
 mkdir -p logs
-printf 'time_ms,sample,event,waypoint,total_waypoints,joint,q_ol,q_ref,remaining_ol,ferris_valid,ferris_raw_deg,ferris_tared_deg,ferris_scale,ferris_joint_deg,q_sensor,sensor_target_error,slip_error,q_cmd,cl_tolerance,needs_correction,correction_attempt\n' > logs/motion_path.csv
+printf 'time_ms,sample,event,control_mode,waypoint,total_waypoints,joint,q_ol,q_ref,remaining_ol,ferris_valid,ferris_raw_deg,ferris_tared_deg,ferris_scale,ferris_joint_deg,q_sensor,sensor_target_error,slip_error,q_cmd,cl_tolerance,needs_correction,correction_attempt,joint_velocity,joint_setpoint_velocity,joint_max_velocity\n' > logs/motion_path.csv
 grep 'MOTION_CSV' logs/raw.txt | sed -E 's/^.*MOTION_CSV: //' >> logs/motion_path.csv
 
 wc -l logs/motion_path.csv
@@ -231,7 +231,7 @@ Optional: split one CSV per joint:
 
 ```bash
 for j in 0 1 2 3 4; do
-  awk -F, -v joint="$j" 'NR==1 || $6==joint' logs/motion_path.csv > "logs/motion_path_joint${j}.csv"
+  awk -F, -v joint="$j" 'NR==1 || $7==joint' logs/motion_path.csv > "logs/motion_path_joint${j}.csv"
 done
 
 wc -l logs/motion_path_joint*.csv
@@ -250,9 +250,9 @@ awk -F, 'NR==1 || $3=="path_finished" {print}' logs/motion_path.csv > logs/motio
 # Worst absolute slip and sensor-target error per joint.
 awk -F, '
 NR>1 {
-  joint=$6
-  sensor=$16+0
-  slip=$17+0
+  joint=$7
+  sensor=$17+0
+  slip=$18+0
   abs_sensor=(sensor<0?-sensor:sensor)
   abs_slip=(slip<0?-slip:slip)
   if (abs_sensor > max_sensor[joint]) max_sensor[joint]=abs_sensor
@@ -277,7 +277,7 @@ idf.py -p /dev/cu.usbserial-140 monitor | tee logs/raw.txt
 ```
 
 ```bash
-printf 'time_ms,sample,event,waypoint,total_waypoints,joint,q_ol,q_ref,remaining_ol,ferris_valid,ferris_raw_deg,ferris_tared_deg,ferris_scale,ferris_joint_deg,q_sensor,sensor_target_error,slip_error,q_cmd,cl_tolerance,needs_correction,correction_attempt\n' > logs/motion_path.csv
+printf 'time_ms,sample,event,control_mode,waypoint,total_waypoints,joint,q_ol,q_ref,remaining_ol,ferris_valid,ferris_raw_deg,ferris_tared_deg,ferris_scale,ferris_joint_deg,q_sensor,sensor_target_error,slip_error,q_cmd,cl_tolerance,needs_correction,correction_attempt,joint_velocity,joint_setpoint_velocity,joint_max_velocity\n' > logs/motion_path.csv
 grep 'MOTION_CSV' logs/raw.txt | sed -E 's/^.*MOTION_CSV: //' >> logs/motion_path.csv
 
 wc -l logs/motion_path.csv

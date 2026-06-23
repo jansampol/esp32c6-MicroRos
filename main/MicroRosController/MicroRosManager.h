@@ -13,7 +13,7 @@ class MicroRosManager {
 public:
     static constexpr size_t MAX_JOINTS = 5;
     static constexpr size_t MAX_WAYPOINTS = 30;
-    static constexpr size_t MAX_PATH_EXTRA_VALUES = 1;
+    static constexpr size_t MAX_PATH_EXTRA_VALUES = 2;
     static constexpr size_t MAX_PATH_MSG_VALUES = 2 + MAX_WAYPOINTS * MAX_JOINTS + MAX_PATH_EXTRA_VALUES;
 
     static constexpr size_t MAX_ESP_CMD_LEN = 192;
@@ -31,7 +31,8 @@ public:
         size_t &waypoints,
         size_t &dof,
         bool &has_insertion_depth,
-        float &insertion_depth_mm
+        float &insertion_depth_mm,
+        bool &is_incision_correction
     );
 
     bool hasNewEspCmd() const;
@@ -86,6 +87,7 @@ private:
     size_t latest_path_dof_ = 0;
     bool latest_path_has_insertion_depth_ = false;
     float latest_insertion_depth_mm_ = 0.0f;
+    bool latest_path_is_incision_correction_ = false;
 
     // latest raw ESP command
     char latest_esp_cmd_[MAX_ESP_CMD_LEN];
