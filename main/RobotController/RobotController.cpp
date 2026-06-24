@@ -10,22 +10,39 @@
 
 static const char *TAG = "RobotController";
 
+// 51mm for the ferris wheels
 namespace {
+// constexpr float kFerrisToJointScale[] = {
+//     5.0f / 8.33f,
+//     5.0f / 9.24f,
+//     5.0f / 4.23f,
+//     5.0f / 4.28f,
+//    -5.0f / 4.44f,
+// };
+
 constexpr float kFerrisToJointScale[] = {
-    5.0f / 8.33f,
-    5.0f / 9.24f,
-    5.0f / 4.23f,
-    5.0f / 4.28f,
-   -5.0f / 4.44f,
+    5.1f / 8.62f,//8.45f,//8.75f,
+    5.1f / 9.5f,//9.35f,
+    5.1f / 4.4f,
+    5.1f / 4.4f,
+   -5.1f / 4.6f,
 };
 
 // Absolute AS5600 rawAngle() readings at the leveled mechanical (0,0,0,0,0) pose.
+// constexpr float kFerrisMechanicalZeroRawCounts[] = {
+//     430.0f,
+//     593.0f,
+//     205.0f,
+//     1598.0f,
+//     1972.0f,
+// };
+
 constexpr float kFerrisMechanicalZeroRawCounts[] = {
-    430.0f,
-    593.0f,
-    205.0f,
-    1598.0f,
-    1972.0f,
+    551.0f,   // joint[0]
+    555.0f,   // joint[1]
+    186.0f,   // joint[2] also saw 187.0, so 186/187 are both within noise
+    1593.0f,  // joint[3]
+    1970.0f,  // joint[4]
 };
 
 constexpr float kFerrisRawCountsToDegrees = 360.0f / 4096.0f;
@@ -741,6 +758,119 @@ bool RobotController::syncOpenLoopEstimateToFerrisFeedback(const char *reason) {
              reason ? " for " : "",
              reason ? reason : "");
     return true;
+}
+
+void RobotController::logOpenLoopMotionSignals(const char *event, size_t waypointIndex, size_t totalWaypoints) {
+    const size_t n = std::min(
+        std::min(static_cast<size_t>(_robotConfig.degreesOfFreedom), _robotState.targetJointSteps.size()),
+        _robotState.jointSteps.size());
+    if (n == 0) {
+        return;
+    }
+
+    const uint64_t timeMs = static_cast<uint64_t>(esp_timer_get_time() / 1000ULL);
+    const uint32_t sample = _motionCsvSample++;
+    const int toleranceSteps = 0;
+    const char *controlMode = "open_loop";
+
+    int maxAbsRemainingOl = 0;
+    int maxAbsSensorTargetError = 0;
+    int maxAbsSlipError = 0;
+    size_t maxRemainingJoint = 0;
+    size_t maxSensorTargetJoint = 0;
+    size_t maxSlipJoint = 0;
+    const unsigned displayWaypoint = (totalWaypoints > 0) ? static_cast<unsigned>(waypointIndex + 1) : 0U;
+
+    for (size_t i = 0; i < n; ++i) {
+        const int qOl = _robotState.jointSteps[i];
+        const int qCmd = _robotState.targetJointSteps[i];
+        const int qRef = qCmd;
+        const int remainingOl = qRef - qOl;
+
+        const bool hasFerris =
+            _robotState.needsPositionalFeedback &&
+            i < _robotState.rawFerrisValues.size() &&
+            i < _robotState.ferrisWheelJointSteps.size();
+
+        float ferrisTaredDeg = 0.0f;
+        if (i < _robotState.rawFerrisValues.size()) {
+            ferrisTaredDeg = _robotState.rawFerrisValues[i];
+            if (i < _robotState.ferrisWheelRawValues.size() && ferrisMechanicalZeroRawCountsValid(i)) {
+                ferrisTaredDeg =
+                    ferrisWrappedRawDelta(_robotState.ferrisWheelRawValues[i], ferrisMechanicalZeroRawCounts(i)) *
+                    kFerrisRawCountsToDegrees;
+            }
+            if (i < _ferrisWheelZeroOffset.size()) {
+                ferrisTaredDeg -= _ferrisWheelZeroOffset[i];
+            }
+        }
+
+        const float ferrisJointDeg = ferrisTaredDeg * ferrisToJointScale(i);
+        const int qSensor = hasFerris ? _robotState.ferrisWheelJointSteps[i] : 0;
+        const int sensorTargetError = hasFerris ? (qRef - qSensor) : 0;
+        const int slipError = hasFerris ? (qSensor - qOl) : 0;
+        const float ferrisRawDeg = (i < _robotState.rawFerrisValues.size()) ? _robotState.rawFerrisValues[i] : 0.0f;
+        const float ferrisScale = ferrisToJointScale(i);
+        const bool needsCorrection = false;
+        const float jointVelocity = (i < _steppers.size()) ? _steppers[i].getVelocity() : 0.0f;
+        const float jointSetpointVelocity = (i < _steppers.size()) ? _steppers[i].getSetpointVelocity() : 0.0f;
+        const float jointMaxVelocity = (i < _steppers.size()) ? _steppers[i].getMaxVelocity() : 0.0f;
+
+        if (std::abs(remainingOl) > maxAbsRemainingOl) {
+            maxAbsRemainingOl = std::abs(remainingOl);
+            maxRemainingJoint = i;
+        }
+        if (hasFerris && std::abs(sensorTargetError) > maxAbsSensorTargetError) {
+            maxAbsSensorTargetError = std::abs(sensorTargetError);
+            maxSensorTargetJoint = i;
+        }
+        if (hasFerris && std::abs(slipError) > maxAbsSlipError) {
+            maxAbsSlipError = std::abs(slipError);
+            maxSlipJoint = i;
+        }
+
+        ESP_LOGI(TAG,
+                 "MOTION_CSV: %llu,%u,%s,%s,%u,%u,%u,%d,%d,%+d,%d,%.3f,%.3f,%.3f,%.3f,%d,%+d,%+d,%d,%d,%d,%u,%.3f,%.3f,%.3f",
+                 (unsigned long long)timeMs,
+                 (unsigned)sample,
+                 event ? event : "periodic",
+                 controlMode,
+                 displayWaypoint,
+                 (unsigned)totalWaypoints,
+                 (unsigned)i,
+                 qOl,
+                 qRef,
+                 remainingOl,
+                 hasFerris ? 1 : 0,
+                 ferrisRawDeg,
+                 ferrisTaredDeg,
+                 ferrisScale,
+                 ferrisJointDeg,
+                 qSensor,
+                 sensorTargetError,
+                 slipError,
+                 qCmd,
+                 toleranceSteps,
+                 needsCorrection ? 1 : 0,
+                 0U,
+                 jointVelocity,
+                 jointSetpointVelocity,
+                 jointMaxVelocity);
+    }
+
+    ESP_LOGI(TAG,
+             "MC_SUMMARY event=%s mode=%s waypoint=%u/%u cl_active=0 cl_tolerance=%d correction_attempt=0 max_remaining_ol=%d@joint[%u] max_sensor_target_error=%d@joint[%u] max_slip_error=%d@joint[%u]",
+             event ? event : "periodic",
+             controlMode,
+             displayWaypoint,
+             (unsigned)totalWaypoints,
+             toleranceSteps,
+             maxAbsRemainingOl,
+             (unsigned)maxRemainingJoint,
+             maxAbsSensorTargetError,
+             (unsigned)maxSensorTargetJoint,
+             maxAbsSlipError,
+             (unsigned)maxSlipJoint);
 }
 
 RobotState RobotController::getRobotState() const {

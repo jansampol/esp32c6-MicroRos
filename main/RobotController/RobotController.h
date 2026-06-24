@@ -126,6 +126,7 @@ public:
     bool syncOpenLoopEstimateToFerrisFeedback(const char *reason = nullptr);
 
     void setFerrisWheelFeedback(const std::vector<float>& sensorValues, const std::vector<float>& rawValues = {});
+    void logOpenLoopMotionSignals(const char *event, size_t waypointIndex, size_t totalWaypoints);
     void setNewPath(const std::vector<std::vector<float>> &path, size_t path_waypoints, size_t path_dof);
     void processMotionControl(bool executing_path, size_t path_waypoints, size_t path_dof);
     bool isPathExecuting() const { return _pathExecuting && _currentWaypoint < _pathWaypoints; }

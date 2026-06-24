@@ -235,6 +235,7 @@ extern "C" void app_main(void)
     bool path_is_incision_correction = false;
     bool needle_target_available = false;
     int needle_target_steps = 0;
+    uint32_t open_loop_log_counter = 0;
 #if ACTIVE_SPI_RUNTIME_MODE != SPI_RUNTIME_MODE_SPI0_ONLY
     (void)needle_target_available;
     (void)needle_target_steps;
@@ -363,7 +364,7 @@ extern "C" void app_main(void)
         //     }
         // }
 
-        // Read ferris wheel angles for logging and potential use in control (not currently used in control).
+        // Read ferris wheel angles for logging and control.
         #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI1_ONLY
 
             std::vector<float> ferris_angles = i2cManager.readAllFerrisWheelAngles();
@@ -380,9 +381,9 @@ extern "C" void app_main(void)
             }
         #endif  
 
-        //#if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI1_ONLY
-        //float pressure1 = i2cManager.readPressureSensor(1);
-        //float pressure0 = i2cManager.readPressureSensor(0);
+        // #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI1_ONLY
+        // float pressure1 = i2cManager.readPressureSensor(1);
+        // float pressure0 = i2cManager.readPressureSensor(0);
 
         // uint16_t valve_state = robot_controller.getValveState();
         // uint8_t j1_a = (valve_state >> 0) & 0x1;
@@ -398,10 +399,27 @@ extern "C" void app_main(void)
         //              j1_a,
         //              j1_b,
         //              valve_state);
-        //}
-        //#endif
+        // }
+        // #endif
 
         robot_controller.update();
+
+        // #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI1_ONLY
+        // if (!robot_controller.isAtStepTarget()) {
+        //     ++open_loop_log_counter;
+        //     if (open_loop_log_counter >= 10) {
+        //         open_loop_log_counter = 0;
+        //         robot_controller.logOpenLoopMotionSignals(
+        //             "periodic_ol",
+        //             executing_path ? current_wp : 0,
+        //             executing_path ? path_waypoints : 0
+        //         );
+        //     }
+        // } else {
+        //     open_loop_log_counter = 0;
+        // }
+        // #endif
+
         robot_controller.service();
 
         #if ACTIVE_SPI_RUNTIME_MODE == SPI_RUNTIME_MODE_SPI0_ONLY
