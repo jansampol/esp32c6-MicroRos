@@ -235,14 +235,14 @@ extern "C" void app_main(void)
     bool path_is_incision_correction = false;
     bool needle_target_available = false;
     int needle_target_steps = 0;
-    uint32_t open_loop_log_counter = 0;
+    //uint32_t open_loop_log_counter = 0;
 #if ACTIVE_SPI_RUNTIME_MODE != SPI_RUNTIME_MODE_SPI0_ONLY
     (void)needle_target_available;
     (void)needle_target_steps;
 #endif
-    size_t current_wp = 0;
+    //size_t current_wp = 0;
     bool executing_path = false;
-    bool waypoint_sent = false;
+    //bool waypoint_sent = false;
     bool incision_mode = false;
 
     static double path[MicroRosManager::MAX_WAYPOINTS][MicroRosManager::MAX_JOINTS];
@@ -290,7 +290,7 @@ extern "C" void app_main(void)
             micro_ros.consumeEspCmd(cmd, sizeof(cmd));
             if (!isCurrentJointPositionCommand(cmd)) {
                 executing_path = false;
-                waypoint_sent = false;
+                //waypoint_sent = false;
             }
             handleEspCommand(cmd, robot_controller, micro_ros, incision_mode);
         }
@@ -310,11 +310,11 @@ extern "C" void app_main(void)
                 pathVec[i].assign(path[i], path[i] + path_dof);
             }
             robot_controller.setNewPath(pathVec, path_waypoints, path_dof);
-            current_wp = 0;
+            //current_wp = 0;
             const bool path_allowed_in_incision_mode = path_is_incision_correction;
             const bool suppress_motion_for_incision_mode = incision_mode && !path_allowed_in_incision_mode;
             executing_path = (path_waypoints > 0) && !suppress_motion_for_incision_mode;
-            waypoint_sent = false;
+            //waypoint_sent = false;
             if (path_has_insertion_depth) {
                 needle_target_steps = robot_controller.needleDepthMmToSteps(path_insertion_depth_mm);
                 needle_target_available = true;

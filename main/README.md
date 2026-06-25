@@ -265,6 +265,19 @@ END {
 }' logs/motion_path.csv
 ```
 
+```bash
+ls /dev/cu.* 
+
+cd ~/esp/esp-idf-v5.5
+. ./export.sh
+cd ~/mamri_build/Mamri_v6_PlatformIO
+idf.py build
+idf.py -p /dev/cu.usbserial-140 flash monitor
+
+
+idf.py -p /dev/cu.usbserial-1140 flash monitor
+```
+
 
 ```bash
 cd ~/esp/esp-idf-v5.5
@@ -284,3 +297,6 @@ wc -l logs/motion_path.csv
 head -n 5 logs/motion_path.csv
 tail -n 5 logs/motion_path.csv
 ```
+
+printf 'time_ms,sample,event,control_mode,waypoint,total_waypoints,joint,q_ol,q_ref,remaining_ol,ferris_valid,ferris_raw_deg,ferris_tared_deg,ferris_scale,ferris_joint_deg,q_sensor,sensor_target_error,slip_error,q_cmd,cl_tolerance,needs_correction,correction_attempt,joint_velocity,joint_setpoint_velocity,joint_max_velocity\n' > logs/motion_path.csv
+grep 'MOTION_CSV' logs/raw.txt | sed -E 's/^.*MOTION_CSV: //' | perl -pe 's/\e\[[0-9;]*m//g' >> logs/motion_path.csv

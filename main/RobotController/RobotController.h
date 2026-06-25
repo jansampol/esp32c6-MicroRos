@@ -98,6 +98,7 @@ public:
     void updateTargetPosition();
 
     bool isAtStepTarget() const;
+    bool isNearStepTarget(int toleranceSteps) const;
 
     // =============================
     // ORIGINAL
