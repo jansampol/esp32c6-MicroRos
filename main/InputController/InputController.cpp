@@ -14,7 +14,6 @@
 
 static const char* TAG = "InputController";
 
-namespace {
 float mapNeedleSliderToVelocity(uint16_t raw, float maxVelocity)
 {
     constexpr int kSliderMin = 0;
@@ -37,7 +36,6 @@ float mapNeedleSliderToVelocity(uint16_t raw, float maxVelocity)
     const int activeRange = kSliderCenter - kSliderMin - kDeadband;
     const float scale = static_cast<float>((-offset) - kDeadband) / static_cast<float>(activeRange);
     return -maxVelocity * ((scale > 1.0f) ? 1.0f : scale);
-}
 }
 
 // Constructor
@@ -262,8 +260,6 @@ void InputController::update(
         if (incisionMode) {
             needleVelocity = mapNeedleSliderToVelocity(needleSliderRaw, maxVelocity);
             if (hasNeedleTarget) {
-                robotController.setNeedleIncisionTargetSteps(needleTargetSteps);
-
                 const RobotState state = robotController.getRobotState();
                 if (needleJointIdx < state.jointSteps.size()) {
                     const int currentSteps = state.jointSteps[needleJointIdx];
@@ -272,8 +268,10 @@ void InputController::update(
                     }
                 }
             }
-            robotController.setControlStrategy(PneumaticStepper::Controlstrategy::VELOCITY_CONTROL);
+            robotController.setNeedleVelocityControlEnabled(true);
             robotController.setTargetVelocity(needleJointIdx, needleVelocity);
+        } else {
+            robotController.setNeedleVelocityControlEnabled(false);
         }
     }
 

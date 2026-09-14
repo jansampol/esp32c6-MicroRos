@@ -28,6 +28,10 @@
 #include "InputController/SPI/SPI0Manager.h"
 #include "InputController/CanvasManager.h"
 
+// Shared by the physical and virtual needle sliders so both inputs have the
+// same center deadband and proportional velocity response.
+float mapNeedleSliderToVelocity(uint16_t raw, float maxVelocity);
+
 class InputController {
 public:
     InputController(InputModes defaultMode);

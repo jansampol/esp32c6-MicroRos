@@ -1,0 +1,1082 @@
+Command: /Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python /Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf_monitor.py -p /dev/cu.usbserial-140 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/esp32c6_microros_test.elf /Users/jansampolramirez/mamri_build/Mamri_v6_PlatformIO/build/bootloader/bootloader.elf -m '/Users/jansampolramirez/.espressif/python_env/idf5.5_py3.14_env/bin/python' '/Users/jansampolramirez/esp/esp-idf-v5.5/tools/idf.py' '-p' '/dev/cu.usbserial-140'
+i:[ADDBA]TX addba reESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x6c (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x1744
+load:0x4086b910,len:0xfa8
+load:0x4086e610,len:0x31a8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time May 26 2026 16:51:11[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (24) boot: efuse block revision: v0.3[0m
+[0;32mI (27) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (38) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (71) boot:  3 coredump         Unknown data     01 03 00210000 00010000[0m
+[0;32mI (78) boot:  4 littlefs         Unknown data     01 82 00220000 0007d000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=420f0020 size=2a67ch (173692) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0003a6a4 vaddr=40800000 size=05974h ( 22900) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=ec53ch (967996) map[0m
+[0;32mI (315) esp_image: segment 3: paddr=0012c564 vaddr=40805974 size=1b3ach (111532) load[0m
+[0;32mI (347) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (347) boot: Disabling RNG early entropy source...[0m
+[0;32mI (357) cpu_start: Unicore app[0m
+[0;32mI (366) cpu_start: Pro cpu start user code[0m
+[0;32mI (366) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (366) app_init: Application information:[0m
+[0;32mI (366) app_init: Project name:     esp32c6_microros_test[0m
+[0;32mI (371) app_init: App version:      2f88216-dirty[0m
+[0;32mI (375) app_init: Compile time:     Aug 21 2026 17:23:26[0m
+[0;32mI (381) app_init: ELF file SHA256:  f9234b266...[0m
+[0;32mI (385) app_init: ESP-IDF:          v5.5[0m
+[0;32mI (389) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (392) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (396) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (400) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (406) heap_init: At 4082FB70 len 0004CAA0 (306 KiB): RAM[0m
+[0;32mI (412) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (417) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (423) spi_flash: detected chip: generic[0m
+[0;32mI (426) spi_flash: flash io: dio[0m
+[0;33mW (429) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;32mI (443) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (447) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (454) coexist: coex firmware version: 831ec70[0m
+[0;32mI (472) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (473) main_task: Started on CPU0[0m
+[0;32mI (473) main_task: Calling app_main()[0m
+app_main started
+[0;32mI (483) SPI1Manager: SPI1Manager begin()[0m
+[0;32mI (483) SPI1Manager: Using pins MOSI=19 MISO=20 CLK=15 CS=23[0m
+[0;32mI (483) RobotController: Switched to PURPLE_MAMRI[0m
+[0;32mI (483) MicroRosManager: Initializing WiFi transport...[0m
+[0;32mI (483) wifi_station_netif: ESP_WIFI_MODE_STA[0m
+[0;32mI (493) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (493) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (513) wifi:wifi driver task: 40836f04, prio:23, stack:6656, core=0[0m
+[0;32mI (513) wifi:wifi firmware version: f3dbad7[0m
+[0;32mI (513) wifi:wifi certification version: v7.0[0m
+[0;32mI (513) wifi:config NVS flash: enabled[0m
+[0;32mI (513) wifi:config nano formatting: disabled[0m
+[0;32mI (523) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (523) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (533) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (533) wifi:Init management short buffer num: 32[0m
+[0;32mI (543) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (543) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (553) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (553) wifi:Init static rx buffer num: 10[0m
+[0;32mI (553) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (563) wifi_init: rx ba win: 6[0m
+[0;32mI (563) wifi_init: accept mbox: 6[0m
+[0;32mI (563) wifi_init: tcpip mbox: 32[0m
+[0;32mI (573) wifi_init: udp mbox: 6[0m
+[0;32mI (573) wifi_init: tcp mbox: 6[0m
+[0;32mI (573) wifi_init: tcp tx win: 5760[0m
+[0;32mI (583) wifi_init: tcp rx win: 5760[0m
+[0;32mI (583) wifi_init: tcp mss: 1440[0m
+[0;32mI (583) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (593) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (593) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;33mW (593) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (603) phy_init: phy_version 331,5b89037,Mar  3 2025,16:01:12[0m
+[0;33mW (683) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (683) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (683) wifi:(agc)0x600a7128:0xd201ab54, min.avgNF:0xce->0xd2(dB), RCalCount:0x1a, min.RRssi:0xb54(-74.75)[0m
+[0;32mI (693) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (703) wifi:mode : sta (20:6e:f1:18:8c:28)[0m
+[0;32mI (703) wifi:enable tsf[0m
+[0;32mI (713) wifi_station_netif: wifi_init_sta finished.[0m
+[0;32mI (713) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (723) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (723) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (743) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (753) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (753) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (753) wifi:Extended Capabilities length:8, operating_mode_notification:1[0m
+[0;32mI (763) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (763) wifi:(trc)phytype:CBW20-SGI, snr:45, maxRate:144, highestRateIdx:0[0m
+[0;33mW (773) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (783) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:45, ampduState:wait operational[0m
+[0;32mI (793) wifi:ifidx:0, rssi:-51, nf:-96, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (803) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)[0m
+[0;32mI (833) wifi:connected with RaM-lab, aid = 1, channel 6, BW20, bssid = 68:d7:9a:84:b1:fd[0m
+[0;32mI (833) wifi:security: WPA2-PSK, phy:bgn, rssi:-51, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (833) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (843) wifi:pm start, type:1, aid:0x1, trans-BSSID:68:d7:9a:84:b1:fd, BSSID[5]:0xfd, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (853) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (853) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (863) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (873) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (883) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (903) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (903) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (913) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (923) wifi:<ba-add>idx:0, ifx:0, tid:6, TAHI:0x100fdb1, TALO:0x849ad768, (ssn:2, win:64, cur_ssn:2), CONF:0xc0006005[0m
+[0;32mI (933) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1533) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:0(recipient)[0m
+[0;32mI (1533) wifi:[ADDBA]RX DELBA, reason:39, delete tid:5, initiator:0(recipient)[0m
+[0;32mI (1963) esp_netif_handlers: sta ip: 10.0.100.16, mask: 255.255.0.0, gw: 0.0.0.0[0m
+[0;32mI (1963) wifi_station_netif: got ip:10.0.100.16[0m
+[0;32mI (1963) wifi_station_netif: connected to ap SSID:RaM-lab password:robotics[0m
+[0;32mI (1963) wifi:Set ps type: 0, coexist: 0[0m
+
+[0;32mI (1973) MicroRosManager: Waiting before micro-ROS init...[0m
+[0;32mI (4973) MicroRosManager: Creating micro-ROS entities (attempt 1/5)...[0m
+[0;32mI (4973) MicroRosManager: Using micro-ROS client key: 0xf1188c28[0m
+[0;33mW (4973) wifi:<ba-add>idx:1, ifx:0, tid:0, TAHI:0x100fdb1, TALO:0x849ad768, (ssn:0, win:64, cur_ssn:0), CONF:0xc0000005[0m
+[0;32mI (4983) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:4, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (4993) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (5143) MicroRosManager: micro-ROS entities created[0m
+[0;32mI (5143) MicroRosManager: micro-ROS base ready[0m
+[0;32mI (5143) I2CManager: Starting I2C Manager with 5 Ferris wheels and 0 other sensors...[0m
+[0;32mI (5153) I2CManager: I2C bus started[0m
+[0;32mI (5153) I2CManager: Pressure sensor/internal multiplexer not required for this I2C setup.[0m
+[0;32mI (5163) I2CManager: I2C multiplexers initialized. Initializing Ferris wheels...[0m
+[0;32mI (5163) I2CManager: Initializing Ferris wheel sensors...[0m
+[0;32mI (5173) I2CManager: Ferris wheel sensor 0: 1[0m
+[0;32mI (5183) I2CManager: Ferris wheel sensor 1: 1[0m
+[0;32mI (5193) I2CManager: Ferris wheel sensor 2: 1[0m
+[0;32mI (5203) I2CManager: Ferris wheel sensor 3: 1[0m
+[0;32mI (5213) I2CManager: Ferris wheel sensor 4: 1[0m
+[0;32mI (5223) I2CManager: Ferris wheels successfully initialized[0m
+[0;32mI (5223) app_main: Application initialized successfully (SPI1 motor mode)[0m
+[0;32mI (6413) RobotController: FERRIS joint[0] abs_raw=1317.000 zero_raw=1314.000 cal_valid=1 angle_deg=-26.279 calibrated_deg=0.264 tared_deg=0.264 scale=0.592 joint_deg=0.156[0m
+[0;32mI (6413) RobotController: FERRIS_CSV: 5994,0,1317.000,1314.000,1,-26.279,0.264,0.264,0.592,0.156[0m
+[0;32mI (6423) RobotController: FERRIS joint[1] abs_raw=1676.000 zero_raw=1679.000 cal_valid=1 angle_deg=5.273 calibrated_deg=-0.264 tared_deg=-0.264 scale=0.537 joint_deg=-0.142[0m
+[0;32mI (6443) RobotController: FERRIS_CSV: 5994,1,1676.000,1679.000,1,5.273,-0.264,-0.264,0.537,-0.142[0m
+[0;32mI (6443) RobotController: FERRIS joint[2] abs_raw=1165.000 zero_raw=1167.000 cal_valid=1 angle_deg=-39.639 calibrated_deg=-0.176 tared_deg=-0.176 scale=1.159 joint_deg=-0.204[0m
+[0;32mI (6463) RobotController: FERRIS_CSV: 5994,2,1165.000,1167.000,1,-39.639,-0.176,-0.176,1.159,-0.204[0m
+[0;32mI (6473) RobotController: FERRIS joint[3] abs_raw=809.000 zero_raw=819.000 cal_valid=1 angle_deg=-70.928 calibrated_deg=-0.879 tared_deg=-0.879 scale=1.159 joint_deg=-1.019[0m
+[0;32mI (6483) RobotController: FERRIS_CSV: 5994,3,809.000,819.000,1,-70.928,-0.879,-0.879,1.159,-1.019[0m
+[0;32mI (6493) RobotController: FERRIS joint[4] abs_raw=1616.000 zero_raw=1625.000 cal_valid=1 angle_deg=0.000 calibrated_deg=-0.791 tared_deg=-0.791 scale=-1.085 joint_deg=0.858[0m
+[0;32mI (6513) RobotController: FERRIS_CSV: 5994,4,1616.000,1625.000,1,0.000,-0.791,-0.791,-1.085,0.858[0m
+[0;32mI (6523) app_main: OL_MOTION_CSV: 6105,0,0,0,0,0.000000,0.000000,2,0.002424,1317.000[0m
+[0;32mI (6523) app_main: OL_MOTION_CSV: 6105,0,1,0,0,0.000000,0.000000,-1,-0.001939,1676.000[0m
+[0;32mI (6533) app_main: OL_MOTION_CSV: 6105,0,2,0,0,0.000000,0.000000,-1,-0.003879,1165.000[0m
+[0;32mI (6543) app_main: OL_MOTION_CSV: 6105,0,3,0,0,0.000000,0.000000,-5,-0.019393,809.000[0m
+[0;32mI (6553) app_main: OL_MOTION_CSV: 6105,0,4,0,0,0.000000,0.000000,5,0.013635,1616.000[0m
+[0;32mI (7753) RobotController: FERRIS joint[0] abs_raw=1317.000 zero_raw=1314.000 cal_valid=1 angle_deg=-26.279 calibrated_deg=0.264 tared_deg=0.264 scale=0.592 joint_deg=0.156[0m
+[0;32mI (7753) RobotController: FERRIS_CSV: 7334,0,1317.000,1314.000,1,-26.279,0.264,0.264,0.592,0.156[0m
+[0;32mI (7763) RobotController: FERRIS joint[1] abs_raw=1676.000 zero_raw=1679.000 cal_valid=1 angle_deg=5.273 calibrated_deg=-0.264 tared_deg=-0.264 scale=0.537 joint_deg=-0.142[0m
+[0;32mI (7783) RobotController: FERRIS_CSV: 7334,1,1676.000,1679.000,1,5.273,-0.264,-0.264,0.537,-0.142[0m
+[0;32mI (7783) RobotController: FERRIS joint[2] abs_raw=1165.000 zero_raw=1167.000 cal_valid=1 angle_deg=-39.727 calibrated_deg=-0.176 tared_deg=-0.176 scale=1.159 joint_deg=-0.204[0m
+[0;32mI (7803) RobotController: FERRIS_CSV: 7334,2,1165.000,1167.000,1,-39.727,-0.176,-0.176,1.159,-0.204[0m
+[0;32mI (7813) RobotController: FERRIS joint[3] abs_raw=810.000 zero_raw=819.000 cal_valid=1 angle_deg=-70.928 calibrated_deg=-0.791 tared_deg=-0.791 scale=1.159 joint_deg=-0.917[0m
+[0;32mI (7823) RobotController: FERRIS_CSV: 7334,3,810.000,819.000,1,-70.928,-0.791,-0.791,1.159,-0.917[0m
+[0;32mI (7833) RobotController: FERRIS joint[4] abs_raw=1616.000 zero_raw=1625.000 cal_valid=1 angle_deg=0.000 calibrated_deg=-0.791 tared_deg=-0.791 scale=-1.085 joint_deg=0.858[0m
+[0;32mI (7853) RobotController: FERRIS_CSV: 7334,4,1616.000,1625.000,1,0.000,-0.791,-0.791,-1.085,0.858[0m
+[0;32mI (7863) app_main: OL_MOTION_CSV: 7445,1,0,0,0,0.000000,0.000000,2,0.002424,1317.000[0m
+[0;32mI (7863) app_main: OL_MOTION_CSV: 7445,1,1,0,0,0.000000,0.000000,-1,-0.001939,1676.000[0m
+[0;32mI (7873) app_main: OL_MOTION_CSV: 7445,1,2,0,0,0.000000,0.000000,-1,-0.003879,1165.000[0m
+[0;32mI (7883) app_main: OL_MOTION_CSV: 7445,1,3,0,0,0.000000,0.000000,-4,-0.015514,810.000[0m
+[0;32mI (7893) app_main: OL_MOTION_CSV: 7445,1,4,0,0,0.000000,0.000000,5,0.013635,1616.000[0m
+[0;32mI (9093) RobotController: FERRIS joint[0] abs_raw=1317.000 zero_raw=1314.000 cal_valid=1 angle_deg=-26.279 calibrated_deg=0.264 tared_deg=0.264 scale=0.592 joint_deg=0.156[0m
+[0;32mI (9093) RobotController: FERRIS_CSV: 8674,0,1317.000,1314.000,1,-26.279,0.264,0.264,0.592,0.156[0m
+[0;32mI (9103) RobotController: FERRIS joint[1] abs_raw=1676.000 zero_raw=1679.000 cal_valid=1 angle_deg=5.273 calibrated_deg=-0.264 tared_deg=-0.264 scale=0.537 joint_deg=-0.142[0m
+[0;32mI (9123) RobotController: FERRIS_CSV: 8674,1,1676.000,1679.000,1,5.273,-0.264,-0.264,0.537,-0.142[0m
+[0;32mI (9133) RobotController: FERRIS joint[2] abs_raw=1165.000 zero_raw=1167.000 cal_valid=1 angle_deg=-39.639 calibrated_deg=-0.176 tared_deg=-0.176 scale=1.159 joint_deg=-0.204[0m
+[0;32mI (9143) RobotController: FERRIS_CSV: 8674,2,1165.000,1167.000,1,-39.639,-0.176,-0.176,1.159,-0.204[0m
+[0;32mI (9153) RobotController: FERRIS joint[3] abs_raw=810.000 zero_raw=819.000 cal_valid=1 angle_deg=-70.928 calibrated_deg=-0.791 tared_deg=-0.791 scale=1.159 joint_deg=-0.917[0m
+[0;32mI (9163) RobotController: FERRIS_CSV: 8674,3,810.000,819.000,1,-70.928,-0.791,-0.791,1.159,-0.917[0m
+[0;32mI (9173) RobotController: FERRIS joint[4] abs_raw=1616.000 zero_raw=1625.000 cal_valid=1 angle_deg=0.000 calibrated_deg=-0.791 tared_deg=-0.791 scale=-1.085 joint_deg=0.858[0m
+[0;32mI (9193) RobotController: FERRIS_CSV: 8674,4,1616.000,1625.000,1,0.000,-0.791,-0.791,-1.085,0.858[0m
+[0;32mI (9203) app_main: OL_MOTION_CSV: 8785,2,0,0,0,0.000000,0.000000,2,0.002424,1317.000[0m
+[0;32mI (9203) app_main: OL_MOTION_CSV: 8785,2,1,0,0,0.000000,0.000000,-1,-0.001939,1676.000[0m
+[0;32mI (9213) app_main: OL_MOTION_CSV: 8785,2,2,0,0,0.000000,0.000000,-1,-0.003879,1165.000[0m
+[0;32mI (9223) app_main: OL_MOTION_CSV: 8785,2,3,0,0,0.000000,0.000000,-4,-0.015514,810.000[0m
+[0;32mI (9233) app_main: OL_MOTION_CSV: 8785,2,4,0,0,0.000000,0.000000,5,0.013635,1616.000[0m
+[0;32mI (10433) RobotController: FERRIS joint[0] abs_raw=1317.000 zero_raw=1314.000 cal_valid=1 angle_deg=-26.279 calibrated_deg=0.264 tared_deg=0.264 scale=0.592 joint_deg=0.156[0m
+[0;32mI (10433) RobotController: FERRIS_CSV: 10014,0,1317.000,1314.000,1,-26.279,0.264,0.264,0.592,0.156[0m
+[0;32mI (10443) RobotController: FERRIS joint[1] abs_raw=1676.000 zero_raw=1679.000 cal_valid=1 angle_deg=5.273 calibrated_deg=-0.264 tared_deg=-0.264 scale=0.537 joint_deg=-0.142[0m
+[0;32mI (10463) RobotController: FERRIS_CSV: 10014,1,1676.000,1679.000,1,5.273,-0.264,-0.264,0.537,-0.142[0m
+[0;32mI (10473) RobotController: FERRIS joint[2] abs_raw=1165.000 zero_raw=1167.000 cal_valid=1 angle_deg=-39.639 calibrated_deg=-0.176 tared_deg=-0.176 scale=1.159 joint_deg=-0.204[0m
+[0;32mI (10483) RobotController: FERRIS_CSV: 10014,2,1165.000,1167.000,1,-39.639,-0.176,-0.176,1.159,-0.204[0m
+[0;32mI (10493) RobotController: FERRIS joint[3] abs_raw=809.000 zero_raw=819.000 cal_valid=1 angle_deg=-70.928 calibrated_deg=-0.879 tared_deg=-0.879 scale=1.159 joint_deg=-1.019[0m
+[0;32mI (10503) RobotController: FERRIS_CSV: 10014,3,809.000,819.000,1,-70.928,-0.879,-0.879,1.159,-1.019[0m
+[0;32mI (10513) RobotController: FERRIS joint[4] abs_raw=1616.000 zero_raw=1625.000 cal_valid=1 angle_deg=0.000 calibrated_deg=-0.791 tared_deg=-0.791 scale=-1.085 joint_deg=0.858[0m
+[0;32mI (10533) RobotController: FERRIS_CSV: 10014,4,1616.000,1625.000,1,0.000,-0.791,-0.791,-1.085,0.858[0m
+[0;32mI (10543) app_main: OL_MOTION_CSV: 10126,3,0,0,0,0.000000,0.000000,2,0.002424,1317.000[0m
+[0;32mI (10553) app_main: OL_MOTION_CSV: 10126,3,1,0,0,0.000000,0.000000,-1,-0.001939,1676.000[0m
+[0;32mI (10553) app_main: OL_MOTION_CSV: 10126,3,2,0,0,0.000000,0.000000,-1,-0.003879,1165.000[0m
+[0;32mI (10563) app_main: OL_MOTION_CSV: 10126,3,3,0,0,0.000000,0.000000,-5,-0.019393,809.000[0m
+[0;32mI (10573) app_main: OL_MOTION_CSV: 10126,3,4,0,0,0.000000,0.000000,5,0.013635,1616.000[0m
+[0;32mI (11783) RobotController: FERRIS joint[0] abs_raw=1317.000 zero_raw=1314.000 cal_valid=1 angle_deg=-26.279 calibrated_deg=0.264 tared_deg=0.264 scale=0.592 joint_deg=0.156[0m
+[0;32mI (11783) RobotController: FERRIS_CSV: 11364,0,1317.000,1314.000,1,-26.279,0.264,0.264,0.592,0.156[0m
+[0;32mI (11793) RobotController: FERRIS joint[1] abs_raw=1676.000 zero_raw=1679.000 cal_valid=1 angle_deg=5.273 calibrated_deg=-0.264 tared_deg=-0.264 scale=0.537 joint_deg=-0.142[0m
+[0;32mI (11813) RobotController: FERRIS_CSV: 11364,1,1676.000,1679.000,1,5.273,-0.264,-0.264,0.537,-0.142[0m
+[0;32mI (11823) RobotController: FERRIS joint[2] abs_raw=1165.000 zero_raw=1167.000 cal_valid=1 angle_deg=-39.639 calibrated_deg=-0.176 tared_deg=-0.176 scale=1.159 joint_deg=-0.204[0m
+[0;32mI (11833) RobotController: FERRIS_CSV: 11364,2,1165.000,1167.000,1,-39.639,-0.176,-0.176,1.159,-0.204[0m
+[0;32mI (11843) RobotController: FERRIS joint[3] abs_raw=809.000 zero_raw=819.000 cal_valid=1 angle_deg=-70.840 calibrated_deg=-0.879 tared_deg=-0.879 scale=1.159 joint_deg=-1.019[0m
+[0;32mI (11853) RobotController: FERRIS_CSV: 11364,3,809.000,819.000,1,-70.840,-0.879,-0.879,1.159,-1.019[0m
+[0;32mI (11863) RobotController: FERRIS joint[4] abs_raw=1616.000 zero_raw=1625.000 cal_valid=1 angle_deg=0.000 calibrated_deg=-0.791 tared_deg=-0.791 scale=-1.085 joint_deg=0.858[0m
+[0;32mI (11883) RobotController: FERRIS_CSV: 11364,4,1616.000,1625.000,1,0.000,-0.791,-0.791,-1.085,0.858[0m
+[0;32mI (11893) app_main: OL_MOTION_CSV: 11476,4,0,0,0,0.000000,0.000000,2,0.002424,1317.000[0m
+[0;32mI (11903) app_main: OL_MOTION_CSV: 11476,4,1,0,0,0.000000,0.000000,-1,-0.001939,1676.000[0m
+[0;32mI (11903) app_main: OL_MOTION_CSV: 11476,4,2,0,0,0.000000,0.000000,-1,-0.003879,1165.000[0m
+[0;32mI (11913) app_main: OL_MOTION_CSV: 11476,4,3,0,0,0.000000,0.000000,-5,-0.019393,809.000[0m
+[0;32mI (11923) app_main: OL_MOTION_CSV: 11476,4,4,0,0,0.000000,0.000000,5,0.013635,1616.000[0m
+[0;32mI (13133) RobotController: FERRIS joint[0] abs_raw=1317.000 zero_raw=1314.000 cal_valid=1 angle_deg=-26.279 calibrated_deg=0.264 tared_deg=0.264 scale=0.592 joint_deg=0.156[0m
+[0;32mI (13133) RobotController: FERRIS_CSV: 12714,0,1317.000,1314.000,1,-26.279,0.264,0.264,0.592,0.156[0m
+[0;32mI (13143) RobotController: FERRIS joint[1] abs_raw=1676.000 zero_raw=1679.000 cal_valid=1 angle_deg=5.273 calibrated_deg=-0.264 tared_deg=-0.264 scale=0.537 joint_deg=-0.142[0m
+[0;32mI (13163) RobotController: FERRIS_CSV: 12714,1,1676.000,1679.000,1,5.273,-0.264,-0.264,0.537,-0.142[0m
+[0;32mI (13173) RobotController: FERRIS joint[2] abs_raw=1165.000 zero_raw=1167.000 cal_valid=1 angle_deg=-39.639 calibrated_deg=-0.176 tared_deg=-0.176 scale=1.159 joint_deg=-0.204[0m
+[0;32mI (13183) RobotController: FERRIS_CSV: 12714,2,1165.000,1167.000,1,-39.639,-0.176,-0.176,1.159,-0.204[0m
+[0;32mI (13193) RobotController: FERRIS joint[3] abs_raw=809.000 zero_raw=819.000 cal_valid=1 angle_deg=-70.928 calibrated_deg=-0.879 tared_deg=-0.879 scale=1.159 joint_deg=-1.019[0m
+[0;32mI (13203) RobotController: FERRIS_CSV: 12714,3,809.000,819.000,1,-70.928,-0.879,-0.879,1.159,-1.019[0m
+[0;32mI (13213) RobotController: FERRIS joint[4] abs_raw=1616.000 zero_raw=1625.000 cal_valid=1 angle_deg=0.000 calibrated_deg=-0.791 tared_deg=-0.791 scale=-1.085 joint_deg=0.858[0m
+[0;32mI (13233) RobotController: FERRIS_CSV: 12714,4,1616.000,1625.000,1,0.000,-0.791,-0.791,-1.085,0.858[0m
+[0;32mI (13243) app_main: OL_MOTION_CSV: 12826,5,0,0,0,0.000000,0.000000,2,0.002424,1317.000[0m
+[0;32mI (13253) app_main: OL_MOTION_CSV: 12826,5,1,0,0,0.000000,0.000000,-1,-0.001939,1676.000[0m
+[0;32mI (13253) app_main: OL_MOTION_CSV: 12826,5,2,0,0,0.000000,0.000000,-1,-0.003879,1165.000[0m
+[0;32mI (13263) app_main: OL_MOTION_CSV: 12826,5,3,0,0,0.000000,0.000000,-5,-0.019393,809.000[0m
+[0;32mI (13273) app_main: OL_MOTION_CSV: 12826,5,4,0,0,0.000000,0.000000,5,0.013635,1616.000[0m
+[0;32mI (14483) RobotController: FERRIS joint[0] abs_raw=1317.000 zero_raw=1314.000 cal_valid=1 angle_deg=-26.279 calibrated_deg=0.264 tared_deg=0.264 scale=0.592 joint_deg=0.156[0m
+[0;32mI (14483) RobotController: FERRIS_CSV: 14064,0,1317.000,1314.000,1,-26.279,0.264,0.264,0.592,0.156[0m
+[0;32mI (14493) RobotController: FERRIS joint[1] abs_raw=1676.000 zero_raw=1679.000 cal_valid=1 angle_deg=5.273 calibrated_deg=-0.264 tared_deg=-0.264 scale=0.537 joint_deg=-0.142[0m
+[0;32mI (14513) RobotController: FERRIS_CSV: 14064,1,1676.000,1679.000,1,5.273,-0.264,-0.264,0.537,-0.142[0m
+[0;32mI (14523) RobotController: FERRIS joint[2] abs_raw=1165.000 zero_raw=1167.000 cal_valid=1 angle_deg=-39.639 calibrated_deg=-0.176 tared_deg=-0.176 scale=1.159 joint_deg=-0.204[0m
+[0;32mI (14533) RobotController: FERRIS_CSV: 14064,2,1165.000,1167.000,1,-39.639,-0.176,-0.176,1.159,-0.204[0m
+[0;32mI (14543) RobotController: FERRIS joint[3] abs_raw=809.000 zero_raw=819.000 cal_valid=1 angle_deg=-70.928 calibrated_deg=-0.879 tared_deg=-0.879 scale=1.159 joint_deg=-1.019[0m
+[0;32mI (14553) RobotController: FERRIS_CSV: 14064,3,809.000,819.000,1,-70.928,-0.879,-0.879,1.159,-1.019[0m
+[0;32mI (14563) RobotController: FERRIS joint[4] abs_raw=1616.000 zero_raw=1625.000 cal_valid=1 angle_deg=0.000 calibrated_deg=-0.791 tared_deg=-0.791 scale=-1.085 joint_deg=0.858[0m
+[0;32mI (14583) RobotController: FERRIS_CSV: 14064,4,1616.000,1625.000,1,0.000,-0.791,-0.791,-1.085,0.858[0m
+[0;32mI (14593) app_main: OL_MOTION_CSV: 14176,6,0,0,0,0.000000,0.000000,2,0.002424,1317.000[0m
+[0;32mI (14603) app_main: OL_MOTION_CSV: 14176,6,1,0,0,0.000000,0.000000,-1,-0.001939,1676.000[0m
+[0;32mI (14603) app_main: OL_MOTION_CSV: 14176,6,2,0,0,0.000000,0.000000,-1,-0.003879,1165.000[0m
+[0;32mI (14613) app_main: OL_MOTION_CSV: 14176,6,3,0,0,0.000000,0.000000,-5,-0.019393,809.000[0m
+[0;32mI (14623) app_main: OL_MOTION_CSV: 14176,6,4,0,0,0.000000,0.000000,5,0.013635,1616.000[0m
+Consuming path with 8 waypoints and 5 dof
+[0;32mI (14743) app_main: Received path with 8 waypoints[0m
+[0;32mI (14743) RobotController: target joint[0]: rad=0.002424 -> steps=2[0m
+[0;32mI (14743) RobotController: target joint[1]: rad=-0.001939 -> steps=-1[0m
+[0;32mI (14753) RobotController: target joint[2]: rad=-0.003879 -> steps=-1[0m
+[0;32mI (14753) RobotController: target joint[3]: rad=-0.019393 -> steps=-5[0m
+[0;32mI (14763) RobotController: target joint[4]: rad=0.013635 -> steps=5[0m
+[0;32mI (14773) app_main: Sent waypoint 1 / 8[0m
+[0;32mI (15233) app_main: Reached waypoint 1 / 8[0m
+[0;32mI (15263) RobotController: target joint[0]: rad=0.015781 -> steps=13[0m
+[0;32mI (15263) RobotController: target joint[1]: rad=0.080743 -> steps=42[0m
+[0;32mI (15263) RobotController: target joint[2]: rad=0.090217 -> steps=23[0m
+[0;32mI (15263) RobotController: target joint[3]: rad=0.095829 -> steps=25[0m
+[0;32mI (15273) RobotController: target joint[4]: rad=-0.007807 -> steps=-3[0m
+[0;32mI (15273) app_main: Sent waypoint 2 / 8[0m
+[0;32mI (15893) RobotController: FERRIS joint[0] abs_raw=1317.000 zero_raw=1314.000 cal_valid=1 angle_deg=-26.279 calibrated_deg=0.264 tared_deg=0.264 scale=0.592 joint_deg=0.156[0m
+[0;32mI (15893) RobotController: FERRIS_CSV: 15474,0,1317.000,1314.000,1,-26.279,0.264,0.264,0.592,0.156[0m
+[0;32mI (15903) RobotController: FERRIS joint[1] abs_raw=1676.000 zero_raw=1679.000 cal_valid=1 angle_deg=5.273 calibrated_deg=-0.264 tared_deg=-0.264 scale=0.537 joint_deg=-0.142[0m
+[0;32mI (15923) RobotController: FERRIS_CSV: 15474,1,1676.000,1679.000,1,5.273,-0.264,-0.264,0.537,-0.142[0m
+[0;32mI (15933) RobotController: FERRIS joint[2] abs_raw=1163.000 zero_raw=1167.000 cal_valid=1 angle_deg=-39.814 calibrated_deg=-0.352 tared_deg=-0.352 scale=1.159 joint_deg=-0.407[0m
+[0;32mI (15943) RobotController: FERRIS_CSV: 15474,2,1163.000,1167.000,1,-39.814,-0.352,-0.352,1.159,-0.407[0m
+[0;32mI (15953) RobotController: FERRIS joint[3] abs_raw=808.000 zero_raw=819.000 cal_valid=1 angle_deg=-71.016 calibrated_deg=-0.967 tared_deg=-0.967 scale=1.159 joint_deg=-1.121[0m
+[0;32mI (15963) RobotController: FERRIS_CSV: 15474,3,808.000,819.000,1,-71.016,-0.967,-0.967,1.159,-1.121[0m
+[0;32mI (15973) RobotController: FERRIS joint[4] abs_raw=1615.000 zero_raw=1625.000 cal_valid=1 angle_deg=-0.088 calibrated_deg=-0.879 tared_deg=-0.879 scale=-1.085 joint_deg=0.954[0m
+[0;32mI (15993) RobotController: FERRIS_CSV: 15474,4,1615.000,1625.000,1,-0.088,-0.879,-0.879,-1.085,0.954[0m
+[0;32mI (16003) app_main: OL_MOTION_CSV: 15587,7,0,4,13,0.004848,0.015756,2,0.002424,1317.000[0m
+[0;32mI (16013) app_main: OL_MOTION_CSV: 15587,7,1,5,42,0.009696,0.081449,-1,-0.001939,1676.000[0m
+[0;32mI (16013) app_main: OL_MOTION_CSV: 15587,7,2,3,23,0.011636,0.089206,-2,-0.007757,1163.000[0m
+[0;32mI (16023) app_main: OL_MOTION_CSV: 15587,7,3,-1,25,-0.003879,0.096963,-5,-0.019393,808.000[0m
+[0;32mI (16033) app_main: OL_MOTION_CSV: 15587,7,4,4,-3,0.010908,-0.008181,6,0.016362,1615.000[0m
+[0;32mI (17243) RobotController: FERRIS joint[0] abs_raw=1321.000 zero_raw=1314.000 cal_valid=1 angle_deg=-25.928 calibrated_deg=0.615 tared_deg=0.615 scale=0.592 joint_deg=0.364[0m
+[0;32mI (17243) RobotController: FERRIS_CSV: 16824,0,1321.000,1314.000,1,-25.928,0.615,0.615,0.592,0.364[0m
+[0;32mI (17253) RobotController: FERRIS joint[1] abs_raw=1692.000 zero_raw=1679.000 cal_valid=1 angle_deg=6.680 calibrated_deg=1.143 tared_deg=1.143 scale=0.537 joint_deg=0.613[0m
+[0;32mI (17273) RobotController: FERRIS_CSV: 16824,1,1692.000,1679.000,1,6.680,1.143,1.143,0.537,0.613[0m
+[0;32mI (17273) RobotController: FERRIS joint[2] abs_raw=1180.000 zero_raw=1167.000 cal_valid=1 angle_deg=-38.320 calibrated_deg=1.143 tared_deg=1.143 scale=1.159 joint_deg=1.324[0m
+[0;32mI (17293) RobotController: FERRIS_CSV: 16824,2,1180.000,1167.000,1,-38.320,1.143,1.143,1.159,1.324[0m
+[0;32mI (17303) RobotController: FERRIS joint[3] abs_raw=826.000 zero_raw=819.000 cal_valid=1 angle_deg=-69.434 calibrated_deg=0.615 tared_deg=0.615 scale=1.159 joint_deg=0.713[0m
+[0;32mI (17313) RobotController: FERRIS_CSV: 16824,3,826.000,819.000,1,-69.434,0.615,0.615,1.159,0.713[0m
+[0;32mI (17323) RobotController: FERRIS joint[4] abs_raw=1614.000 zero_raw=1625.000 cal_valid=1 angle_deg=-0.176 calibrated_deg=-0.967 tared_deg=-0.967 scale=-1.085 joint_deg=1.049[0m
+[0;32mI (17343) RobotController: FERRIS_CSV: 16824,4,1614.000,1625.000,1,-0.176,-0.967,-0.967,-1.085,1.049[0m
+[0;32mI (17353) app_main: OL_MOTION_CSV: 16935,8,0,7,13,0.008484,0.015756,5,0.006060,1321.000[0m
+[0;32mI (17353) app_main: OL_MOTION_CSV: 16935,8,1,18,42,0.034907,0.081449,6,0.011636,1692.000[0m
+[0;32mI (17363) app_main: OL_MOTION_CSV: 16935,8,2,10,23,0.038785,0.089206,6,0.023271,1180.000[0m
+[0;32mI (17373) app_main: OL_MOTION_CSV: 16935,8,3,9,25,0.034907,0.096963,3,0.011636,826.000[0m
+[0;32mI (17383) app_main: OL_MOTION_CSV: 16935,8,4,1,-3,0.002727,-0.008181,7,0.019090,1614.000[0m
+[0;32mI (18593) RobotController: FERRIS joint[0] abs_raw=1325.000 zero_raw=1314.000 cal_valid=1 angle_deg=-25.576 calibrated_deg=0.967 tared_deg=0.967 scale=0.592 joint_deg=0.572[0m
+[0;32mI (18593) RobotController: FERRIS_CSV: 18174,0,1325.000,1314.000,1,-25.576,0.967,0.967,0.592,0.572[0m
+[0;32mI (18603) RobotController: FERRIS joint[1] abs_raw=1723.000 zero_raw=1679.000 cal_valid=1 angle_deg=9.404 calibrated_deg=3.867 tared_deg=3.867 scale=0.537 joint_deg=2.076[0m
+[0;32mI (18623) RobotController: FERRIS_CSV: 18174,1,1723.000,1679.000,1,9.404,3.867,3.867,0.537,2.076[0m
+[0;32mI (18623) RobotController: FERRIS joint[2] abs_raw=1197.000 zero_raw=1167.000 cal_valid=1 angle_deg=-36.826 calibrated_deg=2.637 tared_deg=2.637 scale=1.159 joint_deg=3.056[0m
+[0;32mI (18643) RobotController: FERRIS_CSV: 18174,2,1197.000,1167.000,1,-36.826,2.637,2.637,1.159,3.056[0m
+[0;32mI (18653) RobotController: FERRIS joint[3] abs_raw=851.000 zero_raw=819.000 cal_valid=1 angle_deg=-67.236 calibrated_deg=2.812 tared_deg=2.812 scale=1.159 joint_deg=3.260[0m
+[0;32mI (18663) RobotController: FERRIS_CSV: 18174,3,851.000,819.000,1,-67.236,2.812,2.812,1.159,3.260[0m
+[0;32mI (18673) RobotController: FERRIS joint[4] abs_raw=1615.000 zero_raw=1625.000 cal_valid=1 angle_deg=-0.088 calibrated_deg=-0.879 tared_deg=-0.879 scale=-1.085 joint_deg=0.954[0m
+[0;32mI (18693) RobotController: FERRIS_CSV: 18174,4,1615.000,1625.000,1,-0.088,-0.879,-0.879,-1.085,0.954[0m
+[0;32mI (18703) app_main: OL_MOTION_CSV: 18285,9,0,11,13,0.013332,0.015756,8,0.009696,1325.000[0m
+[0;32mI (18703) app_main: OL_MOTION_CSV: 18285,9,1,31,42,0.060117,0.081449,19,0.036846,1723.000[0m
+[0;32mI (18713) app_main: OL_MOTION_CSV: 18285,9,2,18,23,0.069813,0.089206,14,0.054299,1197.000[0m
+[0;32mI (18723) app_main: OL_MOTION_CSV: 18285,9,3,18,25,0.069813,0.096963,15,0.058178,851.000[0m
+[0;32mI (18733) app_main: OL_MOTION_CSV: 18285,9,4,-1,-3,-0.002727,-0.008181,6,0.016362,1615.000[0m
+[0;32mI (19793) app_main: Reached waypoint 2 / 8[0m
+[0;32mI (19823) RobotController: target joint[0]: rad=0.029139 -> steps=24[0m
+[0;32mI (19823) RobotController: target joint[1]: rad=0.163426 -> steps=84[0m
+[0;32mI (19823) RobotController: target joint[2]: rad=0.184313 -> steps=48[0m
+[0;32mI (19823) RobotController: target joint[3]: rad=0.211050 -> steps=54[0m
+[0;32mI (19833) RobotController: target joint[4]: rad=-0.029249 -> steps=-11[0m
+[0;32mI (19833) app_main: Sent waypoint 3 / 8[0m
+[0;32mI (19973) RobotController: FERRIS joint[0] abs_raw=1329.000 zero_raw=1314.000 cal_valid=1 angle_deg=-25.312 calibrated_deg=1.318 tared_deg=1.318 scale=0.592 joint_deg=0.780[0m
+[0;32mI (19973) RobotController: FERRIS_CSV: 19554,0,1329.000,1314.000,1,-25.312,1.318,1.318,0.592,0.780[0m
+[0;32mI (19983) RobotController: FERRIS joint[1] abs_raw=1751.000 zero_raw=1679.000 cal_valid=1 angle_deg=11.865 calibrated_deg=6.328 tared_deg=6.328 scale=0.537 joint_deg=3.397[0m
+[0;32mI (20003) RobotController: FERRIS_CSV: 19554,1,1751.000,1679.000,1,11.865,6.328,6.328,0.537,3.397[0m
+[0;32mI (20013) RobotController: FERRIS joint[2] abs_raw=1211.000 zero_raw=1167.000 cal_valid=1 angle_deg=-35.596 calibrated_deg=3.867 tared_deg=3.867 scale=1.159 joint_deg=4.482[0m
+[0;32mI (20023) RobotController: FERRIS_CSV: 19554,2,1211.000,1167.000,1,-35.596,3.867,3.867,1.159,4.482[0m
+[0;32mI (20033) RobotController: FERRIS joint[3] abs_raw=869.000 zero_raw=819.000 cal_valid=1 angle_deg=-65.654 calibrated_deg=4.395 tared_deg=4.395 scale=1.159 joint_deg=5.094[0m
+[0;32mI (20043) RobotController: FERRIS_CSV: 19554,3,869.000,819.000,1,-65.654,4.395,4.395,1.159,5.094[0m
+[0;32mI (20053) RobotController: FERRIS joint[4] abs_raw=1616.000 zero_raw=1625.000 cal_valid=1 angle_deg=0.000 calibrated_deg=-0.791 tared_deg=-0.791 scale=-1.085 joint_deg=0.858[0m
+[0;32mI (20073) RobotController: FERRIS_CSV: 19554,4,1616.000,1625.000,1,0.000,-0.791,-0.791,-1.085,0.858[0m
+[0;32mI (20083) app_main: OL_MOTION_CSV: 19665,10,0,13,24,0.015756,0.029089,11,0.013332,1329.000[0m
+[0;32mI (20083) app_main: OL_MOTION_CSV: 19665,10,1,43,84,0.083388,0.162897,31,0.060117,1751.000[0m
+[0;32mI (20093) app_main: OL_MOTION_CSV: 19665,10,2,24,48,0.093084,0.186168,20,0.077570,1211.000[0m
+[0;32mI (20103) app_main: OL_MOTION_CSV: 19665,10,3,26,54,0.100841,0.209440,23,0.089206,869.000[0m
+[0;32mI (20113) app_main: OL_MOTION_CSV: 19665,10,4,-3,-11,-0.008181,-0.029998,5,0.013635,1616.000[0m
+[0;32mI (21323) RobotController: FERRIS joint[0] abs_raw=1333.000 zero_raw=1314.000 cal_valid=1 angle_deg=-24.873 calibrated_deg=1.670 tared_deg=1.670 scale=0.592 joint_deg=0.988[0m
+[0;32mI (21323) RobotController: FERRIS_CSV: 20904,0,1333.000,1314.000,1,-24.873,1.670,1.670,0.592,0.988[0m
+[0;32mI (21333) RobotController: FERRIS joint[1] abs_raw=1780.000 zero_raw=1679.000 cal_valid=1 angle_deg=14.414 calibrated_deg=8.877 tared_deg=8.877 scale=0.537 joint_deg=4.766[0m
+[0;32mI (21353) RobotController: FERRIS_CSV: 20904,1,1780.000,1679.000,1,14.414,8.877,8.877,0.537,4.766[0m
+[0;32mI (21363) RobotController: FERRIS joint[2] abs_raw=1228.000 zero_raw=1167.000 cal_valid=1 angle_deg=-34.102 calibrated_deg=5.361 tared_deg=5.361 scale=1.159 joint_deg=6.214[0m
+[0;32mI (21373) RobotController: FERRIS_CSV: 20904,2,1228.000,1167.000,1,-34.102,5.361,5.361,1.159,6.214[0m
+[0;32mI (21383) RobotController: FERRIS joint[3] abs_raw=887.000 zero_raw=819.000 cal_valid=1 angle_deg=-64.072 calibrated_deg=5.977 tared_deg=5.977 scale=1.159 joint_deg=6.927[0m
+[0;32mI (21393) RobotController: FERRIS_CSV: 20904,3,887.000,819.000,1,-64.072,5.977,5.977,1.159,6.927[0m
+[0;32mI (21403) RobotController: FERRIS joint[4] abs_raw=1620.000 zero_raw=1625.000 cal_valid=1 angle_deg=0.439 calibrated_deg=-0.439 tared_deg=-0.439 scale=-1.085 joint_deg=0.477[0m
+[0;32mI (21423) RobotController: FERRIS_CSV: 20904,4,1620.000,1625.000,1,0.439,-0.439,-0.439,-1.085,0.477[0m
+[0;32mI (21433) app_main: OL_MOTION_CSV: 21015,11,0,17,24,0.020605,0.029089,14,0.016968,1333.000[0m
+[0;32mI (21433) app_main: OL_MOTION_CSV: 21015,11,1,56,84,0.108598,0.162897,43,0.083388,1780.000[0m
+[0;32mI (21443) app_main: OL_MOTION_CSV: 21015,11,2,32,48,0.124112,0.186168,28,0.108598,1228.000[0m
+[0;32mI (21453) app_main: OL_MOTION_CSV: 21015,11,3,35,54,0.135748,0.209440,31,0.120234,887.000[0m
+[0;32mI (21463) app_main: OL_MOTION_CSV: 21015,11,4,-6,-11,-0.016362,-0.029998,3,0.008181,1620.000[0m
+[0;32mI (22073) RobotController: joint[0] current_steps=19 target_steps=24 target_vel=0.00[0m
+[0;32mI (22073) RobotController: joint[1] current_steps=63 target_steps=84 target_vel=0.00[0m
+[0;32mI (22083) RobotController: joint[2] current_steps=36 target_steps=48 target_vel=0.00[0m
+[0;32mI (22083) RobotController: joint[3] current_steps=40 target_steps=54 target_vel=0.00[0m
+[0;32mI (22093) RobotController: joint[4] current_steps=-7 target_steps=-11 target_vel=0.00[0m
+[0;32mI (22103) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (22113) RobotController: valve_state=0x010a[0m
+[0;32mI (22713) RobotController: FERRIS joint[0] abs_raw=1338.000 zero_raw=1314.000 cal_valid=1 angle_deg=-24.434 calibrated_deg=2.109 tared_deg=2.109 scale=0.592 joint_deg=1.248[0m
+[0;32mI (22713) RobotController: FERRIS_CSV: 22294,0,1338.000,1314.000,1,-24.434,2.109,2.109,0.592,1.248[0m
+[0;32mI (22723) RobotController: FERRIS joint[1] abs_raw=1813.000 zero_raw=1679.000 cal_valid=1 angle_deg=17.314 calibrated_deg=11.777 tared_deg=11.777 scale=0.537 joint_deg=6.323[0m
+[0;32mI (22743) RobotController: FERRIS_CSV: 22294,1,1813.000,1679.000,1,17.314,11.777,11.777,0.537,6.323[0m
+[0;32mI (22753) RobotController: FERRIS joint[2] abs_raw=1246.000 zero_raw=1167.000 cal_valid=1 angle_deg=-32.520 calibrated_deg=6.943 tared_deg=6.943 scale=1.159 joint_deg=8.048[0m
+[0;32mI (22763) RobotController: FERRIS_CSV: 22294,2,1246.000,1167.000,1,-32.520,6.943,6.943,1.159,8.048[0m
+[0;32mI (22773) RobotController: FERRIS joint[3] abs_raw=905.000 zero_raw=819.000 cal_valid=1 angle_deg=-62.490 calibrated_deg=7.559 tared_deg=7.559 scale=1.159 joint_deg=8.761[0m
+[0;32mI (22783) RobotController: FERRIS_CSV: 22294,3,905.000,819.000,1,-62.490,7.559,7.559,1.159,8.761[0m
+[0;32mI (22793) RobotController: FERRIS joint[4] abs_raw=1625.000 zero_raw=1625.000 cal_valid=1 angle_deg=0.791 calibrated_deg=0.000 tared_deg=0.000 scale=-1.085 joint_deg=-0.000[0m
+[0;32mI (22813) RobotController: FERRIS_CSV: 22294,4,1625.000,1625.000,1,0.791,0.000,0.000,-1.085,-0.000[0m
+[0;32mI (22823) app_main: OL_MOTION_CSV: 22405,12,0,21,24,0.025453,0.029089,18,0.021817,1338.000[0m
+[0;32mI (22823) app_main: OL_MOTION_CSV: 22405,12,1,69,84,0.133809,0.162897,57,0.110538,1813.000[0m
+[0;32mI (22833) app_main: OL_MOTION_CSV: 22405,12,2,40,48,0.155140,0.186168,36,0.139626,1246.000[0m
+[0;32mI (22843) app_main: OL_MOTION_CSV: 22405,12,3,45,54,0.174533,0.209440,39,0.151262,905.000[0m
+[0;32mI (22853) app_main: OL_MOTION_CSV: 22405,12,4,-9,-11,-0.024544,-0.029998,0,0.000000,1625.000[0m
+[0;32mI (24063) RobotController: FERRIS joint[0] abs_raw=1343.000 zero_raw=1314.000 cal_valid=1 angle_deg=-24.082 calibrated_deg=2.549 tared_deg=2.549 scale=0.592 joint_deg=1.508[0m
+[0;32mI (24063) RobotController: FERRIS_CSV: 23644,0,1343.000,1314.000,1,-24.082,2.549,2.549,0.592,1.508[0m
+[0;32mI (24073) RobotController: FERRIS joint[1] abs_raw=1845.000 zero_raw=1679.000 cal_valid=1 angle_deg=20.127 calibrated_deg=14.590 tared_deg=14.590 scale=0.537 joint_deg=7.832[0m
+[0;32mI (24093) RobotController: FERRIS_CSV: 23644,1,1845.000,1679.000,1,20.127,14.590,14.590,0.537,7.832[0m
+[0;32mI (24103) RobotController: FERRIS joint[2] abs_raw=1264.000 zero_raw=1167.000 cal_valid=1 angle_deg=-31.025 calibrated_deg=8.525 tared_deg=8.525 scale=1.159 joint_deg=9.882[0m
+[0;32mI (24113) RobotController: FERRIS_CSV: 23644,2,1264.000,1167.000,1,-31.025,8.525,8.525,1.159,9.882[0m
+[0;32mI (24123) RobotController: FERRIS joint[3] abs_raw=925.000 zero_raw=819.000 cal_valid=1 angle_deg=-60.732 calibrated_deg=9.316 tared_deg=9.316 scale=1.159 joint_deg=10.799[0m
+[0;32mI (24133) RobotController: FERRIS_CSV: 23644,3,925.000,819.000,1,-60.732,9.316,9.316,1.159,10.799[0m
+[0;32mI (24143) RobotController: FERRIS joint[4] abs_raw=1629.000 zero_raw=1625.000 cal_valid=1 angle_deg=1.143 calibrated_deg=0.352 tared_deg=0.352 scale=-1.085 joint_deg=-0.381[0m
+[0;32mI (24163) RobotController: FERRIS_CSV: 23644,4,1629.000,1625.000,1,1.143,0.352,0.352,-1.085,-0.381[0m
+[0;32mI (24173) app_main: OL_MOTION_CSV: 23755,13,0,24,24,0.029089,0.029089,22,0.026665,1343.000[0m
+[0;32mI (24173) app_main: OL_MOTION_CSV: 23755,13,1,82,84,0.159019,0.162897,70,0.135748,1845.000[0m
+[0;32mI (24183) app_main: OL_MOTION_CSV: 23755,13,2,48,48,0.186168,0.186168,44,0.170654,1264.000[0m
+[0;32mI (24193) app_main: OL_MOTION_CSV: 23755,13,3,54,54,0.209440,0.209440,49,0.190047,925.000[0m
+[0;32mI (24203) app_main: OL_MOTION_CSV: 23755,13,4,-11,-11,-0.029998,-0.029998,-2,-0.005454,1629.000[0m
+[0;32mI (24303) app_main: Reached waypoint 3 / 8[0m
+[0;32mI (24333) RobotController: target joint[0]: rad=0.042496 -> steps=35[0m
+[0;32mI (24333) RobotController: target joint[1]: rad=0.246108 -> steps=127[0m
+[0;32mI (24333) RobotController: target joint[2]: rad=0.278410 -> steps=72[0m
+[0;32mI (24333) RobotController: target joint[3]: rad=0.326272 -> steps=84[0m
+[0;32mI (24343) RobotController: target joint[4]: rad=-0.050691 -> steps=-19[0m
+[0;32mI (24353) app_main: Sent waypoint 4 / 8[0m
+[0;32mI (25443) RobotController: FERRIS joint[0] abs_raw=1346.000 zero_raw=1314.000 cal_valid=1 angle_deg=-23.730 calibrated_deg=2.812 tared_deg=2.812 scale=0.592 joint_deg=1.664[0m
+[0;32mI (25443) RobotController: FERRIS_CSV: 25024,0,1346.000,1314.000,1,-23.730,2.812,2.812,0.592,1.664[0m
+[0;32mI (25453) RobotController: FERRIS joint[1] abs_raw=1875.000 zero_raw=1679.000 cal_valid=1 angle_deg=22.764 calibrated_deg=17.227 tared_deg=17.227 scale=0.537 joint_deg=9.248[0m
+[0;32mI (25473) RobotController: FERRIS_CSV: 25024,1,1875.000,1679.000,1,22.764,17.227,17.227,0.537,9.248[0m
+[0;32mI (25483) RobotController: FERRIS joint[2] abs_raw=1279.000 zero_raw=1167.000 cal_valid=1 angle_deg=-29.619 calibrated_deg=9.844 tared_deg=9.844 scale=1.159 joint_deg=11.410[0m
+[0;32mI (25493) RobotController: FERRIS_CSV: 25024,2,1279.000,1167.000,1,-29.619,9.844,9.844,1.159,11.410[0m
+[0;32mI (25503) RobotController: FERRIS joint[3] abs_raw=950.000 zero_raw=819.000 cal_valid=1 angle_deg=-58.623 calibrated_deg=11.514 tared_deg=11.514 scale=1.159 joint_deg=13.345[0m
+[0;32mI (25513) RobotController: FERRIS_CSV: 25024,3,950.000,819.000,1,-58.623,11.514,11.514,1.159,13.345[0m
+[0;32mI (25523) RobotController: FERRIS joint[4] abs_raw=1633.000 zero_raw=1625.000 cal_valid=1 angle_deg=1.494 calibrated_deg=0.703 tared_deg=0.703 scale=-1.085 joint_deg=-0.763[0m
+[0;32mI (25543) RobotController: FERRIS_CSV: 25024,4,1633.000,1625.000,1,1.494,0.703,0.703,-1.085,-0.763[0m
+[0;32mI (25553) app_main: OL_MOTION_CSV: 25136,14,0,27,35,0.032725,0.042421,24,0.029089,1346.000[0m
+[0;32mI (25563) app_main: OL_MOTION_CSV: 25136,14,1,95,127,0.184229,0.246285,83,0.160958,1875.000[0m
+[0;32mI (25563) app_main: OL_MOTION_CSV: 25136,14,2,54,72,0.209440,0.279253,51,0.197804,1279.000[0m
+[0;32mI (25573) app_main: OL_MOTION_CSV: 25136,14,3,62,84,0.240468,0.325795,60,0.232711,950.000[0m
+[0;32mI (25583) app_main: OL_MOTION_CSV: 25136,14,4,-13,-19,-0.035452,-0.051814,-5,-0.013635,1633.000[0m
+[0;32mI (26793) RobotController: FERRIS joint[0] abs_raw=1351.000 zero_raw=1314.000 cal_valid=1 angle_deg=-23.291 calibrated_deg=3.252 tared_deg=3.252 scale=0.592 joint_deg=1.924[0m
+[0;32mI (26793) RobotController: FERRIS_CSV: 26375,0,1351.000,1314.000,1,-23.291,3.252,3.252,0.592,1.924[0m
+[0;32mI (26803) RobotController: FERRIS joint[1] abs_raw=1904.000 zero_raw=1679.000 cal_valid=1 angle_deg=25.312 calibrated_deg=19.775 tared_deg=19.775 scale=0.537 joint_deg=10.616[0m
+[0;32mI (26823) RobotController: FERRIS_CSV: 26375,1,1904.000,1679.000,1,25.312,19.775,19.775,0.537,10.616[0m
+[0;32mI (26833) RobotController: FERRIS joint[2] abs_raw=1295.000 zero_raw=1167.000 cal_valid=1 angle_deg=-28.213 calibrated_deg=11.250 tared_deg=11.250 scale=1.159 joint_deg=13.040[0m
+[0;32mI (26843) RobotController: FERRIS_CSV: 26375,2,1295.000,1167.000,1,-28.213,11.250,11.250,1.159,13.040[0m
+[0;32mI (26853) RobotController: FERRIS joint[3] abs_raw=968.000 zero_raw=819.000 cal_valid=1 angle_deg=-56.953 calibrated_deg=13.096 tared_deg=13.096 scale=1.159 joint_deg=15.179[0m
+[0;32mI (26873) RobotController: FERRIS_CSV: 26375,3,968.000,819.000,1,-56.953,13.096,13.096,1.159,15.179[0m
+[0;32mI (26883) RobotController: FERRIS joint[4] abs_raw=1637.000 zero_raw=1625.000 cal_valid=1 angle_deg=1.846 calibrated_deg=1.055 tared_deg=1.055 scale=-1.085 joint_deg=-1.144[0m
+[0;32mI (26893) RobotController: FERRIS_CSV: 26375,4,1637.000,1625.000,1,1.846,1.055,1.055,-1.085,-1.144[0m
+[0;32mI (26903) app_main: OL_MOTION_CSV: 26488,15,0,30,35,0.036361,0.042421,28,0.033937,1351.000[0m
+[0;32mI (26913) app_main: OL_MOTION_CSV: 26488,15,1,108,127,0.209440,0.246285,96,0.186168,1904.000[0m
+[0;32mI (26923) app_main: OL_MOTION_CSV: 26488,15,2,62,72,0.240468,0.279253,59,0.228832,1295.000[0m
+[0;32mI (26923) app_main: OL_MOTION_CSV: 26488,15,3,71,84,0.275374,0.325795,68,0.263739,968.000[0m
+[0;32mI (26933) app_main: OL_MOTION_CSV: 26488,15,4,-16,-19,-0.043633,-0.051814,-7,-0.019090,1637.000[0m
+[0;32mI (28143) RobotController: FERRIS joint[0] abs_raw=1356.000 zero_raw=1314.000 cal_valid=1 angle_deg=-22.852 calibrated_deg=3.691 tared_deg=3.691 scale=0.592 joint_deg=2.184[0m
+[0;32mI (28143) RobotController: FERRIS_CSV: 27724,0,1356.000,1314.000,1,-22.852,3.691,3.691,0.592,2.184[0m
+[0;32mI (28153) RobotController: FERRIS joint[1] abs_raw=1934.000 zero_raw=1679.000 cal_valid=1 angle_deg=27.949 calibrated_deg=22.412 tared_deg=22.412 scale=0.537 joint_deg=12.032[0m
+[0;32mI (28173) RobotController: FERRIS_CSV: 27724,1,1934.000,1679.000,1,27.949,22.412,22.412,0.537,12.032[0m
+[0;32mI (28183) RobotController: FERRIS joint[2] abs_raw=1312.000 zero_raw=1167.000 cal_valid=1 angle_deg=-26.719 calibrated_deg=12.744 tared_deg=12.744 scale=1.159 joint_deg=14.772[0m
+[0;32mI (28193) RobotController: FERRIS_CSV: 27724,2,1312.000,1167.000,1,-26.719,12.744,12.744,1.159,14.772[0m
+[0;32mI (28203) RobotController: FERRIS joint[3] abs_raw=987.000 zero_raw=819.000 cal_valid=1 angle_deg=-55.283 calibrated_deg=14.766 tared_deg=14.766 scale=1.159 joint_deg=17.115[0m
+[0;32mI (28223) RobotController: FERRIS_CSV: 27724,3,987.000,819.000,1,-55.283,14.766,14.766,1.159,17.115[0m
+[0;32mI (28223) RobotController: FERRIS joint[4] abs_raw=1640.000 zero_raw=1625.000 cal_valid=1 angle_deg=2.109 calibrated_deg=1.318 tared_deg=1.318 scale=-1.085 joint_deg=-1.431[0m
+[0;32mI (28243) RobotController: FERRIS_CSV: 27724,4,1640.000,1625.000,1,2.109,1.318,1.318,-1.085,-1.431[0m
+[0;32mI (28253) app_main: OL_MOTION_CSV: 27837,16,0,34,35,0.041209,0.042421,31,0.037573,1356.000[0m
+[0;32mI (28263) app_main: OL_MOTION_CSV: 27837,16,1,121,127,0.234650,0.246285,108,0.209440,1934.000[0m
+[0;32mI (28263) app_main: OL_MOTION_CSV: 27837,16,2,69,72,0.267617,0.279253,66,0.255982,1312.000[0m
+[0;32mI (28273) app_main: OL_MOTION_CSV: 27837,16,3,80,84,0.310281,0.325795,77,0.298645,987.000[0m
+[0;32mI (28283) app_main: OL_MOTION_CSV: 27837,16,4,-18,-19,-0.049087,-0.051814,-9,-0.024544,1640.000[0m
+[0;32mI (28863) app_main: Reached waypoint 4 / 8[0m
+[0;32mI (28893) RobotController: target joint[0]: rad=0.055853 -> steps=46[0m
+[0;32mI (28893) RobotController: target joint[1]: rad=0.328790 -> steps=170[0m
+[0;32mI (28893) RobotController: target joint[2]: rad=0.372506 -> steps=96[0m
+[0;32mI (28893) RobotController: target joint[3]: rad=0.441494 -> steps=114[0m
+[0;32mI (28903) RobotController: target joint[4]: rad=-0.072134 -> steps=-26[0m
+[0;32mI (28913) app_main: Sent waypoint 5 / 8[0m
+[0;32mI (29523) RobotController: FERRIS joint[0] abs_raw=1359.000 zero_raw=1314.000 cal_valid=1 angle_deg=-22.588 calibrated_deg=3.955 tared_deg=3.955 scale=0.592 joint_deg=2.340[0m
+[0;32mI (29523) RobotController: FERRIS_CSV: 29104,0,1359.000,1314.000,1,-22.588,3.955,3.955,0.592,2.340[0m
+[0;32mI (29533) RobotController: FERRIS joint[1] abs_raw=1966.000 zero_raw=1679.000 cal_valid=1 angle_deg=30.762 calibrated_deg=25.225 tared_deg=25.225 scale=0.537 joint_deg=13.542[0m
+[0;32mI (29553) RobotController: FERRIS_CSV: 29104,1,1966.000,1679.000,1,30.762,25.225,25.225,0.537,13.542[0m
+[0;32mI (29563) RobotController: FERRIS joint[2] abs_raw=1324.000 zero_raw=1167.000 cal_valid=1 angle_deg=-25.664 calibrated_deg=13.799 tared_deg=13.799 scale=1.159 joint_deg=15.994[0m
+[0;32mI (29573) RobotController: FERRIS_CSV: 29104,2,1324.000,1167.000,1,-25.664,13.799,13.799,1.159,15.994[0m
+[0;32mI (29583) RobotController: FERRIS joint[3] abs_raw=1004.000 zero_raw=819.000 cal_valid=1 angle_deg=-53.789 calibrated_deg=16.260 tared_deg=16.260 scale=1.159 joint_deg=18.847[0m
+[0;32mI (29603) RobotController: FERRIS_CSV: 29104,3,1004.000,819.000,1,-53.789,16.260,16.260,1.159,18.847[0m
+[0;32mI (29603) RobotController: FERRIS joint[4] abs_raw=1644.000 zero_raw=1625.000 cal_valid=1 angle_deg=2.461 calibrated_deg=1.670 tared_deg=1.670 scale=-1.085 joint_deg=-1.812[0m
+[0;32mI (29623) RobotController: FERRIS_CSV: 29104,4,1644.000,1625.000,1,2.461,1.670,1.670,-1.085,-1.812[0m
+[0;32mI (29633) app_main: OL_MOTION_CSV: 29217,17,0,37,46,0.044845,0.055754,34,0.041209,1359.000[0m
+[0;32mI (29643) app_main: OL_MOTION_CSV: 29217,17,1,133,170,0.257921,0.329673,122,0.236589,1966.000[0m
+[0;32mI (29643) app_main: OL_MOTION_CSV: 29217,17,2,76,96,0.294767,0.372337,72,0.279253,1324.000[0m
+[0;32mI (29653) app_main: OL_MOTION_CSV: 29217,17,3,88,114,0.341309,0.442150,85,0.329673,1004.000[0m
+[0;32mI (29663) app_main: OL_MOTION_CSV: 29217,17,4,-20,-26,-0.054542,-0.070904,-12,-0.032725,1644.000[0m
+[0;32mI (30873) RobotController: FERRIS joint[0] abs_raw=1364.000 zero_raw=1314.000 cal_valid=1 angle_deg=-22.148 calibrated_deg=4.395 tared_deg=4.395 scale=0.592 joint_deg=2.600[0m
+[0;32mI (30873) RobotController: FERRIS_CSV: 30454,0,1364.000,1314.000,1,-22.148,4.395,4.395,0.592,2.600[0m
+[0;32mI (30883) RobotController: FERRIS joint[1] abs_raw=1996.000 zero_raw=1679.000 cal_valid=1 angle_deg=33.311 calibrated_deg=27.861 tared_deg=27.861 scale=0.537 joint_deg=14.957[0m
+[0;32mI (30903) RobotController: FERRIS_CSV: 30454,1,1996.000,1679.000,1,33.311,27.861,27.861,0.537,14.957[0m
+[0;32mI (30913) RobotController: FERRIS joint[2] abs_raw=1342.000 zero_raw=1167.000 cal_valid=1 angle_deg=-24.082 calibrated_deg=15.381 tared_deg=15.381 scale=1.159 joint_deg=17.828[0m
+[0;32mI (30923) RobotController: FERRIS_CSV: 30454,2,1342.000,1167.000,1,-24.082,15.381,15.381,1.159,17.828[0m
+[0;32mI (30933) RobotController: FERRIS joint[3] abs_raw=1025.000 zero_raw=819.000 cal_valid=1 angle_deg=-51.943 calibrated_deg=18.105 tared_deg=18.105 scale=1.159 joint_deg=20.986[0m
+[0;32mI (30953) RobotController: FERRIS_CSV: 30454,3,1025.000,819.000,1,-51.943,18.105,18.105,1.159,20.986[0m
+[0;32mI (30953) RobotController: FERRIS joint[4] abs_raw=1647.000 zero_raw=1625.000 cal_valid=1 angle_deg=2.725 calibrated_deg=1.934 tared_deg=1.934 scale=-1.085 joint_deg=-2.098[0m
+[0;32mI (30973) RobotController: FERRIS_CSV: 30454,4,1647.000,1625.000,1,2.725,1.934,1.934,-1.085,-2.098[0m
+[0;32mI (30983) app_main: OL_MOTION_CSV: 30567,18,0,40,46,0.048481,0.055754,37,0.044845,1364.000[0m
+[0;32mI (30993) app_main: OL_MOTION_CSV: 30567,18,1,146,170,0.283131,0.329673,135,0.261799,1996.000[0m
+[0;32mI (30993) app_main: OL_MOTION_CSV: 30567,18,2,83,96,0.321916,0.372337,80,0.310281,1342.000[0m
+[0;32mI (31003) app_main: OL_MOTION_CSV: 30567,18,3,98,114,0.380094,0.442150,94,0.364580,1025.000[0m
+[0;32mI (31013) app_main: OL_MOTION_CSV: 30567,18,4,-22,-26,-0.059996,-0.070904,-13,-0.035452,1647.000[0m
+[0;32mI (31613) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:0(recipient)[0m
+[0;32mI (31613) wifi:[ADDBA]RX DELBA, reason:39, delete tid:7, initiator:0(recipient)[0m
+[0;32mI (32223) RobotController: FERRIS joint[0] abs_raw=1368.000 zero_raw=1314.000 cal_valid=1 angle_deg=-21.797 calibrated_deg=4.746 tared_deg=4.746 scale=0.592 joint_deg=2.808[0m
+[0;32mI (32223) RobotController: FERRIS_CSV: 31804,0,1368.000,1314.000,1,-21.797,4.746,4.746,0.592,2.808[0m
+[0;32mI (32233) RobotController: FERRIS joint[1] abs_raw=2026.000 zero_raw=1679.000 cal_valid=1 angle_deg=36.035 calibrated_deg=30.498 tared_deg=30.498 scale=0.537 joint_deg=16.373[0m
+[0;32mI (32253) RobotController: FERRIS_CSV: 31804,1,2026.000,1679.000,1,36.035,30.498,30.498,0.537,16.373[0m
+[0;32mI (32263) RobotController: FERRIS joint[2] abs_raw=1358.000 zero_raw=1167.000 cal_valid=1 angle_deg=-22.676 calibrated_deg=16.787 tared_deg=16.787 scale=1.159 joint_deg=19.458[0m
+[0;32mI (32273) RobotController: FERRIS_CSV: 31804,2,1358.000,1167.000,1,-22.676,16.787,16.787,1.159,19.458[0m
+[0;32mI (32283) RobotController: FERRIS joint[3] abs_raw=1049.000 zero_raw=819.000 cal_valid=1 angle_deg=-49.834 calibrated_deg=20.215 tared_deg=20.215 scale=1.159 joint_deg=23.431[0m
+[0;32mI (32303) RobotController: FERRIS_CSV: 31804,3,1049.000,819.000,1,-49.834,20.215,20.215,1.159,23.431[0m
+[0;32mI (32303) RobotController: FERRIS joint[4] abs_raw=1652.000 zero_raw=1625.000 cal_valid=1 angle_deg=3.164 calibrated_deg=2.373 tared_deg=2.373 scale=-1.085 joint_deg=-2.575[0m
+[0;32mI (32323) RobotController: FERRIS_CSV: 31804,4,1652.000,1625.000,1,3.164,2.373,2.373,-1.085,-2.575[0m
+[0;32mI (32333) app_main: OL_MOTION_CSV: 31917,19,0,44,46,0.053330,0.055754,40,0.048481,1368.000[0m
+[0;32mI (32343) app_main: OL_MOTION_CSV: 31917,19,1,159,170,0.308342,0.329673,147,0.285070,2026.000[0m
+[0;32mI (32343) app_main: OL_MOTION_CSV: 31917,19,2,91,96,0.352944,0.372337,88,0.341309,1358.000[0m
+[0;32mI (32353) app_main: OL_MOTION_CSV: 31917,19,3,107,114,0.415001,0.442150,105,0.407244,1049.000[0m
+[0;32mI (32363) app_main: OL_MOTION_CSV: 31917,19,4,-24,-26,-0.065450,-0.070904,-16,-0.043633,1652.000[0m
+[0;32mI (33423) app_main: Reached waypoint 5 / 8[0m
+[0;32mI (33453) RobotController: target joint[0]: rad=0.059707 -> steps=49[0m
+[0;32mI (33453) RobotController: target joint[1]: rad=0.381654 -> steps=197[0m
+[0;32mI (33453) RobotController: target joint[2]: rad=0.424980 -> steps=110[0m
+[0;32mI (33453) RobotController: target joint[3]: rad=0.507914 -> steps=131[0m
+[0;32mI (33463) RobotController: target joint[4]: rad=-0.077178 -> steps=-28[0m
+[0;32mI (33473) app_main: Sent waypoint 6 / 8[0m
+[0;32mI (33603) RobotController: FERRIS joint[0] abs_raw=1372.000 zero_raw=1314.000 cal_valid=1 angle_deg=-21.445 calibrated_deg=5.098 tared_deg=5.098 scale=0.592 joint_deg=3.016[0m
+[0;32mI (33603) RobotController: FERRIS_CSV: 33184,0,1372.000,1314.000,1,-21.445,5.098,5.098,0.592,3.016[0m
+[0;32mI (33613) RobotController: FERRIS joint[1] abs_raw=2055.000 zero_raw=1679.000 cal_valid=1 angle_deg=38.584 calibrated_deg=33.047 tared_deg=33.047 scale=0.537 joint_deg=17.741[0m
+[0;32mI (33633) RobotController: FERRIS_CSV: 33184,1,2055.000,1679.000,1,38.584,33.047,33.047,0.537,17.741[0m
+[0;32mI (33643) RobotController: FERRIS joint[2] abs_raw=1373.000 zero_raw=1167.000 cal_valid=1 angle_deg=-21.357 calibrated_deg=18.105 tared_deg=18.105 scale=1.159 joint_deg=20.986[0m
+[0;32mI (33653) RobotController: FERRIS_CSV: 33184,2,1373.000,1167.000,1,-21.357,18.105,18.105,1.159,20.986[0m
+[0;32mI (33663) RobotController: FERRIS joint[3] abs_raw=1067.000 zero_raw=819.000 cal_valid=1 angle_deg=-48.252 calibrated_deg=21.797 tared_deg=21.797 scale=1.159 joint_deg=25.265[0m
+[0;32mI (33683) RobotController: FERRIS_CSV: 33184,3,1067.000,819.000,1,-48.252,21.797,21.797,1.159,25.265[0m
+[0;32mI (33683) RobotController: FERRIS joint[4] abs_raw=1654.000 zero_raw=1625.000 cal_valid=1 angle_deg=3.340 calibrated_deg=2.549 tared_deg=2.549 scale=-1.085 joint_deg=-2.766[0m
+[0;32mI (33703) RobotController: FERRIS_CSV: 33184,4,1654.000,1625.000,1,3.340,2.549,2.549,-1.085,-2.766[0m
+[0;32mI (33713) app_main: OL_MOTION_CSV: 33297,20,0,46,49,0.055754,0.059390,43,0.052117,1372.000[0m
+[0;32mI (33723) app_main: OL_MOTION_CSV: 33297,20,1,171,197,0.331613,0.382033,160,0.310281,2055.000[0m
+[0;32mI (33723) app_main: OL_MOTION_CSV: 33297,20,2,97,110,0.376215,0.426636,94,0.364580,1373.000[0m
+[0;32mI (33733) app_main: OL_MOTION_CSV: 33297,20,3,115,131,0.446029,0.508085,114,0.442150,1067.000[0m
+[0;32mI (33743) app_main: OL_MOTION_CSV: 33297,20,4,-26,-28,-0.070904,-0.076358,-18,-0.049087,1654.000[0m
+[0;32mI (34953) RobotController: FERRIS joint[0] abs_raw=1374.000 zero_raw=1314.000 cal_valid=1 angle_deg=-21.270 calibrated_deg=5.273 tared_deg=5.273 scale=0.592 joint_deg=3.120[0m
+[0;32mI (34953) RobotController: FERRIS_CSV: 34534,0,1374.000,1314.000,1,-21.270,5.273,5.273,0.592,3.120[0m
+[0;32mI (34963) RobotController: FERRIS joint[1] abs_raw=2086.000 zero_raw=1679.000 cal_valid=1 angle_deg=41.309 calibrated_deg=35.771 tared_deg=35.771 scale=0.537 joint_deg=19.204[0m
+[0;32mI (34983) RobotController: FERRIS_CSV: 34534,1,2086.000,1679.000,1,41.309,35.771,35.771,0.537,19.204[0m
+[0;32mI (34993) RobotController: FERRIS joint[2] abs_raw=1389.000 zero_raw=1167.000 cal_valid=1 angle_deg=-19.951 calibrated_deg=19.512 tared_deg=19.512 scale=1.159 joint_deg=22.616[0m
+[0;32mI (35003) RobotController: FERRIS_CSV: 34534,2,1389.000,1167.000,1,-19.951,19.512,19.512,1.159,22.616[0m
+[0;32mI (35013) RobotController: FERRIS joint[3] abs_raw=1085.000 zero_raw=819.000 cal_valid=1 angle_deg=-46.670 calibrated_deg=23.379 tared_deg=23.379 scale=1.159 joint_deg=27.098[0m
+[0;32mI (35033) RobotController: FERRIS_CSV: 34534,3,1085.000,819.000,1,-46.670,23.379,23.379,1.159,27.098[0m
+[0;32mI (35033) RobotController: FERRIS joint[4] abs_raw=1656.000 zero_raw=1625.000 cal_valid=1 angle_deg=3.516 calibrated_deg=2.725 tared_deg=2.725 scale=-1.085 joint_deg=-2.956[0m
+[0;32mI (35053) RobotController: FERRIS_CSV: 34534,4,1656.000,1625.000,1,3.516,2.725,2.725,-1.085,-2.956[0m
+[0;32mI (35063) app_main: OL_MOTION_CSV: 34647,21,0,48,49,0.058178,0.059390,45,0.054542,1374.000[0m
+[0;32mI (35073) app_main: OL_MOTION_CSV: 34647,21,1,184,197,0.356823,0.382033,173,0.335491,2086.000[0m
+[0;32mI (35073) app_main: OL_MOTION_CSV: 34647,21,2,104,110,0.403365,0.426636,102,0.395608,1389.000[0m
+[0;32mI (35083) app_main: OL_MOTION_CSV: 34647,21,3,123,131,0.477057,0.508085,122,0.473178,1085.000[0m
+[0;32mI (35093) app_main: OL_MOTION_CSV: 34647,21,4,-27,-28,-0.073631,-0.076358,-19,-0.051814,1656.000[0m
+[0;32mI (36303) app_main: Reached waypoint 6 / 8[0m
+[0;32mI (36303) RobotController: FERRIS joint[0] abs_raw=1376.000 zero_raw=1314.000 cal_valid=1 angle_deg=-21.094 calibrated_deg=5.449 tared_deg=5.449 scale=0.592 joint_deg=3.224[0m
+[0;32mI (36303) RobotController: FERRIS_CSV: 35884,0,1376.000,1314.000,1,-21.094,5.449,5.449,0.592,3.224[0m
+[0;32mI (36313) RobotController: FERRIS joint[1] abs_raw=2118.000 zero_raw=1679.000 cal_valid=1 angle_deg=44.033 calibrated_deg=38.584 tared_deg=38.584 scale=0.537 joint_deg=20.714[0m
+[0;32mI (36333) RobotController: FERRIS_CSV: 35884,1,2118.000,1679.000,1,44.033,38.584,38.584,0.537,20.714[0m
+[0;32mI (36343) RobotController: FERRIS joint[2] abs_raw=1402.000 zero_raw=1167.000 cal_valid=1 angle_deg=-18.809 calibrated_deg=20.654 tared_deg=20.654 scale=1.159 joint_deg=23.940[0m
+[0;32mI (36353) RobotController: FERRIS_CSV: 35884,2,1402.000,1167.000,1,-18.809,20.654,20.654,1.159,23.940[0m
+[0;32mI (36363) RobotController: FERRIS joint[3] abs_raw=1101.000 zero_raw=819.000 cal_valid=1 angle_deg=-45.264 calibrated_deg=24.785 tared_deg=24.785 scale=1.159 joint_deg=28.728[0m
+[0;32mI (36383) RobotController: FERRIS_CSV: 35884,3,1101.000,819.000,1,-45.264,24.785,24.785,1.159,28.728[0m
+[0;32mI (36383) RobotController: FERRIS joint[4] abs_raw=1659.000 zero_raw=1625.000 cal_valid=1 angle_deg=3.779 calibrated_deg=2.988 tared_deg=2.988 scale=-1.085 joint_deg=-3.243[0m
+[0;32mI (36403) RobotController: FERRIS_CSV: 35884,4,1659.000,1625.000,1,3.779,2.988,2.988,-1.085,-3.243[0m
+[0;32mI (36413) app_main: OL_MOTION_CSV: 35997,22,0,49,49,0.059390,0.059390,46,0.055754,1376.000[0m
+[0;32mI (36423) app_main: OL_MOTION_CSV: 35997,22,1,197,197,0.382033,0.382033,186,0.360701,2118.000[0m
+[0;32mI (36423) app_main: OL_MOTION_CSV: 35997,22,2,110,110,0.426636,0.426636,108,0.418879,1402.000[0m
+[0;32mI (36433) app_main: OL_MOTION_CSV: 35997,22,3,131,131,0.508085,0.508085,129,0.500328,1101.000[0m
+[0;32mI (36443) app_main: OL_MOTION_CSV: 35997,22,4,-28,-28,-0.076358,-0.076358,-21,-0.057269,1659.000[0m
+[0;32mI (36483) RobotController: target joint[0]: rad=0.063561 -> steps=52[0m
+[0;32mI (36483) RobotController: target joint[1]: rad=0.434517 -> steps=224[0m
+[0;32mI (36483) RobotController: target joint[2]: rad=0.477454 -> steps=123[0m
+[0;32mI (36483) RobotController: target joint[3]: rad=0.574334 -> steps=148[0m
+[0;32mI (36493) RobotController: target joint[4]: rad=-0.082222 -> steps=-30[0m
+[0;32mI (36503) app_main: Sent waypoint 7 / 8[0m
+[0;32mI (37683) RobotController: FERRIS joint[0] abs_raw=1377.000 zero_raw=1314.000 cal_valid=1 angle_deg=-21.006 calibrated_deg=5.537 tared_deg=5.537 scale=0.592 joint_deg=3.276[0m
+[0;32mI (37683) RobotController: FERRIS_CSV: 37264,0,1377.000,1314.000,1,-21.006,5.537,5.537,0.592,3.276[0m
+[0;32mI (37693) RobotController: FERRIS joint[1] abs_raw=2144.000 zero_raw=1679.000 cal_valid=1 angle_deg=46.406 calibrated_deg=40.869 tared_deg=40.869 scale=0.537 joint_deg=21.940[0m
+[0;32mI (37713) RobotController: FERRIS_CSV: 37264,1,2144.000,1679.000,1,46.406,40.869,40.869,0.537,21.940[0m
+[0;32mI (37723) RobotController: FERRIS joint[2] abs_raw=1414.000 zero_raw=1167.000 cal_valid=1 angle_deg=-17.754 calibrated_deg=21.709 tared_deg=21.709 scale=1.159 joint_deg=25.163[0m
+[0;32mI (37733) RobotController: FERRIS_CSV: 37264,2,1414.000,1167.000,1,-17.754,21.709,21.709,1.159,25.163[0m
+[0;32mI (37743) RobotController: FERRIS joint[3] abs_raw=1120.000 zero_raw=819.000 cal_valid=1 angle_deg=-43.594 calibrated_deg=26.455 tared_deg=26.455 scale=1.159 joint_deg=30.664[0m
+[0;32mI (37763) RobotController: FERRIS_CSV: 37264,3,1120.000,819.000,1,-43.594,26.455,26.455,1.159,30.664[0m
+[0;32mI (37763) RobotController: FERRIS joint[4] abs_raw=1661.000 zero_raw=1625.000 cal_valid=1 angle_deg=3.955 calibrated_deg=3.164 tared_deg=3.164 scale=-1.085 joint_deg=-3.433[0m
+[0;32mI (37783) RobotController: FERRIS_CSV: 37264,4,1661.000,1625.000,1,3.955,3.164,3.164,-1.085,-3.433[0m
+[0;32mI (37793) app_main: OL_MOTION_CSV: 37377,23,0,50,52,0.060602,0.063026,47,0.056966,1377.000[0m
+[0;32mI (37803) app_main: OL_MOTION_CSV: 37377,23,1,209,224,0.405304,0.434393,197,0.382033,2144.000[0m
+[0;32mI (37803) app_main: OL_MOTION_CSV: 37377,23,2,116,123,0.449907,0.477057,113,0.438272,1414.000[0m
+[0;32mI (37813) app_main: OL_MOTION_CSV: 37377,23,3,139,148,0.539113,0.574019,138,0.535234,1120.000[0m
+[0;32mI (37823) app_main: OL_MOTION_CSV: 37377,23,4,-29,-30,-0.079085,-0.081812,-22,-0.059996,1661.000[0m
+[0;32mI (39033) RobotController: FERRIS joint[0] abs_raw=1380.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.742 calibrated_deg=5.801 tared_deg=5.801 scale=0.592 joint_deg=3.432[0m
+[0;32mI (39033) RobotController: FERRIS_CSV: 38614,0,1380.000,1314.000,1,-20.742,5.801,5.801,0.592,3.432[0m
+[0;32mI (39043) RobotController: FERRIS joint[1] abs_raw=2175.000 zero_raw=1679.000 cal_valid=1 angle_deg=49.131 calibrated_deg=43.594 tared_deg=43.594 scale=0.537 joint_deg=23.403[0m
+[0;32mI (39063) RobotController: FERRIS_CSV: 38614,1,2175.000,1679.000,1,49.131,43.594,43.594,0.537,23.403[0m
+[0;32mI (39073) RobotController: FERRIS joint[2] abs_raw=1427.000 zero_raw=1167.000 cal_valid=1 angle_deg=-16.611 calibrated_deg=22.852 tared_deg=22.852 scale=1.159 joint_deg=26.487[0m
+[0;32mI (39083) RobotController: FERRIS_CSV: 38614,2,1427.000,1167.000,1,-16.611,22.852,22.852,1.159,26.487[0m
+[0;32mI (39093) RobotController: FERRIS joint[3] abs_raw=1137.000 zero_raw=819.000 cal_valid=1 angle_deg=-42.100 calibrated_deg=27.949 tared_deg=27.949 scale=1.159 joint_deg=32.396[0m
+[0;32mI (39113) RobotController: FERRIS_CSV: 38614,3,1137.000,819.000,1,-42.100,27.949,27.949,1.159,32.396[0m
+[0;32mI (39113) RobotController: FERRIS joint[4] abs_raw=1662.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.043 calibrated_deg=3.252 tared_deg=3.252 scale=-1.085 joint_deg=-3.529[0m
+[0;32mI (39133) RobotController: FERRIS_CSV: 38614,4,1662.000,1625.000,1,4.043,3.252,3.252,-1.085,-3.529[0m
+[0;32mI (39143) app_main: OL_MOTION_CSV: 38727,24,0,52,52,0.063026,0.063026,49,0.059390,1380.000[0m
+[0;32mI (39153) app_main: OL_MOTION_CSV: 38727,24,1,222,224,0.430515,0.434393,211,0.409183,2175.000[0m
+[0;32mI (39153) app_main: OL_MOTION_CSV: 38727,24,2,122,123,0.473178,0.477057,119,0.461543,1427.000[0m
+[0;32mI (39163) app_main: OL_MOTION_CSV: 38727,24,3,147,148,0.570141,0.574019,146,0.566262,1137.000[0m
+[0;32mI (39173) app_main: OL_MOTION_CSV: 38727,24,4,-30,-30,-0.081812,-0.081812,-23,-0.062723,1662.000[0m
+[0;32mI (39183) RobotController: joint[0] current_steps=52 target_steps=52 target_vel=0.00[0m
+[0;32mI (39193) RobotController: joint[1] current_steps=222 target_steps=224 target_vel=0.00[0m
+[0;32mI (39193) RobotController: joint[2] current_steps=122 target_steps=123 target_vel=0.00[0m
+[0;32mI (39203) RobotController: joint[3] current_steps=147 target_steps=148 target_vel=0.00[0m
+[0;32mI (39213) RobotController: joint[4] current_steps=-30 target_steps=-30 target_vel=0.00[0m
+[0;32mI (39223) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (39223) RobotController: valve_state=0x0328[0m
+[0;32mI (39323) app_main: Reached waypoint 7 / 8[0m
+[0;32mI (39353) RobotController: target joint[0]: rad=0.067415 -> steps=56[0m
+[0;32mI (39353) RobotController: target joint[1]: rad=0.487381 -> steps=251[0m
+[0;32mI (39353) RobotController: target joint[2]: rad=0.529928 -> steps=137[0m
+[0;32mI (39353) RobotController: target joint[3]: rad=0.640754 -> steps=165[0m
+[0;32mI (39363) RobotController: target joint[4]: rad=-0.087266 -> steps=-32[0m
+[0;32mI (39373) app_main: Sent waypoint 8 / 8[0m
+[0;32mI (40463) RobotController: FERRIS joint[0] abs_raw=1382.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.566 calibrated_deg=5.977 tared_deg=5.977 scale=0.592 joint_deg=3.536[0m
+[0;32mI (40463) RobotController: FERRIS_CSV: 40044,0,1382.000,1314.000,1,-20.566,5.977,5.977,0.592,3.536[0m
+[0;32mI (40473) RobotController: FERRIS joint[1] abs_raw=2207.000 zero_raw=1679.000 cal_valid=1 angle_deg=51.943 calibrated_deg=46.406 tared_deg=46.406 scale=0.537 joint_deg=24.913[0m
+[0;32mI (40493) RobotController: FERRIS_CSV: 40044,1,2207.000,1679.000,1,51.943,46.406,46.406,0.537,24.913[0m
+[0;32mI (40503) RobotController: FERRIS joint[2] abs_raw=1442.000 zero_raw=1167.000 cal_valid=1 angle_deg=-15.293 calibrated_deg=24.170 tared_deg=24.170 scale=1.159 joint_deg=28.015[0m
+[0;32mI (40513) RobotController: FERRIS_CSV: 40044,2,1442.000,1167.000,1,-15.293,24.170,24.170,1.159,28.015[0m
+[0;32mI (40523) RobotController: FERRIS joint[3] abs_raw=1156.000 zero_raw=819.000 cal_valid=1 angle_deg=-40.430 calibrated_deg=29.619 tared_deg=29.619 scale=1.159 joint_deg=34.331[0m
+[0;32mI (40543) RobotController: FERRIS_CSV: 40044,3,1156.000,819.000,1,-40.430,29.619,29.619,1.159,34.331[0m
+[0;32mI (40543) RobotController: FERRIS joint[4] abs_raw=1663.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.131 calibrated_deg=3.340 tared_deg=3.340 scale=-1.085 joint_deg=-3.624[0m
+[0;32mI (40563) RobotController: FERRIS_CSV: 40044,4,1663.000,1625.000,1,4.131,3.340,3.340,-1.085,-3.624[0m
+[0;32mI (40573) app_main: OL_MOTION_CSV: 40157,25,0,54,56,0.065450,0.067874,51,0.061814,1382.000[0m
+[0;32mI (40583) app_main: OL_MOTION_CSV: 40157,25,1,235,251,0.455725,0.486753,224,0.434393,2207.000[0m
+[0;32mI (40583) app_main: OL_MOTION_CSV: 40157,25,2,129,137,0.500328,0.531356,126,0.488692,1442.000[0m
+[0;32mI (40593) app_main: OL_MOTION_CSV: 40157,25,3,155,165,0.601169,0.639954,154,0.597290,1156.000[0m
+[0;32mI (40603) app_main: OL_MOTION_CSV: 40157,25,4,-31,-32,-0.084539,-0.087266,-23,-0.062723,1663.000[0m
+[0;32mI (41813) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (41813) RobotController: FERRIS_CSV: 41394,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (41823) RobotController: FERRIS joint[1] abs_raw=2237.000 zero_raw=1679.000 cal_valid=1 angle_deg=54.580 calibrated_deg=49.043 tared_deg=49.043 scale=0.537 joint_deg=26.328[0m
+[0;32mI (41843) RobotController: FERRIS_CSV: 41394,1,2237.000,1679.000,1,54.580,49.043,49.043,0.537,26.328[0m
+[0;32mI (41853) RobotController: FERRIS joint[2] abs_raw=1458.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.887 calibrated_deg=25.576 tared_deg=25.576 scale=1.159 joint_deg=29.645[0m
+[0;32mI (41863) RobotController: FERRIS_CSV: 41394,2,1458.000,1167.000,1,-13.887,25.576,25.576,1.159,29.645[0m
+[0;32mI (41873) RobotController: FERRIS joint[3] abs_raw=1174.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.936 calibrated_deg=31.201 tared_deg=31.201 scale=1.159 joint_deg=36.165[0m
+[0;32mI (41893) RobotController: FERRIS_CSV: 41394,3,1174.000,819.000,1,-38.936,31.201,31.201,1.159,36.165[0m
+[0;32mI (41893) RobotController: FERRIS joint[4] abs_raw=1665.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.516 tared_deg=3.516 scale=-1.085 joint_deg=-3.815[0m
+[0;32mI (41913) RobotController: FERRIS_CSV: 41394,4,1665.000,1625.000,1,4.395,3.516,3.516,-1.085,-3.815[0m
+[0;32mI (41923) app_main: OL_MOTION_CSV: 41507,26,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (41933) app_main: OL_MOTION_CSV: 41507,26,1,248,251,0.480935,0.486753,237,0.459603,2237.000[0m
+[0;32mI (41933) app_main: OL_MOTION_CSV: 41507,26,2,136,137,0.527477,0.531356,133,0.515842,1458.000[0m
+[0;32mI (41943) app_main: OL_MOTION_CSV: 41507,26,3,163,165,0.632197,0.639954,163,0.632197,1174.000[0m
+[0;32mI (41953) app_main: OL_MOTION_CSV: 41507,26,4,-32,-32,-0.087266,-0.087266,-24,-0.065450,1665.000[0m
+[0;32mI (42203) app_main: Reached waypoint 8 / 8[0m
+[0;32mI (42203) app_main: Path execution finished[0m
+[0;32mI (42203) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:5, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x830)[0m
+[0;32mI (42213) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (42213) MicroRosManager: Published robot state: movement_finished[0m
+[0;32mI (43193) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (43193) RobotController: FERRIS_CSV: 42774,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (43203) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (43223) RobotController: FERRIS_CSV: 42774,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (43233) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (43243) RobotController: FERRIS_CSV: 42774,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (43253) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (43273) RobotController: FERRIS_CSV: 42774,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (43273) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (43293) RobotController: FERRIS_CSV: 42774,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (43303) app_main: OL_MOTION_CSV: 42887,27,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (43313) app_main: OL_MOTION_CSV: 42887,27,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (43313) app_main: OL_MOTION_CSV: 42887,27,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (43323) app_main: OL_MOTION_CSV: 42887,27,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (43333) app_main: OL_MOTION_CSV: 42887,27,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (44543) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (44543) RobotController: FERRIS_CSV: 44124,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (44553) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (44573) RobotController: FERRIS_CSV: 44124,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (44583) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (44593) RobotController: FERRIS_CSV: 44124,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (44603) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (44623) RobotController: FERRIS_CSV: 44124,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (44623) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (44643) RobotController: FERRIS_CSV: 44124,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (44653) app_main: OL_MOTION_CSV: 44237,28,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (44663) app_main: OL_MOTION_CSV: 44237,28,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (44663) app_main: OL_MOTION_CSV: 44237,28,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (44673) app_main: OL_MOTION_CSV: 44237,28,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (44683) app_main: OL_MOTION_CSV: 44237,28,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (45893) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (45893) RobotController: FERRIS_CSV: 45474,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (45903) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (45923) RobotController: FERRIS_CSV: 45474,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (45933) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (45943) RobotController: FERRIS_CSV: 45474,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (45953) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (45973) RobotController: FERRIS_CSV: 45474,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (45973) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (45993) RobotController: FERRIS_CSV: 45474,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (46003) app_main: OL_MOTION_CSV: 45587,29,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (46013) app_main: OL_MOTION_CSV: 45587,29,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (46013) app_main: OL_MOTION_CSV: 45587,29,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (46023) app_main: OL_MOTION_CSV: 45587,29,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (46033) app_main: OL_MOTION_CSV: 45587,29,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (47243) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (47243) RobotController: FERRIS_CSV: 46824,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (47253) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (47273) RobotController: FERRIS_CSV: 46824,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (47283) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (47293) RobotController: FERRIS_CSV: 46824,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (47303) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (47323) RobotController: FERRIS_CSV: 46824,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (47323) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (47343) RobotController: FERRIS_CSV: 46824,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (47353) app_main: OL_MOTION_CSV: 46937,30,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (47363) app_main: OL_MOTION_CSV: 46937,30,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (47363) app_main: OL_MOTION_CSV: 46937,30,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (47373) app_main: OL_MOTION_CSV: 46937,30,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (47383) app_main: OL_MOTION_CSV: 46937,30,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (48593) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (48593) RobotController: FERRIS_CSV: 48174,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (48603) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (48623) RobotController: FERRIS_CSV: 48174,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (48633) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (48643) RobotController: FERRIS_CSV: 48174,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (48653) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (48673) RobotController: FERRIS_CSV: 48174,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (48673) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (48693) RobotController: FERRIS_CSV: 48174,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (48703) app_main: OL_MOTION_CSV: 48287,31,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (48713) app_main: OL_MOTION_CSV: 48287,31,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (48713) app_main: OL_MOTION_CSV: 48287,31,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (48723) app_main: OL_MOTION_CSV: 48287,31,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (48733) app_main: OL_MOTION_CSV: 48287,31,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (49943) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (49943) RobotController: FERRIS_CSV: 49524,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (49953) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (49973) RobotController: FERRIS_CSV: 49524,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (49983) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (49993) RobotController: FERRIS_CSV: 49524,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (50003) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (50023) RobotController: FERRIS_CSV: 49524,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (50023) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (50043) RobotController: FERRIS_CSV: 49524,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (50053) app_main: OL_MOTION_CSV: 49637,32,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (50063) app_main: OL_MOTION_CSV: 49637,32,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (50063) app_main: OL_MOTION_CSV: 49637,32,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (50073) app_main: OL_MOTION_CSV: 49637,32,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (50083) app_main: OL_MOTION_CSV: 49637,32,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (51293) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (51293) RobotController: FERRIS_CSV: 50874,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (51303) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (51323) RobotController: FERRIS_CSV: 50874,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (51333) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (51343) RobotController: FERRIS_CSV: 50874,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (51353) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (51373) RobotController: FERRIS_CSV: 50874,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (51373) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (51393) RobotController: FERRIS_CSV: 50874,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (51403) app_main: OL_MOTION_CSV: 50987,33,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (51413) app_main: OL_MOTION_CSV: 50987,33,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (51413) app_main: OL_MOTION_CSV: 50987,33,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (51423) app_main: OL_MOTION_CSV: 50987,33,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (51433) app_main: OL_MOTION_CSV: 50987,33,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (52643) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (52643) RobotController: FERRIS_CSV: 52224,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (52653) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (52673) RobotController: FERRIS_CSV: 52224,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (52683) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (52693) RobotController: FERRIS_CSV: 52224,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (52703) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (52723) RobotController: FERRIS_CSV: 52224,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (52723) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (52743) RobotController: FERRIS_CSV: 52224,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (52753) app_main: OL_MOTION_CSV: 52337,34,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (52763) app_main: OL_MOTION_CSV: 52337,34,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (52763) app_main: OL_MOTION_CSV: 52337,34,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (52773) app_main: OL_MOTION_CSV: 52337,34,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (52783) app_main: OL_MOTION_CSV: 52337,34,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (53993) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (53993) RobotController: FERRIS_CSV: 53574,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (54003) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (54023) RobotController: FERRIS_CSV: 53574,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (54033) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (54043) RobotController: FERRIS_CSV: 53574,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (54053) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (54073) RobotController: FERRIS_CSV: 53574,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (54073) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (54093) RobotController: FERRIS_CSV: 53574,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (54103) app_main: OL_MOTION_CSV: 53687,35,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (54113) app_main: OL_MOTION_CSV: 53687,35,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (54113) app_main: OL_MOTION_CSV: 53687,35,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (54123) app_main: OL_MOTION_CSV: 53687,35,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (54133) app_main: OL_MOTION_CSV: 53687,35,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (55343) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (55343) RobotController: FERRIS_CSV: 54924,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (55353) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (55373) RobotController: FERRIS_CSV: 54924,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (55383) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (55393) RobotController: FERRIS_CSV: 54924,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (55403) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (55423) RobotController: FERRIS_CSV: 54924,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (55423) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (55443) RobotController: FERRIS_CSV: 54924,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (55453) app_main: OL_MOTION_CSV: 55037,36,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (55463) app_main: OL_MOTION_CSV: 55037,36,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (55463) app_main: OL_MOTION_CSV: 55037,36,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (55473) app_main: OL_MOTION_CSV: 55037,36,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (55483) app_main: OL_MOTION_CSV: 55037,36,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (56093) RobotController: joint[0] current_steps=56 target_steps=56 target_vel=0.00[0m
+[0;32mI (56093) RobotController: joint[1] current_steps=251 target_steps=251 target_vel=0.00[0m
+[0;32mI (56103) RobotController: joint[2] current_steps=137 target_steps=137 target_vel=0.00[0m
+[0;32mI (56103) RobotController: joint[3] current_steps=165 target_steps=165 target_vel=0.00[0m
+[0;32mI (56113) RobotController: joint[4] current_steps=-32 target_steps=-32 target_vel=0.00[0m
+[0;32mI (56123) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (56133) RobotController: valve_state=0x0058[0m
+[0;32mI (56733) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (56733) RobotController: FERRIS_CSV: 56314,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (56743) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (56763) RobotController: FERRIS_CSV: 56314,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (56773) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (56783) RobotController: FERRIS_CSV: 56314,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (56793) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (56813) RobotController: FERRIS_CSV: 56314,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (56813) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (56833) RobotController: FERRIS_CSV: 56314,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (56843) app_main: OL_MOTION_CSV: 56427,37,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (56853) app_main: OL_MOTION_CSV: 56427,37,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (56853) app_main: OL_MOTION_CSV: 56427,37,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (56863) app_main: OL_MOTION_CSV: 56427,37,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (56873) app_main: OL_MOTION_CSV: 56427,37,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (58083) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (58083) RobotController: FERRIS_CSV: 57664,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (58093) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (58113) RobotController: FERRIS_CSV: 57664,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (58123) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (58133) RobotController: FERRIS_CSV: 57664,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (58143) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (58163) RobotController: FERRIS_CSV: 57664,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (58163) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (58183) RobotController: FERRIS_CSV: 57664,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (58193) app_main: OL_MOTION_CSV: 57777,38,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (58203) app_main: OL_MOTION_CSV: 57777,38,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (58203) app_main: OL_MOTION_CSV: 57777,38,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (58213) app_main: OL_MOTION_CSV: 57777,38,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (58223) app_main: OL_MOTION_CSV: 57777,38,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (59433) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (59433) RobotController: FERRIS_CSV: 59014,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (59443) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (59463) RobotController: FERRIS_CSV: 59014,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (59473) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (59483) RobotController: FERRIS_CSV: 59014,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (59493) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (59513) RobotController: FERRIS_CSV: 59014,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (59513) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (59533) RobotController: FERRIS_CSV: 59014,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (59543) app_main: OL_MOTION_CSV: 59127,39,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (59553) app_main: OL_MOTION_CSV: 59127,39,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (59553) app_main: OL_MOTION_CSV: 59127,39,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (59563) app_main: OL_MOTION_CSV: 59127,39,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (59573) app_main: OL_MOTION_CSV: 59127,39,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (60783) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (60783) RobotController: FERRIS_CSV: 60364,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (60793) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (60813) RobotController: FERRIS_CSV: 60364,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (60823) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (60833) RobotController: FERRIS_CSV: 60364,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (60843) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (60863) RobotController: FERRIS_CSV: 60364,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (60863) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (60883) RobotController: FERRIS_CSV: 60364,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (60893) app_main: OL_MOTION_CSV: 60477,40,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (60903) app_main: OL_MOTION_CSV: 60477,40,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (60903) app_main: OL_MOTION_CSV: 60477,40,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (60913) app_main: OL_MOTION_CSV: 60477,40,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (60923) app_main: OL_MOTION_CSV: 60477,40,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (61693) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:0(recipient)[0m
+[0;32mI (62133) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (62133) RobotController: FERRIS_CSV: 61714,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (62143) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (62163) RobotController: FERRIS_CSV: 61714,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (62173) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (62183) RobotController: FERRIS_CSV: 61714,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (62193) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (62213) RobotController: FERRIS_CSV: 61714,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (62213) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (62233) RobotController: FERRIS_CSV: 61714,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (62243) app_main: OL_MOTION_CSV: 61827,41,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (62253) app_main: OL_MOTION_CSV: 61827,41,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (62253) app_main: OL_MOTION_CSV: 61827,41,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (62263) app_main: OL_MOTION_CSV: 61827,41,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (62273) app_main: OL_MOTION_CSV: 61827,41,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (63483) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (63483) RobotController: FERRIS_CSV: 63064,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (63493) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (63513) RobotController: FERRIS_CSV: 63064,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (63523) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (63533) RobotController: FERRIS_CSV: 63064,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (63543) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (63563) RobotController: FERRIS_CSV: 63064,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (63563) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (63583) RobotController: FERRIS_CSV: 63064,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (63593) app_main: OL_MOTION_CSV: 63177,42,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (63603) app_main: OL_MOTION_CSV: 63177,42,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (63603) app_main: OL_MOTION_CSV: 63177,42,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (63613) app_main: OL_MOTION_CSV: 63177,42,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (63623) app_main: OL_MOTION_CSV: 63177,42,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (64833) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (64833) RobotController: FERRIS_CSV: 64414,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (64843) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (64863) RobotController: FERRIS_CSV: 64414,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (64873) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (64883) RobotController: FERRIS_CSV: 64414,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (64893) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (64913) RobotController: FERRIS_CSV: 64414,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (64913) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (64933) RobotController: FERRIS_CSV: 64414,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (64943) app_main: OL_MOTION_CSV: 64527,43,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (64953) app_main: OL_MOTION_CSV: 64527,43,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (64953) app_main: OL_MOTION_CSV: 64527,43,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (64963) app_main: OL_MOTION_CSV: 64527,43,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (64973) app_main: OL_MOTION_CSV: 64527,43,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (66183) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (66183) RobotController: FERRIS_CSV: 65764,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (66193) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (66213) RobotController: FERRIS_CSV: 65764,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (66223) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (66233) RobotController: FERRIS_CSV: 65764,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (66243) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (66263) RobotController: FERRIS_CSV: 65764,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (66263) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (66283) RobotController: FERRIS_CSV: 65764,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (66293) app_main: OL_MOTION_CSV: 65877,44,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (66303) app_main: OL_MOTION_CSV: 65877,44,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (66303) app_main: OL_MOTION_CSV: 65877,44,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (66313) app_main: OL_MOTION_CSV: 65877,44,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (66323) app_main: OL_MOTION_CSV: 65877,44,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (67533) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (67533) RobotController: FERRIS_CSV: 67114,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (67543) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (67563) RobotController: FERRIS_CSV: 67114,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (67573) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (67583) RobotController: FERRIS_CSV: 67114,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (67593) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (67613) RobotController: FERRIS_CSV: 67114,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (67613) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (67633) RobotController: FERRIS_CSV: 67114,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (67643) app_main: OL_MOTION_CSV: 67227,45,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (67653) app_main: OL_MOTION_CSV: 67227,45,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (67653) app_main: OL_MOTION_CSV: 67227,45,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (67663) app_main: OL_MOTION_CSV: 67227,45,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (67673) app_main: OL_MOTION_CSV: 67227,45,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (68883) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (68883) RobotController: FERRIS_CSV: 68464,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (68893) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (68913) RobotController: FERRIS_CSV: 68464,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (68923) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (68933) RobotController: FERRIS_CSV: 68464,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (68943) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (68963) RobotController: FERRIS_CSV: 68464,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (68963) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (68983) RobotController: FERRIS_CSV: 68464,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (68993) app_main: OL_MOTION_CSV: 68577,46,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (69003) app_main: OL_MOTION_CSV: 68577,46,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (69003) app_main: OL_MOTION_CSV: 68577,46,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (69013) app_main: OL_MOTION_CSV: 68577,46,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (69023) app_main: OL_MOTION_CSV: 68577,46,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (70233) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (70233) RobotController: FERRIS_CSV: 69814,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (70243) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (70263) RobotController: FERRIS_CSV: 69814,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (70273) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (70283) RobotController: FERRIS_CSV: 69814,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (70293) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (70313) RobotController: FERRIS_CSV: 69814,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (70313) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (70333) RobotController: FERRIS_CSV: 69814,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (70343) app_main: OL_MOTION_CSV: 69927,47,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (70353) app_main: OL_MOTION_CSV: 69927,47,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (70353) app_main: OL_MOTION_CSV: 69927,47,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (70363) app_main: OL_MOTION_CSV: 69927,47,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (70373) app_main: OL_MOTION_CSV: 69927,47,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (71583) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (71583) RobotController: FERRIS_CSV: 71164,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (71593) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (71613) RobotController: FERRIS_CSV: 71164,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (71623) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (71633) RobotController: FERRIS_CSV: 71164,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (71643) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (71663) RobotController: FERRIS_CSV: 71164,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (71663) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (71683) RobotController: FERRIS_CSV: 71164,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (71693) app_main: OL_MOTION_CSV: 71277,48,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (71703) app_main: OL_MOTION_CSV: 71277,48,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (71703) app_main: OL_MOTION_CSV: 71277,48,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (71713) app_main: OL_MOTION_CSV: 71277,48,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (71723) app_main: OL_MOTION_CSV: 71277,48,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (72933) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (72933) RobotController: FERRIS_CSV: 72514,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (72943) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (72963) RobotController: FERRIS_CSV: 72514,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (72973) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (72983) RobotController: FERRIS_CSV: 72514,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (72993) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (73013) RobotController: FERRIS_CSV: 72514,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (73013) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (73033) RobotController: FERRIS_CSV: 72514,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (73043) app_main: OL_MOTION_CSV: 72627,49,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (73053) app_main: OL_MOTION_CSV: 72627,49,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (73053) app_main: OL_MOTION_CSV: 72627,49,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (73063) app_main: OL_MOTION_CSV: 72627,49,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (73073) app_main: OL_MOTION_CSV: 72627,49,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (73083) RobotController: joint[0] current_steps=56 target_steps=56 target_vel=0.00[0m
+[0;32mI (73093) RobotController: joint[1] current_steps=251 target_steps=251 target_vel=0.00[0m
+[0;32mI (73093) RobotController: joint[2] current_steps=137 target_steps=137 target_vel=0.00[0m
+[0;32mI (73103) RobotController: joint[3] current_steps=165 target_steps=165 target_vel=0.00[0m
+[0;32mI (73113) RobotController: joint[4] current_steps=-32 target_steps=-32 target_vel=0.00[0m
+[0;32mI (73123) RobotController: joint[5] current_steps=0 target_steps=0 target_vel=0.00[0m
+[0;32mI (73123) RobotController: valve_state=0x0058[0m
+[0;32mI (74333) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (74333) RobotController: FERRIS_CSV: 73914,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (74343) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (74363) RobotController: FERRIS_CSV: 73914,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (74373) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (74383) RobotController: FERRIS_CSV: 73914,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (74393) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (74413) RobotController: FERRIS_CSV: 73914,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (74413) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (74433) RobotController: FERRIS_CSV: 73914,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (74443) app_main: OL_MOTION_CSV: 74027,50,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (74453) app_main: OL_MOTION_CSV: 74027,50,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (74453) app_main: OL_MOTION_CSV: 74027,50,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (74463) app_main: OL_MOTION_CSV: 74027,50,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (74473) app_main: OL_MOTION_CSV: 74027,50,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (75683) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (75683) RobotController: FERRIS_CSV: 75264,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (75693) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (75713) RobotController: FERRIS_CSV: 75264,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (75723) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (75733) RobotController: FERRIS_CSV: 75264,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (75743) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (75763) RobotController: FERRIS_CSV: 75264,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (75763) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (75783) RobotController: FERRIS_CSV: 75264,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (75793) app_main: OL_MOTION_CSV: 75377,51,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (75803) app_main: OL_MOTION_CSV: 75377,51,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (75803) app_main: OL_MOTION_CSV: 75377,51,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (75813) app_main: OL_MOTION_CSV: 75377,51,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (75823) app_main: OL_MOTION_CSV: 75377,51,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (77033) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (77033) RobotController: FERRIS_CSV: 76614,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (77043) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (77063) RobotController: FERRIS_CSV: 76614,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (77073) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (77083) RobotController: FERRIS_CSV: 76614,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (77093) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (77113) RobotController: FERRIS_CSV: 76614,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (77113) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (77133) RobotController: FERRIS_CSV: 76614,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (77143) app_main: OL_MOTION_CSV: 76727,52,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (77153) app_main: OL_MOTION_CSV: 76727,52,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (77153) app_main: OL_MOTION_CSV: 76727,52,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (77163) app_main: OL_MOTION_CSV: 76727,52,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (77173) app_main: OL_MOTION_CSV: 76727,52,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (78383) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (78383) RobotController: FERRIS_CSV: 77964,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (78393) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (78413) RobotController: FERRIS_CSV: 77964,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (78423) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (78433) RobotController: FERRIS_CSV: 77964,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (78443) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (78463) RobotController: FERRIS_CSV: 77964,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (78463) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (78483) RobotController: FERRIS_CSV: 77964,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (78493) app_main: OL_MOTION_CSV: 78077,53,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (78503) app_main: OL_MOTION_CSV: 78077,53,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (78503) app_main: OL_MOTION_CSV: 78077,53,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (78513) app_main: OL_MOTION_CSV: 78077,53,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (78523) app_main: OL_MOTION_CSV: 78077,53,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (79733) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (79733) RobotController: FERRIS_CSV: 79314,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (79743) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (79763) RobotController: FERRIS_CSV: 79314,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (79773) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (79783) RobotController: FERRIS_CSV: 79314,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (79793) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (79813) RobotController: FERRIS_CSV: 79314,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (79813) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604 scale=-1.085 joint_deg=-3.910[0m
+[0;32mI (79833) RobotController: FERRIS_CSV: 79314,4,1666.000,1625.000,1,4.395,3.604,3.604,-1.085,-3.910[0m
+[0;32mI (79843) app_main: OL_MOTION_CSV: 79428,54,0,56,56,0.067874,0.067874,53,0.064238,1385.000[0m
+[0;32mI (79853) app_main: OL_MOTION_CSV: 79428,54,1,251,251,0.486753,0.486753,241,0.467360,2246.000[0m
+[0;32mI (79853) app_main: OL_MOTION_CSV: 79428,54,2,137,137,0.531356,0.531356,135,0.523599,1461.000[0m
+[0;32mI (79863) app_main: OL_MOTION_CSV: 79428,54,3,165,165,0.639954,0.639954,165,0.639954,1179.000[0m
+[0;32mI (79873) app_main: OL_MOTION_CSV: 79428,54,4,-32,-32,-0.087266,-0.087266,-25,-0.068177,1666.000[0m
+[0;32mI (81083) RobotController: FERRIS joint[0] abs_raw=1385.000 zero_raw=1314.000 cal_valid=1 angle_deg=-20.303 calibrated_deg=6.240 tared_deg=6.240 scale=0.592 joint_deg=3.692[0m
+[0;32mI (81083) RobotController: FERRIS_CSV: 80664,0,1385.000,1314.000,1,-20.303,6.240,6.240,0.592,3.692[0m
+[0;32mI (81093) RobotController: FERRIS joint[1] abs_raw=2246.000 zero_raw=1679.000 cal_valid=1 angle_deg=55.371 calibrated_deg=49.834 tared_deg=49.834 scale=0.537 joint_deg=26.753[0m
+[0;32mI (81113) RobotController: FERRIS_CSV: 80664,1,2246.000,1679.000,1,55.371,49.834,49.834,0.537,26.753[0m
+[0;32mI (81123) RobotController: FERRIS joint[2] abs_raw=1461.000 zero_raw=1167.000 cal_valid=1 angle_deg=-13.623 calibrated_deg=25.840 tared_deg=25.840 scale=1.159 joint_deg=29.951[0m
+[0;32mI (81133) RobotController: FERRIS_CSV: 80664,2,1461.000,1167.000,1,-13.623,25.840,25.840,1.159,29.951[0m
+[0;32mI (81143) RobotController: FERRIS joint[3] abs_raw=1179.000 zero_raw=819.000 cal_valid=1 angle_deg=-38.408 calibrated_deg=31.641 tared_deg=31.641 scale=1.159 joint_deg=36.674[0m
+[0;32mI (81163) RobotController: FERRIS_CSV: 80664,3,1179.000,819.000,1,-38.408,31.641,31.641,1.159,36.674[0m
+[0;32mI (81163) RobotController: FERRIS joint[4] abs_raw=1666.000 zero_raw=1625.000 cal_valid=1 angle_deg=4.395 calibrated_deg=3.604 tared_deg=3.604

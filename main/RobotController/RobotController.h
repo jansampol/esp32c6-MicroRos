@@ -84,12 +84,16 @@ public:
     void setJointTargetSteps(const std::vector<int> &steps);
     void setJointTargetStep(size_t idx, int step);
     void setJointTargetRad(const std::vector<float> &angles);
-    void setNeedleIncisionTargetSteps(int step);
 
     void setTargetPosition(const std::vector<float> &pos);
     void setTargetPosition(size_t idx, float pos);
 
     void setTargetVelocity(size_t idx, float velocity);
+    // The insertion actuator is independently velocity-controlled by the
+    // incision slider while the robot joints remain position-controlled.
+    void setNeedleVelocityControlEnabled(bool enabled) {
+        _needleVelocityControlEnabled = enabled;
+    }
     void setTargetVelocities(const std::vector<float> &velocities);
 
     void setSynchronizedJointTargetSteps(const std::vector<int>& steps, float baseMaxVelocity);
@@ -97,8 +101,8 @@ public:
     void updateCurrentPosition();
     void updateTargetPosition();
 
-    bool isAtStepTarget() const;
-    bool isNearStepTarget(int toleranceSteps) const;
+    bool isAtStepTarget(size_t jointCount = 0) const;
+    bool isNearStepTarget(int toleranceSteps, size_t jointCount = 0) const;
 
     // =============================
     // ORIGINAL
@@ -167,6 +171,7 @@ private:
     size_t _pathWaypoints = 0;
     size_t _pathDof = 0;
     bool _pathExecuting = false;
+    bool _needleVelocityControlEnabled = false;
     bool _waypointSent = false;
     bool _waypointCorrectionActive = false;
     uint32_t _motionLogCounter = 0;
